@@ -14599,7 +14599,8 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/blair-lj-nicholas/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "lj-nicholas--founded--lucidwild",
@@ -14651,7 +14652,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-u2QcADDE"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "andrew-davis--winemaker--lucidwild",
@@ -14666,7 +14668,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-u2QcADDE"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "lucidwild--draws-from--dundee-hills",
@@ -14679,7 +14682,8 @@
         "url": "https://lucidwildestate.com/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "doug-ackerman--founded--red-electric",

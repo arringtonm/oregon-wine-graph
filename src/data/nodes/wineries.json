@@ -3209,7 +3209,8 @@
         "url": "https://youtu.be/xObu3G2v3cY"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "red-electric",

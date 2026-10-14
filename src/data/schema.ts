@@ -221,7 +221,7 @@ export const EDGE_RULES = {
   located_in: {
     category: 'geography',
     label: 'located in',
-    inverseLabel: 'contains',
+    inverseLabel: 'includes',
     from: ['vineyard'],
     to: ['ava'],
   },
@@ -230,7 +230,8 @@ export const EDGE_RULES = {
   draws_from: {
     category: 'geography',
     label: 'draws fruit from',
-    inverseLabel: 'supplies fruit to',
+    // An AVA is a region, not a supplier: read from the AVA, it includes the winery
+    inverseLabel: 'includes',
     from: ['winery'],
     to: ['ava'],
   },

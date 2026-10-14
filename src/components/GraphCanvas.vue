@@ -237,6 +237,12 @@ function runLayout(randomize: boolean) {
     idealEdgeLength: 220,
     gravity: 0.04,
     nodeSeparation: 120,
+    // Pull members of an AVA region together. Without this a region's vineyards drift
+    // towards their wineries all over the graph and the region grows to enclose them:
+    // Dundee Hills measured about 9,000 by 12,000 units, against 1,900 by 1,500 with it
+    gravityCompound: 8,
+    gravityRangeCompound: 0.3,
+    nestingFactor: 0.05,
     padding: 40,
   } as cytoscape.LayoutOptions)
   layout.one('layoutstop', () => {
@@ -253,6 +259,7 @@ function syncElements() {
   const wantedIds = new Set(wanted.map((element) => element.data.id))
   const firstRender = cy.elements().empty()
   let changed = false
+  let regrouped = false
   cy.batch(() => {
     const stale = cy!.elements().filter((element) => !wantedIds.has(element.id()))
     changed = stale.nonempty()
@@ -266,10 +273,12 @@ function syncElements() {
         // Turning AVA regions on or off moves nodes into or out of them
         existing.move({ parent: element.data.parent ?? null })
         changed = true
+        regrouped = true
       }
     }
   })
-  if (changed) runLayout(firstRender)
+  // Regions turned on or off need a fresh layout; keeping old positions leaves regions sprawling
+  if (changed) runLayout(firstRender || regrouped)
   applySelection()
 }
 
@@ -280,13 +289,22 @@ function applySelection() {
   if (selected.empty()) return
   selected.addClass('selected')
   selected.connectedEdges().addClass('highlighted')
-  cy.elements().difference(selected.closedNeighborhood()).addClass('dimmed')
+  // A selected AVA region keeps its member vineyards, nested regions, and what those
+  // connect to in view, as well as its own connections
+  const focus = selected.union(selected.descendants())
+  const kept = focus.closedNeighborhood().union(focus).union(focus.ancestors())
+  cy.elements().difference(kept).addClass('dimmed')
 }
 
 function centerOnSelection() {
   if (!cy || !state.selectedId) return
   const selected = cy.getElementById(state.selectedId)
   if (selected.empty()) return
+  // An AVA region is shown whole, framed with its members
+  if (selected.isParent()) {
+    cy.animate({ fit: { eles: selected, padding: 60 } }, { duration: 300 })
+    return
+  }
   if (compactQuery.matches) {
     // The detail sheet covers the lower part of the graph, so aim above it
     const rendered = selected.renderedPosition()
