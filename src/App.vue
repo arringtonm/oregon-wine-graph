@@ -59,6 +59,11 @@ onBeforeUnmount(() => compactQuery.removeEventListener('change', onCompactChange
   height: 100dvh;
 }
 
+/* Out of the grid, so the header and graph keep its two rows */
+.app__skip {
+  position: absolute;
+}
+
 .app__skip a {
   position: absolute;
   z-index: 10;
@@ -70,6 +75,7 @@ onBeforeUnmount(() => compactQuery.removeEventListener('change', onCompactChange
   background: var(--surface-raised);
   color: var(--text-primary);
   font-weight: 600;
+  white-space: nowrap;
   transform: translateY(-200%);
 }
 

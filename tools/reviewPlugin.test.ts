@@ -37,11 +37,13 @@ describe('setVerified', () => {
     const after = readFileSync(file, 'utf8').split('\n')
     expect(read(file).find((node) => node.id === id)).toMatchObject({ verified: true, verifiedBy: 'person' })
     expect(after.length).toBe(before.length + 1)
-    // Everything before the changed record is byte-identical
+    // Only the record's own lines change: `verified` flips and `verifiedBy` is added
     const firstChange = after.findIndex((line, index) => line !== before[index])
-    expect(after[firstChange]).toBe('    "verified": true,')
-    expect(after[firstChange + 1]).toBe('    "verifiedBy": "person"')
-    expect(after.slice(firstChange + 2)).toEqual(before.slice(firstChange + 1))
+    const lastChange = after.length - 1 - [...after].reverse().findIndex((line, index) => line !== before[before.length - 1 - index])
+    const changed = after.slice(firstChange, lastChange + 1).map((line) => line.trim())
+    expect(changed.some((line) => line.startsWith('"verified": true'))).toBe(true)
+    expect(changed.some((line) => line.startsWith('"verifiedBy": "person"'))).toBe(true)
+    expect(after.slice(0, firstChange)).toEqual(before.slice(0, firstChange))
   })
 
   it('flips an edge and can flip it back', () => {

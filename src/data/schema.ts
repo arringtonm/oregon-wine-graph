@@ -36,24 +36,42 @@ const location = {
   coordinates: z.strictObject({ lat: z.number().min(-90).max(90), lng: z.number().min(-180).max(180) }).optional(),
 }
 
+// Oral history interviews about this person or business, from the Oregon Wine History
+// Archive (Linfield University). Each links to the archive page with its video and transcript.
+const interviews = {
+  interviews: z
+    .array(
+      z.strictObject({
+        url: z.url(),
+        title: z.string().min(1),
+        date: z.iso.date().optional(),
+        minutes: z.number().int().positive().optional(),
+      }),
+    )
+    .optional(),
+}
+
 export const nodeSchema = z.discriminatedUnion('type', [
   z.strictObject({
     ...baseNode,
     type: z.literal('person'),
     born: year.optional(),
     died: year.optional(),
+    ...interviews,
   }),
   z.strictObject({
     ...baseNode,
     type: z.literal('winery'),
     founded: year.optional(),
     closed: year.optional(),
+    ...interviews,
     ...location,
   }),
   z.strictObject({
     ...baseNode,
     type: z.literal('vineyard'),
     planted: year.optional(),
+    ...interviews,
     ...location,
   }),
   z.strictObject({

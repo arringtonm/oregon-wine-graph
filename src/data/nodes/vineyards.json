@@ -85,9 +85,20 @@
       {
         "title": "Evening Land Vineyards (Wine with Seth)",
         "url": "https://www.winewithseth.com/winewiki/evening-land-vineyards/"
+      },
+      {
+        "title": "Seven Springs Vineyard collection, 2015 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/seven-springs-vineyard-collection/"
       }
     ],
-    "verified": true
+    "verified": true,
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/seven-springs-vineyard-collection/",
+        "title": "Seven Springs Vineyard collection",
+        "date": "2015-06-25"
+      }
+    ]
   },
   {
     "id": "ridgecrest-vineyards",
@@ -170,10 +181,21 @@
       {
         "title": "Oregon Wine Pioneer Cal Knudsen Dies (Wine Spectator)",
         "url": "https://www.winespectator.com/articles/oregon-wine-pioneer-cal-knudsen-dies-4788"
+      },
+      {
+        "title": "Knudsen Vineyards collection, 2024 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/knudsen-vineyards-collection/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/knudsen-vineyards-collection/",
+        "title": "Knudsen Vineyards collection",
+        "date": "2024-09-20"
+      }
+    ]
   },
   {
     "id": "chehalem-mountain-vineyard",
@@ -270,9 +292,20 @@
       {
         "title": "St. Innocent Winery: Vineyards",
         "url": "https://www.stinnocentwine.com/vineyards"
+      },
+      {
+        "title": "Freedom Hill Vineyard collection, 2018 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/freedom-hill-vineyard-collection/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/freedom-hill-vineyard-collection/",
+        "title": "Freedom Hill Vineyard collection",
+        "date": "2018-06-29"
+      }
+    ]
   },
   {
     "id": "hyland-vineyard",
@@ -313,9 +346,20 @@
       {
         "title": "Cameron Winery (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/1373/index.html"
+      },
+      {
+        "title": "Abbey Ridge Vineyard collection, 2023 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/abbey-ridge-vineyard-collection/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/abbey-ridge-vineyard-collection/",
+        "title": "Abbey Ridge Vineyard collection",
+        "date": "2023-07-13"
+      }
+    ]
   },
   {
     "id": "durant-vineyard",
@@ -335,9 +379,20 @@
       {
         "title": "Ken and Penny Durant Interview (Oregon Wine History Archive, Linfield)",
         "url": "https://digitalcommons.linfield.edu/owha_willamette_interviews/96"
+      },
+      {
+        "title": "Durant Vineyards collection, 2025 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/durant-vineyards-collection/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/durant-vineyards-collection/",
+        "title": "Durant Vineyards collection",
+        "date": "2025-07-22"
+      }
+    ]
   },
   {
     "id": "zenith-vineyard",
@@ -355,10 +410,21 @@
       {
         "title": "St. Innocent Winery: About",
         "url": "https://www.stinnocentwine.com/about"
+      },
+      {
+        "title": "Zenith Vineyard collection, 2024 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/zenith-vineyard-collection/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/zenith-vineyard-collection/",
+        "title": "Zenith Vineyard collection",
+        "date": "2024-07-17"
+      }
+    ]
   },
   {
     "id": "carter-vineyard",
@@ -392,10 +458,21 @@
       {
         "title": "Ken Wright Cellars: Vineyards",
         "url": "https://kenwrightcellars.com/vineyards/"
+      },
+      {
+        "title": "Canary Hill Vineyards collection, 2017 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/canary-hill-vineyards-collection/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/canary-hill-vineyards-collection/",
+        "title": "Canary Hill Vineyards collection",
+        "date": "2017-06-23"
+      }
+    ]
   },
   {
     "id": "guadalupe-vineyard",
@@ -449,10 +526,21 @@
       {
         "title": "Elton Wines (Willamette Valley Vineyards)",
         "url": "https://www.wvv.com/about-elton-wines/"
+      },
+      {
+        "title": "Elton Vineyards collection, 2015 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/elton-vineyards-collection/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/elton-vineyards-collection/",
+        "title": "Elton Vineyards collection",
+        "date": "2015-03-05"
+      }
+    ]
   },
   {
     "id": "resonance-vineyard",
@@ -723,9 +811,20 @@
       {
         "title": "David Hill Vineyard & Winery (Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/1140/"
+      },
+      {
+        "title": "David Hill Winery collection, 2020 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/david-hill-winery-collection/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/david-hill-winery-collection/",
+        "title": "David Hill Winery collection",
+        "date": "2020-08-12"
+      }
+    ]
   },
   {
     "id": "abetina-vineyard",
@@ -904,9 +1003,20 @@
       {
         "title": "EIEIO & Company",
         "url": "https://onhisfarm.com"
+      },
+      {
+        "title": "Saffron Fields collection, 2020 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/saffron-fields-collection/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/saffron-fields-collection/",
+        "title": "Saffron Fields collection",
+        "date": "2020-08-13"
+      }
+    ]
   },
   {
     "id": "white-cloud-vineyard",
@@ -1107,10 +1217,21 @@
       {
         "title": "Weinnotes newsletter, 18 June 2022",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-52"
+      },
+      {
+        "title": "Holstein Vineyards collection, 2017 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/holstein-vineyards-collection/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/holstein-vineyards-collection/",
+        "title": "Holstein Vineyards collection",
+        "date": "2017-09-27"
+      }
+    ]
   },
   {
     "id": "bunker-hill-vineyard",
@@ -1152,9 +1273,20 @@
       {
         "title": "Weinnotes newsletter, 5 June 2021",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter"
+      },
+      {
+        "title": "Nysa Vineyard collection, 2023 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/nysa-vineyard-collection/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/nysa-vineyard-collection/",
+        "title": "Nysa Vineyard collection",
+        "date": "2023-07-14"
+      }
+    ]
   },
   {
     "id": "luminous-hills-vineyard",
@@ -1338,9 +1470,19 @@
       {
         "title": "Weinnotes newsletter, 4 February 2023",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-83"
+      },
+      {
+        "title": "Murto Vineyard collection (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/murto-vineyard-collection/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/murto-vineyard-collection/",
+        "title": "Murto Vineyard collection"
+      }
+    ]
   },
   {
     "id": "clos-gallia-vineyard",
@@ -1549,9 +1691,20 @@
       {
         "title": "Independent vineyards where we source our fruit (bellepente.com)",
         "url": "https://bellepente.com"
+      },
+      {
+        "title": "Stag Hollow Wines collection, 2022 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/stag-hollow-wines-collection/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/stag-hollow-wines-collection/",
+        "title": "Stag Hollow Wines collection",
+        "date": "2022-08-26"
+      }
+    ]
   },
   {
     "id": "foxy-rock-vineyard",
@@ -1578,5 +1731,203 @@
       }
     ],
     "verified": false
+  },
+  {
+    "id": "barakel-vineyard",
+    "name": "Barakel Vineyard",
+    "summary": "Vineyard planted by Dean Underwood, who decided what to plant and where to sell the grapes.",
+    "sources": [
+      {
+        "title": "Oral history interview with Dean Underwood, 2026 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/dean-underwood/"
+      },
+      {
+        "title": "Barakel Vineyards collection, 2026 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/barakel-vineyards-collection/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/barakel-vineyards-collection/",
+        "title": "Barakel Vineyards collection",
+        "date": "2026-03-05"
+      }
+    ],
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "celestina-vineyard",
+    "name": "Celestina Vineyard",
+    "summary": "Vineyard near Medford bought in 2004 by John and Sherry Pratt, planted in 2007 and first harvested in 2009.",
+    "sources": [
+      {
+        "title": "Oral history interview with John Pratt, 2026 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/john-pratt/"
+      },
+      {
+        "title": "Celestina Vineyard collection, 2026 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/rogue-valley/celestina-vineyard-collection/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "planted": 2007,
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/rogue-valley/celestina-vineyard-collection/",
+        "title": "Celestina Vineyard collection",
+        "date": "2026-03-14"
+      }
+    ],
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "graves-vineyard",
+    "name": "Graves Vineyard",
+    "summary": "Vineyard in Dallesport, Washington, started by Don Graves.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Oral history interview with Don Graves, 2014 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/don-graves/"
+      },
+      {
+        "title": "Graves Vineyard collection, 2014 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/columbia-gorge-and-columbia-valley/graves-vineyard-collection/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/columbia-gorge-and-columbia-valley/graves-vineyard-collection/",
+        "title": "Graves Vineyard collection",
+        "date": "2014-06-14"
+      }
+    ],
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "fayetta-vineyard",
+    "name": "Fayetta Vineyard",
+    "summary": "Vineyard project started by Jacob Sembler near McMinnville.",
+    "sources": [
+      {
+        "title": "Fayetta Vineyard collection, 2022 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/fayetta-vineyard-collection/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/fayetta-vineyard-collection/",
+        "title": "Fayetta Vineyard collection",
+        "date": "2022-08-03"
+      }
+    ],
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "threemile-vineyard",
+    "name": "Threemile Vineyard",
+    "summary": "Vineyard in The Dalles in the Columbia Gorge region.",
+    "sources": [
+      {
+        "title": "Oral history interview with Joe Cushman, 2022 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/joe-cushman/"
+      },
+      {
+        "title": "Threemile Vineyard collection, 2022 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/columbia-gorge-and-columbia-valley/threemile-vineyard-collection/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/columbia-gorge-and-columbia-valley/threemile-vineyard-collection/",
+        "title": "Threemile Vineyard collection",
+        "date": "2022-08-24"
+      }
+    ],
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "pamar-vineyard",
+    "name": "Pamar Vineyard",
+    "summary": "Perrydale vineyard where Mark Bjornson has planted the rare grape Gouais Blanc.",
+    "place": "Perrydale, Oregon",
+    "sources": [
+      {
+        "title": "Oral history interview with Mark & Pattie Bjornson, 2024 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/mark-and-pattie-bjornson/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "ruby-vineyard",
+    "name": "Ruby Vineyard",
+    "summary": "Vineyard where Andrew Kirkland works.",
+    "sources": [
+      {
+        "title": "Ruby Vineyard collection, 2022 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/ruby-vineyard-collection/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/ruby-vineyard-collection/",
+        "title": "Ruby Vineyard collection",
+        "date": "2022-08-09"
+      }
+    ],
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "west-wind-vineyard",
+    "name": "West Wind Vineyard",
+    "summary": "Vineyard bought by Piper Underbrink and Ben Stalker in 2021, the source of their Sealionne brand.",
+    "sources": [
+      {
+        "title": "Sealionne Wines collection, 2025 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/sealionne-wines-collection/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "weber-vineyard",
+    "name": "Weber Vineyards",
+    "summary": "Vineyard planted by the Weber family, who sold its grapes under Dick Erath's guidance.",
+    "sources": [
+      {
+        "title": "Oral history interview with Vivian Weber, 2019 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/vivian-weber/"
+      },
+      {
+        "title": "Weber Vineyards collection, 2019 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/weber-vineyards-collection/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/weber-vineyards-collection/",
+        "title": "Weber Vineyards collection",
+        "date": "2019-06-10"
+      }
+    ],
+    "verifiedBy": "jev"
   }
 ]

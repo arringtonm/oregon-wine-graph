@@ -27,6 +27,23 @@ const avaNames = computed(() =>
   selectedNode.value ? avasOf(selectedNode.value.id).map((id) => nodeById.value.get(id)?.name.replace(/ AVA$/, '') ?? id) : [],
 )
 
+// Oral history interviews from the Oregon Wine History Archive, labelled for the panel:
+// "Interview, August 2007 · 37 min", or the collection's own name for a winery
+const interviews = computed(() => {
+  const node = selectedNode.value
+  const list = node && 'interviews' in node ? (node.interviews ?? []) : []
+  return list.map((interview) => {
+    const when = interview.date
+      ? new Date(`${interview.date}T12:00:00`).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+      : ''
+    const what = interview.url.includes('/interviews/') ? 'Interview' : interview.title
+    return {
+      url: interview.url,
+      label: [what, when].filter(Boolean).join(', ') + (interview.minutes ? ` · ${interview.minutes} min` : ''),
+    }
+  })
+})
+
 const neighbours = computed(() => (selectedNode.value ? nearby(selectedNode.value.id) : []))
 const address = computed(() =>
   selectedNode.value && 'address' in selectedNode.value ? selectedNode.value.address : undefined,
@@ -164,6 +181,17 @@ const facts = computed(() =>
         </ul>
       </section>
       <p v-if="groups.length === 0" class="detail__facts">No connections recorded yet.</p>
+
+      <section v-if="interviews.length">
+        <h3>Oral history</h3>
+        <ul>
+          <li v-for="interview in interviews" :key="interview.url">
+            <a :href="interview.url" target="_blank" rel="noopener">
+              {{ interview.label }}<span class="visually-hidden"> (Oregon Wine History Archive, opens in a new tab)</span>
+            </a>
+          </li>
+        </ul>
+      </section>
 
       <section v-if="neighbours.length">
         <h3>Nearby tasting rooms</h3>

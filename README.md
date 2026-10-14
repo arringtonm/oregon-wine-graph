@@ -67,6 +67,22 @@ JEV_API_KEY=...
 
 Without a key, keyword rules stand in for Jev so the feature still works; the preview says which one read the sentence. If the sentence names someone or something the graph does not have, the preview offers to create it as a new unverified node, with a name and type you can correct before saving. One sentence adds one connection. The code is in `tools/jev/`.
 
+## Oregon Wine History Archive
+
+Linfield University's oral-history archive ([oregonwinehistoryarchive.org](https://oregonwinehistoryarchive.org)) serves all its pages through its public WordPress API, so no crawling is needed.
+
+```sh
+npm run owha:fetch   # download and parse every page into .cache/owha/, and cache each as a source
+npm run owha:match   # match interviews to people and collections to wineries we already have
+npm run owha:link    # add those interviews to the nodes, with the archive page as a source
+```
+
+A matched node shows an "Oral history" section in the detail panel linking to its interview, with the video and transcript on the archive page. Pages about people and places not yet in the graph are ranked with `npm run discover:triage -- owha-unmatched` and extracted by research agents.
+
+## Adding records from a source
+
+`tools/discover/BRIEF.md` sets out the conventions for turning a source into records: what to cite, how to model wineries and vineyards, and what never to guess. Research output goes to a file under `.cache/`, and `npm run discover:merge -- <file.json> ...` folds it into the data: existing nodes and relationships gain only sources, connections to unknown nodes and orphan nodes are dropped, and the whole graph is validated before anything is written. Run `npm run check` and `npm run check:apply` afterwards.
+
 ## Geography
 
 - `npm run geo:locate` finds each Oregon winery's visitor address on its own website (trying the usual domain patterns when none is cited), has Jev confirm which address is the winery's, and geocodes it with the US Census geocoder. Addresses are visitor information: often a tasting room, which can move and can sit far from the vines. They feed the "Nearby tasting rooms" list and nothing else.

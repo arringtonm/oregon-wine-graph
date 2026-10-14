@@ -829,5 +829,168 @@
     ],
     "verified": true,
     "verifiedBy": "jev"
+  },
+  {
+    "id": "geisenheim-university",
+    "name": "Hochschule Geisenheim University",
+    "aka": [
+      "Geisenheim University"
+    ],
+    "summary": "German university of wine and horticulture where Akiko Shiba studied.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Oral history interview with Akiko Shiba, 2021 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/akiko-shiba/"
+      }
+    ],
+    "verified": true,
+    "type": "organization",
+    "kind": "school",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "fresno-state",
+    "name": "California State University, Fresno",
+    "aka": [
+      "Fresno State",
+      "Cal State Fresno"
+    ],
+    "summary": "California university with a wine program, attended by several Oregon winemakers.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Oral history interview with Andrew Belzer, 2019 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/andrew-belzer/"
+      }
+    ],
+    "verified": false,
+    "type": "organization",
+    "kind": "school"
+  },
+  {
+    "id": "artisan-barrels",
+    "name": "Artisan Barrels",
+    "summary": "Barrel business in Oregon where Phil Taratko now works.",
+    "sources": [
+      {
+        "title": "Artisan Barrels collection (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/oregon-wine-industry-businesses/artisan-barrels-collection/"
+      }
+    ],
+    "verified": false,
+    "type": "organization",
+    "kind": "company"
+  },
+  {
+    "id": "atlas-vineyard-management",
+    "name": "Atlas Vineyard Management",
+    "summary": "Oregon vineyard management company where Madeleine Rowan-Davis works.",
+    "sources": [
+      {
+        "title": "Atlas Vineyard Management collection, 2023 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/oregon-wine-industry-businesses/atlas-vineyard-management-collection/"
+      }
+    ],
+    "verified": true,
+    "type": "organization",
+    "kind": "company",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "university-of-oregon",
+    "name": "University of Oregon",
+    "summary": "Eugene university attended by several Oregon winemakers.",
+    "sources": [
+      {
+        "title": "Oral history interview with Bryan Wilson, 2026 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/bryan-wilson/"
+      }
+    ],
+    "verified": false,
+    "type": "organization",
+    "kind": "school"
+  },
+  {
+    "id": "rogue-valley-vintners-association",
+    "name": "Rogue Valley Vintners Association",
+    "summary": "Trade group of Rogue Valley winegrowers.",
+    "sources": [
+      {
+        "title": "Oral history interview with John Pratt, 2026 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/john-pratt/"
+      }
+    ],
+    "verified": true,
+    "type": "organization",
+    "kind": "trade-body",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "portland-state-university",
+    "name": "Portland State University",
+    "summary": "Portland university attended by Chris Lubberstedt.",
+    "sources": [
+      {
+        "title": "Oral history interview with Chris Lubberstedt, 2021 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/chris-lubberstedt/"
+      }
+    ],
+    "verified": false,
+    "type": "organization",
+    "kind": "school"
+  },
+  {
+    "id": "cal-poly",
+    "name": "California Polytechnic State University",
+    "aka": [
+      "Cal Poly"
+    ],
+    "summary": "California university where Emily Miller studied wine, viticulture and enology.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Oral history interview with Emily Miller, 2021 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/emily-miller/"
+      }
+    ],
+    "verified": true,
+    "type": "organization",
+    "kind": "school",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "kimballs-artisan-wines",
+    "name": "Kimball's Artisan Wines",
+    "aka": [
+      "Kimball’s Artisan Wines"
+    ],
+    "summary": "Jacksonville wine shop opened in 2019, specialising in organically and biodynamically farmed wines.",
+    "sources": [
+      {
+        "title": "Oral history interview with Josh Kimball, 2026 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/josh-kimball/"
+      }
+    ],
+    "verified": true,
+    "type": "organization",
+    "kind": "company",
+    "founded": 2019,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "red-dirt-labor",
+    "name": "Red Dirt Labor",
+    "summary": "Vineyard management business run by Miguel Lopez that works only with non-conventionally farmed vineyards.",
+    "sources": [
+      {
+        "title": "Oral history interview with Miguel Lopez, 2021 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/miguel-lopez/"
+      }
+    ],
+    "verified": true,
+    "type": "organization",
+    "kind": "company",
+    "verifiedBy": "jev"
   }
 ]

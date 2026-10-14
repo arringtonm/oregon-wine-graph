@@ -62,7 +62,8 @@
         "url": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "rogue-valley",

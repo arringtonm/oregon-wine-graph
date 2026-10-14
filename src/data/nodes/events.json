@@ -268,5 +268,19 @@
       }
     ],
     "verified": false
+  },
+  {
+    "id": "grenache-fest",
+    "name": "Grenache Fest",
+    "summary": "Festival celebrating Grenache, created by Carrie Alexander.",
+    "sources": [
+      {
+        "title": "Oral history interview with Carrie Alexander, 2026 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/carrie-alexander/"
+      }
+    ],
+    "verified": true,
+    "type": "event",
+    "verifiedBy": "jev"
   }
 ]
