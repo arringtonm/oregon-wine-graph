@@ -5,7 +5,7 @@ import GraphCanvas from './components/GraphCanvas.vue'
 import GraphControls from './components/GraphControls.vue'
 import { useGraph } from './composables/useGraph'
 
-const { state, init } = useGraph()
+const { state, init, select } = useGraph()
 
 // Matches the breakpoint where the filters become a drawer over the graph
 const compactQuery = window.matchMedia('(max-width: 1024px)')
@@ -25,11 +25,28 @@ function skipToDetails() {
   document.getElementById('details')?.focus()
 }
 
+// Escape closes the selected node, unless something nearer the focus uses Escape itself:
+// a text field (it clears the search), the filter drawer as a dialog, or the history list
+function onKeydown(event: KeyboardEvent) {
+  if (event.key !== 'Escape' || event.defaultPrevented || !state.selectedId) return
+  const target = event.target as HTMLElement | null
+  if (target?.closest('input, textarea, select, [contenteditable="true"], #history-list')) return
+  if (drawerModal.value) return
+  const detailsHadFocus = !!target?.closest('#details')
+  select(null)
+  // Focus would otherwise be lost with the panel's contents
+  if (detailsHadFocus) document.getElementById('details')?.focus()
+}
+
 onMounted(() => {
+  document.addEventListener('keydown', onKeydown)
   compactQuery.addEventListener('change', onCompactChange)
   init()
 })
-onBeforeUnmount(() => compactQuery.removeEventListener('change', onCompactChange))
+onBeforeUnmount(() => {
+  document.removeEventListener('keydown', onKeydown)
+  compactQuery.removeEventListener('change', onCompactChange)
+})
 </script>
 
 <template>

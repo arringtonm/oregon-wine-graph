@@ -1118,14 +1118,15 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/tony-rynders/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/tony-rynders/",
         "title": "Tony Rynders",
         "date": "2020-07-31"
       }
-    ]
+    ],
+    "verifiedBy": "person"
   },
   {
     "id": "bill-stoller",

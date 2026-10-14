@@ -435,7 +435,8 @@
         "url": "https://en.wikipedia.org/wiki/Nancy_Ponzi"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "erath-family-foundation",

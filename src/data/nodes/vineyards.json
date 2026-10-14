@@ -276,7 +276,8 @@
         "url": "https://www.stinnocentwine.com/vineyards"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "freedom-hill-vineyard",
@@ -1278,14 +1279,15 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/nysa-vineyard-collection/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/nysa-vineyard-collection/",
         "title": "Nysa Vineyard collection",
         "date": "2023-07-14"
       }
-    ]
+    ],
+    "verifiedBy": "person"
   },
   {
     "id": "luminous-hills-vineyard",

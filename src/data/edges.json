@@ -1495,7 +1495,8 @@
         "url": "https://www.winespectator.com/articles/profiles-in-pinot-noir-domaine-drouhin-1804"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "domaine-drouhin-oregon--draws-from--dundee-hills",
@@ -2040,7 +2041,8 @@
         "url": "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "ted-casteel--family--terry-casteel",
@@ -2127,7 +2129,8 @@
         "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "ben-casteel--worked-at--rex-hill",
@@ -9404,7 +9407,8 @@
         "url": "https://dmwineline.substack.com/p/mimi-casteel-would-like-a-conversation"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "mimi-casteel--founded--hope-well-wine",
@@ -11340,7 +11344,8 @@
         "url": "https://www.saludauction.org/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "cristom-vineyards--member-of--salud",
@@ -13433,7 +13438,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-HfMTMeSy"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "antica-terra--acquired--keeler-estate-vineyard",
@@ -21363,7 +21369,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-6"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "tendril-wine-cellars--sources-from--carter-vineyard",
@@ -31220,7 +31227,8 @@
         "url": "https://www.saffronfields.com"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "saffron-fields--draws-from--yamhill-carlton",

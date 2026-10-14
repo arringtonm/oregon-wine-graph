@@ -416,14 +416,15 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/bethel-heights-vineyard-collection/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/bethel-heights-vineyard-collection/",
         "title": "Bethel Heights Vineyard collection",
         "date": "2021-08-11"
       }
-    ]
+    ],
+    "verifiedBy": "person"
   },
   {
     "id": "cristom-vineyards",
@@ -809,14 +810,15 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/domaine-serene-collection/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/domaine-serene-collection/",
         "title": "Domaine Serene collection",
         "date": "2024-07-29"
       }
-    ]
+    ],
+    "verifiedBy": "person"
   },
   {
     "id": "maisons-domaines-henriot",
@@ -5336,7 +5338,7 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/amaterra-winery-collection/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "address": "8150 SW Swede Hill Drive Portland, OR 97225",
     "coordinates": {
       "lat": 45.51302,
@@ -5348,7 +5350,8 @@
         "title": "Amaterra Winery collection",
         "date": "2026-04-14"
       }
-    ]
+    ],
+    "verifiedBy": "person"
   },
   {
     "id": "51weeks",

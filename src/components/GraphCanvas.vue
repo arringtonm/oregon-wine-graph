@@ -4,6 +4,8 @@ import fcose from 'cytoscape-fcose'
 import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 import { edgeLabel, formatYears, nodeYears, useGraph } from '../composables/useGraph'
 import { EDGE_RULES } from '../data/schema'
+import { sizeTiers } from '../graph/nodeSize'
+import { removeOverlaps } from '../graph/removeOverlaps'
 import GraphList from './GraphList.vue'
 import NodeGlyph from './NodeGlyph.vue'
 
@@ -87,6 +89,9 @@ function buildStyle(): StylesheetJson {
       style: {
         width: 'data(size)',
         height: 'data(size)',
+        // Hubs are drawn over the nodes and labels around them
+        // Cytoscape's types reject data() mappers for z-index, though it supports them
+        'z-index': 'data(z)' as unknown as number,
         'background-color': neutral,
         'border-width': 2,
         'border-color': surface,
@@ -116,11 +121,14 @@ function buildStyle(): StylesheetJson {
     {
       selector: 'edge',
       style: {
-        width: 1.5,
+        // With nearly two thousand lines, full-strength edges bury the nodes; they recede
+        // until a node is selected or a line is hovered
+        width: 1,
+        'line-opacity': 0.8,
         'line-color': token('--edge'),
         'target-arrow-color': token('--edge'),
         'target-arrow-shape': 'triangle',
-        'arrow-scale': 0.8,
+        'arrow-scale': 0.6,
         'curve-style': 'bezier',
         'control-point-step-size': 55,
         'font-size': 9,
@@ -156,15 +164,16 @@ function buildStyle(): StylesheetJson {
     { selector: 'node.selected', style: { 'border-color': ink, 'border-width': 3, 'border-style': 'solid' } },
     {
       selector: 'edge.highlighted, edge.hovered',
-      style: { label: 'data(label)', width: 2.5, 'line-color': ink, 'target-arrow-color': ink },
+      style: { label: 'data(label)', width: 2.5, 'line-opacity': 1, 'line-color': ink, 'target-arrow-color': ink },
     },
   ]
 }
 
 function buildElements(): ElementDefinition[] {
-  const maxDegree = Math.max(1, ...degree.value.values())
-  // Square root keeps the few biggest hubs from dwarfing everything else
-  const weight = (id: string) => Math.sqrt((degree.value.get(id) ?? 0) / maxDegree)
+  // Sizes come in five tiers, ranked among the nodes showing, so each view's best-connected
+  // nodes are its largest. Ranking uses connection counts from the full data, not just the
+  // lines showing, so a node's standing doesn't flicker as filters change
+  const tiers = sizeTiers(new Map(visibleNodes.value.map((node) => [node.id, degree.value.get(node.id) ?? 0])))
   // With the geography layer on, vineyards sit inside a region for their AVA (nested AVAs
   // inside their parents) instead of being joined to AVA nodes by lines. Wineries stay
   // outside; any "located in" they have is still drawn as a line to the region.
@@ -191,9 +200,11 @@ function buildElements(): ElementDefinition[] {
         label: node.name,
         type: node.type,
         outside: node.outsideOregon === true,
-        size: 14 + 40 * weight(node.id),
-        // Well-connected nodes get larger labels, so they stay readable when zoomed out
-        fontSize: 8 + 28 * weight(node.id),
+        size: tiers.get(node.id)!.size,
+        // Well-connected nodes get larger labels, so they stay readable when zoomed out while
+        // the labels of minor nodes drop out below min-zoomed-font-size
+        fontSize: tiers.get(node.id)!.fontSize,
+        z: degree.value.get(node.id) ?? 0,
       },
     })),
     ...visibleEdges.value
@@ -271,8 +282,16 @@ function runLayout(randomize: boolean) {
     // Measured on the full graph: counting labels as part of each node's size and pushing
     // nodes harder apart cut overlapping labels from about 1,700 pairs to about 300
     nodeDimensionsIncludeLabels: true,
-    nodeRepulsion: 120000,
-    idealEdgeLength: 220,
+    // Bigger nodes push harder, so hubs keep clear room around them. With size-scaled
+    // repulsion, overlapping labels fell from about 640 to about 400 on the full graph.
+    // AVA regions are excluded: scaled by their own width they balloon to twice the size
+    nodeRepulsion: (node: cytoscape.NodeSingular) =>
+      node.isParent() ? 120000 : 120000 * Math.max(1, node.width() / 22),
+    // A minor node's connections are short, so it sits beside its hub; lines between hubs
+    // are long, leaving room for each hub's own cluster. Measured against a fixed 220:
+    // about 10% fewer overlapping labels and a quarter less layout time
+    idealEdgeLength: (edge: cytoscape.EdgeSingular) =>
+      90 + 50 * Math.sqrt(Math.max(1, Math.min(edge.source().degree(false), edge.target().degree(false)))),
     gravity: 0.04,
     nodeSeparation: 120,
     // fcose packs nodes without connections into a square grid by default. Filters such as
@@ -288,10 +307,37 @@ function runLayout(randomize: boolean) {
     padding: 40,
   } as cytoscape.LayoutOptions)
   layout.one('layoutstop', () => {
+    separateNodes()
     fit()
     centerOnSelection()
   })
   layout.run()
+}
+
+// The force layout spaces nodes out on average but leaves some nodes and labels on top of
+// each other; nudge those apart, moving well-connected nodes least
+function separateNodes() {
+  if (!cy) return
+  const nodes = cy.nodes().filter((node) => node.isChildless())
+  const boxes = nodes.map((node: cytoscape.NodeSingular) => {
+    const box = node.boundingBox({ includeLabels: true })
+    return {
+      id: node.id(),
+      x: (box.x1 + box.x2) / 2,
+      y: (box.y1 + box.y2) / 2,
+      width: box.w,
+      height: box.h,
+      weight: 1 + node.degree(false),
+    }
+  })
+  const { moves } = removeOverlaps(boxes)
+  cy.batch(() => {
+    for (const [id, { dx, dy }] of moves) {
+      const node = cy!.getElementById(id)
+      const position = node.position()
+      node.position({ x: position.x + dx, y: position.y + dy })
+    }
+  })
 }
 
 // Add and remove only what changed so existing nodes keep their positions
@@ -303,6 +349,7 @@ function syncElements() {
   let changed = false
   let regrouped = false
   let churn = 0
+  let resized = false
   cy.batch(() => {
     const stale = cy!.elements().filter((element) => !wantedIds.has(element.id()))
     changed = stale.nonempty()
@@ -314,7 +361,12 @@ function syncElements() {
         cy!.add(element)
         changed = true
         churn++
-      } else if (element.group === 'nodes' && (existing.data('parent') ?? undefined) !== element.data.parent) {
+      } else if (element.group === 'nodes' && existing.data('size') !== element.data.size) {
+        // Filters re-rank the nodes showing, so a node kept in view can change tier
+        existing.data({ size: element.data.size, fontSize: element.data.fontSize })
+        resized = true
+      }
+      if (existing.nonempty() && element.group === 'nodes' && (existing.data('parent') ?? undefined) !== element.data.parent) {
         // Turning AVA regions on or off moves nodes into or out of them
         existing.move({ parent: element.data.parent ?? null })
         changed = true
@@ -327,6 +379,8 @@ function syncElements() {
   // where the filter left them end up joined by long lines across the whole graph
   const large = churn > wanted.length * 0.1
   if (changed) runLayout(firstRender || regrouped || large)
+  // Nodes that grew without a new layout may now overlap their neighbours
+  else if (resized) separateNodes()
   applySelection()
 }
 
