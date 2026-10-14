@@ -12,7 +12,13 @@ import {
   type GraphEdge,
   type GraphNode,
   type NodeType,
+  type VerifiedBy,
 } from '../src/data/schema'
+import { checkRecord } from './check/checkRecord'
+import { claimsFingerprint, claimsFor, recordKey } from './check/claims'
+import { evidenceFor, findRecord, removeEdge, updateEdge } from './check/edit'
+import { readCached } from './check/fetchSources'
+import { compact, CHECKS_FILE, readChecks, writeChecks } from './check/store'
 import { jevModel, stubModel } from './jev/model'
 import { parseConnection, slugify, type ProposedEdge } from './jev/parseConnection'
 
@@ -23,19 +29,58 @@ export function formatRecords(records: unknown): string {
   return JSON.stringify(records, null, 2) + '\n'
 }
 
-// Sets `verified` on one record in the JSON data files. Returns the file changed, or null if the id is unknown.
-export function setVerified(dataDir: string, kind: RecordKind, id: string, verified: boolean): string | null {
+type StoredRecord = { id: string; verified: boolean; verifiedBy?: VerifiedBy }
+
+function mark(record: StoredRecord, verified: boolean, by: VerifiedBy) {
+  record.verified = verified
+  if (verified) record.verifiedBy = by
+  else delete record.verifiedBy
+}
+
+// Sets `verified` on one record in the JSON data files, noting who verified it.
+// Returns the file changed, or null if the id is unknown.
+export function setVerified(
+  dataDir: string,
+  kind: RecordKind,
+  id: string,
+  verified: boolean,
+  by: VerifiedBy = 'person',
+): string | null {
   const files = kind === 'edge' ? [join(dataDir, 'edges.json')] : nodeFiles(dataDir)
 
   for (const file of files) {
-    const records = JSON.parse(readFileSync(file, 'utf8')) as { id: string; verified: boolean }[]
+    const records = JSON.parse(readFileSync(file, 'utf8')) as StoredRecord[]
     const record = records.find((candidate) => candidate.id === id)
     if (!record) continue
-    record.verified = verified
+    mark(record, verified, by)
     writeFileSync(file, formatRecords(records))
     return file
   }
   return null
+}
+
+// The same for many records at once, writing each file once. `matches` picks the records
+// to change. Returns how many were changed.
+export function setVerifiedWhere(
+  dataDir: string,
+  matches: (kind: RecordKind, record: StoredRecord) => boolean,
+  verified: boolean,
+  by: VerifiedBy,
+): number {
+  let changed = 0
+  const files: [RecordKind, string][] = [
+    ...nodeFiles(dataDir).map((file): [RecordKind, string] => ['node', file]),
+    ['edge', join(dataDir, 'edges.json')],
+  ]
+  for (const [kind, file] of files) {
+    const records = JSON.parse(readFileSync(file, 'utf8')) as StoredRecord[]
+    const hits = records.filter((record) => record.verified !== verified && matches(kind, record))
+    if (hits.length === 0) continue
+    for (const record of hits) mark(record, verified, by)
+    writeFileSync(file, formatRecords(records))
+    changed += hits.length
+  }
+  return changed
 }
 
 function nodeFiles(dataDir: string): string[] {
@@ -180,6 +225,56 @@ export function reviewPlugin(dataDir = resolve('src/data')): Plugin {
           if (!file) throw new Error(`No ${kind} with id "${id}"`)
           ownWrites.add(file)
           return { ok: true }
+        }),
+      )
+
+      // Checks one record against its sources again, after it has been edited
+      const recheck = async (kind: RecordKind, id: string) => {
+        const item = findRecord(dataDir, kind, id)
+        if (!item || model.name !== 'jev') return null
+        const graph = readGraph(dataDir)
+        const stored = {
+          fingerprint: claimsFingerprint(claimsFor(item, graph)),
+          checkedAt: new Date().toISOString().slice(0, 10),
+          sources: compact(await checkRecord(item, graph, model, readCached)),
+        }
+        const store = readChecks()
+        store[recordKey(item)] = stored
+        writeChecks(store)
+        ownWrites.add(CHECKS_FILE)
+        return stored
+      }
+      const recordRef = ({ kind, id }: Record<string, unknown>) => {
+        if ((kind !== 'node' && kind !== 'edge') || typeof id !== 'string') throw new Error('Malformed request')
+        return { kind: kind as RecordKind, id }
+      }
+
+      server.middlewares.use(
+        '/__review/evidence',
+        route((body) => {
+          const { kind, id } = recordRef(body)
+          const item = findRecord(dataDir, kind, id)
+          if (!item) throw new Error(`No ${kind} with id "${id}"`)
+          return evidenceFor(dataDir, item, readCached)
+        }),
+      )
+
+      server.middlewares.use(
+        '/__review/remove-edge',
+        route(({ id }) => {
+          if (typeof id !== 'string' || !removeEdge(dataDir, id)) throw new Error('No such connection')
+          ownWrites.add(join(dataDir, 'edges.json'))
+          return { ok: true }
+        }),
+      )
+
+      server.middlewares.use(
+        '/__review/update-edge',
+        route(async ({ id, changes }) => {
+          if (typeof id !== 'string' || typeof changes !== 'object' || changes === null) throw new Error('Malformed request')
+          const edge = updateEdge(dataDir, id, changes)
+          ownWrites.add(join(dataDir, 'edges.json'))
+          return { edge, check: await recheck('edge', id) }
         }),
       )
 

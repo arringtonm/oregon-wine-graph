@@ -45,7 +45,8 @@
         "url": "https://digitalcommons.linfield.edu/owha_cary_docs/1"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "oregon-pinot-camp",
@@ -143,7 +144,8 @@
         "url": "https://www.ruralnewsgroup.co.nz/wine-grower/wg-general-news/legacy-remembered"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "senate-bill-100",
@@ -250,7 +252,8 @@
         "url": "https://www.oregonwinesymposium.com/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "one-barrel-challenge",

@@ -11,7 +11,8 @@
         "url": "https://en.wikipedia.org/wiki/Willamette_Valley_AVA"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "dundee-hills",
@@ -46,7 +47,8 @@
         "url": "https://en.wikipedia.org/wiki/Southern_Oregon_AVA"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "umpqua-valley",
@@ -74,7 +76,8 @@
         "url": "https://en.wikipedia.org/wiki/Rogue_Valley_AVA"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "applegate-valley",
@@ -88,7 +91,8 @@
         "url": "https://en.wikipedia.org/wiki/Applegate_Valley_AVA"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "mcminnville",
@@ -116,7 +120,8 @@
         "url": "https://en.wikipedia.org/wiki/Van_Duzer_Corridor_AVA"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "walla-walla-valley",
@@ -147,7 +152,8 @@
         "url": "https://en.wikipedia.org/wiki/The_Rocks_District_of_Milton-Freewater_AVA"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "eola-amity-hills",
@@ -195,7 +201,8 @@
         "url": "https://en.wikipedia.org/wiki/Ribbon_Ridge_AVA"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "chehalem-mountains",
@@ -223,7 +230,8 @@
         "url": "https://en.wikipedia.org/wiki/Laurelwood_District_AVA"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "tualatin-hills",
@@ -283,7 +291,8 @@
         "url": "https://en.wikipedia.org/wiki/Elkton_Oregon_AVA"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "red-hill-douglas-county",

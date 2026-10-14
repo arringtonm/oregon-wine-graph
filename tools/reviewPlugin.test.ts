@@ -2,7 +2,7 @@ import { cpSync, mkdtempSync, readdirSync, readFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import { addConnection, formatRecords, readGraph, setVerified } from './reviewPlugin'
+import { addConnection, formatRecords, readGraph, setVerified, setVerifiedWhere } from './reviewPlugin'
 
 const realDataDir = resolve('src/data')
 let dataDir: string
@@ -15,20 +15,33 @@ beforeEach(() => {
 afterEach(() => rmSync(dataDir, { recursive: true, force: true }))
 
 function read(file: string) {
-  return JSON.parse(readFileSync(file, 'utf8')) as { id: string; verified: boolean }[]
+  return JSON.parse(readFileSync(file, 'utf8')) as { id: string; verified: boolean; verifiedBy?: string }[]
 }
 
 describe('setVerified', () => {
-  it('flips one node and leaves every other line untouched', () => {
+  // Records are picked from whatever is still unverified, so approvals made in the real
+  // data do not break these tests
+  const unverifiedPeople = () =>
+    read(join(dataDir, 'nodes', 'people.json'))
+      .filter((node) => !node.verified)
+      .map((node) => node.id)
+  const unverifiedEdge = () => read(join(dataDir, 'edges.json')).find((edge) => !edge.verified)!.id
+
+  it('flips one node, adding only who verified it', () => {
     const file = join(dataDir, 'nodes', 'people.json')
+    const [id] = unverifiedPeople()
     const before = readFileSync(file, 'utf8').split('\n')
 
-    expect(setVerified(dataDir, 'node', 'david-lett', true)).toBe(file)
+    expect(setVerified(dataDir, 'node', id, true)).toBe(file)
 
     const after = readFileSync(file, 'utf8').split('\n')
-    expect(read(file).find((node) => node.id === 'david-lett')?.verified).toBe(true)
-    expect(after.length).toBe(before.length)
-    expect(after.filter((line, index) => line !== before[index]).length).toBe(1)
+    expect(read(file).find((node) => node.id === id)).toMatchObject({ verified: true, verifiedBy: 'person' })
+    expect(after.length).toBe(before.length + 1)
+    // Everything before the changed record is byte-identical
+    const firstChange = after.findIndex((line, index) => line !== before[index])
+    expect(after[firstChange]).toBe('    "verified": true,')
+    expect(after[firstChange + 1]).toBe('    "verifiedBy": "person"')
+    expect(after.slice(firstChange + 2)).toEqual(before.slice(firstChange + 1))
   })
 
   it('flips an edge and can flip it back', () => {
@@ -41,6 +54,37 @@ describe('setVerified', () => {
 
     setVerified(dataDir, 'edge', id, false)
     expect(readFileSync(file, 'utf8')).toBe(original)
+  })
+
+  it('records who verified a record and clears it again on undo', () => {
+    const file = join(dataDir, 'nodes', 'people.json')
+    const original = readFileSync(file, 'utf8')
+    const [id] = unverifiedPeople()
+
+    setVerified(dataDir, 'node', id, true, 'jev')
+    expect(read(file).find((node) => node.id === id)).toMatchObject({ verified: true, verifiedBy: 'jev' })
+    setVerified(dataDir, 'node', id, false)
+    expect(readFileSync(file, 'utf8')).toBe(original)
+  })
+
+  it('verifies many records in one pass and can undo exactly those', () => {
+    const before = readGraph(dataDir)
+    const people = unverifiedPeople().slice(0, 2)
+    const wanted = new Set([...people.map((id) => `node:${id}`), `edge:${unverifiedEdge()}`])
+    const isWanted = (kind: string, record: { id: string }) => wanted.has(`${kind}:${record.id}`)
+
+    expect(setVerifiedWhere(dataDir, isWanted, true, 'jev')).toBe(3)
+    const after = readGraph(dataDir)
+    for (const id of people) {
+      expect(after.nodes.find((node) => node.id === id)).toMatchObject({ verified: true, verifiedBy: 'jev' })
+    }
+    const verifiedCount = (graph: typeof after) => [...graph.nodes, ...graph.edges].filter((record) => record.verified).length
+    expect(verifiedCount(after)).toBe(verifiedCount(before) + 3)
+
+    // Already-verified records are left alone, so a second pass changes nothing
+    expect(setVerifiedWhere(dataDir, isWanted, true, 'jev')).toBe(0)
+    expect(setVerifiedWhere(dataDir, isWanted, false, 'jev')).toBe(3)
+    expect(readGraph(dataDir)).toEqual(before)
   })
 
   it('returns null for an unknown id and does not look for nodes among edges', () => {

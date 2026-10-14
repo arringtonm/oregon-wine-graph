@@ -35,6 +35,24 @@ Conventions:
 
 Run `npm run dev` and the detail panel gains a review box. Each node and each connection has an Approve button (and Undo), its sources are linked beside it, and "Next unverified" walks through whatever is left. Approving writes `verified: true` straight into the JSON file, so a review session ends as an ordinary git diff to read and commit.
 
+### Checking records against their sources
+
+Most of the backlog is cleared by machine. Three commands, run in order:
+
+```sh
+npm run check:fetch      # download every cited page once into .cache/ (not committed)
+npm run check            # ask Jev whether each record's own sources support it
+npm run check:apply      # mark the supported ones verified, as verified by Jev
+```
+
+`npm run check` breaks each record into claims (the relationship, each year, the role), cuts each cited page down to the passages naming the parties, and has Jev score every claim. Raw scores go to `src/data/checks.json`, so the threshold can change without asking again. A record is supported when some source states or implies it and every detail holds; otherwise it is partly supported, unsupported, contradicted, or unreadable.
+
+`npm run check:calibrate` measures the risk: it breaks one fact in each of about 400 passing records and counts how many still pass. At the threshold in use (0.9) that was 1.2%, all from swapping in a neighbouring relationship such as "founded" for "helped organize".
+
+Verified records carry `verifiedBy`: `person`, `jev` or `boundary`. `npm run check:apply -- --undo` unverifies everything Jev verified.
+
+In review mode, each record shows Jev's verdict and an Evidence button with the passages it read. The review box has a button per verdict that jumps to the next node needing attention. A connection can be edited (role, years), which re-checks it, or removed.
+
 Review mode exists only on the dev server (`tools/reviewPlugin.ts`); the built site is read-only and shows unverified records with an "Unverified draft" badge.
 
 ## Adding a connection in plain language

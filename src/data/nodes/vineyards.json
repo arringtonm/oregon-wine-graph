@@ -30,7 +30,8 @@
         "url": "https://en.wikipedia.org/wiki/Abacela"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "cailloux-vineyard",
@@ -64,7 +65,8 @@
         "url": "https://www.princeofpinot.com/article/170/index.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "seven-springs-vineyard",
@@ -107,7 +109,8 @@
         "url": "https://en.wikipedia.org/wiki/Ribbon_Ridge_AVA"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "roserock-vineyard",
@@ -128,7 +131,8 @@
         "url": "https://drouhin.com/en_US/presentation/pioneers-in-oregon"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "maresh-vineyard",
@@ -168,7 +172,8 @@
         "url": "https://www.winespectator.com/articles/oregon-wine-pioneer-cal-knudsen-dies-4788"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "chehalem-mountain-vineyard",
@@ -290,7 +295,8 @@
         "url": "https://www.princeofpinot.com/vineyard/195/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "abbey-ridge-vineyard",
@@ -351,7 +357,8 @@
         "url": "https://www.stinnocentwine.com/about"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "carter-vineyard",
@@ -387,7 +394,8 @@
         "url": "https://kenwrightcellars.com/vineyards/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "guadalupe-vineyard",
@@ -405,7 +413,8 @@
         "url": "https://kenwrightcellars.com/vineyards/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "momtazi-vineyard",
@@ -442,7 +451,8 @@
         "url": "https://www.wvv.com/about-elton-wines/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "resonance-vineyard",
@@ -503,10 +513,11 @@
         "url": "https://eolaamityhills.com/winemakers/erin-nuccio/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "aka": [
       "Le Puits Sec"
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "stoller-estate-vineyard",
@@ -520,7 +531,8 @@
         "url": "https://www.stollerfamilyestate.com/about/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "beacon-hill-vineyard",
@@ -576,7 +588,8 @@
         "url": "https://www.winespectator.com/articles/jackson-family-buys-willakenzie-estate"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "seven-hills-vineyard",
@@ -624,7 +637,8 @@
         "url": "https://www.oregonwinepress.com/oregons-walla-walla"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "red-hill-vineyard",
@@ -644,7 +658,8 @@
         "url": "https://en.wikipedia.org/wiki/Red_Hill_Douglas_County,_Oregon_AVA"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "maes-vineyard",
@@ -658,7 +673,8 @@
         "url": "https://greatnorthwestwine.com/?p=15657"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "doerner-vineyards",
@@ -681,7 +697,8 @@
         "url": "https://www.oregonwine.org/?p=184"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "david-hill-vineyard",
@@ -752,7 +769,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-HfMTMeSy"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "case-vineyard",
@@ -769,7 +787,8 @@
         "url": "https://greatnorthwestwine.com/2021/02/16/former-oregon-car-dealer-gears-up-with-jachter-family-wines/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "raindance-vineyard",
@@ -785,7 +804,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-uTJyX7Ue"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "blackfeather-vineyard",
@@ -798,7 +818,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-106"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "lonesome-rock-vineyard",
@@ -848,7 +869,8 @@
         "url": "https://block55.beehiiv.com/p/weinnotes-june-2026"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "armstrong-vineyard",
@@ -866,7 +888,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-6"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "saffron-fields-vineyard",
@@ -896,7 +919,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-7"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "bayliss-bower-vineyard",
@@ -976,7 +1000,8 @@
         "url": "http://www.xnovo.com/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "hope-well-vineyard",
@@ -997,7 +1022,8 @@
         "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "meredith-mitchell-vineyard",
@@ -1050,7 +1076,8 @@
         "url": "https://www.delancellottifamilyvineyards.com/about"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "koosah-vineyard",
@@ -1067,7 +1094,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-30"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "holstein-vineyard",
@@ -1081,7 +1109,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-52"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "bunker-hill-vineyard",
@@ -1186,7 +1215,8 @@
         "url": "https://www.delaboue.com/about"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "gregory-ranch-vineyard",
@@ -1206,7 +1236,8 @@
         "url": "https://www.delaboue.com/about"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "la-cantera-vineyard",
@@ -1295,7 +1326,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-71"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "murto-vineyard",
@@ -1341,7 +1373,8 @@
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-27"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "bishop-creek-vineyard",
@@ -1358,7 +1391,8 @@
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-8"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "youngberg-hill-vineyard",
@@ -1391,7 +1425,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-3"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "winters-hill-vineyard",
@@ -1413,6 +1448,21 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-3"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "domingo-vineyard",
+    "type": "vineyard",
+    "name": "Domingo Vineyard",
+    "summary": "Vineyard at the foot of the Dundee Hills planted by Jesús Guillén Sr. and named after the family's grandfather; a fruit source for Guillén Family Wines.",
+    "sources": [
+      {
+        "title": "About (Guillén Family Wines)",
+        "url": "https://guillenfamily.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
   }
 ]

@@ -45,7 +45,8 @@
         "url": "https://www.abacela.com/the-abacela-story/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "king-estate",
@@ -67,7 +68,8 @@
         "url": "https://kingestate.com/story/our-story/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "valley-view-winery",
@@ -89,7 +91,8 @@
         "url": "https://en.wikipedia.org/wiki/Applegate_Valley_AVA"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "troon-vineyard",
@@ -103,7 +106,8 @@
         "url": "https://www.oregonwinepress.com/troon-renaissance"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "henry-estate-winery",
@@ -122,7 +126,8 @@
         "url": "https://www.nrtoday.com/news/local/henry-estate-winery-patriarch-dies-age-86/article_717129e6-7511-11ee-bdf6-97c3d0a8eff1.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "girardet-vineyards",
@@ -140,7 +145,8 @@
         "url": "https://wineindustryadvisor.com/2025/11/07/philippe-girardet-passes-away-at-96/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "cayuse-vineyards",
@@ -184,7 +190,8 @@
         "url": "https://en.wikipedia.org/wiki/Maison_Joseph_Drouhin"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "domaine-drouhin-oregon",
@@ -248,7 +255,8 @@
         "url": "https://news.linfield.edu/?p=6186"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "beaux-freres",
@@ -307,7 +315,8 @@
         "url": "https://cristomvineyards.com/our-people"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "argyle-winery",
@@ -330,7 +339,8 @@
         "url": "https://www.princeofpinot.com/winery/130/index.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "roco-winery",
@@ -375,7 +385,8 @@
         "url": "https://winespectator.com/articles/bill-stoller-oregon-vintner-and-philanthropist-dies-at-age-74"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "willamette-valley-vineyards",
@@ -439,7 +450,8 @@
         "url": "https://www.princeofpinot.com/winery/400/index.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "evening-land-vineyards",
@@ -478,7 +490,8 @@
         "url": "https://www.winespectator.com/articles/constellation-buys-oregon-s-lingua-franca"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "bergstrom-wines",
@@ -541,7 +554,8 @@
         "url": "https://www.winewithseth.com/winewiki/beaux-freres/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "jackson-family-wines",
@@ -556,7 +570,8 @@
         "url": "http://www.wweek.com/bars/2016/04/18/penner-ash-winery-purchased-by-californias-jackson-family-wines/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "a-to-z-wineworks",
@@ -574,7 +589,8 @@
         "url": "https://www.princeofpinot.com/winery/400/index.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "hillcrest-vineyard",
@@ -597,7 +613,8 @@
         "url": "https://en.wikipedia.org/wiki/Richard_Sommer_(winemaker)"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "charles-coury-vineyards",
@@ -731,7 +748,8 @@
         "url": "https://sokolblosser.com/about/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "amity-vineyards",
@@ -750,7 +768,8 @@
         "url": "https://www.princeofpinot.com/winery/467"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "elk-cove-vineyards",
@@ -769,7 +788,8 @@
         "url": "https://www.winespectator.com/articles/joe-campbell-pioneering-willamette-valley-winemaker-dies"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "tualatin-vineyards",
@@ -791,7 +811,8 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/bill-fuller/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "st-innocent-winery",
@@ -810,7 +831,8 @@
         "url": "https://www.stinnocentwine.com/vineyards"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "cameron-winery",
@@ -825,7 +847,8 @@
         "url": "https://www.princeofpinot.com/winery/1373/index.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "archery-summit",
@@ -931,7 +954,8 @@
         "url": "https://www.princeofpinot.com/winery/721/index.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "brooks-wine",
@@ -952,7 +976,8 @@
         "url": "https://www.princeofpinot.com/article/1858/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "maysara-winery",
@@ -1106,7 +1131,8 @@
         "url": "https://www.oregonwinepress.com/oregons-illinois"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "reustle-prayer-rock-vineyards",
@@ -1157,7 +1183,8 @@
         "url": "https://www.princeofpinot.com/winery/137/index.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "westrey-wine-company",
@@ -1186,7 +1213,8 @@
         "url": "https://1859oregonmagazine.com/think-oregon/business/carlton-winemakers/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "maison-louis-jadot",
@@ -1221,7 +1249,8 @@
         "url": "https://www.oregonwinepress.com/resonance-est-arrive"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "nicolas-jay",
@@ -1238,7 +1267,8 @@
         "url": "https://www.nicolas-jay.com/our-story"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "domaine-meo-camuzet",
@@ -1256,7 +1286,8 @@
         "url": "https://www.nicolas-jay.com/our-story"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "gran-moraine",
@@ -1269,7 +1300,8 @@
         "url": "https://www.princeofpinot.com/winery/2228/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "seven-hills-winery",
@@ -1304,7 +1336,8 @@
         "url": "https://www.winespectator.com/articles/foley-family-wines-buys-oregons-the-four-graces-49793"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "foley-family-wines",
@@ -1318,7 +1351,8 @@
         "url": "https://www.winespectator.com/articles/foley-family-wines-buys-oregons-the-four-graces-49793"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "benton-lane-winery",
@@ -1331,7 +1365,8 @@
         "url": "https://www.winespectator.com/articles/huneeus-vintners-buys-oregon-benton-lane-winery"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "huneeus-vintners",
@@ -1346,7 +1381,8 @@
         "url": "https://www.winespectator.com/articles/huneeus-vintners-buys-oregon-benton-lane-winery"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "the-family-coppola",
@@ -1364,7 +1400,8 @@
         "url": "https://newsberg.org/2026/03/24/italian-wine-group-acquires-dundee-hills-vineyard-from-coppola-owned-domaine-lumineux/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "domaine-lumineux",
@@ -1404,7 +1441,8 @@
         "url": "https://www.winespectator.com/articles/silver-oak-owners-buy-oregon-vineyard"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "chapter-24-vineyards",
@@ -1421,7 +1459,8 @@
         "url": "https://www.winespectator.com/articles/chapter-24-wines-purchases-witness-tree"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "maison-bleue",
@@ -1459,7 +1498,8 @@
         "url": "https://www.columbiagorgenews.com/gorge-life/in-the-sweet-spot-for-growing-fruit-anne-and-bernie-lerch-enjoy-staying-small-but/article_78e46ad1-c292-5fe5-a02c-69f1934a4095.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "phelps-creek-vineyards",
@@ -1473,7 +1513,8 @@
         "url": "https://www.princeofpinot.com/winery/776/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "domaine-marc-roy",
@@ -1488,7 +1529,8 @@
         "url": "https://www.princeofpinot.com/winery/776/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "watermill-winery",
@@ -1503,7 +1545,8 @@
         "url": "https://www.oregonwinepress.com/oregons-walla-walla"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "zerba-cellars",
@@ -1518,7 +1561,8 @@
         "url": "https://www.oregonwinepress.com/oregons-walla-walla"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "del-rio-vineyards",
@@ -1569,7 +1613,8 @@
         "url": "https://www.oregonwinepress.com/q-and-a-herb-quady"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "cowhorn-vineyard-and-garden",
@@ -1630,7 +1675,8 @@
         "url": "https://kelleyfoxwines.com/about/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "day-wines",
@@ -1673,7 +1719,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-dmLbV5gR"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "antica-terra",
@@ -1703,7 +1750,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-12"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "hiyu-wine-farm",
@@ -1741,7 +1789,8 @@
         "url": "https://www.davidhillwinery.com/chad-stock.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "arterberry-maresh",
@@ -1755,7 +1804,8 @@
         "url": "https://www.arterberrymaresh.com/about"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "big-table-farm",
@@ -1782,7 +1832,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-MWaK65f1"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "hope-well-wine",
@@ -1803,7 +1854,8 @@
         "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "domaine-roy-fils",
@@ -1862,7 +1914,8 @@
         "url": "https://www.purplehandswine.com/about"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "ridgecrest-wines",
@@ -1927,7 +1980,8 @@
         "url": "https://www.approachmentwines.com/the-duo"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "harper-voit",
@@ -2017,7 +2071,8 @@
         "url": "https://www.skurnik.com/producer/ovum-wines/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "matzinger-davies",
@@ -2033,7 +2088,8 @@
         "url": "http://www.princeofpinot.com/winery/1712/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "haden-fig",
@@ -2134,7 +2190,8 @@
         "url": "https://www.oregonwinepress.com/way-back-wine-doerner-vineyards"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "well-played-wines",
@@ -2152,7 +2209,8 @@
         "url": "https://www.wellplayedwines.com/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "granville-wine-co",
@@ -2221,10 +2279,11 @@
         "url": "https://atthejoy.com/lytle-barnetts-story/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "aka": [
       "Lytle Barnett"
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "aubaine",
@@ -2258,7 +2317,8 @@
         "url": "https://atthejoy.com/aubaines-story/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "beckham-estate-vineyard",
@@ -2276,7 +2336,8 @@
         "url": "https://www.beckhamestatevineyard.com/about"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "corollary-wines",
@@ -2335,7 +2396,8 @@
         "url": "https://youtu.be/T9yKuaVEHTc"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "rodeo-hills",
@@ -2379,7 +2441,8 @@
         "url": "https://www.winebusiness.com/news/article/274335"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "lenne-estate",
@@ -2399,7 +2462,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-13"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "jachter-family-wines",
@@ -2455,7 +2519,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-105"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "celestial-hill",
@@ -2468,7 +2533,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-105"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "compris-vineyard",
@@ -2519,7 +2585,8 @@
         "url": "https://youtu.be/-eIElX47DQ8"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "open-claim-vineyards",
@@ -2537,10 +2604,11 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-HfMTMeSy"
       }
     ],
-    "verified": false,
+    "verified": true,
     "aka": [
       "Open Claim"
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "keeler-estate-vineyard",
@@ -2560,7 +2628,8 @@
         "url": "https://www.winebusiness.com/news/article/273550"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "authentique",
@@ -2599,7 +2668,8 @@
         "url": "https://youtu.be/O_LRUj3fkKo"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "lonesome-rock",
@@ -2633,10 +2703,11 @@
         "url": "https://lonesomerock.com"
       }
     ],
-    "verified": false,
+    "verified": true,
     "aka": [
       "Lonesome Rock Cellars"
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "de-ponte-cellars",
@@ -2663,10 +2734,11 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-11"
       }
     ],
-    "verified": false,
+    "verified": true,
     "aka": [
       "DePonte Cellars"
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "1789-wines",
@@ -2683,7 +2755,8 @@
         "url": "https://www.princeofpinot.com/winery/144/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "ambar-estate",
@@ -2704,10 +2777,11 @@
         "url": "https://www.ambarestate.com"
       }
     ],
-    "verified": false,
+    "verified": true,
     "aka": [
       "Ambar Estate"
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "human-cellars",
@@ -2760,7 +2834,8 @@
         "url": "https://arabiliswines.com"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "audeant",
@@ -2805,7 +2880,8 @@
         "url": "https://block55.beehiiv.com/p/weinnotes-june-2026"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "domaine-divio",
@@ -2921,7 +2997,8 @@
         "url": "https://www.approachmentwines.com/the-duo"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "lucidwild",
@@ -2993,7 +3070,8 @@
         "url": "https://www.grochaucellars.com/about"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "eieio-and-company",
@@ -3126,7 +3204,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-LnUXjUjN"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "joseph-phelps-vineyards",
@@ -3141,7 +3220,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-MWaK65f1"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "abbott-claim",
@@ -3154,7 +3234,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-MWaK65f1"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "violin-wine",
@@ -3167,7 +3248,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-MWaK65f1"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "johan-vineyards",
@@ -3220,7 +3302,8 @@
         "url": "https://aponavineyards.com/about-us/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "arborbrook",
@@ -3242,7 +3325,8 @@
         "url": "https://arborbrookwines.com"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "cooper-mountain-vineyards",
@@ -3259,7 +3343,8 @@
         "url": "https://arborbrookwines.com"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "dusky-goose",
@@ -3288,7 +3373,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-dmLbV5gR"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "dominio-iv",
@@ -3343,7 +3429,8 @@
         "url": "https://www.iterumwines.com/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "sun-break-wines",
@@ -3356,7 +3443,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-5"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "ricochet",
@@ -3369,7 +3457,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-10"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "dukes-family-vineyards",
@@ -3387,7 +3476,8 @@
         "url": "http://www.dukesfamilyvineyards.com/about-2"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "mad-violets-wine-co",
@@ -3403,7 +3493,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-15"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "doubleback",
@@ -3508,7 +3599,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-24"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "mccollum-heritage-91",
@@ -3590,7 +3682,8 @@
         "url": "https://www.etfillewines.com/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "lundeen-wines",
@@ -3609,7 +3702,8 @@
         "url": "https://www.lundeenwines.com/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "prive-vineyard",
@@ -3679,7 +3773,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-36"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "hazelfern-cellars",
@@ -3704,7 +3799,8 @@
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-8"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "vincent-wine-company",
@@ -3725,7 +3821,8 @@
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-20"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "white-walnut-estate",
@@ -3765,7 +3862,8 @@
         "url": "https://www.oregonwinepress.com/joe-dobbs-third-decades-a-charm"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "atticus-wine",
@@ -3778,7 +3876,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-45"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "laura-volkman-vineyards",
@@ -3858,7 +3957,8 @@
         "url": "https://www.dionvineyard.com/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "siltstone-wines",
@@ -3926,7 +4026,8 @@
         "url": "https://leahjorgensencellars.com/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "trisaetum",
@@ -3952,11 +4053,12 @@
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-1"
       }
     ],
-    "verified": false,
+    "verified": true,
     "aka": [
       "Pashey",
       "18401 Cellars"
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "irvine-and-roberts-vineyards",
@@ -4000,7 +4102,8 @@
         "url": "https://wineindustryadvisor.com/?p=60292"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "leonetti-cellar",
@@ -4018,7 +4121,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-60"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "toil-oregon",
@@ -4034,7 +4138,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-60"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "methven-family-vineyards",
@@ -4054,7 +4159,8 @@
         "url": "https://www.winebusiness.com/news/article/261519"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "bells-up-winery",
@@ -4127,7 +4233,8 @@
         "url": "https://www.oregonwinepress.com/joe-dobbs-third-decades-a-charm"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "integrated-beverage-group",
@@ -4140,7 +4247,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-66"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "domaine-willamette",
@@ -4215,7 +4323,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-73"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "j-wright-vintner",
@@ -4228,7 +4337,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-73"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "pfeiffer-winery",
@@ -4250,7 +4360,8 @@
         "url": "https://wineindustryadvisor.com/2022/11/16/king-estate-acquires-pfeiffer-winery"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "owen-roe",
@@ -4263,7 +4374,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-76"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "distaff-wine",
@@ -4280,7 +4392,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-76"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "andante-vineyard",
@@ -4334,7 +4447,8 @@
         "url": "https://www.callmedolores.com"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "jl-kiff-vineyard",
@@ -4446,7 +4560,8 @@
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-27"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "alloro-vineyard",
@@ -4468,7 +4583,8 @@
         "url": "https://www.allorovineyard.com/about/our-team"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "elevee-winegrowers",
@@ -4558,7 +4674,8 @@
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-19"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "rain-dance-vineyards",
@@ -4579,7 +4696,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-9"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "hummingbird-estate",
@@ -4616,7 +4734,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-10"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "belle-fiore-winery",
@@ -4657,6 +4776,33 @@
         "url": "https://www.pdxmonthly.com/articles/bees-birds-and-pinot-take-center-stage-at-winter-s-hill-estate-in-the-dundee-hills"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "guillen-family-wines",
+    "type": "winery",
+    "name": "Guillén Family Wines",
+    "aka": [
+      "Guillen Family Wines"
+    ],
+    "place": "Carlton, OR",
+    "summary": "Pinot noir label created by Jesús Guillén alongside his work at White Rose Estate, begun with fruit from Vista Hills Vineyard. Sources date the start to a first wine in 2006 or a launch in 2009 with the 2007 vintage.",
+    "sources": [
+      {
+        "title": "About (Guillén Family Wines)",
+        "url": "https://guillenfamily.com/about"
+      },
+      {
+        "title": "Guillén Family Wines (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/1531/"
+      },
+      {
+        "title": "Jesús Guillén Olvera (1980–2018): Réquiem para un gentilhombre (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/jesus-guillen-olvera"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
   }
 ]

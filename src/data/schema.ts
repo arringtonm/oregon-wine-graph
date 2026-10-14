@@ -9,6 +9,12 @@ const sourceSchema = z.strictObject({
   url: z.url().optional(),
 })
 
+// Who confirmed a verified record: a person in review mode, Jev checking it against its
+// cited sources, or a test against official AVA boundaries. Absent on older records, which
+// were all verified by a person.
+const verifiedBy = z.enum(['person', 'jev', 'boundary']).optional()
+export type VerifiedBy = NonNullable<z.infer<typeof verifiedBy>>
+
 const baseNode = {
   id: slug,
   name: z.string().min(1),
@@ -19,6 +25,7 @@ const baseNode = {
   place: z.string().min(1).optional(),
   sources: z.array(sourceSchema).min(1),
   verified: z.boolean(),
+  verifiedBy,
 }
 
 export const nodeSchema = z.discriminatedUnion('type', [
@@ -240,6 +247,7 @@ export const edgeSchema = z.strictObject({
   note: z.string().min(1).optional(),
   sources: z.array(sourceSchema).min(1),
   verified: z.boolean(),
+  verifiedBy,
 })
 
 export const graphSchema = z.strictObject({

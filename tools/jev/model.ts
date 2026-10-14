@@ -5,10 +5,13 @@
 
 export type Question =
   | { type: 'choice'; instructions: string; criteria: Record<string, string> }
+  // Ordered levels, lowest first; the answer's score is the expected level
+  | { type: 'score'; instructions: string; criteria: string[] }
   | { type: 'noul'; instructions: string }
 
 export type Answer =
   | { type: 'choice'; choice: string; confidence: number; probabilities: Record<string, number> }
+  | { type: 'score'; score: number; confidence: number; probabilities: Record<string, number> }
   | { type: 'noul'; noul: number }
 
 export interface DecisionModel {
@@ -16,19 +19,23 @@ export interface DecisionModel {
   ask(state: string, questions: Record<string, Question>): Promise<Record<string, Answer>>
 }
 
-// Request and response shapes follow TypeSafe's public quickstart. They have not been
-// exercised against the live API yet; confirm them against the console docs when a key exists.
 export function jevModel(apiKey: string): DecisionModel {
   return {
     name: 'jev',
     async ask(state, questions) {
-      const response = await fetch('https://api.typesafe.ai/v1/systemone', {
-        method: 'POST',
-        headers: { authorization: `Bearer ${apiKey}`, 'content-type': 'application/json' },
-        body: JSON.stringify({ model: 'jev-latest', state, questions }),
-      })
-      if (!response.ok) throw new Error(`Jev request failed: HTTP ${response.status} ${await response.text()}`)
-      return ((await response.json()) as { answers: Record<string, Answer> }).answers
+      // Retry rate limits and server errors a few times, backing off
+      for (let attempt = 0; ; attempt++) {
+        const response = await fetch('https://api.typesafe.ai/v1/systemone', {
+          method: 'POST',
+          headers: { authorization: `Bearer ${apiKey}`, 'content-type': 'application/json' },
+          body: JSON.stringify({ model: 'jev-latest', state, questions }),
+        })
+        if (response.ok) return ((await response.json()) as { answers: Record<string, Answer> }).answers
+        if (attempt >= 4 || (response.status !== 429 && response.status < 500)) {
+          throw new Error(`Jev request failed: HTTP ${response.status} ${await response.text()}`)
+        }
+        await new Promise((done) => setTimeout(done, 1000 * 2 ** attempt))
+      }
     },
   }
 }
@@ -89,7 +96,9 @@ export function stubModel(): DecisionModel {
 
       const answers: Record<string, Answer> = {}
       for (const [id, question] of Object.entries(questions)) {
-        if (question.type === 'noul') {
+        if (question.type === 'score') {
+          answers[id] = { type: 'score', score: 1, confidence: STUB_CONFIDENCE, probabilities: { '1': 1 } }
+        } else if (question.type === 'noul') {
           answers[id] = { type: 'noul', noul: id === 'ongoing' ? (ended ? 0.2 : 0.7) : type ? 0.8 : 0.2 }
         } else if (id === 'type') {
           answers[id] = choice(question, type)

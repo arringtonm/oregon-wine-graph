@@ -4,9 +4,29 @@ import { nodeYears, reviewEnabled, useGraph } from '../composables/useGraph'
 import { EDGE_CATEGORY_LABELS, NODE_TYPE_LABELS } from '../data/schema'
 import AddConnection from './AddConnection.vue'
 import NodeGlyph from './NodeGlyph.vue'
+import ReviewTools from './ReviewTools.vue'
 
-const { state, selectedNode, connectionsOf, select, unverified, setVerified, approveCard, selectNextUnverified } =
-  useGraph()
+const {
+  state,
+  selectedNode,
+  connectionsOf,
+  select,
+  unverified,
+  setVerified,
+  approveCard,
+  selectNextUnverified,
+  reviewQueue,
+  selectNextWithVerdict,
+} = useGraph()
+
+const QUEUE_LABELS: Record<string, string> = {
+  conflict: 'Source disagrees',
+  partial: 'Partly supported',
+  unsupported: 'Unsupported',
+  unchecked: 'Unreadable source',
+  supported: 'Supported',
+  'not checked': 'Not checked',
+}
 
 const groups = computed(() => (selectedNode.value ? connectionsOf(selectedNode.value.id) : []))
 const unverifiedOnCard = computed(
@@ -35,6 +55,15 @@ const facts = computed(() =>
       >
         Next unverified
       </button>
+      <button
+        v-for="group in reviewQueue"
+        :key="group.verdict"
+        type="button"
+        :title="`Go to the next node with a record in this group`"
+        @click="selectNextWithVerdict(group.verdict)"
+      >
+        {{ QUEUE_LABELS[group.verdict] }} {{ group.nodeIds.length }}
+      </button>
       <button v-if="selectedNode && unverifiedOnCard > 0" type="button" @click="approveCard(selectedNode)">
         Approve all {{ unverifiedOnCard }} on this card
       </button>
@@ -57,7 +86,6 @@ const facts = computed(() =>
       <p>{{ selectedNode.summary }}</p>
       <p class="detail__status">
         <span v-if="!selectedNode.verified" class="detail__badge">Unverified draft</span>
-        <span v-else-if="reviewEnabled" class="detail__badge">Verified</span>
         <button
           v-if="reviewEnabled"
           type="button"
@@ -67,6 +95,7 @@ const facts = computed(() =>
           {{ selectedNode.verified ? 'Undo' : 'Approve' }}
         </button>
       </p>
+      <ReviewTools v-if="reviewEnabled" :key="selectedNode.id" kind="node" :record="selectedNode" />
 
       <section v-for="group in groups" :key="group.category">
         <h3>{{ EDGE_CATEGORY_LABELS[group.category] }}</h3>
@@ -90,13 +119,16 @@ const facts = computed(() =>
                 >[{{ index + 1 }}]</component
               >
             </span>
-            <template v-if="reviewEnabled">
-              <span v-if="edge.verified" class="detail__years">verified</span>
-              <button type="button" class="detail__approve" @click="setVerified('edge', edge, !edge.verified)">
-                {{ edge.verified ? 'Undo' : 'Approve' }}
-              </button>
-            </template>
+            <button
+              v-if="reviewEnabled"
+              type="button"
+              class="detail__approve"
+              @click="setVerified('edge', edge, !edge.verified)"
+            >
+              {{ edge.verified ? 'Undo' : 'Approve' }}
+            </button>
             <span v-if="edge.note" class="detail__note">{{ edge.note }}</span>
+            <ReviewTools v-if="reviewEnabled" :key="edge.id" kind="edge" :record="edge" />
           </li>
         </ul>
       </section>

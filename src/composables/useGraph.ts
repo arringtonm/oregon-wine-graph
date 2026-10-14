@@ -1,5 +1,9 @@
 import { computed, reactive } from 'vue'
 import { loadGraph } from '../data'
+import { claimsFingerprint, claimsFor, type CheckedRecord } from '../../tools/check/claims'
+import { APPLY_THRESHOLD, decide, type Decision, type Verdict } from '../../tools/check/decide'
+import type { EdgeChanges, Evidence } from '../../tools/check/edit'
+import type { CheckStore, StoredCheck } from '../../tools/check/store'
 import type { Proposal, ProposedEdge } from '../../tools/jev/parseConnection'
 import {
   EDGE_CATEGORIES,
@@ -56,6 +60,8 @@ const state = reactive({
   // Whether the filter drawer is open; only matters on tablet and smaller
   filtersOpen: false,
   reviewError: null as string | null,
+  // Jev's scores for each record against its sources; loaded on the dev server only
+  checks: null as CheckStore | null,
   // Nodes selected this session, oldest first. Kept in the app only, not in browser history.
   history: [] as string[],
   historyIndex: -1,
@@ -272,9 +278,61 @@ async function setVerified(kind: 'node' | 'edge', record: GraphNode | GraphEdge,
   try {
     await postJson('/__review/verify', { kind, id: record.id, verified })
     record.verified = verified
+    if (verified) record.verifiedBy = 'person'
+    else delete record.verifiedBy
   } catch (error) {
     state.reviewError = `Could not save "${record.id}": ${error instanceof Error ? error.message : error}`
   }
+}
+
+// Jev's verdict on a record, or null if it has not been checked since it last changed
+function decisionFor(kind: 'node' | 'edge', record: GraphNode | GraphEdge): Decision | null {
+  const stored = state.checks?.[`${kind}:${record.id}`]
+  if (!stored || !state.graph) return null
+  const claims = claimsFor({ kind, record } as CheckedRecord, state.graph)
+  if (stored.fingerprint !== claimsFingerprint(claims)) return null
+  return decide(stored.sources, Object.keys(claims.details), APPLY_THRESHOLD)
+}
+
+// Most urgent first: a source disagreeing, then a detail not holding, then no support at all
+const QUEUE_ORDER: Verdict[] = ['conflict', 'partial', 'unsupported', 'unchecked', 'supported']
+
+// Unverified records by verdict, each with the node whose panel shows it
+const reviewQueue = computed(() => {
+  const queue = new Map<Verdict | 'not checked', string[]>()
+  const add = (kind: 'node' | 'edge', record: GraphNode | GraphEdge, nodeId: string) => {
+    if (record.verified) return
+    const verdict = decisionFor(kind, record)?.verdict ?? 'not checked'
+    queue.set(verdict, [...(queue.get(verdict) ?? []), nodeId])
+  }
+  for (const node of nodes.value) add('node', node, node.id)
+  for (const edge of edges.value) add('edge', edge, edge.source)
+  return [...QUEUE_ORDER, 'not checked' as const]
+    .filter((verdict) => queue.has(verdict))
+    .map((verdict) => ({ verdict, nodeIds: queue.get(verdict)! }))
+})
+
+// Selects the next node, after the current one, holding an unverified record with this verdict
+function selectNextWithVerdict(verdict: string) {
+  const ids = [...new Set(reviewQueue.value.find((group) => group.verdict === verdict)?.nodeIds ?? [])]
+  if (ids.length === 0) return
+  select(ids[(ids.indexOf(state.selectedId ?? '') + 1) % ids.length])
+}
+
+function loadEvidence(kind: 'node' | 'edge', id: string): Promise<Evidence> {
+  return postJson('/__review/evidence', { kind, id })
+}
+
+async function removeEdge(id: string) {
+  await postJson('/__review/remove-edge', { id })
+  if (state.graph) state.graph.edges = state.graph.edges.filter((edge) => edge.id !== id)
+}
+
+// Saves edited years or role on a connection; the server checks it against its sources again
+async function updateEdge(id: string, changes: { [K in keyof EdgeChanges]: EdgeChanges[K] | null }) {
+  const result = await postJson<{ edge: GraphEdge; check: StoredCheck | null }>('/__review/update-edge', { id, changes })
+  if (state.graph) state.graph.edges = state.graph.edges.map((edge) => (edge.id === id ? result.edge : edge))
+  if (result.check && state.checks) state.checks[`edge:${id}`] = result.check
 }
 
 async function postJson<T>(url: string, body: unknown): Promise<T> {
@@ -355,6 +413,7 @@ async function init() {
   started = true
   try {
     state.graph = await loadGraph()
+    if (import.meta.env.DEV) state.checks = (await import('../data/checks.json')).default as unknown as CheckStore
     selectFromHash()
     window.addEventListener('hashchange', selectFromHash)
   } catch (error) {
@@ -386,6 +445,12 @@ export function useGraph() {
     approveCard,
     parseConnection,
     addConnection,
+    decisionFor,
+    reviewQueue,
+    selectNextWithVerdict,
+    loadEvidence,
+    removeEdge,
+    updateEdge,
     selectNextUnverified,
     init,
   }

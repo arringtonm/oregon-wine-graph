@@ -26,3 +26,6 @@ dist-ssr
 # Private source material (newsletter emails); never commit
 temp/
 *.eml
+
+# Fetched source pages and other local working files
+.cache/
