@@ -1,0 +1,224 @@
+[
+  {
+    "id": "uc-davis-viticulture-enology",
+    "type": "organization",
+    "kind": "school",
+    "name": "UC Davis Department of Viticulture and Enology",
+    "aka": [
+      "UC Davis",
+      "University of California, Davis"
+    ],
+    "summary": "University of California wine and grape-growing program where a number of Oregon's founding winemakers trained.",
+    "outsideOregon": true,
+    "place": "Davis, CA",
+    "sources": [
+      {
+        "title": "UC Davis Department of Viticulture and Enology (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/UC_Davis_Department_of_Viticulture_and_Enology"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "oregon-wine-board",
+    "type": "organization",
+    "name": "Oregon Wine Board",
+    "kind": "trade-body",
+    "aka": [
+      "OWB",
+      "Oregon Wine Advisory Board",
+      "OWAB"
+    ],
+    "summary": "Semi-independent state agency for Oregon wine marketing and research, established in Oregon statute. It replaced the Oregon Wine Advisory Board, which had operated under the state Department of Agriculture since the early 1980s.",
+    "founded": 2003,
+    "sources": [
+      {
+        "title": "About the Oregon Wine Board",
+        "url": "https://www.oregonwine.org/about/"
+      },
+      {
+        "title": "History of Oregon wine (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/History_of_Oregon_wine"
+      },
+      {
+        "title": "Oregon Wine Board Collection: historical note (Linfield University Archives)",
+        "url": "https://linfield-atom.libraryhost.com/index.php/oregon-wine-board-collection"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "oregon-winegrowers-association",
+    "type": "organization",
+    "name": "Oregon Winegrowers Association",
+    "kind": "trade-body",
+    "aka": [
+      "OWA",
+      "Oregon Wine Growers Association",
+      "OWGA"
+    ],
+    "summary": "Statewide trade association for Oregon growers and wineries, working on legislation, marketing and education. It began in Roseburg in the 1960s and took its current form in 1981 through a merger with the Willamette Valley's Winegrowers Council of Oregon; it petitioned for the Willamette Valley AVA in 1982.",
+    "founded": 1981,
+    "sources": [
+      {
+        "title": "Mission and History (Oregon Winegrowers Association)",
+        "url": "https://www.oregonwinegrowers.org/mission-history/"
+      },
+      {
+        "title": "Oregon Wine Board Collection: historical note (Linfield University Archives)",
+        "url": "https://linfield-atom.libraryhost.com/index.php/oregon-wine-board-collection"
+      },
+      {
+        "title": "About Us (Willamette Valley Wineries Association)",
+        "url": "https://www.willamettewines.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "willamette-valley-wineries-association",
+    "type": "organization",
+    "name": "Willamette Valley Wineries Association",
+    "kind": "trade-body",
+    "aka": [
+      "WVWA",
+      "Yamhill County Winegrowers Association"
+    ],
+    "summary": "Regional winery association formed in 1983 as the Yamhill County Winegrowers Association by twelve wineries. In 2004 it amended its bylaws to include wineries across the whole Willamette Valley AVA.",
+    "founded": 1983,
+    "place": "Willamette Valley, OR",
+    "sources": [
+      {
+        "title": "About Us (Willamette Valley Wineries Association)",
+        "url": "https://www.willamettewines.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "oregon-state-university",
+    "type": "organization",
+    "name": "Oregon State University",
+    "kind": "school",
+    "aka": [
+      "OSU",
+      "Oregon Wine Research Institute",
+      "OWRI",
+      "Oregon State College"
+    ],
+    "summary": "Public university in Corvallis whose viticulture and enology research and extension programs, including the Oregon Wine Research Institute, serve the state's wine industry. It is credited with importing Dijon clones of Pinot noir and Chardonnay to the United States and organizing the first International Cool Climate Symposium for Viticulture and Enology in 1984.",
+    "place": "Corvallis, OR",
+    "sources": [
+      {
+        "title": "Oregon's wine industry benefits from OSU research and outreach (OSU Extension Service)",
+        "url": "https://extension.oregonstate.edu/impact/oregons-wine-industry-benefits-osu-research-outreach"
+      },
+      {
+        "title": "History of Oregon wine (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/History_of_Oregon_wine"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "linfield-university",
+    "type": "organization",
+    "name": "Linfield University",
+    "kind": "school",
+    "aka": [
+      "Linfield College",
+      "Oregon Wine History Archive",
+      "OWHA"
+    ],
+    "summary": "University in McMinnville whose campus is the venue of the International Pinot Noir Celebration. The Oregon Wine History Archive was founded there in 2011 to collect and preserve the records and stories of the Oregon wine industry.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "About the Oregon Wine History Archive",
+        "url": "https://oregonwinehistoryarchive.org/about/"
+      },
+      {
+        "title": "International Pinot Noir Celebration",
+        "url": "https://www.ipnc.org/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "constellation-brands",
+    "type": "organization",
+    "name": "Constellation Brands",
+    "summary": "Publicly traded U.S. drinks company. Its 2022 purchase of Lingua Franca was its first move into Oregon wine.",
+    "kind": "company",
+    "outsideOregon": true,
+    "place": "New York",
+    "sources": [
+      {
+        "title": "Exclusive: Constellation Buys Oregon's Lingua Franca (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/constellation-buys-oregon-s-lingua-franca"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ste-michelle-wine-estates",
+    "type": "organization",
+    "name": "Ste. Michelle Wine Estates",
+    "kind": "company",
+    "summary": "Wine company that owns Chateau Ste. Michelle in Woodinville, Washington. It bought Erath Winery in 2006.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Ste. Michelle buys Oregon winery (NBC News / AP)",
+        "url": "https://www.nbcnews.com/id/wbna13077461"
+      },
+      {
+        "title": "Ste. Michelle buys Oregon's Erath Winery (The Spokesman-Review)",
+        "url": "https://spokesman.com/stories/2006/jun/01/ste-michelle-buys-oregons-erath-winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "groupe-bollinger",
+    "type": "organization",
+    "name": "Groupe Bollinger",
+    "kind": "company",
+    "aka": [
+      "SJB",
+      "Société Jacques Bollinger"
+    ],
+    "summary": "Holding company of the Bollinger family, owners of Champagne Bollinger. Ponzi Vineyards, bought in 2021, was its first acquisition outside France.",
+    "outsideOregon": true,
+    "place": "France",
+    "sources": [
+      {
+        "title": "La famille Bollinger acquiert Ponzi Vineyards (SJB / Groupe Bollinger press release, 7 April 2021)",
+        "url": "https://www.groupebollinger.fr/wp-content/uploads/2023/09/CP-Groupe-Bollinger-Acquisition-de-Ponzi-Vineyards-avril-21-3.pdf"
+      },
+      {
+        "title": "The Bollinger Family to Acquire Ponzi Vineyards (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2021/04/07/bollinger-family-acquire-ponzi-vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "union-wine-company",
+    "type": "organization",
+    "name": "Union Wine Company",
+    "kind": "company",
+    "summary": "Oregon wine company owned by Ryan Harms; he and his brother Eric brought Amity Vineyards into the company in 2014.",
+    "sources": [
+      {
+        "title": "Amity Vineyards (Union Wine Company)",
+        "url": "https://unionwinecompany.com/amity-vineyards"
+      },
+      {
+        "title": "Amity Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/467"
+      }
+    ],
+    "verified": false
+  }
+]

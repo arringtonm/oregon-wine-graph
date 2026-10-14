@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ipnc",
+    "type": "event",
+    "name": "International Pinot Noir Celebration",
+    "aka": [
+      "IPNC"
+    ],
+    "summary": "Annual gathering of Pinot noir producers from around the world, held on the Linfield campus in McMinnville. It was envisioned in 1985 by Oregon winemakers, restaurateurs and retailers, and the first event took place in 1987.",
+    "place": "McMinnville, OR",
+    "firstHeld": 1987,
+    "sources": [
+      {
+        "title": "Our Story (International Pinot Noir Celebration)",
+        "url": "https://ipnc.org/history/"
+      },
+      {
+        "title": "International Pinot Noir Celebration",
+        "url": "https://www.ipnc.org/"
+      },
+      {
+        "title": "Celebrating 25 years of the IPNC (Tim Atkin)",
+        "url": "https://timatkin.com/celebrating-25-years-of-the-ipnc/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "steamboat-pinot-noir-conference",
+    "type": "event",
+    "name": "Steamboat Pinot Noir Conference",
+    "aka": [
+      "Steamboat Conference"
+    ],
+    "summary": "Annual technical gathering of Pinot noir winemakers from Oregon and California, conceived in 1979 and first held at the Steamboat Inn in 1980. After four years of planned rotation it settled permanently at the Steamboat Inn in the Umpqua Valley.",
+    "place": "Idleyld Park, OR",
+    "firstHeld": 1980,
+    "sources": [
+      {
+        "title": "The Legacy of Steamboat (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/article/2045/"
+      },
+      {
+        "title": "Steamboat Conference History, by Stephen J. Cary (Oregon Wine History Archive)",
+        "url": "https://digitalcommons.linfield.edu/owha_cary_docs/1"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "oregon-pinot-camp",
+    "type": "event",
+    "name": "Oregon Pinot Camp",
+    "aka": [
+      "OPC"
+    ],
+    "summary": "Invitation-only educational program, founded in 2000, that brings restaurant and retail wine buyers to Oregon for workshops hosted by Willamette Valley wineries.",
+    "place": "Willamette Valley, OR",
+    "firstHeld": 2000,
+    "sources": [
+      {
+        "title": "Oregon Pinot Camp",
+        "url": "https://www.oregonpinotcamp.com/"
+      },
+      {
+        "title": "Nancy Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Nancy_Ponzi"
+      },
+      {
+        "title": "Q and A: David Adelsheim (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/q-and-a-david-adelsheim"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "wine-olympics-1979",
+    "type": "event",
+    "name": "Gault-Millau Wine Olympics (1979)",
+    "aka": [
+      "Wine Olympics",
+      "Olympiades du Vin"
+    ],
+    "summary": "Tasting organized by the French magazine Gault-Millau in Paris in 1979. The 1975 Eyrie Vineyards Reserve Pinot noir from Oregon placed in the top ten in the Pinot noir competition.",
+    "outsideOregon": true,
+    "place": "Paris, France",
+    "firstHeld": 1979,
+    "lastHeld": 1979,
+    "sources": [
+      {
+        "title": "Wine Olympics (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Wine_Olympics"
+      },
+      {
+        "title": "Winemaking, Viticulture & Notoriety (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/1642/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "drouhin-rematch-1980",
+    "type": "event",
+    "name": "Drouhin rematch tasting (1980)",
+    "summary": "Follow-up blind tasting organized by Robert Drouhin at Maison Joseph Drouhin the year after the Wine Olympics. Drouhin's 1959 Chambolle-Musigny came first and the 1975 Eyrie Reserve Pinot noir second, two-tenths of a point behind.",
+    "outsideOregon": true,
+    "place": "France",
+    "firstHeld": 1980,
+    "lastHeld": 1980,
+    "sources": [
+      {
+        "title": "The Eyrie Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Eyrie_Vineyards"
+      },
+      {
+        "title": "Winemaking, Viticulture & Notoriety (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/1642/index.html"
+      }
+    ],
+    "verified": false
+  }
+]

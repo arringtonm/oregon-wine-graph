@@ -1,0 +1,1123 @@
+[
+  {
+    "id": "david-lett",
+    "type": "person",
+    "name": "David Lett",
+    "aka": [
+      "Papa Pinot"
+    ],
+    "summary": "Moved to Oregon in 1965 after studying viticulture at UC Davis and planted the Willamette Valley's first Pinot noir. Founder of The Eyrie Vineyards and the first to grow Pinot gris in Oregon.",
+    "born": 1939,
+    "died": 2008,
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "David Lett (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/David_Lett"
+      },
+      {
+        "title": "David Lett, founder of Oregon Pinot Noir, dies (Decanter)",
+        "url": "https://www.decanter.com/wine-news/david-lett-founder-of-oregon-pinot-noir-dies-77276"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "diana-lett",
+    "type": "person",
+    "name": "Diana Lett",
+    "summary": "Co-founded The Eyrie Vineyards with her husband David Lett; together they produced the first Pinot noir in the Willamette Valley.",
+    "sources": [
+      {
+        "title": "The Eyrie Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Eyrie_Vineyards"
+      },
+      {
+        "title": "David Lett (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/David_Lett"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jason-lett",
+    "type": "person",
+    "name": "Jason Lett",
+    "summary": "Son of David and Diana Lett. Took over as winemaker and vineyard manager at The Eyrie Vineyards in 2005 and is now its president.",
+    "sources": [
+      {
+        "title": "The Eyrie Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Eyrie_Vineyards"
+      },
+      {
+        "title": "The Eyrie Vineyards: press notes",
+        "url": "https://eyrievineyards.com/inform.shtml"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "earl-jones",
+    "type": "person",
+    "name": "Earl Jones",
+    "aka": [
+      "H. Earl Jones"
+    ],
+    "summary": "Co-founder with Hilda Jones of Abacela in the Umpqua Valley, where they planted Oregon's first Tempranillo in 1995. He co-petitioned for the Southern Oregon AVA and served on the Oregon Wine Board from 2003 to 2009.",
+    "place": "Roseburg, OR",
+    "sources": [
+      {
+        "title": "Abacela (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Abacela"
+      },
+      {
+        "title": "Southern Oregon AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Southern_Oregon_AVA"
+      },
+      {
+        "title": "Past Oregon Wine Board Directors (Oregon Wine Board)",
+        "url": "https://industry.oregonwine.org/past-oregon-wine-board-directors/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "hilda-jones",
+    "type": "person",
+    "name": "Hilda Jones",
+    "summary": "Co-founder and co-owner of Abacela with Earl Jones; the two received the Oregon wine industry's Lifetime Achievement Award in 2015. She served on the Oregon Wine Board from 2016 to 2021.",
+    "place": "Roseburg, OR",
+    "sources": [
+      {
+        "title": "Abacela (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Abacela"
+      },
+      {
+        "title": "Past Oregon Wine Board Directors (Oregon Wine Board)",
+        "url": "https://industry.oregonwine.org/past-oregon-wine-board-directors/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "greg-jones",
+    "type": "person",
+    "name": "Gregory V. Jones",
+    "aka": [
+      "Greg Jones"
+    ],
+    "summary": "Research climatologist specializing in the climatology of viticulture and son of Abacela founder Earl Jones. He co-petitioned for the Southern Oregon AVA, held posts at Southern Oregon University and Linfield, and became Abacela's CEO in 2021.",
+    "place": "Roseburg, OR",
+    "sources": [
+      {
+        "title": "Gregory V. Jones (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Gregory_V._Jones"
+      },
+      {
+        "title": "Abacela (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Abacela"
+      },
+      {
+        "title": "Southern Oregon AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Southern_Oregon_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ed-king-jr",
+    "type": "person",
+    "name": "Ed King Jr.",
+    "summary": "Founded King Estate in 1991 with his son Ed King III, after a career that began in aircraft electronics design.",
+    "born": 1921,
+    "died": 2012,
+    "sources": [
+      {
+        "title": "Ed King III, Co-CEO & Co-Founder (King Estate)",
+        "url": "https://kingestate.com/?p=995"
+      },
+      {
+        "title": "Three Generations (King Estate)",
+        "url": "https://kingestate.com/story/our-story/"
+      },
+      {
+        "title": "King Estate Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/King_Estate_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ed-king-iii",
+    "type": "person",
+    "name": "Ed King III",
+    "summary": "Co-founder and co-CEO of King Estate, which he started with his father Ed King Jr. in 1991.",
+    "place": "Eugene, OR",
+    "sources": [
+      {
+        "title": "Ed King III, Co-CEO & Co-Founder (King Estate)",
+        "url": "https://kingestate.com/?p=995"
+      },
+      {
+        "title": "King Estate Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/King_Estate_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "frank-wisnovsky",
+    "type": "person",
+    "name": "Frank Wisnovsky",
+    "summary": "Bought 76 acres in the Applegate Valley in 1971 and planted grapes the following year, re-establishing the Valley View name that Peter Britt had used in the nineteenth century.",
+    "place": "Ruch, OR",
+    "sources": [
+      {
+        "title": "Valley View Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Valley_View_Winery"
+      },
+      {
+        "title": "Rogue Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Rogue_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-troon",
+    "type": "person",
+    "name": "Dick Troon",
+    "summary": "Planted some of Southern Oregon's first post-Prohibition wine grapes in the Applegate Valley in 1972 and gave his name to Troon Vineyard.",
+    "born": 1928,
+    "died": 2011,
+    "sources": [
+      {
+        "title": "Troon Renaissance (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/troon-renaissance"
+      },
+      {
+        "title": "Oral history interview with Dick Troon (Oregon Historical Society)",
+        "url": "https://ohs.libraryhost.com/repositories/2/resources/2655"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "scott-henry",
+    "type": "person",
+    "name": "Scott Henry",
+    "aka": [
+      "Calvin Scott Henry III"
+    ],
+    "summary": "Oregon State-trained aerospace engineer who planted a vineyard at Umpqua in 1972 and opened Henry Estate Winery in 1978. In 1982 he devised the split-canopy Scott Henry Trellis System, now used worldwide.",
+    "died": 2023,
+    "place": "Umpqua, OR",
+    "sources": [
+      {
+        "title": "Oregon winemaker Scott Henry dies at age 86 (Capital Press)",
+        "url": "https://capitalpress.com/2023/10/31/oregon-winemaker-scott-henry-dies-at-age-86"
+      },
+      {
+        "title": "Henry Estate Winery patriarch dies at age 86 (The News-Review)",
+        "url": "https://www.nrtoday.com/news/local/henry-estate-winery-patriarch-dies-age-86/article_717129e6-7511-11ee-bdf6-97c3d0a8eff1.html"
+      },
+      {
+        "title": "Henry Estate Winery Collection (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/umpqua-valley/henry-estate-winery-collection/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "philippe-girardet",
+    "type": "person",
+    "name": "Philippe Girardet",
+    "summary": "Swiss-raised founder, with his wife Bonnie, of Girardet Vineyards and Winery at Tenmile in the Umpqua Valley. He introduced Baco noir to the valley in 1971 and bottled Oregon's first 100% Baco noir in 1990.",
+    "died": 2025,
+    "place": "Tenmile, OR",
+    "sources": [
+      {
+        "title": "Philippe Girardet, Founder of Girardet Vineyards and Winery, Passes Away at 96 (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2025/11/07/philippe-girardet-passes-away-at-96/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "christophe-baron",
+    "type": "person",
+    "name": "Christophe Baron",
+    "summary": "Winegrower from a Champagne family who bought stony ground at Milton-Freewater in 1996, named the venture Cayuse and planted Cailloux Vineyard in 1997.",
+    "place": "Milton-Freewater, OR",
+    "sources": [
+      {
+        "title": "Cayuse (The Wine Independent)",
+        "url": "https://thewineindependent.com/articles/cayuse/"
+      },
+      {
+        "title": "HistoryLink essay 23035",
+        "url": "https://historylink.org/File/23035"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "stephen-cary",
+    "type": "person",
+    "name": "Stephen Cary",
+    "summary": "Longtime winemaker at Yamhill Valley Vineyards and one of the originators of the Steamboat Pinot Noir Conference. He also proposed the 1985 Oregon-Burgundy Challenge tasting in New York.",
+    "died": 2018,
+    "sources": [
+      {
+        "title": "In Memoriam: Stephen Cary (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/in-memoriam-stephen-cary"
+      },
+      {
+        "title": "Steamboat Conference History, by Stephen J. Cary (Oregon Wine History Archive)",
+        "url": "https://digitalcommons.linfield.edu/owha_cary_docs/1"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "barney-watson",
+    "type": "person",
+    "name": "Barney Watson",
+    "summary": "Instructor and Enology Extension Specialist at Oregon State University for 28 years, who worked on bringing grape clones into the Oregon wine industry.",
+    "sources": [
+      {
+        "title": "Barney Watson interview (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/barney-watson/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "robert-drouhin",
+    "type": "person",
+    "name": "Robert Drouhin",
+    "summary": "Head of the Burgundy house Maison Joseph Drouhin who first visited Oregon in 1961. In 1987 he bought land in the Dundee Hills and established Domaine Drouhin Oregon.",
+    "outsideOregon": true,
+    "place": "Beaune, France",
+    "sources": [
+      {
+        "title": "Profiles in Pinot Noir: Domaine Drouhin (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/profiles-in-pinot-noir-domaine-drouhin-1804"
+      },
+      {
+        "title": "Maison Joseph Drouhin (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Maison_Joseph_Drouhin"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "veronique-drouhin",
+    "type": "person",
+    "name": "Véronique Drouhin-Boss",
+    "aka": [
+      "Véronique Drouhin",
+      "Véronique Boss-Drouhin"
+    ],
+    "summary": "Daughter of Robert Drouhin, trained in enology at the University of Dijon. She interned with three Oregon wine families in 1986 and has been winemaker at Domaine Drouhin Oregon since its first vintage in 1988.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "The French woman of Oregon, Véronique Drouhin-Boss (BKWine Magazine)",
+        "url": "https://www.bkwine.com/features/wine-producer-profiles/french-woman-oregon-veronique-drouhin-boss-roserock-drouhin-oregon/"
+      },
+      {
+        "title": "Profiles in Pinot Noir: Domaine Drouhin (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/profiles-in-pinot-noir-domaine-drouhin-1804"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-wright",
+    "type": "person",
+    "name": "Ken Wright",
+    "summary": "Winemaker who moved from California to Oregon and founded Panther Creek Cellars in 1986, then Ken Wright Cellars in Carlton in 1994. He was also the first winemaker at Domaine Serene and petitioned to shorten the Yamhill-Carlton AVA name.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "Ken Wright lecture announcement (Linfield University news)",
+        "url": "https://news.linfield.edu/?p=6186"
+      },
+      {
+        "title": "Ken Wright Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/125/index.html"
+      },
+      {
+        "title": "Yamhill-Carlton AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Yamhill-Carlton_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mike-etzel",
+    "type": "person",
+    "name": "Michael G. Etzel",
+    "aka": [
+      "Mike Etzel"
+    ],
+    "summary": "Founder and longtime manager of Beaux Frères on Ribbon Ridge, which he started on a former pig farm with backing from his brother-in-law, the wine critic Robert Parker. He worked harvests at Ponzi Vineyards while establishing the vineyard.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "The Birth and Building of Beaux Frères (Wine Spectator)",
+        "url": "https://top100.winespectator.com/2020/article/the-birth-and-building-of-beaux-freres/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "robert-parker",
+    "type": "person",
+    "name": "Robert M. Parker Jr.",
+    "aka": [
+      "Robert Parker"
+    ],
+    "summary": "Maryland-based wine critic who founded The Wine Advocate in 1978. In the late 1980s he invested in the Oregon vineyard that became Beaux Frères with his brother-in-law Michael Etzel, and promised never to review its wines.",
+    "born": 1947,
+    "outsideOregon": true,
+    "place": "Monkton, MD",
+    "sources": [
+      {
+        "title": "Robert M. Parker Jr. (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Robert_M._Parker_Jr."
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-shea",
+    "type": "person",
+    "name": "Dick Shea",
+    "summary": "Former Wall Street trader who planted Shea Vineyard near Carlton in 1989 with two East Coast partners, later buying them out. He sells most of the fruit to other wineries and also runs his own label, Shea Wine Cellars, with his wife Deirdre.",
+    "sources": [
+      {
+        "title": "Shea Vineyard and Shea Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/170/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ted-casteel",
+    "type": "person",
+    "name": "Ted Casteel",
+    "summary": "Co-founder and longtime vineyard manager of Bethel Heights Vineyard, and twin brother of Terry Casteel. He co-founded the LIVE sustainable-viticulture certification program and co-petitioned for the Eola-Amity Hills AVA.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      },
+      {
+        "title": "Eola-Amity Hills AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Eola-Amity_Hills_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "terry-casteel",
+    "type": "person",
+    "name": "Terry Casteel",
+    "summary": "Co-founder of Bethel Heights Vineyard and twin brother of Ted Casteel. He took over the winemaking in 1984 and later handed it to his son Ben.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      },
+      {
+        "title": "Bethel Heights Vineyard (Eola-Amity Hills Winegrowers)",
+        "url": "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "paul-gerrie",
+    "type": "person",
+    "name": "Paul Gerrie",
+    "summary": "Pittsburgh engineer who founded Cristom Vineyards with his wife Eileen in 1992 after attending the International Pinot Noir Celebration in 1991. He retired in 2012 and passed ownership to his children.",
+    "sources": [
+      {
+        "title": "Cristom Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Cristom_Vineyards"
+      },
+      {
+        "title": "Our People (Cristom Vineyards)",
+        "url": "https://cristomvineyards.com/our-people"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "steve-doerner",
+    "type": "person",
+    "name": "Steve Doerner",
+    "summary": "UC Davis biochemistry graduate who spent 14 years at Calera Wine Company in California before Paul Gerrie hired him as Cristom Vineyards' winemaker in 1992. He later became a partner in the winery.",
+    "sources": [
+      {
+        "title": "Cristom Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Cristom_Vineyards"
+      },
+      {
+        "title": "Our People (Cristom Vineyards)",
+        "url": "https://cristomvineyards.com/our-people"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rollin-soles",
+    "type": "person",
+    "name": "Rollin Soles",
+    "summary": "Texas-born winemaker with a master's in enology from UC Davis who co-founded Argyle Winery with Brian Croser in 1987 and was its winemaker until 2013. He and his wife Corby Stonebraker-Soles own ROCO Winery.",
+    "sources": [
+      {
+        "title": "Rollin Soles Relinquishes Winemaker Title at Argyle (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48015"
+      },
+      {
+        "title": "Argyle Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/130/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "brian-croser",
+    "type": "person",
+    "name": "Brian Croser",
+    "summary": "Australian winemaker and founder of Petaluma in South Australia. He co-founded Argyle Winery in Dundee with Rollin Soles, who had worked with him at Petaluma.",
+    "born": 1948,
+    "outsideOregon": true,
+    "place": "South Australia",
+    "sources": [
+      {
+        "title": "Brian Croser (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Brian_Croser"
+      },
+      {
+        "title": "Rollin Soles Relinquishes Winemaker Title at Argyle (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48015"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "harry-peterson-nedry",
+    "type": "person",
+    "name": "Harry Peterson-Nedry",
+    "summary": "Planted Ridgecrest Vineyards in 1980, the first vineyard in what became the Ribbon Ridge AVA, and founded Chehalem winery in 1990. He was a cited author of the Ribbon Ridge AVA petition.",
+    "sources": [
+      {
+        "title": "Chehalem Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/261/index.html"
+      },
+      {
+        "title": "Ribbon Ridge AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Ribbon_Ridge_AVA"
+      },
+      {
+        "title": "Bill Stoller, Oregon Vintner and Philanthropist, Dies at Age 74 (Wine Spectator)",
+        "url": "https://winespectator.com/articles/bill-stoller-oregon-vintner-and-philanthropist-dies-at-age-74"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jim-bernau",
+    "type": "person",
+    "name": "Jim Bernau",
+    "summary": "Founder of Willamette Valley Vineyards, where he began planting Pinot noir in the Salem Hills in 1983. As a young lobbyist he represented the Oregon Winegrowers in passing the 1981 legislation that created the Oregon Wine Advisory Board.",
+    "place": "Turner, OR",
+    "sources": [
+      {
+        "title": "The Jim Bernau story (Oregon State University College of Business)",
+        "url": "https://business.oregonstate.edu/blog/companies-recruiters/jim-bernau-story-leadership-wine-industry"
+      },
+      {
+        "title": "Willamette Valley Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Willamette_Valley_Vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lynn-penner-ash",
+    "type": "person",
+    "name": "Lynn Penner-Ash",
+    "summary": "UC Davis graduate who worked at Stag's Leap Wine Cellars, Domaine Chandon and Chateau St. Jean before joining Rex Hill in 1988, where she became president. She started Penner-Ash Wine Cellars with her husband Ron in 1998.",
+    "sources": [
+      {
+        "title": "Lynn Penner-Ash (Wine Spectator)",
+        "url": "https://www.winespectator.com/pages/lynn-penner-ash"
+      },
+      {
+        "title": "Penner-Ash Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/463/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "larry-stone",
+    "type": "person",
+    "name": "Larry Stone",
+    "summary": "Master Sommelier who managed Evening Land Vineyards until January 2012, then bought the Janzen farm beside Seven Springs Vineyard and founded Lingua Franca. He sold Lingua Franca to Constellation Brands in 2022.",
+    "sources": [
+      {
+        "title": "Larry Stone Returns to Oregon with New Vineyard and Winery (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/51453"
+      },
+      {
+        "title": "Exclusive: Constellation Buys Oregon's Lingua Franca (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/constellation-buys-oregon-s-lingua-franca"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dominique-lafon",
+    "type": "person",
+    "name": "Dominique Lafon",
+    "summary": "Burgundy vigneron who consulted for Evening Land Vineyards in Oregon and later worked with Larry Stone as consultant at Lingua Franca.",
+    "outsideOregon": true,
+    "place": "Burgundy, France",
+    "sources": [
+      {
+        "title": "Larry Stone Returns to Oregon with New Vineyard and Winery (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/51453"
+      },
+      {
+        "title": "Lingua Franca (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2579/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "josh-bergstrom",
+    "type": "person",
+    "name": "Josh Bergström",
+    "aka": [
+      "Josh Bergstrom"
+    ],
+    "summary": "General manager, winemaker and vineyard manager of Bergström Wines, which he started with his parents in 1999 after completing a postgraduate program in viticulture and enology in Burgundy.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Bergström Wines (Ribbon Ridge Winegrowers)",
+        "url": "https://ribbonridgeava.org/listings/bergstrom-wines/"
+      },
+      {
+        "title": "Bergström Wines (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/bergstrom-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-evenstad",
+    "type": "person",
+    "name": "Ken Evenstad",
+    "summary": "Minnesota pharmaceutical executive who founded Domaine Serene in the Dundee Hills with his wife Grace. The couple bought Château de la Crée in Burgundy in 2015.",
+    "born": 1943,
+    "died": 2020,
+    "sources": [
+      {
+        "title": "Ken Evenstad, Co-Founder of Oregon's Domaine Serene Winery, Dies at 77 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/ken-evenstad-cofounder-of-oregons-domaine-serene-winery-dies"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "grace-evenstad",
+    "type": "person",
+    "name": "Grace Evenstad",
+    "summary": "Co-founder and owner of Domaine Serene, which she established in the Dundee Hills with her husband Ken Evenstad in 1989.",
+    "sources": [
+      {
+        "title": "Ken Evenstad, Co-Founder of Oregon's Domaine Serene Winery, Dies at 77 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/ken-evenstad-cofounder-of-oregons-domaine-serene-winery-dies"
+      },
+      {
+        "title": "Domaine Serene (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/domaine-serene/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tony-rynders",
+    "type": "person",
+    "name": "Tony Rynders",
+    "summary": "Winemaker who arrived in Oregon in 1994 as an assistant winemaker at Argyle, took over winemaking at Domaine Serene in 1998 and led it for about a decade. Bacchus Capital hired him to make the Panther Creek wines in 2013.",
+    "sources": [
+      {
+        "title": "Ken Wright and Panther Creek Cellars (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=35178"
+      },
+      {
+        "title": "Panther Creek Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/987/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-stoller",
+    "type": "person",
+    "name": "Bill Stoller",
+    "summary": "Businessman who invested in Ridgecrest Vineyards in 1988 and was co-owner of Chehalem by 1993, becoming its sole owner in 2018. He also founded Stoller Family Estate on his family's former turkey farm in the Dundee Hills.",
+    "died": 2025,
+    "sources": [
+      {
+        "title": "Bill Stoller, Oregon Vintner and Philanthropist, Dies at Age 74 (Wine Spectator)",
+        "url": "https://winespectator.com/articles/bill-stoller-oregon-vintner-and-philanthropist-dies-at-age-74"
+      },
+      {
+        "title": "Chehalem Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/261/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ben-casteel",
+    "type": "person",
+    "name": "Ben Casteel",
+    "summary": "Son of Terry Casteel and Marilyn Webb. He worked a harvest in Burgundy and spent five years at Rex Hill before succeeding his father as winemaker at Bethel Heights Vineyard.",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Eola-Amity Hills Winegrowers)",
+        "url": "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
+      },
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "pat-dudley",
+    "type": "person",
+    "name": "Pat Dudley",
+    "summary": "Co-founder and president of Bethel Heights Vineyard and wife of Ted Casteel. She co-founded Oregon Pinot Camp and is a former executive director of the International Pinot Noir Celebration.",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tom-gerrie",
+    "type": "person",
+    "name": "Tom Gerrie",
+    "summary": "Son of Cristom founders Paul and Eileen Gerrie. He joined the winery after graduating in 2007 and became its majority owner in 2012.",
+    "sources": [
+      {
+        "title": "Our People (Cristom Vineyards)",
+        "url": "https://cristomvineyards.com/our-people"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nate-klostermann",
+    "type": "person",
+    "name": "Nate Klostermann",
+    "summary": "Rollin Soles' assistant at Argyle Winery for seven years before succeeding him as winemaker on 1 March 2013.",
+    "sources": [
+      {
+        "title": "Rollin Soles Relinquishes Winemaker Title at Argyle (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48015"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mark-tarlov",
+    "type": "person",
+    "name": "Mark Tarlov",
+    "summary": "Former attorney and film producer who founded Evening Land Vineyards in 2005 and leased Seven Springs Vineyard in 2007. He left the company in January 2012.",
+    "sources": [
+      {
+        "title": "Evening Land Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/684/index.html"
+      },
+      {
+        "title": "Larry Stone Returns to Oregon with New Vineyard and Winery (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/51453"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "richard-sommer",
+    "type": "person",
+    "name": "Richard Sommer",
+    "summary": "Attended UC Davis and founded HillCrest Vineyard near Roseburg in 1961, where he planted Oregon's first Pinot noir. Sold the winery in 2003.",
+    "born": 1929,
+    "died": 2009,
+    "place": "Roseburg, OR",
+    "sources": [
+      {
+        "title": "Richard Sommer (winemaker) (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Richard_Sommer_(winemaker)"
+      },
+      {
+        "title": "Umpqua Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "charles-coury",
+    "type": "person",
+    "name": "Charles Coury",
+    "summary": "UC Davis graduate who arrived in northern Oregon in 1965 and planted Pinot noir and Alsatian varieties at Charles Coury Vineyards near Forest Grove, which he ran until 1978.",
+    "place": "Forest Grove, OR",
+    "sources": [
+      {
+        "title": "Legacy (David Hill Vineyards & Winery)",
+        "url": "https://davidhillwinery.com/legacy.html"
+      },
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-erath",
+    "type": "person",
+    "name": "Dick Erath",
+    "summary": "California-born engineer who took classes at UC Davis in 1967, moved to the Willamette Valley in 1968 and planted his first vines near Newberg in 1969. Founded Erath Winery, which he sold to Ste. Michelle Wine Estates in 2006.",
+    "born": 1935,
+    "died": 2023,
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      },
+      {
+        "title": "Erath Winery Collection: historical note (Linfield / Oregon Wine History Archive)",
+        "url": "https://digitalcommons.linfield.edu/owha_erath"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cal-knudsen",
+    "type": "person",
+    "name": "Cal Knudsen",
+    "aka": [
+      "C. Calvert Knudsen"
+    ],
+    "summary": "Lawyer and timber executive who bought a former walnut orchard in the Dundee Hills in 1971 and planted Knudsen Vineyards. Partner in Knudsen Erath Winery and later chairman of Argyle Winery from 1990 to 2007.",
+    "died": 2009,
+    "sources": [
+      {
+        "title": "Oregon Wine Pioneer Cal Knudsen Dies (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/oregon-wine-pioneer-cal-knudsen-dies-4788"
+      },
+      {
+        "title": "Our Story (Knudsen Vineyards)",
+        "url": "https://www.knudsenvineyards.com/our-story"
+      },
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-ponzi",
+    "type": "person",
+    "name": "Dick Ponzi",
+    "aka": [
+      "Richard Ponzi"
+    ],
+    "summary": "Engineer who founded Ponzi Vineyards with his wife Nancy in 1970 and was its winemaker until 1993. Founding member and first president of the Oregon Winegrowers Association and a co-founder of BridgePort Brewing.",
+    "born": 1934,
+    "sources": [
+      {
+        "title": "Dick Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Dick_Ponzi"
+      },
+      {
+        "title": "Our Story (Ponzi Vineyards)",
+        "url": "https://www.ponzivineyards.com/our-story"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nancy-ponzi",
+    "type": "person",
+    "name": "Nancy Ponzi",
+    "summary": "Co-founded Ponzi Vineyards with her husband Dick in 1970. Co-founded the International Pinot Noir Celebration in 1987 and Oregon Pinot Camp in 2000, and founded the vineyard-worker health program ¡Salud! in 1991.",
+    "born": 1941,
+    "sources": [
+      {
+        "title": "Nancy Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Nancy_Ponzi"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "luisa-ponzi",
+    "type": "person",
+    "name": "Luisa Ponzi",
+    "summary": "Daughter of Dick and Nancy Ponzi. Trained in Beaune and was winemaker at Ponzi Vineyards from 1993 to 2024; co-petitioner for the Laurelwood District AVA.",
+    "sources": [
+      {
+        "title": "Our Story (Ponzi Vineyards)",
+        "url": "https://www.ponzivineyards.com/our-story"
+      },
+      {
+        "title": "Dick Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Dick_Ponzi"
+      },
+      {
+        "title": "Laurelwood District AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Laurelwood_District_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-adelsheim",
+    "type": "person",
+    "name": "David Adelsheim",
+    "summary": "Co-founded Adelsheim Vineyard with his wife Ginny after buying land near Newberg in 1971. Learned winemaking from David Lett at The Eyrie Vineyards, studied in Beaune in 1974, and co-authored the Chehalem Mountains AVA petition.",
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Adelsheim_Vineyard"
+      },
+      {
+        "title": "David Adelsheim: A \"Latecomer\" Oregon Wine Pioneer (The PinotFile / Prince of Pinot)",
+        "url": "https://princeofpinot.com/article/1418"
+      },
+      {
+        "title": "Chehalem Mountains AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Chehalem_Mountains_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ginny-adelsheim",
+    "type": "person",
+    "name": "Ginny Adelsheim",
+    "summary": "Artist who co-founded Adelsheim Vineyard with her husband David and designed the winery's labels between 1982 and 2009.",
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Adelsheim_Vineyard"
+      },
+      {
+        "title": "David Adelsheim: A \"Latecomer\" Oregon Wine Pioneer (The PinotFile / Prince of Pinot)",
+        "url": "https://princeofpinot.com/article/1418"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "susan-sokol-blosser",
+    "type": "person",
+    "name": "Susan Sokol Blosser",
+    "summary": "Co-founded Sokol Blosser Winery in the Dundee Hills with Bill Blosser in 1971 and managed the company for 25 years before handing over to her children Alex and Alison in 2008.",
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      },
+      {
+        "title": "About (Sokol Blosser Winery)",
+        "url": "https://sokolblosser.com/about/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-blosser",
+    "type": "person",
+    "name": "Bill Blosser",
+    "summary": "Co-founded Sokol Blosser Winery with Susan Sokol Blosser in 1971; the couple married in 1966 after graduating from Stanford.",
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      },
+      {
+        "title": "About (Sokol Blosser Winery)",
+        "url": "https://sokolblosser.com/about/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "alex-sokol-blosser",
+    "type": "person",
+    "name": "Alex Sokol Blosser",
+    "summary": "Son of the Sokol Blosser founders. Joined the winery full-time in 1998, became co-president in 2008, was winemaker from 2013 to 2023 and then president.",
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      },
+      {
+        "title": "About (Sokol Blosser Winery)",
+        "url": "https://sokolblosser.com/about/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "alison-sokol-blosser",
+    "type": "person",
+    "name": "Alison Sokol Blosser",
+    "summary": "Daughter of the Sokol Blosser founders. Joined the winery in sales and marketing in 2004 and was co-president with her brother Alex from 2008 until retiring from the role in 2023.",
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "myron-redford",
+    "type": "person",
+    "name": "Myron Redford",
+    "summary": "Bought a small vineyard in Amity in 1974 and founded Amity Vineyards, making the wines until 2008. Helped organize the Steamboat Pinot Noir Conference and the first International Pinot Noir Celebration.",
+    "place": "Amity, OR",
+    "sources": [
+      {
+        "title": "Amity Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/467"
+      },
+      {
+        "title": "The Legacy of Steamboat (The PinotFile / Prince of Pinot)",
+        "url": "https://princeofpinot.com/article/2045"
+      },
+      {
+        "title": "Amity Vineyards (Union Wine Company)",
+        "url": "https://unionwinecompany.com/amity-vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "pat-campbell",
+    "type": "person",
+    "name": "Pat Campbell",
+    "summary": "Co-founded Elk Cove Vineyards near Gaston with her husband Joe in 1974, handling management and the vineyards.",
+    "sources": [
+      {
+        "title": "About Us (Elk Cove Vineyards)",
+        "url": "https://elkcove.com/about-us/"
+      },
+      {
+        "title": "Joe Campbell, Pioneering Willamette Valley Winemaker, Dies at 87 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/joe-campbell-pioneering-willamette-valley-winemaker-dies"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "joe-campbell",
+    "type": "person",
+    "name": "Joe Campbell",
+    "summary": "Physician who co-founded Elk Cove Vineyards with his wife Pat in 1974 and made its wines until retiring in 1999.",
+    "born": 1939,
+    "died": 2026,
+    "sources": [
+      {
+        "title": "Joe Campbell, Pioneering Willamette Valley Winemaker, Dies at 87 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/joe-campbell-pioneering-willamette-valley-winemaker-dies"
+      },
+      {
+        "title": "About Us (Elk Cove Vineyards)",
+        "url": "https://elkcove.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "adam-campbell",
+    "type": "person",
+    "name": "Adam Campbell",
+    "summary": "Son of Pat and Joe Campbell. Joined his parents at Elk Cove Vineyards in 1995 and took over winemaking from his father in 1999.",
+    "sources": [
+      {
+        "title": "About Us (Elk Cove Vineyards)",
+        "url": "https://elkcove.com/about-us/"
+      },
+      {
+        "title": "Joe Campbell, Pioneering Willamette Valley Winemaker, Dies at 87 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/joe-campbell-pioneering-willamette-valley-winemaker-dies"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jim-maresh",
+    "type": "person",
+    "name": "Jim Maresh",
+    "summary": "Dundee Hills farmer who, with his wife Loie, bought a farm on Worden Hill Road in 1959 and began planting wine grapes in 1970 at Dick Erath's suggestion.",
+    "died": 2021,
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Tribute to Jim Maresh (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/tribute-to-jim-maresh"
+      },
+      {
+        "title": "Maresh family feature (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=29531"
+      },
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-fuller",
+    "type": "person",
+    "name": "Bill Fuller",
+    "summary": "Co-founded Tualatin Vineyards near Forest Grove in 1973 and ran it until selling to Willamette Valley Vineyards in 1997, after which he continued to work with that company.",
+    "sources": [
+      {
+        "title": "Bill Fuller (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/bill-fuller/"
+      },
+      {
+        "title": "Tualatin Estate Vineyard (Willamette Valley Vineyards)",
+        "url": "https://www.wvv.com/tualatin"
+      }
+    ],
+    "verified": false
+  }
+]

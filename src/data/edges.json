@@ -1,0 +1,4465 @@
+[
+  {
+    "id": "david-lett--founded--the-eyrie-vineyards",
+    "source": "david-lett",
+    "target": "the-eyrie-vineyards",
+    "type": "founded",
+    "startYear": 1966,
+    "note": "Sources date the founding to 1965 or 1966.",
+    "sources": [
+      {
+        "title": "David Lett (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/David_Lett"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "diana-lett--founded--the-eyrie-vineyards",
+    "source": "diana-lett",
+    "target": "the-eyrie-vineyards",
+    "type": "founded",
+    "startYear": 1966,
+    "sources": [
+      {
+        "title": "David Lett (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/David_Lett"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-lett--winemaker--the-eyrie-vineyards",
+    "source": "david-lett",
+    "target": "the-eyrie-vineyards",
+    "type": "winemaker",
+    "endYear": 2005,
+    "sources": [
+      {
+        "title": "David Lett (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/David_Lett"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jason-lett--winemaker--the-eyrie-vineyards",
+    "source": "jason-lett",
+    "target": "the-eyrie-vineyards",
+    "type": "winemaker",
+    "role": "also vineyard manager",
+    "startYear": 2005,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "The Eyrie Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Eyrie_Vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jason-lett--owns--the-eyrie-vineyards",
+    "source": "jason-lett",
+    "target": "the-eyrie-vineyards",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "The Eyrie Vineyards: press notes",
+        "url": "https://eyrievineyards.com/inform.shtml"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-lett--family--diana-lett",
+    "source": "david-lett",
+    "target": "diana-lett",
+    "type": "family",
+    "role": "spouse",
+    "sources": [
+      {
+        "title": "David Lett (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/David_Lett"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-lett--family--jason-lett",
+    "source": "david-lett",
+    "target": "jason-lett",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "The Eyrie Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Eyrie_Vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "diana-lett--family--jason-lett",
+    "source": "diana-lett",
+    "target": "jason-lett",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "The Eyrie Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Eyrie_Vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-lett--studied-at--uc-davis-viticulture-enology",
+    "source": "david-lett",
+    "target": "uc-davis-viticulture-enology",
+    "type": "studied_at",
+    "endYear": 1964,
+    "sources": [
+      {
+        "title": "David Lett (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/David_Lett"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-lett--founded--the-eyrie-vineyard",
+    "source": "david-lett",
+    "target": "the-eyrie-vineyard",
+    "type": "founded",
+    "role": "planted",
+    "startYear": 1965,
+    "note": "First vines planted in 1965; the Dundee Hills site was bought in 1966.",
+    "sources": [
+      {
+        "title": "David Lett (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/David_Lett"
+      },
+      {
+        "title": "The Eyrie Vineyards: press notes",
+        "url": "https://eyrievineyards.com/inform.shtml"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "the-eyrie-vineyards--owns--the-eyrie-vineyard",
+    "source": "the-eyrie-vineyards",
+    "target": "the-eyrie-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "The Eyrie Vineyards: press notes",
+        "url": "https://eyrievineyards.com/inform.shtml"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "the-eyrie-vineyard--located-in--dundee-hills",
+    "source": "the-eyrie-vineyard",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "The Eyrie Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Eyrie_Vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dundee-hills--within--willamette-valley",
+    "source": "dundee-hills",
+    "target": "willamette-valley",
+    "type": "within",
+    "sources": [
+      {
+        "title": "Willamette Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Willamette_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "umpqua-valley--within--southern-oregon",
+    "source": "umpqua-valley",
+    "target": "southern-oregon",
+    "type": "within",
+    "startYear": 2004,
+    "sources": [
+      {
+        "title": "Umpqua Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rogue-valley--within--southern-oregon",
+    "source": "rogue-valley",
+    "target": "southern-oregon",
+    "type": "within",
+    "startYear": 2004,
+    "sources": [
+      {
+        "title": "Rogue Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Rogue_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "applegate-valley--within--rogue-valley",
+    "source": "applegate-valley",
+    "target": "rogue-valley",
+    "type": "within",
+    "sources": [
+      {
+        "title": "Applegate Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Applegate_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mcminnville--within--willamette-valley",
+    "source": "mcminnville",
+    "target": "willamette-valley",
+    "type": "within",
+    "sources": [
+      {
+        "title": "McMinnville AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/McMinnville_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "van-duzer-corridor--within--willamette-valley",
+    "source": "van-duzer-corridor",
+    "target": "willamette-valley",
+    "type": "within",
+    "sources": [
+      {
+        "title": "Van Duzer Corridor AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Van_Duzer_Corridor_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rocks-district-of-milton-freewater--within--walla-walla-valley",
+    "source": "rocks-district-of-milton-freewater",
+    "target": "walla-walla-valley",
+    "type": "within",
+    "sources": [
+      {
+        "title": "The Rocks District of Milton-Freewater AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Rocks_District_of_Milton-Freewater_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "earl-jones--founded--abacela",
+    "source": "earl-jones",
+    "target": "abacela",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1995,
+    "note": "Wikipedia gives 1994, the year the name was trademarked; the winery dates itself to 1995, when the first vines were planted.",
+    "sources": [
+      {
+        "title": "Abacela (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Abacela"
+      },
+      {
+        "title": "Abacela",
+        "url": "https://www.abacela.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "hilda-jones--founded--abacela",
+    "source": "hilda-jones",
+    "target": "abacela",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1995,
+    "sources": [
+      {
+        "title": "Abacela (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Abacela"
+      },
+      {
+        "title": "Abacela",
+        "url": "https://www.abacela.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "earl-jones--owns--abacela",
+    "source": "earl-jones",
+    "target": "abacela",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Abacela (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Abacela"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "hilda-jones--owns--abacela",
+    "source": "hilda-jones",
+    "target": "abacela",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Abacela (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Abacela"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "earl-jones--family--greg-jones",
+    "source": "earl-jones",
+    "target": "greg-jones",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "Abacela (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Abacela"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "greg-jones--worked-at--abacela",
+    "source": "greg-jones",
+    "target": "abacela",
+    "type": "worked_at",
+    "role": "CEO",
+    "startYear": 2021,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Abacela (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Abacela"
+      },
+      {
+        "title": "Gregory V. Jones (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Gregory_V._Jones"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "greg-jones--worked-at--linfield-university",
+    "source": "greg-jones",
+    "target": "linfield-university",
+    "type": "worked_at",
+    "role": "director of the Center for Wine Education; professor of environmental studies",
+    "sources": [
+      {
+        "title": "Gregory V. Jones (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Gregory_V._Jones"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "abacela--owns--fault-line-vineyards",
+    "source": "abacela",
+    "target": "fault-line-vineyards",
+    "type": "owns",
+    "role": "estate vineyard",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Abacela (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Abacela"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "abacela--located-in--umpqua-valley",
+    "source": "abacela",
+    "target": "umpqua-valley",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Abacela (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Abacela"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "fault-line-vineyards--located-in--umpqua-valley",
+    "source": "fault-line-vineyards",
+    "target": "umpqua-valley",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Abacela (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Abacela"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "earl-jones--member-of--oregon-wine-board",
+    "source": "earl-jones",
+    "target": "oregon-wine-board",
+    "type": "member_of",
+    "role": "director",
+    "startYear": 2003,
+    "endYear": 2009,
+    "sources": [
+      {
+        "title": "Past Oregon Wine Board Directors (Oregon Wine Board)",
+        "url": "https://industry.oregonwine.org/past-oregon-wine-board-directors/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "hilda-jones--member-of--oregon-wine-board",
+    "source": "hilda-jones",
+    "target": "oregon-wine-board",
+    "type": "member_of",
+    "role": "director",
+    "startYear": 2016,
+    "endYear": 2021,
+    "sources": [
+      {
+        "title": "Past Oregon Wine Board Directors (Oregon Wine Board)",
+        "url": "https://industry.oregonwine.org/past-oregon-wine-board-directors/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "greg-jones--member-of--oregon-wine-board",
+    "source": "greg-jones",
+    "target": "oregon-wine-board",
+    "type": "member_of",
+    "role": "director",
+    "startYear": 2022,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Past Oregon Wine Board Directors (Oregon Wine Board)",
+        "url": "https://industry.oregonwine.org/past-oregon-wine-board-directors/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ed-king-jr--founded--king-estate",
+    "source": "ed-king-jr",
+    "target": "king-estate",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1991,
+    "sources": [
+      {
+        "title": "Ed King III, Co-CEO & Co-Founder (King Estate)",
+        "url": "https://kingestate.com/?p=995"
+      },
+      {
+        "title": "King Estate Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/King_Estate_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ed-king-iii--founded--king-estate",
+    "source": "ed-king-iii",
+    "target": "king-estate",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1991,
+    "sources": [
+      {
+        "title": "Ed King III, Co-CEO & Co-Founder (King Estate)",
+        "url": "https://kingestate.com/?p=995"
+      },
+      {
+        "title": "King Estate Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/King_Estate_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ed-king-jr--family--ed-king-iii",
+    "source": "ed-king-jr",
+    "target": "ed-king-iii",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "Ed King III, Co-CEO & Co-Founder (King Estate)",
+        "url": "https://kingestate.com/?p=995"
+      },
+      {
+        "title": "King Estate Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/King_Estate_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ed-king-iii--worked-at--king-estate",
+    "source": "ed-king-iii",
+    "target": "king-estate",
+    "type": "worked_at",
+    "role": "co-CEO",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Ed King III, Co-CEO & Co-Founder (King Estate)",
+        "url": "https://kingestate.com/?p=995"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "frank-wisnovsky--founded--valley-view-winery",
+    "source": "frank-wisnovsky",
+    "target": "valley-view-winery",
+    "type": "founded",
+    "startYear": 1972,
+    "note": "Land bought in 1971; grapes planted and the winery founded in 1972.",
+    "sources": [
+      {
+        "title": "Valley View Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Valley_View_Winery"
+      },
+      {
+        "title": "Rogue Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Rogue_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "valley-view-winery--located-in--applegate-valley",
+    "source": "valley-view-winery",
+    "target": "applegate-valley",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Valley View Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Valley_View_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-troon--founded--troon-vineyard",
+    "source": "dick-troon",
+    "target": "troon-vineyard",
+    "type": "founded",
+    "role": "planted the vineyard",
+    "startYear": 1972,
+    "note": "Sources disagree on when a winery followed the 1972 planting: Oregon Wine Press says he bottled his own wine in 1976; other accounts say 1993.",
+    "sources": [
+      {
+        "title": "Troon Renaissance (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/troon-renaissance"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "troon-vineyard--located-in--applegate-valley",
+    "source": "troon-vineyard",
+    "target": "applegate-valley",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Troon Renaissance (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/troon-renaissance"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "scott-henry--founded--henry-estate-winery",
+    "source": "scott-henry",
+    "target": "henry-estate-winery",
+    "type": "founded",
+    "startYear": 1978,
+    "note": "Vineyard planted in 1972; winery opened in 1978. A Linfield archive entry dates the founding to 1972.",
+    "sources": [
+      {
+        "title": "Oregon winemaker Scott Henry dies at age 86 (Capital Press)",
+        "url": "https://capitalpress.com/2023/10/31/oregon-winemaker-scott-henry-dies-at-age-86"
+      },
+      {
+        "title": "Henry Estate Winery patriarch dies at age 86 (The News-Review)",
+        "url": "https://www.nrtoday.com/news/local/henry-estate-winery-patriarch-dies-age-86/article_717129e6-7511-11ee-bdf6-97c3d0a8eff1.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "henry-estate-winery--located-in--umpqua-valley",
+    "source": "henry-estate-winery",
+    "target": "umpqua-valley",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Henry Estate Winery Collection (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/umpqua-valley/henry-estate-winery-collection/"
+      },
+      {
+        "title": "Henry Estate Winery patriarch dies at age 86 (The News-Review)",
+        "url": "https://www.nrtoday.com/news/local/henry-estate-winery-patriarch-dies-age-86/article_717129e6-7511-11ee-bdf6-97c3d0a8eff1.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "scott-henry--studied-at--oregon-state-university",
+    "source": "scott-henry",
+    "target": "oregon-state-university",
+    "type": "studied_at",
+    "role": "bachelor's and master's degrees in mechanical engineering",
+    "endYear": 1959,
+    "note": "Engineering degrees, not a wine program; the university was then Oregon State College.",
+    "sources": [
+      {
+        "title": "Oregon winemaker Scott Henry dies at age 86 (Capital Press)",
+        "url": "https://capitalpress.com/2023/10/31/oregon-winemaker-scott-henry-dies-at-age-86"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "philippe-girardet--founded--girardet-vineyards",
+    "source": "philippe-girardet",
+    "target": "girardet-vineyards",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1971,
+    "sources": [
+      {
+        "title": "Philippe Girardet, Founder of Girardet Vineyards and Winery, Passes Away at 96 (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2025/11/07/philippe-girardet-passes-away-at-96/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "girardet-vineyards--located-in--umpqua-valley",
+    "source": "girardet-vineyards",
+    "target": "umpqua-valley",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Philippe Girardet, Founder of Girardet Vineyards and Winery, Passes Away at 96 (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2025/11/07/philippe-girardet-passes-away-at-96/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "christophe-baron--founded--cayuse-vineyards",
+    "source": "christophe-baron",
+    "target": "cayuse-vineyards",
+    "type": "founded",
+    "note": "Baron bought the land in 1996 and planted the first vineyard in 1997; the sources fetched do not state a founding year.",
+    "sources": [
+      {
+        "title": "Cayuse (The Wine Independent)",
+        "url": "https://thewineindependent.com/articles/cayuse/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "christophe-baron--founded--cailloux-vineyard",
+    "source": "christophe-baron",
+    "target": "cailloux-vineyard",
+    "type": "founded",
+    "role": "planted",
+    "startYear": 1997,
+    "sources": [
+      {
+        "title": "Cayuse (The Wine Independent)",
+        "url": "https://thewineindependent.com/articles/cayuse/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cayuse-vineyards--owns--cailloux-vineyard",
+    "source": "cayuse-vineyards",
+    "target": "cailloux-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Cayuse (The Wine Independent)",
+        "url": "https://thewineindependent.com/articles/cayuse/"
+      },
+      {
+        "title": "HistoryLink essay 23035",
+        "url": "https://historylink.org/File/23035"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cayuse-vineyards--located-in--rocks-district-of-milton-freewater",
+    "source": "cayuse-vineyards",
+    "target": "rocks-district-of-milton-freewater",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "The Rocks District of Milton-Freewater AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Rocks_District_of_Milton-Freewater_AVA"
+      },
+      {
+        "title": "Cayuse (The Wine Independent)",
+        "url": "https://thewineindependent.com/articles/cayuse/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nancy-ponzi--founded--ipnc",
+    "source": "nancy-ponzi",
+    "target": "ipnc",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1987,
+    "sources": [
+      {
+        "title": "Nancy Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Nancy_Ponzi"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-lett--founded--ipnc",
+    "source": "david-lett",
+    "target": "ipnc",
+    "type": "founded",
+    "role": "among the organizing winemakers",
+    "startYear": 1987,
+    "note": "Named by Tim Atkin among the group of Oregon winemakers who launched the first celebration in 1987; IPNC's own history names no founders.",
+    "sources": [
+      {
+        "title": "Celebrating 25 years of the IPNC (Tim Atkin)",
+        "url": "https://timatkin.com/celebrating-25-years-of-the-ipnc/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-ponzi--founded--ipnc",
+    "source": "dick-ponzi",
+    "target": "ipnc",
+    "type": "founded",
+    "role": "among the organizing winemakers",
+    "startYear": 1987,
+    "note": "Named by Tim Atkin among the group of Oregon winemakers who launched the first celebration in 1987; IPNC's own history names no founders.",
+    "sources": [
+      {
+        "title": "Celebrating 25 years of the IPNC (Tim Atkin)",
+        "url": "https://timatkin.com/celebrating-25-years-of-the-ipnc/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-adelsheim--founded--ipnc",
+    "source": "david-adelsheim",
+    "target": "ipnc",
+    "type": "founded",
+    "role": "among the organizing winemakers",
+    "startYear": 1987,
+    "note": "Named by Tim Atkin among the group of Oregon winemakers who launched the first celebration in 1987; IPNC's own history names no founders.",
+    "sources": [
+      {
+        "title": "Celebrating 25 years of the IPNC (Tim Atkin)",
+        "url": "https://timatkin.com/celebrating-25-years-of-the-ipnc/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "robert-drouhin--participated-in--ipnc",
+    "source": "robert-drouhin",
+    "target": "ipnc",
+    "type": "participated_in",
+    "role": "invited guest at the first event",
+    "startYear": 1987,
+    "sources": [
+      {
+        "title": "Celebrating 25 years of the IPNC (Tim Atkin)",
+        "url": "https://timatkin.com/celebrating-25-years-of-the-ipnc/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "linfield-university--hosts--ipnc",
+    "source": "linfield-university",
+    "target": "ipnc",
+    "type": "hosts",
+    "role": "venue",
+    "startYear": 1987,
+    "sources": [
+      {
+        "title": "International Pinot Noir Celebration",
+        "url": "https://www.ipnc.org/"
+      },
+      {
+        "title": "Celebrating 25 years of the IPNC (Tim Atkin)",
+        "url": "https://timatkin.com/celebrating-25-years-of-the-ipnc/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "the-eyrie-vineyards--participated-in--wine-olympics-1979",
+    "source": "the-eyrie-vineyards",
+    "target": "wine-olympics-1979",
+    "type": "participated_in",
+    "role": "1975 Reserve Pinot noir placed in the top ten",
+    "startYear": 1979,
+    "endYear": 1979,
+    "sources": [
+      {
+        "title": "Wine Olympics (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Wine_Olympics"
+      },
+      {
+        "title": "The Eyrie Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Eyrie_Vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "the-eyrie-vineyards--participated-in--drouhin-rematch-1980",
+    "source": "the-eyrie-vineyards",
+    "target": "drouhin-rematch-1980",
+    "type": "participated_in",
+    "role": "1975 Reserve Pinot noir placed second",
+    "startYear": 1980,
+    "endYear": 1980,
+    "sources": [
+      {
+        "title": "The Eyrie Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Eyrie_Vineyards"
+      },
+      {
+        "title": "Winemaking, Viticulture & Notoriety (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/1642/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "robert-drouhin--founded--drouhin-rematch-1980",
+    "source": "robert-drouhin",
+    "target": "drouhin-rematch-1980",
+    "type": "founded",
+    "role": "organizer",
+    "startYear": 1980,
+    "sources": [
+      {
+        "title": "The Eyrie Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Eyrie_Vineyards"
+      },
+      {
+        "title": "Winemaking, Viticulture & Notoriety (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/1642/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "maison-joseph-drouhin--participated-in--drouhin-rematch-1980",
+    "source": "maison-joseph-drouhin",
+    "target": "drouhin-rematch-1980",
+    "type": "participated_in",
+    "role": "host; its 1959 Chambolle-Musigny placed first",
+    "startYear": 1980,
+    "endYear": 1980,
+    "sources": [
+      {
+        "title": "The Eyrie Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Eyrie_Vineyards"
+      },
+      {
+        "title": "Winemaking, Viticulture & Notoriety (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/1642/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "stephen-cary--founded--steamboat-pinot-noir-conference",
+    "source": "stephen-cary",
+    "target": "steamboat-pinot-noir-conference",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1980,
+    "note": "Conceived in autumn 1979 with Del Pearl, Rick Denton and Jim Olsen; first held in 1980.",
+    "sources": [
+      {
+        "title": "Steamboat Conference History, by Stephen J. Cary (Oregon Wine History Archive)",
+        "url": "https://digitalcommons.linfield.edu/owha_cary_docs/1"
+      },
+      {
+        "title": "In Memoriam: Stephen Cary (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/in-memoriam-stephen-cary"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-adelsheim--participated-in--steamboat-pinot-noir-conference",
+    "source": "david-adelsheim",
+    "target": "steamboat-pinot-noir-conference",
+    "type": "participated_in",
+    "role": "organizer",
+    "sources": [
+      {
+        "title": "The Legacy of Steamboat (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/article/2045/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "myron-redford--participated-in--steamboat-pinot-noir-conference",
+    "source": "myron-redford",
+    "target": "steamboat-pinot-noir-conference",
+    "type": "participated_in",
+    "role": "organizer",
+    "sources": [
+      {
+        "title": "The Legacy of Steamboat (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/article/2045/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nancy-ponzi--founded--oregon-pinot-camp",
+    "source": "nancy-ponzi",
+    "target": "oregon-pinot-camp",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 2000,
+    "sources": [
+      {
+        "title": "Nancy Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Nancy_Ponzi"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-adelsheim--founded--oregon-pinot-camp",
+    "source": "david-adelsheim",
+    "target": "oregon-pinot-camp",
+    "type": "founded",
+    "startYear": 2000,
+    "note": "Oregon Wine Press lists 'the founding of Oregon Pinot Camp in 2000' among the efforts Adelsheim helped lead.",
+    "sources": [
+      {
+        "title": "Q and A: David Adelsheim (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/q-and-a-david-adelsheim"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nancy-ponzi--member-of--oregon-winegrowers-association",
+    "source": "nancy-ponzi",
+    "target": "oregon-winegrowers-association",
+    "type": "member_of",
+    "role": "held various offices",
+    "sources": [
+      {
+        "title": "Nancy Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Nancy_Ponzi"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-adelsheim--member-of--oregon-winegrowers-association",
+    "source": "david-adelsheim",
+    "target": "oregon-winegrowers-association",
+    "type": "member_of",
+    "role": "chairman, Appellation Committee",
+    "note": "Title as given on the 1982 petition for the Willamette Valley AVA.",
+    "sources": [
+      {
+        "title": "Willamette Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Willamette_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jim-bernau--worked-at--oregon-winegrowers-association",
+    "source": "jim-bernau",
+    "target": "oregon-winegrowers-association",
+    "type": "worked_at",
+    "role": "lobbyist",
+    "note": "Represented the Oregon Winegrowers in passing the legislation that created the Oregon Wine Advisory Board; this source dates that to 1981, others date the board to 1983 or 1984.",
+    "sources": [
+      {
+        "title": "Jim Bernau: a story of leadership in the wine industry (OSU College of Business)",
+        "url": "https://business.oregonstate.edu/blog/companies-recruiters/jim-bernau-story-leadership-wine-industry"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "charles-coury--member-of--oregon-winegrowers-association",
+    "source": "charles-coury",
+    "target": "oregon-winegrowers-association",
+    "type": "member_of",
+    "role": "early member",
+    "sources": [
+      {
+        "title": "Oregon Wine Board Collection: historical note (Linfield University Archives)",
+        "url": "https://linfield-atom.libraryhost.com/index.php/oregon-wine-board-collection"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-erath--member-of--oregon-winegrowers-association",
+    "source": "dick-erath",
+    "target": "oregon-winegrowers-association",
+    "type": "member_of",
+    "role": "early member",
+    "sources": [
+      {
+        "title": "Oregon Wine Board Collection: historical note (Linfield University Archives)",
+        "url": "https://linfield-atom.libraryhost.com/index.php/oregon-wine-board-collection"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-fuller--member-of--oregon-winegrowers-association",
+    "source": "bill-fuller",
+    "target": "oregon-winegrowers-association",
+    "type": "member_of",
+    "role": "early member",
+    "sources": [
+      {
+        "title": "Oregon Wine Board Collection: historical note (Linfield University Archives)",
+        "url": "https://linfield-atom.libraryhost.com/index.php/oregon-wine-board-collection"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-blosser--member-of--oregon-winegrowers-association",
+    "source": "bill-blosser",
+    "target": "oregon-winegrowers-association",
+    "type": "member_of",
+    "role": "early member",
+    "sources": [
+      {
+        "title": "Oregon Wine Board Collection: historical note (Linfield University Archives)",
+        "url": "https://linfield-atom.libraryhost.com/index.php/oregon-wine-board-collection"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jim-maresh--member-of--oregon-winegrowers-association",
+    "source": "jim-maresh",
+    "target": "oregon-winegrowers-association",
+    "type": "member_of",
+    "role": "early member",
+    "sources": [
+      {
+        "title": "Oregon Wine Board Collection: historical note (Linfield University Archives)",
+        "url": "https://linfield-atom.libraryhost.com/index.php/oregon-wine-board-collection"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-ponzi--member-of--oregon-wine-board",
+    "source": "dick-ponzi",
+    "target": "oregon-wine-board",
+    "type": "member_of",
+    "role": "founding director of the Oregon Wine Advisory Board",
+    "startYear": 1987,
+    "note": "Wikipedia gives 1987, which is later than the 1983 or 1984 founding dates given elsewhere for the advisory board.",
+    "sources": [
+      {
+        "title": "Dick Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Dick_Ponzi"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-adelsheim--member-of--oregon-wine-board",
+    "source": "david-adelsheim",
+    "target": "oregon-wine-board",
+    "type": "member_of",
+    "role": "director",
+    "startYear": 2003,
+    "endYear": 2011,
+    "sources": [
+      {
+        "title": "Past Oregon Wine Board Directors (Oregon Wine Board)",
+        "url": "https://industry.oregonwine.org/past-oregon-wine-board-directors/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ted-casteel--member-of--oregon-wine-board",
+    "source": "ted-casteel",
+    "target": "oregon-wine-board",
+    "type": "member_of",
+    "role": "director",
+    "startYear": 2003,
+    "endYear": 2004,
+    "sources": [
+      {
+        "title": "Past Oregon Wine Board Directors (Oregon Wine Board)",
+        "url": "https://industry.oregonwine.org/past-oregon-wine-board-directors/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "harry-peterson-nedry--member-of--oregon-wine-board",
+    "source": "harry-peterson-nedry",
+    "target": "oregon-wine-board",
+    "type": "member_of",
+    "role": "director",
+    "startYear": 2003,
+    "endYear": 2010,
+    "sources": [
+      {
+        "title": "Past Oregon Wine Board Directors (Oregon Wine Board)",
+        "url": "https://industry.oregonwine.org/past-oregon-wine-board-directors/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "adelsheim-vineyard--member-of--willamette-valley-wineries-association",
+    "source": "adelsheim-vineyard",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "founding member of the Yamhill County Winegrowers Association",
+    "startYear": 1983,
+    "sources": [
+      {
+        "title": "About Us (Willamette Valley Wineries Association)",
+        "url": "https://www.willamettewines.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "amity-vineyards--member-of--willamette-valley-wineries-association",
+    "source": "amity-vineyards",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "founding member of the Yamhill County Winegrowers Association",
+    "startYear": 1983,
+    "sources": [
+      {
+        "title": "About Us (Willamette Valley Wineries Association)",
+        "url": "https://www.willamettewines.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "elk-cove-vineyards--member-of--willamette-valley-wineries-association",
+    "source": "elk-cove-vineyards",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "founding member of the Yamhill County Winegrowers Association",
+    "startYear": 1983,
+    "sources": [
+      {
+        "title": "About Us (Willamette Valley Wineries Association)",
+        "url": "https://www.willamettewines.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "the-eyrie-vineyards--member-of--willamette-valley-wineries-association",
+    "source": "the-eyrie-vineyards",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "founding member of the Yamhill County Winegrowers Association",
+    "startYear": 1983,
+    "sources": [
+      {
+        "title": "About Us (Willamette Valley Wineries Association)",
+        "url": "https://www.willamettewines.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sokol-blosser-winery--member-of--willamette-valley-wineries-association",
+    "source": "sokol-blosser-winery",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "founding member of the Yamhill County Winegrowers Association",
+    "startYear": 1983,
+    "sources": [
+      {
+        "title": "About Us (Willamette Valley Wineries Association)",
+        "url": "https://www.willamettewines.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rex-hill--member-of--willamette-valley-wineries-association",
+    "source": "rex-hill",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "founding member of the Yamhill County Winegrowers Association",
+    "startYear": 1983,
+    "sources": [
+      {
+        "title": "About Us (Willamette Valley Wineries Association)",
+        "url": "https://www.willamettewines.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "knudsen-erath-winery--member-of--willamette-valley-wineries-association",
+    "source": "knudsen-erath-winery",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "founding member of the Yamhill County Winegrowers Association",
+    "startYear": 1983,
+    "note": "Listed as Knudsen Erath Winery.",
+    "sources": [
+      {
+        "title": "About Us (Willamette Valley Wineries Association)",
+        "url": "https://www.willamettewines.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "barney-watson--worked-at--oregon-state-university",
+    "source": "barney-watson",
+    "target": "oregon-state-university",
+    "type": "worked_at",
+    "role": "instructor and Enology Extension Specialist",
+    "sources": [
+      {
+        "title": "Barney Watson interview (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/barney-watson/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "robert-drouhin--founded--domaine-drouhin-oregon",
+    "source": "robert-drouhin",
+    "target": "domaine-drouhin-oregon",
+    "type": "founded",
+    "startYear": 1987,
+    "sources": [
+      {
+        "title": "Profiles in Pinot Noir: Domaine Drouhin (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/profiles-in-pinot-noir-domaine-drouhin-1804"
+      },
+      {
+        "title": "Pioneers in Oregon (Maison Joseph Drouhin)",
+        "url": "https://drouhin.com/en_US/presentation/pioneers-in-oregon"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "robert-drouhin--worked-at--maison-joseph-drouhin",
+    "source": "robert-drouhin",
+    "target": "maison-joseph-drouhin",
+    "type": "worked_at",
+    "role": "family proprietor",
+    "sources": [
+      {
+        "title": "Profiles in Pinot Noir: Domaine Drouhin (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/profiles-in-pinot-noir-domaine-drouhin-1804"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "maison-joseph-drouhin--owns--domaine-drouhin-oregon",
+    "source": "maison-joseph-drouhin",
+    "target": "domaine-drouhin-oregon",
+    "type": "owns",
+    "note": "Wikipedia says Maison Joseph Drouhin built the Oregon winery in 1988; the family dates the estate to the 1987 land purchase.",
+    "sources": [
+      {
+        "title": "Maison Joseph Drouhin (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Maison_Joseph_Drouhin"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "veronique-drouhin--winemaker--domaine-drouhin-oregon",
+    "source": "veronique-drouhin",
+    "target": "domaine-drouhin-oregon",
+    "type": "winemaker",
+    "startYear": 1988,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "The French woman of Oregon, Véronique Drouhin-Boss (BKWine Magazine)",
+        "url": "https://www.bkwine.com/features/wine-producer-profiles/french-woman-oregon-veronique-drouhin-boss-roserock-drouhin-oregon/"
+      },
+      {
+        "title": "Maison Joseph Drouhin (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Maison_Joseph_Drouhin"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "robert-drouhin--family--veronique-drouhin",
+    "source": "robert-drouhin",
+    "target": "veronique-drouhin",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "Pioneers in Oregon (Maison Joseph Drouhin)",
+        "url": "https://drouhin.com/en_US/presentation/pioneers-in-oregon"
+      },
+      {
+        "title": "The French woman of Oregon, Véronique Drouhin-Boss (BKWine Magazine)",
+        "url": "https://www.bkwine.com/features/wine-producer-profiles/french-woman-oregon-veronique-drouhin-boss-roserock-drouhin-oregon/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "veronique-drouhin--worked-at--the-eyrie-vineyards",
+    "source": "veronique-drouhin",
+    "target": "the-eyrie-vineyards",
+    "type": "worked_at",
+    "role": "intern",
+    "startYear": 1986,
+    "endYear": 1986,
+    "sources": [
+      {
+        "title": "The French woman of Oregon, Véronique Drouhin-Boss (BKWine Magazine)",
+        "url": "https://www.bkwine.com/features/wine-producer-profiles/french-woman-oregon-veronique-drouhin-boss-roserock-drouhin-oregon/"
+      },
+      {
+        "title": "Profiles in Pinot Noir: Domaine Drouhin (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/profiles-in-pinot-noir-domaine-drouhin-1804"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "veronique-drouhin--worked-at--adelsheim-vineyard",
+    "source": "veronique-drouhin",
+    "target": "adelsheim-vineyard",
+    "type": "worked_at",
+    "role": "intern",
+    "startYear": 1986,
+    "endYear": 1986,
+    "sources": [
+      {
+        "title": "The French woman of Oregon, Véronique Drouhin-Boss (BKWine Magazine)",
+        "url": "https://www.bkwine.com/features/wine-producer-profiles/french-woman-oregon-veronique-drouhin-boss-roserock-drouhin-oregon/"
+      },
+      {
+        "title": "Profiles in Pinot Noir: Domaine Drouhin (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/profiles-in-pinot-noir-domaine-drouhin-1804"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "veronique-drouhin--worked-at--bethel-heights-vineyard",
+    "source": "veronique-drouhin",
+    "target": "bethel-heights-vineyard",
+    "type": "worked_at",
+    "role": "intern",
+    "startYear": 1986,
+    "endYear": 1986,
+    "sources": [
+      {
+        "title": "The French woman of Oregon, Véronique Drouhin-Boss (BKWine Magazine)",
+        "url": "https://www.bkwine.com/features/wine-producer-profiles/french-woman-oregon-veronique-drouhin-boss-roserock-drouhin-oregon/"
+      },
+      {
+        "title": "Profiles in Pinot Noir: Domaine Drouhin (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/profiles-in-pinot-noir-domaine-drouhin-1804"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "domaine-drouhin-oregon--located-in--dundee-hills",
+    "source": "domaine-drouhin-oregon",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Maison Joseph Drouhin (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Maison_Joseph_Drouhin"
+      },
+      {
+        "title": "Pioneers in Oregon (Maison Joseph Drouhin)",
+        "url": "https://drouhin.com/en_US/presentation/pioneers-in-oregon"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "domaine-drouhin-oregon--owns--roserock-vineyard",
+    "source": "domaine-drouhin-oregon",
+    "target": "roserock-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "startYear": 2013,
+    "sources": [
+      {
+        "title": "The French woman of Oregon, Véronique Drouhin-Boss (BKWine Magazine)",
+        "url": "https://www.bkwine.com/features/wine-producer-profiles/french-woman-oregon-veronique-drouhin-boss-roserock-drouhin-oregon/"
+      },
+      {
+        "title": "Pioneers in Oregon (Maison Joseph Drouhin)",
+        "url": "https://drouhin.com/en_US/presentation/pioneers-in-oregon"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "roserock-vineyard--located-in--eola-amity-hills",
+    "source": "roserock-vineyard",
+    "target": "eola-amity-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "The French woman of Oregon, Véronique Drouhin-Boss (BKWine Magazine)",
+        "url": "https://www.bkwine.com/features/wine-producer-profiles/french-woman-oregon-veronique-drouhin-boss-roserock-drouhin-oregon/"
+      },
+      {
+        "title": "Pioneers in Oregon (Maison Joseph Drouhin)",
+        "url": "https://drouhin.com/en_US/presentation/pioneers-in-oregon"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-wright--founded--panther-creek-cellars",
+    "source": "ken-wright",
+    "target": "panther-creek-cellars",
+    "type": "founded",
+    "startYear": 1986,
+    "sources": [
+      {
+        "title": "Ken Wright lecture announcement (Linfield University news)",
+        "url": "https://news.linfield.edu/?p=6186"
+      },
+      {
+        "title": "Ken Wright and Panther Creek Cellars (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=35178"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-wright--winemaker--panther-creek-cellars",
+    "source": "ken-wright",
+    "target": "panther-creek-cellars",
+    "type": "winemaker",
+    "startYear": 1986,
+    "endYear": 1994,
+    "note": "Wright and partner Steve Lind sold Panther Creek in 1994.",
+    "sources": [
+      {
+        "title": "Ken Wright and Panther Creek Cellars (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=35178"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-wright--founded--ken-wright-cellars",
+    "source": "ken-wright",
+    "target": "ken-wright-cellars",
+    "type": "founded",
+    "startYear": 1994,
+    "sources": [
+      {
+        "title": "Ken Wright lecture announcement (Linfield University news)",
+        "url": "https://news.linfield.edu/?p=6186"
+      },
+      {
+        "title": "Ken Wright Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/125/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-wright--winemaker--ken-wright-cellars",
+    "source": "ken-wright",
+    "target": "ken-wright-cellars",
+    "type": "winemaker",
+    "startYear": 1994,
+    "sources": [
+      {
+        "title": "Ken Wright Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/125/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-wright--winemaker--domaine-serene",
+    "source": "ken-wright",
+    "target": "domaine-serene",
+    "type": "winemaker",
+    "role": "first winemaker",
+    "note": "Years not stated; a 1993 Carter Vineyard Pinot noir was made for Domaine Serene.",
+    "sources": [
+      {
+        "title": "Ken Evenstad, Co-Founder of Oregon's Domaine Serene Winery, Dies at 77 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/ken-evenstad-cofounder-of-oregons-domaine-serene-winery-dies"
+      },
+      {
+        "title": "Ken Wright and Panther Creek Cellars (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=35178"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-wright--studied-at--uc-davis-viticulture-enology",
+    "source": "ken-wright",
+    "target": "uc-davis-viticulture-enology",
+    "type": "studied_at",
+    "sources": [
+      {
+        "title": "Ken Wright Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/125/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-wright-cellars--located-in--yamhill-carlton",
+    "source": "ken-wright-cellars",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Ken Wright Cellars (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/ken-wright-cellars/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-wright-cellars--sources-from--shea-vineyard",
+    "source": "ken-wright-cellars",
+    "target": "shea-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Shea Vineyard and Shea Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/170/index.html"
+      },
+      {
+        "title": "Ken Wright Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/125/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "panther-creek-cellars--sources-from--shea-vineyard",
+    "source": "panther-creek-cellars",
+    "target": "shea-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Shea Vineyard and Shea Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/170/index.html"
+      },
+      {
+        "title": "Panther Creek Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/987/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tony-rynders--winemaker--panther-creek-cellars",
+    "source": "tony-rynders",
+    "target": "panther-creek-cellars",
+    "type": "winemaker",
+    "startYear": 2013,
+    "sources": [
+      {
+        "title": "Ken Wright and Panther Creek Cellars (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=35178"
+      },
+      {
+        "title": "Panther Creek Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/987/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tony-rynders--winemaker--domaine-serene",
+    "source": "tony-rynders",
+    "target": "domaine-serene",
+    "type": "winemaker",
+    "startYear": 1998,
+    "note": "Led winemaking for about a decade.",
+    "sources": [
+      {
+        "title": "Ken Wright and Panther Creek Cellars (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=35178"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tony-rynders--worked-at--argyle-winery",
+    "source": "tony-rynders",
+    "target": "argyle-winery",
+    "type": "worked_at",
+    "role": "assistant winemaker",
+    "startYear": 1994,
+    "sources": [
+      {
+        "title": "Ken Wright and Panther Creek Cellars (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=35178"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mike-etzel--founded--beaux-freres",
+    "source": "mike-etzel",
+    "target": "beaux-freres",
+    "type": "founded",
+    "startYear": 1987,
+    "note": "Wine Spectator says Etzel found the farm on a 1987 visit; other sources date the purchase to 1986.",
+    "sources": [
+      {
+        "title": "The Birth and Building of Beaux Frères (Wine Spectator)",
+        "url": "https://top100.winespectator.com/2020/article/the-birth-and-building-of-beaux-freres/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "robert-parker--founded--beaux-freres",
+    "source": "robert-parker",
+    "target": "beaux-freres",
+    "type": "founded",
+    "role": "co-founder and investor",
+    "startYear": 1987,
+    "sources": [
+      {
+        "title": "The Birth and Building of Beaux Frères (Wine Spectator)",
+        "url": "https://top100.winespectator.com/2020/article/the-birth-and-building-of-beaux-freres/"
+      },
+      {
+        "title": "Robert M. Parker Jr. (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Robert_M._Parker_Jr."
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "robert-parker--owns--beaux-freres",
+    "source": "robert-parker",
+    "target": "beaux-freres",
+    "type": "owns",
+    "role": "partner",
+    "endYear": 2017,
+    "note": "Henriot bought out Etzel's original partners in 2017.",
+    "sources": [
+      {
+        "title": "The Birth and Building of Beaux Frères (Wine Spectator)",
+        "url": "https://top100.winespectator.com/2020/article/the-birth-and-building-of-beaux-freres/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mike-etzel--owns--beaux-freres",
+    "source": "mike-etzel",
+    "target": "beaux-freres",
+    "type": "owns",
+    "role": "partner",
+    "note": "Kept roughly one-third of the company after the 2017 Henriot deal.",
+    "sources": [
+      {
+        "title": "The Birth and Building of Beaux Frères (Wine Spectator)",
+        "url": "https://top100.winespectator.com/2020/article/the-birth-and-building-of-beaux-freres/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mike-etzel--family--robert-parker",
+    "source": "mike-etzel",
+    "target": "robert-parker",
+    "type": "family",
+    "role": "brother-in-law",
+    "note": "Parker married Etzel's older sister, Patricia.",
+    "sources": [
+      {
+        "title": "The Birth and Building of Beaux Frères (Wine Spectator)",
+        "url": "https://top100.winespectator.com/2020/article/the-birth-and-building-of-beaux-freres/"
+      },
+      {
+        "title": "Robert M. Parker Jr. (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Robert_M._Parker_Jr."
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mike-etzel--worked-at--ponzi-vineyards",
+    "source": "mike-etzel",
+    "target": "ponzi-vineyards",
+    "type": "worked_at",
+    "role": "harvest worker",
+    "note": "Ponzi made and released the 1991 and 1992 Beaux Frères wines under its license.",
+    "sources": [
+      {
+        "title": "The Birth and Building of Beaux Frères (Wine Spectator)",
+        "url": "https://top100.winespectator.com/2020/article/the-birth-and-building-of-beaux-freres/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mike-etzel--consulted--cristom-vineyards",
+    "source": "mike-etzel",
+    "target": "cristom-vineyards",
+    "type": "consulted",
+    "role": "site search",
+    "startYear": 1991,
+    "sources": [
+      {
+        "title": "Cristom Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Cristom_Vineyards"
+      },
+      {
+        "title": "Our People (Cristom Vineyards)",
+        "url": "https://cristomvineyards.com/our-people"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "maisons-domaines-henriot--acquired--beaux-freres",
+    "source": "maisons-domaines-henriot",
+    "target": "beaux-freres",
+    "type": "acquired",
+    "role": "controlling interest",
+    "startYear": 2017,
+    "sources": [
+      {
+        "title": "The Birth and Building of Beaux Frères (Wine Spectator)",
+        "url": "https://top100.winespectator.com/2020/article/the-birth-and-building-of-beaux-freres/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "beaux-freres--located-in--ribbon-ridge",
+    "source": "beaux-freres",
+    "target": "ribbon-ridge",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "The Birth and Building of Beaux Frères (Wine Spectator)",
+        "url": "https://top100.winespectator.com/2020/article/the-birth-and-building-of-beaux-freres/"
+      },
+      {
+        "title": "Beaux Frères (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/beaux-freres/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "beaux-freres--sources-from--shea-vineyard",
+    "source": "beaux-freres",
+    "target": "shea-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Shea Vineyard and Shea Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/170/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-shea--founded--shea-vineyard",
+    "source": "dick-shea",
+    "target": "shea-vineyard",
+    "type": "founded",
+    "role": "planted",
+    "startYear": 1989,
+    "sources": [
+      {
+        "title": "Shea Vineyard and Shea Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/170/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-shea--owns--shea-vineyard",
+    "source": "dick-shea",
+    "target": "shea-vineyard",
+    "type": "owns",
+    "note": "Sole owner since buying out his partners in the early 1990s.",
+    "sources": [
+      {
+        "title": "Shea Vineyard and Shea Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/170/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "shea-vineyard--located-in--yamhill-carlton",
+    "source": "shea-vineyard",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Shea Vineyard and Shea Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/170/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "elk-cove-vineyards--sources-from--shea-vineyard",
+    "source": "elk-cove-vineyards",
+    "target": "shea-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Shea Vineyard and Shea Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/170/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ted-casteel--founded--bethel-heights-vineyard",
+    "source": "ted-casteel",
+    "target": "bethel-heights-vineyard",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1977,
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      },
+      {
+        "title": "Bethel Heights Vineyard (Eola-Amity Hills Winegrowers)",
+        "url": "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "terry-casteel--founded--bethel-heights-vineyard",
+    "source": "terry-casteel",
+    "target": "bethel-heights-vineyard",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1977,
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      },
+      {
+        "title": "Bethel Heights Vineyard (Eola-Amity Hills Winegrowers)",
+        "url": "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "pat-dudley--founded--bethel-heights-vineyard",
+    "source": "pat-dudley",
+    "target": "bethel-heights-vineyard",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1977,
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      },
+      {
+        "title": "Bethel Heights Vineyard (Eola-Amity Hills Winegrowers)",
+        "url": "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ted-casteel--family--terry-casteel",
+    "source": "ted-casteel",
+    "target": "terry-casteel",
+    "type": "family",
+    "role": "twin brother",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      },
+      {
+        "title": "Bethel Heights Vineyard (Eola-Amity Hills Winegrowers)",
+        "url": "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ted-casteel--family--pat-dudley",
+    "source": "ted-casteel",
+    "target": "pat-dudley",
+    "type": "family",
+    "role": "spouse",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "terry-casteel--family--ben-casteel",
+    "source": "terry-casteel",
+    "target": "ben-casteel",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      },
+      {
+        "title": "Bethel Heights Vineyard (Eola-Amity Hills Winegrowers)",
+        "url": "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "terry-casteel--winemaker--bethel-heights-vineyard",
+    "source": "terry-casteel",
+    "target": "bethel-heights-vineyard",
+    "type": "winemaker",
+    "startYear": 1984,
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ben-casteel--winemaker--bethel-heights-vineyard",
+    "source": "ben-casteel",
+    "target": "bethel-heights-vineyard",
+    "type": "winemaker",
+    "startYear": 2005,
+    "note": "Sources give 2005, 2006 or 2007 for the handover from Terry Casteel.",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Eola-Amity Hills Winegrowers)",
+        "url": "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
+      },
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ben-casteel--worked-at--rex-hill",
+    "source": "ben-casteel",
+    "target": "rex-hill",
+    "type": "worked_at",
+    "role": "assistant winemaker",
+    "note": "Five years at Rex Hill before returning to Bethel Heights.",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Eola-Amity Hills Winegrowers)",
+        "url": "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ted-casteel--worked-at--bethel-heights-vineyard",
+    "source": "ted-casteel",
+    "target": "bethel-heights-vineyard",
+    "type": "worked_at",
+    "role": "vineyard manager",
+    "startYear": 1977,
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      },
+      {
+        "title": "Bethel Heights Vineyard (Eola-Amity Hills Winegrowers)",
+        "url": "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ted-casteel--studied-at--uc-davis-viticulture-enology",
+    "source": "ted-casteel",
+    "target": "uc-davis-viticulture-enology",
+    "type": "studied_at",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "pat-dudley--founded--oregon-pinot-camp",
+    "source": "pat-dudley",
+    "target": "oregon-pinot-camp",
+    "type": "founded",
+    "role": "co-founder",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bethel-heights-vineyard--located-in--eola-amity-hills",
+    "source": "bethel-heights-vineyard",
+    "target": "eola-amity-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      },
+      {
+        "title": "Eola-Amity Hills AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Eola-Amity_Hills_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "paul-gerrie--founded--cristom-vineyards",
+    "source": "paul-gerrie",
+    "target": "cristom-vineyards",
+    "type": "founded",
+    "startYear": 1992,
+    "sources": [
+      {
+        "title": "Cristom Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Cristom_Vineyards"
+      },
+      {
+        "title": "Our People (Cristom Vineyards)",
+        "url": "https://cristomvineyards.com/our-people"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "paul-gerrie--owns--cristom-vineyards",
+    "source": "paul-gerrie",
+    "target": "cristom-vineyards",
+    "type": "owns",
+    "startYear": 1992,
+    "endYear": 2012,
+    "sources": [
+      {
+        "title": "Our People (Cristom Vineyards)",
+        "url": "https://cristomvineyards.com/our-people"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tom-gerrie--owns--cristom-vineyards",
+    "source": "tom-gerrie",
+    "target": "cristom-vineyards",
+    "type": "owns",
+    "role": "majority owner",
+    "startYear": 2012,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Our People (Cristom Vineyards)",
+        "url": "https://cristomvineyards.com/our-people"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "paul-gerrie--family--tom-gerrie",
+    "source": "paul-gerrie",
+    "target": "tom-gerrie",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "Cristom Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Cristom_Vineyards"
+      },
+      {
+        "title": "Our People (Cristom Vineyards)",
+        "url": "https://cristomvineyards.com/our-people"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "steve-doerner--winemaker--cristom-vineyards",
+    "source": "steve-doerner",
+    "target": "cristom-vineyards",
+    "type": "winemaker",
+    "startYear": 1992,
+    "sources": [
+      {
+        "title": "Cristom Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Cristom_Vineyards"
+      },
+      {
+        "title": "Our People (Cristom Vineyards)",
+        "url": "https://cristomvineyards.com/our-people"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "steve-doerner--studied-at--uc-davis-viticulture-enology",
+    "source": "steve-doerner",
+    "target": "uc-davis-viticulture-enology",
+    "type": "studied_at",
+    "endYear": 1978,
+    "note": "Biochemistry degree from UC Davis.",
+    "sources": [
+      {
+        "title": "Cristom Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Cristom_Vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "paul-gerrie--participated-in--ipnc",
+    "source": "paul-gerrie",
+    "target": "ipnc",
+    "type": "participated_in",
+    "startYear": 1991,
+    "note": "His 1991 visit to the International Pinot Noir Celebration led him to choose Oregon for his winery.",
+    "sources": [
+      {
+        "title": "Cristom Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Cristom_Vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cristom-vineyards--located-in--eola-amity-hills",
+    "source": "cristom-vineyards",
+    "target": "eola-amity-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Cristom Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Cristom_Vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rollin-soles--founded--argyle-winery",
+    "source": "rollin-soles",
+    "target": "argyle-winery",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1987,
+    "sources": [
+      {
+        "title": "Rollin Soles Relinquishes Winemaker Title at Argyle (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48015"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "brian-croser--founded--argyle-winery",
+    "source": "brian-croser",
+    "target": "argyle-winery",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1987,
+    "note": "Wikipedia dates Croser's Dundee Wine Company to 1986.",
+    "sources": [
+      {
+        "title": "Rollin Soles Relinquishes Winemaker Title at Argyle (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48015"
+      },
+      {
+        "title": "Brian Croser (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Brian_Croser"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rollin-soles--winemaker--argyle-winery",
+    "source": "rollin-soles",
+    "target": "argyle-winery",
+    "type": "winemaker",
+    "role": "winemaker and general manager",
+    "startYear": 1987,
+    "endYear": 2013,
+    "sources": [
+      {
+        "title": "Rollin Soles Relinquishes Winemaker Title at Argyle (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48015"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rollin-soles--consulted--argyle-winery",
+    "source": "rollin-soles",
+    "target": "argyle-winery",
+    "type": "consulted",
+    "startYear": 2013,
+    "sources": [
+      {
+        "title": "Rollin Soles Relinquishes Winemaker Title at Argyle (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48015"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "brian-croser--mentored--rollin-soles",
+    "source": "brian-croser",
+    "target": "rollin-soles",
+    "type": "mentored",
+    "note": "The two worked together at Croser's Petaluma in Australia before Argyle.",
+    "sources": [
+      {
+        "title": "Oregon Wine Pioneer Cal Knudsen Dies (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/oregon-wine-pioneer-cal-knudsen-dies-4788"
+      },
+      {
+        "title": "Rollin Soles Relinquishes Winemaker Title at Argyle (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48015"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rollin-soles--studied-at--uc-davis-viticulture-enology",
+    "source": "rollin-soles",
+    "target": "uc-davis-viticulture-enology",
+    "type": "studied_at",
+    "role": "master's in enology",
+    "endYear": 1978,
+    "sources": [
+      {
+        "title": "Argyle Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/130/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nate-klostermann--winemaker--argyle-winery",
+    "source": "nate-klostermann",
+    "target": "argyle-winery",
+    "type": "winemaker",
+    "startYear": 2013,
+    "sources": [
+      {
+        "title": "Rollin Soles Relinquishes Winemaker Title at Argyle (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48015"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nate-klostermann--worked-at--argyle-winery",
+    "source": "nate-klostermann",
+    "target": "argyle-winery",
+    "type": "worked_at",
+    "role": "assistant winemaker",
+    "endYear": 2013,
+    "note": "Soles' assistant for seven years before taking over.",
+    "sources": [
+      {
+        "title": "Rollin Soles Relinquishes Winemaker Title at Argyle (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48015"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cal-knudsen--worked-at--argyle-winery",
+    "source": "cal-knudsen",
+    "target": "argyle-winery",
+    "type": "worked_at",
+    "role": "chairman",
+    "startYear": 1990,
+    "endYear": 2007,
+    "note": "Led a group of investors that bought into Argyle after his partnership with Dick Erath ended in 1987.",
+    "sources": [
+      {
+        "title": "Oregon Wine Pioneer Cal Knudsen Dies (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/oregon-wine-pioneer-cal-knudsen-dies-4788"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "argyle-winery--sources-from--knudsen-vineyards",
+    "source": "argyle-winery",
+    "target": "knudsen-vineyards",
+    "type": "sources_from",
+    "note": "About 40 percent of Argyle's production came from Knudsen's vineyard, according to Rollin Soles.",
+    "sources": [
+      {
+        "title": "Oregon Wine Pioneer Cal Knudsen Dies (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/oregon-wine-pioneer-cal-knudsen-dies-4788"
+      },
+      {
+        "title": "Argyle Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/130/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rollin-soles--founded--roco-winery",
+    "source": "rollin-soles",
+    "target": "roco-winery",
+    "type": "founded",
+    "startYear": 2003,
+    "note": "Founded with his wife Corby Stonebraker-Soles; Wits' End Vineyard was planted in 2001 and the first vintage was 2003.",
+    "sources": [
+      {
+        "title": "Rollin Soles Relinquishes Winemaker Title at Argyle (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48015"
+      },
+      {
+        "title": "ROCO (M. Touton Selection)",
+        "url": "https://www.mtouton.com/producers/roco"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rollin-soles--winemaker--roco-winery",
+    "source": "rollin-soles",
+    "target": "roco-winery",
+    "type": "winemaker",
+    "startYear": 2003,
+    "sources": [
+      {
+        "title": "Rollin Soles Relinquishes Winemaker Title at Argyle (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48015"
+      },
+      {
+        "title": "ROCO (M. Touton Selection)",
+        "url": "https://www.mtouton.com/producers/roco"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "harry-peterson-nedry--founded--chehalem-winery",
+    "source": "harry-peterson-nedry",
+    "target": "chehalem-winery",
+    "type": "founded",
+    "startYear": 1990,
+    "sources": [
+      {
+        "title": "Bill Stoller, Oregon Vintner and Philanthropist, Dies at Age 74 (Wine Spectator)",
+        "url": "https://winespectator.com/articles/bill-stoller-oregon-vintner-and-philanthropist-dies-at-age-74"
+      },
+      {
+        "title": "Chehalem Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/261/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "harry-peterson-nedry--founded--ridgecrest-vineyards",
+    "source": "harry-peterson-nedry",
+    "target": "ridgecrest-vineyards",
+    "type": "founded",
+    "role": "planted",
+    "startYear": 1980,
+    "sources": [
+      {
+        "title": "Chehalem Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/261/index.html"
+      },
+      {
+        "title": "Ribbon Ridge AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Ribbon_Ridge_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "harry-peterson-nedry--owns--ridgecrest-vineyards",
+    "source": "harry-peterson-nedry",
+    "target": "ridgecrest-vineyards",
+    "type": "owns",
+    "sources": [
+      {
+        "title": "Chehalem Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/261/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "harry-peterson-nedry--owns--chehalem-winery",
+    "source": "harry-peterson-nedry",
+    "target": "chehalem-winery",
+    "type": "owns",
+    "startYear": 1990,
+    "endYear": 2018,
+    "sources": [
+      {
+        "title": "Bill Stoller, Oregon Vintner and Philanthropist, Dies at Age 74 (Wine Spectator)",
+        "url": "https://winespectator.com/articles/bill-stoller-oregon-vintner-and-philanthropist-dies-at-age-74"
+      },
+      {
+        "title": "Chehalem Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/261/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "harry-peterson-nedry--winemaker--chehalem-winery",
+    "source": "harry-peterson-nedry",
+    "target": "chehalem-winery",
+    "type": "winemaker",
+    "startYear": 1990,
+    "note": "His daughter Wynne Peterson-Nedry became winemaker in 2012.",
+    "sources": [
+      {
+        "title": "Bill Stoller, Oregon Vintner and Philanthropist, Dies at Age 74 (Wine Spectator)",
+        "url": "https://winespectator.com/articles/bill-stoller-oregon-vintner-and-philanthropist-dies-at-age-74"
+      },
+      {
+        "title": "Chehalem Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/261/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-stoller--owns--chehalem-winery",
+    "source": "bill-stoller",
+    "target": "chehalem-winery",
+    "type": "owns",
+    "startYear": 1993,
+    "note": "Co-owner by 1993 and sole owner from 2018.",
+    "sources": [
+      {
+        "title": "Bill Stoller, Oregon Vintner and Philanthropist, Dies at Age 74 (Wine Spectator)",
+        "url": "https://winespectator.com/articles/bill-stoller-oregon-vintner-and-philanthropist-dies-at-age-74"
+      },
+      {
+        "title": "Chehalem Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/261/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chehalem-winery--sources-from--ridgecrest-vineyards",
+    "source": "chehalem-winery",
+    "target": "ridgecrest-vineyards",
+    "type": "sources_from",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Chehalem Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/261/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ridgecrest-vineyards--located-in--ribbon-ridge",
+    "source": "ridgecrest-vineyards",
+    "target": "ribbon-ridge",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Chehalem Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/261/index.html"
+      },
+      {
+        "title": "Ribbon Ridge AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Ribbon_Ridge_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chehalem-winery--located-in--chehalem-mountains",
+    "source": "chehalem-winery",
+    "target": "chehalem-mountains",
+    "type": "located_in",
+    "note": "The winery is surrounded by its Corral Creek Vineyard in the Chehalem Mountains.",
+    "sources": [
+      {
+        "title": "Chehalem Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/261/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jim-bernau--founded--willamette-valley-vineyards",
+    "source": "jim-bernau",
+    "target": "willamette-valley-vineyards",
+    "type": "founded",
+    "startYear": 1983,
+    "sources": [
+      {
+        "title": "Willamette Valley Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Willamette_Valley_Vineyards"
+      },
+      {
+        "title": "The Jim Bernau story (Oregon State University College of Business)",
+        "url": "https://business.oregonstate.edu/blog/companies-recruiters/jim-bernau-story-leadership-wine-industry"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "willamette-valley-vineyards--acquired--tualatin-vineyards",
+    "source": "willamette-valley-vineyards",
+    "target": "tualatin-vineyards",
+    "type": "acquired",
+    "role": "merger",
+    "startYear": 1997,
+    "sources": [
+      {
+        "title": "Willamette Valley Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Willamette_Valley_Vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lynn-penner-ash--founded--penner-ash-wine-cellars",
+    "source": "lynn-penner-ash",
+    "target": "penner-ash-wine-cellars",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1998,
+    "sources": [
+      {
+        "title": "Lynn Penner-Ash (Wine Spectator)",
+        "url": "https://www.winespectator.com/pages/lynn-penner-ash"
+      },
+      {
+        "title": "Penner-Ash Winery Purchased By California's Jackson Family Wines (Willamette Week)",
+        "url": "http://www.wweek.com/bars/2016/04/18/penner-ash-winery-purchased-by-californias-jackson-family-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lynn-penner-ash--winemaker--penner-ash-wine-cellars",
+    "source": "lynn-penner-ash",
+    "target": "penner-ash-wine-cellars",
+    "type": "winemaker",
+    "startYear": 1998,
+    "sources": [
+      {
+        "title": "Lynn Penner-Ash (Wine Spectator)",
+        "url": "https://www.winespectator.com/pages/lynn-penner-ash"
+      },
+      {
+        "title": "Penner-Ash Winery Purchased By California's Jackson Family Wines (Willamette Week)",
+        "url": "http://www.wweek.com/bars/2016/04/18/penner-ash-winery-purchased-by-californias-jackson-family-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lynn-penner-ash--winemaker--rex-hill",
+    "source": "lynn-penner-ash",
+    "target": "rex-hill",
+    "type": "winemaker",
+    "role": "winemaker, later president",
+    "startYear": 1988,
+    "endYear": 2002,
+    "note": "Prince of Pinot says she worked at Rex Hill for 14 and a half years from 1988; other sources give 2001 as her last year.",
+    "sources": [
+      {
+        "title": "Lynn Penner-Ash (Wine Spectator)",
+        "url": "https://www.winespectator.com/pages/lynn-penner-ash"
+      },
+      {
+        "title": "Penner-Ash Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/463/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lynn-penner-ash--studied-at--uc-davis-viticulture-enology",
+    "source": "lynn-penner-ash",
+    "target": "uc-davis-viticulture-enology",
+    "type": "studied_at",
+    "sources": [
+      {
+        "title": "Penner-Ash Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/463/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jackson-family-wines--acquired--penner-ash-wine-cellars",
+    "source": "jackson-family-wines",
+    "target": "penner-ash-wine-cellars",
+    "type": "acquired",
+    "startYear": 2016,
+    "sources": [
+      {
+        "title": "Penner-Ash Winery Purchased By California's Jackson Family Wines (Willamette Week)",
+        "url": "http://www.wweek.com/bars/2016/04/18/penner-ash-winery-purchased-by-californias-jackson-family-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "penner-ash-wine-cellars--sources-from--shea-vineyard",
+    "source": "penner-ash-wine-cellars",
+    "target": "shea-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Shea Vineyard and Shea Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/170/index.html"
+      },
+      {
+        "title": "Penner-Ash Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/463/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "penner-ash-wine-cellars--located-in--yamhill-carlton",
+    "source": "penner-ash-wine-cellars",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "note": "The estate Dussin Vineyard is in the Yamhill-Carlton District; the winery has a Newberg address.",
+    "sources": [
+      {
+        "title": "Penner-Ash Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/463/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "a-to-z-wineworks--acquired--rex-hill",
+    "source": "a-to-z-wineworks",
+    "target": "rex-hill",
+    "type": "acquired",
+    "startYear": 2007,
+    "note": "Prince of Pinot dates the founders' retirement and handover to 2006.",
+    "sources": [
+      {
+        "title": "Rex Hill (Organic Wine Find)",
+        "url": "https://organicwinefind.com/organic-vineyards/rex-hill/"
+      },
+      {
+        "title": "Rex Hill (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/400/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rex-hill--located-in--chehalem-mountains",
+    "source": "rex-hill",
+    "target": "chehalem-mountains",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Rex Hill (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/rex-hill/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mark-tarlov--founded--evening-land-vineyards",
+    "source": "mark-tarlov",
+    "target": "evening-land-vineyards",
+    "type": "founded",
+    "startYear": 2005,
+    "sources": [
+      {
+        "title": "Evening Land Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/684/index.html"
+      },
+      {
+        "title": "Larry Stone Returns to Oregon with New Vineyard and Winery (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/51453"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "evening-land-vineyards--sources-from--seven-springs-vineyard",
+    "source": "evening-land-vineyards",
+    "target": "seven-springs-vineyard",
+    "type": "sources_from",
+    "role": "leased estate vineyard",
+    "startYear": 2007,
+    "sources": [
+      {
+        "title": "Evening Land Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/684/index.html"
+      },
+      {
+        "title": "Evening Land Vineyards (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/evening-land-vineyards/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "seven-springs-vineyard--located-in--eola-amity-hills",
+    "source": "seven-springs-vineyard",
+    "target": "eola-amity-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Evening Land Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/684/index.html"
+      },
+      {
+        "title": "Evening Land Vineyards (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/evening-land-vineyards/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dominique-lafon--consulted--evening-land-vineyards",
+    "source": "dominique-lafon",
+    "target": "evening-land-vineyards",
+    "type": "consulted",
+    "role": "consulting winemaker",
+    "startYear": 2007,
+    "note": "Wine Spectator says Lafon consulted for Evening Land from its start in 2005; the Oregon project began in 2007.",
+    "sources": [
+      {
+        "title": "Evening Land Vineyards (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/evening-land-vineyards/"
+      },
+      {
+        "title": "Larry Stone Returns to Oregon with New Vineyard and Winery (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/51453"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "larry-stone--worked-at--evening-land-vineyards",
+    "source": "larry-stone",
+    "target": "evening-land-vineyards",
+    "type": "worked_at",
+    "role": "general manager",
+    "endYear": 2012,
+    "sources": [
+      {
+        "title": "Larry Stone Returns to Oregon with New Vineyard and Winery (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/51453"
+      },
+      {
+        "title": "Evening Land Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/684/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "larry-stone--founded--lingua-franca",
+    "source": "larry-stone",
+    "target": "lingua-franca",
+    "type": "founded",
+    "sources": [
+      {
+        "title": "Exclusive: Constellation Buys Oregon's Lingua Franca (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/constellation-buys-oregon-s-lingua-franca"
+      },
+      {
+        "title": "Lingua Franca (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2579/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dominique-lafon--consulted--lingua-franca",
+    "source": "dominique-lafon",
+    "target": "lingua-franca",
+    "type": "consulted",
+    "sources": [
+      {
+        "title": "Exclusive: Constellation Buys Oregon's Lingua Franca (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/constellation-buys-oregon-s-lingua-franca"
+      },
+      {
+        "title": "Lingua Franca (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2579/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "constellation-brands--acquired--lingua-franca",
+    "source": "constellation-brands",
+    "target": "lingua-franca",
+    "type": "acquired",
+    "startYear": 2022,
+    "sources": [
+      {
+        "title": "Exclusive: Constellation Buys Oregon's Lingua Franca (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/constellation-buys-oregon-s-lingua-franca"
+      },
+      {
+        "title": "Lingua Franca (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2579/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lingua-franca--located-in--eola-amity-hills",
+    "source": "lingua-franca",
+    "target": "eola-amity-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Lingua Franca (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2579/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-evenstad--founded--domaine-serene",
+    "source": "ken-evenstad",
+    "target": "domaine-serene",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1989,
+    "sources": [
+      {
+        "title": "Domaine Serene (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/domaine-serene/"
+      },
+      {
+        "title": "Ken Evenstad, Co-Founder of Oregon's Domaine Serene Winery, Dies at 77 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/ken-evenstad-cofounder-of-oregons-domaine-serene-winery-dies"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "grace-evenstad--founded--domaine-serene",
+    "source": "grace-evenstad",
+    "target": "domaine-serene",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1989,
+    "sources": [
+      {
+        "title": "Domaine Serene (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/domaine-serene/"
+      },
+      {
+        "title": "Ken Evenstad, Co-Founder of Oregon's Domaine Serene Winery, Dies at 77 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/ken-evenstad-cofounder-of-oregons-domaine-serene-winery-dies"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "grace-evenstad--owns--domaine-serene",
+    "source": "grace-evenstad",
+    "target": "domaine-serene",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Domaine Serene (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/domaine-serene/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-evenstad--family--grace-evenstad",
+    "source": "ken-evenstad",
+    "target": "grace-evenstad",
+    "type": "family",
+    "role": "spouse",
+    "sources": [
+      {
+        "title": "Ken Evenstad, Co-Founder of Oregon's Domaine Serene Winery, Dies at 77 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/ken-evenstad-cofounder-of-oregons-domaine-serene-winery-dies"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "domaine-serene--located-in--dundee-hills",
+    "source": "domaine-serene",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Ken Evenstad, Co-Founder of Oregon's Domaine Serene Winery, Dies at 77 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/ken-evenstad-cofounder-of-oregons-domaine-serene-winery-dies"
+      },
+      {
+        "title": "Domaine Serene (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/domaine-serene/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "josh-bergstrom--founded--bergstrom-wines",
+    "source": "josh-bergstrom",
+    "target": "bergstrom-wines",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1999,
+    "note": "Founded with his parents, John and Karen Bergström.",
+    "sources": [
+      {
+        "title": "Bergström Wines (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/bergstrom-wines/"
+      },
+      {
+        "title": "Bergström Wines (Ribbon Ridge Winegrowers)",
+        "url": "https://ribbonridgeava.org/listings/bergstrom-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "josh-bergstrom--winemaker--bergstrom-wines",
+    "source": "josh-bergstrom",
+    "target": "bergstrom-wines",
+    "type": "winemaker",
+    "role": "general manager, winemaker and vineyard manager",
+    "sources": [
+      {
+        "title": "Bergström Wines (Ribbon Ridge Winegrowers)",
+        "url": "https://ribbonridgeava.org/listings/bergstrom-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bergstrom-wines--sources-from--shea-vineyard",
+    "source": "bergstrom-wines",
+    "target": "shea-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Shea Vineyard and Shea Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/170/index.html"
+      },
+      {
+        "title": "Bergström Wines (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/bergstrom-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bergstrom-wines--located-in--dundee-hills",
+    "source": "bergstrom-wines",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "note": "The home Bergström Vineyard and Winery Block are in the Dundee Hills; other estate sites are in Ribbon Ridge and the Chehalem Mountains.",
+    "sources": [
+      {
+        "title": "Bergström Wines (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/bergstrom-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "eola-amity-hills--within--willamette-valley",
+    "source": "eola-amity-hills",
+    "target": "willamette-valley",
+    "type": "within",
+    "sources": [
+      {
+        "title": "Eola-Amity Hills AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Eola-Amity_Hills_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "yamhill-carlton--within--willamette-valley",
+    "source": "yamhill-carlton",
+    "target": "willamette-valley",
+    "type": "within",
+    "sources": [
+      {
+        "title": "Yamhill-Carlton AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Yamhill-Carlton_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ribbon-ridge--within--chehalem-mountains",
+    "source": "ribbon-ridge",
+    "target": "chehalem-mountains",
+    "type": "within",
+    "sources": [
+      {
+        "title": "Ribbon Ridge AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Ribbon_Ridge_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "richard-sommer--founded--hillcrest-vineyard",
+    "source": "richard-sommer",
+    "target": "hillcrest-vineyard",
+    "type": "founded",
+    "startYear": 1961,
+    "sources": [
+      {
+        "title": "Richard Sommer (winemaker) (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Richard_Sommer_(winemaker)"
+      },
+      {
+        "title": "Umpqua Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "richard-sommer--owns--hillcrest-vineyard",
+    "source": "richard-sommer",
+    "target": "hillcrest-vineyard",
+    "type": "owns",
+    "startYear": 1961,
+    "endYear": 2003,
+    "note": "Sold HillCrest to Dyson and Susan DeMara in 2003.",
+    "sources": [
+      {
+        "title": "Richard Sommer (winemaker) (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Richard_Sommer_(winemaker)"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "richard-sommer--studied-at--uc-davis-viticulture-enology",
+    "source": "richard-sommer",
+    "target": "uc-davis-viticulture-enology",
+    "type": "studied_at",
+    "note": "Wikipedia's biography says he attended UC Davis in 1948; the History of Oregon wine article calls him a UC Davis graduate.",
+    "sources": [
+      {
+        "title": "Richard Sommer (winemaker) (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Richard_Sommer_(winemaker)"
+      },
+      {
+        "title": "History of Oregon wine (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/History_of_Oregon_wine"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "hillcrest-vineyard--located-in--umpqua-valley",
+    "source": "hillcrest-vineyard",
+    "target": "umpqua-valley",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Umpqua Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "richard-sommer--member-of--oregon-winegrowers-association",
+    "source": "richard-sommer",
+    "target": "oregon-winegrowers-association",
+    "type": "member_of",
+    "role": "vice president",
+    "startYear": 1969,
+    "note": "Officer of the Roseburg-based Oregon Wine Grower's Association formed in January 1969, a predecessor merged into the current OWA in 1981.",
+    "sources": [
+      {
+        "title": "Bjelland collection document: Oregon Wine Grower's Association (Linfield / Oregon Wine History Archive)",
+        "url": "https://digitalcommons.linfield.edu/owha_bjelland_docs/16"
+      },
+      {
+        "title": "Mission & History (Oregon Winegrowers Association)",
+        "url": "https://www.oregonwinegrowers.org/mission-history/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "charles-coury--founded--charles-coury-vineyards",
+    "source": "charles-coury",
+    "target": "charles-coury-vineyards",
+    "type": "founded",
+    "startYear": 1965,
+    "sources": [
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      },
+      {
+        "title": "Legacy (David Hill Vineyards & Winery)",
+        "url": "https://davidhillwinery.com/legacy.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "charles-coury--studied-at--uc-davis-viticulture-enology",
+    "source": "charles-coury",
+    "target": "uc-davis-viticulture-enology",
+    "type": "studied_at",
+    "sources": [
+      {
+        "title": "Legacy (David Hill Vineyards & Winery)",
+        "url": "https://davidhillwinery.com/legacy.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "charles-coury-vineyards--located-in--tualatin-hills",
+    "source": "charles-coury-vineyards",
+    "target": "tualatin-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      },
+      {
+        "title": "Legacy (David Hill Vineyards & Winery)",
+        "url": "https://davidhillwinery.com/legacy.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tualatin-hills--within--willamette-valley",
+    "source": "tualatin-hills",
+    "target": "willamette-valley",
+    "type": "within",
+    "sources": [
+      {
+        "title": "Tualatin Hills AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Tualatin_Hills_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-erath--founded--erath-winery",
+    "source": "dick-erath",
+    "target": "erath-winery",
+    "type": "founded",
+    "startYear": 1972,
+    "note": "Erath planted his first vines in 1969; the winery made its first commercial wine in 1972.",
+    "sources": [
+      {
+        "title": "Erath Winery Collection: historical note (Linfield / Oregon Wine History Archive)",
+        "url": "https://digitalcommons.linfield.edu/owha_erath"
+      },
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-erath--winemaker--erath-winery",
+    "source": "dick-erath",
+    "target": "erath-winery",
+    "type": "winemaker",
+    "endYear": 2003,
+    "note": "Gary Horner replaced Erath as principal winemaker in 2003.",
+    "sources": [
+      {
+        "title": "Erath Winery Collection: historical note (Linfield / Oregon Wine History Archive)",
+        "url": "https://digitalcommons.linfield.edu/owha_erath"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-erath--studied-at--uc-davis-viticulture-enology",
+    "source": "dick-erath",
+    "target": "uc-davis-viticulture-enology",
+    "type": "studied_at",
+    "role": "took classes",
+    "startYear": 1967,
+    "sources": [
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-erath--founded--chehalem-mountain-vineyard",
+    "source": "dick-erath",
+    "target": "chehalem-mountain-vineyard",
+    "type": "founded",
+    "role": "planted",
+    "startYear": 1969,
+    "sources": [
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      },
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      },
+      {
+        "title": "Erath Winery Collection: historical note (Linfield / Oregon Wine History Archive)",
+        "url": "https://digitalcommons.linfield.edu/owha_erath"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-erath--owns--chehalem-mountain-vineyard",
+    "source": "dick-erath",
+    "target": "chehalem-mountain-vineyard",
+    "type": "owns",
+    "endYear": 1986,
+    "sources": [
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chehalem-mountain-vineyard--located-in--chehalem-mountains",
+    "source": "chehalem-mountain-vineyard",
+    "target": "chehalem-mountains",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-erath--founded--prince-hill-vineyard",
+    "source": "dick-erath",
+    "target": "prince-hill-vineyard",
+    "type": "founded",
+    "role": "planted",
+    "startYear": 1983,
+    "sources": [
+      {
+        "title": "Erath Vineyards & Winery (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/638/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-erath--owns--prince-hill-vineyard",
+    "source": "dick-erath",
+    "target": "prince-hill-vineyard",
+    "type": "owns",
+    "endYear": 2017,
+    "sources": [
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "prince-hill-vineyard--located-in--dundee-hills",
+    "source": "prince-hill-vineyard",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "erath-winery--located-in--dundee-hills",
+    "source": "erath-winery",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Erath Vineyards & Winery (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/638/index.html"
+      },
+      {
+        "title": "Ste. Michelle buys Oregon winery (NBC News / AP)",
+        "url": "https://www.nbcnews.com/id/wbna13077461"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ste-michelle-wine-estates--acquired--erath-winery",
+    "source": "ste-michelle-wine-estates",
+    "target": "erath-winery",
+    "type": "acquired",
+    "startYear": 2006,
+    "sources": [
+      {
+        "title": "Ste. Michelle buys Oregon winery (NBC News / AP)",
+        "url": "https://www.nbcnews.com/id/wbna13077461"
+      },
+      {
+        "title": "Ste. Michelle buys Oregon's Erath Winery (The Spokesman-Review)",
+        "url": "https://spokesman.com/stories/2006/jun/01/ste-michelle-buys-oregons-erath-winery"
+      },
+      {
+        "title": "Erath Winery Collection: historical note (Linfield / Oregon Wine History Archive)",
+        "url": "https://digitalcommons.linfield.edu/owha_erath"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-erath--founded--knudsen-erath-winery",
+    "source": "dick-erath",
+    "target": "knudsen-erath-winery",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1975,
+    "note": "Wine Spectator dates the partnership to 1972; Knudsen Vineyards and Northwest Wine Report say 1975.",
+    "sources": [
+      {
+        "title": "Our Story (Knudsen Vineyards)",
+        "url": "https://www.knudsenvineyards.com/our-story"
+      },
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cal-knudsen--founded--knudsen-erath-winery",
+    "source": "cal-knudsen",
+    "target": "knudsen-erath-winery",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1975,
+    "sources": [
+      {
+        "title": "Our Story (Knudsen Vineyards)",
+        "url": "https://www.knudsenvineyards.com/our-story"
+      },
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-erath--winemaker--knudsen-erath-winery",
+    "source": "dick-erath",
+    "target": "knudsen-erath-winery",
+    "type": "winemaker",
+    "startYear": 1975,
+    "endYear": 1988,
+    "sources": [
+      {
+        "title": "Knudsen family and Knudsen Vineyards feature (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=4867"
+      },
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "erath-winery--successor-of--knudsen-erath-winery",
+    "source": "erath-winery",
+    "target": "knudsen-erath-winery",
+    "type": "successor_of",
+    "startYear": 1988,
+    "note": "Erath bought out Knudsen and continued under the Erath name; Wine Spectator and Great Northwest Wine date the split to 1987.",
+    "sources": [
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      },
+      {
+        "title": "Erath Vineyards & Winery (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/638/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "knudsen-erath-winery--sources-from--knudsen-vineyards",
+    "source": "knudsen-erath-winery",
+    "target": "knudsen-vineyards",
+    "type": "sources_from",
+    "note": "Knudsen grew the grapes and Erath made the wine.",
+    "sources": [
+      {
+        "title": "Knudsen family and Knudsen Vineyards feature (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=4867"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "knudsen-erath-winery--located-in--dundee-hills",
+    "source": "knudsen-erath-winery",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Our Story (Knudsen Vineyards)",
+        "url": "https://www.knudsenvineyards.com/our-story"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cal-knudsen--founded--knudsen-vineyards",
+    "source": "cal-knudsen",
+    "target": "knudsen-vineyards",
+    "type": "founded",
+    "startYear": 1971,
+    "note": "1971 is the year the land was bought; sources do not give a separate first-planting year.",
+    "sources": [
+      {
+        "title": "Our Story (Knudsen Vineyards)",
+        "url": "https://www.knudsenvineyards.com/our-story"
+      },
+      {
+        "title": "Oregon Wine Pioneer Cal Knudsen Dies (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/oregon-wine-pioneer-cal-knudsen-dies-4788"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "knudsen-vineyards--located-in--dundee-hills",
+    "source": "knudsen-vineyards",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Our Story (Knudsen Vineyards)",
+        "url": "https://www.knudsenvineyards.com/our-story"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-erath--worked-at--knudsen-vineyards",
+    "source": "dick-erath",
+    "target": "knudsen-vineyards",
+    "type": "worked_at",
+    "role": "helped establish the vineyard",
+    "startYear": 1971,
+    "sources": [
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jim-maresh--founded--maresh-vineyard",
+    "source": "jim-maresh",
+    "target": "maresh-vineyard",
+    "type": "founded",
+    "role": "planted",
+    "startYear": 1970,
+    "sources": [
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      },
+      {
+        "title": "Maresh family feature (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=29531"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "maresh-vineyard--located-in--dundee-hills",
+    "source": "maresh-vineyard",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-ponzi--founded--ponzi-vineyards",
+    "source": "dick-ponzi",
+    "target": "ponzi-vineyards",
+    "type": "founded",
+    "startYear": 1970,
+    "sources": [
+      {
+        "title": "Dick Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Dick_Ponzi"
+      },
+      {
+        "title": "Our Story (Ponzi Vineyards)",
+        "url": "https://www.ponzivineyards.com/our-story"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nancy-ponzi--founded--ponzi-vineyards",
+    "source": "nancy-ponzi",
+    "target": "ponzi-vineyards",
+    "type": "founded",
+    "startYear": 1970,
+    "sources": [
+      {
+        "title": "Nancy Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Nancy_Ponzi"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-ponzi--family--nancy-ponzi",
+    "source": "dick-ponzi",
+    "target": "nancy-ponzi",
+    "type": "family",
+    "role": "spouse",
+    "note": "Wikipedia gives the marriage year as 1961 on Dick Ponzi's page and 1962 on Nancy Ponzi's.",
+    "sources": [
+      {
+        "title": "Dick Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Dick_Ponzi"
+      },
+      {
+        "title": "Nancy Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Nancy_Ponzi"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-ponzi--family--luisa-ponzi",
+    "source": "dick-ponzi",
+    "target": "luisa-ponzi",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "Dick Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Dick_Ponzi"
+      },
+      {
+        "title": "Our Story (Ponzi Vineyards)",
+        "url": "https://www.ponzivineyards.com/our-story"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nancy-ponzi--family--luisa-ponzi",
+    "source": "nancy-ponzi",
+    "target": "luisa-ponzi",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "Nancy Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Nancy_Ponzi"
+      },
+      {
+        "title": "Our Story (Ponzi Vineyards)",
+        "url": "https://www.ponzivineyards.com/our-story"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-ponzi--winemaker--ponzi-vineyards",
+    "source": "dick-ponzi",
+    "target": "ponzi-vineyards",
+    "type": "winemaker",
+    "startYear": 1970,
+    "endYear": 1993,
+    "sources": [
+      {
+        "title": "Dick Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Dick_Ponzi"
+      },
+      {
+        "title": "Our Story (Ponzi Vineyards)",
+        "url": "https://www.ponzivineyards.com/our-story"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "luisa-ponzi--winemaker--ponzi-vineyards",
+    "source": "luisa-ponzi",
+    "target": "ponzi-vineyards",
+    "type": "winemaker",
+    "startYear": 1993,
+    "endYear": 2024,
+    "note": "Remained director of viticulture and winemaking after the 2021 sale; passed the role to Max Bruening in 2024.",
+    "sources": [
+      {
+        "title": "Our Story (Ponzi Vineyards)",
+        "url": "https://www.ponzivineyards.com/our-story"
+      },
+      {
+        "title": "Dick Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Dick_Ponzi"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ponzi-vineyards--located-in--laurelwood-district",
+    "source": "ponzi-vineyards",
+    "target": "laurelwood-district",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Laurelwood District AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Laurelwood_District_AVA"
+      },
+      {
+        "title": "Oregon wine (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Oregon_wine"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "laurelwood-district--within--chehalem-mountains",
+    "source": "laurelwood-district",
+    "target": "chehalem-mountains",
+    "type": "within",
+    "sources": [
+      {
+        "title": "Laurelwood District AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Laurelwood_District_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chehalem-mountains--within--willamette-valley",
+    "source": "chehalem-mountains",
+    "target": "willamette-valley",
+    "type": "within",
+    "sources": [
+      {
+        "title": "Chehalem Mountains AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Chehalem_Mountains_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "groupe-bollinger--acquired--ponzi-vineyards",
+    "source": "groupe-bollinger",
+    "target": "ponzi-vineyards",
+    "type": "acquired",
+    "startYear": 2021,
+    "note": "Bought the winery, hospitality facilities and about 35 acres; the Ponzi family kept about 100 acres of vineyard under a supply contract.",
+    "sources": [
+      {
+        "title": "La famille Bollinger acquiert Ponzi Vineyards (SJB / Groupe Bollinger press release, 7 April 2021)",
+        "url": "https://www.groupebollinger.fr/wp-content/uploads/2023/09/CP-Groupe-Bollinger-Acquisition-de-Ponzi-Vineyards-avril-21-3.pdf"
+      },
+      {
+        "title": "The Bollinger Family to Acquire Ponzi Vineyards (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2021/04/07/bollinger-family-acquire-ponzi-vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dick-ponzi--member-of--oregon-winegrowers-association",
+    "source": "dick-ponzi",
+    "target": "oregon-winegrowers-association",
+    "type": "member_of",
+    "role": "founding member and first president",
+    "sources": [
+      {
+        "title": "Dick Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Dick_Ponzi"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-adelsheim--founded--adelsheim-vineyard",
+    "source": "david-adelsheim",
+    "target": "adelsheim-vineyard",
+    "type": "founded",
+    "startYear": 1971,
+    "note": "Land bought 1971, vines planted 1972, first wines 1978; Wikipedia's infobox uses 1978 as the founding year.",
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Adelsheim_Vineyard"
+      },
+      {
+        "title": "David Adelsheim: A \"Latecomer\" Oregon Wine Pioneer (The PinotFile / Prince of Pinot)",
+        "url": "https://princeofpinot.com/article/1418"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ginny-adelsheim--founded--adelsheim-vineyard",
+    "source": "ginny-adelsheim",
+    "target": "adelsheim-vineyard",
+    "type": "founded",
+    "startYear": 1971,
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Adelsheim_Vineyard"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-adelsheim--family--ginny-adelsheim",
+    "source": "david-adelsheim",
+    "target": "ginny-adelsheim",
+    "type": "family",
+    "role": "spouse",
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Adelsheim_Vineyard"
+      },
+      {
+        "title": "David Adelsheim: A \"Latecomer\" Oregon Wine Pioneer (The PinotFile / Prince of Pinot)",
+        "url": "https://princeofpinot.com/article/1418"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-adelsheim--winemaker--adelsheim-vineyard",
+    "source": "david-adelsheim",
+    "target": "adelsheim-vineyard",
+    "type": "winemaker",
+    "startYear": 1978,
+    "note": "Wikipedia says he was head winemaker until Dave Paige replaced him in 2001; Prince of Pinot says he did all the winemaking 1978-1985, with Don Kautzner winemaker 1986-1998.",
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Adelsheim_Vineyard"
+      },
+      {
+        "title": "David Adelsheim: A \"Latecomer\" Oregon Wine Pioneer (The PinotFile / Prince of Pinot)",
+        "url": "https://princeofpinot.com/article/1418"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-adelsheim--worked-at--the-eyrie-vineyards",
+    "source": "david-adelsheim",
+    "target": "the-eyrie-vineyards",
+    "type": "worked_at",
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Adelsheim_Vineyard"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-lett--mentored--david-adelsheim",
+    "source": "david-lett",
+    "target": "david-adelsheim",
+    "type": "mentored",
+    "note": "Adelsheim learned winemaking working with Lett at Eyrie; sources give no dates.",
+    "sources": [
+      {
+        "title": "David Adelsheim: A \"Latecomer\" Oregon Wine Pioneer (The PinotFile / Prince of Pinot)",
+        "url": "https://princeofpinot.com/article/1418"
+      },
+      {
+        "title": "Adelsheim Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Adelsheim_Vineyard"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "adelsheim-vineyard--located-in--chehalem-mountains",
+    "source": "adelsheim-vineyard",
+    "target": "chehalem-mountains",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Adelsheim_Vineyard"
+      },
+      {
+        "title": "Oregon wine (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Oregon_wine"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "susan-sokol-blosser--founded--sokol-blosser-winery",
+    "source": "susan-sokol-blosser",
+    "target": "sokol-blosser-winery",
+    "type": "founded",
+    "startYear": 1971,
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-blosser--founded--sokol-blosser-winery",
+    "source": "bill-blosser",
+    "target": "sokol-blosser-winery",
+    "type": "founded",
+    "startYear": 1971,
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-blosser--family--susan-sokol-blosser",
+    "source": "bill-blosser",
+    "target": "susan-sokol-blosser",
+    "type": "family",
+    "role": "spouse",
+    "startYear": 1966,
+    "note": "Married in August 1966; sources fetched do not state current marital status.",
+    "sources": [
+      {
+        "title": "About (Sokol Blosser Winery)",
+        "url": "https://sokolblosser.com/about/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "susan-sokol-blosser--family--alex-sokol-blosser",
+    "source": "susan-sokol-blosser",
+    "target": "alex-sokol-blosser",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-blosser--family--alex-sokol-blosser",
+    "source": "bill-blosser",
+    "target": "alex-sokol-blosser",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "susan-sokol-blosser--family--alison-sokol-blosser",
+    "source": "susan-sokol-blosser",
+    "target": "alison-sokol-blosser",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-blosser--family--alison-sokol-blosser",
+    "source": "bill-blosser",
+    "target": "alison-sokol-blosser",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "alex-sokol-blosser--winemaker--sokol-blosser-winery",
+    "source": "alex-sokol-blosser",
+    "target": "sokol-blosser-winery",
+    "type": "winemaker",
+    "startYear": 2013,
+    "endYear": 2023,
+    "note": "Succeeded Russ Rosner (winemaker 1998-2013); handed over to Robin Howell in 2023.",
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      },
+      {
+        "title": "About (Sokol Blosser Winery)",
+        "url": "https://sokolblosser.com/about/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "alex-sokol-blosser--worked-at--sokol-blosser-winery",
+    "source": "alex-sokol-blosser",
+    "target": "sokol-blosser-winery",
+    "type": "worked_at",
+    "role": "co-president, then president from 2023",
+    "startYear": 1998,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      },
+      {
+        "title": "About (Sokol Blosser Winery)",
+        "url": "https://sokolblosser.com/about/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "alison-sokol-blosser--worked-at--sokol-blosser-winery",
+    "source": "alison-sokol-blosser",
+    "target": "sokol-blosser-winery",
+    "type": "worked_at",
+    "role": "co-president 2008-2023",
+    "startYear": 2004,
+    "note": "Retired from the co-president role in 2023.",
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "alex-sokol-blosser--studied-at--uc-davis-viticulture-enology",
+    "source": "alex-sokol-blosser",
+    "target": "uc-davis-viticulture-enology",
+    "type": "studied_at",
+    "role": "winemaking certification",
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sokol-blosser-winery--owns--sokol-blosser-estate-vineyard",
+    "source": "sokol-blosser-winery",
+    "target": "sokol-blosser-estate-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "About (Sokol Blosser Winery)",
+        "url": "https://sokolblosser.com/about/"
+      },
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sokol-blosser-estate-vineyard--located-in--dundee-hills",
+    "source": "sokol-blosser-estate-vineyard",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      },
+      {
+        "title": "About (Sokol Blosser Winery)",
+        "url": "https://sokolblosser.com/about/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sokol-blosser-winery--located-in--dundee-hills",
+    "source": "sokol-blosser-winery",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      },
+      {
+        "title": "Oregon wine (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Oregon_wine"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "pat-campbell--founded--elk-cove-vineyards",
+    "source": "pat-campbell",
+    "target": "elk-cove-vineyards",
+    "type": "founded",
+    "startYear": 1974,
+    "sources": [
+      {
+        "title": "About Us (Elk Cove Vineyards)",
+        "url": "https://elkcove.com/about-us/"
+      },
+      {
+        "title": "Joe Campbell, Pioneering Willamette Valley Winemaker, Dies at 87 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/joe-campbell-pioneering-willamette-valley-winemaker-dies"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "joe-campbell--founded--elk-cove-vineyards",
+    "source": "joe-campbell",
+    "target": "elk-cove-vineyards",
+    "type": "founded",
+    "startYear": 1974,
+    "sources": [
+      {
+        "title": "About Us (Elk Cove Vineyards)",
+        "url": "https://elkcove.com/about-us/"
+      },
+      {
+        "title": "Joe Campbell, Pioneering Willamette Valley Winemaker, Dies at 87 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/joe-campbell-pioneering-willamette-valley-winemaker-dies"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "joe-campbell--family--pat-campbell",
+    "source": "joe-campbell",
+    "target": "pat-campbell",
+    "type": "family",
+    "role": "spouse",
+    "sources": [
+      {
+        "title": "Joe Campbell, Pioneering Willamette Valley Winemaker, Dies at 87 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/joe-campbell-pioneering-willamette-valley-winemaker-dies"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "joe-campbell--family--adam-campbell",
+    "source": "joe-campbell",
+    "target": "adam-campbell",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "About Us (Elk Cove Vineyards)",
+        "url": "https://elkcove.com/about-us/"
+      },
+      {
+        "title": "Joe Campbell, Pioneering Willamette Valley Winemaker, Dies at 87 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/joe-campbell-pioneering-willamette-valley-winemaker-dies"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "pat-campbell--family--adam-campbell",
+    "source": "pat-campbell",
+    "target": "adam-campbell",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "About Us (Elk Cove Vineyards)",
+        "url": "https://elkcove.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "joe-campbell--winemaker--elk-cove-vineyards",
+    "source": "joe-campbell",
+    "target": "elk-cove-vineyards",
+    "type": "winemaker",
+    "startYear": 1974,
+    "endYear": 1999,
+    "sources": [
+      {
+        "title": "Joe Campbell, Pioneering Willamette Valley Winemaker, Dies at 87 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/joe-campbell-pioneering-willamette-valley-winemaker-dies"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "adam-campbell--winemaker--elk-cove-vineyards",
+    "source": "adam-campbell",
+    "target": "elk-cove-vineyards",
+    "type": "winemaker",
+    "startYear": 1999,
+    "ongoing": true,
+    "note": "Joined his parents at the winery in 1995; took over winemaking from Joe in 1999.",
+    "sources": [
+      {
+        "title": "Joe Campbell, Pioneering Willamette Valley Winemaker, Dies at 87 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/joe-campbell-pioneering-willamette-valley-winemaker-dies"
+      },
+      {
+        "title": "About Us (Elk Cove Vineyards)",
+        "url": "https://elkcove.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "elk-cove-vineyards--located-in--yamhill-carlton",
+    "source": "elk-cove-vineyards",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Our Vineyards (Elk Cove Vineyards)",
+        "url": "https://elkcove.com/our-vineyards/"
+      },
+      {
+        "title": "Joe Campbell, Pioneering Willamette Valley Winemaker, Dies at 87 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/joe-campbell-pioneering-willamette-valley-winemaker-dies"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "myron-redford--founded--amity-vineyards",
+    "source": "myron-redford",
+    "target": "amity-vineyards",
+    "type": "founded",
+    "startYear": 1974,
+    "sources": [
+      {
+        "title": "Amity Vineyards (Union Wine Company)",
+        "url": "https://unionwinecompany.com/amity-vineyards"
+      },
+      {
+        "title": "Amity Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/467"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "myron-redford--winemaker--amity-vineyards",
+    "source": "myron-redford",
+    "target": "amity-vineyards",
+    "type": "winemaker",
+    "endYear": 2008,
+    "note": "First vintage 1976; Darcy Pendergrass became winemaker in 2008.",
+    "sources": [
+      {
+        "title": "Amity Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/467"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "union-wine-company--acquired--amity-vineyards",
+    "source": "union-wine-company",
+    "target": "amity-vineyards",
+    "type": "acquired",
+    "startYear": 2014,
+    "sources": [
+      {
+        "title": "Amity Vineyards (Union Wine Company)",
+        "url": "https://unionwinecompany.com/amity-vineyards"
+      },
+      {
+        "title": "Amity Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/467"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "amity-vineyards--located-in--eola-amity-hills",
+    "source": "amity-vineyards",
+    "target": "eola-amity-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Amity Vineyards (Union Wine Company)",
+        "url": "https://unionwinecompany.com/amity-vineyards"
+      },
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "myron-redford--participated-in--ipnc",
+    "source": "myron-redford",
+    "target": "ipnc",
+    "type": "participated_in",
+    "role": "helped organize the first celebration",
+    "sources": [
+      {
+        "title": "Amity Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/467"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-fuller--founded--tualatin-vineyards",
+    "source": "bill-fuller",
+    "target": "tualatin-vineyards",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1973,
+    "sources": [
+      {
+        "title": "Bill Fuller (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/bill-fuller/"
+      },
+      {
+        "title": "Tualatin Estate Vineyard (Willamette Valley Vineyards)",
+        "url": "https://www.wvv.com/tualatin"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-fuller--owns--tualatin-vineyards",
+    "source": "bill-fuller",
+    "target": "tualatin-vineyards",
+    "type": "owns",
+    "startYear": 1973,
+    "endYear": 1997,
+    "sources": [
+      {
+        "title": "Bill Fuller (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/bill-fuller/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tualatin-vineyards--located-in--tualatin-hills",
+    "source": "tualatin-vineyards",
+    "target": "tualatin-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Tualatin Estate Vineyard (Willamette Valley Vineyards)",
+        "url": "https://www.wvv.com/tualatin"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-fuller--worked-at--willamette-valley-vineyards",
+    "source": "bill-fuller",
+    "target": "willamette-valley-vineyards",
+    "type": "worked_at",
+    "startYear": 1997,
+    "note": "Continued in the industry with Willamette Valley Vineyards after the 1997 sale; no end date given.",
+    "sources": [
+      {
+        "title": "Bill Fuller (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/bill-fuller/"
+      }
+    ],
+    "verified": false
+  }
+]

@@ -1,0 +1,246 @@
+[
+  {
+    "id": "willamette-valley",
+    "type": "ava",
+    "name": "Willamette Valley AVA",
+    "summary": "Oregon's largest and best-known wine appellation, containing nested sub-appellations such as the Dundee Hills, Chehalem Mountains and Eola-Amity Hills.",
+    "established": 1983,
+    "sources": [
+      {
+        "title": "Willamette Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Willamette_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dundee-hills",
+    "type": "ava",
+    "name": "Dundee Hills AVA",
+    "aka": [
+      "Red Hills of Dundee"
+    ],
+    "summary": "Sub-appellation lying entirely within the Willamette Valley AVA, home to many of Oregon's earliest Pinot noir plantings. The Oregon Wine Board dates it to 2004; most other sources say 2005.",
+    "established": 2005,
+    "sources": [
+      {
+        "title": "About the Dundee Hills AVA (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/regions/willamette-valley/dundee-hills-ava/"
+      },
+      {
+        "title": "Federal Register notice, 30 November 2004",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2004-11-30/pdf/04-26330.pdf"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "southern-oregon",
+    "type": "ava",
+    "name": "Southern Oregon AVA",
+    "summary": "Appellation established in 2004 on a petition from Earl Jones and Gregory V. Jones of Abacela, so that the Umpqua Valley and Rogue Valley could market themselves jointly. It contains both of those AVAs and their sub-appellations.",
+    "established": 2004,
+    "sources": [
+      {
+        "title": "Southern Oregon AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Southern_Oregon_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "umpqua-valley",
+    "type": "ava",
+    "name": "Umpqua Valley AVA",
+    "summary": "Douglas County appellation established in 1984, home to HillCrest Vineyard and described as the oldest post-Prohibition wine region in Oregon. It became a sub-appellation of the Southern Oregon AVA in 2004.",
+    "established": 1984,
+    "sources": [
+      {
+        "title": "Umpqua Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rogue-valley",
+    "type": "ava",
+    "name": "Rogue Valley AVA",
+    "summary": "Appellation in Jackson and Josephine counties established in 1991, lying entirely within the Southern Oregon AVA. The Applegate Valley is its only sub-appellation.",
+    "established": 1991,
+    "sources": [
+      {
+        "title": "Rogue Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Rogue_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "applegate-valley",
+    "type": "ava",
+    "name": "Applegate Valley AVA",
+    "summary": "Sub-appellation lying entirely within the Rogue Valley AVA, established in December 2000. Peter Britt's nineteenth-century Valley View vineyard and its 1972 revival by the Wisnovsky family are both tied to the area.",
+    "established": 2000,
+    "sources": [
+      {
+        "title": "Applegate Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Applegate_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mcminnville",
+    "type": "ava",
+    "name": "McMinnville AVA",
+    "summary": "Sub-appellation of the Willamette Valley AVA approved in January 2005 on a petition from Kevin Byrd of Youngberg Hill Vineyards.",
+    "established": 2005,
+    "sources": [
+      {
+        "title": "McMinnville AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/McMinnville_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "van-duzer-corridor",
+    "type": "ava",
+    "name": "Van Duzer Corridor AVA",
+    "summary": "Sub-appellation lying entirely within the Willamette Valley AVA, established by a final rule published in December 2018 on a petition from Jeff Havlin of Havlin Vineyard.",
+    "established": 2018,
+    "sources": [
+      {
+        "title": "Van Duzer Corridor AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Van_Duzer_Corridor_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "walla-walla-valley",
+    "type": "ava",
+    "name": "Walla Walla Valley AVA",
+    "summary": "Appellation established in 1984 in southeast Washington that extends into the northeastern corner of Oregon, lying entirely within the Columbia Valley AVA.",
+    "established": 1984,
+    "sources": [
+      {
+        "title": "Walla Walla Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Walla_Walla_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rocks-district-of-milton-freewater",
+    "type": "ava",
+    "name": "The Rocks District of Milton-Freewater AVA",
+    "aka": [
+      "The Rocks District"
+    ],
+    "summary": "Sub-appellation of the Walla Walla Valley AVA in Umatilla County, Oregon, established in February 2015 on a petition from Whitman College geologist Kevin Pogue.",
+    "established": 2015,
+    "sources": [
+      {
+        "title": "The Rocks District of Milton-Freewater AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Rocks_District_of_Milton-Freewater_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "eola-amity-hills",
+    "type": "ava",
+    "name": "Eola-Amity Hills AVA",
+    "aka": [
+      "Eola Hills"
+    ],
+    "summary": "Sub-appellation of the Willamette Valley in Polk and Yamhill counties, approved in 2006 on a petition from Russell Raney of Evesham Wood and Ted Casteel of Bethel Heights.",
+    "established": 2006,
+    "sources": [
+      {
+        "title": "Eola-Amity Hills AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Eola-Amity_Hills_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "yamhill-carlton",
+    "type": "ava",
+    "name": "Yamhill-Carlton AVA",
+    "aka": [
+      "Yamhill-Carlton District"
+    ],
+    "summary": "Sub-appellation lying entirely within the Willamette Valley AVA, established in December 2004 as the Yamhill-Carlton District. The name was shortened in 2010 on a petition from Ken Wright.",
+    "established": 2004,
+    "sources": [
+      {
+        "title": "Yamhill-Carlton AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Yamhill-Carlton_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ribbon-ridge",
+    "type": "ava",
+    "name": "Ribbon Ridge AVA",
+    "summary": "Small sub-appellation established in 2005, contained entirely within the Chehalem Mountains AVA in the Willamette Valley.",
+    "established": 2005,
+    "sources": [
+      {
+        "title": "Ribbon Ridge AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Ribbon_Ridge_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chehalem-mountains",
+    "type": "ava",
+    "name": "Chehalem Mountains AVA",
+    "summary": "Sub-appellation lying entirely within the Willamette Valley AVA, established in 2006 on a petition authored by David Adelsheim, Paul Hart and Richard Ponzi. Contains the Ribbon Ridge and Laurelwood District AVAs.",
+    "established": 2006,
+    "sources": [
+      {
+        "title": "Chehalem Mountains AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Chehalem_Mountains_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "laurelwood-district",
+    "type": "ava",
+    "name": "Laurelwood District AVA",
+    "summary": "Established in 2020 within the Chehalem Mountains AVA on a petition from Luisa Ponzi, Maria Ponzi and Kevin Johnson of Dion Vineyards.",
+    "established": 2020,
+    "sources": [
+      {
+        "title": "Laurelwood District AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Laurelwood_District_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tualatin-hills",
+    "type": "ava",
+    "name": "Tualatin Hills AVA",
+    "summary": "Appellation in the northernmost part of the Willamette Valley AVA, approved in 2020. Its oldest vineyards include David Hill, the former Charles Coury property.",
+    "established": 2020,
+    "sources": [
+      {
+        "title": "Tualatin Hills AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Tualatin_Hills_AVA"
+      },
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      }
+    ],
+    "verified": false
+  }
+]

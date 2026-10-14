@@ -1,0 +1,796 @@
+[
+  {
+    "id": "the-eyrie-vineyards",
+    "type": "winery",
+    "name": "The Eyrie Vineyards",
+    "aka": [
+      "Eyrie"
+    ],
+    "summary": "Pioneering Willamette Valley Pinot noir producer. Its five estate vineyards are in the Dundee Hills, while the winery itself is in McMinnville. Its 1975 Reserve Pinot noir placed in the top ten at the 1979 Wine Olympics in Paris.",
+    "founded": 1966,
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "The Eyrie Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Eyrie_Vineyards"
+      },
+      {
+        "title": "David Lett (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/David_Lett"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "abacela",
+    "type": "winery",
+    "name": "Abacela",
+    "aka": [
+      "Abacela Vineyards and Winery"
+    ],
+    "summary": "Umpqua Valley estate near Roseburg founded by Earl and Hilda Jones, the first winery in the Pacific Northwest to grow and produce varietal Tempranillo commercially. Its vines were first planted in 1995 and its first vintage was 1998.",
+    "founded": 1995,
+    "place": "Roseburg, OR",
+    "sources": [
+      {
+        "title": "Abacela (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Abacela"
+      },
+      {
+        "title": "Abacela",
+        "url": "https://www.abacela.com/"
+      },
+      {
+        "title": "The Abacela Story",
+        "url": "https://www.abacela.com/the-abacela-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "king-estate",
+    "type": "winery",
+    "name": "King Estate Winery",
+    "aka": [
+      "King Estate"
+    ],
+    "summary": "Family-owned winery near Lorane, southwest of Eugene, founded in 1991 by Ed King Jr. and Ed King III. Its 1,033-acre estate is certified organic and, since 2016, Biodynamic.",
+    "founded": 1991,
+    "place": "Lorane, OR",
+    "sources": [
+      {
+        "title": "King Estate Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/King_Estate_Winery"
+      },
+      {
+        "title": "Three Generations (King Estate)",
+        "url": "https://kingestate.com/story/our-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "valley-view-winery",
+    "type": "winery",
+    "name": "Valley View Winery",
+    "aka": [
+      "Valley View Vineyards"
+    ],
+    "summary": "Applegate Valley winery founded in 1972 by Frank Wisnovsky's family, taking the name of the vineyard Peter Britt started at Jacksonville in the 1850s. Frank's sons Mark and Michael became its owners in 2005.",
+    "founded": 1972,
+    "place": "Jacksonville, OR",
+    "sources": [
+      {
+        "title": "Valley View Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Valley_View_Winery"
+      },
+      {
+        "title": "Applegate Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Applegate_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "troon-vineyard",
+    "type": "winery",
+    "name": "Troon Vineyard",
+    "summary": "Applegate Valley vineyard and winery that grew from Dick Troon's 1972 plantings. Bryan and Denise White bought it in 2017 and converted it to Demeter-certified Biodynamic farming.",
+    "place": "Applegate Valley, OR",
+    "sources": [
+      {
+        "title": "Troon Renaissance (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/troon-renaissance"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "henry-estate-winery",
+    "type": "winery",
+    "name": "Henry Estate Winery",
+    "summary": "Family winery at Umpqua opened by Scott Henry in 1978 on a vineyard he had planted in 1972; it released its first wines the following year.",
+    "founded": 1978,
+    "place": "Umpqua, OR",
+    "sources": [
+      {
+        "title": "Oregon winemaker Scott Henry dies at age 86 (Capital Press)",
+        "url": "https://capitalpress.com/2023/10/31/oregon-winemaker-scott-henry-dies-at-age-86"
+      },
+      {
+        "title": "Henry Estate Winery patriarch dies at age 86 (The News-Review)",
+        "url": "https://www.nrtoday.com/news/local/henry-estate-winery-patriarch-dies-age-86/article_717129e6-7511-11ee-bdf6-97c3d0a8eff1.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "girardet-vineyards",
+    "type": "winery",
+    "name": "Girardet Vineyards and Winery",
+    "aka": [
+      "Girardet Wine Cellars"
+    ],
+    "summary": "Umpqua Valley estate at Tenmile, near Roseburg, founded in 1971 by Philippe and Bonnie Girardet and now run by their son Marc. Known for Baco noir.",
+    "founded": 1971,
+    "place": "Tenmile, OR",
+    "sources": [
+      {
+        "title": "Philippe Girardet, Founder of Girardet Vineyards and Winery, Passes Away at 96 (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2025/11/07/philippe-girardet-passes-away-at-96/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cayuse-vineyards",
+    "type": "winery",
+    "name": "Cayuse Vineyards",
+    "aka": [
+      "Cayuse"
+    ],
+    "summary": "Christophe Baron's estate at Milton-Freewater on the Oregon side of the Walla Walla Valley, farmed with biodynamic methods on cobblestone ground.",
+    "place": "Milton-Freewater, OR",
+    "sources": [
+      {
+        "title": "Cayuse (The Wine Independent)",
+        "url": "https://thewineindependent.com/articles/cayuse/"
+      },
+      {
+        "title": "HistoryLink essay 23035",
+        "url": "https://historylink.org/File/23035"
+      },
+      {
+        "title": "The Rocks District of Milton-Freewater AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/The_Rocks_District_of_Milton-Freewater_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "maison-joseph-drouhin",
+    "type": "winery",
+    "name": "Maison Joseph Drouhin",
+    "aka": [
+      "Joseph Drouhin"
+    ],
+    "summary": "Burgundy wine producer and négociant founded in 1880, with vineyards from Chablis to the Côte Chalonnaise. It built Domaine Drouhin Oregon in the Dundee Hills.",
+    "founded": 1880,
+    "outsideOregon": true,
+    "place": "Beaune, France",
+    "sources": [
+      {
+        "title": "Maison Joseph Drouhin (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Maison_Joseph_Drouhin"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "domaine-drouhin-oregon",
+    "type": "winery",
+    "name": "Domaine Drouhin Oregon",
+    "aka": [
+      "DDO"
+    ],
+    "summary": "Dundee Hills winery established by the Drouhin family of Burgundy in 1987. Its first vintage, 1988, was made from purchased grapes, and its gravity-flow winery was built in 1989.",
+    "founded": 1987,
+    "place": "Dayton, OR",
+    "sources": [
+      {
+        "title": "Profiles in Pinot Noir: Domaine Drouhin (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/profiles-in-pinot-noir-domaine-drouhin-1804"
+      },
+      {
+        "title": "Pioneers in Oregon (Maison Joseph Drouhin)",
+        "url": "https://drouhin.com/en_US/presentation/pioneers-in-oregon"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "panther-creek-cellars",
+    "type": "winery",
+    "name": "Panther Creek Cellars",
+    "summary": "Winery founded by Ken Wright in McMinnville in 1986 and sold in 1994. Later owned by Ron and Linda Kaplan and the Chambers family, it was bought by Bacchus Capital Management in 2013.",
+    "founded": 1986,
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "Ken Wright lecture announcement (Linfield University news)",
+        "url": "https://news.linfield.edu/?p=6186"
+      },
+      {
+        "title": "Ken Wright and Panther Creek Cellars (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=35178"
+      },
+      {
+        "title": "Panther Creek Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/987/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-wright-cellars",
+    "type": "winery",
+    "name": "Ken Wright Cellars",
+    "summary": "Carlton winery founded by Ken Wright with the 1994 vintage, known for single-vineyard Pinot noir from sites across the northern Willamette Valley.",
+    "founded": 1994,
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "Ken Wright Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/125/index.html"
+      },
+      {
+        "title": "Ken Wright lecture announcement (Linfield University news)",
+        "url": "https://news.linfield.edu/?p=6186"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "beaux-freres",
+    "type": "winery",
+    "name": "Beaux Frères",
+    "aka": [
+      "Beaux Freres"
+    ],
+    "summary": "Ribbon Ridge winery started by Michael Etzel on a former pig farm with his brother-in-law Robert Parker, with vines planted from 1988 and a first commercial release from the 1991 vintage. Maisons & Domaines Henriot bought a controlling interest in 2017.",
+    "founded": 1987,
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "The Birth and Building of Beaux Frères (Wine Spectator)",
+        "url": "https://top100.winespectator.com/2020/article/the-birth-and-building-of-beaux-freres/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bethel-heights-vineyard",
+    "type": "winery",
+    "name": "Bethel Heights Vineyard",
+    "summary": "Family winery in the Eola-Amity Hills founded in 1977 by twin brothers Ted and Terry Casteel, their wives Pat Dudley and Marilyn Webb, and Barbara Dudley. The winery was built and the first estate wines made in 1984.",
+    "founded": 1977,
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      },
+      {
+        "title": "Bethel Heights Vineyard (Eola-Amity Hills Winegrowers)",
+        "url": "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cristom-vineyards",
+    "type": "winery",
+    "name": "Cristom Vineyards",
+    "aka": [
+      "Cristom"
+    ],
+    "summary": "Eola-Amity Hills winery founded in 1992 by Paul and Eileen Gerrie on the abandoned Pellier Winery site and named after their children Christine and Tom.",
+    "founded": 1992,
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Cristom Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Cristom_Vineyards"
+      },
+      {
+        "title": "Our People (Cristom Vineyards)",
+        "url": "https://cristomvineyards.com/our-people"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "argyle-winery",
+    "type": "winery",
+    "name": "Argyle Winery",
+    "aka": [
+      "Argyle",
+      "The Dundee Wine Company"
+    ],
+    "summary": "Dundee winery founded in 1987 by Rollin Soles and Brian Croser in a former nut-processing plant, with sparkling wine as its signature. Lion Nathan acquired it with Croser's Petaluma company, and it is now owned by Distinguished Vineyards & Wine Partners.",
+    "founded": 1987,
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Rollin Soles Relinquishes Winemaker Title at Argyle (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48015"
+      },
+      {
+        "title": "Argyle Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/130/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "roco-winery",
+    "type": "winery",
+    "name": "ROCO Winery",
+    "aka": [
+      "ROCO"
+    ],
+    "summary": "Winery of Rollin Soles and Corby Stonebraker-Soles, named for the two of them. They planted Wits' End Vineyard in 2001, made a first vintage in 2003 and built the winery in 2009.",
+    "founded": 2003,
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "ROCO (M. Touton Selection)",
+        "url": "https://www.mtouton.com/producers/roco"
+      },
+      {
+        "title": "Rollin Soles Relinquishes Winemaker Title at Argyle (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48015"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chehalem-winery",
+    "type": "winery",
+    "name": "Chehalem",
+    "aka": [
+      "Chehalem Winery",
+      "Chehalem Wines"
+    ],
+    "summary": "Newberg winery founded by Harry Peterson-Nedry in 1990, growing out of his Ridgecrest Vineyards. Bill Stoller became a co-owner by 1993 and the sole owner in 2018.",
+    "founded": 1990,
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Chehalem Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/261/index.html"
+      },
+      {
+        "title": "Bill Stoller, Oregon Vintner and Philanthropist, Dies at Age 74 (Wine Spectator)",
+        "url": "https://winespectator.com/articles/bill-stoller-oregon-vintner-and-philanthropist-dies-at-age-74"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "willamette-valley-vineyards",
+    "type": "winery",
+    "name": "Willamette Valley Vineyards",
+    "summary": "Publicly traded winery in Turner founded in 1983 by Jim Bernau and Don Voorhies and funded in part by small shareholders. It merged with Tualatin Estate Vineyards in 1997.",
+    "founded": 1983,
+    "place": "Turner, OR",
+    "sources": [
+      {
+        "title": "Willamette Valley Vineyards (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Willamette_Valley_Vineyards"
+      },
+      {
+        "title": "The Jim Bernau story (Oregon State University College of Business)",
+        "url": "https://business.oregonstate.edu/blog/companies-recruiters/jim-bernau-story-leadership-wine-industry"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "penner-ash-wine-cellars",
+    "type": "winery",
+    "name": "Penner-Ash Wine Cellars",
+    "aka": [
+      "Penner-Ash"
+    ],
+    "summary": "Winery started in 1998 by Lynn and Ron Penner-Ash while Lynn was still at Rex Hill; the estate winery was built in 2005. Jackson Family Wines bought it in 2016.",
+    "founded": 1998,
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Lynn Penner-Ash (Wine Spectator)",
+        "url": "https://www.winespectator.com/pages/lynn-penner-ash"
+      },
+      {
+        "title": "Penner-Ash Winery Purchased By California's Jackson Family Wines (Willamette Week)",
+        "url": "http://www.wweek.com/bars/2016/04/18/penner-ash-winery-purchased-by-californias-jackson-family-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rex-hill",
+    "type": "winery",
+    "name": "Rex Hill",
+    "aka": [
+      "REX HILL",
+      "Rex Hill Vineyards"
+    ],
+    "summary": "Newberg winery founded in 1982 by Paul Hart and Jan Jacobsen on the site of a former fruit and nut drying facility. The founders handed it to the families behind A to Z Wineworks when they retired.",
+    "founded": 1982,
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Rex Hill (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/rex-hill/"
+      },
+      {
+        "title": "Rex Hill (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/400/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "evening-land-vineyards",
+    "type": "winery",
+    "name": "Evening Land Vineyards",
+    "aka": [
+      "Evening Land"
+    ],
+    "summary": "Winery founded by Mark Tarlov in 2005 that took a long lease on Seven Springs Vineyard in the Eola-Amity Hills in 2007, with Dominique Lafon consulting. Rajat Parr and Sashi Moorman became partners and took over operations in 2014.",
+    "founded": 2005,
+    "sources": [
+      {
+        "title": "Evening Land Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/684/index.html"
+      },
+      {
+        "title": "Evening Land Vineyards (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/evening-land-vineyards/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lingua-franca",
+    "type": "winery",
+    "name": "Lingua Franca",
+    "summary": "Eola-Amity Hills winery founded by Master Sommelier Larry Stone on a 66-acre vineyard beside Seven Springs, with Dominique Lafon consulting and Thomas Savre as winemaker. Its first vintage was 2015, and Constellation Brands bought it in 2022.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Lingua Franca (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2579/index.html"
+      },
+      {
+        "title": "Exclusive: Constellation Buys Oregon's Lingua Franca (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/constellation-buys-oregon-s-lingua-franca"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bergstrom-wines",
+    "type": "winery",
+    "name": "Bergström Wines",
+    "aka": [
+      "Bergstrom Wines"
+    ],
+    "summary": "Dundee winery established in fall 1999 by John and Karen Bergström and their son Josh, with estate vineyards in the Dundee Hills, Ribbon Ridge and Chehalem Mountains.",
+    "founded": 1999,
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Bergström Wines (Ribbon Ridge Winegrowers)",
+        "url": "https://ribbonridgeava.org/listings/bergstrom-wines/"
+      },
+      {
+        "title": "Bergström Wines (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/bergstrom-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "domaine-serene",
+    "type": "winery",
+    "name": "Domaine Serene",
+    "summary": "Dundee Hills estate founded in 1989 by Ken and Grace Evenstad, with a first commercial vintage in 1990. Ken Wright was its first winemaker.",
+    "founded": 1989,
+    "place": "Dayton, OR",
+    "sources": [
+      {
+        "title": "Domaine Serene (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/domaine-serene/"
+      },
+      {
+        "title": "Ken Evenstad, Co-Founder of Oregon's Domaine Serene Winery, Dies at 77 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/ken-evenstad-cofounder-of-oregons-domaine-serene-winery-dies"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "maisons-domaines-henriot",
+    "type": "winery",
+    "name": "Maisons & Domaines Henriot",
+    "aka": [
+      "Henriot"
+    ],
+    "summary": "French wine group built around the Champagne house Henriot. It bought a controlling interest in Beaux Frères in 2017.",
+    "outsideOregon": true,
+    "place": "France",
+    "sources": [
+      {
+        "title": "The Birth and Building of Beaux Frères (Wine Spectator)",
+        "url": "https://top100.winespectator.com/2020/article/the-birth-and-building-of-beaux-freres/"
+      },
+      {
+        "title": "Beaux Frères (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/beaux-freres/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jackson-family-wines",
+    "type": "winery",
+    "name": "Jackson Family Wines",
+    "summary": "California-based wine company that bought Penner-Ash Wine Cellars in 2016, adding to Oregon holdings that include Gran Moraine and Zena Crown vineyards.",
+    "outsideOregon": true,
+    "place": "California",
+    "sources": [
+      {
+        "title": "Penner-Ash Winery Purchased By California's Jackson Family Wines (Willamette Week)",
+        "url": "http://www.wweek.com/bars/2016/04/18/penner-ash-winery-purchased-by-californias-jackson-family-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "a-to-z-wineworks",
+    "type": "winery",
+    "name": "A to Z Wineworks",
+    "summary": "Oregon wine company founded by Bill and Deb Hatcher, Cheryl Francis and Sam Tannahill, who took over Rex Hill when its founders retired. Ste. Michelle Wine Estates acquired A to Z and Rex Hill in 2022.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Rex Hill (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/rex-hill/"
+      },
+      {
+        "title": "Rex Hill (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/400/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "hillcrest-vineyard",
+    "type": "winery",
+    "name": "HillCrest Vineyard",
+    "aka": [
+      "HillCrest Vineyards",
+      "Hillcrest Winery"
+    ],
+    "summary": "Winery west of Roseburg founded by Richard Sommer in 1961, described as Oregon's first post-Prohibition estate winery and the site of the state's first Pinot noir plantings. Sold in 2003 to Dyson and Susan DeMara.",
+    "founded": 1961,
+    "place": "Roseburg, OR",
+    "sources": [
+      {
+        "title": "Umpqua Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
+      },
+      {
+        "title": "Richard Sommer (winemaker) (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Richard_Sommer_(winemaker)"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "charles-coury-vineyards",
+    "type": "winery",
+    "name": "Charles Coury Vineyards",
+    "summary": "Vineyard, nursery and winery run by Charles and Shirley Coury near Forest Grove from 1965 until financial strain forced a sale in 1978. The property was renamed David Hill Vineyards & Winery after 1992.",
+    "founded": 1965,
+    "closed": 1978,
+    "place": "Forest Grove, OR",
+    "sources": [
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      },
+      {
+        "title": "Legacy (David Hill Vineyards & Winery)",
+        "url": "https://davidhillwinery.com/legacy.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "erath-winery",
+    "type": "winery",
+    "name": "Erath Winery",
+    "aka": [
+      "Erath Vineyards"
+    ],
+    "summary": "Dundee winery founded by Dick Erath, which made its first commercial wine in 1972 and traded as Knudsen Erath from 1975 to 1988. Bought by Ste. Michelle Wine Estates in 2006.",
+    "founded": 1972,
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Erath Winery Collection: historical note (Linfield / Oregon Wine History Archive)",
+        "url": "https://digitalcommons.linfield.edu/owha_erath"
+      },
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      },
+      {
+        "title": "Ste. Michelle buys Oregon winery (NBC News / AP)",
+        "url": "https://www.nbcnews.com/id/wbna13077461"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "knudsen-erath-winery",
+    "type": "winery",
+    "name": "Knudsen Erath Winery",
+    "aka": [
+      "Knudsen-Erath"
+    ],
+    "summary": "Partnership between grower Cal Knudsen and winemaker Dick Erath, established in 1975 and described as the first commercial winery in the Dundee Hills. The partners separated in 1988 and Erath continued under his own name.",
+    "founded": 1975,
+    "closed": 1988,
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Our Story (Knudsen Vineyards)",
+        "url": "https://www.knudsenvineyards.com/our-story"
+      },
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      },
+      {
+        "title": "Knudsen family and Knudsen Vineyards feature (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=4867"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ponzi-vineyards",
+    "type": "winery",
+    "name": "Ponzi Vineyards",
+    "summary": "Founded in 1970 by Dick and Nancy Ponzi on land bought southwest of Portland in 1969; first Pinot noir vintage in 1974. The Bollinger family acquired the winery in 2021.",
+    "founded": 1970,
+    "place": "Sherwood, OR",
+    "sources": [
+      {
+        "title": "Nancy Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Nancy_Ponzi"
+      },
+      {
+        "title": "Our Story (Ponzi Vineyards)",
+        "url": "https://www.ponzivineyards.com/our-story"
+      },
+      {
+        "title": "The Bollinger Family to Acquire Ponzi Vineyards (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2021/04/07/bollinger-family-acquire-ponzi-vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "adelsheim-vineyard",
+    "type": "winery",
+    "name": "Adelsheim Vineyard",
+    "summary": "Founded by David and Ginny Adelsheim, who bought land near Newberg in 1971, planted in 1972 and released their first wines in 1978. Described as the first winery in the Chehalem Mountains; fully owned by Jack and Lynn Loacker since 2017.",
+    "founded": 1971,
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Adelsheim_Vineyard"
+      },
+      {
+        "title": "Oregon wine (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Oregon_wine"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sokol-blosser-winery",
+    "type": "winery",
+    "name": "Sokol Blosser Winery",
+    "summary": "Founded by Bill Blosser and Susan Sokol Blosser in 1971 in what is now the Dundee Hills AVA, with a first vintage in 1977. Opened a tasting room in 1978 and is now led by the second generation.",
+    "founded": 1971,
+    "place": "Dayton, OR",
+    "sources": [
+      {
+        "title": "Sokol Blosser Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Sokol_Blosser_Winery"
+      },
+      {
+        "title": "About (Sokol Blosser Winery)",
+        "url": "https://sokolblosser.com/about/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "amity-vineyards",
+    "type": "winery",
+    "name": "Amity Vineyards",
+    "summary": "Founded by Myron Redford in 1974 on a vineyard above the town of Amity planted in 1971; first vintage 1976. Bought in 2014 by Ryan and Eric Harms of Union Wine Company.",
+    "founded": 1974,
+    "place": "Amity, OR",
+    "sources": [
+      {
+        "title": "Amity Vineyards (Union Wine Company)",
+        "url": "https://unionwinecompany.com/amity-vineyards"
+      },
+      {
+        "title": "Amity Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/467"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "elk-cove-vineyards",
+    "type": "winery",
+    "name": "Elk Cove Vineyards",
+    "summary": "Family-owned winery founded in 1974 by Pat and Joe Campbell near Gaston, the first winery in what is now the Yamhill-Carlton appellation.",
+    "founded": 1974,
+    "place": "Gaston, OR",
+    "sources": [
+      {
+        "title": "About Us (Elk Cove Vineyards)",
+        "url": "https://elkcove.com/about-us/"
+      },
+      {
+        "title": "Joe Campbell, Pioneering Willamette Valley Winemaker, Dies at 87 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/joe-campbell-pioneering-willamette-valley-winemaker-dies"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tualatin-vineyards",
+    "type": "winery",
+    "name": "Tualatin Vineyards",
+    "aka": [
+      "Tualatin Estate Vineyard"
+    ],
+    "summary": "Established in 1973 near Forest Grove by Bill Fuller and Bill Malkmus. Owned by Willamette Valley Vineyards since 1997 and now known as Tualatin Estate Vineyard.",
+    "founded": 1973,
+    "place": "Forest Grove, OR",
+    "sources": [
+      {
+        "title": "Tualatin Estate Vineyard (Willamette Valley Vineyards)",
+        "url": "https://www.wvv.com/tualatin"
+      },
+      {
+        "title": "Bill Fuller (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/bill-fuller/"
+      }
+    ],
+    "verified": false
+  }
+]

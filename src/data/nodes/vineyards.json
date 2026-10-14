@@ -1,0 +1,232 @@
+[
+  {
+    "id": "the-eyrie-vineyard",
+    "type": "vineyard",
+    "name": "The Eyrie Vineyard",
+    "aka": [
+      "Original Vines",
+      "South Block"
+    ],
+    "summary": "The Lett family's founding vineyard in the Dundee Hills and the first of Eyrie's five estate sites, with plantings dated to 1965 and 1968.",
+    "planted": 1965,
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "The Eyrie Vineyards: press notes",
+        "url": "https://eyrievineyards.com/inform.shtml"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "fault-line-vineyards",
+    "type": "vineyard",
+    "name": "Fault Line Vineyards",
+    "summary": "Abacela's 76-acre estate vineyard near Roseburg, planted to Tempranillo and other varieties.",
+    "place": "Roseburg, OR",
+    "sources": [
+      {
+        "title": "Abacela (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Abacela"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cailloux-vineyard",
+    "type": "vineyard",
+    "name": "Cailloux Vineyard",
+    "summary": "Cayuse's first vineyard, hand-planted to Syrah by Christophe Baron on 21 March 1997.",
+    "planted": 1997,
+    "place": "Milton-Freewater, OR",
+    "sources": [
+      {
+        "title": "Cayuse (The Wine Independent)",
+        "url": "https://thewineindependent.com/articles/cayuse/"
+      },
+      {
+        "title": "HistoryLink essay 23035",
+        "url": "https://historylink.org/File/23035"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "shea-vineyard",
+    "type": "vineyard",
+    "name": "Shea Vineyard",
+    "summary": "Yamhill-Carlton vineyard planted in 1989 by Dick Shea with about 140 acres of Pinot noir. Roughly 80 percent of its fruit is sold to other wineries for vineyard-designated bottlings.",
+    "planted": 1989,
+    "place": "Yamhill County, OR",
+    "sources": [
+      {
+        "title": "Shea Vineyard and Shea Wine Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/170/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "seven-springs-vineyard",
+    "type": "vineyard",
+    "name": "Seven Springs Vineyard",
+    "aka": [
+      "Seven Springs Estate"
+    ],
+    "summary": "Eola-Amity Hills vineyard planted in 1984 by Al MacDonald, with additions in 1993-1995. Evening Land Vineyards took a 45-year lease on it in 2007.",
+    "planted": 1984,
+    "sources": [
+      {
+        "title": "Evening Land Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/684/index.html"
+      },
+      {
+        "title": "Evening Land Vineyards (Wine with Seth)",
+        "url": "https://www.winewithseth.com/winewiki/evening-land-vineyards/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ridgecrest-vineyards",
+    "type": "vineyard",
+    "name": "Ridgecrest Vineyards",
+    "aka": [
+      "Ridgecrest Vineyard"
+    ],
+    "summary": "Vineyard planted by Harry Peterson-Nedry in 1980, the first in what became the Ribbon Ridge AVA, and the starting point for Chehalem winery.",
+    "planted": 1980,
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Chehalem Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/261/index.html"
+      },
+      {
+        "title": "Ribbon Ridge AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Ribbon_Ridge_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "roserock-vineyard",
+    "type": "vineyard",
+    "name": "Roserock Vineyard",
+    "aka": [
+      "Roserock",
+      "Drouhin Oregon Roserock"
+    ],
+    "summary": "279-acre Eola-Amity Hills property bought by the Drouhin family in 2013, planted mostly to Pinot noir.",
+    "sources": [
+      {
+        "title": "The French woman of Oregon, Véronique Drouhin-Boss (BKWine Magazine)",
+        "url": "https://www.bkwine.com/features/wine-producer-profiles/french-woman-oregon-veronique-drouhin-boss-roserock-drouhin-oregon/"
+      },
+      {
+        "title": "Pioneers in Oregon (Maison Joseph Drouhin)",
+        "url": "https://drouhin.com/en_US/presentation/pioneers-in-oregon"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "maresh-vineyard",
+    "type": "vineyard",
+    "name": "Maresh Vineyard",
+    "aka": [
+      "Maresh Red Hills Vineyard"
+    ],
+    "summary": "Jim and Loie Maresh's vineyard on Worden Hill Road in the Dundee Hills, planted from 1970 and described as the fifth-oldest in Oregon.",
+    "planted": 1970,
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      },
+      {
+        "title": "Maresh family feature (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=29531"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "knudsen-vineyards",
+    "type": "vineyard",
+    "name": "Knudsen Vineyards",
+    "summary": "Dundee Hills vineyard on a former walnut orchard bought by Cal and Julia Lee Knudsen in 1971, still owned by the Knudsen family. It has supplied Argyle Winery since 1987.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Our Story (Knudsen Vineyards)",
+        "url": "https://www.knudsenvineyards.com/our-story"
+      },
+      {
+        "title": "Oregon Wine Pioneer Cal Knudsen Dies (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/oregon-wine-pioneer-cal-knudsen-dies-4788"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chehalem-mountain-vineyard",
+    "type": "vineyard",
+    "name": "Chehalem Mountain Vineyard",
+    "summary": "Dick Erath's first vineyard, on Dopp Road near Newberg, planted in spring 1969 though often dated to 1968. Erath sold it in 1986.",
+    "planted": 1969,
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      },
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "prince-hill-vineyard",
+    "type": "vineyard",
+    "name": "Prince Hill Vineyard",
+    "summary": "Dundee Hills vineyard first planted by Dick Erath in 1983 and sold by him in 2017 to the owners of Silver Oak.",
+    "planted": 1983,
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Erath Vineyards & Winery (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/638/index.html"
+      },
+      {
+        "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sokol-blosser-estate-vineyard",
+    "type": "vineyard",
+    "name": "Sokol Blosser Estate Vineyard",
+    "aka": [
+      "Old Vineyard"
+    ],
+    "summary": "The Sokol Blosser family's certified-organic estate in the Dundee Hills. Land was bought in 1970 and the first Pinot noir block went into the Old Vineyard in 1971-72.",
+    "place": "Dayton, OR",
+    "sources": [
+      {
+        "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390"
+      },
+      {
+        "title": "About (Sokol Blosser Winery)",
+        "url": "https://sokolblosser.com/about/"
+      }
+    ],
+    "verified": false
+  }
+]
