@@ -20,29 +20,37 @@ export interface Connection {
   years: string
 }
 
+function defaultFilters() {
+  return {
+    nodeTypes: {
+      person: true,
+      winery: true,
+      vineyard: true,
+      organization: true,
+      event: true,
+    } as Record<ToggleableNodeType, boolean>,
+    categories: {
+      ownership: true,
+      work: true,
+      people: true,
+      fruit: true,
+      affiliation: true,
+      geography: false,
+    } as Record<EdgeCategory, boolean>,
+    oregonOnly: false,
+    verifiedOnly: false,
+    // AVA node id to narrow the graph to, or '' for all
+    ava: '',
+  }
+}
+
 const state = reactive({
   graph: null as Graph | null,
   error: null as string | null,
   selectedId: null as string | null,
-  nodeTypes: {
-    person: true,
-    winery: true,
-    vineyard: true,
-    organization: true,
-    event: true,
-  } as Record<ToggleableNodeType, boolean>,
-  categories: {
-    ownership: true,
-    work: true,
-    people: true,
-    fruit: true,
-    affiliation: true,
-    geography: false,
-  } as Record<EdgeCategory, boolean>,
-  oregonOnly: false,
-  verifiedOnly: false,
-  // AVA node id to narrow the graph to, or '' for all
-  ava: '',
+  ...defaultFilters(),
+  // Whether the filter drawer is open; only matters on tablet and smaller
+  filtersOpen: false,
 })
 
 const nodes = computed(() => state.graph?.nodes ?? [])
@@ -209,6 +217,10 @@ function select(id: string | null) {
   }
 }
 
+function resetFilters() {
+  Object.assign(state, defaultFilters())
+}
+
 function selectFromHash() {
   const id = decodeURIComponent(window.location.hash.slice(1))
   state.selectedId = nodeById.value.has(id) ? id : null
@@ -239,6 +251,7 @@ export function useGraph() {
     connectionsOf,
     search,
     select,
+    resetFilters,
     init,
   }
 }

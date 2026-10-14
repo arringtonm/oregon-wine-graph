@@ -1,18 +1,21 @@
 <script setup lang="ts">
 import cytoscape, { type Core, type ElementDefinition, type StylesheetJson } from 'cytoscape'
 import fcose from 'cytoscape-fcose'
-import { onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
+import { nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 import { edgeLabel, formatYears, nodeYears, useGraph } from '../composables/useGraph'
 import { EDGE_RULES } from '../data/schema'
 
 cytoscape.use(fcose)
 
-const { state, degree, nodeById, visibleNodes, visibleEdges, select } = useGraph()
+const { state, degree, nodeById, visibleNodes, visibleEdges, select, resetFilters } = useGraph()
 
 const container = ref<HTMLDivElement>()
 const tooltip = reactive({ show: false, x: 0, y: 0, title: '', detail: '' })
 let cy: Core | undefined
+let layout: cytoscape.Layouts | undefined
 const darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
+// Matches the breakpoint where the detail panel becomes a bottom sheet
+const compactQuery = window.matchMedia('(max-width: 1024px)')
 
 function token(name: string): string {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim()
@@ -111,9 +114,37 @@ function buildElements(): ElementDefinition[] {
   ]
 }
 
+// Fit the whole graph in view. A small graph would otherwise be fitted at a
+// zoom that makes nodes enormous, so the zoom is capped.
+function fit() {
+  if (!cy) return
+  cy.fit(undefined, 40)
+  if (cy.zoom() > 1.25) {
+    cy.zoom(1.25)
+    cy.center()
+  }
+}
+
+function zoomBy(factor: number) {
+  if (!cy) return
+  cy.zoom({
+    level: cy.zoom() * factor,
+    renderedPosition: { x: cy.width() / 2, y: cy.height() / 2 },
+  })
+}
+
+// Back to the starting view: default filters, nothing selected, fresh layout
+async function reset() {
+  resetFilters()
+  select(null)
+  await nextTick()
+  runLayout(true)
+}
+
 function runLayout(randomize: boolean) {
   if (!cy) return
-  const layout = cy.layout({
+  layout?.stop()
+  layout = cy.layout({
     name: 'fcose',
     quality: randomize ? 'default' : 'proof',
     randomize,
@@ -124,12 +155,9 @@ function runLayout(randomize: boolean) {
     nodeSeparation: 120,
     padding: 40,
   } as cytoscape.LayoutOptions)
-  // A small graph would otherwise be fitted at a zoom that makes nodes enormous
   layout.one('layoutstop', () => {
-    if (cy && cy.zoom() > 1.25) {
-      cy.zoom(1.25)
-      cy.center()
-    }
+    fit()
+    centerOnSelection()
   })
   layout.run()
 }
@@ -170,6 +198,15 @@ function centerOnSelection() {
   if (!cy || !state.selectedId) return
   const selected = cy.getElementById(state.selectedId)
   if (selected.empty()) return
+  if (compactQuery.matches) {
+    // The detail sheet covers the lower part of the graph, so aim above it
+    const rendered = selected.renderedPosition()
+    cy.animate(
+      { panBy: { x: cy.width() / 2 - rendered.x, y: cy.height() * 0.28 - rendered.y } },
+      { duration: 300 },
+    )
+    return
+  }
   const { x1, y1, x2, y2 } = cy.extent()
   const { x, y } = selected.position()
   if (x < x1 || x > x2 || y < y1 || y > y2) {
@@ -190,6 +227,7 @@ onMounted(() => {
   })
 
   cy.on('tap', (event) => {
+    state.filtersOpen = false
     if (event.target === cy) select(null)
   })
   cy.on('tap', 'node', (event) => select(event.target.id()))
@@ -238,6 +276,24 @@ watch(
       <strong>{{ tooltip.title }}</strong>
       <span v-if="tooltip.detail">{{ tooltip.detail }}</span>
     </div>
+    <div class="graph-canvas__toolbar" role="toolbar" aria-label="Graph navigation">
+      <button
+        type="button"
+        class="graph-canvas__filters"
+        :aria-expanded="state.filtersOpen"
+        @click="state.filtersOpen = !state.filtersOpen"
+      >
+        Search &amp; filters
+      </button>
+      <div class="graph-canvas__group">
+        <button type="button" aria-label="Zoom in" title="Zoom in" @click="zoomBy(1.3)">+</button>
+        <button type="button" aria-label="Zoom out" title="Zoom out" @click="zoomBy(1 / 1.3)">−</button>
+        <button type="button" title="Fit the whole graph in view" @click="fit">Fit</button>
+        <button type="button" title="Clear filters and selection, and lay the graph out again" @click="reset">
+          Reset
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -272,5 +328,64 @@ watch(
 
 .graph-canvas__tooltip span {
   color: var(--text-secondary);
+}
+
+.graph-canvas__toolbar {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.graph-canvas__group {
+  display: flex;
+}
+
+.graph-canvas__toolbar button {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-raised);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.graph-canvas__toolbar button:hover {
+  background: var(--surface);
+}
+
+.graph-canvas__filters {
+  display: none;
+  border-radius: 6px;
+}
+
+.graph-canvas__group button + button {
+  border-left: 0;
+}
+
+.graph-canvas__group button:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.graph-canvas__group button:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+@media (max-width: 1024px) {
+  .graph-canvas__filters {
+    display: block;
+  }
+
+  .graph-canvas__toolbar button {
+    min-width: 40px;
+    height: 40px;
+  }
 }
 </style>

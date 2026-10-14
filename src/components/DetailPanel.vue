@@ -15,7 +15,7 @@ const facts = computed(() =>
 </script>
 
 <template>
-  <aside class="detail">
+  <aside class="detail" :class="{ 'detail--empty': !selectedNode }">
     <template v-if="selectedNode">
       <header>
         <p class="detail__type">
@@ -80,6 +80,25 @@ const facts = computed(() =>
   overflow-y: auto;
   border-left: 1px solid var(--border);
   background: var(--surface-raised);
+}
+
+/* Tablet and smaller: a sheet over the bottom of the graph, only when a node is selected */
+@media (max-width: 1024px) {
+  .detail {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-height: 45%;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .detail--empty {
+    display: none;
+  }
 }
 
 header {

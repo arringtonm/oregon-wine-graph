@@ -53,6 +53,7 @@ onMounted(init)
 }
 
 .app__main {
+  position: relative;
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr) 320px;
   min-height: 0;
@@ -63,14 +64,15 @@ onMounted(init)
   white-space: pre-wrap;
 }
 
-@media (max-width: 800px) {
-  .app {
-    height: auto;
-  }
-
+@media (max-width: 1024px) {
   .app__main {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto 60dvh auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .app__header p {
+    display: none;
   }
 }
 </style>

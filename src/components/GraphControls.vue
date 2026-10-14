@@ -17,7 +17,8 @@ function pick(id: string) {
 </script>
 
 <template>
-  <aside class="controls">
+  <aside class="controls" :class="{ 'controls--open': state.filtersOpen }">
+    <button type="button" class="controls__close" @click="state.filtersOpen = false">Done</button>
     <div class="controls__search">
       <input
         v-model="query"
@@ -93,6 +94,41 @@ function pick(id: string) {
   overflow-y: auto;
   border-right: 1px solid var(--border);
   background: var(--surface-raised);
+}
+
+.controls__close {
+  display: none;
+  align-self: flex-end;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Tablet and smaller: the filters become a drawer over the graph */
+@media (max-width: 1024px) {
+  .controls {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    width: min(300px, 85vw);
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .controls--open {
+    display: flex;
+  }
+
+  .controls__close {
+    display: block;
+  }
 }
 
 .controls__search {
