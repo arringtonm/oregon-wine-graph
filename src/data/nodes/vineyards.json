@@ -1392,5 +1392,27 @@
       }
     ],
     "verified": false
+  },
+  {
+    "id": "winters-hill-vineyard",
+    "type": "vineyard",
+    "name": "Winter's Hill Vineyard",
+    "summary": "Estate vineyard of Winter's Hill in the Dundee Hills, first planted in 1990 on a former grass-seed field and since grown to about thirty-five acres.",
+    "planted": 1990,
+    "sources": [
+      {
+        "title": "Oregon Wine Month feature: Winter's Hill Estate (1000 Friends of Oregon)",
+        "url": "https://friends.org/news/2026/5/winters-hill"
+      },
+      {
+        "title": "Bees, Birds and Pinot Take Center Stage at Winter's Hill Estate (Portland Monthly, sponsored)",
+        "url": "https://www.pdxmonthly.com/articles/bees-birds-and-pinot-take-center-stage-at-winter-s-hill-estate-in-the-dundee-hills"
+      },
+      {
+        "title": "Weinnotes newsletter, 26 June 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-3"
+      }
+    ],
+    "verified": false
   }
 ]

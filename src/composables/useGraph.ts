@@ -1,5 +1,6 @@
 import { computed, reactive } from 'vue'
 import { loadGraph } from '../data'
+import type { Proposal, ProposedEdge } from '../../tools/jev/parseConnection'
 import {
   EDGE_CATEGORIES,
   EDGE_RULES,
@@ -269,16 +270,44 @@ const unverified = computed(() => ({
 async function setVerified(kind: 'node' | 'edge', record: GraphNode | GraphEdge, verified: boolean) {
   state.reviewError = null
   try {
-    const response = await fetch('/__review/verify', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ kind, id: record.id, verified }),
-    })
-    if (!response.ok) throw new Error((await response.text()) || `HTTP ${response.status}`)
+    await postJson('/__review/verify', { kind, id: record.id, verified })
     record.verified = verified
   } catch (error) {
     state.reviewError = `Could not save "${record.id}": ${error instanceof Error ? error.message : error}`
   }
+}
+
+async function postJson<T>(url: string, body: unknown): Promise<T> {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(body),
+  })
+  if (!response.ok) throw new Error((await response.text()) || `HTTP ${response.status}`)
+  return response.json()
+}
+
+// Asks the dev server to read a sentence typed on a node's page as a connection
+function parseConnection(text: string, contextId: string): Promise<Proposal> {
+  return postJson('/__contribute/parse', { text, contextId })
+}
+
+// Saves a confirmed connection to the data files and shows it in the graph
+async function addConnection(
+  edge: ProposedEdge,
+  newNode: Pick<GraphNode, 'id' | 'name' | 'type'> | null,
+  text: string,
+  sourceUrl: string,
+): Promise<{ edge: GraphEdge; node?: GraphNode }> {
+  const added = await postJson<{ edge: GraphEdge; node?: GraphNode }>('/__contribute/add', {
+    edge,
+    newNode,
+    text,
+    sourceUrl,
+  })
+  if (added.node) state.graph?.nodes.push(added.node)
+  state.graph?.edges.push(added.edge)
+  return added
 }
 
 // Approves a node together with every connection listed on its card
@@ -355,6 +384,8 @@ export function useGraph() {
     unverified,
     setVerified,
     approveCard,
+    parseConnection,
+    addConnection,
     selectNextUnverified,
     init,
   }

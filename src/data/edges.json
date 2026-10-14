@@ -810,7 +810,7 @@
         "url": "https://timatkin.com/celebrating-25-years-of-the-ipnc/"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "robert-drouhin--participated-in--ipnc",
@@ -1001,7 +1001,7 @@
         "url": "https://www.oregonwinepress.com/q-and-a-david-adelsheim"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "nancy-ponzi--member-of--oregon-winegrowers-association",
@@ -1030,7 +1030,7 @@
         "url": "https://en.wikipedia.org/wiki/Willamette_Valley_AVA"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "jim-bernau--worked-at--oregon-winegrowers-association",
@@ -1194,7 +1194,7 @@
         "url": "https://www.willamettewines.com/about-us/"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "amity-vineyards--member-of--willamette-valley-wineries-association",
@@ -1422,7 +1422,7 @@
         "url": "https://www.winespectator.com/articles/profiles-in-pinot-noir-domaine-drouhin-1804"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "veronique-drouhin--worked-at--bethel-heights-vineyard",
@@ -3860,7 +3860,7 @@
         "url": "https://princeofpinot.com/article/1418"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "ginny-adelsheim--founded--adelsheim-vineyard",
@@ -3874,7 +3874,7 @@
         "url": "https://en.wikipedia.org/wiki/Adelsheim_Vineyard"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "david-adelsheim--family--ginny-adelsheim",
@@ -3911,7 +3911,7 @@
         "url": "https://princeofpinot.com/article/1418"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "david-adelsheim--worked-at--the-eyrie-vineyards",
@@ -3942,7 +3942,7 @@
         "url": "https://en.wikipedia.org/wiki/Adelsheim_Vineyard"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "adelsheim-vineyard--located-in--chehalem-mountains",
@@ -3959,7 +3959,7 @@
         "url": "https://en.wikipedia.org/wiki/Oregon_wine"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "susan-sokol-blosser--founded--sokol-blosser-winery",
@@ -4684,7 +4684,7 @@
         "url": "https://www.wineandspiritsmagazine.com/?p=695"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "bergstrom-wines--sources-from--temperance-hill-vineyard",
@@ -6666,7 +6666,7 @@
         "url": "https://www.princeofpinot.com/vineyard/901/index.html"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "carter-vineyard--located-in--eola-amity-hills",
@@ -22364,6 +22364,186 @@
       {
         "title": "Weinnotes newsletter, 4 September 2021",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-13"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dan-diephouse--family--jeanne-feldkamp",
+    "source": "dan-diephouse",
+    "target": "jeanne-feldkamp",
+    "type": "family",
+    "role": "spouse",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Added by Michael Arrington, 13 October 2026: \"Dan is married to the other co-founder of Corollary Wines (Jeanne)\""
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "emily-gladhart--founded--winters-hill-vineyard",
+    "source": "emily-gladhart",
+    "target": "winters-hill-vineyard",
+    "type": "founded",
+    "role": "planted",
+    "startYear": 1990,
+    "sources": [
+      {
+        "title": "Oregon Wine Month feature: Winter's Hill Estate (1000 Friends of Oregon)",
+        "url": "https://friends.org/news/2026/5/winters-hill"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "peter-gladhart--founded--winters-hill-vineyard",
+    "source": "peter-gladhart",
+    "target": "winters-hill-vineyard",
+    "type": "founded",
+    "role": "planted",
+    "startYear": 1990,
+    "sources": [
+      {
+        "title": "Oregon Wine Month feature: Winter's Hill Estate (1000 Friends of Oregon)",
+        "url": "https://friends.org/news/2026/5/winters-hill"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "winters-hill-estate--owns--winters-hill-vineyard",
+    "source": "winters-hill-estate",
+    "target": "winters-hill-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Bees, Birds and Pinot Take Center Stage at Winter's Hill Estate (Portland Monthly, sponsored)",
+        "url": "https://www.pdxmonthly.com/articles/bees-birds-and-pinot-take-center-stage-at-winter-s-hill-estate-in-the-dundee-hills"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "russell-gladhart--winemaker--winters-hill-estate",
+    "source": "russell-gladhart",
+    "target": "winters-hill-estate",
+    "type": "winemaker",
+    "startYear": 2015,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Bees, Birds and Pinot Take Center Stage at Winter's Hill Estate (Portland Monthly, sponsored)",
+        "url": "https://www.pdxmonthly.com/articles/bees-birds-and-pinot-take-center-stage-at-winter-s-hill-estate-in-the-dundee-hills"
+      },
+      {
+        "title": "Oregon Wine Month feature: Winter's Hill Estate (1000 Friends of Oregon)",
+        "url": "https://friends.org/news/2026/5/winters-hill"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "delphine-gladhart--winemaker--winters-hill-estate",
+    "source": "delphine-gladhart",
+    "target": "winters-hill-estate",
+    "type": "winemaker",
+    "startYear": 2005,
+    "endYear": 2015,
+    "sources": [
+      {
+        "title": "Bees, Birds and Pinot Take Center Stage at Winter's Hill Estate (Portland Monthly, sponsored)",
+        "url": "https://www.pdxmonthly.com/articles/bees-birds-and-pinot-take-center-stage-at-winter-s-hill-estate-in-the-dundee-hills"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "emily-gladhart--family--peter-gladhart",
+    "source": "emily-gladhart",
+    "target": "peter-gladhart",
+    "type": "family",
+    "role": "spouse",
+    "sources": [
+      {
+        "title": "Oregon Wine Month feature: Winter's Hill Estate (1000 Friends of Oregon)",
+        "url": "https://friends.org/news/2026/5/winters-hill"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "emily-gladhart--family--russell-gladhart",
+    "source": "emily-gladhart",
+    "target": "russell-gladhart",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "Oregon Wine Month feature: Winter's Hill Estate (1000 Friends of Oregon)",
+        "url": "https://friends.org/news/2026/5/winters-hill"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "peter-gladhart--family--russell-gladhart",
+    "source": "peter-gladhart",
+    "target": "russell-gladhart",
+    "type": "family",
+    "role": "parent",
+    "sources": [
+      {
+        "title": "Oregon Wine Month feature: Winter's Hill Estate (1000 Friends of Oregon)",
+        "url": "https://friends.org/news/2026/5/winters-hill"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "russell-gladhart--family--delphine-gladhart",
+    "source": "russell-gladhart",
+    "target": "delphine-gladhart",
+    "type": "family",
+    "role": "spouse",
+    "sources": [
+      {
+        "title": "Bees, Birds and Pinot Take Center Stage at Winter's Hill Estate (Portland Monthly, sponsored)",
+        "url": "https://www.pdxmonthly.com/articles/bees-birds-and-pinot-take-center-stage-at-winter-s-hill-estate-in-the-dundee-hills"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "winters-hill-vineyard--located-in--dundee-hills",
+    "source": "winters-hill-vineyard",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "note": "Sources place the estate in the Dundee Hills without naming the AVA.",
+    "sources": [
+      {
+        "title": "Oregon Wine Month feature: Winter's Hill Estate (1000 Friends of Oregon)",
+        "url": "https://friends.org/news/2026/5/winters-hill"
+      },
+      {
+        "title": "Bees, Birds and Pinot Take Center Stage at Winter's Hill Estate (Portland Monthly, sponsored)",
+        "url": "https://www.pdxmonthly.com/articles/bees-birds-and-pinot-take-center-stage-at-winter-s-hill-estate-in-the-dundee-hills"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "corollary-wines--sources-from--winters-hill-vineyard",
+    "source": "corollary-wines",
+    "target": "winters-hill-vineyard",
+    "type": "sources_from",
+    "note": "Named among Corollary's fruit sources in 2021, including a 2017 sparkling Pinot blanc from vines planted in 1990.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 26 June 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-3"
       }
     ],
     "verified": false

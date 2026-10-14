@@ -37,6 +37,18 @@ Run `npm run dev` and the detail panel gains a review box. Each node and each co
 
 Review mode exists only on the dev server (`tools/reviewPlugin.ts`); the built site is read-only and shows unverified records with an "Unverified draft" badge.
 
+## Adding a connection in plain language
+
+Also on the dev server, each node's panel has an "Add new connection" box. Type a sentence about that node, such as "Dan and Jeanne are married" on Dan Diephouse's page, optionally with a source URL. The app shows what it understood as an editable preview; nothing is saved until you confirm. A saved connection is appended to `edges.json` as an unverified record. Without a URL it cites you and the date.
+
+The reading is done by [Jev](https://typesafe.ai), a decision model: our code finds the candidate nodes and years, Jev chooses among them and among the allowed connection types, and the edge rules have the last word. Put a key in `.env.local` to use it:
+
+```
+JEV_API_KEY=...
+```
+
+Without a key, keyword rules stand in for Jev so the feature still works; the preview says which one read the sentence. If the sentence names someone or something the graph does not have, the preview offers to create it as a new unverified node, with a name and type you can correct before saving. One sentence adds one connection. The code is in `tools/jev/`.
+
 ## App
 
 - `src/composables/useGraph.ts`: shared state, filters and derived views

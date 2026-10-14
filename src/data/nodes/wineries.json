@@ -712,7 +712,7 @@
         "url": "https://en.wikipedia.org/wiki/Oregon_wine"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "sokol-blosser-winery",
@@ -4635,6 +4635,26 @@
       {
         "title": "Weinnotes newsletter, 14 August 2021",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-10"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "winters-hill-estate",
+    "type": "winery",
+    "name": "Winter's Hill Estate",
+    "aka": [
+      "Winter's Hill"
+    ],
+    "summary": "Family winery in the Dundee Hills on a farm bought by John and Lena Winter in 1961. Their daughter Emily Gladhart and her husband Peter planted its vineyard, and their son Russell is the winemaker.",
+    "sources": [
+      {
+        "title": "Oregon Wine Month feature: Winter's Hill Estate (1000 Friends of Oregon)",
+        "url": "https://friends.org/news/2026/5/winters-hill"
+      },
+      {
+        "title": "Bees, Birds and Pinot Take Center Stage at Winter's Hill Estate (Portland Monthly, sponsored)",
+        "url": "https://www.pdxmonthly.com/articles/bees-birds-and-pinot-take-center-stage-at-winter-s-hill-estate-in-the-dundee-hills"
       }
     ],
     "verified": false

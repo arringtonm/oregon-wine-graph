@@ -218,6 +218,14 @@ export const EDGE_RULES = {
 export type EdgeType = keyof typeof EDGE_RULES
 const EDGE_TYPES = Object.keys(EDGE_RULES) as [EdgeType, ...EdgeType[]]
 
+// The edge types that may run from a node of one type to a node of another
+export function allowedEdgeTypes(from: NodeType, to: NodeType): EdgeType[] {
+  return EDGE_TYPES.filter((type) => {
+    const rule: EdgeRule = EDGE_RULES[type]
+    return rule.from.includes(from) && rule.to.includes(to)
+  })
+}
+
 export const edgeSchema = z.strictObject({
   id: z.string().regex(/^[a-z0-9]+(-+[a-z0-9]+)*$/, 'must be a slug'),
   source: slug,

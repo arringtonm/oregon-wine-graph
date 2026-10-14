@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { nodeYears, reviewEnabled, useGraph } from '../composables/useGraph'
 import { EDGE_CATEGORY_LABELS, NODE_TYPE_LABELS } from '../data/schema'
+import AddConnection from './AddConnection.vue'
 import NodeGlyph from './NodeGlyph.vue'
 
 const { state, selectedNode, connectionsOf, select, unverified, setVerified, approveCard, selectNextUnverified } =
@@ -100,6 +101,8 @@ const facts = computed(() =>
         </ul>
       </section>
       <p v-if="groups.length === 0" class="detail__facts">No connections recorded yet.</p>
+
+      <AddConnection v-if="reviewEnabled" :key="selectedNode.id" :node="selectedNode" />
 
       <section>
         <h3>Sources</h3>
