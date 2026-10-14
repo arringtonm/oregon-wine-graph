@@ -5803,7 +5803,7 @@
         "url": "https://whiteroseestate.com/about/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/white-rose-estate-collection/",
@@ -5812,7 +5812,8 @@
       }
     ],
     "place": "Dundee, OR",
-    "address": "6250 NE Hilltop Ln, Dundee, OR"
+    "address": "6250 NE Hilltop Ln, Dundee, OR",
+    "verifiedBy": "person"
   },
   {
     "id": "leonetti-cellar",

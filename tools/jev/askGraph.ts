@@ -385,14 +385,14 @@ async function rankedAnswer(question: string, graph: Graph, model: DecisionModel
     .sort((a, b) => b.score - a.score)
     .slice(0, 6)
   if (scored.length === 0) {
-    return { model: model.name, kind: 'none', confidence: 0, bestGuess: true, sentence: 'Jev found no record that answers that question.', results: [] }
+    return { model: model.name, kind: 'none', confidence: 0, bestGuess: true, sentence: 'No record clearly answers that question.', results: [] }
   }
   return {
     model: model.name,
     kind: 'ranked',
     confidence: scored[0].score,
     bestGuess: true,
-    sentence: `Jev's best guess: ${list(scored.map((entry) => entry.node.name))}.`,
+    sentence: `Best guess: ${list(scored.map((entry) => entry.node.name))}.`,
     results: scored.map((entry) => ({ node: ref(entry.node), detail: `${Math.round(entry.score * 100)}% likely relevant` })),
   }
 }

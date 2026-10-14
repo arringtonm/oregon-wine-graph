@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, defineAsyncComponent, onBeforeUnmount, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { nodeYears, useGraph } from '../composables/useGraph'
 import { NODE_TYPES, NODE_TYPE_LABELS, type GraphNode } from '../data/schema'
 import { matchesQuery } from '../graph/textMatch'
@@ -9,8 +9,6 @@ import NodeGlyph from './NodeGlyph.vue'
 // through. Choosing one selects it and moves focus to its details.
 const { state, visibleNodes, degree, select, announce } = useGraph()
 
-// Ask Jev needs the dev server, where the key lives; the production build leaves it out
-const AskJev = import.meta.env.DEV ? defineAsyncComponent(() => import('./AskJev.vue')) : null
 
 // Narrows the list as you type: every word must appear in the name, other names, place
 // or summary, ignoring case and accents
@@ -60,7 +58,6 @@ function detail(node: GraphNode): string {
       />
       <span id="graph-list-count" class="graph-list__total">{{ matching.length }} of {{ visibleNodes.length }}</span>
     </div>
-    <AskJev v-if="AskJev" />
     <section v-for="group in groups" :key="group.type" :aria-labelledby="`graph-list-${group.type}`">
       <h3 :id="`graph-list-${group.type}`">
         <NodeGlyph :type="group.type" />

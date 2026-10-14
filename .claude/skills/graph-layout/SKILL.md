@@ -19,6 +19,16 @@ The graph is a node-link diagram of about 1,150 nodes and 1,950 connections, dra
 - **No grid packing.** `tile: false`. fcose otherwise packs unconnected nodes into a square grid, which survives later incremental layouts.
 - **Fresh layout after a large change.** A filter change adding or removing over a tenth of the elements re-randomizes; smaller changes keep positions so the view stays stable.
 
+## Performance (October 2026, about 1,150 nodes and 1,770 lines)
+
+- **Never re-run fcose for a filter change.** It froze the page for 1.4–2.2s per toggle. Removed nodes are just removed; returning nodes go back to their remembered positions (kept per arrangement, plain and AVA regions, in `knownPositions` in `GraphCanvas.vue`); never-placed nodes go beside their neighbours (`src/graph/placement.ts`), then the overlap pass runs. Toggles now take 30–160ms. A full layout runs only with no saved layout, on Reset, the first time regions are shown, or when over 10% of the showing nodes have never been placed.
+- **Saved layout.** `src/data/layout.json` holds the default view's positions, one node per line. The dev server rewrites it after any fresh full layout of the default view (first load without it, or Reset), through `/__layout`; commit it with data changes. `npm run layout:reset` empties it so the next load lays out afresh. Load went from about 2s frozen to no layout at all.
+- **Removing a region box takes its children with it** in Cytoscape. Move children out (`children().move({ parent: null })`) before removing a parent, or they come back as new elements and lose their places.
+- **Fit after mount needs `cy.resize()` first:** without a layout's delay, Cytoscape's cached container size is stale and the view lands far off the graph.
+- **Lines at rest are `haystack` with no arrowheads**; highlighted and hovered lines switch to `bezier` with arrows and labels. Frame time fell from 9–10ms to 6–7.5ms (2× pixel ratio). Hover still finds straight lines.
+- **Rejected:** `textureOnViewport` (blurs labels while zooming); `hideEdgesOnViewport` (lines vanish while moving).
+- **Measuring in a background tab:** `requestAnimationFrame` doesn't run and timers are throttled, so time interactions synchronously with a few awaited microtasks, and frame cost with `cy.renderer().renderTo(ctx, zoom, pan, 2)` into an offscreen canvas. Take a screenshot first, or the renderer may not have computed styles and report 0ms.
+
 ## What was tried and rejected (October 2026)
 
 Measured on the full graph, two runs each:

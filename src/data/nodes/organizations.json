@@ -119,7 +119,8 @@
         "url": "https://en.wikipedia.org/wiki/History_of_Oregon_wine"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "linfield-university",

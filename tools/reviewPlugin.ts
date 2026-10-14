@@ -279,6 +279,25 @@ export function reviewPlugin(dataDir = resolve('src/data')): Plugin {
         }),
       )
 
+      // The layout of the default view, saved so the app and the published site can show it
+      // without laying the graph out again. Only positions, rounded; nothing else changes.
+      server.middlewares.use(
+        '/__layout',
+        route(({ version, positions }) => {
+          if (typeof positions !== 'object' || positions === null) throw new Error('Malformed request')
+          const entries = Object.entries(positions as Record<string, unknown>)
+          if (!entries.every(([, point]) => Array.isArray(point) && point.length === 2 && point.every(Number.isFinite))) {
+            throw new Error('Malformed positions')
+          }
+          const file = join(dataDir, 'layout.json')
+          // One node per line, so a changed layout reads as a short diff
+          const lines = entries.map(([id, point]) => `  ${JSON.stringify(id)}: ${JSON.stringify(point)}`)
+          writeFileSync(file, `{\n "version": ${JSON.stringify(version)},\n "positions": {\n${lines.join(',\n')}\n }\n}\n`)
+          ownWrites.add(file)
+          return { saved: entries.length }
+        }),
+      )
+
       // A question about the graph, read by Jev and answered from the records
       server.middlewares.use(
         '/__ask',

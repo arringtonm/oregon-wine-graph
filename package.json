@@ -19,7 +19,8 @@
     "owha:fetch": "tsx tools/discover/owha.ts",
     "owha:match": "tsx tools/discover/owhaMatch.ts",
     "owha:link": "tsx tools/discover/owhaLink.ts",
-    "discover:merge": "tsx tools/discover/merge.ts"
+    "discover:merge": "tsx tools/discover/merge.ts",
+    "layout:reset": "node -e \"require('fs').writeFileSync('src/data/layout.json', JSON.stringify({version: 1, positions: {}}, null, 1) + '\\\\n')\""
   },
   "dependencies": {
     "cytoscape": "3.34.3",

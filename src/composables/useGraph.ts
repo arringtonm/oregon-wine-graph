@@ -99,6 +99,18 @@ const edges = computed(() => state.graph?.edges ?? [])
 const nodeById = computed(() => new Map(nodes.value.map((node) => [node.id, node])))
 const avas = computed(() => nodes.value.filter((node) => node.type === 'ava'))
 
+// Whether the filters are as the app starts: the view whose layout is saved and shipped
+const isDefaultView = computed(() => {
+  const defaults = defaultFilters()
+  return (
+    Object.entries(defaults.nodeTypes).every(([type, on]) => state.nodeTypes[type as ToggleableNodeType] === on) &&
+    Object.entries(defaults.categories).every(([category, on]) => state.categories[category as EdgeCategory] === on) &&
+    state.oregonOnly === defaults.oregonOnly &&
+    state.verifiedOnly === defaults.verifiedOnly &&
+    state.avas.length === 0
+  )
+})
+
 // Connection count per node, ignoring geography so AVA membership does not inflate it
 const degree = computed(() => {
   const counts = new Map<string, number>()
@@ -571,6 +583,7 @@ export function useGraph() {
     selectNextWithVerdict,
     avaParent,
     avasOf,
+    isDefaultView,
     nearby,
     loadEvidence,
     removeEdge,

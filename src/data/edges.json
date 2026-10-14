@@ -19227,7 +19227,8 @@
         "url": "https://wineindustryadvisor.com/?p=60292"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "tresider-burns--worked-at--brittan-vineyards",
@@ -23420,7 +23421,8 @@
         "url": "https://www.princeofpinot.com/article/1531/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "jesus-guillen--worked-at--white-rose-estate",
@@ -23440,7 +23442,8 @@
         "url": "https://www.oregonwinepress.com/jesus-guillen-olvera"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "jesus-guillen--worked-at--patricia-green-cellars",
@@ -29795,7 +29798,8 @@
         "url": "https://oregonwinehistoryarchive.org/regions/oregon-wine-industry-businesses/oregon-wine-press-collection/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "robert-henry--winemaker--pamplin-family-winery",
@@ -31401,5 +31405,18 @@
     ],
     "verified": true,
     "verifiedBy": "jev"
+  },
+  {
+    "id": "white-rose-estate--owns--white-rose-vineyard",
+    "source": "white-rose-estate",
+    "target": "white-rose-vineyard",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Added by Michael Arrington, 14 October 2026: \"White Rose Estate owns White Rose Vineyard\""
+      }
+    ],
+    "verified": false
   }
 ]

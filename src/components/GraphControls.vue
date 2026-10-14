@@ -1,8 +1,12 @@
 <script setup lang="ts">
-import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { computed, defineAsyncComponent, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useGraph, type ToggleableNodeType } from '../composables/useGraph'
 import { EDGE_CATEGORIES, EDGE_CATEGORY_LABELS, NODE_TYPE_LABELS, type NodeType } from '../data/schema'
 import NodeGlyph from './NodeGlyph.vue'
+
+// Questions need the dev server, where the decision model's key lives; the production build
+// leaves the whole component out
+const AskQuestion = import.meta.env.DEV ? defineAsyncComponent(() => import('./AskQuestion.vue')) : null
 
 const { state, avas, visibleNodes, visibleEdges, search, select, announce } = useGraph()
 
@@ -138,6 +142,8 @@ function onDrawerKey(event: KeyboardEvent) {
         <li v-if="results.length === 0" class="controls__empty" role="presentation">No matches</li>
       </ul>
     </div>
+
+    <AskQuestion v-if="AskQuestion" class="controls__ask" @pick="pick" />
 
     <fieldset>
       <legend>Show</legend>

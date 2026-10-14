@@ -4,8 +4,10 @@ import fcose from 'cytoscape-fcose'
 import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 import { edgeLabel, formatYears, nodeYears, useGraph } from '../composables/useGraph'
 import { EDGE_RULES, NODE_TYPES } from '../data/schema'
+import savedLayoutFile from '../data/layout.json'
 import { iconDataUri } from '../graph/icons'
 import { sizeTiers } from '../graph/nodeSize'
+import { coverage, placeNear, toSaved, type Point, type SavedLayout } from '../graph/placement'
 import { removeOverlaps } from '../graph/removeOverlaps'
 import Chevron from './Chevron.vue'
 import ControlsGuide from './ControlsGuide.vue'
@@ -29,7 +31,19 @@ const {
   goForward,
   goToHistory,
   historyEntries,
+  isDefaultView,
 } = useGraph()
+
+// The default view's layout, saved from the dev server and shipped with the data, so the
+// graph appears without laying it out again (a full layout freezes the page for 1–2s)
+const savedLayout = savedLayoutFile as unknown as SavedLayout
+// Where each node was last placed, kept per arrangement (plain, or grouped into AVA
+// regions), so filters and the regions switch can put nodes back instead of re-laying out
+const knownPositions = {
+  flat: new Map<string, Point>(Object.entries(savedLayout.positions).map(([id, [x, y]]) => [id, { x, y }])),
+  regions: new Map<string, Point>(),
+}
+const positionsNow = () => knownPositions[state.categories.geography ? 'regions' : 'flat']
 
 const container = ref<HTMLDivElement>()
 const historyOpen = ref(false)
@@ -147,10 +161,13 @@ function buildStyle(): StylesheetJson {
         'line-opacity': 0.8,
         'line-color': token('--edge'),
         'target-arrow-color': token('--edge'),
-        'target-arrow-shape': 'triangle',
+        // At rest, the cheapest lines Cytoscape draws: straight, no arrowheads. Lines are
+        // most of each frame's cost; this cut it by about a quarter. A selected node's lines
+        // (and a hovered one) curve apart, point their way and carry labels, below
+        'curve-style': 'haystack',
+        'haystack-radius': 0,
+        'target-arrow-shape': 'none',
         'arrow-scale': 0.6,
-        'curve-style': 'bezier',
-        'control-point-step-size': 55,
         'font-size': 9,
         'font-family': 'system-ui, -apple-system, "Segoe UI", sans-serif',
         color: token('--text-secondary'),
@@ -189,7 +206,16 @@ function buildStyle(): StylesheetJson {
     },
     {
       selector: 'edge.highlighted, edge.hovered',
-      style: { label: 'data(label)', width: 2.5, 'line-opacity': 1, 'line-color': ink, 'target-arrow-color': ink },
+      style: {
+        label: 'data(label)',
+        width: 2.5,
+        'line-opacity': 1,
+        'line-color': ink,
+        'target-arrow-color': ink,
+        'target-arrow-shape': 'triangle',
+        'curve-style': 'bezier',
+        'control-point-step-size': 55,
+      },
     },
   ]
 }
@@ -252,6 +278,9 @@ function buildElements(): ElementDefinition[] {
 // zoom that makes nodes enormous, so the zoom is capped.
 function fit() {
   if (!cy) return
+  // Re-read the container's size: with a saved layout the first fit happens straight after
+  // mounting, before Cytoscape's cached size is current
+  cy.resize()
   cy.fit(undefined, 40)
   if (cy.zoom() > 1.25) {
     cy.zoom(1.25)
@@ -333,6 +362,7 @@ function runLayout(randomize: boolean) {
   } as cytoscape.LayoutOptions)
   layout.one('layoutstop', () => {
     separateNodes()
+    if (randomize) saveLayout()
     fit()
     centerOnSelection()
   })
@@ -363,29 +393,83 @@ function separateNodes() {
       node.position({ x: position.x + dx, y: position.y + dy })
     }
   })
+  rememberPositions()
 }
 
-// Add and remove only what changed so existing nodes keep their positions
+const plainNodes = () => cy!.nodes().filter((node) => node.isChildless())
+
+function rememberPositions() {
+  if (!cy) return
+  const known = positionsNow()
+  plainNodes().forEach((node: cytoscape.NodeSingular) => void known.set(node.id(), { ...node.position() }))
+}
+
+// Dev server only: save the default view's fresh layout so it ships with the data
+function saveLayout() {
+  if (!cy || !import.meta.env.DEV || !isDefaultView.value || state.categories.geography) return
+  const positions = new Map(plainNodes().map((node: cytoscape.NodeSingular) => [node.id(), node.position()] as [string, Point]))
+  fetch('/__layout', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(toSaved(positions)),
+  }).catch(() => {})
+}
+
+// Puts the given nodes where they were last placed, or beside the nodes they connect to.
+// Returns false, placing nothing, when more than `maxNew` of the showing nodes would be
+// new: too many to place sensibly, so a full layout should run instead.
+function placeNodes(ids: string[], maxNew = 0.1): boolean {
+  const known = positionsNow()
+  const unknown = ids.filter((id) => !known.has(id))
+  if (unknown.length > plainNodes().length * maxNew) return false
+  const moving = new Set(ids)
+  // Anchors: nodes already in place, and the returning nodes at their old positions
+  const anchors = new Map<string, Point>()
+  plainNodes().forEach((node: cytoscape.NodeSingular) => {
+    if (!moving.has(node.id())) anchors.set(node.id(), { ...node.position() })
+  })
+  for (const id of ids) if (known.has(id)) anchors.set(id, known.get(id)!)
+  const points = [...anchors.values()]
+  const centre = points.length
+    ? { x: points.reduce((sum, p) => sum + p.x, 0) / points.length, y: points.reduce((sum, p) => sum + p.y, 0) / points.length }
+    : { x: 0, y: 0 }
+  const fresh = placeNear(
+    unknown,
+    (id) => cy!.getElementById(id).neighborhood('node').map((node) => node.id()),
+    anchors,
+    centre,
+  )
+  cy!.batch(() => {
+    for (const id of ids) cy!.getElementById(id).position(anchors.get(id) ?? fresh.get(id) ?? centre)
+  })
+  return true
+}
+
+// Whether the last sync showed AVA regions, to tell a switch of arrangement from a filter change
+let lastRegions: boolean | undefined
+
+// Add and remove only what changed, so nodes keep their places. Only the first view with no
+// saved layout, Reset, and changes that bring in many never-placed nodes run a full layout.
 function syncElements() {
   if (!cy) return
   const wanted = buildElements()
   const wantedIds = new Set(wanted.map((element) => element.data.id))
   const firstRender = cy.elements().empty()
-  let changed = false
-  let regrouped = false
-  let churn = 0
+  const added: string[] = []
+  const regrouped = lastRegions !== undefined && lastRegions !== state.categories.geography
+  lastRegions = state.categories.geography
   let resized = false
   cy.batch(() => {
     const stale = cy!.elements().filter((element) => !wantedIds.has(element.id()))
-    changed = stale.nonempty()
-    churn = stale.length
+    // Removing a region box would take its vineyards with it; move them out first so they
+    // stay the same elements, in place
+    stale.filter((element) => element.isNode() && element.isParent()).children().move({ parent: null })
     stale.remove()
     for (const element of wanted) {
       const existing = cy!.getElementById(element.data.id!)
       if (existing.empty()) {
         cy!.add(element)
-        changed = true
-        churn++
+        if (element.group === 'nodes') added.push(element.data.id!)
       } else if (element.group === 'nodes' && existing.data('size') !== element.data.size) {
         // Filters re-rank the nodes showing, so a node kept in view can change tier
         existing.data({ size: element.data.size, fontSize: element.data.fontSize })
@@ -394,18 +478,37 @@ function syncElements() {
       if (existing.nonempty() && element.group === 'nodes' && (existing.data('parent') ?? undefined) !== element.data.parent) {
         // Turning AVA regions on or off moves nodes into or out of them
         existing.move({ parent: element.data.parent ?? null })
-        changed = true
-        regrouped = true
       }
     }
   })
-  // Regions turned on or off need a fresh layout; keeping old positions leaves regions sprawling.
-  // So does a large change, such as a filter restoring hundreds of connections: nodes kept
-  // where the filter left them end up joined by long lines across the whole graph
-  const large = churn > wanted.length * 0.1
-  if (changed) runLayout(firstRender || regrouped || large)
-  // Nodes that grew without a new layout may now overlap their neighbours
-  else if (resized) separateNodes()
+  const plain = (ids: string[]) => ids.filter((id) => cy!.getElementById(id).isChildless())
+
+  if (firstRender) {
+    const ids = plainNodes().map((node) => node.id())
+    const usable = !state.categories.geography && coverage(savedLayout, ids) >= 0.9
+    if (usable && placeNodes(ids)) {
+      // Nodes added since the layout was saved may collide with their neighbours
+      if (ids.some((id) => !(id in savedLayout.positions))) {
+        separateNodes()
+        saveLayout()
+      }
+      rememberPositions()
+      fit()
+      centerOnSelection()
+    } else {
+      runLayout(true)
+    }
+  } else if (regrouped) {
+    // Each arrangement keeps its own positions; a fresh layout only the first time
+    if (placeNodes(plainNodes().map((node) => node.id()), 0)) fit()
+    else runLayout(true)
+  } else if (added.length > 0) {
+    if (placeNodes(plain(added))) separateNodes()
+    else runLayout(true)
+  } else if (resized) {
+    // Nodes that grew may now overlap their neighbours
+    separateNodes()
+  }
   applySelection()
 }
 
@@ -460,7 +563,7 @@ onMounted(() => {
     maxZoom: 3,
   })
   // Exposed on the dev server for measuring layouts from the browser console
-  if (import.meta.env.DEV) Object.assign(window, { __cy: cy })
+  if (import.meta.env.DEV) Object.assign(window, { __cy: cy, __knownPositions: knownPositions })
 
   cy.on('tap', (event) => {
     state.filtersOpen = false
@@ -468,6 +571,8 @@ onMounted(() => {
     if (event.target === cy) select(null)
   })
   cy.on('tap', 'node', (event) => select(event.target.id()))
+  // A node dragged somewhere stays there when filters hide and restore it
+  cy.on('dragfree', 'node', (event) => void positionsNow().set(event.target.id(), { ...event.target.position() }))
   cy.on('mouseover', 'node', (event) => {
     const node = nodeById.value.get(event.target.id())
     if (!node) return

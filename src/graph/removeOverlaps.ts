@@ -24,11 +24,16 @@ export interface OverlapResult {
   remaining: number
 }
 
-export function removeOverlaps(input: Box[], { gap = 6, maxPasses = 400, slack = 1 } = {}): OverlapResult {
+export function removeOverlaps(input: Box[], { gap = 6, maxPasses = 400, slack = 1, patience = 60 } = {}): OverlapResult {
   const boxes = input.map((box) => ({ ...box }))
   const cell = Math.max(1, ...boxes.map((box) => Math.max(box.width, box.height) + gap))
   let passes = 0
   let remaining = 0
+  // Stop once the count of colliding pairs has not fallen for `patience` passes: the last
+  // few in a crowded core only shuffle around, and on the full graph those passes were
+  // most of the time spent
+  let fewest = Infinity
+  let sinceFewest = 0
 
   for (; passes < maxPasses; passes++) {
     const grid = new Map<string, number[]>()
@@ -72,6 +77,12 @@ export function removeOverlaps(input: Box[], { gap = 6, maxPasses = 400, slack =
       }
     })
     if (remaining === 0) break
+    if (remaining < fewest) {
+      fewest = remaining
+      sinceFewest = 0
+    } else if (++sinceFewest >= patience) {
+      break
+    }
   }
 
   const moves = new Map<string, { dx: number; dy: number }>()

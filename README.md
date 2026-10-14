@@ -67,6 +67,10 @@ JEV_API_KEY=...
 
 Without a key, keyword rules stand in for Jev so the feature still works; the preview says which one read the sentence. If the sentence names someone or something the graph does not have, the preview offers to create it as a new unverified node, with a name and type you can correct before saving. One sentence adds one connection. The code is in `tools/jev/`.
 
+## Saved layout
+
+The graph opens with a saved arrangement (`src/data/layout.json`), so it appears without laying the graph out in the browser. The dev server saves it whenever the default view gets a fresh layout: on the first load without one, or on Reset. Commit it alongside data changes. Nodes added since the last save are placed beside their connections. To start over, run `npm run layout:reset` and reload.
+
 ## Oregon Wine History Archive
 
 Linfield University's oral-history archive ([oregonwinehistoryarchive.org](https://oregonwinehistoryarchive.org)) serves all its pages through its public WordPress API, so no crawling is needed.
