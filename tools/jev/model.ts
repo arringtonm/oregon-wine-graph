@@ -55,6 +55,7 @@ const TYPE_KEYWORDS: [string, RegExp][] = [
   ['sources_from', /\b(sources?|buys?|purchases?) (fruit|grapes)\b|\bfruit from\b|\bgrapes from\b/],
   ['studied_at', /\b(studied|graduated|degree|alum\w*)\b/],
   ['located_in', /\b(located in|is in the|sits in)\b/],
+  ['draws_from', /\b(grapes|fruit) from the\b|\bdraws? (fruit|grapes)\b/],
   ['within', /\b(within|sub-?ava|nested)\b/],
   ['hosts', /\b(hosts?|hosted)\b/],
   ['participated_in', /\b(took part|participated|poured at|attended)\b/],

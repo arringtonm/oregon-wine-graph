@@ -17,7 +17,20 @@ const {
   selectNextUnverified,
   reviewQueue,
   selectNextWithVerdict,
+  nearby,
+  avasOf,
+  nodeById,
 } = useGraph()
+
+// A winery's or vineyard's AVAs, by name
+const avaNames = computed(() =>
+  selectedNode.value ? avasOf(selectedNode.value.id).map((id) => nodeById.value.get(id)?.name.replace(/ AVA$/, '') ?? id) : [],
+)
+
+const neighbours = computed(() => (selectedNode.value ? nearby(selectedNode.value.id) : []))
+const address = computed(() =>
+  selectedNode.value && 'address' in selectedNode.value ? selectedNode.value.address : undefined,
+)
 
 const QUEUE_LABELS: Record<string, string> = {
   conflict: 'Source disagrees',
@@ -81,6 +94,10 @@ const facts = computed(() =>
         <h2>{{ selectedNode.name }}</h2>
         <p v-if="selectedNode.aka" class="detail__aka">Also known as {{ selectedNode.aka.join(', ') }}</p>
         <p v-if="facts" class="detail__facts">{{ facts }}</p>
+        <p v-if="avaNames.length" class="detail__facts">
+          {{ selectedNode.type === 'winery' ? 'Wine from' : 'In' }}: {{ avaNames.join(', ') }}
+        </p>
+        <p v-if="address" class="detail__facts">Visit: {{ address }}</p>
       </header>
 
       <p>{{ selectedNode.summary }}</p>
@@ -133,6 +150,19 @@ const facts = computed(() =>
         </ul>
       </section>
       <p v-if="groups.length === 0" class="detail__facts">No connections recorded yet.</p>
+
+      <section v-if="neighbours.length">
+        <h3>Nearby tasting rooms</h3>
+        <ul>
+          <li v-for="{ node, km } in neighbours" :key="node.id">
+            <button type="button" class="detail__link" @click="select(node.id)">
+              <NodeGlyph :type="node.type" />
+              {{ node.name }}
+            </button>
+            <span class="detail__years">{{ (km * 0.621371).toFixed(1) }} mi</span>
+          </li>
+        </ul>
+      </section>
 
       <AddConnection v-if="reviewEnabled" :key="selectedNode.id" :node="selectedNode" />
 

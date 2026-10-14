@@ -47,8 +47,8 @@ function defaultFilters() {
     } as Record<EdgeCategory, boolean>,
     oregonOnly: false,
     verifiedOnly: false,
-    // AVA node id to narrow the graph to, or '' for all
-    ava: '',
+    // AVA node ids to narrow the graph to; empty for all
+    avas: [] as string[],
   }
 }
 
@@ -85,11 +85,9 @@ const degree = computed(() => {
   return counts
 })
 
-// Nodes kept by the AVA filter: the AVA and its sub-AVAs, the wineries and
-// vineyards located in them, and anything directly connected to those.
-const avaScope = computed(() => {
-  if (!state.ava) return null
-  const scope = new Set([state.ava])
+// Every AVA inside the given ones, at any depth, plus the given ones
+function withSubAvas(ids: Iterable<string>): Set<string> {
+  const scope = new Set(ids)
   let grew = true
   while (grew) {
     grew = false
@@ -100,10 +98,37 @@ const avaScope = computed(() => {
       }
     }
   }
-  const members = new Set<string>()
-  for (const edge of edges.value) {
-    if (edge.type === 'located_in' && scope.has(edge.target)) members.add(edge.source)
-  }
+  return scope
+}
+
+// The AVAs a winery or vineyard belongs to. A vineyard has the AVA it is located in; a
+// winery has those it draws fruit from directly, plus those of every vineyard it owns or
+// buys from. Most specific AVAs only; their parents follow from "within".
+function avasOf(id: string): string[] {
+  const node = nodeById.value.get(id)
+  if (!node) return []
+  const own = (nodeId: string, type: string) =>
+    edges.value.filter((edge) => edge.source === nodeId && edge.type === type).map((edge) => edge.target)
+  if (node.type === 'vineyard') return own(id, 'located_in')
+  if (node.type !== 'winery') return []
+  const vineyards = edges.value
+    .filter(
+      (edge) => edge.source === id && (edge.type === 'owns' || edge.type === 'sources_from') && nodeById.value.get(edge.target)?.type === 'vineyard',
+    )
+    .map((edge) => edge.target)
+  return [...new Set([...own(id, 'draws_from'), ...vineyards.flatMap((vineyard) => own(vineyard, 'located_in'))])]
+}
+
+// Nodes kept by the AVA filter: the chosen AVAs and their sub-AVAs, the vineyards in
+// them, the wineries drawing fruit from them, and anything directly connected to those
+const avaScope = computed(() => {
+  if (state.avas.length === 0) return null
+  const scope = withSubAvas(state.avas)
+  const members = new Set(
+    nodes.value
+      .filter((node) => (node.type === 'winery' || node.type === 'vineyard') && avasOf(node.id).some((ava) => scope.has(ava)))
+      .map((node) => node.id),
+  )
   for (const edge of edges.value) {
     if (EDGE_RULES[edge.type].category === 'geography') continue
     if (members.has(edge.source)) scope.add(edge.target)
@@ -133,6 +158,53 @@ const visibleEdges = computed(() => {
       shown.has(edge.target),
   )
 })
+
+// The most specific AVA each vineyard or AVA sits in, from "located in" and "within"
+// connections. Used to draw AVA regions around their members. Wineries are left out: a
+// winery can source from vineyards in several AVAs, and its tasting room can be anywhere,
+// so it is shown outside the regions, joined to the vineyards it uses.
+const avaParent = computed(() => {
+  const parentOf = new Map<string, string>()
+  for (const edge of edges.value) if (edge.type === 'within') parentOf.set(edge.source, edge.target)
+  const depth = (id: string): number => {
+    let count = 0
+    for (let current = parentOf.get(id); current && count < 10; current = parentOf.get(current)) count++
+    return count
+  }
+  const result = new Map(parentOf)
+  const place = (id: string, ava: string) => {
+    const current = result.get(id)
+    if (!current || depth(ava) > depth(current)) result.set(id, ava)
+  }
+  for (const edge of edges.value) {
+    if (edge.type === 'located_in' && nodeById.value.get(edge.source)?.type === 'vineyard') place(edge.source, edge.target)
+  }
+  return result
+})
+
+// Straight-line distance in kilometres between two points
+function distanceKm(a: { lat: number; lng: number }, b: { lat: number; lng: number }): number {
+  const radians = Math.PI / 180
+  const dLat = (b.lat - a.lat) * radians
+  const dLng = (b.lng - a.lng) * radians
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * radians) * Math.cos(b.lat * radians) * Math.sin(dLng / 2) ** 2
+  return 2 * 6371 * Math.asin(Math.sqrt(h))
+}
+
+// The wineries nearest a winery by visitor address, within 10 km, closest first. This is
+// about visiting: a tasting room can be in town, far from the winery's vineyards.
+function nearby(id: string, limit = 5): { node: GraphNode; km: number }[] {
+  const origin = nodeById.value.get(id)
+  const from = origin && 'coordinates' in origin ? origin.coordinates : undefined
+  if (!from) return []
+  return nodes.value
+    .flatMap((node) =>
+      node.id !== id && node.type === 'winery' && node.coordinates ? [{ node, km: distanceKm(from, node.coordinates) }] : [],
+    )
+    .filter(({ km }) => km <= 10)
+    .sort((a, b) => a.km - b.km)
+    .slice(0, limit)
+}
 
 const selectedNode = computed(() =>
   state.selectedId ? (nodeById.value.get(state.selectedId) ?? null) : null,
@@ -215,10 +287,13 @@ function connectionsOf(id: string): { category: EdgeCategory; connections: Conne
   }))
 }
 
+// Matches visible nodes, and AVAs even when the AVA layer is off
 function search(query: string): GraphNode[] {
   const needle = query.trim().toLowerCase()
   if (!needle) return []
-  return visibleNodes.value
+  const shown = new Set(visibleNodes.value.map((node) => node.id))
+  return nodes.value
+    .filter((node) => shown.has(node.id) || node.type === 'ava')
     .filter((node) =>
       [node.name, ...(node.aka ?? [])].some((name) => name.toLowerCase().includes(needle)),
     )
@@ -448,6 +523,9 @@ export function useGraph() {
     decisionFor,
     reviewQueue,
     selectNextWithVerdict,
+    avaParent,
+    avasOf,
+    nearby,
     loadEvidence,
     removeEdge,
     updateEdge,

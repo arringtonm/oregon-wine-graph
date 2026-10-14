@@ -17,9 +17,18 @@
       {
         "title": "David Lett (Wikipedia)",
         "url": "https://en.wikipedia.org/wiki/David_Lett"
+      },
+      {
+        "title": "The Eyrie Vineyards: address (www.eyrievineyards.com)",
+        "url": "https://www.eyrievineyards.com/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "935 NE 10th Avenue, McMinnville, Oregon 97128",
+    "coordinates": {
+      "lat": 45.2139,
+      "lng": -123.18772
+    }
   },
   {
     "id": "abacela",
@@ -43,10 +52,19 @@
       {
         "title": "The Abacela Story",
         "url": "https://www.abacela.com/the-abacela-story/"
+      },
+      {
+        "title": "Abacela: address (www.abacela.com)",
+        "url": "https://www.abacela.com/contact-us"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "12500 Lookingglass Rd Roseburg, OR 97471",
+    "coordinates": {
+      "lat": 43.12487,
+      "lng": -123.45112
+    }
   },
   {
     "id": "king-estate",
@@ -313,10 +331,19 @@
       {
         "title": "Our People (Cristom Vineyards)",
         "url": "https://cristomvineyards.com/our-people"
+      },
+      {
+        "title": "Cristom Vineyards: address (cristomvineyards.com)",
+        "url": "https://cristomvineyards.com/visit"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "6905 Spring Valley Rd NW Salem, OR 97304",
+    "coordinates": {
+      "lat": 45.03188,
+      "lng": -123.1207
+    }
   },
   {
     "id": "argyle-winery",
@@ -383,10 +410,19 @@
       {
         "title": "Bill Stoller, Oregon Vintner and Philanthropist, Dies at Age 74 (Wine Spectator)",
         "url": "https://winespectator.com/articles/bill-stoller-oregon-vintner-and-philanthropist-dies-at-age-74"
+      },
+      {
+        "title": "Chehalem: address (www.chehalemwines.com)",
+        "url": "https://www.chehalemwines.com/contact"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "31190 NE Veritas Ln Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.31365,
+      "lng": -122.91725
+    }
   },
   {
     "id": "willamette-valley-vineyards",
@@ -403,9 +439,18 @@
       {
         "title": "The Jim Bernau story (Oregon State University College of Business)",
         "url": "https://business.oregonstate.edu/blog/companies-recruiters/jim-bernau-story-leadership-wine-industry"
+      },
+      {
+        "title": "Willamette Valley Vineyards: address (www.willamettevalleyvineyards.com)",
+        "url": "https://www.willamettevalleyvineyards.com/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "8800 Enchanted Way SE Turner OR 97392",
+    "coordinates": {
+      "lat": 44.82726,
+      "lng": -123.01315
+    }
   },
   {
     "id": "penner-ash-wine-cellars",
@@ -425,9 +470,18 @@
       {
         "title": "Penner-Ash Winery Purchased By California's Jackson Family Wines (Willamette Week)",
         "url": "http://www.wweek.com/bars/2016/04/18/penner-ash-winery-purchased-by-californias-jackson-family-wines/"
+      },
+      {
+        "title": "Penner-Ash Wine Cellars: address (www.pennerash.com)",
+        "url": "https://www.pennerash.com/visit-us"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "15771 NE Ribbon Ridge Road Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.32815,
+      "lng": -123.07903
+    }
   },
   {
     "id": "rex-hill",
@@ -746,10 +800,19 @@
       {
         "title": "About (Sokol Blosser Winery)",
         "url": "https://sokolblosser.com/about/"
+      },
+      {
+        "title": "Sokol Blosser Winery: address (sokolblosser.com)",
+        "url": "https://sokolblosser.com/contact"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "5000 NE Sokol Blosser Lane, Dayton, OR 97114",
+    "coordinates": {
+      "lat": 45.25013,
+      "lng": -123.048
+    }
   },
   {
     "id": "amity-vineyards",
@@ -809,10 +872,19 @@
       {
         "title": "Bill Fuller (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/bill-fuller/"
+      },
+      {
+        "title": "Tualatin Vineyards: address (www.tualatinestate.com)",
+        "url": "https://www.tualatinestate.com/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "10850 NW Seavey Road Forest Grove, Oregon 97116",
+    "coordinates": {
+      "lat": 45.60149,
+      "lng": -123.18253
+    }
   },
   {
     "id": "st-innocent-winery",
@@ -868,9 +940,18 @@
       {
         "title": "Gary Andrus Dies (Wine Spectator)",
         "url": "https://www.winespectator.com/articles/gary-andrus-dies-4567"
+      },
+      {
+        "title": "Archery Summit: address (www.archerysummit.com)",
+        "url": "https://www.archerysummit.com/visit"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "18599 NE Archery Summit Road, Dayton, OR 97114",
+    "coordinates": {
+      "lat": 45.25777,
+      "lng": -123.04844
+    }
   },
   {
     "id": "brick-house-vineyards",
@@ -952,10 +1033,19 @@
       {
         "title": "Lange Estate Winery and Vineyards (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/721/index.html"
+      },
+      {
+        "title": "Lange Estate Winery and Vineyards: address (www.langewinery.com)",
+        "url": "https://www.langewinery.com/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "18380 NE Buena Vista Drive Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.2943,
+      "lng": -123.04845
+    }
   },
   {
     "id": "brooks-wine",
@@ -1265,10 +1355,19 @@
       {
         "title": "Our Story (Nicolas-Jay)",
         "url": "https://www.nicolas-jay.com/our-story"
+      },
+      {
+        "title": "Nicolas-Jay: address (www.nicolas-jay.com)",
+        "url": "https://www.nicolas-jay.com/contact"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "11905 NE Dudley Road, Newberg Oregon 97132",
+    "coordinates": {
+      "lat": 45.30296,
+      "lng": -123.05579
+    }
   },
   {
     "id": "domaine-meo-camuzet",
@@ -1298,10 +1397,19 @@
       {
         "title": "Jackson Family Wines (Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/2228/"
+      },
+      {
+        "title": "Gran Moraine: address (www.granmoraine.com)",
+        "url": "https://www.granmoraine.com/visit-us"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "17090 NE Woodland Loop Rd Yamhill, OR 97148",
+    "coordinates": {
+      "lat": 45.3425,
+      "lng": -123.13147
+    }
   },
   {
     "id": "seven-hills-winery",
@@ -1751,7 +1859,12 @@
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "5100 SE Rice Lane Amity, OR 97101",
+    "coordinates": {
+      "lat": 45.12177,
+      "lng": -123.19018
+    }
   },
   {
     "id": "hiyu-wine-farm",
@@ -1802,10 +1915,19 @@
       {
         "title": "About (Arterberry Maresh)",
         "url": "https://www.arterberrymaresh.com/about"
+      },
+      {
+        "title": "Arterberry Maresh: address (www.arterberrymaresh.com)",
+        "url": "https://www.arterberrymaresh.com/visit"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "9325 NE Worden Hill Road Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27923,
+      "lng": -123.04895
+    }
   },
   {
     "id": "big-table-farm",
@@ -1830,10 +1952,19 @@
       {
         "title": "Weinnotes newsletter, 5 July 2025",
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-MWaK65f1"
+      },
+      {
+        "title": "Big Table Farm: address (www.bigtablefarm.com)",
+        "url": "https://www.bigtablefarm.com/visit"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "26851 NW Williams Canyon Rd Gaston OR 97119",
+    "coordinates": {
+      "lat": 45.41053,
+      "lng": -123.19567
+    }
   },
   {
     "id": "hope-well-wine",
@@ -2069,10 +2200,19 @@
       {
         "title": "Ovum Wines (Skurnik Wines)",
         "url": "https://www.skurnik.com/producer/ovum-wines/"
+      },
+      {
+        "title": "Ovum Wines: address (www.ovumwines.com)",
+        "url": "https://www.ovumwines.com/contact"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "14000 NE Quarry Road, Newberg, Oregon 97132",
+    "coordinates": {
+      "lat": 45.31633,
+      "lng": -122.91234
+    }
   },
   {
     "id": "matzinger-davies",
@@ -2417,9 +2557,18 @@
       {
         "title": "Weinnotes newsletter, 7 December 2024",
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-13"
+      },
+      {
+        "title": "Rodeo Hills: address (www.rodeohillswine.com)",
+        "url": "https://www.rodeohillswine.com/visit"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "10275 NE Worden Hill Rd Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.28986,
+      "lng": -123.06845
+    }
   },
   {
     "id": "marchesi-frescobaldi",
@@ -2531,10 +2680,19 @@
       {
         "title": "Weinnotes newsletter, 8 July 2023",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-105"
+      },
+      {
+        "title": "Celestial Hill: address (www.celestialhill.com)",
+        "url": "https://www.celestialhill.com/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "1970 Northwest Garris Lane, McMinnville, OR, 97128",
+    "coordinates": {
+      "lat": 45.23123,
+      "lng": -123.31188
+    }
   },
   {
     "id": "compris-vineyard",
@@ -2732,13 +2890,22 @@
       {
         "title": "Weinnotes newsletter, 12 October 2024",
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-11"
+      },
+      {
+        "title": "De Ponte Cellars: address (www.depontecellars.com)",
+        "url": "https://www.depontecellars.com/contact"
       }
     ],
     "verified": true,
     "aka": [
       "DePonte Cellars"
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "17545 Archery Summit Road Dayton, OR 97114",
+    "coordinates": {
+      "lat": 45.26017,
+      "lng": -123.05743
+    }
   },
   {
     "id": "1789-wines",
@@ -2775,13 +2942,22 @@
       {
         "title": "Ambar Estate",
         "url": "https://www.ambarestate.com"
+      },
+      {
+        "title": "Ambar: address (www.ambarestate.com)",
+        "url": "https://www.ambarestate.com/contact"
       }
     ],
     "verified": true,
     "aka": [
       "Ambar Estate"
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "12550 NE Worden Hill Rd Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.30746,
+      "lng": -123.06837
+    }
   },
   {
     "id": "human-cellars",
@@ -2903,7 +3079,12 @@
         "url": "https://youtu.be/_fVmfywKZ_A"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "16435 NE Lewis Rogers Lane, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.33462,
+      "lng": -123.06645
+    }
   },
   {
     "id": "walnut-ridge-vineyard",
@@ -3147,9 +3328,18 @@
       {
         "title": "Late Sky",
         "url": "https://www.lateskywine.com/"
+      },
+      {
+        "title": "Late Sky: address (www.lateskywine.com)",
+        "url": "https://www.lateskywine.com/contact"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "19700 NE Herring Lane Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.30946,
+      "lng": -123.03439
+    }
   },
   {
     "id": "coattails",
@@ -3323,10 +3513,19 @@
       {
         "title": "Arborbrook by Cooper Mountain Vineyards",
         "url": "https://arborbrookwines.com"
+      },
+      {
+        "title": "Arborbrook: address (arborbrookwines.com)",
+        "url": "https://arborbrookwines.com/contact"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "17770 NE Calkins Ln Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.34408,
+      "lng": -123.04923
+    }
   },
   {
     "id": "cooper-mountain-vineyards",
@@ -3565,9 +3764,18 @@
       {
         "title": "Weinnotes newsletter, 14 August 2021",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-10"
+      },
+      {
+        "title": "Weisinger Family Winery: address (www.weisingers.com)",
+        "url": "https://www.weisingers.com/visit"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "3150 Siskiyou Boulevard Ashland, OR 97520",
+    "coordinates": {
+      "lat": 42.16756,
+      "lng": -122.65777
+    }
   },
   {
     "id": "r-stuart-and-co",
@@ -3755,9 +3963,18 @@
       {
         "title": "About (Amaterra)",
         "url": "https://amaterrawines.com/about"
+      },
+      {
+        "title": "Amaterra: address (amaterrawines.com)",
+        "url": "https://amaterrawines.com/visit"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "8150 SW Swede Hill Drive Portland, OR 97225",
+    "coordinates": {
+      "lat": 45.51302,
+      "lng": -122.76049
+    }
   },
   {
     "id": "51weeks",
@@ -4188,9 +4405,18 @@
       {
         "title": "Weinnotes newsletter, 15 May 2021",
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-13"
+      },
+      {
+        "title": "Bells Up Winery: address (bellsupwinery.com)",
+        "url": "https://bellsupwinery.com/contact"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "27895 NE Bell Road Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.33206,
+      "lng": -122.95125
+    }
   },
   {
     "id": "de-la-boue",
@@ -4282,9 +4508,18 @@
       {
         "title": "Weinnotes newsletter, 17 September 2022",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-65"
+      },
+      {
+        "title": "J. Christopher Wines: address (www.jchristopherwines.com)",
+        "url": "https://www.jchristopherwines.com/visit"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "17150 NE Hillside Drive, Newberg, Oregon, 97132",
+    "coordinates": {
+      "lat": 45.33939,
+      "lng": -123.01767
+    }
   },
   {
     "id": "left-coast-estate",
@@ -4305,9 +4540,18 @@
       {
         "title": "Left Coast Estate",
         "url": "https://leftcoastwine.com/"
+      },
+      {
+        "title": "Left Coast Estate: address (leftcoastwine.com)",
+        "url": "https://leftcoastwine.com/visit"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "4225 North Pacific Hwy W, Rickreall, OR, 97371",
+    "coordinates": {
+      "lat": 44.99302,
+      "lng": -123.21352
+    }
   },
   {
     "id": "belle-vallee-cellars",
@@ -4485,9 +4729,18 @@
       {
         "title": "Weinnotes newsletter, 21 November 2020",
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-33"
+      },
+      {
+        "title": "Cramoisi Vineyard: address (www.cramoisivineyard.com)",
+        "url": "https://www.cramoisivineyard.com/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "8670 NE Worden Hill Rd, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27941,
+      "lng": -123.03953
+    }
   },
   {
     "id": "elizabeth-chambers-cellar",
@@ -4584,7 +4837,12 @@
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "22185 SW Lebeau Road Sherwood, Oregon 97140",
+    "coordinates": {
+      "lat": 45.37221,
+      "lng": -122.90911
+    }
   },
   {
     "id": "elevee-winegrowers",
@@ -4634,7 +4892,12 @@
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-7"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "27200 NE Bell Road Newberg OR 97132",
+    "coordinates": {
+      "lat": 45.33154,
+      "lng": -122.95773
+    }
   },
   {
     "id": "youngberg-hill",
@@ -4654,9 +4917,18 @@
       {
         "title": "Youngberg Hill",
         "url": "https://youngberghill.com/"
+      },
+      {
+        "title": "Youngberg Hill: address (youngberghill.com)",
+        "url": "https://youngberghill.com/visit"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "10660 SW Youngberg Hill Road McMinnville, OR 97128",
+    "coordinates": {
+      "lat": 45.1778,
+      "lng": -123.29286
+    }
   },
   {
     "id": "bryn-mawr-vineyards",
@@ -4804,5 +5076,32 @@
     ],
     "verified": true,
     "verifiedBy": "jev"
+  },
+  {
+    "id": "fox-farm-vineyards",
+    "type": "winery",
+    "name": "Fox Farm Vineyards",
+    "place": "Dundee, OR",
+    "address": "575 Hwy 99W, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27883,
+      "lng": -123.01004
+    },
+    "summary": "Small family-owned label making Pinot noir and other wines from leased parcels in several Willamette Valley sub-AVAs and Syrah from the Rogue Valley, with Joe Dobbes as winemaker. Its first Pinot noir was the 2006 vintage. Despite the name, it farms no named estate vineyard of its own.",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      },
+      {
+        "title": "Fox Farm Vineyards (The Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/974/"
+      },
+      {
+        "title": "Fox Farm Vineyards",
+        "url": "https://www.foxfarmvineyards.com/"
+      }
+    ],
+    "verified": false
   }
 ]

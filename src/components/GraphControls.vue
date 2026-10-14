@@ -6,11 +6,20 @@ import NodeGlyph from './NodeGlyph.vue'
 
 const { state, avas, visibleNodes, visibleEdges, search, select } = useGraph()
 
+const sortedAvas = computed(() => [...avas.value].sort((a, b) => a.name.localeCompare(b.name)))
+const avaSummary = computed(() => {
+  if (state.avas.length === 0) return 'All regions'
+  if (state.avas.length > 1) return `${state.avas.length} chosen`
+  return avas.value.find((ava) => ava.id === state.avas[0])?.name.replace(/ AVA$/, '') ?? '1 chosen'
+})
+
 const query = ref('')
 const results = computed(() => search(query.value))
 const toggleableTypes = Object.keys(state.nodeTypes) as ToggleableNodeType[]
 
 function pick(id: string) {
+  // An AVA is only drawn with the AVA regions layer, so turn it on to show the one picked
+  if (avas.value.some((ava) => ava.id === id)) state.categories.geography = true
   select(id)
   query.value = ''
 }
@@ -52,7 +61,7 @@ function pick(id: string) {
       <label v-for="category in EDGE_CATEGORIES" :key="category">
         <input v-model="state.categories[category]" type="checkbox" />
         <span class="controls__line" :class="`controls__line--${category}`"></span>
-        {{ EDGE_CATEGORY_LABELS[category] }}
+        {{ category === 'geography' ? 'AVA regions' : EDGE_CATEGORY_LABELS[category] }}
         <template v-if="category === 'geography'">
           <NodeGlyph type="ava" />
         </template>
@@ -61,13 +70,17 @@ function pick(id: string) {
 
     <fieldset>
       <legend>Narrow</legend>
-      <label class="controls__select">
-        AVA
-        <select v-model="state.ava">
-          <option value="">All regions</option>
-          <option v-for="ava in avas" :key="ava.id" :value="ava.id">{{ ava.name }}</option>
-        </select>
-      </label>
+      <details class="controls__avas">
+        <summary>
+          AVA
+          <span class="controls__avas-chosen">{{ avaSummary }}</span>
+        </summary>
+        <button v-if="state.avas.length" type="button" class="controls__clear" @click="state.avas = []">Clear</button>
+        <label v-for="ava in sortedAvas" :key="ava.id">
+          <input v-model="state.avas" type="checkbox" :value="ava.id" />
+          {{ ava.name.replace(/ AVA$/, '') }}
+        </label>
+      </details>
       <label>
         <input v-model="state.oregonOnly" type="checkbox" />
         Oregon only
@@ -206,9 +219,37 @@ label {
   cursor: pointer;
 }
 
-.controls__select select {
-  flex: 1;
-  min-width: 0;
+.controls__avas summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.controls__avas-chosen {
+  color: var(--text-secondary);
+}
+
+.controls__avas[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.controls__avas[open] summary {
+  margin-bottom: 4px;
+}
+
+.controls__clear {
+  align-self: flex-start;
+  padding: 2px 8px;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .controls__line {

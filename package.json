@@ -11,7 +11,11 @@
     "check:fetch": "tsx tools/check/fetchSources.ts",
     "check": "tsx tools/check/run.ts",
     "check:calibrate": "tsx tools/check/calibrate.ts",
-    "check:apply": "tsx tools/check/apply.ts"
+    "check:apply": "tsx tools/check/apply.ts",
+    "discover:crawl": "tsx tools/discover/crawl.ts",
+    "discover:triage": "tsx tools/discover/triage.ts",
+    "geo:locate": "tsx tools/geo/locate.ts",
+    "geo:avas": "tsx tools/geo/avaCheck.ts"
   },
   "dependencies": {
     "cytoscape": "3.34.3",

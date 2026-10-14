@@ -1820,7 +1820,8 @@
         "url": "https://www.winespectator.com/webfeature/show/id/49554"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "sashi-moorman",
@@ -6936,5 +6937,54 @@
       }
     ],
     "verified": false
+  },
+  {
+    "id": "david-fish",
+    "type": "person",
+    "name": "David Fish",
+    "summary": "Co-founder of Fox Farm Vineyards, which he runs day to day, choosing and leasing the vineyard parcels it buys from.",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      },
+      {
+        "title": "Fox Farm Vineyards (The Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/974/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "thomas-ratcliff",
+    "type": "person",
+    "name": "Thomas Ratcliff",
+    "summary": "Sommelier and co-founder of Fox Farm Vineyards.",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      },
+      {
+        "title": "Fox Farm Vineyards (The Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/974/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "desiree-neel",
+    "type": "person",
+    "name": "Desiree Neel",
+    "summary": "Co-founder of Fox Farm Vineyards with Thomas Ratcliff and David Fish, after the three met at a 2005 Willamette Valley wine symposium.",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
   }
 ]

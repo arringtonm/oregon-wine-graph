@@ -36,6 +36,9 @@ async function main() {
     .filter((item) => !host || item.record.sources.some((source) => source.url?.includes(host)))
     .filter((item) => force || store[recordKey(item)]?.fingerprint !== claimsFingerprint(claimsFor(item, graph)))
     .slice(0, limit)
+  // Drop results for records that no longer exist (removed, or renamed by a change of type)
+  const keys = new Set(all.map(recordKey))
+  for (const key of Object.keys(store)) if (!keys.has(key)) delete store[key]
   console.log(`${all.length} records, ${pending.length} to check`)
 
   let done = 0

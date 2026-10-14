@@ -67,6 +67,12 @@ JEV_API_KEY=...
 
 Without a key, keyword rules stand in for Jev so the feature still works; the preview says which one read the sentence. If the sentence names someone or something the graph does not have, the preview offers to create it as a new unverified node, with a name and type you can correct before saving. One sentence adds one connection. The code is in `tools/jev/`.
 
+## Geography
+
+- `npm run geo:locate` finds each Oregon winery's visitor address on its own website (trying the usual domain patterns when none is cited), has Jev confirm which address is the winery's, and geocodes it with the US Census geocoder. Addresses are visitor information: often a tasting room, which can move and can sit far from the vines. They feed the "Nearby tasting rooms" list and nothing else.
+- `npm run geo:avas` tests located vineyards against the official AVA boundaries (UC Davis Library, public domain), verifying "located in" connections that match and adding missing ones. Wineries are not tested, for the reason above.
+- With "AVA regions" on, vineyards are drawn inside a region for their AVA, nested inside parent AVAs. Wineries stay outside the regions, since a winery can source from vineyards in several AVAs; they are joined to the vineyards they own or buy from, and any "located in" they have is drawn as a line to the region.
+
 ## App
 
 - `src/composables/useGraph.ts`: shared state, filters and derived views

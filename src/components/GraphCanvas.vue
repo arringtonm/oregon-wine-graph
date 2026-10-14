@@ -10,6 +10,7 @@ cytoscape.use(fcose)
 
 const {
   state,
+  avaParent,
   degree,
   nodeById,
   visibleNodes,
@@ -95,6 +96,24 @@ function buildStyle(): StylesheetJson {
     },
     { selector: 'edge[category = "people"]', style: { 'line-style': 'dashed' } },
     { selector: 'edge[category = "geography"]', style: { 'line-style': 'dotted' } },
+    {
+      selector: ':parent',
+      style: {
+        shape: 'round-rectangle',
+        'background-color': neutral,
+        'background-opacity': 0.07,
+        'border-width': 1,
+        'border-style': 'dashed',
+        'border-color': neutral,
+        padding: '24px',
+        label: 'data(label)',
+        'text-valign': 'top',
+        'text-halign': 'center',
+        'text-margin-y': -6,
+        'font-size': 14,
+        color: token('--text-secondary'),
+      },
+    },
     { selector: '.dimmed', style: { opacity: 0.15 } },
     { selector: 'node.selected', style: { 'border-color': ink, 'border-width': 3, 'border-style': 'solid' } },
     {
@@ -108,11 +127,29 @@ function buildElements(): ElementDefinition[] {
   const maxDegree = Math.max(1, ...degree.value.values())
   // Square root keeps the few biggest hubs from dwarfing everything else
   const weight = (id: string) => Math.sqrt((degree.value.get(id) ?? 0) / maxDegree)
+  // With the geography layer on, vineyards sit inside a region for their AVA (nested AVAs
+  // inside their parents) instead of being joined to AVA nodes by lines. Wineries stay
+  // outside; any "located in" they have is still drawn as a line to the region.
+  const regions = state.categories.geography
+  const shown = new Set(visibleNodes.value.map((node) => node.id))
+  const parentFor = (id: string) => {
+    const parent = regions ? avaParent.value.get(id) : undefined
+    return parent && shown.has(parent) ? parent : undefined
+  }
+  // Parents must exist before their members are added
+  const depth = (id: string): number => {
+    const parent = parentFor(id)
+    return parent ? 1 + depth(parent) : 0
+  }
+  const ordered = [...visibleNodes.value].sort(
+    (a, b) => Number(b.type === 'ava') - Number(a.type === 'ava') || depth(a.id) - depth(b.id),
+  )
   return [
-    ...visibleNodes.value.map((node) => ({
+    ...ordered.map((node) => ({
       group: 'nodes' as const,
       data: {
         id: node.id,
+        parent: parentFor(node.id),
         label: node.name,
         type: node.type,
         outside: node.outsideOregon === true,
@@ -121,16 +158,19 @@ function buildElements(): ElementDefinition[] {
         fontSize: 8 + 28 * weight(node.id),
       },
     })),
-    ...visibleEdges.value.map((edge) => ({
-      group: 'edges' as const,
-      data: {
-        id: edge.id,
-        source: edge.source,
-        target: edge.target,
-        category: EDGE_RULES[edge.type].category,
-        label: [edgeLabel(edge), formatYears(edge)].filter(Boolean).join(' · '),
-      },
-    })),
+    ...visibleEdges.value
+      // Drop only the lines that containment already shows
+      .filter((edge) => !(regions && EDGE_RULES[edge.type].category === 'geography' && parentFor(edge.source) === edge.target))
+      .map((edge) => ({
+        group: 'edges' as const,
+        data: {
+          id: edge.id,
+          source: edge.source,
+          target: edge.target,
+          category: EDGE_RULES[edge.type].category,
+          label: [edgeLabel(edge), formatYears(edge)].filter(Boolean).join(' · '),
+        },
+      })),
   ]
 }
 
@@ -185,13 +225,17 @@ function runLayout(randomize: boolean) {
   layout?.stop()
   layout = cy.layout({
     name: 'fcose',
-    quality: randomize ? 'default' : 'proof',
+    // 'proof' quality blocked the page for nearly three seconds on the full graph
+    quality: 'default',
     randomize,
     animate: !randomize,
     animationDuration: 400,
-    nodeRepulsion: 30000,
-    gravity: 0.12,
-    idealEdgeLength: 150,
+    // Measured on the full graph: counting labels as part of each node's size and pushing
+    // nodes harder apart cut overlapping labels from about 1,700 pairs to about 300
+    nodeDimensionsIncludeLabels: true,
+    nodeRepulsion: 120000,
+    idealEdgeLength: 220,
+    gravity: 0.04,
     nodeSeparation: 120,
     padding: 40,
   } as cytoscape.LayoutOptions)
@@ -214,8 +258,13 @@ function syncElements() {
     changed = stale.nonempty()
     stale.remove()
     for (const element of wanted) {
-      if (cy!.getElementById(element.data.id!).empty()) {
+      const existing = cy!.getElementById(element.data.id!)
+      if (existing.empty()) {
         cy!.add(element)
+        changed = true
+      } else if (element.group === 'nodes' && (existing.data('parent') ?? undefined) !== element.data.parent) {
+        // Turning AVA regions on or off moves nodes into or out of them
+        existing.move({ parent: element.data.parent ?? null })
         changed = true
       }
     }
@@ -265,6 +314,8 @@ onMounted(() => {
     minZoom: 0.2,
     maxZoom: 3,
   })
+  // Exposed on the dev server for measuring layouts from the browser console
+  if (import.meta.env.DEV) Object.assign(window, { __cy: cy })
 
   cy.on('tap', (event) => {
     state.filtersOpen = false

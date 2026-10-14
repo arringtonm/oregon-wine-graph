@@ -28,6 +28,14 @@ const baseNode = {
   verifiedBy,
 }
 
+// Where to find a winery or vineyard today. `address` is the address the business gives
+// visitors, often a tasting room that can move and can sit far from the vines, so it says
+// nothing about AVA membership. Coordinates come from geocoding it.
+const location = {
+  address: z.string().min(1).optional(),
+  coordinates: z.strictObject({ lat: z.number().min(-90).max(90), lng: z.number().min(-180).max(180) }).optional(),
+}
+
 export const nodeSchema = z.discriminatedUnion('type', [
   z.strictObject({
     ...baseNode,
@@ -40,11 +48,13 @@ export const nodeSchema = z.discriminatedUnion('type', [
     type: z.literal('winery'),
     founded: year.optional(),
     closed: year.optional(),
+    ...location,
   }),
   z.strictObject({
     ...baseNode,
     type: z.literal('vineyard'),
     planted: year.optional(),
+    ...location,
   }),
   z.strictObject({
     ...baseNode,
@@ -206,11 +216,22 @@ export const EDGE_RULES = {
     from: ['organization'],
     to: ['event'],
   },
+  // A vineyard's physical place. Only vineyards are "in" an AVA: a winery's tasting room
+  // or office can be anywhere, and its grapes can come from several AVAs.
   located_in: {
     category: 'geography',
     label: 'located in',
     inverseLabel: 'contains',
-    from: ['winery', 'vineyard'],
+    from: ['vineyard'],
+    to: ['ava'],
+  },
+  // An AVA a winery makes wine from. A winery's full list of AVAs also includes those of
+  // the vineyards it owns or buys from; this records the ones known without a vineyard.
+  draws_from: {
+    category: 'geography',
+    label: 'draws fruit from',
+    inverseLabel: 'supplies fruit to',
+    from: ['winery'],
     to: ['ava'],
   },
   within: {

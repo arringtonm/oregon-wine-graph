@@ -414,10 +414,10 @@
     "verified": false
   },
   {
-    "id": "abacela--located-in--umpqua-valley",
+    "id": "abacela--draws-from--umpqua-valley",
     "source": "abacela",
     "target": "umpqua-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Abacela (Wikipedia)",
@@ -583,10 +583,10 @@
     "verified": false
   },
   {
-    "id": "valley-view-winery--located-in--applegate-valley",
+    "id": "valley-view-winery--draws-from--applegate-valley",
     "source": "valley-view-winery",
     "target": "applegate-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Valley View Winery (Wikipedia)",
@@ -614,10 +614,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "troon-vineyard--located-in--applegate-valley",
+    "id": "troon-vineyard--draws-from--applegate-valley",
     "source": "troon-vineyard",
     "target": "applegate-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Troon Renaissance (Oregon Wine Press)",
@@ -648,10 +648,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "henry-estate-winery--located-in--umpqua-valley",
+    "id": "henry-estate-winery--draws-from--umpqua-valley",
     "source": "henry-estate-winery",
     "target": "umpqua-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Henry Estate Winery Collection (Oregon Wine History Archive)",
@@ -697,10 +697,10 @@
     "verified": false
   },
   {
-    "id": "girardet-vineyards--located-in--umpqua-valley",
+    "id": "girardet-vineyards--draws-from--umpqua-valley",
     "source": "girardet-vineyards",
     "target": "umpqua-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Philippe Girardet, Founder of Girardet Vineyards and Winery, Passes Away at 96 (Wine Industry Advisor)",
@@ -759,10 +759,10 @@
     "verified": false
   },
   {
-    "id": "cayuse-vineyards--located-in--rocks-district-of-milton-freewater",
+    "id": "cayuse-vineyards--draws-from--rocks-district-of-milton-freewater",
     "source": "cayuse-vineyards",
     "target": "rocks-district-of-milton-freewater",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "The Rocks District of Milton-Freewater AVA (Wikipedia)",
@@ -1488,10 +1488,10 @@
     "verified": false
   },
   {
-    "id": "domaine-drouhin-oregon--located-in--dundee-hills",
+    "id": "domaine-drouhin-oregon--draws-from--dundee-hills",
     "source": "domaine-drouhin-oregon",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Maison Joseph Drouhin (Wikipedia)",
@@ -1646,10 +1646,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "ken-wright-cellars--located-in--yamhill-carlton",
+    "id": "ken-wright-cellars--draws-from--yamhill-carlton",
     "source": "ken-wright-cellars",
     "target": "yamhill-carlton",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Ken Wright Cellars (Wine with Seth)",
@@ -1883,10 +1883,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "beaux-freres--located-in--ribbon-ridge",
+    "id": "beaux-freres--draws-from--ribbon-ridge",
     "source": "beaux-freres",
     "target": "ribbon-ridge",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "The Birth and Building of Beaux Frères (Wine Spectator)",
@@ -2183,10 +2183,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "bethel-heights-vineyard--located-in--eola-amity-hills",
+    "id": "bethel-heights-vineyard--draws-from--eola-amity-hills",
     "source": "bethel-heights-vineyard",
     "target": "eola-amity-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Bethel Heights Vineyard (Wikipedia)",
@@ -2319,10 +2319,10 @@
     "verified": false
   },
   {
-    "id": "cristom-vineyards--located-in--eola-amity-hills",
+    "id": "cristom-vineyards--draws-from--eola-amity-hills",
     "source": "cristom-vineyards",
     "target": "eola-amity-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Cristom Vineyards (Wikipedia)",
@@ -2680,10 +2680,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "chehalem-winery--located-in--chehalem-mountains",
+    "id": "chehalem-winery--draws-from--chehalem-mountains",
     "source": "chehalem-winery",
     "target": "chehalem-mountains",
-    "type": "located_in",
+    "type": "draws_from",
     "note": "The winery is surrounded by its Corral Creek Vineyard in the Chehalem Mountains.",
     "sources": [
       {
@@ -2835,10 +2835,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "penner-ash-wine-cellars--located-in--yamhill-carlton",
+    "id": "penner-ash-wine-cellars--draws-from--yamhill-carlton",
     "source": "penner-ash-wine-cellars",
     "target": "yamhill-carlton",
-    "type": "located_in",
+    "type": "draws_from",
     "note": "The estate Dussin Vineyard is in the Yamhill-Carlton District; the winery has a Newberg address.",
     "sources": [
       {
@@ -2846,7 +2846,8 @@
         "url": "https://www.princeofpinot.com/winery/463/index.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "a-to-z-wineworks--acquired--rex-hill",
@@ -2869,10 +2870,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "rex-hill--located-in--chehalem-mountains",
+    "id": "rex-hill--draws-from--chehalem-mountains",
     "source": "rex-hill",
     "target": "chehalem-mountains",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Rex Hill (Wine with Seth)",
@@ -3034,10 +3035,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "lingua-franca--located-in--eola-amity-hills",
+    "id": "lingua-franca--draws-from--eola-amity-hills",
     "source": "lingua-franca",
     "target": "eola-amity-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Lingua Franca (The Prince of Pinot)",
@@ -3117,10 +3118,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "domaine-serene--located-in--dundee-hills",
+    "id": "domaine-serene--draws-from--dundee-hills",
     "source": "domaine-serene",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Ken Evenstad, Co-Founder of Oregon's Domaine Serene Winery, Dies at 77 (Wine Spectator)",
@@ -3188,10 +3189,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "bergstrom-wines--located-in--dundee-hills",
+    "id": "bergstrom-wines--draws-from--dundee-hills",
     "source": "bergstrom-wines",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "note": "The home Bergström Vineyard and Winery Block are in the Dundee Hills; other estate sites are in Ribbon Ridge and the Chehalem Mountains.",
     "sources": [
       {
@@ -3299,18 +3300,17 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "hillcrest-vineyard--located-in--umpqua-valley",
+    "id": "hillcrest-vineyard--draws-from--umpqua-valley",
     "source": "hillcrest-vineyard",
     "target": "umpqua-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Umpqua Valley AVA (Wikipedia)",
         "url": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
       }
     ],
-    "verified": true,
-    "verifiedBy": "jev"
+    "verified": false
   },
   {
     "id": "richard-sommer--member-of--oregon-winegrowers-association",
@@ -3367,10 +3367,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "charles-coury-vineyards--located-in--tualatin-hills",
+    "id": "charles-coury-vineyards--draws-from--tualatin-hills",
     "source": "charles-coury-vineyards",
     "target": "tualatin-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
@@ -3544,10 +3544,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "erath-winery--located-in--dundee-hills",
+    "id": "erath-winery--draws-from--dundee-hills",
     "source": "erath-winery",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Erath Vineyards & Winery (Prince of Pinot)",
@@ -3677,10 +3677,10 @@
     "verified": false
   },
   {
-    "id": "knudsen-erath-winery--located-in--dundee-hills",
+    "id": "knudsen-erath-winery--draws-from--dundee-hills",
     "source": "knudsen-erath-winery",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Our Story (Knudsen Vineyards)",
@@ -3904,10 +3904,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "ponzi-vineyards--located-in--laurelwood-district",
+    "id": "ponzi-vineyards--draws-from--laurelwood-district",
     "source": "ponzi-vineyards",
     "target": "laurelwood-district",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Laurelwood District AVA (Wikipedia)",
@@ -4087,10 +4087,10 @@
     "verified": true
   },
   {
-    "id": "adelsheim-vineyard--located-in--chehalem-mountains",
+    "id": "adelsheim-vineyard--draws-from--chehalem-mountains",
     "source": "adelsheim-vineyard",
     "target": "chehalem-mountains",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Adelsheim Vineyard (Wikipedia)",
@@ -4101,7 +4101,8 @@
         "url": "https://en.wikipedia.org/wiki/Oregon_wine"
       }
     ],
-    "verified": true
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "susan-sokol-blosser--founded--sokol-blosser-winery",
@@ -4318,10 +4319,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "sokol-blosser-winery--located-in--dundee-hills",
+    "id": "sokol-blosser-winery--draws-from--dundee-hills",
     "source": "sokol-blosser-winery",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Sokol Blosser Winery (Wikipedia)",
@@ -4458,10 +4459,10 @@
     "verified": false
   },
   {
-    "id": "elk-cove-vineyards--located-in--yamhill-carlton",
+    "id": "elk-cove-vineyards--draws-from--yamhill-carlton",
     "source": "elk-cove-vineyards",
     "target": "yamhill-carlton",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Our Vineyards (Elk Cove Vineyards)",
@@ -4529,10 +4530,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "amity-vineyards--located-in--eola-amity-hills",
+    "id": "amity-vineyards--draws-from--eola-amity-hills",
     "source": "amity-vineyards",
     "target": "eola-amity-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Amity Vineyards (Union Wine Company)",
@@ -4597,10 +4598,10 @@
     "verified": false
   },
   {
-    "id": "tualatin-vineyards--located-in--tualatin-hills",
+    "id": "tualatin-vineyards--draws-from--tualatin-hills",
     "source": "tualatin-vineyards",
     "target": "tualatin-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Tualatin Estate Vineyard (Willamette Valley Vineyards)",
@@ -4673,10 +4674,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "st-innocent-winery--located-in--willamette-valley",
+    "id": "st-innocent-winery--draws-from--willamette-valley",
     "source": "st-innocent-winery",
     "target": "willamette-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "note": "The winery's Enchanted Way site in the South Salem Hills is labelled Willamette Valley.",
     "sources": [
       {
@@ -5344,10 +5345,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "cameron-winery--located-in--dundee-hills",
+    "id": "cameron-winery--draws-from--dundee-hills",
     "source": "cameron-winery",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Cameron Winery (The Prince of Pinot)",
@@ -5411,10 +5412,10 @@
     "verified": false
   },
   {
-    "id": "archery-summit--located-in--dundee-hills",
+    "id": "archery-summit--draws-from--dundee-hills",
     "source": "archery-summit",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Remembering Gary Andrus (Wine Spectator)",
@@ -5459,10 +5460,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "brick-house-vineyards--located-in--ribbon-ridge",
+    "id": "brick-house-vineyards--draws-from--ribbon-ridge",
     "source": "brick-house-vineyards",
     "target": "ribbon-ridge",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Brick House Wine Company (The Prince of Pinot)",
@@ -5584,10 +5585,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "patricia-green-cellars--located-in--ribbon-ridge",
+    "id": "patricia-green-cellars--draws-from--ribbon-ridge",
     "source": "patricia-green-cellars",
     "target": "ribbon-ridge",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "In Memoriam: Patty Green (Oregon Wine Press)",
@@ -5627,10 +5628,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "torii-mor-winery--located-in--dundee-hills",
+    "id": "torii-mor-winery--draws-from--dundee-hills",
     "source": "torii-mor-winery",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Torii Mor Winery (The Prince of Pinot)",
@@ -5702,10 +5703,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "lange-estate-winery--located-in--dundee-hills",
+    "id": "lange-estate-winery--draws-from--dundee-hills",
     "source": "lange-estate-winery",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Lange Estate Winery and Vineyards (The Prince of Pinot)",
@@ -5923,10 +5924,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "brooks-wine--located-in--eola-amity-hills",
+    "id": "brooks-wine--draws-from--eola-amity-hills",
     "source": "brooks-wine",
     "target": "eola-amity-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Brooks Winery (The Prince of Pinot)",
@@ -6112,10 +6113,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "yamhill-valley-vineyards--located-in--mcminnville",
+    "id": "yamhill-valley-vineyards--draws-from--mcminnville",
     "source": "yamhill-valley-vineyards",
     "target": "mcminnville",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Yamhill Valley Vineyards (The Prince of Pinot)",
@@ -6198,10 +6199,10 @@
     "verified": false
   },
   {
-    "id": "willakenzie-estate--located-in--yamhill-carlton",
+    "id": "willakenzie-estate--draws-from--yamhill-carlton",
     "source": "willakenzie-estate",
     "target": "yamhill-carlton",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Jackson Family Continues Oregon Pinot Noir Expansion, Buying WillaKenzie Estate (Wine Spectator)",
@@ -6334,10 +6335,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "evesham-wood--located-in--eola-amity-hills",
+    "id": "evesham-wood--draws-from--eola-amity-hills",
     "source": "evesham-wood",
     "target": "eola-amity-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Evesham Wood (The Prince of Pinot)",
@@ -6473,10 +6474,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "soter-vineyards--located-in--yamhill-carlton",
+    "id": "soter-vineyards--draws-from--yamhill-carlton",
     "source": "soter-vineyards",
     "target": "yamhill-carlton",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Soter Vineyards: Founders",
@@ -6507,10 +6508,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "foris-vineyards--located-in--rogue-valley",
+    "id": "foris-vineyards--draws-from--rogue-valley",
     "source": "foris-vineyards",
     "target": "rogue-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Foris Vineyards Winery (Wikipedia)",
@@ -6562,10 +6563,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "reustle-prayer-rock-vineyards--located-in--umpqua-valley",
+    "id": "reustle-prayer-rock-vineyards--draws-from--umpqua-valley",
     "source": "reustle-prayer-rock-vineyards",
     "target": "umpqua-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "2017 Pacific Northwest Winery of the Year: Reustle Prayer Rock Vineyard (Umpqua Valley Wineries)",
@@ -6618,10 +6619,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "shea-wine-cellars--located-in--yamhill-carlton",
+    "id": "shea-wine-cellars--draws-from--yamhill-carlton",
     "source": "shea-wine-cellars",
     "target": "yamhill-carlton",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Shea Wine Cellars (Skurnik Wines)",
@@ -7378,10 +7379,10 @@
     "verified": false
   },
   {
-    "id": "gran-moraine--located-in--yamhill-carlton",
+    "id": "gran-moraine--draws-from--yamhill-carlton",
     "source": "gran-moraine",
     "target": "yamhill-carlton",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Jackson Family Wines (Prince of Pinot)",
@@ -7603,10 +7604,10 @@
     "verified": false
   },
   {
-    "id": "the-four-graces--located-in--dundee-hills",
+    "id": "the-four-graces--draws-from--dundee-hills",
     "source": "the-four-graces",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "note": "Source places the 54-acre Black Family Estate vineyard in the Dundee Hills; the second estate vineyard, Doe Ridge, is in Yamhill-Carlton.",
     "sources": [
       {
@@ -7664,10 +7665,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "benton-lane-winery--located-in--willamette-valley",
+    "id": "benton-lane-winery--draws-from--willamette-valley",
     "source": "benton-lane-winery",
     "target": "willamette-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Napa Valley's Huneeus Vintners Buys Oregon's Benton-Lane Winery (Wine Spectator)",
@@ -8166,10 +8167,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "hood-river-vineyards--located-in--columbia-gorge",
+    "id": "hood-river-vineyards--draws-from--columbia-gorge",
     "source": "hood-river-vineyards",
     "target": "columbia-gorge",
-    "type": "located_in",
+    "type": "draws_from",
     "note": "The winery source calls it the oldest winery in the Gorge without naming the AVA; the AVA covers Hood River County.",
     "sources": [
       {
@@ -8181,8 +8182,7 @@
         "url": "https://en.wikipedia.org/wiki/Columbia_Gorge_AVA"
       }
     ],
-    "verified": true,
-    "verifiedBy": "jev"
+    "verified": false
   },
   {
     "id": "bob-morus--founded--phelps-creek-vineyards",
@@ -8230,10 +8230,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "phelps-creek-vineyards--located-in--columbia-gorge",
+    "id": "phelps-creek-vineyards--draws-from--columbia-gorge",
     "source": "phelps-creek-vineyards",
     "target": "columbia-gorge",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Phelps Creek Vineyards (Prince of Pinot)",
@@ -8274,10 +8274,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "watermill-winery--located-in--walla-walla-valley",
+    "id": "watermill-winery--draws-from--walla-walla-valley",
     "source": "watermill-winery",
     "target": "walla-walla-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "note": "Source places it at Milton-Freewater on the Oregon side of the Walla Walla Valley.",
     "sources": [
       {
@@ -8285,7 +8285,8 @@
         "url": "https://www.oregonwinepress.com/oregons-walla-walla"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "cecil-zerba--founded--zerba-cellars",
@@ -8303,10 +8304,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "zerba-cellars--located-in--walla-walla-valley",
+    "id": "zerba-cellars--draws-from--walla-walla-valley",
     "source": "zerba-cellars",
     "target": "walla-walla-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "note": "Source places it at Milton-Freewater on the Oregon side of the Walla Walla Valley.",
     "sources": [
       {
@@ -8386,10 +8387,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "del-rio-vineyards--located-in--rogue-valley",
+    "id": "del-rio-vineyards--draws-from--rogue-valley",
     "source": "del-rio-vineyards",
     "target": "rogue-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "note": "Source calls it a Rogue producer at Gold Hill whose wines are labeled Rogue Valley.",
     "sources": [
       {
@@ -8458,10 +8459,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "quady-north--located-in--applegate-valley",
+    "id": "quady-north--draws-from--applegate-valley",
     "source": "quady-north",
     "target": "applegate-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "An Interview With Herb Quady, Southern Oregon's Godfather Of Grapes (Sprudge)",
@@ -8590,10 +8591,10 @@
     "verified": false
   },
   {
-    "id": "cowhorn-vineyard-and-garden--located-in--applegate-valley",
+    "id": "cowhorn-vineyard-and-garden--draws-from--applegate-valley",
     "source": "cowhorn-vineyard-and-garden",
     "target": "applegate-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Buy the Horns (Oregon Wine Press)",
@@ -8636,10 +8637,10 @@
     "verified": false
   },
   {
-    "id": "brandborg-vineyard-and-winery--located-in--elkton-oregon",
+    "id": "brandborg-vineyard-and-winery--draws-from--elkton-oregon",
     "source": "brandborg-vineyard-and-winery",
     "target": "elkton-oregon",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Elkton Oregon AVA (Wikipedia)",
@@ -8945,10 +8946,10 @@
     "verified": true
   },
   {
-    "id": "walter-scott-wines--located-in--eola-amity-hills",
+    "id": "walter-scott-wines--draws-from--eola-amity-hills",
     "source": "walter-scott-wines",
     "target": "eola-amity-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Walter Scott Wines (Prince of Pinot)",
@@ -9006,10 +9007,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "antica-terra--located-in--eola-amity-hills",
+    "id": "antica-terra--draws-from--eola-amity-hills",
     "source": "antica-terra",
     "target": "eola-amity-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "note": "The estate vineyard is in the Eola-Amity Hills; Prince of Pinot says the winery itself moved into a Dundee warehouse in 2009.",
     "sources": [
       {
@@ -9316,18 +9317,17 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "big-table-farm--located-in--yamhill-carlton",
+    "id": "big-table-farm--draws-from--yamhill-carlton",
     "source": "big-table-farm",
     "target": "yamhill-carlton",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Big Table Farm (Yamhill-Carlton AVA)",
         "url": "https://yamhillcarlton.org/member/big-table-farm/"
       }
     ],
-    "verified": true,
-    "verifiedBy": "jev"
+    "verified": false
   },
   {
     "id": "ted-casteel--family--mimi-casteel",
@@ -9634,10 +9634,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "purple-hands-winery--located-in--dundee-hills",
+    "id": "purple-hands-winery--draws-from--dundee-hills",
     "source": "purple-hands-winery",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "note": "Tasting room fronts the estate Latchkey Vineyard in the Dundee Hills; the mailing address is Newberg.",
     "sources": [
       {
@@ -9645,7 +9645,8 @@
         "url": "https://www.oregonwinepress.com/purple-hands-cody-wright"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "harry-peterson-nedry--family--wynne-peterson-nedry",
@@ -10721,10 +10722,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "valley-view-vineyard-jacksonville--located-in--rogue-valley",
+    "id": "valley-view-vineyard-jacksonville--draws-from--rogue-valley",
     "source": "valley-view-vineyard-jacksonville",
     "target": "rogue-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "note": "The winery closed long before the AVA was established; Wikipedia places it at Jacksonville 'in what is now the Rogue Valley AVA'.",
     "sources": [
       {
@@ -10975,18 +10976,17 @@
     "verified": false
   },
   {
-    "id": "honeywood-winery--located-in--willamette-valley",
+    "id": "honeywood-winery--draws-from--willamette-valley",
     "source": "honeywood-winery",
     "target": "willamette-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Honeywood Winery (Wikipedia)",
         "url": "https://en.wikipedia.org/wiki/Honeywood_Winery"
       }
     ],
-    "verified": true,
-    "verifiedBy": "jev"
+    "verified": false
   },
   {
     "id": "ted-casteel--founded--live-certified",
@@ -12577,10 +12577,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "aubaine--located-in--eola-amity-hills",
+    "id": "aubaine--draws-from--eola-amity-hills",
     "source": "aubaine",
     "target": "eola-amity-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Weinnotes newsletter, 6 May 2023",
@@ -12646,10 +12646,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "beckham-estate-vineyard--located-in--chehalem-mountains",
+    "id": "beckham-estate-vineyard--draws-from--chehalem-mountains",
     "source": "beckham-estate-vineyard",
     "target": "chehalem-mountains",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Beckham Estate Vineyard: About",
@@ -12698,10 +12698,10 @@
     "verified": true
   },
   {
-    "id": "corollary-wines--located-in--eola-amity-hills",
+    "id": "corollary-wines--draws-from--eola-amity-hills",
     "source": "corollary-wines",
     "target": "eola-amity-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "note": "Estate property bought in 2022.",
     "sources": [
       {
@@ -12709,7 +12709,8 @@
         "url": "https://www.pdxmonthly.com/eat-and-drink/2023/12/corollary-wines-new-sparkling-wine-tasting-room-oregon"
       }
     ],
-    "verified": true
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "dave-cho--founded--cho-wines",
@@ -12829,10 +12830,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "rodeo-hills--located-in--dundee-hills",
+    "id": "rodeo-hills--draws-from--dundee-hills",
     "source": "rodeo-hills",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Rodeo Hills",
@@ -13056,10 +13057,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "jachter-family-wines--located-in--chehalem-mountains",
+    "id": "jachter-family-wines--draws-from--chehalem-mountains",
     "source": "jachter-family-wines",
     "target": "chehalem-mountains",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Former Oregon car dealer gears up with Jachter Family Wines (Great Northwest Wine)",
@@ -13149,10 +13150,10 @@
     "verified": false
   },
   {
-    "id": "ridgecrest-wines--located-in--ribbon-ridge",
+    "id": "ridgecrest-wines--draws-from--ribbon-ridge",
     "source": "ridgecrest-wines",
     "target": "ribbon-ridge",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Ridgecrest Wines",
@@ -13696,10 +13697,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "de-ponte-cellars--located-in--dundee-hills",
+    "id": "de-ponte-cellars--draws-from--dundee-hills",
     "source": "de-ponte-cellars",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "De Ponte Cellars",
@@ -14668,10 +14669,10 @@
     "verified": false
   },
   {
-    "id": "lucidwild--located-in--dundee-hills",
+    "id": "lucidwild--draws-from--dundee-hills",
     "source": "lucidwild",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "LucidWild Estate",
@@ -14732,10 +14733,10 @@
     "verified": false
   },
   {
-    "id": "red-electric--located-in--ribbon-ridge",
+    "id": "red-electric--draws-from--ribbon-ridge",
     "source": "red-electric",
     "target": "ribbon-ridge",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Weinnotes newsletter, 4 May 2024",
@@ -15015,10 +15016,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "ghost-hill-cellars--located-in--yamhill-carlton",
+    "id": "ghost-hill-cellars--draws-from--yamhill-carlton",
     "source": "ghost-hill-cellars",
     "target": "yamhill-carlton",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Weinnotes newsletter, 3 August 2024",
@@ -15393,10 +15394,10 @@
     "verified": false
   },
   {
-    "id": "arabilis--located-in--eola-amity-hills",
+    "id": "arabilis--draws-from--eola-amity-hills",
     "source": "arabilis",
     "target": "eola-amity-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Arabilis Wines",
@@ -15557,10 +15558,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "late-sky--located-in--dundee-hills",
+    "id": "late-sky--draws-from--dundee-hills",
     "source": "late-sky",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Late Sky",
@@ -15674,10 +15675,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "ambar-estate--located-in--dundee-hills",
+    "id": "ambar-estate--draws-from--dundee-hills",
     "source": "ambar-estate",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Weinnotes newsletter, 8 March 2025",
@@ -16039,18 +16040,17 @@
     "verified": false
   },
   {
-    "id": "johan-vineyards--located-in--van-duzer-corridor",
+    "id": "johan-vineyards--draws-from--van-duzer-corridor",
     "source": "johan-vineyards",
     "target": "van-duzer-corridor",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Weinnotes newsletter, 6 September 2025",
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-0X2b5zfM"
       }
     ],
-    "verified": true,
-    "verifiedBy": "jev"
+    "verified": false
   },
   {
     "id": "andrew-head--founded--apona-vineyards",
@@ -16877,10 +16877,10 @@
     "verified": false
   },
   {
-    "id": "weisinger-family-winery--located-in--rogue-valley",
+    "id": "weisinger-family-winery--draws-from--rogue-valley",
     "source": "weisinger-family-winery",
     "target": "rogue-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Weinnotes newsletter, 2 October 2021",
@@ -17280,10 +17280,10 @@
     "verified": false
   },
   {
-    "id": "mccollum-heritage-91--located-in--yamhill-carlton",
+    "id": "mccollum-heritage-91--draws-from--yamhill-carlton",
     "source": "mccollum-heritage-91",
     "target": "yamhill-carlton",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "McCollum Family Vineyard",
@@ -18337,10 +18337,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "white-walnut-estate--located-in--dundee-hills",
+    "id": "white-walnut-estate--draws-from--dundee-hills",
     "source": "white-walnut-estate",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Weinnotes newsletter, 30 April 2022",
@@ -18632,10 +18632,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "potters-vineyard--located-in--laurelwood-district",
+    "id": "potters-vineyard--draws-from--laurelwood-district",
     "source": "potters-vineyard",
     "target": "laurelwood-district",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Potter's Vineyard & Vino Vasai Wines",
@@ -18780,10 +18780,10 @@
     "verified": false
   },
   {
-    "id": "dion-vineyard--located-in--laurelwood-district",
+    "id": "dion-vineyard--draws-from--laurelwood-district",
     "source": "dion-vineyard",
     "target": "laurelwood-district",
-    "type": "located_in",
+    "type": "draws_from",
     "note": "The newsletter ties the vineyard to the Laurelwood petition; the winery page fetched does not name an AVA.",
     "sources": [
       {
@@ -18791,8 +18791,7 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-47"
       }
     ],
-    "verified": true,
-    "verifiedBy": "jev"
+    "verified": false
   },
   {
     "id": "joel-myers--founded--siltstone-wines",
@@ -19102,10 +19101,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "trisaetum--located-in--ribbon-ridge",
+    "id": "trisaetum--draws-from--ribbon-ridge",
     "source": "trisaetum",
     "target": "ribbon-ridge",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Trisaetum",
@@ -19231,10 +19230,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "alexana-winery--located-in--dundee-hills",
+    "id": "alexana-winery--draws-from--dundee-hills",
     "source": "alexana-winery",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Tresider Burns named winemaker for Alexana Winery (Wine Industry Advisor)",
@@ -19428,10 +19427,10 @@
     "verified": false
   },
   {
-    "id": "methven-family-vineyards--located-in--eola-amity-hills",
+    "id": "methven-family-vineyards--draws-from--eola-amity-hills",
     "source": "methven-family-vineyards",
     "target": "eola-amity-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Weinnotes newsletter, 13 August 2022",
@@ -20244,10 +20243,10 @@
     "verified": false
   },
   {
-    "id": "dusky-goose--located-in--dundee-hills",
+    "id": "dusky-goose--draws-from--dundee-hills",
     "source": "dusky-goose",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "About (Dusky Goose)",
@@ -20333,18 +20332,17 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "left-coast-estate--located-in--van-duzer-corridor",
+    "id": "left-coast-estate--draws-from--van-duzer-corridor",
     "source": "left-coast-estate",
     "target": "van-duzer-corridor",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Weinnotes newsletter, 21 January 2023",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-81"
       }
     ],
-    "verified": true,
-    "verifiedBy": "jev"
+    "verified": false
   },
   {
     "id": "king-estate--acquired--pfeiffer-winery",
@@ -20451,10 +20449,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "prive-vineyard--located-in--chehalem-mountains",
+    "id": "prive-vineyard--draws-from--chehalem-mountains",
     "source": "prive-vineyard",
     "target": "chehalem-mountains",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Privé Vineyard",
@@ -20630,10 +20628,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "andante-vineyard--located-in--van-duzer-corridor",
+    "id": "andante-vineyard--draws-from--van-duzer-corridor",
     "source": "andante-vineyard",
     "target": "van-duzer-corridor",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Weinnotes newsletter, 21 January 2023",
@@ -20982,10 +20980,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "jl-kiff-vineyard--located-in--yamhill-carlton",
+    "id": "jl-kiff-vineyard--draws-from--yamhill-carlton",
     "source": "jl-kiff-vineyard",
     "target": "yamhill-carlton",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "J.L. Kiff Vineyard",
@@ -21014,10 +21012,10 @@
     "verified": false
   },
   {
-    "id": "cramoisi-vineyard--located-in--dundee-hills",
+    "id": "cramoisi-vineyard--draws-from--dundee-hills",
     "source": "cramoisi-vineyard",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Our Story (Cramoisi Vineyard)",
@@ -21150,10 +21148,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "van-duzer-vineyards--located-in--van-duzer-corridor",
+    "id": "van-duzer-vineyards--draws-from--van-duzer-corridor",
     "source": "van-duzer-vineyards",
     "target": "van-duzer-corridor",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Van Duzer Vineyards",
@@ -21428,10 +21426,10 @@
     "verified": false
   },
   {
-    "id": "utopia-vineyard--located-in--ribbon-ridge",
+    "id": "utopia-vineyard--draws-from--ribbon-ridge",
     "source": "utopia-vineyard",
     "target": "ribbon-ridge",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Weinnotes newsletter, 30 January 2021",
@@ -21812,10 +21810,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "langolo-estate--located-in--dundee-hills",
+    "id": "langolo-estate--draws-from--dundee-hills",
     "source": "langolo-estate",
     "target": "dundee-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "People (L'Angolo Estate)",
@@ -22032,10 +22030,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "alloro-vineyard--located-in--chehalem-mountains",
+    "id": "alloro-vineyard--draws-from--chehalem-mountains",
     "source": "alloro-vineyard",
     "target": "chehalem-mountains",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Alloro Vineyard",
@@ -22434,10 +22432,10 @@
     "verified": false
   },
   {
-    "id": "bells-up-winery--located-in--chehalem-mountains",
+    "id": "bells-up-winery--draws-from--chehalem-mountains",
     "source": "bells-up-winery",
     "target": "chehalem-mountains",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "About (Bells Up Winery)",
@@ -22535,18 +22533,17 @@
     "verified": false
   },
   {
-    "id": "youngberg-hill--located-in--mcminnville",
+    "id": "youngberg-hill--draws-from--mcminnville",
     "source": "youngberg-hill",
     "target": "mcminnville",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Youngberg Hill",
         "url": "https://youngberghill.com/"
       }
     ],
-    "verified": true,
-    "verifiedBy": "jev"
+    "verified": false
   },
   {
     "id": "jon-lauer--owns--bryn-mawr-vineyards",
@@ -22647,10 +22644,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "bryn-mawr-vineyards--located-in--eola-amity-hills",
+    "id": "bryn-mawr-vineyards--draws-from--eola-amity-hills",
     "source": "bryn-mawr-vineyards",
     "target": "eola-amity-hills",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "About (Bryn Mawr Vineyards)",
@@ -23010,10 +23007,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "hummingbird-estate--located-in--rogue-valley",
+    "id": "hummingbird-estate--draws-from--rogue-valley",
     "source": "hummingbird-estate",
     "target": "rogue-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Hummingbird Estate",
@@ -23066,10 +23063,10 @@
     "verifiedBy": "jev"
   },
   {
-    "id": "irvine-and-roberts-vineyards--located-in--rogue-valley",
+    "id": "irvine-and-roberts-vineyards--draws-from--rogue-valley",
     "source": "irvine-and-roberts-vineyards",
     "target": "rogue-valley",
-    "type": "located_in",
+    "type": "draws_from",
     "sources": [
       {
         "title": "Irvine & Roberts Vineyards",
@@ -23605,5 +23602,181 @@
       }
     ],
     "verified": false
+  },
+  {
+    "id": "thomas-ratcliff--founded--fox-farm-vineyards",
+    "source": "thomas-ratcliff",
+    "target": "fox-farm-vineyards",
+    "type": "founded",
+    "role": "co-founder",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      },
+      {
+        "title": "Fox Farm Vineyards (The Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/974/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "david-fish--founded--fox-farm-vineyards",
+    "source": "david-fish",
+    "target": "fox-farm-vineyards",
+    "type": "founded",
+    "role": "co-founder",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      },
+      {
+        "title": "Fox Farm Vineyards (The Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/974/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "desiree-neel--founded--fox-farm-vineyards",
+    "source": "desiree-neel",
+    "target": "fox-farm-vineyards",
+    "type": "founded",
+    "role": "co-founder",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-fish--worked-at--fox-farm-vineyards",
+    "source": "david-fish",
+    "target": "fox-farm-vineyards",
+    "type": "worked_at",
+    "role": "daily operations manager",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "joe-dobbes--winemaker--fox-farm-vineyards",
+    "source": "joe-dobbes",
+    "target": "fox-farm-vineyards",
+    "type": "winemaker",
+    "note": "Named as winemaker in 2010; the winery's own page credits him with helping start it but does not say he still makes the wine.",
+    "sources": [
+      {
+        "title": "Fox Farm Vineyards (The Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/974/"
+      },
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "fox-farm-vineyards--draws-from--dundee-hills",
+    "source": "fox-farm-vineyards",
+    "target": "dundee-hills",
+    "type": "draws_from",
+    "note": "Leased Pinot noir parcels.",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "fox-farm-vineyards--draws-from--yamhill-carlton",
+    "source": "fox-farm-vineyards",
+    "target": "yamhill-carlton",
+    "type": "draws_from",
+    "note": "Leased Pinot noir parcels.",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "fox-farm-vineyards--draws-from--ribbon-ridge",
+    "source": "fox-farm-vineyards",
+    "target": "ribbon-ridge",
+    "type": "draws_from",
+    "note": "Leased Pinot noir parcels.",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "fox-farm-vineyards--draws-from--chehalem-mountains",
+    "source": "fox-farm-vineyards",
+    "target": "chehalem-mountains",
+    "type": "draws_from",
+    "note": "Leased Pinot noir parcels.",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "fox-farm-vineyards--draws-from--eola-amity-hills",
+    "source": "fox-farm-vineyards",
+    "target": "eola-amity-hills",
+    "type": "draws_from",
+    "note": "Leased Pinot noir parcels.",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "fox-farm-vineyards--draws-from--rogue-valley",
+    "source": "fox-farm-vineyards",
+    "target": "rogue-valley",
+    "type": "draws_from",
+    "note": "Mature Syrah blocks.",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
   }
 ]
