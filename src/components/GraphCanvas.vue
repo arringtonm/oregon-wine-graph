@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import cytoscape, { type Core, type ElementDefinition, type StylesheetJson } from 'cytoscape'
 import fcose from 'cytoscape-fcose'
-import { nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 import { edgeLabel, formatYears, nodeYears, useGraph } from '../composables/useGraph'
 import { EDGE_RULES } from '../data/schema'
+import GraphList from './GraphList.vue'
 import NodeGlyph from './NodeGlyph.vue'
 
 cytoscape.use(fcose)
@@ -27,6 +28,43 @@ const {
 
 const container = ref<HTMLDivElement>()
 const historyOpen = ref(false)
+const historyList = ref<HTMLOListElement>()
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+// Animation length, or none for readers who ask for reduced motion
+const motion = (ms: number) => (reducedMotion.matches ? 0 : ms)
+
+// The canvas is one image to assistive technology; its label says what it shows and
+// points to the list view, where the same nodes can be reached by keyboard
+const canvasLabel = computed(() => {
+  const selected = state.selectedId ? nodeById.value.get(state.selectedId) : undefined
+  return [
+    `Network graph of ${visibleNodes.value.length} people and places and ${visibleEdges.value.length} connections`,
+    selected ? `${selected.name} is selected` : '',
+    'Use List view to browse it by keyboard',
+  ]
+    .filter(Boolean)
+    .join('. ')
+})
+
+async function toggleHistory() {
+  historyOpen.value = !historyOpen.value
+  if (!historyOpen.value) return
+  await nextTick()
+  // Opening moves focus to the current entry, or the most recent one
+  const list = historyList.value
+  ;(list?.querySelector<HTMLButtonElement>('[aria-current]') ?? list?.querySelector<HTMLButtonElement>('button'))?.focus()
+}
+
+function closeHistory({ returnFocus = true } = {}) {
+  historyOpen.value = false
+  if (returnFocus) document.getElementById('history-toggle')?.focus()
+}
+
+function chooseFromHistory(index: number) {
+  goToHistory(index)
+  closeHistory({ returnFocus: false })
+  state.focusDetailsRequest++
+}
 const tooltip = reactive({ show: false, x: 0, y: 0, title: '', detail: '' })
 let cy: Core | undefined
 let layout: cytoscape.Layouts | undefined
@@ -228,7 +266,7 @@ function runLayout(randomize: boolean) {
     // 'proof' quality blocked the page for nearly three seconds on the full graph
     quality: 'default',
     randomize,
-    animate: !randomize,
+    animate: !randomize && !reducedMotion.matches,
     animationDuration: 400,
     // Measured on the full graph: counting labels as part of each node's size and pushing
     // nodes harder apart cut overlapping labels from about 1,700 pairs to about 300
@@ -302,7 +340,7 @@ function centerOnSelection() {
   if (selected.empty()) return
   // An AVA region is shown whole, framed with its members
   if (selected.isParent()) {
-    cy.animate({ fit: { eles: selected, padding: 60 } }, { duration: 300 })
+    cy.animate({ fit: { eles: selected, padding: 60 } }, { duration: motion(300) })
     return
   }
   if (compactQuery.matches) {
@@ -310,14 +348,14 @@ function centerOnSelection() {
     const rendered = selected.renderedPosition()
     cy.animate(
       { panBy: { x: cy.width() / 2 - rendered.x, y: cy.height() * 0.28 - rendered.y } },
-      { duration: 300 },
+      { duration: motion(300) },
     )
     return
   }
   const { x1, y1, x2, y2 } = cy.extent()
   const { x, y } = selected.position()
   if (x < x1 || x > x2 || y < y1 || y > y2) {
-    cy.animate({ center: { eles: selected } }, { duration: 300 })
+    cy.animate({ center: { eles: selected } }, { duration: motion(300) })
   }
 }
 
@@ -380,19 +418,24 @@ watch(
 
 <template>
   <div class="graph-canvas">
-    <div ref="container" class="graph-canvas__stage" role="img" aria-label="Network of Oregon wine people, wineries and vineyards"></div>
     <div
-      v-show="tooltip.show"
-      class="graph-canvas__tooltip"
-      :style="{ left: `${tooltip.x}px`, top: `${tooltip.y}px` }"
-    >
+      ref="container"
+      class="graph-canvas__stage"
+      role="img"
+      :aria-label="canvasLabel"
+      :aria-hidden="state.listView ? 'true' : undefined"
+    ></div>
+    <GraphList v-if="state.listView" class="graph-canvas__list" />
+    <div v-show="tooltip.show && !state.listView" class="graph-canvas__tooltip" aria-hidden="true" :style="{ left: `${tooltip.x}px`, top: `${tooltip.y}px` }">
       <strong>{{ tooltip.title }}</strong>
       <span v-if="tooltip.detail">{{ tooltip.detail }}</span>
     </div>
-    <div class="graph-canvas__toolbar" role="toolbar" aria-label="Graph navigation">
+    <div class="graph-canvas__toolbar" role="group" aria-label="Graph navigation">
       <button
+        id="filters-toggle"
         type="button"
         class="graph-canvas__filters"
+        aria-controls="filters"
         :aria-expanded="state.filtersOpen"
         @click="state.filtersOpen = !state.filtersOpen"
       >
@@ -400,7 +443,7 @@ watch(
       </button>
       <div class="graph-canvas__group">
         <button type="button" aria-label="Back" title="Back to the previous selection" :disabled="!canGoBack" @click="goBack">
-          ‹
+          <span aria-hidden="true">‹</span>
         </button>
         <button
           type="button"
@@ -409,32 +452,43 @@ watch(
           :disabled="!canGoForward"
           @click="goForward"
         >
-          ›
+          <span aria-hidden="true">›</span>
         </button>
         <button
+          id="history-toggle"
           type="button"
-          title="Everything selected this session"
+          aria-controls="history-list"
           :aria-expanded="historyOpen"
           :disabled="historyEntries.length === 0"
-          @click="historyOpen = !historyOpen"
+          @click="toggleHistory"
         >
           History
         </button>
       </div>
       <div class="graph-canvas__group">
-        <button type="button" aria-label="Zoom in" title="Zoom in" @click="zoomBy(1.3)">+</button>
-        <button type="button" aria-label="Zoom out" title="Zoom out" @click="zoomBy(1 / 1.3)">−</button>
-        <button type="button" title="Fit the whole graph in view" @click="fit">Fit</button>
-        <button type="button" title="Clear filters and selection, and lay the graph out again" @click="reset">
-          Reset
-        </button>
+        <button type="button" :aria-pressed="state.listView" @click="state.listView = !state.listView">List view</button>
       </div>
-      <ol v-if="historyOpen" class="graph-canvas__history" aria-label="Selection history, most recent first">
+      <div v-show="!state.listView" class="graph-canvas__group">
+        <button type="button" aria-label="Zoom in" title="Zoom in" @click="zoomBy(1.3)"><span aria-hidden="true">+</span></button>
+        <button type="button" aria-label="Zoom out" title="Zoom out" @click="zoomBy(1 / 1.3)"><span aria-hidden="true">−</span></button>
+        <button type="button" aria-describedby="fit-description" @click="fit">Fit</button>
+        <button type="button" aria-describedby="reset-description" @click="reset">Reset</button>
+      </div>
+      <span id="fit-description" class="visually-hidden">Fit the whole graph in view</span>
+      <span id="reset-description" class="visually-hidden">Clear filters and selection, and lay the graph out again</span>
+      <ol
+        v-if="historyOpen"
+        id="history-list"
+        ref="historyList"
+        class="graph-canvas__history"
+        aria-label="Selection history, most recent first"
+        @keydown.escape="closeHistory()"
+      >
         <li v-for="{ index, node } in historyEntries" :key="index">
           <button
             type="button"
             :aria-current="index === state.historyIndex ? 'true' : undefined"
-            @click="(goToHistory(index), (historyOpen = false))"
+            @click="chooseFromHistory(index)"
           >
             <NodeGlyph :type="node.type" />
             {{ node.name }}
@@ -455,6 +509,14 @@ watch(
 .graph-canvas__stage {
   position: absolute;
   inset: 0;
+}
+
+.graph-canvas__list {
+  position: absolute;
+  inset: 0;
+  padding-top: 4.5rem;
+  overflow-y: auto;
+  background: var(--surface);
 }
 
 .graph-canvas__tooltip {
@@ -518,8 +580,8 @@ watch(
 .graph-canvas__history {
   flex-basis: 100%;
   align-self: flex-start;
-  max-width: 280px;
-  max-height: min(50vh, 360px);
+  max-width: 20rem;
+  max-height: min(50vh, 26rem);
   margin: 0;
   padding: 4px;
   overflow-y: auto;

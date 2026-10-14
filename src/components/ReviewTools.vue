@@ -6,7 +6,11 @@ import type { GraphEdge, GraphNode } from '../data/schema'
 
 // Review-mode extras for one record: Jev's verdict, the evidence it read, and for a
 // connection the means to correct or remove it
-const props = defineProps<{ kind: 'node' | 'edge'; record: GraphNode | GraphEdge }>()
+// `label` names the record in button names, e.g. "founded by Susan Sokol Blosser", since a
+// card repeats Evidence, Edit and Remove for every connection
+const props = defineProps<{ kind: 'node' | 'edge'; record: GraphNode | GraphEdge; label: string }>()
+const evidenceId = computed(() => `evidence-${props.kind}-${props.record.id}`)
+const validYear = (year: string) => year === '' || /^\d{4}$/.test(year)
 const { state, decisionFor, loadEvidence, removeEdge, updateEdge } = useGraph()
 
 const decision = computed(() => decisionFor(props.kind, props.record))
@@ -83,10 +87,28 @@ function save() {
         {{ VERDICT_LABELS[decision.verdict] }}<template v-if="failing">: {{ failing }}</template>
       </span>
       <span v-else class="tools__chip">not checked</span>
-      <button type="button" :aria-expanded="!!evidence" :disabled="busy" @click="toggleEvidence">Evidence</button>
+      <button
+        type="button"
+        :aria-expanded="!!evidence"
+        :aria-controls="evidenceId"
+        :aria-label="`Evidence for ${label}`"
+        :disabled="busy"
+        @click="toggleEvidence"
+      >
+        Evidence
+      </button>
       <template v-if="kind === 'edge'">
-        <button type="button" :aria-expanded="editing" @click="editing ? (editing = false) : startEditing()">Edit</button>
-        <button v-if="!confirmingRemove" type="button" @click="confirmingRemove = true">Remove</button>
+        <button
+          type="button"
+          :aria-expanded="editing"
+          :aria-label="`Edit ${label}`"
+          @click="editing ? (editing = false) : startEditing()"
+        >
+          Edit
+        </button>
+        <button v-if="!confirmingRemove" type="button" :aria-label="`Remove ${label}`" @click="confirmingRemove = true">
+          Remove
+        </button>
         <template v-else>
           <button type="button" :disabled="busy" @click="run(() => removeEdge(record.id))">Confirm remove</button>
           <button type="button" @click="confirmingRemove = false">Keep</button>
@@ -96,20 +118,31 @@ function save() {
 
     <form v-if="editing" class="tools__edit" @submit.prevent="save">
       <label>Role <input v-model="form.role" type="text" /></label>
-      <label>From <input v-model="form.startYear" type="text" inputmode="numeric" pattern="\d{4}" placeholder="year" /></label>
-      <label>Until <input v-model="form.endYear" type="text" inputmode="numeric" pattern="\d{4}" placeholder="year" /></label>
+      <label>
+        From
+        <input v-model="form.startYear" type="text" inputmode="numeric" placeholder="year" :aria-invalid="!validYear(form.startYear) || undefined" />
+      </label>
+      <label>
+        Until
+        <input v-model="form.endYear" type="text" inputmode="numeric" placeholder="year" :aria-invalid="!validYear(form.endYear) || undefined" />
+      </label>
+      <p v-if="!validYear(form.startYear) || !validYear(form.endYear)" class="tools__invalid" role="alert">Years must be four digits.</p>
       <label class="tools__check"><input v-model="form.ongoing" type="checkbox" :disabled="!!form.endYear" /> Still true</label>
-      <button type="submit" :disabled="busy">{{ busy ? 'Saving…' : 'Save and re-check' }}</button>
+      <button type="submit" :disabled="busy || !validYear(form.startYear) || !validYear(form.endYear)">
+        {{ busy ? 'Saving…' : 'Save and re-check' }}
+      </button>
     </form>
 
-    <div v-if="evidence" class="tools__evidence">
+    <div v-if="evidence" :id="evidenceId" class="tools__evidence">
       <p><strong>Checked:</strong> {{ evidence.claims.main }}</p>
       <ul v-if="Object.keys(evidence.claims.details).length">
         <li v-for="(statement, id) in evidence.claims.details" :key="id">{{ statement }}</li>
       </ul>
       <section v-for="source in evidence.sources" :key="source.url">
         <p>
-          <a :href="source.url" target="_blank" rel="noopener">{{ source.title }}</a>
+          <a :href="source.url" target="_blank" rel="noopener">
+            {{ source.title }}<span class="visually-hidden"> (opens in a new tab)</span>
+          </a>
           <span class="tools__status"> · {{ source.status }}</span>
         </p>
         <blockquote v-if="source.passage">{{ source.passage }}</blockquote>
@@ -124,7 +157,7 @@ function save() {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 
 .tools__row {
@@ -151,7 +184,7 @@ function save() {
 }
 
 button {
-  padding: 2px 8px;
+  padding: 0.125rem 0.5rem;
   border: 1px solid var(--border-strong);
   border-radius: 6px;
   background: var(--surface);
@@ -208,6 +241,12 @@ button:disabled {
 
 .tools__evidence ul {
   padding-left: 16px;
+}
+
+.tools__invalid {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--danger);
 }
 
 .tools__status {

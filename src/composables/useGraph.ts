@@ -65,7 +65,30 @@ const state = reactive({
   // Nodes selected this session, oldest first. Kept in the app only, not in browser history.
   history: [] as string[],
   historyIndex: -1,
+  // Show the visible nodes as an accessible list in place of the canvas
+  listView: false,
+  // Text for the page's polite live region: selection changes, search result counts
+  announcement: '',
+  // Bumped to ask the detail panel to move keyboard focus to its heading
+  focusDetailsRequest: 0,
 })
+
+const SINGULAR_TYPE: Record<NodeType, string> = {
+  person: 'person',
+  winery: 'winery',
+  vineyard: 'vineyard',
+  ava: 'AVA',
+  organization: 'organization',
+  event: 'event',
+}
+const APP_TITLE = 'Oregon Wine Graph'
+
+// Says something to screen-reader users through the page's live region
+function announce(text: string) {
+  // Clearing first makes a repeat of the same text be read again
+  state.announcement = ''
+  queueMicrotask(() => (state.announcement = text))
+}
 
 const HISTORY_LIMIT = 100
 
@@ -301,15 +324,29 @@ function search(query: string): GraphNode[] {
 }
 
 function showSelection(id: string | null) {
+  const changed = state.selectedId !== id
   state.selectedId = id
+  const node = id ? nodeById.value.get(id) : undefined
+  document.title = node ? `${node.name} · ${APP_TITLE}` : APP_TITLE
+  if (changed) {
+    if (node) {
+      const count = edges.value.filter((edge) => edge.source === node.id || edge.target === node.id).length
+      announce(`${node.name}, ${SINGULAR_TYPE[node.type]}, ${count} connection${count === 1 ? '' : 's'}`)
+    } else if (id === null) {
+      announce('Selection cleared')
+    }
+  }
   const hash = id ? `#${id}` : ''
   if (window.location.hash !== hash) {
     window.history.replaceState(null, '', hash || window.location.pathname + window.location.search)
   }
 }
 
-// Selecting a node adds it to the history, dropping anything "forward" of the current position
-function select(id: string | null) {
+// Selecting a node adds it to the history, dropping anything "forward" of the current position.
+// With `focusDetails`, keyboard focus moves to the detail panel's heading, for selections
+// made from a list or a link rather than on the canvas.
+function select(id: string | null, { focusDetails = false } = {}) {
+  if (focusDetails && id) state.focusDetailsRequest++
   if (id && id !== state.history[state.historyIndex]) {
     state.history = [...state.history.slice(0, state.historyIndex + 1), id].slice(-HISTORY_LIMIT)
     state.historyIndex = state.history.length - 1
@@ -508,6 +545,7 @@ export function useGraph() {
     connectionsOf,
     search,
     select,
+    announce,
     canGoBack,
     canGoForward,
     goBack,

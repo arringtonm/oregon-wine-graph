@@ -56,9 +56,9 @@ const typeOptions = computed(() => {
 const directionAllowed = computed(
   () => !!source.value && !!target.value && allowedEdgeTypes(source.value.type, target.value.type).includes(draft.type),
 )
-const yearsValid = computed(() =>
-  [draft.startYear, draft.endYear].every((year) => year === '' || /^\d{4}$/.test(String(year))),
-)
+const yearsValid = computed(() => validYear(draft.startYear) && validYear(draft.endYear))
+
+const validYear = (year: string) => year === '' || /^\d{4}$/.test(String(year))
 
 function unsure(field: ProposalField): boolean {
   const confidence = proposal.value?.confidence[field]
@@ -126,13 +126,15 @@ async function save() {
   <section class="add">
     <h3>Add new connection</h3>
     <form @submit.prevent="read">
+      <label class="add__stacked" :for="`add-text-${node.id}`">Describe the connection in a sentence</label>
       <textarea
+        :id="`add-text-${node.id}`"
         v-model="text"
         rows="2"
-        :placeholder="`Say it in a sentence, e.g. “${node.name} founded …”`"
-        aria-label="Describe the connection in a sentence"
+        :placeholder="`e.g. “${node.name} founded …”`"
       ></textarea>
-      <input v-model="sourceUrl" type="url" placeholder="Source URL (optional)" aria-label="Source URL (optional)" />
+      <label class="add__stacked" :for="`add-url-${node.id}`">Source URL (optional)</label>
+      <input :id="`add-url-${node.id}`" v-model="sourceUrl" type="url" />
       <button type="submit" :disabled="busy || !text.trim()">{{ busy && !proposal ? 'Reading…' : 'Read it' }}</button>
     </form>
 
@@ -154,8 +156,8 @@ async function save() {
         }}
       </p>
 
-      <label :class="{ 'add__field--unsure': unsure('other') }">
-        <span>Other party</span>
+      <label>
+        <span>Other party<strong v-if="unsure('other')"> · check</strong></span>
         <select v-model="draft.otherId">
           <option v-for="candidate in proposal.candidates" :key="candidate.id" :value="candidate.id">
             {{ candidate.id === proposal.newNode?.id ? `New: ${candidate.name}` : `${candidate.name} (${candidate.type})` }}
@@ -174,27 +176,43 @@ async function save() {
           </select>
         </label>
       </template>
-      <label :class="{ 'add__field--unsure': unsure('type') }">
-        <span>Connection</span>
+      <label>
+        <span>Connection<strong v-if="unsure('type')"> · check</strong></span>
         <select v-model="draft.type">
           <option v-for="type in typeOptions" :key="type" :value="type">{{ EDGE_RULES[type].label }}</option>
         </select>
       </label>
-      <label :class="{ 'add__field--unsure': unsure('direction') }">
-        <span>Direction</span>
-        <button type="button" @click="draft.nodeIsSource = !draft.nodeIsSource">Swap the two</button>
-      </label>
-      <label :class="{ 'add__field--unsure': unsure('role') }">
-        <span>Role</span>
+      <div class="add__row">
+        <span :id="`add-direction-${node.id}`">Direction<strong v-if="unsure('direction')"> · check</strong></span>
+        <button type="button" :aria-describedby="`add-direction-${node.id}`" @click="draft.nodeIsSource = !draft.nodeIsSource">
+          Swap the two
+        </button>
+      </div>
+      <label>
+        <span>Role<strong v-if="unsure('role')"> · check</strong></span>
         <input v-model="draft.role" type="text" placeholder="e.g. spouse, co-founder" />
       </label>
-      <label :class="{ 'add__field--unsure': unsure('startYear') }">
-        <span>From</span>
-        <input v-model="draft.startYear" type="text" inputmode="numeric" placeholder="year" />
+      <label>
+        <span>From<strong v-if="unsure('startYear')"> · check</strong></span>
+        <input
+          v-model="draft.startYear"
+          type="text"
+          inputmode="numeric"
+          placeholder="year"
+          :aria-invalid="!validYear(draft.startYear) || undefined"
+          :aria-describedby="validYear(draft.startYear) ? undefined : `add-years-${node.id}`"
+        />
       </label>
-      <label :class="{ 'add__field--unsure': unsure('endYear') }">
-        <span>Until</span>
-        <input v-model="draft.endYear" type="text" inputmode="numeric" placeholder="year" />
+      <label>
+        <span>Until<strong v-if="unsure('endYear')"> · check</strong></span>
+        <input
+          v-model="draft.endYear"
+          type="text"
+          inputmode="numeric"
+          placeholder="year"
+          :aria-invalid="!validYear(draft.endYear) || undefined"
+          :aria-describedby="validYear(draft.endYear) ? undefined : `add-years-${node.id}`"
+        />
       </label>
       <label class="add__check">
         <input v-model="draft.ongoing" type="checkbox" :disabled="!!draft.endYear" />
@@ -207,7 +225,7 @@ async function save() {
           A {{ source?.type }} cannot be “{{ EDGE_RULES[draft.type].label }}” a {{ target?.type }}. Swap the two or
           change the connection.
         </li>
-        <li v-if="!yearsValid">Years must be four digits.</li>
+        <li v-if="!yearsValid" :id="`add-years-${node.id}`">Years must be four digits.</li>
       </ul>
 
       <div class="add__actions">
@@ -236,7 +254,7 @@ async function save() {
 h3 {
   margin: 0;
   color: var(--text-secondary);
-  font-size: 11px;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -294,7 +312,7 @@ button:disabled {
 .add__model,
 .add__saved {
   color: var(--text-secondary);
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 
 label {
@@ -302,17 +320,34 @@ label {
   grid-template-columns: 120px minmax(0, 1fr);
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+  font-size: 0.9375rem;
 }
 
 label > span {
   color: var(--text-secondary);
 }
 
-.add__field--unsure > span::after {
-  content: ' · check';
+.add__row {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9375rem;
+}
+
+.add__row > span {
+  color: var(--text-secondary);
+}
+
+.add__stacked {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+label strong,
+.add__row strong {
   color: var(--text-primary);
-  font-weight: 600;
 }
 
 .add__check {
@@ -326,7 +361,7 @@ label > span {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 13px;
+  font-size: 0.9375rem;
 }
 
 .add__messages:empty {
@@ -340,6 +375,6 @@ label > span {
 
 .add__error {
   color: var(--danger);
-  font-size: 13px;
+  font-size: 0.9375rem;
 }
 </style>

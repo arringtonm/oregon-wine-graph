@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, nextTick, ref, watch } from 'vue'
 import { nodeYears, reviewEnabled, useGraph } from '../composables/useGraph'
 import { EDGE_CATEGORY_LABELS, NODE_TYPE_LABELS } from '../data/schema'
 import AddConnection from './AddConnection.vue'
@@ -41,6 +41,17 @@ const QUEUE_LABELS: Record<string, string> = {
   'not checked': 'Not checked',
 }
 
+// Selections made from a list, a link or search move keyboard focus to the node's heading,
+// so a screen reader reads the new details from the top
+const heading = ref<HTMLHeadingElement>()
+watch(
+  () => state.focusDetailsRequest,
+  async () => {
+    await nextTick()
+    heading.value?.focus()
+  },
+)
+
 const groups = computed(() => (selectedNode.value ? connectionsOf(selectedNode.value.id) : []))
 const unverifiedOnCard = computed(
   () =>
@@ -55,7 +66,7 @@ const facts = computed(() =>
 </script>
 
 <template>
-  <aside class="detail" :class="{ 'detail--empty': !selectedNode }">
+  <section id="details" class="detail" :class="{ 'detail--empty': !selectedNode }" aria-label="Details" tabindex="-1">
     <div v-if="reviewEnabled" class="detail__review">
       <p>
         <strong>Review</strong>
@@ -72,7 +83,6 @@ const facts = computed(() =>
         v-for="group in reviewQueue"
         :key="group.verdict"
         type="button"
-        :title="`Go to the next node with a record in this group`"
         @click="selectNextWithVerdict(group.verdict)"
       >
         {{ QUEUE_LABELS[group.verdict] }} {{ group.nodeIds.length }}
@@ -90,8 +100,10 @@ const facts = computed(() =>
           {{ NODE_TYPE_LABELS[selectedNode.type] }}
           <template v-if="selectedNode.outsideOregon"> · outside Oregon</template>
         </p>
-        <button type="button" class="detail__close" aria-label="Close" @click="select(null)">×</button>
-        <h2>{{ selectedNode.name }}</h2>
+        <button type="button" class="detail__close" aria-label="Close details" @click="select(null)">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h2 ref="heading" tabindex="-1">{{ selectedNode.name }}</h2>
         <p v-if="selectedNode.aka" class="detail__aka">Also known as {{ selectedNode.aka.join(', ') }}</p>
         <p v-if="facts" class="detail__facts">{{ facts }}</p>
         <p v-if="avaNames.length" class="detail__facts">
@@ -107,45 +119,47 @@ const facts = computed(() =>
           v-if="reviewEnabled"
           type="button"
           class="detail__approve"
+          :aria-label="`${selectedNode.verified ? 'Undo approval of' : 'Approve'} ${selectedNode.name}`"
           @click="setVerified('node', selectedNode, !selectedNode.verified)"
         >
           {{ selectedNode.verified ? 'Undo' : 'Approve' }}
         </button>
       </p>
-      <ReviewTools v-if="reviewEnabled" :key="selectedNode.id" kind="node" :record="selectedNode" />
+      <ReviewTools v-if="reviewEnabled" :key="selectedNode.id" kind="node" :record="selectedNode" :label="selectedNode.name" />
 
       <section v-for="group in groups" :key="group.category">
         <h3>{{ EDGE_CATEGORY_LABELS[group.category] }}</h3>
         <ul>
           <li v-for="{ edge, other, label, years } in group.connections" :key="edge.id">
             <span class="detail__verb">{{ label }}</span>
-            <button type="button" class="detail__link" @click="select(other.id)">
+            <button type="button" class="detail__link" @click="select(other.id, { focusDetails: true })">
               <NodeGlyph :type="other.type" />
               {{ other.name }}
             </button>
             <span v-if="years" class="detail__years">{{ years }}</span>
             <span class="detail__refs">
-              <component
-                :is="source.url ? 'a' : 'span'"
-                v-for="(source, index) in edge.sources"
-                :key="source.title"
-                :href="source.url"
-                :title="source.title"
-                target="_blank"
-                rel="noopener"
-                >[{{ index + 1 }}]</component
-              >
+              <template v-for="(source, index) in edge.sources" :key="source.title">
+                <a v-if="source.url" :href="source.url" :title="source.title" target="_blank" rel="noopener">
+                  <span aria-hidden="true">[{{ index + 1 }}]</span>
+                  <span class="visually-hidden">Source {{ index + 1 }}: {{ source.title }} (opens in a new tab)</span>
+                </a>
+                <span v-else :title="source.title">
+                  <span aria-hidden="true">[{{ index + 1 }}]</span>
+                  <span class="visually-hidden">Source {{ index + 1 }}: {{ source.title }}</span>
+                </span>
+              </template>
             </span>
             <button
               v-if="reviewEnabled"
               type="button"
               class="detail__approve"
+              :aria-label="`${edge.verified ? 'Undo approval of' : 'Approve'} ${label} ${other.name}`"
               @click="setVerified('edge', edge, !edge.verified)"
             >
               {{ edge.verified ? 'Undo' : 'Approve' }}
             </button>
             <span v-if="edge.note" class="detail__note">{{ edge.note }}</span>
-            <ReviewTools v-if="reviewEnabled" :key="edge.id" kind="edge" :record="edge" />
+            <ReviewTools v-if="reviewEnabled" :key="edge.id" kind="edge" :record="edge" :label="`${label} ${other.name}`" />
           </li>
         </ul>
       </section>
@@ -155,7 +169,7 @@ const facts = computed(() =>
         <h3>Nearby tasting rooms</h3>
         <ul>
           <li v-for="{ node, km } in neighbours" :key="node.id">
-            <button type="button" class="detail__link" @click="select(node.id)">
+            <button type="button" class="detail__link" @click="select(node.id, { focusDetails: true })">
               <NodeGlyph :type="node.type" />
               {{ node.name }}
             </button>
@@ -170,7 +184,9 @@ const facts = computed(() =>
         <h3>Sources</h3>
         <ul>
           <li v-for="source in selectedNode.sources" :key="source.title">
-            <a v-if="source.url" :href="source.url" target="_blank" rel="noopener">{{ source.title }}</a>
+            <a v-if="source.url" :href="source.url" target="_blank" rel="noopener">
+              {{ source.title }}<span class="visually-hidden"> (opens in a new tab)</span>
+            </a>
             <span v-else>{{ source.title }}</span>
           </li>
         </ul>
@@ -188,7 +204,7 @@ const facts = computed(() =>
         Hover a line to read the connection.
       </p>
     </template>
-  </aside>
+  </section>
 </template>
 
 <style scoped>
@@ -227,14 +243,14 @@ header {
 
 h2 {
   margin: 4px 32px 0 0;
-  font-size: 20px;
+  font-size: 1.4rem;
   line-height: 1.25;
 }
 
 h3 {
   margin: 4px 0 6px;
   color: var(--text-secondary);
-  font-size: 11px;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -265,7 +281,7 @@ li {
   align-items: center;
   gap: 6px;
   color: var(--text-secondary);
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 
 .detail__close {
@@ -278,7 +294,7 @@ li {
   border-radius: 4px;
   background: none;
   color: var(--text-secondary);
-  font-size: 20px;
+  font-size: 1.4rem;
   line-height: 1;
   cursor: pointer;
 }
@@ -297,7 +313,7 @@ li {
 .detail__aka,
 .detail__facts {
   margin-top: 2px;
-  font-size: 13px;
+  font-size: 0.9375rem;
 }
 
 .detail__years {
@@ -307,7 +323,7 @@ li {
 .detail__note {
   flex-basis: 100%;
   color: var(--text-secondary);
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 
 .detail__review {
@@ -317,7 +333,7 @@ li {
   padding: 10px 12px;
   border: 1px dashed var(--border-strong);
   border-radius: 6px;
-  font-size: 13px;
+  font-size: 0.9375rem;
 }
 
 .detail__review p {
@@ -332,7 +348,7 @@ li {
   background: var(--surface);
   color: inherit;
   font: inherit;
-  font-size: 12px;
+  font-size: 0.875rem;
   cursor: pointer;
 }
 
@@ -354,7 +370,7 @@ li {
 .detail__refs {
   display: inline-flex;
   gap: 4px;
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 
 .detail__badge {
@@ -362,7 +378,7 @@ li {
   border: 1px solid var(--border);
   border-radius: 999px;
   color: var(--text-secondary);
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 
 .detail__link {
