@@ -15726,5 +15726,33 @@
         "date": "2020-08-13"
       }
     ]
+  },
+  {
+    "id": "greg-sanders",
+    "name": "Greg Sanders",
+    "summary": "Owner of White Rose Estate. After more than a decade building an aerospace manufacturing company in Southern California, he took viticulture and enology courses at UC Davis from 1995 and bought the 10-acre White Rose Vineyard in 2000.",
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "type": "person",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "greg-urmini",
+    "name": "Greg Urmini",
+    "summary": "Winemaking and operations lead at White Rose Estate since August 2022. Trained in Cal Poly's wine program, he spent 14 years at Paul Hobbs Wines in winemaking and vineyard roles, with harvests in Italy and Argentina.",
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "type": "person",
+    "verifiedBy": "jev"
   }
 ]

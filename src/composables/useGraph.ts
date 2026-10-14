@@ -1,9 +1,11 @@
 import { computed, reactive } from 'vue'
 import { loadGraph } from '../data'
+import { foldText } from '../graph/textMatch'
 import { claimsFingerprint, claimsFor, type CheckedRecord } from '../../tools/check/claims'
 import { APPLY_THRESHOLD, decide, type Decision, type Verdict } from '../../tools/check/decide'
 import type { EdgeChanges, Evidence } from '../../tools/check/edit'
 import type { CheckStore, StoredCheck } from '../../tools/check/store'
+import type { AskAnswer, AskOverride } from '../../tools/jev/askGraph'
 import type { Proposal, ProposedEdge } from '../../tools/jev/parseConnection'
 import {
   EDGE_CATEGORIES,
@@ -312,13 +314,13 @@ function connectionsOf(id: string): { category: EdgeCategory; connections: Conne
 
 // Matches visible nodes, and AVAs even when the AVA layer is off
 function search(query: string): GraphNode[] {
-  const needle = query.trim().toLowerCase()
+  const needle = foldText(query.trim())
   if (!needle) return []
   const shown = new Set(visibleNodes.value.map((node) => node.id))
   return nodes.value
     .filter((node) => shown.has(node.id) || node.type === 'ava')
     .filter((node) =>
-      [node.name, ...(node.aka ?? [])].some((name) => name.toLowerCase().includes(needle)),
+      [node.name, ...(node.aka ?? [])].some((name) => foldText(name).includes(needle)),
     )
     .slice(0, 8)
 }
@@ -458,6 +460,11 @@ async function postJson<T>(url: string, body: unknown): Promise<T> {
 }
 
 // Asks the dev server to read a sentence typed on a node's page as a connection
+// Dev server only: Jev reads the question, the graph supplies the answer
+function askJev(question: string, override?: AskOverride): Promise<AskAnswer> {
+  return postJson('/__ask', { question, override })
+}
+
 function parseConnection(text: string, contextId: string): Promise<Proposal> {
   return postJson('/__contribute/parse', { text, contextId })
 }
@@ -557,6 +564,7 @@ export function useGraph() {
     setVerified,
     approveCard,
     parseConnection,
+    askJev,
     addConnection,
     decisionFor,
     reviewQueue,

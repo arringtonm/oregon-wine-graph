@@ -2,6 +2,7 @@
 import { computed, reactive, ref } from 'vue'
 import type { Evidence } from '../../tools/check/edit'
 import { useGraph } from '../composables/useGraph'
+import Chevron from './Chevron.vue'
 import type { GraphEdge, GraphNode } from '../data/schema'
 
 // Review-mode extras for one record: Jev's verdict, the evidence it read, and for a
@@ -95,7 +96,7 @@ function save() {
         :disabled="busy"
         @click="toggleEvidence"
       >
-        Evidence
+        Evidence<Chevron />
       </button>
       <template v-if="kind === 'edge'">
         <button

@@ -19,6 +19,7 @@ import { claimsFingerprint, claimsFor, recordKey } from './check/claims'
 import { evidenceFor, findRecord, removeEdge, updateEdge } from './check/edit'
 import { readCached } from './check/fetchSources'
 import { compact, CHECKS_FILE, readChecks, writeChecks } from './check/store'
+import { askGraph, type AskOverride } from './jev/askGraph'
 import { jevModel, stubModel } from './jev/model'
 import { parseConnection, slugify, type ProposedEdge } from './jev/parseConnection'
 
@@ -275,6 +276,15 @@ export function reviewPlugin(dataDir = resolve('src/data')): Plugin {
           const edge = updateEdge(dataDir, id, changes)
           ownWrites.add(join(dataDir, 'edges.json'))
           return { edge, check: await recheck('edge', id) }
+        }),
+      )
+
+      // A question about the graph, read by Jev and answered from the records
+      server.middlewares.use(
+        '/__ask',
+        route(({ question, override }) => {
+          if (typeof question !== 'string' || !question.trim()) throw new Error('Malformed request')
+          return askGraph(question.trim(), readGraph(dataDir), model, (override ?? undefined) as AskOverride | undefined)
         }),
       )
 

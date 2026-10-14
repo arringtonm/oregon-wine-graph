@@ -49,25 +49,25 @@ function containsPhrase(haystack: string[], phrase: string[]): boolean {
   return haystack.some((_, start) => phrase.every((word, offset) => haystack[start + offset] === word))
 }
 
-// Nodes the sentence could be naming, other than the page it was typed on. Full names
-// and aliases beat a lone first or last name; nodes already connected to the context
+// Nodes the sentence could be naming, other than the page it was typed on (if any). Full
+// names and aliases beat a lone first or last name; nodes already connected to the context
 // node win ties, which is what makes "Jeanne" on Dan Diephouse's page unambiguous.
-export function findCandidates(text: string, context: GraphNode, graph: Graph): GraphNode[] {
+export function findCandidates(text: string, context: GraphNode | null, graph: Graph, limit = MAX_CANDIDATES): GraphNode[] {
   const textWords = words(text)
   const capitalised = new Set((text.match(/\b[A-ZÀ-Ý][\wà-ÿ'-]+/g) ?? []).map((word) => word.toLowerCase()))
-  const contextWords = new Set(words([context.name, ...(context.aka ?? [])].join(' ')))
+  const contextWords = new Set(context ? words([context.name, ...(context.aka ?? [])].join(' ')) : [])
   const neighbours = new Set<string>()
   const degree = new Map<string, number>()
   for (const edge of graph.edges) {
     degree.set(edge.source, (degree.get(edge.source) ?? 0) + 1)
     degree.set(edge.target, (degree.get(edge.target) ?? 0) + 1)
-    if (edge.source === context.id) neighbours.add(edge.target)
-    if (edge.target === context.id) neighbours.add(edge.source)
+    if (edge.source === context?.id) neighbours.add(edge.target)
+    if (edge.target === context?.id) neighbours.add(edge.source)
   }
 
   const scored: { node: GraphNode; score: number }[] = []
   for (const node of graph.nodes) {
-    if (node.id === context.id) continue
+    if (node.id === context?.id) continue
     let score = 0
     for (const name of [node.name, ...(node.aka ?? [])]) {
       if (containsPhrase(textWords, words(name))) score = Math.max(score, 3)
@@ -89,7 +89,7 @@ export function findCandidates(text: string, context: GraphNode, graph: Graph): 
 
   return scored
     .sort((a, b) => b.score - a.score || (degree.get(b.node.id) ?? 0) - (degree.get(a.node.id) ?? 0))
-    .slice(0, MAX_CANDIDATES)
+    .slice(0, limit)
     .map(({ node }) => node)
 }
 

@@ -1930,5 +1930,19 @@
       }
     ],
     "verifiedBy": "jev"
+  },
+  {
+    "id": "white-rose-vineyard",
+    "name": "White Rose Vineyard",
+    "summary": "Existing 10-acre vineyard that Greg Sanders bought in 2000, the start of White Rose Estate.",
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
   }
 ]

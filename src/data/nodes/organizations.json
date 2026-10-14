@@ -17,7 +17,8 @@
         "url": "https://en.wikipedia.org/wiki/UC_Davis_Department_of_Viticulture_and_Enology"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "oregon-wine-board",

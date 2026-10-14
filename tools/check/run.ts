@@ -34,7 +34,15 @@ async function main() {
   ]
   const pending = all
     .filter((item) => !host || item.record.sources.some((source) => source.url?.includes(host)))
-    .filter((item) => force || store[recordKey(item)]?.fingerprint !== claimsFingerprint(claimsFor(item, graph)))
+    .filter(
+      (item) =>
+        force ||
+        store[recordKey(item)]?.fingerprint !== claimsFingerprint(claimsFor(item, graph)) ||
+        // Checked before a source was fetched: check again now that it can be read
+        store[recordKey(item)]!.sources.some(
+          (source) => source.status === 'unreadable' && source.url && readCached(source.url)?.status === 'ok',
+        ),
+    )
     .slice(0, limit)
   // Drop results for records that no longer exist (removed, or renamed by a change of type)
   const keys = new Set(all.map(recordKey))

@@ -5784,7 +5784,7 @@
     "aka": [
       "White Rose"
     ],
-    "summary": "Small Willamette Valley winery where Tresider Burns led winemaking for three vintages before moving to Alexana in 2022.",
+    "summary": "Winery in Dundee, Oregon, owned by Greg Sanders, who bought the existing 10-acre White Rose Vineyard in 2000. Greg Urmini has led its winemaking and operations since August 2022.",
     "sources": [
       {
         "title": "Weinnotes newsletter, 6 August 2022",
@@ -5797,17 +5797,22 @@
       {
         "title": "White Rose Estate collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/white-rose-estate-collection/"
+      },
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
       }
     ],
-    "verified": true,
-    "verifiedBy": "jev",
+    "verified": false,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/white-rose-estate-collection/",
         "title": "White Rose Estate collection",
         "date": "2025-01-22"
       }
-    ]
+    ],
+    "place": "Dundee, OR",
+    "address": "6250 NE Hilltop Ln, Dundee, OR"
   },
   {
     "id": "leonetti-cellar",
@@ -9837,5 +9842,68 @@
         "date": "2020-08-13"
       }
     ]
+  },
+  {
+    "id": "linne-calodo",
+    "name": "Linne Calodo",
+    "summary": "Paso Robles, California winery where Greg Urmini worked for two years while studying at Cal Poly.",
+    "outsideOregon": true,
+    "place": "Paso Robles, CA",
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "erbaluna",
+    "name": "Erbaluna",
+    "summary": "Barolo producer in La Morra, Italy, where Greg Urmini worked a harvest after graduating.",
+    "outsideOregon": true,
+    "place": "La Morra, Italy",
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "paul-hobbs-wines",
+    "name": "Paul Hobbs Wines",
+    "summary": "California winery where Greg Urmini worked for 14 years, from intern through winemaking and vineyard roles.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "vina-cobos",
+    "name": "Viña Cobos",
+    "summary": "Argentine winery where Greg Urmini worked a harvest.",
+    "outsideOregon": true,
+    "place": "Argentina",
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
   }
 ]

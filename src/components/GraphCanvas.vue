@@ -3,9 +3,12 @@ import cytoscape, { type Core, type ElementDefinition, type StylesheetJson } fro
 import fcose from 'cytoscape-fcose'
 import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 import { edgeLabel, formatYears, nodeYears, useGraph } from '../composables/useGraph'
-import { EDGE_RULES } from '../data/schema'
+import { EDGE_RULES, NODE_TYPES } from '../data/schema'
+import { iconDataUri } from '../graph/icons'
 import { sizeTiers } from '../graph/nodeSize'
 import { removeOverlaps } from '../graph/removeOverlaps'
+import Chevron from './Chevron.vue'
+import ControlsGuide from './ControlsGuide.vue'
 import GraphList from './GraphList.vue'
 import NodeGlyph from './NodeGlyph.vue'
 
@@ -31,6 +34,7 @@ const {
 const container = ref<HTMLDivElement>()
 const historyOpen = ref(false)
 const historyList = ref<HTMLOListElement>()
+const historyMenu = ref<HTMLDivElement>()
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
 // Animation length, or none for readers who ask for reduced motion
 const motion = (ms: number) => (reducedMotion.matches ? 0 : ms)
@@ -47,6 +51,16 @@ const canvasLabel = computed(() => {
     .filter(Boolean)
     .join('. ')
 })
+
+// A press anywhere outside the open history list closes it
+function onPointerOutsideHistory(event: PointerEvent) {
+  if (!historyMenu.value?.contains(event.target as Node)) closeHistory({ returnFocus: false })
+}
+watch(historyOpen, (open) => {
+  if (open) document.addEventListener('pointerdown', onPointerOutsideHistory)
+  else document.removeEventListener('pointerdown', onPointerOutsideHistory)
+})
+onBeforeUnmount(() => document.removeEventListener('pointerdown', onPointerOutsideHistory))
 
 async function toggleHistory() {
   historyOpen.value = !historyOpen.value
@@ -79,6 +93,13 @@ function token(name: string): string {
 }
 
 // Cytoscape draws to a canvas, so theme tokens are resolved to values here
+const NODE_COLOUR_TOKENS: Partial<Record<string, string>> = {
+  person: '--node-person',
+  winery: '--node-winery',
+  vineyard: '--node-vineyard',
+}
+const nodeColour = (type: string) => token(NODE_COLOUR_TOKENS[type] ?? '--node-neutral')
+
 function buildStyle(): StylesheetJson {
   const surface = token('--surface')
   const ink = token('--text-primary')
@@ -92,9 +113,13 @@ function buildStyle(): StylesheetJson {
         // Hubs are drawn over the nodes and labels around them
         // Cytoscape's types reject data() mappers for z-index, though it supports them
         'z-index': 'data(z)' as unknown as number,
-        'background-color': neutral,
-        'border-width': 2,
-        'border-color': surface,
+        // Each node is its type's silhouette, drawn as an image on a transparent circle; the
+        // circle is what lines meet and what takes clicks
+        shape: 'ellipse',
+        'background-opacity': 0,
+        'background-fit': 'contain',
+        'background-clip': 'none',
+        'border-width': 0,
         label: 'data(label)',
         color: ink,
         'font-size': 'data(fontSize)',
@@ -108,16 +133,11 @@ function buildStyle(): StylesheetJson {
         'min-zoomed-font-size': 12,
       },
     },
-    { selector: 'node[type = "person"]', style: { shape: 'ellipse', 'background-color': token('--node-person') } },
-    {
-      selector: 'node[type = "winery"]',
-      style: { shape: 'round-rectangle', 'background-color': token('--node-winery') },
-    },
-    { selector: 'node[type = "vineyard"]', style: { shape: 'diamond', 'background-color': token('--node-vineyard') } },
-    { selector: 'node[type = "ava"]', style: { shape: 'hexagon' } },
-    { selector: 'node[type = "organization"]', style: { shape: 'round-triangle' } },
-    { selector: 'node[type = "event"]', style: { shape: 'star' } },
-    { selector: 'node[?outside]', style: { 'border-style': 'dashed', 'border-color': ink, 'border-width': 1.5 } },
+    // People and places outside Oregon have a dashed ring drawn into their image
+    ...NODE_TYPES.flatMap((type) => [false, true].map((outside) => ({
+      selector: `node[type = "${type}"]${outside ? '[?outside]' : '[!outside]'}`,
+      style: { 'background-image': iconDataUri(type, nodeColour(type), { outside }) },
+    }))),
     {
       selector: 'edge',
       style: {
@@ -146,6 +166,7 @@ function buildStyle(): StylesheetJson {
       selector: ':parent',
       style: {
         shape: 'round-rectangle',
+        'background-image': 'none',
         'background-color': neutral,
         'background-opacity': 0.07,
         'border-width': 1,
@@ -161,7 +182,11 @@ function buildStyle(): StylesheetJson {
       },
     },
     { selector: '.dimmed', style: { opacity: 0.15 } },
-    { selector: 'node.selected', style: { 'border-color': ink, 'border-width': 3, 'border-style': 'solid' } },
+    // A soft disc behind the selected node's silhouette
+    {
+      selector: 'node.selected',
+      style: { 'underlay-color': ink, 'underlay-opacity': 0.3, 'underlay-padding': 8, 'underlay-shape': 'ellipse' },
+    },
     {
       selector: 'edge.highlighted, edge.hovered',
       style: { label: 'data(label)', width: 2.5, 'line-opacity': 1, 'line-color': ink, 'target-arrow-color': ink },
@@ -494,6 +519,7 @@ watch(
       <strong>{{ tooltip.title }}</strong>
       <span v-if="tooltip.detail">{{ tooltip.detail }}</span>
     </div>
+    <ControlsGuide v-show="!state.listView" />
     <div class="graph-canvas__toolbar" role="group" aria-label="Graph navigation">
       <button
         id="filters-toggle"
@@ -518,19 +544,41 @@ watch(
         >
           <span aria-hidden="true">›</span>
         </button>
-        <button
-          id="history-toggle"
-          type="button"
-          aria-controls="history-list"
-          :aria-expanded="historyOpen"
-          :disabled="historyEntries.length === 0"
-          @click="toggleHistory"
-        >
-          History
-        </button>
+        <div ref="historyMenu" class="graph-canvas__history-menu">
+          <button
+            id="history-toggle"
+            type="button"
+            aria-controls="history-list"
+            :aria-expanded="historyOpen"
+            :disabled="historyEntries.length === 0"
+            @click="toggleHistory"
+          >
+            History<Chevron />
+          </button>
+          <ol
+            v-if="historyOpen"
+            id="history-list"
+            ref="historyList"
+            class="graph-canvas__history"
+            aria-label="Selection history, most recent first"
+            @keydown.escape="closeHistory()"
+          >
+            <li v-for="{ index, node } in historyEntries" :key="index">
+              <button
+                type="button"
+                :aria-current="index === state.historyIndex ? 'true' : undefined"
+                @click="chooseFromHistory(index)"
+              >
+                <NodeGlyph :type="node.type" />
+                {{ node.name }}
+              </button>
+            </li>
+          </ol>
+        </div>
       </div>
-      <div class="graph-canvas__group">
-        <button type="button" :aria-pressed="state.listView" @click="state.listView = !state.listView">List view</button>
+      <div class="graph-canvas__group graph-canvas__view" role="group" aria-label="View">
+        <button type="button" :aria-pressed="!state.listView" @click="state.listView = false">Graph</button>
+        <button type="button" :aria-pressed="state.listView" @click="state.listView = true">List</button>
       </div>
       <div v-show="!state.listView" class="graph-canvas__group">
         <button type="button" aria-label="Zoom in" title="Zoom in" @click="zoomBy(1.3)"><span aria-hidden="true">+</span></button>
@@ -540,25 +588,6 @@ watch(
       </div>
       <span id="fit-description" class="visually-hidden">Fit the whole graph in view</span>
       <span id="reset-description" class="visually-hidden">Clear filters and selection, and lay the graph out again</span>
-      <ol
-        v-if="historyOpen"
-        id="history-list"
-        ref="historyList"
-        class="graph-canvas__history"
-        aria-label="Selection history, most recent first"
-        @keydown.escape="closeHistory()"
-      >
-        <li v-for="{ index, node } in historyEntries" :key="index">
-          <button
-            type="button"
-            :aria-current="index === state.historyIndex ? 'true' : undefined"
-            @click="chooseFromHistory(index)"
-          >
-            <NodeGlyph :type="node.type" />
-            {{ node.name }}
-          </button>
-        </li>
-      </ol>
     </div>
   </div>
 </template>
@@ -608,7 +637,8 @@ watch(
   position: absolute;
   top: 12px;
   left: 12px;
-  right: 12px;
+  /* Room for the controls guide's button in the top-right corner */
+  right: 9rem;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -641,9 +671,24 @@ watch(
   opacity: 0.6;
 }
 
+.graph-canvas__history-menu {
+  position: relative;
+}
+
+/* The history toggle closes the back/forward group, so it takes that group's right corners */
+.graph-canvas__group .graph-canvas__history-menu > button {
+  display: inline-flex;
+  align-items: center;
+  border-left: 0;
+  border-radius: 0 6px 6px 0;
+}
+
 .graph-canvas__history {
-  flex-basis: 100%;
-  align-self: flex-start;
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 16rem;
   max-width: 20rem;
   max-height: min(50vh, 26rem);
   margin: 0;
@@ -678,6 +723,17 @@ watch(
 .graph-canvas__toolbar .graph-canvas__history button[aria-current] {
   background: var(--wash);
   font-weight: 600;
+}
+
+.graph-canvas__view button[aria-pressed='true'] {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--surface);
+  font-weight: 600;
+}
+
+.graph-canvas__view button[aria-pressed='true']:hover {
+  background: var(--text-primary);
 }
 
 .graph-canvas__filters {

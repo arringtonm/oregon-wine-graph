@@ -134,7 +134,8 @@
         "url": "https://en.wikipedia.org/wiki/David_Lett"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "david-lett--founded--the-eyrie-vineyard",
@@ -10461,7 +10462,8 @@
         "url": "https://greatnorthwestwine.com/?p=63745"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "gina-hennen--winemaker--adelsheim-vineyard",
@@ -10477,7 +10479,8 @@
         "url": "https://greatnorthwestwine.com/?p=63745"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "kate-ayres--winemaker--penner-ash-wine-cellars",
@@ -17278,7 +17281,8 @@
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-8"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "david-paige--founded--david-paige-wines",
@@ -24989,7 +24993,8 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/ariel-daly/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "ariel-daly--studied-at--chemeketa-community-college",
@@ -31256,5 +31261,145 @@
     ],
     "verified": true,
     "verifiedBy": "person"
+  },
+  {
+    "id": "greg-sanders--owns--white-rose-estate",
+    "source": "greg-sanders",
+    "target": "white-rose-estate",
+    "type": "owns",
+    "role": "owner",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "greg-sanders--owns--white-rose-vineyard",
+    "source": "greg-sanders",
+    "target": "white-rose-vineyard",
+    "type": "owns",
+    "role": "bought it",
+    "startYear": 2000,
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "greg-sanders--studied-at--uc-davis-viticulture-enology",
+    "source": "greg-sanders",
+    "target": "uc-davis-viticulture-enology",
+    "type": "studied_at",
+    "role": "viticulture and enology courses",
+    "startYear": 1995,
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "greg-urmini--winemaker--white-rose-estate",
+    "source": "greg-urmini",
+    "target": "white-rose-estate",
+    "type": "winemaker",
+    "role": "winemaking and operations lead",
+    "startYear": 2022,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "greg-urmini--studied-at--cal-poly",
+    "source": "greg-urmini",
+    "target": "cal-poly",
+    "type": "studied_at",
+    "role": "wine program",
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "greg-urmini--worked-at--linne-calodo",
+    "source": "greg-urmini",
+    "target": "linne-calodo",
+    "type": "worked_at",
+    "role": "two years during college",
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "greg-urmini--worked-at--erbaluna",
+    "source": "greg-urmini",
+    "target": "erbaluna",
+    "type": "worked_at",
+    "role": "worked a harvest",
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "greg-urmini--worked-at--paul-hobbs-wines",
+    "source": "greg-urmini",
+    "target": "paul-hobbs-wines",
+    "type": "worked_at",
+    "role": "began as an intern",
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "greg-urmini--worked-at--vina-cobos",
+    "source": "greg-urmini",
+    "target": "vina-cobos",
+    "type": "worked_at",
+    "role": "worked a harvest",
+    "sources": [
+      {
+        "title": "Our Team (White Rose Estate)",
+        "url": "https://whiteroseestate.com/about/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
   }
 ]
