@@ -5103,6 +5103,51 @@
         "url": "https://www.foxfarmvineyards.com/"
       }
     ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "claygate-estate-vineyard",
+    "type": "winery",
+    "name": "Claygate Estate Vineyard",
+    "aka": [
+      "Claygate"
+    ],
+    "place": "Newberg, OR",
+    "address": "17205 NE Dopp Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.34024,
+      "lng": -123.05849
+    },
+    "summary": "Small Ribbon Ridge estate making Pinot noir, rosé and Chardonnay from its own vineyard, with a first vintage in 2011. The name is the Clagett family's original spelling, recorded in the Domesday census of 1086.",
+    "sources": [
+      {
+        "title": "Claygate Estate Vineyard",
+        "url": "https://www.claygatevineyard.com"
+      },
+      {
+        "title": "About (Claygate Estate Vineyard)",
+        "url": "https://www.claygatevineyard.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "belle-pente",
+    "type": "winery",
+    "name": "Belle Pente Vineyard & Winery",
+    "aka": [
+      "Belle Pente"
+    ],
+    "founded": 1994,
+    "place": "Carlton, OR",
+    "summary": "Family winery on a 70-acre hillside and 1840s farmstead two miles east of Carlton, founded in 1994 by Jill and Brian O'Donnell, with its first vintage in 1996. It makes about 4,500 cases a year, two-thirds Pinot noir and two-thirds from estate grapes, drawing on Burgundy and Alsace for inspiration.",
+    "sources": [
+      {
+        "title": "About Belle Pente Vineyard & Winery (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
     "verified": false
   }
 ]

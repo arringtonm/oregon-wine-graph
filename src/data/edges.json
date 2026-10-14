@@ -23545,7 +23545,8 @@
         "url": "https://guillenfamily.com/about"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "guillen-family-wines--sources-from--vista-hills-vineyard",
@@ -23642,7 +23643,8 @@
         "url": "http://www.princeofpinot.com/winery/974/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "desiree-neel--founded--fox-farm-vineyards",
@@ -23782,5 +23784,556 @@
     ],
     "verified": true,
     "verifiedBy": "jev"
+  },
+  {
+    "id": "fox-farm-vineyards--owns--desiree-estate",
+    "source": "fox-farm-vineyards",
+    "target": "desiree-estate",
+    "type": "owns",
+    "sources": [
+      {
+        "title": "Added by Michael Arrington, 13 October 2026: \"Update description: it has an estate vineyard: Desiree Estate\""
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "deb-clagett--owns--claygate-estate-vineyard",
+    "source": "deb-clagett",
+    "target": "claygate-estate-vineyard",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Claygate Estate Vineyard",
+        "url": "https://www.claygatevineyard.com"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "rick-clagett--owns--claygate-estate-vineyard",
+    "source": "rick-clagett",
+    "target": "claygate-estate-vineyard",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Claygate Estate Vineyard",
+        "url": "https://www.claygatevineyard.com"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "claygate-estate-vineyard--owns--claygate-vineyard",
+    "source": "claygate-estate-vineyard",
+    "target": "claygate-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "About (Claygate Estate Vineyard)",
+        "url": "https://www.claygatevineyard.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "claygate-vineyard--located-in--ribbon-ridge",
+    "source": "claygate-vineyard",
+    "target": "ribbon-ridge",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Claygate Estate Vineyard",
+        "url": "https://www.claygatevineyard.com"
+      },
+      {
+        "title": "About (Claygate Estate Vineyard)",
+        "url": "https://www.claygatevineyard.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "deb-clagett--family--rick-clagett",
+    "source": "deb-clagett",
+    "target": "rick-clagett",
+    "type": "family",
+    "role": "spouse",
+    "sources": [
+      {
+        "title": "Added by Michael Arrington, 13 October 2026: \"Deb and Rick are married\""
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "brian-odonnell--founded--belle-pente",
+    "source": "brian-odonnell",
+    "target": "belle-pente",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1994,
+    "sources": [
+      {
+        "title": "About Belle Pente Vineyard & Winery (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jill-odonnell--founded--belle-pente",
+    "source": "jill-odonnell",
+    "target": "belle-pente",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 1994,
+    "sources": [
+      {
+        "title": "About Belle Pente Vineyard & Winery (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "brian-odonnell--winemaker--belle-pente",
+    "source": "brian-odonnell",
+    "target": "belle-pente",
+    "type": "winemaker",
+    "startYear": 1996,
+    "ongoing": true,
+    "note": "Responsible for production since the first vintage in 1996.",
+    "sources": [
+      {
+        "title": "About Belle Pente Vineyard & Winery (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "marcial-gonzales--worked-at--belle-pente",
+    "source": "marcial-gonzales",
+    "target": "belle-pente",
+    "type": "worked_at",
+    "role": "leads the vineyard team",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "The Belle Pente Estate Vineyard (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "belle-pente--owns--belle-pente-estate-vineyard",
+    "source": "belle-pente",
+    "target": "belle-pente-estate-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "About Belle Pente Vineyard & Winery (bellepente.com)",
+        "url": "https://bellepente.com"
+      },
+      {
+        "title": "The Belle Pente Estate Vineyard (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "belle-pente-estate-vineyard--located-in--yamhill-carlton",
+    "source": "belle-pente-estate-vineyard",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "About Belle Pente Vineyard & Winery (bellepente.com)",
+        "url": "https://bellepente.com"
+      },
+      {
+        "title": "The Belle Pente Estate Vineyard (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "belle-pente--sources-from--murto-vineyard",
+    "source": "belle-pente",
+    "target": "murto-vineyard",
+    "type": "sources_from",
+    "role": "vineyard-designated Pinot noir",
+    "startYear": 1997,
+    "endYear": 2019,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "belle-pente--sources-from--bella-vida-vineyard",
+    "source": "belle-pente",
+    "target": "bella-vida-vineyard",
+    "type": "sources_from",
+    "role": "Pinot noir for the Willamette Valley bottling",
+    "startYear": 2001,
+    "endYear": 2018,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "belle-pente--sources-from--rivenwood-vineyard",
+    "source": "belle-pente",
+    "target": "rivenwood-vineyard",
+    "type": "sources_from",
+    "role": "Pinot gris; farmed by Belle Pente",
+    "startYear": 2007,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "belle-pente--sources-from--hyland-vineyard",
+    "source": "belle-pente",
+    "target": "hyland-vineyard",
+    "type": "sources_from",
+    "role": "old-vines Gewürztraminer",
+    "startYear": 2003,
+    "endYear": 2006,
+    "note": "Gewürztraminer in 2003, 2005 and 2006.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "belle-pente--sources-from--hyland-vineyard-2",
+    "source": "belle-pente",
+    "target": "hyland-vineyard",
+    "type": "sources_from",
+    "role": "old-vines Riesling",
+    "startYear": 2014,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "belle-pente--sources-from--stag-hollow-vineyard",
+    "source": "belle-pente",
+    "target": "stag-hollow-vineyard",
+    "type": "sources_from",
+    "role": "Early Muscat and Muscat Ottonel",
+    "startYear": 2005,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "belle-pente--sources-from--foxy-rock-vineyard",
+    "source": "belle-pente",
+    "target": "foxy-rock-vineyard",
+    "type": "sources_from",
+    "role": "Pinot noir for the Willamette Valley bottlings",
+    "startYear": 2017,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "belle-pente--sources-from--aileron-hill-vineyard",
+    "source": "belle-pente",
+    "target": "aileron-hill-vineyard",
+    "type": "sources_from",
+    "role": "Pinot noir for the Willamette Valley bottlings",
+    "startYear": 2019,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mike-murto--owns--murto-vineyard",
+    "source": "mike-murto",
+    "target": "murto-vineyard",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "robin-murto--owns--murto-vineyard",
+    "source": "robin-murto",
+    "target": "murto-vineyard",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "steve-whiteside--owns--bella-vida-vineyard",
+    "source": "steve-whiteside",
+    "target": "bella-vida-vineyard",
+    "type": "owns",
+    "note": "Owned and managed it while Belle Pente bought its fruit, 2001 to 2018; current ownership not stated.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "allison-whiteside--owns--bella-vida-vineyard",
+    "source": "allison-whiteside",
+    "target": "bella-vida-vineyard",
+    "type": "owns",
+    "note": "Owned and managed it while Belle Pente bought its fruit, 2001 to 2018; current ownership not stated.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rick-karl--owns--rivenwood-vineyard",
+    "source": "rick-karl",
+    "target": "rivenwood-vineyard",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "heather-karl--owns--rivenwood-vineyard",
+    "source": "heather-karl",
+    "target": "rivenwood-vineyard",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mark-huff--owns--stag-hollow-vineyard",
+    "source": "mark-huff",
+    "target": "stag-hollow-vineyard",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jill-zarnowitz--owns--stag-hollow-vineyard",
+    "source": "jill-zarnowitz",
+    "target": "stag-hollow-vineyard",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chad-vargas--worked-at--foxy-rock-vineyard",
+    "source": "chad-vargas",
+    "target": "foxy-rock-vineyard",
+    "type": "worked_at",
+    "role": "vineyard manager",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ben-powers--owns--aileron-hill-vineyard",
+    "source": "ben-powers",
+    "target": "aileron-hill-vineyard",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lauren-powers--owns--aileron-hill-vineyard",
+    "source": "lauren-powers",
+    "target": "aileron-hill-vineyard",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jose-arguelles--worked-at--aileron-hill-vineyard",
+    "source": "jose-arguelles",
+    "target": "aileron-hill-vineyard",
+    "type": "worked_at",
+    "role": "vineyard manager",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bella-vida-vineyard--located-in--dundee-hills",
+    "source": "bella-vida-vineyard",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rivenwood-vineyard--located-in--yamhill-carlton",
+    "source": "rivenwood-vineyard",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "stag-hollow-vineyard--located-in--yamhill-carlton",
+    "source": "stag-hollow-vineyard",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "foxy-rock-vineyard--located-in--yamhill-carlton",
+    "source": "foxy-rock-vineyard",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "aileron-hill-vineyard--located-in--yamhill-carlton",
+    "source": "aileron-hill-vineyard",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
   }
 ]

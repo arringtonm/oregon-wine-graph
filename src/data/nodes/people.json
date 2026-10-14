@@ -6936,7 +6936,8 @@
         "url": "https://guillenfamily.com/about"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "david-fish",
@@ -6953,7 +6954,8 @@
         "url": "http://www.princeofpinot.com/winery/974/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "thomas-ratcliff",
@@ -6986,5 +6988,228 @@
     ],
     "verified": true,
     "verifiedBy": "jev"
+  },
+  {
+    "id": "deb-clagett",
+    "type": "person",
+    "name": "Deb Clagett",
+    "summary": "Co-owner of Claygate Estate Vineyard on Ribbon Ridge, where she hosts guests in the tasting room.",
+    "sources": [
+      {
+        "title": "Claygate Estate Vineyard",
+        "url": "https://www.claygatevineyard.com"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "rick-clagett",
+    "type": "person",
+    "name": "Rick Clagett",
+    "summary": "Co-owner of Claygate Estate Vineyard on Ribbon Ridge, where he hosts guests in the tasting room.",
+    "sources": [
+      {
+        "title": "Claygate Estate Vineyard",
+        "url": "https://www.claygatevineyard.com"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "brian-odonnell",
+    "type": "person",
+    "name": "Brian O'Donnell",
+    "summary": "Co-founder of Belle Pente with Jill O'Donnell in 1994 and responsible for its wine production. A former Silicon Valley professional from New York City who began making wine for family and friends in 1986.",
+    "sources": [
+      {
+        "title": "About Belle Pente Vineyard & Winery (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jill-odonnell",
+    "type": "person",
+    "name": "Jill O'Donnell",
+    "summary": "Co-founder of Belle Pente with Brian O'Donnell in 1994, sharing its marketing and administration. Originally from St. Cloud, Minnesota, she left a Silicon Valley career to start the winery.",
+    "sources": [
+      {
+        "title": "About Belle Pente Vineyard & Winery (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "marcial-gonzales",
+    "type": "person",
+    "name": "Marcial Gonzales",
+    "summary": "Has led Belle Pente's own vineyard team for about 20 years.",
+    "sources": [
+      {
+        "title": "The Belle Pente Estate Vineyard (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mike-murto",
+    "type": "person",
+    "name": "Mike Murto",
+    "summary": "Co-owner of Murto Vineyard in the Dundee Hills, which he manages with Robin Murto.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "robin-murto",
+    "type": "person",
+    "name": "Robin Murto",
+    "summary": "Co-owner of Murto Vineyard in the Dundee Hills, which she manages with Mike Murto.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "steve-whiteside",
+    "type": "person",
+    "name": "Steve Whiteside",
+    "summary": "Owned and managed Bella Vida Vineyard in the Dundee Hills with Allison Whiteside.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "allison-whiteside",
+    "type": "person",
+    "name": "Allison Whiteside",
+    "summary": "Owned and managed Bella Vida Vineyard in the Dundee Hills with Steve Whiteside.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rick-karl",
+    "type": "person",
+    "name": "Rick Karl",
+    "summary": "Co-owner of Rivenwood Vineyard in the Yamhill-Carlton AVA.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "heather-karl",
+    "type": "person",
+    "name": "Heather Karl",
+    "summary": "Co-owner of Rivenwood Vineyard in the Yamhill-Carlton AVA.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mark-huff",
+    "type": "person",
+    "name": "Mark Huff",
+    "summary": "Co-owner and manager of Stag Hollow Vineyard in the Yamhill-Carlton AVA.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jill-zarnowitz",
+    "type": "person",
+    "name": "Jill Zarnowitz",
+    "summary": "Co-owner and manager of Stag Hollow Vineyard in the Yamhill-Carlton AVA.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chad-vargas",
+    "type": "person",
+    "name": "Chad Vargas",
+    "summary": "Vineyard manager at Foxy Rock Vineyard in the Yamhill-Carlton AVA.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ben-powers",
+    "type": "person",
+    "name": "Ben Powers",
+    "summary": "Co-owner of Aileron Hill Vineyard in the Yamhill-Carlton AVA.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lauren-powers",
+    "type": "person",
+    "name": "Lauren Powers",
+    "summary": "Co-owner of Aileron Hill Vineyard in the Yamhill-Carlton AVA.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jose-arguelles",
+    "type": "person",
+    "name": "Jose Arguelles",
+    "summary": "Vineyard manager at Aileron Hill Vineyard in the Yamhill-Carlton AVA.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
   }
 ]

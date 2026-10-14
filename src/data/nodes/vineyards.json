@@ -1464,5 +1464,119 @@
     ],
     "verified": true,
     "verifiedBy": "jev"
+  },
+  {
+    "id": "desiree-estate",
+    "name": "Desiree Estate",
+    "summary": "Added from the statement: \"Update description: it has an estate vineyard: Desiree Estate\".",
+    "sources": [
+      {
+        "title": "Added by Michael Arrington, 13 October 2026: \"Update description: it has an estate vineyard: Desiree Estate\""
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "person"
+  },
+  {
+    "id": "claygate-vineyard",
+    "type": "vineyard",
+    "name": "Claygate Vineyard",
+    "planted": 2008,
+    "summary": "Estate vineyard of Claygate Estate Vineyard, planted in 2008 on 3.25 acres of a 42-acre Ribbon Ridge property that was once part of a homestead fruit and nut farm.",
+    "sources": [
+      {
+        "title": "Claygate Estate Vineyard",
+        "url": "https://www.claygatevineyard.com"
+      },
+      {
+        "title": "About (Claygate Estate Vineyard)",
+        "url": "https://www.claygatevineyard.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "belle-pente-estate-vineyard",
+    "type": "vineyard",
+    "name": "Belle Pente Estate Vineyard",
+    "planted": 1994,
+    "summary": "Belle Pente's own hillside vineyard at 240 to 500 feet, first planted in 1994 on the site of an old Italian plum orchard. Over 16 acres of Pinot noir, Pinot gris, Chardonnay and a little Gamay, dry farmed to organic standards since 2000 by the winery's own crew.",
+    "sources": [
+      {
+        "title": "About Belle Pente Vineyard & Winery (bellepente.com)",
+        "url": "https://bellepente.com"
+      },
+      {
+        "title": "The Belle Pente Estate Vineyard (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bella-vida-vineyard",
+    "type": "vineyard",
+    "name": "Bella Vida Vineyard",
+    "summary": "Dundee Hills vineyard that supplied Belle Pente's Willamette Valley Pinot noir from 2001 to 2018, then owned and managed by Steve and Allison Whiteside.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rivenwood-vineyard",
+    "type": "vineyard",
+    "name": "Rivenwood Vineyard",
+    "summary": "2.5-acre Yamhill-Carlton vineyard next to Belle Pente's estate, owned by Rick and Heather Karl and farmed by Belle Pente as an extension of its own vineyard.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "stag-hollow-vineyard",
+    "type": "vineyard",
+    "name": "Stag Hollow Vineyard",
+    "summary": "Yamhill-Carlton vineyard owned and managed by Mark Huff and Jill Zarnowitz, a source of Early Muscat and Muscat Ottonel.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "foxy-rock-vineyard",
+    "type": "vineyard",
+    "name": "Foxy Rock Vineyard",
+    "summary": "Yamhill-Carlton vineyard owned by the Heilman family and managed by Chad Vargas.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "aileron-hill-vineyard",
+    "type": "vineyard",
+    "name": "Aileron Hill Vineyard",
+    "summary": "Yamhill-Carlton vineyard owned by Ben and Lauren Powers and managed by Jose Arguelles.",
+    "sources": [
+      {
+        "title": "Independent vineyards where we source our fruit (bellepente.com)",
+        "url": "https://bellepente.com"
+      }
+    ],
+    "verified": false
   }
 ]
