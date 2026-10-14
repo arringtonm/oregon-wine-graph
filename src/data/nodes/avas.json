@@ -242,5 +242,68 @@
       }
     ],
     "verified": false
+  },
+  {
+    "id": "columbia-gorge",
+    "type": "ava",
+    "name": "Columbia Gorge AVA",
+    "summary": "Two-state AVA straddling the Columbia River in Hood River and Wasco counties, Oregon, and Skamania and Klickitat counties, Washington. Established on May 10, 2004 (T.D. TTB-11, 69 FR 25831), it borders the Columbia Valley AVA to its east.",
+    "established": 2004,
+    "sources": [
+      {
+        "title": "Columbia Gorge AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Columbia_Gorge_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "columbia-valley",
+    "type": "ava",
+    "name": "Columbia Valley AVA",
+    "summary": "Large AVA covering much of central and southern Washington and crossing into northern Oregon south of the Columbia River, established on December 13, 1984. Its sub-appellations include the Walla Walla Valley and The Rocks District of Milton-Freewater.",
+    "established": 1984,
+    "sources": [
+      {
+        "title": "Columbia Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Columbia_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "elkton-oregon",
+    "type": "ava",
+    "name": "Elkton Oregon AVA",
+    "summary": "Sub-appellation of the Umpqua Valley around the town of Elkton in Douglas County, established on February 5, 2013 on a petition by Michael Landt for himself and seven other vineyard owners. Winegrowing there dates to the early 1970s.",
+    "established": 2013,
+    "sources": [
+      {
+        "title": "Elkton Oregon AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Elkton_Oregon_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "red-hill-douglas-county",
+    "type": "ava",
+    "name": "Red Hill Douglas County, Oregon AVA",
+    "aka": [
+      "Red Hill Douglas County AVA"
+    ],
+    "summary": "Small AVA lying entirely within the Umpqua Valley, established on October 14, 2005 on a 2002 petition by Wayne Hitchings, then its only vineyard owner. It consists of a single vineyard on red Jory soils at 800 to 1,200 feet.",
+    "established": 2005,
+    "sources": [
+      {
+        "title": "Red Hill Douglas County, Oregon AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Red_Hill_Douglas_County,_Oregon_AVA"
+      },
+      {
+        "title": "AVA Unto Its Own: Wayne Hitchings (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/ava-unto-its-own-wayne-hitchings"
+      }
+    ],
+    "verified": false
   }
 ]

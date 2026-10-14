@@ -118,5 +118,152 @@
       }
     ],
     "verified": false
+  },
+  {
+    "id": "international-cool-climate-symposium",
+    "type": "event",
+    "name": "International Cool Climate Symposium for Viticulture and Enology",
+    "aka": [
+      "International Cool Climate Wine Symposium",
+      "ICCWS"
+    ],
+    "summary": "International research symposium series on cool-climate grape growing and winemaking, first created in 1984 by Oregon State University's Agricultural Experiment Station scientists and since held in cool-climate regions around the world.",
+    "firstHeld": 1984,
+    "sources": [
+      {
+        "title": "OSU scientists help Oregon's vineyards and wineries stay competitive (Oregon's Agricultural Progress, OSU)",
+        "url": "https://archive.progress.oregonstate.edu/winter-2014/timeline/osu-scientists-help-oregon%E2%80%99s-vineyards-and-wineries-stay-competitive"
+      },
+      {
+        "title": "History (International Cool Climate Wine Symposium 2022)",
+        "url": "https://iccws2022.ca/about/history/"
+      },
+      {
+        "title": "Legacy remembered: Dr David Heatherbell (Rural News Group, New Zealand Winegrower)",
+        "url": "https://www.ruralnewsgroup.co.nz/wine-grower/wg-general-news/legacy-remembered"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "senate-bill-100",
+    "type": "event",
+    "name": "Oregon Senate Bill 100 (1973)",
+    "aka": [
+      "Oregon Land Conservation and Development Act of 1973",
+      "SB 100"
+    ],
+    "summary": "The 1973 Oregon Land Conservation and Development Act, signed by Governor Tom McCall on 29 May 1973, which required county growth-management plans and the protection of farmland. Winegrowers led by David Adelsheim and David Lett mapped prime hillside vineyard land in the northern Willamette Valley and lobbied county planners to keep it from residential development.",
+    "firstHeld": 1973,
+    "lastHeld": 1973,
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Oregon Land Conservation and Development Act of 1973 (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Oregon_Land_Conservation_and_Development_Act_of_1973"
+      },
+      {
+        "title": "Yamhill Area Land Use Map (Oregon History Project, Oregon Historical Society)",
+        "url": "https://www.oregonhistoryproject.org/articles/historical-records/yamhill-area-land-use-map/"
+      },
+      {
+        "title": "Land Use Planning Maps: David Adelsheim Collection (Linfield University)",
+        "url": "https://digitalcommons.linfield.edu/land_use_maps"
+      },
+      {
+        "title": "Oregon Wine History (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=184"
+      },
+      {
+        "title": "Hector Macpherson Jr. (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Hector_Macpherson_Jr."
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "oregon-wine-labeling-regulations-1977",
+    "type": "event",
+    "name": "Oregon wine labeling regulations (1977)",
+    "summary": "Strict wine labeling rules adopted by the Oregon Liquor Control Commission in 1977, written and promoted by David Adelsheim over the preceding five years. They set a higher varietal minimum than federal law and barred borrowed place names.",
+    "firstHeld": 1977,
+    "lastHeld": 1977,
+    "sources": [
+      {
+        "title": "Knudsen Erath Brochure (Oregon History Project, Oregon Historical Society)",
+        "url": "https://www.oregonhistoryproject.org/articles/historical-records/knudsen-erath-brochure/"
+      },
+      {
+        "title": "Q&A: David Adelsheim (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/q-and-a-david-adelsheim"
+      },
+      {
+        "title": "Oregon wine (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Oregon_wine"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "carbon-neutral-challenge",
+    "type": "event",
+    "name": "Carbon Neutral Challenge",
+    "summary": "Carbon-reduction program for Oregon wineries run jointly by the Oregon Environmental Council and the Oregon Wine Board from 2007 to 2009; fourteen wineries completed it.",
+    "firstHeld": 2007,
+    "lastHeld": 2009,
+    "sources": [
+      {
+        "title": "2007-2009: 20% of Oregon's wineries reduced their carbon footprint through our Carbon Neutral Challenge (Oregon Environmental Council)",
+        "url": "https://oeconline.org/2007-2009-20-of-oregons-wineries-reduced-their-carbon-footprint-through-our-carbon-neutral-challenge/"
+      },
+      {
+        "title": "Oregon eco-winery goes beyond LEED (National Geographic)",
+        "url": "https://www.nationalgeographic.com/environment/article/oregon-eco-winery-goes-beyond-leed"
+      },
+      {
+        "title": "Oregon Wine History (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=184"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "oregon-wine-symposium",
+    "type": "event",
+    "name": "Oregon Wine Symposium",
+    "aka": [
+      "Grape Day"
+    ],
+    "summary": "Annual two-day educational conference and trade show for the Oregon wine industry, held each February in Portland and produced by the Oregon Wine Board and the Oregon Winegrowers Association.",
+    "place": "Portland, OR",
+    "sources": [
+      {
+        "title": "Oregon wine (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Oregon_wine"
+      },
+      {
+        "title": "Mission and history (Oregon Winegrowers Association)",
+        "url": "https://www.oregonwinegrowers.org/mission-history/"
+      },
+      {
+        "title": "Oregon Wine Symposium",
+        "url": "https://www.oregonwinesymposium.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "one-barrel-challenge",
+    "type": "event",
+    "name": "One Barrel Challenge",
+    "summary": "Charity release for Oregon Wine Month in May 2021 in which seven Oregon wineries each bottled a wine under a shared label, with all proceeds going to the Maurice Lucas Foundation.",
+    "firstHeld": 2021,
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 1 May 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-8"
+      }
+    ],
+    "verified": false
   }
 ]

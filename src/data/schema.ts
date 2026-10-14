@@ -5,7 +5,8 @@ const year = z.number().int().min(1700).max(2100)
 
 const sourceSchema = z.strictObject({
   title: z.string().min(1),
-  url: z.url(),
+  // Absent for sources with no public address, such as an emailed newsletter issue
+  url: z.url().optional(),
 })
 
 const baseNode = {

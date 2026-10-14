@@ -1,12 +1,18 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { nodeYears, useGraph } from '../composables/useGraph'
+import { nodeYears, reviewEnabled, useGraph } from '../composables/useGraph'
 import { EDGE_CATEGORY_LABELS, NODE_TYPE_LABELS } from '../data/schema'
 import NodeGlyph from './NodeGlyph.vue'
 
-const { selectedNode, connectionsOf, select } = useGraph()
+const { state, selectedNode, connectionsOf, select, unverified, setVerified, approveCard, selectNextUnverified } =
+  useGraph()
 
 const groups = computed(() => (selectedNode.value ? connectionsOf(selectedNode.value.id) : []))
+const unverifiedOnCard = computed(
+  () =>
+    (selectedNode.value && !selectedNode.value.verified ? 1 : 0) +
+    groups.value.flatMap((group) => group.connections).filter(({ edge }) => !edge.verified).length,
+)
 const facts = computed(() =>
   selectedNode.value
     ? [nodeYears(selectedNode.value), selectedNode.value.place].filter(Boolean).join(' · ')
@@ -16,6 +22,24 @@ const facts = computed(() =>
 
 <template>
   <aside class="detail" :class="{ 'detail--empty': !selectedNode }">
+    <div v-if="reviewEnabled" class="detail__review">
+      <p>
+        <strong>Review</strong>
+        {{ unverified.nodes }} nodes and {{ unverified.edges }} connections unverified
+      </p>
+      <button
+        type="button"
+        :disabled="unverified.nodes + unverified.edges === 0"
+        @click="selectNextUnverified"
+      >
+        Next unverified
+      </button>
+      <button v-if="selectedNode && unverifiedOnCard > 0" type="button" @click="approveCard(selectedNode)">
+        Approve all {{ unverifiedOnCard }} on this card
+      </button>
+      <p v-if="state.reviewError" class="detail__error" role="alert">{{ state.reviewError }}</p>
+    </div>
+
     <template v-if="selectedNode">
       <header>
         <p class="detail__type">
@@ -30,7 +54,18 @@ const facts = computed(() =>
       </header>
 
       <p>{{ selectedNode.summary }}</p>
-      <p v-if="!selectedNode.verified" class="detail__badge">Unverified draft</p>
+      <p class="detail__status">
+        <span v-if="!selectedNode.verified" class="detail__badge">Unverified draft</span>
+        <span v-else-if="reviewEnabled" class="detail__badge">Verified</span>
+        <button
+          v-if="reviewEnabled"
+          type="button"
+          class="detail__approve"
+          @click="setVerified('node', selectedNode, !selectedNode.verified)"
+        >
+          {{ selectedNode.verified ? 'Undo' : 'Approve' }}
+        </button>
+      </p>
 
       <section v-for="group in groups" :key="group.category">
         <h3>{{ EDGE_CATEGORY_LABELS[group.category] }}</h3>
@@ -42,6 +77,24 @@ const facts = computed(() =>
               {{ other.name }}
             </button>
             <span v-if="years" class="detail__years">{{ years }}</span>
+            <span class="detail__refs">
+              <component
+                :is="source.url ? 'a' : 'span'"
+                v-for="(source, index) in edge.sources"
+                :key="source.title"
+                :href="source.url"
+                :title="source.title"
+                target="_blank"
+                rel="noopener"
+                >[{{ index + 1 }}]</component
+              >
+            </span>
+            <template v-if="reviewEnabled">
+              <span v-if="edge.verified" class="detail__years">verified</span>
+              <button type="button" class="detail__approve" @click="setVerified('edge', edge, !edge.verified)">
+                {{ edge.verified ? 'Undo' : 'Approve' }}
+              </button>
+            </template>
             <span v-if="edge.note" class="detail__note">{{ edge.note }}</span>
           </li>
         </ul>
@@ -51,8 +104,9 @@ const facts = computed(() =>
       <section>
         <h3>Sources</h3>
         <ul>
-          <li v-for="source in selectedNode.sources" :key="source.url">
-            <a :href="source.url" target="_blank" rel="noopener">{{ source.title }}</a>
+          <li v-for="source in selectedNode.sources" :key="source.title">
+            <a v-if="source.url" :href="source.url" target="_blank" rel="noopener">{{ source.title }}</a>
+            <span v-else>{{ source.title }}</span>
           </li>
         </ul>
       </section>
@@ -190,8 +244,54 @@ li {
   font-size: 12px;
 }
 
+.detail__review {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px dashed var(--border-strong);
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.detail__review p {
+  flex-basis: 100%;
+}
+
+.detail__review button,
+.detail__approve {
+  padding: 3px 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.detail__review button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.detail__error {
+  color: var(--danger);
+}
+
+.detail__status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail__refs {
+  display: inline-flex;
+  gap: 4px;
+  font-size: 12px;
+}
+
 .detail__badge {
-  align-self: flex-start;
   padding: 2px 8px;
   border: 1px solid var(--border);
   border-radius: 999px;

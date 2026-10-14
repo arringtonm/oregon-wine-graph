@@ -220,5 +220,576 @@
       }
     ],
     "verified": false
+  },
+  {
+    "id": "crimson-wine-group",
+    "type": "organization",
+    "name": "Crimson Wine Group",
+    "summary": "Napa-based wine holding company whose properties include Pine Ridge, Seghesio, Archery Summit in Oregon and Seven Hills Winery in Walla Walla. In 2016 it also bought the old blocks of Seven Hills Vineyard on the Oregon side of the Walla Walla Valley.",
+    "kind": "company",
+    "outsideOregon": true,
+    "place": "Napa, CA",
+    "sources": [
+      {
+        "title": "Crimson Wine Group Buys 66 Acres of Walla Walla Valley Vines (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/crimson-wine-group-buys-seven-hills-vineyard"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bacchus-capital-management",
+    "type": "organization",
+    "name": "Bacchus Capital Management",
+    "summary": "San Francisco-based wine private equity firm co-founded in 2007 by Sam Bronfman, Peter Kaufman and Henry Owsley. In 2013 it bought Panther Creek Cellars outright and made a follow-on investment in Wine By Joe.",
+    "kind": "company",
+    "founded": 2007,
+    "outsideOregon": true,
+    "place": "San Francisco, CA",
+    "sources": [
+      {
+        "title": "Wine Investment Group Makes Big Moves in Pacific Northwest (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/wine-investment-group-makes-big-moves-in-pacific-northwest-48431"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "santa-margherita-usa",
+    "type": "organization",
+    "name": "Santa Margherita USA",
+    "aka": [
+      "HERITA USA"
+    ],
+    "summary": "U.S. fine wine import subsidiary of Italy's Santa Margherita Gruppo Vinicolo, controlled by the Marzotto family and now trading as HERITA USA. It took majority ownership of ROCO Winery in January 2022.",
+    "kind": "company",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Santa Margherita USA Acquires Majority Ownership of ROCO Winery (Beverage Industry News)",
+        "url": "https://bevnewsonline.com/santa-margherita-usa-acquires-majority-ownership-of-roco-winery/"
+      },
+      {
+        "title": "Italian wine group acquires Dundee Hills vineyard from Coppola-owned Domaine Lumineux (Newsberg)",
+        "url": "https://newsberg.org/2026/03/24/italian-wine-group-acquires-dundee-hills-vineyard-from-coppola-owned-domaine-lumineux/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "artemis-domaines",
+    "type": "organization",
+    "name": "Artémis Domaines",
+    "summary": "François Pinault's wine holding company, owner of Château Latour, Clos de Tart and Eisele Vineyard. In 2022 it took a majority stake in Maisons & Domaines Henriot, the owner of Beaux Frères, with the Henriot family becoming minority shareholders.",
+    "kind": "company",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Château Latour Owner Artémis Domaines Buys Majority Stake in Henriot (Shanken News Daily)",
+        "url": "https://www.shankennewsdaily.com/2022/10/04/31879/wine-spectator-chateau-latour-owner-artemis-domaines-buys-majority-stake-in-henriot/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "distinguished-vineyards-and-wine-partners",
+    "type": "organization",
+    "name": "Distinguished Vineyards & Wine Partners",
+    "summary": "Wine company that owns Argyle Winery. Argyle came into the group after Brian Croser's Petaluma winery, which had bought Argyle, was taken over by drinks company Lion Nathan in 2001.",
+    "kind": "company",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Argyle Winery (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/130/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "milwaukie-nursery",
+    "type": "organization",
+    "name": "Milwaukie Nursery",
+    "aka": [
+      "Luelling and Meek nursery"
+    ],
+    "kind": "company",
+    "summary": "Orchard and nursery started by Henderson Luelling and William Meek after Luelling's 1847 arrival, at the site where Milwaukie was soon founded. Luelling's brother Seth Lewelling joined in 1850 and took the nursery over when Henderson left for California.",
+    "place": "Milwaukie, OR",
+    "sources": [
+      {
+        "title": "Henderson Luelling (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Henderson_Luelling"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "live-certified",
+    "type": "organization",
+    "name": "LIVE (Low Input Viticulture and Enology)",
+    "aka": [
+      "LIVE Certified",
+      "Low Input Viticulture & Enology, Inc."
+    ],
+    "kind": "nonprofit",
+    "summary": "Sustainability certifier for Pacific Northwest vineyards and wineries, formed by Willamette Valley winegrowers in 1997 and incorporated as a nonprofit in 1999, with accreditation from the international IOBC. It added Washington growers in 2006, a winery program in 2008 and Idaho in 2012.",
+    "founded": 1997,
+    "sources": [
+      {
+        "title": "About LIVE (LIVE Certified)",
+        "url": "https://livecertified.org/about/"
+      },
+      {
+        "title": "Many winemakers are going easy on the Earth (Sunset)",
+        "url": "https://sunset.com/food-wine/wine-pairings/green-vines"
+      },
+      {
+        "title": "Wine Person of 2014: Al MacDonald (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/wine-person-of-2014-al-macdonald"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chemeketa-community-college",
+    "type": "organization",
+    "name": "Chemeketa Community College",
+    "aka": [
+      "Northwest Wine Studies Center",
+      "Chemeketa Eola",
+      "Chemeketa"
+    ],
+    "kind": "school",
+    "summary": "Salem community college whose wine studies program, begun in 1999, is based at the Northwest Wine Studies Center on its Eola campus in West Salem, with an eight-acre teaching vineyard and the Chemeketa Cellars winery.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Wine Studies (Chemeketa Community College)",
+        "url": "https://www.chemeketa.edu/programs-classes/program-finder/wine-studies/"
+      },
+      {
+        "title": "Wine Person of 2014: Al MacDonald (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/wine-person-of-2014-al-macdonald"
+      },
+      {
+        "title": "Weinnotes newsletter, 2 March 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-4"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "deep-roots-coalition",
+    "type": "organization",
+    "name": "Deep Roots Coalition",
+    "aka": [
+      "DRC"
+    ],
+    "kind": "nonprofit",
+    "summary": "Group of Willamette Valley winemakers and growers that promotes terroir-driven viticulture without irrigation; its members make wine solely from dry-farmed vines.",
+    "sources": [
+      {
+        "title": "Deep Roots Coalition",
+        "url": "https://www.deeprootscoalition.org/"
+      },
+      {
+        "title": "Who we are (Deep Roots Coalition)",
+        "url": "https://www.deeprootscoalition.org/partners"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "salud",
+    "type": "organization",
+    "name": "¡Salud!",
+    "aka": [
+      "¡Salud! The Oregon Pinot Noir Auction",
+      "Salud"
+    ],
+    "kind": "nonprofit",
+    "summary": "Program created in 1991 by Oregon winemakers and Tuality Healthcare professionals to provide basic health care to seasonal vineyard workers, funded mainly by its annual Oregon Pinot Noir Auction. It is now a project of the Hillsboro Medical Center Foundation.",
+    "founded": 1991,
+    "sources": [
+      {
+        "title": "¡Salud! Collection: historical note (Oregon Wine History Archive, Linfield)",
+        "url": "https://digitalcommons.linfield.edu/owha_salud_docs"
+      },
+      {
+        "title": "¡Salud! The Oregon Pinot Noir Auction",
+        "url": "https://www.saludauction.org/"
+      },
+      {
+        "title": "Nancy Ponzi (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Nancy_Ponzi"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "erath-family-foundation",
+    "type": "organization",
+    "name": "Erath Family Foundation",
+    "kind": "nonprofit",
+    "summary": "Foundation set up by Dick Erath after the 2006 sale of his winery; it has given more than $2 million to wine and viticulture education and research programs at Oregon State University, Linfield and elsewhere.",
+    "sources": [
+      {
+        "title": "Oregon Wine Pioneer Dick Erath Dies at 87 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/oregon-wine-pioneer-dick-erath-dies"
+      },
+      {
+        "title": "Gregory V. Jones (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Gregory_V._Jones"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "southern-oregon-university",
+    "type": "organization",
+    "name": "Southern Oregon University",
+    "aka": [
+      "SOU"
+    ],
+    "kind": "school",
+    "summary": "Public university in Ashland where climatologist Gregory V. Jones was a professor in the Environmental Science and Policy Program and directed the Division of Business, Communication and the Environment.",
+    "place": "Ashland, OR",
+    "sources": [
+      {
+        "title": "Gregory V. Jones (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Gregory_V._Jones"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lycee-viticole-de-beaune",
+    "type": "organization",
+    "name": "Lycée Viticole de Beaune",
+    "kind": "school",
+    "summary": "Wine-growing school in Beaune, Burgundy, where David Adelsheim spent two months in 1974 studying cool-climate grape varieties and working in its experimental winery.",
+    "outsideOregon": true,
+    "place": "Beaune, France",
+    "sources": [
+      {
+        "title": "David Adelsheim profile (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/article/1418/"
+      },
+      {
+        "title": "Q&A: David Adelsheim (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/q-and-a-david-adelsheim"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cfppa-beaune",
+    "type": "organization",
+    "name": "CFPPA de Beaune",
+    "aka": [
+      "CFPPA Beaune"
+    ],
+    "kind": "school",
+    "summary": "School in Beaune, Burgundy, where Luisa Ponzi earned a certificate in viticulture and enology in the early 1990s, the first American woman to complete the course.",
+    "outsideOregon": true,
+    "place": "Beaune, France",
+    "sources": [
+      {
+        "title": "Luisa Ponzi profile (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/article/1437/"
+      },
+      {
+        "title": "A Long Story, Still Being Told (Ponzi Vineyards)",
+        "url": "https://www.ponzivineyards.com/our-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "university-of-dijon",
+    "type": "organization",
+    "name": "University of Dijon",
+    "aka": [
+      "University of Burgundy",
+      "Université de Bourgogne"
+    ],
+    "kind": "school",
+    "summary": "Burgundy university where Véronique Drouhin took her advanced degree in enology, and where Raymond Bernard led the clonal selection research that produced the Dijon clones of Pinot noir and Chardonnay.",
+    "outsideOregon": true,
+    "place": "Dijon, France",
+    "sources": [
+      {
+        "title": "A French woman in Oregon: Véronique Drouhin-Boss (BKWine Magazine)",
+        "url": "https://www.bkwine.com/features/wine-producer-profiles/french-woman-oregon-veronique-drouhin-boss-roserock-drouhin-oregon/"
+      },
+      {
+        "title": "Pinot Noir clones (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/945/"
+      },
+      {
+        "title": "Clone Wars: Selecting the Right Pinot (SevenFifty Daily)",
+        "url": "https://daily.sevenfifty.com/clone-wars-selecting-the-right-pinot/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "southern-oregon-research-and-extension-center",
+    "type": "organization",
+    "name": "Southern Oregon Research and Extension Center",
+    "aka": [
+      "SOREC",
+      "Hanley Station"
+    ],
+    "kind": "other",
+    "summary": "Oregon State University's experiment station near Medford, built around the pear industry, where wine-grape variety trials planted in the 1960s, in 1990 with Oregon Wine Advisory Board funding, and again in 2017 have guided Rogue Valley growers.",
+    "place": "Medford, OR",
+    "sources": [
+      {
+        "title": "Comice to Cabernet (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/comince-to-cabernet"
+      },
+      {
+        "title": "Vineyards of the Rogue Valley (Rogue Valley Winegrowers Association)",
+        "url": "https://rvwinegrowers.org/?p=13"
+      },
+      {
+        "title": "About us (Oregon Wine Research Institute, OSU)",
+        "url": "https://owri.oregonstate.edu/owri/about-us"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "oregon-wine-research-institute",
+    "type": "organization",
+    "name": "Oregon Wine Research Institute",
+    "aka": [
+      "OWRI"
+    ],
+    "kind": "other",
+    "summary": "Research and extension partnership between Oregon State University and the Oregon wine industry, started with about $2 million raised by the industry. OSU sources date its founding to 2008 or 2009.",
+    "place": "Corvallis, OR",
+    "sources": [
+      {
+        "title": "Oregon Wine Research Institute (Oregon's Agricultural Progress, OSU, summer 2014)",
+        "url": "https://archive.progress.oregonstate.edu/summer-2014/oregon-wine-research-institute"
+      },
+      {
+        "title": "James Osborne Named Director of the Oregon Wine Research Institute (OSU College of Agricultural Sciences)",
+        "url": "https://agsci.oregonstate.edu/home/article/james-osborne-named-director-oregon-wine-research-institute"
+      },
+      {
+        "title": "About us (Oregon Wine Research Institute, OSU)",
+        "url": "https://owri.oregonstate.edu/owri/about-us"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "oregon-environmental-council",
+    "type": "organization",
+    "name": "Oregon Environmental Council",
+    "aka": [
+      "OEC"
+    ],
+    "kind": "nonprofit",
+    "summary": "Portland-based environmental nonprofit that ran the Carbon Neutral Challenge for Oregon wineries with the Oregon Wine Board from 2007 to 2009.",
+    "place": "Portland, OR",
+    "sources": [
+      {
+        "title": "2007-2009: 20% of Oregon's wineries reduced their carbon footprint through our Carbon Neutral Challenge (Oregon Environmental Council)",
+        "url": "https://oeconline.org/2007-2009-20-of-oregons-wineries-reduced-their-carbon-footprint-through-our-carbon-neutral-challenge/"
+      },
+      {
+        "title": "Oregon eco-winery goes beyond LEED (National Geographic)",
+        "url": "https://www.nationalgeographic.com/environment/article/oregon-eco-winery-goes-beyond-leed"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "oregon-wine-council",
+    "type": "organization",
+    "name": "Oregon Wine Council",
+    "aka": [
+      "OWC"
+    ],
+    "kind": "trade-body",
+    "summary": "Statewide trade association founded in late 2019 by industry members who had opposed labeling legislation sponsored by the Oregon Winegrowers Association; A to Z Wineworks founder Sam Tannahill was an early board member and president.",
+    "founded": 2019,
+    "sources": [
+      {
+        "title": "About (Oregon Wine Council)",
+        "url": "https://oregonwinecouncil.org/about/"
+      },
+      {
+        "title": "Alternative group forms to promote Oregon wine industry (KATU / Associated Press)",
+        "url": "https://www.katu.com/news/local/alternative-group-forms-to-promote-oregon-wine-industry"
+      },
+      {
+        "title": "Board of Directors (Oregon Wine Council)",
+        "url": "https://oregonwinecouncil.org/board-of-directors/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "umpqua-valley-winegrowers-association",
+    "type": "organization",
+    "name": "Umpqua Valley Winegrowers Association",
+    "aka": [
+      "UVWA"
+    ],
+    "kind": "trade-body",
+    "summary": "Roseburg-based association that promotes the wineries and vineyards of the Umpqua Valley.",
+    "place": "Roseburg, OR",
+    "sources": [
+      {
+        "title": "Umpqua Valley Wine History (Umpqua Valley Winegrowers Association)",
+        "url": "https://www.umpquavalleywineries.org/umpqua-valley-ava/"
+      },
+      {
+        "title": "Wineries directory (Umpqua Valley Winegrowers Association)",
+        "url": "https://www.umpquavalleywineries.org/wineries/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "eola-amity-hills-winegrowers-association",
+    "type": "organization",
+    "name": "Eola-Amity Hills Winegrowers Association",
+    "kind": "trade-body",
+    "summary": "Association of wineries and growers in the Eola-Amity Hills AVA.",
+    "sources": [
+      {
+        "title": "Our Wineries (Eola-Amity Hills Winegrowers Association)",
+        "url": "https://eolaamityhills.com/wineries"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "vinovate",
+    "type": "organization",
+    "name": "Vinovate Custom Wine Services",
+    "summary": "Custom crush facility in the Dundee Hills that opened in 2023, founded by Rob Townsend, Pam Turner, Scott Baldwin and winemaker Bryan Weil; it makes still and sparkling wines for small brands.",
+    "aka": [
+      "Vinovate",
+      "Vinovate Wine Services"
+    ],
+    "kind": "company",
+    "founded": 2023,
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 24 June 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-103"
+      },
+      {
+        "title": "Weinnotes newsletter, 7 October 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-111"
+      },
+      {
+        "title": "Vinovate Custom Wine Services",
+        "url": "https://vinovatewineservices.com/"
+      },
+      {
+        "title": "Weinnotes newsletter, 8 March 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-LnUXjUjN"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "radiant-sparkling-wine-company",
+    "type": "organization",
+    "name": "Radiant Sparkling Wine Company",
+    "aka": [
+      "Radiant Sparkling"
+    ],
+    "summary": "Sparkling wine production business started by Andrew Davis that gives other Oregon wineries access to the specialist equipment needed for traditional-method sparkling wine.",
+    "kind": "company",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 4 October 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-dmLbV5gR"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "southern-oregon-wine-institute",
+    "type": "organization",
+    "name": "Southern Oregon Wine Institute",
+    "aka": [
+      "UCC Wine Institute"
+    ],
+    "summary": "Viticulture and enology program of Umpqua Community College in Roseburg.",
+    "kind": "school",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 1 November 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-bg5rMxA3"
+      },
+      {
+        "title": "About Us (Apona Vineyards)",
+        "url": "https://aponavineyards.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "hampton-lumber",
+    "type": "organization",
+    "name": "Hampton Lumber",
+    "summary": "Family-owned Oregon timber company whose fourth-generation owners moved into wine, planting Tall Tree vineyard in 2016, acquiring Fennwood vineyard in 2018 and buying the Carlton Winemakers Studio in 2021.",
+    "kind": "company",
+    "aka": [
+      "Hampton family"
+    ],
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 25 September 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-16"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "vinetenders",
+    "type": "organization",
+    "name": "Vinetenders",
+    "summary": "Vineyard management company founded by Joel Myers in 1984, which at one point farmed about 500 acres in the northern Willamette Valley.",
+    "kind": "company",
+    "founded": 1984,
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 21 May 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-48"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "washington-state-university",
+    "type": "organization",
+    "name": "Washington State University",
+    "aka": [
+      "WSU"
+    ],
+    "summary": "Public university in Pullman, Washington, with a viticulture and enology program; Arabilis founders Kenny and Allison McMahon met there as graduate researchers.",
+    "kind": "school",
+    "outsideOregon": true,
+    "place": "Pullman, WA",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 18 March 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-89"
+      }
+    ],
+    "verified": false
   }
 ]

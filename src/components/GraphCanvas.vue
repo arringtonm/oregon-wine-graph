@@ -37,7 +37,7 @@ function buildStyle(): StylesheetJson {
         'border-color': surface,
         label: 'data(label)',
         color: ink,
-        'font-size': 11,
+        'font-size': 'data(fontSize)',
         'font-family': 'system-ui, -apple-system, "Segoe UI", sans-serif',
         'text-valign': 'bottom',
         'text-margin-y': 4,
@@ -45,7 +45,7 @@ function buildStyle(): StylesheetJson {
         'text-outline-width': 2,
         'text-wrap': 'wrap',
         'text-max-width': '120px',
-        'min-zoomed-font-size': 7,
+        'min-zoomed-font-size': 12,
       },
     },
     { selector: 'node[type = "person"]', style: { shape: 'ellipse', 'background-color': token('--node-person') } },
@@ -90,6 +90,8 @@ function buildStyle(): StylesheetJson {
 
 function buildElements(): ElementDefinition[] {
   const maxDegree = Math.max(1, ...degree.value.values())
+  // Square root keeps the few biggest hubs from dwarfing everything else
+  const weight = (id: string) => Math.sqrt((degree.value.get(id) ?? 0) / maxDegree)
   return [
     ...visibleNodes.value.map((node) => ({
       group: 'nodes' as const,
@@ -98,7 +100,9 @@ function buildElements(): ElementDefinition[] {
         label: node.name,
         type: node.type,
         outside: node.outsideOregon === true,
-        size: 18 + (26 * (degree.value.get(node.id) ?? 0)) / maxDegree,
+        size: 14 + 40 * weight(node.id),
+        // Well-connected nodes get larger labels, so they stay readable when zoomed out
+        fontSize: 8 + 28 * weight(node.id),
       },
     })),
     ...visibleEdges.value.map((edge) => ({
@@ -150,7 +154,8 @@ function runLayout(randomize: boolean) {
     randomize,
     animate: !randomize,
     animationDuration: 400,
-    nodeRepulsion: 14000,
+    nodeRepulsion: 30000,
+    gravity: 0.12,
     idealEdgeLength: 150,
     nodeSeparation: 120,
     padding: 40,

@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Private source material (newsletter emails); never commit
+temp/
+*.eml

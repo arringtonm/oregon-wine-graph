@@ -27,9 +27,15 @@ Conventions:
 - Several edges may join the same pair: one person can be founder, owner and winemaker of the same winery, or hold two separate stints.
 - `ongoing: true` means the relationship still holds. A missing `endYear` on its own means the end date is unknown.
 - Entities based outside Oregon carry `outsideOregon: true`.
-- Every record needs a source. `verified` stays `false` until someone has checked the record against its sources.
+- Every record needs a source. A source normally has a URL; one without (an emailed newsletter issue, say) is cited by title and date. `verified` stays `false` until someone has checked the record against its sources.
 
 `src/data/index.ts` is the only module that reads the JSON, so moving to a hosted database later means reimplementing `loadGraph()` there.
+
+## Reviewing records
+
+Run `npm run dev` and the detail panel gains a review box. Each node and each connection has an Approve button (and Undo), its sources are linked beside it, and "Next unverified" walks through whatever is left. Approving writes `verified: true` straight into the JSON file, so a review session ends as an ordinary git diff to read and commit.
+
+Review mode exists only on the dev server (`tools/reviewPlugin.ts`); the built site is read-only and shows unverified records with an "Unverified draft" badge.
 
 ## App
 
@@ -47,7 +53,7 @@ Visualization:
 - Size nodes by importance, not just connection count. Today a node's size is its number of connections; an explicit `importance` field or a centrality measure would let pioneering figures stand out even when few of their ties are recorded.
 - Offer more than one view of the same data: a timeline or year slider showing the network as it stood in a given year, a map by AVA, and a lineage view for mentorship and family ("who trained whom").
 - Tint or group nodes by AVA, and consider a color per connection category once there is a palette that stays readable.
-- Show at a glance which records are verified.
+- Show at a glance on the graph itself which records are verified.
 - Photos or logos on nodes and in the detail panel.
 
 Data:

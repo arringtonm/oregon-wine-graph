@@ -1119,5 +1119,5474 @@
       }
     ],
     "verified": false
+  },
+  {
+    "id": "mark-vlossak",
+    "type": "person",
+    "name": "Mark Vlossak",
+    "summary": "Founder and winemaker of St. Innocent Winery, which he started in 1988 after apprenticing under Fred Arterberry Jr. from 1987 to 1989. He was also winemaker for Panther Creek Cellars from 1994 through the 1999 harvest.",
+    "sources": [
+      {
+        "title": "St. Innocent Winery: About",
+        "url": "https://www.stinnocentwine.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "john-paul",
+    "type": "person",
+    "name": "John Paul",
+    "summary": "Founder, owner and winemaker of Cameron Winery in Dundee, which he started in 1984. He had been an assistant winemaker at Carneros Creek Winery in Napa Valley.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Cameron Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1373/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-wayne",
+    "type": "person",
+    "name": "Bill Wayne",
+    "summary": "Grower who planted Abbey Ridge Vineyard in the Dundee Hills with his wife Julia in the late 1970s. The Waynes are partners in Cameron Winery.",
+    "sources": [
+      {
+        "title": "Vineyard: Abbey Ridge (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/vineyard/541/index.html"
+      },
+      {
+        "title": "Cameron Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1373/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "gary-andrus",
+    "type": "person",
+    "name": "Gary Andrus",
+    "summary": "Former U.S. Olympic skier who founded Pine Ridge Vineyards in Napa and then, with Nancy Andrus, Archery Summit in the Dundee Hills. He sold Archery Summit in 2001 and later made wine under the Gypsy Dancer label; he died in 2009.",
+    "died": 2009,
+    "sources": [
+      {
+        "title": "Remembering Gary Andrus (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/remembering-gary-andrus-15969"
+      },
+      {
+        "title": "Archery Summit Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/739/"
+      },
+      {
+        "title": "Gary Andrus Dies (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/gary-andrus-dies-4567"
+      }
+    ],
+    "verified": false,
+    "aka": [
+      "Robert \"Gary\" Andrus"
+    ]
+  },
+  {
+    "id": "doug-tunnell",
+    "type": "person",
+    "name": "Doug Tunnell",
+    "summary": "Owner of Brick House Vineyards on Ribbon Ridge, a 40-acre farm he has run organically since 1990.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Brick House Wine Company (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/634/index.html"
+      },
+      {
+        "title": "Brick House Wines: Our Story",
+        "url": "https://www.brickhousewines.com/our-story"
+      },
+      {
+        "title": "Weinnotes newsletter, 4 May 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-6"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "patty-green",
+    "type": "person",
+    "name": "Patty Green",
+    "aka": [
+      "Patricia Green"
+    ],
+    "summary": "Winemaker who started at HillCrest Vineyard in 1986, worked at Adelsheim and launched Torii Mor as its first winemaker in 1993. She co-founded Patricia Green Cellars with Jim Anderson in 2000 and died in November 2017 aged 62.",
+    "died": 2017,
+    "sources": [
+      {
+        "title": "In Memoriam: Patty Green (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/in-memoriam-patty-green"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jim-anderson",
+    "type": "person",
+    "name": "Jim Anderson",
+    "summary": "Co-founder with Patty Green of Patricia Green Cellars, and its owner and winemaker. He worked part-time at Autumn Wind from 1993 to 1995, the property the two later bought.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "In Memoriam: Patty Green (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/in-memoriam-patty-green"
+      },
+      {
+        "title": "Jim Anderson Interview (Oregon Wine History Archive, Linfield)",
+        "url": "https://digitalcommons.linfield.edu/owha_willamette_interviews/116"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "donald-olson",
+    "type": "person",
+    "name": "Donald Olson",
+    "summary": "Physician who founded Torii Mor Winery in 1993 around his Olson vineyard in the Dundee Hills.",
+    "sources": [
+      {
+        "title": "Torii Mor Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/143/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "don-lange",
+    "type": "person",
+    "name": "Don Lange",
+    "summary": "Co-founder with his wife Wendy of Lange Estate Winery, established in the Dundee Hills in 1987 after they moved from Santa Barbara. He is described as among the first in the Willamette Valley to plant Pinot gris.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Lange Estate Winery and Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/721/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jesse-lange",
+    "type": "person",
+    "name": "Jesse Lange",
+    "summary": "Son of Don and Wendy Lange, trained at Lincoln University in New Zealand and Oregon State. He took over winemaking at Lange Estate in 2005, also becoming general manager.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Lange Estate Winery and Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/721/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jimi-brooks",
+    "type": "person",
+    "name": "Jimi Brooks",
+    "summary": "Winemaker who worked at WillaKenzie Estate and Maysara before founding Brooks in 1998. He died in 2004 at 38, leaving the winery to his son Pascal.",
+    "died": 2004,
+    "sources": [
+      {
+        "title": "Brooks Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/1858/"
+      },
+      {
+        "title": "Brooks Wine: The People of Brooks",
+        "url": "https://brookswine.com/About-Us"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "moe-momtazi",
+    "type": "person",
+    "name": "Moe Momtazi",
+    "summary": "Iranian-born civil engineer who bought a wheat farm outside McMinnville with his wife Flora in 1997 and planted Momtazi Vineyard from 1998. He owns Maysara Winery and farms biodynamically.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "Moe and Hanna Momtazi interview photograph (Oregon Wine History Archive, Linfield)",
+        "url": "https://digitalcommons.linfield.edu/owha_willamette_ohphotos/411"
+      },
+      {
+        "title": "Meet Moe Momtazi (Portland Monthly)",
+        "url": "https://www.pdxmonthly.com/news-and-city-life/2020/10/meet-moe-momtazi-keeper-of-some-of-the-willamette-valley-s-most-primal-grapes"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "denis-burger",
+    "type": "person",
+    "name": "Denis Burger",
+    "summary": "Co-owner, with Elaine McCall and David Hinrichs, of Yamhill Valley Vineyards in the McMinnville AVA, family owned since 1983.",
+    "sources": [
+      {
+        "title": "Yamhill Valley Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/881/"
+      },
+      {
+        "title": "Yamhill Valley Vineyards Collection (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/yamhill-valley-vineyards-collection/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bernard-lacroute",
+    "type": "person",
+    "name": "Bernard Lacroute",
+    "summary": "Burgundy-born technology executive who bought a cattle farm in the Willamette Valley in 1991 and founded WillaKenzie Estate with his wife Ronni. He sold the estate to Jackson Family Wines in 2016 to retire.",
+    "sources": [
+      {
+        "title": "Jackson Family Continues Oregon Pinot Noir Expansion, Buying WillaKenzie Estate (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/jackson-family-buys-willakenzie-estate"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "laurent-montalieu",
+    "type": "person",
+    "name": "Laurent Montalieu",
+    "summary": "Winemaker who was a partner and winemaker at WillaKenzie Estate until 2003, when he launched NW Wine Company with John Niemeyer. He and his wife Danielle Andrus Montalieu, daughter of Gary Andrus, own Soléna and bought Hyland Vineyard in 2007.",
+    "sources": [
+      {
+        "title": "WillaKenzie Estate (The Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/265/"
+      },
+      {
+        "title": "NW Wine Company (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/3014/index.html"
+      },
+      {
+        "title": "Remembering Gary Andrus (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/remembering-gary-andrus-15969"
+      },
+      {
+        "title": "Hyland Estates (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1820/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "russ-raney",
+    "type": "person",
+    "name": "Russ Raney",
+    "summary": "Founder of Evesham Wood, who moved to Portland in 1983, launched the winery in 1986 and planted Le Puits Sec Vineyard. He and his wife Mary sold the winery in 2010.",
+    "sources": [
+      {
+        "title": "Evesham Wood (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2228/"
+      },
+      {
+        "title": "Erin Nuccio, Evesham Wood | Haden Fig (Eola-Amity Hills Winegrowers)",
+        "url": "https://eolaamityhills.com/winemakers/erin-nuccio/"
+      },
+      {
+        "title": "Who we are (Deep Roots Coalition)",
+        "url": "https://www.deeprootscoalition.org/partners"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "erin-nuccio",
+    "type": "person",
+    "name": "Erin Nuccio",
+    "summary": "Assistant winemaker at Evesham Wood from 2007 and owner of the Haden Fig label. He and Jordan Nuccio bought Evesham Wood in August 2010, when he became head winemaker.",
+    "sources": [
+      {
+        "title": "Evesham Wood (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2228/"
+      },
+      {
+        "title": "Evesham Wood winery listing (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1198/index.html"
+      },
+      {
+        "title": "Erin Nuccio, Evesham Wood | Haden Fig (Eola-Amity Hills Winegrowers)",
+        "url": "https://eolaamityhills.com/winemakers/erin-nuccio/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "melissa-burr",
+    "type": "person",
+    "name": "Melissa Burr",
+    "summary": "Hired in 2003 as Stoller Family Estate's first dedicated winemaker, after an internship at Cooper Mountain Vineyards in 2001.",
+    "sources": [
+      {
+        "title": "Stoller Family Estate: About",
+        "url": "https://www.stollerfamilyestate.com/about/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tony-soter",
+    "type": "person",
+    "name": "Tony Soter",
+    "summary": "Winemaker who came to Napa in 1975, launched Etude in 1982 and was Spottswoode's first winemaker. He founded Soter Vineyards in Oregon with his wife Michelle in 1997, sold Etude in 2001 and moved to Oregon in 2006.",
+    "sources": [
+      {
+        "title": "Soter Vineyards: Founders",
+        "url": "https://sotervineyards.com/founders"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ted-gerber",
+    "type": "person",
+    "name": "Ted Gerber",
+    "summary": "Grower who bought land in the Illinois Valley with his wife Meri in 1971 and planted some of Southern Oregon's first wine grapes. They founded Foris Vineyards in 1986.",
+    "place": "Cave Junction, OR",
+    "sources": [
+      {
+        "title": "Foris Vineyards Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Foris_Vineyards_Winery"
+      },
+      {
+        "title": "Oregon's Illinois (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/oregons-illinois"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "stephen-reustle",
+    "type": "person",
+    "name": "Stephen Reustle",
+    "summary": "Former CPA who, with his wife Gloria, bought 200 acres in the Umpqua Valley in 2001 and started Reustle-Prayer Rock Vineyards, where he is owner and winemaker.",
+    "place": "Roseburg, OR",
+    "sources": [
+      {
+        "title": "2017 Pacific Northwest Winery of the Year: Reustle Prayer Rock Vineyard (Umpqua Valley Wineries)",
+        "url": "https://www.umpquavalleywineries.org/?p=1778"
+      },
+      {
+        "title": "Reustle-Prayer Rock Vineyards Grüner Veltliner (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=116223"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "eric-lemelson",
+    "type": "person",
+    "name": "Eric Lemelson",
+    "summary": "Reed College graduate and lawyer who planted his first vines in 1995 and founded Lemelson Vineyards.",
+    "sources": [
+      {
+        "title": "Lemelson Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/137/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "amy-wesselman",
+    "type": "person",
+    "name": "Amy Wesselman",
+    "summary": "Co-founder and co-winemaker of Westrey Wine Company and long-time executive director of the International Pinot Noir Celebration. She previously worked at Bethel Heights, Rex Hill and The Eyrie Vineyards.",
+    "sources": [
+      {
+        "title": "Westrey Wine Company (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/120/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-autrey",
+    "type": "person",
+    "name": "David Autrey",
+    "summary": "Co-founder and co-winemaker of Westrey Wine Company. He previously worked at Adelsheim and Cameron.",
+    "sources": [
+      {
+        "title": "Westrey Wine Company (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/120/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dai-crisp",
+    "type": "person",
+    "name": "Dai Crisp",
+    "summary": "Vineyard manager of Temperance Hill since 1999, where he led its replanting and organic certification. He and his wife PK McCoy founded Lumos Wine Company in 2000.",
+    "sources": [
+      {
+        "title": "PinotFile 12.27, February 2022 (The Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/pinotfile/12/27/print/"
+      },
+      {
+        "title": "2014 Grower of the Year: Temperance Hill (Wine & Spirits Magazine)",
+        "url": "https://www.wineandspiritsmagazine.com/?p=695"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dan-dusschee",
+    "type": "person",
+    "name": "Dan Dusschee",
+    "summary": "Owner and manager of Freedom Hill Vineyard, which he planted with his wife Helen in the early 1980s.",
+    "sources": [
+      {
+        "title": "Vineyard: Freedom Hill (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/vineyard/187/"
+      },
+      {
+        "title": "St. Innocent Winery: Vineyards",
+        "url": "https://www.stinnocentwine.com/vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-durant",
+    "type": "person",
+    "name": "Ken Durant",
+    "summary": "Co-founder and co-owner, with his wife Penny, of Durant Vineyards in the Dundee Hills, established in 1973.",
+    "place": "Dayton, OR",
+    "sources": [
+      {
+        "title": "Ken and Penny Durant Interview (Oregon Wine History Archive, Linfield)",
+        "url": "https://digitalcommons.linfield.edu/owha_willamette_interviews/96"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tim-ramey",
+    "type": "person",
+    "name": "Tim Ramey",
+    "summary": "Owner with his wife Kari of Zenith Vineyard in the Eola-Amity Hills, which they bought in 2002 and replanted.",
+    "sources": [
+      {
+        "title": "Vineyard: Zenith (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/vineyard/901/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nancy-daniel",
+    "type": "person",
+    "name": "Nancy Daniel",
+    "summary": "Founder of Canary Hill Vineyard in the Eola-Amity Hills, planted from 1983. She and her husband Dick sold it to Ken Wright in 2006.",
+    "sources": [
+      {
+        "title": "Nancy Daniel interview photograph (Oregon Wine History Archive, Linfield)",
+        "url": "https://digitalcommons.linfield.edu/owha_willamette_ohphotos/347"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kevin-chambers",
+    "type": "person",
+    "name": "Kevin Chambers",
+    "summary": "Grower who planted Resonance Vineyard with his wife Carla in 1981 and co-owned Oregon Vineyard Supply and Results Partners. He was named Oregon Wine Industry Man of the Year in 2005.",
+    "sources": [
+      {
+        "title": "Resonance Vineyard (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/630/index.html"
+      },
+      {
+        "title": "Burgundy's Louis Jadot Purchases Oregon Pinot Noir Vineyard (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48812"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "eric-hamacher",
+    "type": "person",
+    "name": "Eric Hamacher",
+    "summary": "Winemaker behind Hamacher Wines and a co-founder of the Carlton Winemakers Studio in 2002. He is married to Luisa Ponzi.",
+    "sources": [
+      {
+        "title": "Carlton Winemakers Studio (1859 Oregon's Magazine)",
+        "url": "https://1859oregonmagazine.com/think-oregon/business/carlton-winemakers/"
+      },
+      {
+        "title": "Weinnotes newsletter, 3 August 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-9"
+      },
+      {
+        "title": "Our Story (Ghost Hill Cellars)",
+        "url": "https://www.ghosthillcellars.com/our-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jacques-lardiere",
+    "type": "person",
+    "name": "Jacques Lardière",
+    "summary": "Longtime Maison Louis Jadot winemaker, with more than 42 vintages at the house, who became a winemaker at its Oregon project Résonance.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Résonance est Arrivé (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/resonance-est-arrive"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "thibault-gagey",
+    "type": "person",
+    "name": "Thibault Gagey",
+    "summary": "Director of operations at Résonance. He worked a harvest in the Willamette Valley in 2012, the year before Maison Louis Jadot, whose president is Pierre-Henry Gagey, bought the Résonance Vineyard.",
+    "sources": [
+      {
+        "title": "Résonance est Arrivé (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/resonance-est-arrive"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "guillaume-large",
+    "type": "person",
+    "name": "Guillaume Large",
+    "summary": "Winemaker at Résonance. He was assistant technical director at Maison Louis Jadot's Burgundy headquarters before moving to Oregon in 2017.",
+    "sources": [
+      {
+        "title": "Résonance est Arrivé (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/resonance-est-arrive"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jean-nicolas-meo",
+    "type": "person",
+    "name": "Jean-Nicolas Méo",
+    "summary": "Owner and winemaker of Domaine Méo-Camuzet in Burgundy, where he has worked since 1989. In 2012 he co-founded Nicolas-Jay in the Willamette Valley with his longtime friend Jay Boberg.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Our Story (Nicolas-Jay)",
+        "url": "https://www.nicolas-jay.com/our-story"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jay-boberg",
+    "type": "person",
+    "name": "Jay Boberg",
+    "summary": "Music entrepreneur who co-founded Nicolas-Jay with Jean-Nicolas Méo in 2012, after an Oregon visit in 2011 sparked the idea. The two met in 1988.",
+    "sources": [
+      {
+        "title": "Our Story (Nicolas-Jay)",
+        "url": "https://www.nicolas-jay.com/our-story"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "casey-mcclellan",
+    "type": "person",
+    "name": "Casey McClellan",
+    "summary": "Founder and winemaker of Seven Hills Winery. He helped his father, Dr. James McClellan, and Herb Hendricks plant Seven Hills Vineyard near Milton-Freewater in the early 1980s.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Seven Hills Winery (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=49130"
+      },
+      {
+        "title": "Crimson Wine Group Buys 66 Acres of Walla Walla Valley Vines (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/crimson-wine-group-buys-seven-hills-vineyard"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "steve-girard",
+    "type": "person",
+    "name": "Steve Girard",
+    "aka": [
+      "Steven Girard"
+    ],
+    "summary": "Founder, with his wife Carol, of Girard Winery in Napa Valley and later of Benton-Lane Winery in the southern Willamette Valley, on property they bought in 1988.",
+    "sources": [
+      {
+        "title": "Napa Valley's Huneeus Vintners Buys Oregon's Benton-Lane Winery (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/huneeus-vintners-buys-oregon-benton-lane-winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "liz-chambers",
+    "type": "person",
+    "name": "Liz Chambers",
+    "summary": "Owner, with her family, of Panther Creek Cellars from 2005 until its sale to Bacchus Capital Management in 2013.",
+    "sources": [
+      {
+        "title": "Wine Investment Group Makes Big Moves in Pacific Northwest (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/wine-investment-group-makes-big-moves-in-pacific-northwest-48431"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rajat-parr",
+    "type": "person",
+    "name": "Rajat Parr",
+    "summary": "Former wine director for Michael Mina's restaurants and co-founder of Sandhi Wines in California. He and Sashi Moorman took over operations at Evening Land in 2014.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Rajat Parr, Charles Banks and Sashi Moorman Join Oregon's Evening Land Winery (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/49554"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sashi-moorman",
+    "type": "person",
+    "name": "Sashi Moorman",
+    "summary": "California winemaker at Sandhi Wines who, with Rajat Parr, took over operations at Evening Land in 2014.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Rajat Parr, Charles Banks and Sashi Moorman Join Oregon's Evening Land Winery (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/49554"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "louis-michel-liger-belair",
+    "type": "person",
+    "name": "Louis-Michel Liger-Belair",
+    "summary": "Burgundy vigneron who is a partner in and consultant to Mark Tarlov's Chapter 24 Vineyards in the Willamette Valley.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Chapter 24 Wines Purchases Witness Tree and Five Other Vineyards in Oregon's Willamette Valley (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/chapter-24-wines-purchases-witness-tree"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bryan-white",
+    "type": "person",
+    "name": "Bryan White",
+    "aka": [
+      "Dr. Bryan White"
+    ],
+    "summary": "Co-owner of Troon Vineyard in the Applegate Valley. He and his wife Denise, from Arlington, Texas, bought it in 2017 and converted it to Biodynamic farming.",
+    "sources": [
+      {
+        "title": "Troon Renaissance (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/troon-renaissance"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "denise-white",
+    "type": "person",
+    "name": "Denise White",
+    "summary": "Co-owner of Troon Vineyard in the Applegate Valley, which she and her husband Bryan, from Arlington, Texas, bought in 2017.",
+    "sources": [
+      {
+        "title": "Troon Renaissance (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/troon-renaissance"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "craig-camp",
+    "type": "person",
+    "name": "Craig Camp",
+    "summary": "General manager of Troon Vineyard, charged with converting it to Biodynamic farming. He previously worked at Cornerstone Cellars in Napa and Anne Amie in Oregon.",
+    "sources": [
+      {
+        "title": "Troon Renaissance (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/troon-renaissance"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jon-meuret",
+    "type": "person",
+    "name": "Jon Meuret",
+    "summary": "Former dentist who founded Maison Bleue with his wife Amy. He has been consulting winemaker for Willamette Valley Vineyards' Pambrun label, from the Oregon side of the Walla Walla Valley, since 2015 and stayed on as Maison Bleue winemaker after its 2018 sale.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Oregon's Willamette Valley Vineyards Buys Maison Bleue in Walla Walla Valley (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/willamette-valley-vineyards-buys-maison-bleue"
+      },
+      {
+        "title": "Willamette Valley Vineyards buys Maison Bleue (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=64516"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cliff-blanchette",
+    "type": "person",
+    "name": "Cliff Blanchette",
+    "summary": "Founder, with his wife Eileen and son Thomas, of Hood River Vineyards in 1981, the oldest winery in the Columbia Gorge.",
+    "sources": [
+      {
+        "title": "In the sweet spot for growing fruit, Anne and Bernie Lerch enjoy staying small (Columbia Gorge News)",
+        "url": "https://www.columbiagorgenews.com/gorge-life/in-the-sweet-spot-for-growing-fruit-anne-and-bernie-lerch-enjoy-staying-small-but/article_78e46ad1-c292-5fe5-a02c-69f1934a4095.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bernie-lerch",
+    "type": "person",
+    "name": "Bernie Lerch",
+    "aka": [
+      "Bernard Lerch"
+    ],
+    "summary": "Owner and winemaker of Hood River Vineyards, which he and his wife Anne bought from the Blanchette family in 1992.",
+    "sources": [
+      {
+        "title": "In the sweet spot for growing fruit, Anne and Bernie Lerch enjoy staying small (Columbia Gorge News)",
+        "url": "https://www.columbiagorgenews.com/gorge-life/in-the-sweet-spot-for-growing-fruit-anne-and-bernie-lerch-enjoy-staying-small-but/article_78e46ad1-c292-5fe5-a02c-69f1934a4095.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bob-morus",
+    "type": "person",
+    "name": "Bob Morus",
+    "aka": [
+      "Robert Morus"
+    ],
+    "summary": "Founder of Phelps Creek Vineyards and Mt. Defiance Wine Company in Hood River.",
+    "sources": [
+      {
+        "title": "Phelps Creek Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/776/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "alexandrine-roy",
+    "type": "person",
+    "name": "Alexandrine Roy",
+    "summary": "Fourth-generation winemaker at Domaine Marc Roy in Gevrey-Chambertin. She first made the Cuvée Alexandrine at Phelps Creek Vineyards in 2007 and took charge of all its wines from the 2012 vintage.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Phelps Creek Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/776/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cecil-zerba",
+    "type": "person",
+    "name": "Cecil Zerba",
+    "summary": "Milton-Freewater nurseryman who founded Zerba Cellars with his wife Marilyn in 2001.",
+    "sources": [
+      {
+        "title": "Oregon's Walla Walla (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/oregons-walla-walla"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lee-traynham",
+    "type": "person",
+    "name": "Lee Traynham",
+    "summary": "Californian who, with his wife Margaret, bought the Del Rio orchard property at Gold Hill in 1997 and turned it into Del Rio Vineyards.",
+    "sources": [
+      {
+        "title": "Del Rio Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/736/"
+      },
+      {
+        "title": "Del Rio Vineyards (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=51451"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rob-wallace",
+    "type": "person",
+    "name": "Rob Wallace",
+    "summary": "Fourth-generation farmer from Arbuckle, California, who joined Lee Traynham at Del Rio Vineyards with his wife Jolee in 2000 to convert the pear orchard to vineyard and now runs the estate.",
+    "sources": [
+      {
+        "title": "Del Rio Vineyards (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=51451"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jean-michel-jussiaume",
+    "type": "person",
+    "name": "Jean-Michel Jussiaume",
+    "summary": "Loire Valley-born winemaker at Del Rio Vineyards, who arrived in 2008 from New York's Finger Lakes.",
+    "sources": [
+      {
+        "title": "Del Rio Vineyards (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=51451"
+      },
+      {
+        "title": "Del Rio Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/736/"
+      },
+      {
+        "title": "Weinnotes newsletter, 2 November 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-12"
+      },
+      {
+        "title": "Weinnotes newsletter, 7 September 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-10"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "herb-quady",
+    "type": "person",
+    "name": "Herb Quady",
+    "summary": "Son of the founders of Quady Winery in Madera, California, born in 1975. He moved to Southern Oregon in 2003 to work at Cowhorn, spent ten years as winemaker at Troon Vineyard and founded Quady North, Applegate Vineyard Management and the Barrel 42 custom winery.",
+    "born": 1975,
+    "sources": [
+      {
+        "title": "An Interview With Herb Quady, Southern Oregon's Godfather Of Grapes (Sprudge)",
+        "url": "https://sprudge.com/an-interview-with-herb-quady-southern-oregons-godfather-of-grapes-2984.html"
+      },
+      {
+        "title": "Herb Quady resigns from Troon Vineyard (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=15657"
+      },
+      {
+        "title": "Q&A: Herb Quady (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/q-and-a-herb-quady"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-steele",
+    "type": "person",
+    "name": "Bill Steele",
+    "summary": "Co-founder, with his wife Barbara, of Cowhorn Vineyard & Garden in the Applegate Valley, which they sold in 2021.",
+    "sources": [
+      {
+        "title": "Buy the Horns (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/buy-the-horns"
+      },
+      {
+        "title": "Weinnotes newsletter, 6 September 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-0X2b5zfM"
+      },
+      {
+        "title": "Mission (Cowhorn)",
+        "url": "https://cowhorn.wine/mission"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "barbara-steele",
+    "type": "person",
+    "name": "Barbara Steele",
+    "summary": "Co-founder, with her husband Bill, of Cowhorn Vineyard & Garden in the Applegate Valley, which they sold in 2021.",
+    "sources": [
+      {
+        "title": "Buy the Horns (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/buy-the-horns"
+      },
+      {
+        "title": "Weinnotes newsletter, 6 September 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-0X2b5zfM"
+      },
+      {
+        "title": "Mission (Cowhorn)",
+        "url": "https://cowhorn.wine/mission"
+      }
+    ],
+    "verified": false,
+    "aka": [
+      "Barb Steele"
+    ]
+  },
+  {
+    "id": "katherine-banks",
+    "type": "person",
+    "name": "Katherine Banks",
+    "aka": [
+      "Mini Banks",
+      "Mini Byers"
+    ],
+    "summary": "Leader of the investor group that bought Cowhorn Vineyard & Garden from Bill and Barbara Steele in 2021, becoming its general manager.",
+    "sources": [
+      {
+        "title": "Buy the Horns (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/buy-the-horns"
+      },
+      {
+        "title": "Weinnotes newsletter, 6 September 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-0X2b5zfM"
+      },
+      {
+        "title": "Mission (Cowhorn)",
+        "url": "https://cowhorn.wine/mission"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "terry-brandborg",
+    "type": "person",
+    "name": "Terry Brandborg",
+    "summary": "San Francisco longshoreman and home winemaker since 1975 who launched Brandborg Cellars in California in 1986. He and his wife Sue moved to Elkton to start Brandborg Winery in 2002, and he worked with other growers on the Elkton Oregon AVA petition.",
+    "sources": [
+      {
+        "title": "Brandborg Vineyard and Winery (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=41178"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "wayne-hitchings",
+    "type": "person",
+    "name": "Wayne Hitchings",
+    "summary": "Massachusetts-born Vietnam veteran and Alaska businessman who moved to Douglas County in the early 1990s, built up Red Hill Vineyard and petitioned for the Red Hill Douglas County AVA in 2002. He died in September 2016.",
+    "born": 1945,
+    "died": 2016,
+    "sources": [
+      {
+        "title": "AVA Unto Its Own: Wayne Hitchings (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/ava-unto-its-own-wayne-hitchings"
+      },
+      {
+        "title": "Red Hill Douglas County, Oregon AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Red_Hill_Douglas_County,_Oregon_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kelley-fox",
+    "type": "person",
+    "name": "Kelley Fox",
+    "summary": "Winemaker who founded Kelley Fox Wines in 2007 with her father, Gerson Stearns. She previously made wine at Torii Mor, Hamacher and The Eyrie Vineyards, and was winemaker at Scott Paul Wines from 2005 to 2015.",
+    "sources": [
+      {
+        "title": "About (Kelley Fox Wines)",
+        "url": "https://kelleyfoxwines.com/about/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "brianne-day",
+    "type": "person",
+    "name": "Brianne Day",
+    "summary": "Founder and winemaker of Day Wines, who made her first vineyard-designate Pinot noir in 2012. She worked at Oregon wineries including Grochau Cellars, Belle Pente, Scott Paul, WillaKenzie, Brooks and The Eyrie Vineyards, and opened Day Camp, a cooperative winemaking facility in Dundee.",
+    "sources": [
+      {
+        "title": "Day Wines (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/2688/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-pahlow",
+    "type": "person",
+    "name": "Ken Pahlow",
+    "summary": "Co-founder of Walter Scott Wines. He worked for 14 years in sales and production at St. Innocent, joined the Patricia Green Cellars harvest team in 2009 and handled Northwest sales for Evening Land Vineyards.",
+    "sources": [
+      {
+        "title": "Walter Scott Wines (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/1402/"
+      },
+      {
+        "title": "Willamette Odyssey (Wine & Spirits Magazine)",
+        "url": "https://www.wineandspiritsmagazine.com/free-reads/willamette-odessy"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "erica-landon",
+    "type": "person",
+    "name": "Erica Landon",
+    "summary": "Sommelier at several Oregon restaurants who co-founded Walter Scott Wines with Ken Pahlow in 2008.",
+    "sources": [
+      {
+        "title": "Walter Scott Wines (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/1402/"
+      },
+      {
+        "title": "Willamette Odyssey (Wine & Spirits Magazine)",
+        "url": "https://www.wineandspiritsmagazine.com/free-reads/willamette-odessy"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "maggie-harrison",
+    "type": "person",
+    "name": "Maggie Harrison",
+    "summary": "Winemaker and co-owner of Antica Terra since 2005. She was previously assistant winemaker to Manfred Krankl at Sine Qua Non in Ventura, California, for about eight years.",
+    "sources": [
+      {
+        "title": "Antica Terra (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/436/"
+      },
+      {
+        "title": "Weinnotes newsletter, 2 November 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-12"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nate-ready",
+    "type": "person",
+    "name": "Nate Ready",
+    "summary": "Sommelier at The French Laundry and Frasca who earned the Master Sommelier certificate in 2006, then worked at Antica Terra. With China Tresemer he bought a Hood River parcel in 2010 that became Hiyu Wine Farm.",
+    "sources": [
+      {
+        "title": "Hello, Hiyu (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/hello-hiyu"
+      },
+      {
+        "title": "Antica Terra (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/436/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "china-tresemer",
+    "type": "person",
+    "name": "China Tresemer",
+    "summary": "Artist, gardener and cook who co-founded Hiyu Wine Farm in Hood River with Nate Ready.",
+    "sources": [
+      {
+        "title": "Hello, Hiyu (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/hello-hiyu"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chad-stock",
+    "type": "person",
+    "name": "Chad Stock",
+    "summary": "Fresno State enology graduate (2006) who moved to Oregon in 2007 to join Antica Terra, then founded Minimus in 2011 as his own experimental winery and consulting company. He co-founded Craft Wine Company in Carlton and joined David Hill Vineyard & Winery in 2019.",
+    "sources": [
+      {
+        "title": "Chad Stock (David Hill Vineyard & Winery)",
+        "url": "https://www.davidhillwinery.com/chad-stock.html"
+      },
+      {
+        "title": "Minimus Wines (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/2872/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jim-arterberry-maresh",
+    "type": "person",
+    "name": "Jim Arterberry Maresh",
+    "aka": [
+      "Jim Maresh"
+    ],
+    "summary": "Grandson of Jim and Loie Maresh and son of Martha Maresh and winemaker Fred Arterberry Jr. Raised on the family farm in the Dundee Hills, he founded Arterberry Maresh in 2005.",
+    "born": 1983,
+    "sources": [
+      {
+        "title": "About (Arterberry Maresh)",
+        "url": "https://www.arterberrymaresh.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "martha-maresh",
+    "type": "person",
+    "name": "Martha Maresh",
+    "summary": "Daughter of Jim and Loie Maresh. She married winemaker Fred Arterberry Jr. in 1980; their son Jim founded Arterberry Maresh.",
+    "sources": [
+      {
+        "title": "About (Arterberry Maresh)",
+        "url": "https://www.arterberrymaresh.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "fred-arterberry-jr",
+    "type": "person",
+    "name": "Fred Arterberry Jr.",
+    "summary": "Early Oregon winemaker with a UC Davis fermentation science degree who made wines from Maresh Vineyard under his Arterberry label. He married Martha Maresh in 1980; the label closed after his death.",
+    "sources": [
+      {
+        "title": "About (Arterberry Maresh)",
+        "url": "https://www.arterberrymaresh.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "brian-marcy",
+    "type": "person",
+    "name": "Brian Marcy",
+    "summary": "Winemaker at Big Table Farm. He worked in Napa wine for ten years, at Neyers, Turley and Marcassin, before moving to Oregon in 2006.",
+    "sources": [
+      {
+        "title": "Raising Big Table Farm: photos from a 2012 visit (Wakawaka Wine Reviews)",
+        "url": "https://wakawakawinereviews.com/2013/05/29/raising-big-table-farm-photos-from-a-2012-visit/"
+      },
+      {
+        "title": "Big Table Farm",
+        "url": "https://www.bigtablefarm.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "clare-carver",
+    "type": "person",
+    "name": "Clare Carver",
+    "summary": "Artist and farmer who co-founded Big Table Farm with her husband, Brian Marcy, and designs its labels.",
+    "sources": [
+      {
+        "title": "Raising Big Table Farm: photos from a 2012 visit (Wakawaka Wine Reviews)",
+        "url": "https://wakawakawinereviews.com/2013/05/29/raising-big-table-farm-photos-from-a-2012-visit/"
+      },
+      {
+        "title": "Big Table Farm",
+        "url": "https://www.bigtablefarm.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mimi-casteel",
+    "type": "person",
+    "name": "Mimi Casteel",
+    "summary": "Daughter of Bethel Heights co-founders Ted Casteel and Pat Dudley. She was Bethel Heights' general manager and viticulturist until 2016, founded Hope Well Wine that year, and returned to Bethel Heights as viticulturist in 2025 on her father's retirement.",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      },
+      {
+        "title": "Mimi Casteel would like a conversation (DM Wineline)",
+        "url": "https://dmwineline.substack.com/p/mimi-casteel-would-like-a-conversation"
+      },
+      {
+        "title": "Weinnotes newsletter, 8 March 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-LnUXjUjN"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mikey-etzel",
+    "type": "person",
+    "name": "Mikey Etzel",
+    "aka": [
+      "Mike D. Etzel",
+      "Mike Etzel Jr.",
+      "Michael Etzel Jr."
+    ],
+    "summary": "Middle son of Beaux Frères founder Michael Etzel. He became winemaker at Beaux Frères in 2016 and, on his father's retirement in January 2023, its CEO and technical director.",
+    "sources": [
+      {
+        "title": "Beaux Freres 2023 vintage wines mark transitions (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2026/05/beaux-freres-2023-vintage-wines-mark-transitions.html"
+      },
+      {
+        "title": "Straight Out of the Chute at Oregon's Rodeo Hills (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/taking-the-reins-at-oregon-s-rodeo-hills"
+      },
+      {
+        "title": "Willamette Odyssey (Wine & Spirits Magazine)",
+        "url": "https://www.wineandspiritsmagazine.com/free-reads/willamette-odessy"
+      },
+      {
+        "title": "Weinnotes newsletter, 7 December 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-13"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jared-etzel",
+    "type": "person",
+    "name": "Jared Etzel",
+    "summary": "Son of Beaux Frères founder Michael Etzel. An Oregon State viticulture and enology graduate, he co-founded Domaine Roy & fils in 2012 and later launched Rodeo Hills in the Dundee Hills, with a first vintage in 2021.",
+    "sources": [
+      {
+        "title": "Straight Out of the Chute at Oregon's Rodeo Hills (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/taking-the-reins-at-oregon-s-rodeo-hills"
+      },
+      {
+        "title": "Weinnotes newsletter, 24 June 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-103"
+      },
+      {
+        "title": "Weinnotes newsletter, 29 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-108"
+      },
+      {
+        "title": "Weinnotes newsletter, 6 January 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-uTJyX7Ue"
+      },
+      {
+        "title": "Former Oregon car dealer gears up with Jachter Family Wines (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/2021/02/16/former-oregon-car-dealer-gears-up-with-jachter-family-wines/"
+      },
+      {
+        "title": "Rodeo Hills",
+        "url": "https://www.rodeohillswine.com/"
+      },
+      {
+        "title": "Weinnotes newsletter, 7 December 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-13"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "marc-andre-roy",
+    "type": "person",
+    "name": "Marc-André Roy",
+    "summary": "Son of Beaux Frères partner Robert Roy. He co-founded Domaine Roy & fils with Jared Etzel in 2012.",
+    "sources": [
+      {
+        "title": "Straight Out of the Chute at Oregon's Rodeo Hills (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/taking-the-reins-at-oregon-s-rodeo-hills"
+      },
+      {
+        "title": "Weinnotes newsletter, 29 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-108"
+      }
+    ],
+    "verified": false,
+    "aka": [
+      "Marc-Andre Roy"
+    ]
+  },
+  {
+    "id": "cody-wright",
+    "type": "person",
+    "name": "Cody Wright",
+    "summary": "Son of Ken Wright and stepson of Rollin Soles. He worked at Ken Wright Cellars as a teenager and at Argyle in 2004 before launching Purple Hands in 2005.",
+    "sources": [
+      {
+        "title": "Purple Hands: Cody Wright (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/purple-hands-cody-wright"
+      },
+      {
+        "title": "About (Purple Hands Winery)",
+        "url": "https://www.purplehandswine.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "wynne-peterson-nedry",
+    "type": "person",
+    "name": "Wynne Peterson-Nedry",
+    "summary": "Daughter of Chehalem founder Harry Peterson-Nedry. She was Chehalem's head winemaker from 2012 until the 2018 sale to Bill Stoller, then moved with her father to the Carlton Winemakers Studio to make RR Wines.",
+    "sources": [
+      {
+        "title": "Stoller takes full ownership of Chehalem (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=64802"
+      },
+      {
+        "title": "Katie Santora named head winemaker at Chehalem (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=71922"
+      },
+      {
+        "title": "Last Call: Harry Peterson-Nedry (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/last-call-harry-peterson-nedry"
+      },
+      {
+        "title": "Weinnotes newsletter, 8 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-105"
+      },
+      {
+        "title": "Ridgecrest Wines: People",
+        "url": "https://ridgecrestwines.com/people"
+      },
+      {
+        "title": "Weinnotes podcast: Wynne Peterson-Nedry, Ridgecrest and RR Wines (YouTube)",
+        "url": "https://www.youtube.com/watch?v=srrXTLcXEEw"
+      }
+    ],
+    "verified": false,
+    "aka": [
+      "Wynn Peterson-Nedry"
+    ]
+  },
+  {
+    "id": "katie-santora",
+    "type": "person",
+    "name": "Katie Santora",
+    "summary": "UC Davis graduate (2007) who worked in the cellar at Domaine Serene before Harry Peterson-Nedry hired her as Chehalem's assistant winemaker in 2012. She was named Chehalem's head winemaker in November 2018.",
+    "sources": [
+      {
+        "title": "Katie Santora named head winemaker at Chehalem (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=71922"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "isabelle-meunier",
+    "type": "person",
+    "name": "Isabelle Meunier",
+    "summary": "Quebec-born, Dijon-trained winemaker who made Evening Land's Oregon wines from 2007 until early 2014, working closely with Dominique Lafon. She co-founded Lavinea with Greg Ralston in 2014.",
+    "sources": [
+      {
+        "title": "In Latest Change, Evening Land's Winemaker Says Adieu (Wine Spectator)",
+        "url": "https://www.winespectator.com/blogs/show/id/49619"
+      },
+      {
+        "title": "Lavinea Winery (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/2546/"
+      },
+      {
+        "title": "Willamette Odyssey (Wine & Spirits Magazine)",
+        "url": "https://www.wineandspiritsmagazine.com/free-reads/willamette-odessy"
+      },
+      {
+        "title": "Weinnotes newsletter, 6 May 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-96"
+      },
+      {
+        "title": "Weinnotes newsletter, 20 May 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-98"
+      },
+      {
+        "title": "Aubaine (AtTheJoy)",
+        "url": "https://atthejoy.com/aubaine/"
+      },
+      {
+        "title": "Ellen on Wine: Isabelle Meunier keeps Lavinea winery on global stage (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/2024/09/09/ellen-on-wine-isabelle-meunier-keeps-lavinea-winery-on-global-stage/"
+      },
+      {
+        "title": "Weinnotes newsletter, 12 October 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-11"
+      },
+      {
+        "title": "Weinnotes newsletter, 2 August 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-u2QcADDE"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "greg-ralston",
+    "type": "person",
+    "name": "Greg Ralston",
+    "summary": "Businessman who replaced Mark Tarlov as chief executive of Evening Land Vineyards in 2012 and co-founded Lavinea with Isabelle Meunier in 2014.",
+    "sources": [
+      {
+        "title": "In Latest Change, Evening Land's Winemaker Says Adieu (Wine Spectator)",
+        "url": "https://www.winespectator.com/blogs/show/id/49619"
+      },
+      {
+        "title": "Lavinea Winery (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/2546/"
+      },
+      {
+        "title": "Willamette Odyssey (Wine & Spirits Magazine)",
+        "url": "https://www.wineandspiritsmagazine.com/free-reads/willamette-odessy"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "drew-voit",
+    "type": "person",
+    "name": "Drew Voit",
+    "summary": "Owner and winemaker of Harper Voit, formerly associate winemaker at Domaine Serene and winemaker at Shea Wine Cellars. He also consults and runs a custom winemaking operation for small brands.",
+    "sources": [
+      {
+        "title": "Harper Voit Wines (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/1709/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ryan-harms",
+    "type": "person",
+    "name": "Ryan Harms",
+    "summary": "Founder and president of Union Wine Company, which he started in 2005 after moving to Oregon in 2001 and working at wineries including Rex Hill and Bergström. He debuted the company's canned Underwood wines in 2013.",
+    "sources": [
+      {
+        "title": "Oregon Can Man: Ryan Harms (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/oregon-can-man-ryan-harms"
+      },
+      {
+        "title": "Our Story (Union Wine Company)",
+        "url": "https://unionwinecompany.com/our-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "steven-thompson",
+    "type": "person",
+    "name": "Steven Thompson",
+    "aka": [
+      "Steve Thompson"
+    ],
+    "summary": "Co-founder of Analemma Wines in the Columbia River Gorge. He studied enology and viticulture at Walla Walla Community College and spent four years at Cayuse Vineyards under Christophe Baron.",
+    "sources": [
+      {
+        "title": "Analemma (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/analemma"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kris-fade",
+    "type": "person",
+    "name": "Kris Fade",
+    "summary": "Co-founder of Analemma Wines with her husband, Steven Thompson.",
+    "sources": [
+      {
+        "title": "Analemma (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/analemma"
+      },
+      {
+        "title": "Steven Thompson and Kris Fade, young growers from Mosier, Oregon (Good Fruit Grower)",
+        "url": "https://goodfruit.com/steven-thompson-and-kris-fade-young-grower-from-mosier-oregon"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "elizabeth-bourcier",
+    "type": "person",
+    "name": "Elizabeth Bourcier",
+    "summary": "Graduate of Walla Walla Community College's first enology and viticulture class who joined Cayuse Vineyards as a lab technician in 2008. Christophe Baron made her assistant vigneronne in 2010 and resident vigneronne in 2021; she founded her own La Rata label in 2012.",
+    "sources": [
+      {
+        "title": "Elizabeth Bourcier appointed resident vigneronne (Northwest Wine Report)",
+        "url": "https://www.northwestwinereport.com/2021/12/elizabeth-bourcier-appointed-resident.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "john-house",
+    "type": "person",
+    "name": "John House",
+    "summary": "Co-founder of Ovum Wines with his wife, Ksenija Kostic; the two previously worked together at Chehalem.",
+    "sources": [
+      {
+        "title": "Ovum Wines (Skurnik Wines)",
+        "url": "https://www.skurnik.com/producer/ovum-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ksenija-kostic-house",
+    "type": "person",
+    "name": "Ksenija Kostic House",
+    "aka": [
+      "Ksenija Kostic"
+    ],
+    "summary": "Co-founder of Ovum Wines with her husband, John House; the two previously worked together at Chehalem.",
+    "sources": [
+      {
+        "title": "Ovum Wines (Skurnik Wines)",
+        "url": "https://www.skurnik.com/producer/ovum-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "anna-matzinger",
+    "type": "person",
+    "name": "Anna Matzinger",
+    "summary": "Joined the winemaking team at Archery Summit in 1999 and was its head winemaker from 2001 until early 2013. Co-owner of Matzinger Davies Wine Co with her husband, Michael Davies.",
+    "sources": [
+      {
+        "title": "Matzinger Davies Wine Co (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/1712/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "michael-davies",
+    "type": "person",
+    "name": "Michael Davies",
+    "summary": "Winemaker who has worked at A to Z Wineworks and Rex Hill; co-owner of Matzinger Davies Wine Co with his wife, Anna Matzinger.",
+    "sources": [
+      {
+        "title": "Matzinger Davies Wine Co (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/1712/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "gina-hennen",
+    "type": "person",
+    "name": "Gina Hennen",
+    "summary": "Reed College chemistry graduate who joined the Adelsheim cellar in 2007 and rose to associate winemaker under Dave Paige. She was promoted in December 2017 to succeed him as head winemaker.",
+    "sources": [
+      {
+        "title": "Gina Hennen to succeed Dave Paige at Adelsheim (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=63745"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kate-ayres",
+    "type": "person",
+    "name": "Kate Ayres",
+    "summary": "Winemaker at Penner-Ash Wine Cellars, working alongside founding winemaker Lynn Penner-Ash.",
+    "sources": [
+      {
+        "title": "Penner-Ash (Jackson Family Wines)",
+        "url": "https://www.jacksonfamilywines.com/wineries/penner-ash"
+      },
+      {
+        "title": "Kate Ayres, Penner-Ash Wine Cellars (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=13378"
+      },
+      {
+        "title": "Weinnotes newsletter, 2 May 2026",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-2"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "daniel-estrin",
+    "type": "person",
+    "name": "Daniel Estrin",
+    "summary": "Winemaker and vineyard manager at Cristom Vineyards since July 2019. He previously spent seven years at Littorai under Ted Lemon, rising to associate winemaker.",
+    "sources": [
+      {
+        "title": "Our People (Cristom Vineyards)",
+        "url": "https://cristomvineyards.com/our-people"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mark-wisnovsky",
+    "type": "person",
+    "name": "Mark Wisnovsky",
+    "summary": "Son of Valley View Winery founders Frank and Ann Wisnovsky. He has helped run the winery since 1990 and became co-owner with his brother Michael in 2005.",
+    "sources": [
+      {
+        "title": "Valley View Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Valley_View_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "michael-wisnovsky",
+    "type": "person",
+    "name": "Michael Wisnovsky",
+    "aka": [
+      "Mike Wisnovsky"
+    ],
+    "summary": "Son of Valley View Winery founders Frank and Ann Wisnovsky. He has helped run the winery since 1990 and became co-owner with his brother Mark in 2005.",
+    "sources": [
+      {
+        "title": "Valley View Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Valley_View_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "marc-girardet",
+    "type": "person",
+    "name": "Marc Girardet",
+    "summary": "Son of Girardet founders Philippe and Bonnie Girardet. He joined the family winery full-time in 1994 and took over winemaking in 1999.",
+    "born": 1975,
+    "sources": [
+      {
+        "title": "Our Story (Girardet Vineyards)",
+        "url": "https://www.girardetwine.com/our-story"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "henderson-luelling",
+    "type": "person",
+    "name": "Henderson Luelling",
+    "aka": [
+      "Henderson Lewelling"
+    ],
+    "summary": "Iowa nurseryman who came over the Oregon Trail in 1847 with a wagonload of grafted fruit trees and, with William Meek, started an orchard and nursery at what became Milwaukie. The Oregon Wine Board credits his plantings with including Oregon's first grapes; he moved to California in 1854.",
+    "born": 1809,
+    "died": 1878,
+    "place": "Milwaukie, OR",
+    "sources": [
+      {
+        "title": "Henderson Luelling (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Henderson_Luelling"
+      },
+      {
+        "title": "Oregon Wine History (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=184"
+      },
+      {
+        "title": "History of Oregon wine (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/History_of_Oregon_wine"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "peter-britt",
+    "type": "person",
+    "name": "Peter Britt",
+    "summary": "Swiss-born photographer who reached Jacksonville in 1852, planted the Rogue Valley's first vineyard at his home and sold wine under the Valley View name until his death. He has been called the father of the grape industry in Southern Oregon.",
+    "born": 1819,
+    "died": 1905,
+    "place": "Jacksonville, OR",
+    "sources": [
+      {
+        "title": "Peter Britt (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Peter_Britt"
+      },
+      {
+        "title": "Vineyards of the Rogue Valley (Rogue Valley Winegrowers Association)",
+        "url": "https://rvwinegrowers.org/?p=13"
+      },
+      {
+        "title": "As It Was: Peter Britt Becomes Early Oregon Winemaker (Jefferson Public Radio)",
+        "url": "https://www.ijpr.org/post/it-was-peter-britt-becomes-early-oregon-winemaker"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "adam-doerner",
+    "type": "person",
+    "name": "Adam Doerner",
+    "summary": "German immigrant from the Palatinate who planted grapes on his farm in the Melrose area of the Umpqua Valley in 1889 and made wine and brandy until Prohibition. Family tradition holds that he had worked at Beringer in St. Helena and came to the Umpqua through the von Pessl family.",
+    "born": 1858,
+    "place": "Melrose, OR",
+    "sources": [
+      {
+        "title": "Way-Back Wine: Doerner Vineyards (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/way-back-wine-doerner-vineyards"
+      },
+      {
+        "title": "Oregon Wine History (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=184"
+      },
+      {
+        "title": "Doerner Vineyards Collection (Oregon Wine History Archive, Linfield)",
+        "url": "https://digitalcommons.linfield.edu/owha_doerner"
+      },
+      {
+        "title": "Umpqua Valley AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "adolph-doerner",
+    "type": "person",
+    "name": "Adolph Doerner",
+    "aka": [
+      "Adolph Henry Doerner"
+    ],
+    "summary": "Son of Adam Doerner. He sold grape juice to home winemakers during Prohibition and afterwards ran the family's bonded winery No. 7 near Roseburg, selling its Melrose wine until his death in 1964.",
+    "died": 1964,
+    "place": "Melrose, OR",
+    "sources": [
+      {
+        "title": "Way-Back Wine: Doerner Vineyards (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/way-back-wine-doerner-vineyards"
+      },
+      {
+        "title": "Doerner Vineyards (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/2975/"
+      },
+      {
+        "title": "Umpqua Valley Wine History (Umpqua Valley Winegrowers Association)",
+        "url": "https://www.umpquavalleywineries.org/umpqua-valley-ava/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "christina-doerner",
+    "type": "person",
+    "name": "Christina Doerner",
+    "summary": "Fifth-generation farmer of the Doerner family vineyard in the Umpqua Valley, to which she returned in 1996 after the death of her father, Douglas Doerner.",
+    "place": "Melrose, OR",
+    "sources": [
+      {
+        "title": "Way-Back Wine: Doerner Vineyards (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/way-back-wine-doerner-vineyards"
+      },
+      {
+        "title": "Doerner Vineyards (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/2975/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ernest-reuter",
+    "type": "person",
+    "name": "Ernest Reuter",
+    "aka": [
+      "Ernst Reuter",
+      "Rueter"
+    ],
+    "summary": "German immigrant winemaker near Forest Grove whose wine won a medal at the 1904 St. Louis World's Fair, the first award to an Oregon winemaker. His grapes grew on the hill west of Forest Grove then called Wine Hill, now David Hill.",
+    "place": "Forest Grove, OR",
+    "sources": [
+      {
+        "title": "Oregon Wine History (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=184"
+      },
+      {
+        "title": "Knudsen Erath Brochure (Oregon History Project, Oregon Historical Society)",
+        "url": "https://www.oregonhistoryproject.org/articles/historical-records/knudsen-erath-brochure/"
+      },
+      {
+        "title": "History of Oregon wine (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/History_of_Oregon_wine"
+      },
+      {
+        "title": "Legacy (David Hill Vineyards & Winery)",
+        "url": "https://davidhillwinery.com/legacy.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "john-wood",
+    "type": "person",
+    "name": "John Wood",
+    "summary": "Co-founder with Ron Honeyman of Columbia Distilleries in Salem, later Honeywood Winery; he chose Salem for its fruit supply and took the Honeywood name from an inn in an Oliver Goldsmith play.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Honeywood Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Honeywood_Winery"
+      },
+      {
+        "title": "Oregon Wine History (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=184"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ron-honeyman",
+    "type": "person",
+    "name": "Ron Honeyman",
+    "summary": "Co-founder with John Wood of Columbia Distilleries in Salem, which received bonded winery status just after Repeal and became Honeywood Winery.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Honeywood Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Honeywood_Winery"
+      },
+      {
+        "title": "Oregon Wine History (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=184"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mary-reinke",
+    "type": "person",
+    "name": "Mary Reinke",
+    "summary": "Joined Honeywood as a secretary in 1943 and became the winery's president in 1963.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Honeywood Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Honeywood_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "paul-gallick",
+    "type": "person",
+    "name": "Paul Gallick",
+    "summary": "Minneapolis investor who, with Charles Newman and William F. Miller, formed Northwest Distillers to acquire Honeywood Winery in 1973 and later became its sole proprietor; the Gallick family still manages the winery.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Honeywood Winery (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Honeywood_Winery"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "al-macdonald",
+    "type": "person",
+    "name": "Al MacDonald",
+    "summary": "Grower who arrived in Oregon in 1977, planted Seven Springs Vineyard in the Eola Hills in 1982 and became Chemeketa Community College's first college-credit viticulture instructor. He was LIVE's first president, wrote its initial guidelines, and chaired the Oregon Wine Advisory Board.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Wine Person of 2014: Al MacDonald (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/wine-person-of-2014-al-macdonald"
+      },
+      {
+        "title": "Al MacDonald Interview (Oregon Wine History Archive, Linfield)",
+        "url": "https://digitalcommons.linfield.edu/owha_macdonald_interview/1"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-heatherbell",
+    "type": "person",
+    "name": "David Heatherbell",
+    "summary": "New Zealand food scientist with an Oregon State University PhD who returned to OSU as professor of food science and technology and enology. With David Adelsheim he persuaded Raymond Bernard in 1984 to share the Dijon clones with Oregon, and he helped establish the International Cool Climate Symposium before leading Lincoln University's wine programme for 16 years.",
+    "died": 2024,
+    "sources": [
+      {
+        "title": "Legacy remembered: Dr David Heatherbell (Rural News Group, New Zealand Winegrower)",
+        "url": "https://www.ruralnewsgroup.co.nz/wine-grower/wg-general-news/legacy-remembered"
+      },
+      {
+        "title": "Pinot Noir clones (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/945/"
+      },
+      {
+        "title": "David Adelsheim profile (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/article/1418/"
+      },
+      {
+        "title": "Oregon Wine History (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=184"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "porter-lombard",
+    "type": "person",
+    "name": "Porter Lombard",
+    "summary": "Oregon State University horticulturist who became superintendent of the Southern Oregon experiment station on Hanley Road in 1963 and planted an experimental wine-grape vineyard there in the late 1960s, supplying cuttings and advice to the Rogue Valley's first modern growers.",
+    "place": "Medford, OR",
+    "sources": [
+      {
+        "title": "Vineyards of the Rogue Valley (Rogue Valley Winegrowers Association)",
+        "url": "https://rvwinegrowers.org/?p=13"
+      },
+      {
+        "title": "Comice to Cabernet (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/comince-to-cabernet"
+      },
+      {
+        "title": "Porter Lombard interview (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/porter-lombard/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bernadine-strik",
+    "type": "person",
+    "name": "Bernadine Strik",
+    "summary": "Oregon State University horticulture professor from 1987 until retiring in 2021, known chiefly for berry research; in 1990 she helped identify and combat the phylloxera infestation that threatened Oregon's vineyards.",
+    "born": 1962,
+    "died": 2023,
+    "place": "Corvallis, OR",
+    "sources": [
+      {
+        "title": "Bernadine Strik (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bernadine_Strik"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "patty-skinkis",
+    "type": "person",
+    "name": "Patty Skinkis",
+    "aka": [
+      "Patricia A. Skinkis"
+    ],
+    "summary": "Viticulture extension specialist at Oregon State University since 2007 and a core faculty member of the Oregon Wine Research Institute since 2010; she led a ten-year statewide crop-load study of Pinot noir.",
+    "place": "Corvallis, OR",
+    "sources": [
+      {
+        "title": "Patricia Skinkis (Oregon Wine Research Institute, OSU)",
+        "url": "https://owri.oregonstate.edu/users/patricia-skinkis"
+      },
+      {
+        "title": "Oregon Wine Research Institute (Oregon's Agricultural Progress, OSU, summer 2014)",
+        "url": "https://archive.progress.oregonstate.edu/summer-2014/oregon-wine-research-institute"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "james-osborne",
+    "type": "person",
+    "name": "James Osborne",
+    "summary": "Enology extension specialist and professor of food science and technology at Oregon State University, named director of the Oregon Wine Research Institute in October 2023.",
+    "place": "Corvallis, OR",
+    "sources": [
+      {
+        "title": "James Osborne Named Director of the Oregon Wine Research Institute (OSU College of Agricultural Sciences)",
+        "url": "https://agsci.oregonstate.edu/home/article/james-osborne-named-director-oregon-wine-research-institute"
+      },
+      {
+        "title": "Oregon Wine Research Institute (Oregon's Agricultural Progress, OSU, summer 2014)",
+        "url": "https://archive.progress.oregonstate.edu/summer-2014/oregon-wine-research-institute"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "harold-olmo",
+    "type": "person",
+    "name": "Harold Olmo",
+    "summary": "UC Davis viticulture professor from 1938 to 1977 who sourced the Pommard clone of Pinot noir from the Château de Pommard in Burgundy; with the Wädenswil clone that Davis imported from Switzerland, it became the basis of Oregon's first Pinot noir plantings.",
+    "born": 1909,
+    "died": 2006,
+    "outsideOregon": true,
+    "place": "Davis, CA",
+    "sources": [
+      {
+        "title": "Harold Olmo (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Harold_Olmo"
+      },
+      {
+        "title": "Pinot Noir clones (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/945/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "hector-macpherson",
+    "type": "person",
+    "name": "Hector Macpherson Jr.",
+    "summary": "Linn County dairy farmer and Republican state senator from 1971 to 1974 who was a primary author of Senate Bill 100, Oregon's 1973 land-use planning law.",
+    "born": 1918,
+    "died": 2015,
+    "place": "Linn County, OR",
+    "sources": [
+      {
+        "title": "Hector Macpherson Jr. (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Hector_Macpherson_Jr."
+      },
+      {
+        "title": "Yamhill Area Land Use Map (Oregon History Project, Oregon Historical Society)",
+        "url": "https://www.oregonhistoryproject.org/articles/historical-records/yamhill-area-land-use-map/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tom-mccall",
+    "type": "person",
+    "name": "Tom McCall",
+    "summary": "Governor of Oregon from 1967 to 1975 who signed and defended Senate Bill 100, the 1973 land-use law that kept the Willamette Valley's hillsides in farm use.",
+    "born": 1913,
+    "died": 1983,
+    "sources": [
+      {
+        "title": "Tom McCall (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Tom_McCall"
+      },
+      {
+        "title": "Yamhill Area Land Use Map (Oregon History Project, Oregon Historical Society)",
+        "url": "https://www.oregonhistoryproject.org/articles/historical-records/yamhill-area-land-use-map/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "megan-markel",
+    "type": "person",
+    "name": "Megan Markel",
+    "summary": "Founder of Well Played Wines and, as of 2023, Trade Relations & Special Projects Manager at the Willamette Valley Wineries Association. Earlier she ran a Portland wine shop and worked in winery sales.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 15 April 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-93"
+      },
+      {
+        "title": "Well Played Wines",
+        "url": "https://www.wellplayedwines.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chris-fladwood",
+    "type": "person",
+    "name": "Chris Fladwood",
+    "summary": "Winemaker at Soter Vineyards and a US military veteran who served in Iraq, where a gift of a wine book started his interest in wine.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 22 April 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-94"
+      },
+      {
+        "title": "Weinnotes podcast: Chris Fladwood, Soter Vineyards (YouTube)",
+        "url": "https://youtu.be/G-VbcGUdrL0"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "michael-fay",
+    "type": "person",
+    "name": "Michael Fay",
+    "summary": "Winemaker at Domaine Serene who presented its Oregon and French Chardonnays at the 2023 Oregon Chardonnay Celebration.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 29 April 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-95"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rachel-zasadni",
+    "type": "person",
+    "name": "Rachel Zasadni",
+    "summary": "Winemaker who started and ran the sparkling wine program at Domaine Serene before leaving in 2023; she has also served on the IPNC board.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 29 April 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-95"
+      },
+      {
+        "title": "Weinnotes newsletter, 5 August 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-109"
+      },
+      {
+        "title": "Weinnotes newsletter, 2 March 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-4"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "thomas-savre",
+    "type": "person",
+    "name": "Thomas Savre",
+    "summary": "Winemaker at Lingua Franca in the Eola-Amity Hills.",
+    "aka": [
+      "Tomas Savre"
+    ],
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 March 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-4"
+      },
+      {
+        "title": "Weinnotes newsletter, 5 August 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-109"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jarod-sleet",
+    "type": "person",
+    "name": "Jarod Sleet",
+    "summary": "Assistant winemaker at ROCO Winery, profiled by Wine Spectator in 2023 for his work with Oregon sparkling wine.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 24 June 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-103"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jackson-holstein",
+    "type": "person",
+    "name": "Jackson Holstein",
+    "summary": "Owner and winemaker of Granville Wine Co., who grew up around Argyle where his father managed vineyards. He also makes the Chardonnay for Lonesome Rock.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 May 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-96"
+      },
+      {
+        "title": "Weinnotes newsletter, 7 October 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-111"
+      },
+      {
+        "title": "Weinnotes podcast: Jackson Holstein, Granville Wines (YouTube)",
+        "url": "https://youtu.be/QleirtDJh70"
+      },
+      {
+        "title": "Granville Wines (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2732/"
+      },
+      {
+        "title": "People (Lonesome Rock)",
+        "url": "https://lonesomerock.com/people"
+      },
+      {
+        "title": "Weinnotes newsletter, 6 December 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-HfMTMeSy"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ayla-holstein",
+    "type": "person",
+    "name": "Ayla Holstein",
+    "summary": "Runs Granville Wine Co. with her husband Jackson Holstein.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 May 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-96"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "allen-holstein",
+    "type": "person",
+    "name": "Allen Holstein",
+    "summary": "Longtime Argyle vineyard manager who also worked with the Drouhin family in their Oregon vineyards; father of Jackson Holstein. His first name is also spelled Alan.",
+    "aka": [
+      "Alan Holstein"
+    ],
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 May 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-96"
+      },
+      {
+        "title": "Granville Wines (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2732/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "andy-lytle",
+    "type": "person",
+    "name": "Andy Lytle",
+    "summary": "Founder of the sparkling wine label Lytle-Barnett and of Aubaine, both grown at his Anahata Vineyard estate (AtTheJoy) in the Eola-Amity Hills.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 27 May 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-99"
+      },
+      {
+        "title": "Weinnotes newsletter, 29 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-108"
+      },
+      {
+        "title": "Aubaine (AtTheJoy)",
+        "url": "https://atthejoy.com/aubaine/"
+      },
+      {
+        "title": "Lytle-Barnett (AtTheJoy)",
+        "url": "https://atthejoy.com/lytle-barnett/"
+      },
+      {
+        "title": "Weinnotes newsletter, 6 December 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-HfMTMeSy"
+      },
+      {
+        "title": "Weinnotes newsletter, 6 June 2026",
+        "url": "https://block55.beehiiv.com/p/weinnotes-june-2026"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "andrew-beckham",
+    "type": "person",
+    "name": "Andrew Beckham",
+    "summary": "Ceramics artist and winemaker who co-founded Beckham Estate Vineyard and produces clay amphorae for winemaking; he taught pottery until 2021.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 13 May 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-97"
+      },
+      {
+        "title": "Weinnotes newsletter, 20 May 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-98"
+      },
+      {
+        "title": "Beckham Estate Vineyard: About",
+        "url": "https://www.beckhamestatevineyard.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "annedria-beckham",
+    "type": "person",
+    "name": "Annedria Beckham",
+    "summary": "Co-founder of Beckham Estate Vineyard, where she manages the business side.",
+    "sources": [
+      {
+        "title": "Beckham Estate Vineyard: About",
+        "url": "https://www.beckhamestatevineyard.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dan-diephouse",
+    "type": "person",
+    "name": "Dan Diephouse",
+    "summary": "Co-founder of the sparkling wine producer Corollary Wines.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 20 May 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-98"
+      },
+      {
+        "title": "Corollary Wines' new sparkling wine tasting room (Portland Monthly)",
+        "url": "https://www.pdxmonthly.com/eat-and-drink/2023/12/corollary-wines-new-sparkling-wine-tasting-room-oregon"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jeanne-feldkamp",
+    "type": "person",
+    "name": "Jeanne Feldkamp",
+    "summary": "Co-founder of the sparkling wine producer Corollary Wines.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 20 May 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-98"
+      },
+      {
+        "title": "Corollary Wines' new sparkling wine tasting room (Portland Monthly)",
+        "url": "https://www.pdxmonthly.com/eat-and-drink/2023/12/corollary-wines-new-sparkling-wine-tasting-room-oregon"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dave-cho",
+    "type": "person",
+    "name": "Dave Cho",
+    "summary": "Co-founder of CHO Wines with his wife Lois.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 20 May 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-98"
+      },
+      {
+        "title": "Championing AAPI Representation in Wine (SevenFifty Daily)",
+        "url": "https://daily.sevenfifty.com/championing-aapi-representation-in-wine/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lois-cho",
+    "type": "person",
+    "name": "Lois Cho",
+    "summary": "Co-founder of CHO Wines with her husband Dave.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 20 May 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-98"
+      },
+      {
+        "title": "Championing AAPI Representation in Wine (SevenFifty Daily)",
+        "url": "https://daily.sevenfifty.com/championing-aapi-representation-in-wine/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "eugene-labunsky",
+    "type": "person",
+    "name": "Eugene Labunsky",
+    "summary": "Businessman and brother-in-law of Jared Etzel; his partner in Jory, LLC, which bought the Lenne estate, and in Rodeo Hills.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 24 June 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-103"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "steve-lutz",
+    "type": "person",
+    "name": "Steve Lutz",
+    "summary": "Founder and longtime owner of Lenné Estate, which he sold in 2022 after 22 years.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 24 June 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-103"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dave-jachter",
+    "type": "person",
+    "name": "Dave Jachter",
+    "summary": "Former owner of Wilsonville Toyota who sold the dealership in 2018 and started Jachter Family Wines.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 January 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-uTJyX7Ue"
+      },
+      {
+        "title": "Former Oregon car dealer gears up with Jachter Family Wines (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/2021/02/16/former-oregon-car-dealer-gears-up-with-jachter-family-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "karen-jachter",
+    "type": "person",
+    "name": "Karen Jachter",
+    "summary": "Co-owner of Jachter Family Wines with her husband Dave.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 January 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-uTJyX7Ue"
+      },
+      {
+        "title": "Former Oregon car dealer gears up with Jachter Family Wines (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/2021/02/16/former-oregon-car-dealer-gears-up-with-jachter-family-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jon-foster",
+    "type": "person",
+    "name": "Jon Foster",
+    "summary": "General manager and sales manager of Ridgecrest / RR Wines.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 8 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-105"
+      },
+      {
+        "title": "Ridgecrest Wines: People",
+        "url": "https://ridgecrestwines.com/people"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dru-allen",
+    "type": "person",
+    "name": "Dru Allen",
+    "summary": "Co-proprietor of Compris Vineyard, the former Vidon Vineyard.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 15 April 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-93"
+      },
+      {
+        "title": "Weinnotes newsletter, 8 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-105"
+      },
+      {
+        "title": "Compris Vineyard: About",
+        "url": "https://comprisvineyard.com/about/"
+      },
+      {
+        "title": "Weinnotes newsletter, 6 December 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-HfMTMeSy"
+      },
+      {
+        "title": "About (Compris Vineyard)",
+        "url": "https://comprisvineyard.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "erin-allen",
+    "type": "person",
+    "name": "Erin Allen",
+    "summary": "Co-proprietor of Compris Vineyard, the former Vidon Vineyard.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 15 April 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-93"
+      },
+      {
+        "title": "Compris Vineyard: About",
+        "url": "https://comprisvineyard.com/about/"
+      },
+      {
+        "title": "Weinnotes newsletter, 6 December 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-HfMTMeSy"
+      },
+      {
+        "title": "About (Compris Vineyard)",
+        "url": "https://comprisvineyard.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "aaron-kendall",
+    "type": "person",
+    "name": "Aaron Kendall",
+    "summary": "Winemaker and viticulturist at Compris Vineyard since 2023, previously associate winemaker at Beaux Freres and earlier at Adelsheim.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 8 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-105"
+      },
+      {
+        "title": "Aaron Kendall (Compris Vineyard)",
+        "url": "https://comprisvineyard.com/about/team/aaron-kendall/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ari-grey",
+    "type": "person",
+    "name": "Ari Grey",
+    "summary": "Co-owner of Greywing Wines with his wife Brandy, and Director of Experience at Open Claim Vineyards.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 15 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-106"
+      },
+      {
+        "title": "Weinnotes newsletter, 22 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-107"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "brandy-grey",
+    "type": "person",
+    "name": "Brandy Grey",
+    "summary": "Co-owner of Greywing Wines; a descendant of Johnson Blackfeather, who represented the Shawnee nation in a 1903 Supreme Court land-rights case.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 15 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-106"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "brett-wall",
+    "type": "person",
+    "name": "Brett Wall",
+    "summary": "Medical-device executive and co-owner of Open Claim Vineyards with his wife Marnie.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 22 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-107"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "marnie-wall",
+    "type": "person",
+    "name": "Marnie Wall",
+    "summary": "Co-owner of Open Claim Vineyards, on family land near Dallas, Oregon, first bought by her mother in 1994.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 22 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-107"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nicholas-keeler",
+    "type": "person",
+    "name": "Nicholas Keeler",
+    "summary": "Winemaker at Authentique and at his family's Keeler Estate.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 8 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-105"
+      },
+      {
+        "title": "Weinnotes newsletter, 15 April 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-93"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "channing-frye",
+    "type": "person",
+    "name": "Channing Frye",
+    "summary": "Retired NBA player, formerly of the Portland Trail Blazers, who co-founded Chosen Family Wines in 2020.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 29 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-108"
+      },
+      {
+        "title": "Chosen Family Wines",
+        "url": "https://www.chosenfamilywines.com/"
+      },
+      {
+        "title": "Weinnotes podcast: Channing Frye, Chosen Family Wines (YouTube)",
+        "url": "https://youtu.be/O_LRUj3fkKo"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kevin-love",
+    "type": "person",
+    "name": "Kevin Love",
+    "summary": "NBA player and co-founder of Chosen Family Wines.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 29 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-108"
+      },
+      {
+        "title": "Chosen Family Wines",
+        "url": "https://www.chosenfamilywines.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tiquette-bramlett",
+    "type": "person",
+    "name": "Tiquette Bramlett",
+    "summary": "Named vice president of Chosen Family Wines in 2023.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 3 June 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-100"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "danny-klieman",
+    "type": "person",
+    "name": "Danny Klieman",
+    "summary": "Co-owner of Lonesome Rock with his wife Susan; formerly a wine importer and distributor with Heritage Wine Cellars in Chicago.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 October 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-111"
+      },
+      {
+        "title": "Lonesome Rock: About",
+        "url": "https://lonesomerock.com/about"
+      },
+      {
+        "title": "Weinnotes newsletter, 2 May 2026",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-2"
+      },
+      {
+        "title": "People (Lonesome Rock)",
+        "url": "https://lonesomerock.com/people"
+      }
+    ],
+    "verified": false,
+    "aka": [
+      "Daniel Klieman"
+    ]
+  },
+  {
+    "id": "susan-klieman",
+    "type": "person",
+    "name": "Susan Klieman",
+    "summary": "Co-owner of Lonesome Rock with her husband Danny.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 October 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-111"
+      },
+      {
+        "title": "Lonesome Rock: About",
+        "url": "https://lonesomerock.com/about"
+      },
+      {
+        "title": "Weinnotes newsletter, 2 May 2026",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-2"
+      },
+      {
+        "title": "People (Lonesome Rock)",
+        "url": "https://lonesomerock.com/people"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "scott-baldwin",
+    "type": "person",
+    "name": "Scott Baldwin",
+    "summary": "Co-founder and owner of De Ponte Cellars, former owner of Lonesome Rock Ranch, and a founder of the Vinovate custom crush facility.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 October 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-111"
+      },
+      {
+        "title": "De Ponte Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/144/"
+      },
+      {
+        "title": "Vinovate Custom Wine Services",
+        "url": "https://vinovatewineservices.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rae-baldwin",
+    "type": "person",
+    "name": "Rae Baldwin",
+    "summary": "Co-founder and owner of De Ponte Cellars with her husband Scott.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 October 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-111"
+      },
+      {
+        "title": "De Ponte Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/144/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "isabelle-dutartre",
+    "type": "person",
+    "name": "Isabelle Dutartre",
+    "summary": "French-trained winemaker with an enology degree from the University of Dijon who worked at Maison Joseph Drouhin, came to Oregon in the early 1990s to work at Domaine Drouhin Oregon, and has been winemaker at De Ponte Cellars since 2001. She founded her own label, 1789 Wines.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 October 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-111"
+      },
+      {
+        "title": "De Ponte Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/144/"
+      },
+      {
+        "title": "Weinnotes newsletter, 12 October 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-11"
+      },
+      {
+        "title": "People (Lonesome Rock)",
+        "url": "https://lonesomerock.com/people"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "laurence-jobard",
+    "type": "person",
+    "name": "Laurence Jobard",
+    "summary": "Head winemaker at Maison Joseph Drouhin in Burgundy and mentor to Isabelle Dutartre.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 October 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-111"
+      },
+      {
+        "title": "De Ponte Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/144/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bryan-weil",
+    "type": "person",
+    "name": "Bryan Weil",
+    "summary": "Founding winemaker of the Vinovate custom crush facility and former winemaker at Alexana.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 24 June 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-103"
+      },
+      {
+        "title": "Weinnotes newsletter, 7 October 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-111"
+      },
+      {
+        "title": "Vinovate Custom Wine Services",
+        "url": "https://vinovatewineservices.com/"
+      },
+      {
+        "title": "Weinnotes newsletter, 8 March 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-LnUXjUjN"
+      },
+      {
+        "title": "Weinnotes newsletter, 6 December 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-HfMTMeSy"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rob-townsend",
+    "type": "person",
+    "name": "Rob Townsend",
+    "summary": "Owner of Ambar, described as the Willamette Valley's first Regenerative Organic Certified vineyard, and a founder of Vinovate.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 March 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-4"
+      },
+      {
+        "title": "Weinnotes newsletter, 7 October 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-111"
+      },
+      {
+        "title": "Vinovate Custom Wine Services",
+        "url": "https://vinovatewineservices.com/"
+      },
+      {
+        "title": "Weinnotes newsletter, 8 March 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-LnUXjUjN"
+      }
+    ],
+    "verified": false,
+    "aka": [
+      "Robert Townsend"
+    ]
+  },
+  {
+    "id": "kate-payne-brown",
+    "type": "person",
+    "name": "Kate Payne Brown",
+    "summary": "Winemaker who left Stoller Family Estate in 2023 to become a partner and winemaker at Vinovate; she also makes the wines for Ambar.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 24 June 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-103"
+      },
+      {
+        "title": "Weinnotes newsletter, 7 October 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-111"
+      },
+      {
+        "title": "Weinnotes newsletter, 2 March 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-4"
+      },
+      {
+        "title": "Weinnotes podcast: Kate Payne Brown (YouTube)",
+        "url": "https://youtu.be/DQl1m_rx1Hk"
+      },
+      {
+        "title": "Weinnotes newsletter, 8 March 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-LnUXjUjN"
+      },
+      {
+        "title": "Weinnotes newsletter, 5 April 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-6H3JlzWC"
+      },
+      {
+        "title": "Kate Payne Brown Named Head Winemaker for Oregon's Argyle Winery (Wine Business)",
+        "url": "https://www.winebusiness.com/news/article/299103"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bryan-berenguer",
+    "type": "person",
+    "name": "Bryan Berenguer",
+    "summary": "Winemaker and co-founder of Human Cellars who also teaches at Chemeketa Community College; he spent years working with farmers abroad before turning to wine.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 September 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-110"
+      },
+      {
+        "title": "Weinnotes newsletter, 2 March 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-4"
+      },
+      {
+        "title": "Human Cellars: Founders",
+        "url": "https://www.humancellars.com/founders"
+      },
+      {
+        "title": "Weinnotes podcast: A Conversation with Bryan Berenguer (YouTube)",
+        "url": "https://youtu.be/O1yVJINFXNc"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kenny-mcmahon",
+    "type": "person",
+    "name": "Kenny McMahon",
+    "summary": "Winemaker at Arabilis.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 September 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-110"
+      },
+      {
+        "title": "Weinnotes newsletter, 12 October 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-11"
+      },
+      {
+        "title": "Weinnotes newsletter, 5 April 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-6H3JlzWC"
+      },
+      {
+        "title": "Arabilis Wines",
+        "url": "https://arabiliswines.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "seth-morgen-long",
+    "type": "person",
+    "name": "Seth Morgen Long",
+    "summary": "Winemaker behind the Chardonnay-only label Morgen Long.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 22 April 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-94"
+      },
+      {
+        "title": "Weinnotes newsletter, 2 March 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-4"
+      },
+      {
+        "title": "Weinnotes newsletter, 5 July 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-MWaK65f1"
+      },
+      {
+        "title": "Weinnotes newsletter, 4 May 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-6"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bruno-corneaux",
+    "type": "person",
+    "name": "Bruno Corneaux",
+    "summary": "Fourth-generation winegrower from Burgundy and winemaker at Domaine Divio; he still oversees his family's vineyards in Burgundy.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 3 June 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-100"
+      },
+      {
+        "title": "Domaine Divio",
+        "url": "https://domainedivio.com/"
+      },
+      {
+        "title": "Weinnotes podcast: Bruno Corneaux, Domaine Divio (YouTube)",
+        "url": "https://youtu.be/_fVmfywKZ_A"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "isabelle-corneaux",
+    "type": "person",
+    "name": "Isabelle Corneaux",
+    "summary": "Part of the Domaine Divio team with her husband Bruno Corneaux.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 3 June 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-100"
+      },
+      {
+        "title": "Domaine Divio",
+        "url": "https://domainedivio.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "aaron-young",
+    "type": "person",
+    "name": "Aaron Young",
+    "summary": "Co-owner of Walnut Ridge Vineyard with his wife Alisha.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 4 November 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter"
+      },
+      {
+        "title": "Walnut Ridge La Petite Fete (Cellar 503)",
+        "url": "https://www.cellar503.com/wines/la-petite-fete/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "alisha-young",
+    "type": "person",
+    "name": "Alisha Young",
+    "summary": "Co-owner of Walnut Ridge Vineyard with her husband Aaron.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 4 November 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter"
+      },
+      {
+        "title": "Walnut Ridge La Petite Fete (Cellar 503)",
+        "url": "https://www.cellar503.com/wines/la-petite-fete/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "andrew-smith",
+    "type": "person",
+    "name": "Andrew Smith",
+    "summary": "Winemaker at Walnut Ridge Vineyard and formerly at Antiquum Farm; he also started the winery and vineyard consultancy Fallbright Solutions.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 4 November 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "stephen-hagen",
+    "type": "person",
+    "name": "Stephen Hagen",
+    "summary": "Farmer at Antiquum Farm who coined the term grazing-based viticulture for its use of animals in the vineyard.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 4 November 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "paden-west",
+    "type": "person",
+    "name": "Paden West",
+    "summary": "Winemaker who spent six years as assistant to Isabelle Meunier at Lavinea, became head winemaker at Benza Vineyard in 2022, co-founded Approachment with his wife Jess, and in 2026 took on winemaking for Lytle-Barnett and Aubaine.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 April 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-5"
+      },
+      {
+        "title": "Weinnotes newsletter, 7 March 2026",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-e1a9UHBI"
+      },
+      {
+        "title": "The Duo (Approachment Wines)",
+        "url": "https://www.approachmentwines.com/the-duo"
+      },
+      {
+        "title": "Weinnotes podcast: Paden and Jess West of Approachment (YouTube)",
+        "url": "https://youtu.be/U_hdwk4VLrI"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jess-west",
+    "type": "person",
+    "name": "Jess West",
+    "aka": [
+      "Jessica West"
+    ],
+    "summary": "Winemaker and co-founder of Approachment with her husband Paden West; she was co-winemaker at Harper Voit for more than a decade before stepping away in 2025.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 April 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-5"
+      },
+      {
+        "title": "Weinnotes newsletter, 7 March 2026",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-e1a9UHBI"
+      },
+      {
+        "title": "The Duo (Approachment Wines)",
+        "url": "https://www.approachmentwines.com/the-duo"
+      },
+      {
+        "title": "Weinnotes podcast: Paden and Jess West of Approachment (YouTube)",
+        "url": "https://youtu.be/U_hdwk4VLrI"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "andrew-davis",
+    "type": "person",
+    "name": "Andrew Davis",
+    "summary": "Sparkling wine specialist who worked in winemaking at Argyle, then started Radiant Sparkling Wine Company, whose equipment and services let many smaller Oregon producers make traditional-method sparkling wine. Winemaker for Lytle-Barnett and husband of Isabelle Meunier.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 4 October 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-dmLbV5gR"
+      },
+      {
+        "title": "Weinnotes newsletter, 2 August 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-u2QcADDE"
+      },
+      {
+        "title": "Lytle-Barnett's Story (AtTheJoy)",
+        "url": "https://atthejoy.com/lytle-barnetts-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "blair-nicholas",
+    "type": "person",
+    "name": "Blair Nicholas",
+    "summary": "Former lawyer who, with his wife L.J., owns LucidWild Estate in the Dundee Hills.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 August 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-u2QcADDE"
+      },
+      {
+        "title": "Blair & L.J. Nicholas interview (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/blair-lj-nicholas/"
+      },
+      {
+        "title": "Weinnotes podcast: Blair and LJ of LucidWild (YouTube)",
+        "url": "https://youtu.be/xObu3G2v3cY"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lj-nicholas",
+    "type": "person",
+    "name": "L.J. Nicholas",
+    "aka": [
+      "LJ Nicholas"
+    ],
+    "summary": "Co-owner of LucidWild Estate in the Dundee Hills with her husband Blair.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 August 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-u2QcADDE"
+      },
+      {
+        "title": "Blair & L.J. Nicholas interview (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/blair-lj-nicholas/"
+      },
+      {
+        "title": "Weinnotes podcast: Blair and LJ of LucidWild (YouTube)",
+        "url": "https://youtu.be/xObu3G2v3cY"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "doug-ackerman",
+    "type": "person",
+    "name": "Doug Ackerman",
+    "summary": "Physician who trained at OHSU and practised for 36 years before retiring in 2024; he planted a Ribbon Ridge vineyard in 2007 and founded Red Electric.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 4 May 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-6"
+      },
+      {
+        "title": "Red Electric Wines",
+        "url": "https://www.redelectricwines.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "john-grochau",
+    "type": "person",
+    "name": "John Grochau",
+    "summary": "Former bicycle racer and Portland restaurant wine seller who worked at Erath and for four years at Brick House before starting Grochau Cellars in 2002; also winemaker for Red Electric.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 4 May 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-6"
+      },
+      {
+        "title": "About (Grochau Cellars)",
+        "url": "https://www.grochaucellars.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jay-mcdonald",
+    "type": "person",
+    "name": "Jay McDonald",
+    "summary": "Owner and winemaker of EIEIO & Company.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 8 June 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-7"
+      },
+      {
+        "title": "EIEIO & Company",
+        "url": "https://onhisfarm.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mike-bayliss",
+    "type": "person",
+    "name": "Mike Bayliss",
+    "summary": "Fourth-generation farmer of the Bayliss family land near Carlton who planted its vineyard in 1999 and co-founded Ghost Hill Cellars.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 3 August 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-9"
+      },
+      {
+        "title": "Our Story (Ghost Hill Cellars)",
+        "url": "https://www.ghosthillcellars.com/our-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "drenda-bayliss",
+    "type": "person",
+    "name": "Drenda Bayliss",
+    "summary": "Co-owner of the Bayliss family farm near Carlton with her husband Mike; she hosted the first Ghost Hill Cellars tastings in the farmhouse.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 3 August 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-9"
+      },
+      {
+        "title": "Our Story (Ghost Hill Cellars)",
+        "url": "https://www.ghosthillcellars.com/our-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bernadette-bower",
+    "type": "person",
+    "name": "Bernadette Bower",
+    "summary": "Daughter of Mike and Drenda Bayliss and a former teacher; co-founder of Ghost Hill Cellars with her father and her husband Cameron Bower.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 3 August 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-9"
+      },
+      {
+        "title": "Our Story (Ghost Hill Cellars)",
+        "url": "https://www.ghosthillcellars.com/our-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cameron-bower",
+    "type": "person",
+    "name": "Cameron Bower",
+    "summary": "Air Force veteran and former ExxonMobil employee who helped fund the planting of his father-in-law Mike Bayliss's vineyard and now runs Ghost Hill Cellars with his wife Bernadette.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 3 August 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-9"
+      },
+      {
+        "title": "Our Story (Ghost Hill Cellars)",
+        "url": "https://www.ghosthillcellars.com/our-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tom-mortimer",
+    "type": "person",
+    "name": "Tom Mortimer",
+    "summary": "Former paper and packaging executive from Minneapolis who bought raw land on Parrett Mountain in 1997 and, with his wife Deb, cleared and planted it as Le Cadeau Vineyard.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 12 October 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-11"
+      },
+      {
+        "title": "Our Story (Le Cadeau Vineyard)",
+        "url": "https://lecadeauvineyard.com/our-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "deb-mortimer",
+    "type": "person",
+    "name": "Deb Mortimer",
+    "summary": "Co-owner of Le Cadeau Vineyard with her husband Tom.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 12 October 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-11"
+      },
+      {
+        "title": "Our Story (Le Cadeau Vineyard)",
+        "url": "https://lecadeauvineyard.com/our-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "pierre-millemann",
+    "type": "person",
+    "name": "Pierre Millemann",
+    "summary": "Winemaking consultant who advised Le Cadeau Vineyard from 2015 to 2022 and has also consulted for 00 Wines.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 12 October 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-11"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "allison-mcmahon",
+    "type": "person",
+    "name": "Allison McMahon",
+    "summary": "Co-founder of Arabilis with her husband Kenny McMahon.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 12 October 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-11"
+      },
+      {
+        "title": "Arabilis Wines",
+        "url": "https://arabiliswines.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "glenn-fischer",
+    "type": "person",
+    "name": "Glenn Fischer",
+    "summary": "Co-founder of Late Sky with his wife Karen and winemaker Jared Etzel, whom the couple first met at a Napa winery in 2009.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 December 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-13"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "karen-fischer",
+    "type": "person",
+    "name": "Karen Fischer",
+    "summary": "Co-founder of Late Sky with her husband Glenn and winemaker Jared Etzel.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 December 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-13"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "pam-turner",
+    "type": "person",
+    "name": "Pam Turner",
+    "aka": [
+      "Pamela S. Turner"
+    ],
+    "summary": "Author of science books for young readers and co-owner of Ambar Estate with her husband Rob Townsend; she drove the estate's regenerative organic certification.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 8 March 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-LnUXjUjN"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "craig-williams",
+    "type": "person",
+    "name": "Craig Williams",
+    "summary": "Winemaker at Joseph Phelps Vineyards in Napa from the 1970s to the mid-2000s, where he shaped the Insignia blend and developed the Freestone vineyard; in 2010 he and his family planted X Novo in the Eola-Amity Hills, later adding X Omni.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 5 July 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-MWaK65f1"
+      },
+      {
+        "title": "X Novo",
+        "url": "http://www.xnovo.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "robin-williams",
+    "type": "person",
+    "name": "Robin Williams",
+    "summary": "Co-planter, with Craig Williams, of X Novo Vineyard in the Eola-Amity Hills.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 5 July 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-MWaK65f1"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "alban-debeaulieu",
+    "type": "person",
+    "name": "Alban Debeaulieu",
+    "summary": "Winemaker at Abbott Claim.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 5 July 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-MWaK65f1"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "andrew-head",
+    "type": "person",
+    "name": "Andrew Head",
+    "aka": [
+      "Andy Head"
+    ],
+    "summary": "Founder of Apona Vineyards after 30 years running a roofing company.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 1 November 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-bg5rMxA3"
+      },
+      {
+        "title": "About Us (Apona Vineyards)",
+        "url": "https://aponavineyards.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "afton-towry",
+    "type": "person",
+    "name": "Afton Towry",
+    "summary": "Founder of Apona Vineyards, formerly with Dutch Bros, who studied viticulture and enology at Umpqua Community College's Southern Oregon Wine Institute.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 1 November 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-bg5rMxA3"
+      },
+      {
+        "title": "About Us (Apona Vineyards)",
+        "url": "https://aponavineyards.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chris-graves",
+    "type": "person",
+    "name": "Chris Graves",
+    "summary": "Winemaker at Apona Vineyards. A 2004 UC Davis graduate, he worked at Wente Vineyards and then at a Rogue Valley custom crush facility, and taught at the Southern Oregon Wine Institute.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 1 November 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-bg5rMxA3"
+      },
+      {
+        "title": "About Us (Apona Vineyards)",
+        "url": "https://aponavineyards.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jeff-finch",
+    "type": "person",
+    "name": "Jeff Finch",
+    "summary": "Assistant winemaker at Apona Vineyards, who earlier worked with Chris Graves at a Medford custom crush facility.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 1 November 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-bg5rMxA3"
+      },
+      {
+        "title": "About Us (Apona Vineyards)",
+        "url": "https://aponavineyards.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "charles-hesson",
+    "type": "person",
+    "name": "Charles Hesson",
+    "summary": "Hospitality professional who moved from Alexana to Arborbrook.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 March 2026",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-e1a9UHBI"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "hans-van-dale",
+    "type": "person",
+    "name": "Hans Van Dale",
+    "summary": "Winemaker at Dusky Goose until about the start of 2026; married to Penner-Ash winemaker Kate Ayres.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 May 2026",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-2"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rich-cushman",
+    "type": "person",
+    "name": "Rich Cushman",
+    "summary": "Oregon winemaker who studied at UC Davis alongside his roommate Rollin Soles and was winemaker at Chateau Benoit, where Soles credits him as an early figure in Oregon sparkling wine.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 4 October 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-dmLbV5gR"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "maria-ponzi",
+    "type": "person",
+    "name": "Anna Maria Ponzi",
+    "aka": [
+      "Maria Ponzi"
+    ],
+    "summary": "Named permanent director of Linfield University's Center for Wine Education in 2024.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 April 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-5"
+      },
+      {
+        "title": "Anna Maria Ponzi named permanent director of Linfield Center for Wine Education (Wine Business)",
+        "url": "https://www.winebusiness.com/news/article/285672"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "patrick-reuter",
+    "type": "person",
+    "name": "Patrick Reuter",
+    "summary": "Winemaker at Dominio IV.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 November 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-12"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "joe-dobbes",
+    "type": "person",
+    "name": "Joe Dobbes",
+    "summary": "Veteran Oregon winemaker whose current project is Iterum Wines in Salem.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 April 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-5"
+      },
+      {
+        "title": "Iterum Wines",
+        "url": "https://www.iterumwines.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-patte",
+    "type": "person",
+    "name": "David Patte",
+    "summary": "Winemaker at Sun Break Wines.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 April 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-5"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "erich-berg",
+    "type": "person",
+    "name": "Erich Berg",
+    "summary": "Winemaker at Ricochet, who opened his own winery premises in September 2024.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 September 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-10"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "pat-dukes",
+    "type": "person",
+    "name": "Pat Dukes",
+    "summary": "Co-owner of Dukes Family Vineyards near Amity with his wife Jackie; the couple moved to Oregon from Arizona.",
+    "place": "Amity, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 18 September 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-15"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jackie-dukes",
+    "type": "person",
+    "name": "Jackie Dukes",
+    "summary": "Co-owner of Dukes Family Vineyards near Amity with her husband Pat.",
+    "place": "Amity, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 18 September 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-15"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kelly-kidneigh",
+    "type": "person",
+    "name": "Kelly Kidneigh",
+    "summary": "Willamette Valley winemaker for Dukes Family Vineyards and for Mad Violets, the label she runs with her husband Stirling Fox. Originally from Colorado, she worked at WillaKenzie, Eyrie and Torii Mor before taking on client wineries.",
+    "aka": [
+      "Kelley Kidneigh"
+    ],
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 18 September 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-15"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "stirling-fox",
+    "type": "person",
+    "name": "Stirling Fox",
+    "summary": "Vineyard manager who farms about 30 Willamette Valley vineyards, including Dukes, and runs the Mad Violets label with his wife, winemaker Kelly Kidneigh.",
+    "aka": [
+      "Sterling Fox"
+    ],
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 18 September 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-15"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "drew-bledsoe",
+    "type": "person",
+    "name": "Drew Bledsoe",
+    "summary": "Former NFL quarterback who started Doubleback in Walla Walla in 2007 and later added the Bledsoe Family Winery and Bledsoe McDaniels labels under Bledsoe Wine Estates.",
+    "outsideOregon": true,
+    "place": "Walla Walla, WA",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 15 January 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-30"
+      },
+      {
+        "title": "About (Doubleback)",
+        "url": "https://doubleback.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "josh-mcdaniels",
+    "type": "person",
+    "name": "Josh McDaniels",
+    "summary": "CEO and director of winemaking for Doubleback and the Bledsoe labels, who took over the cellar in 2014 after Chris Figgins left. Not the football coach of the same name.",
+    "outsideOregon": true,
+    "place": "Walla Walla, WA",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 October 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-17"
+      },
+      {
+        "title": "Weinnotes newsletter, 15 January 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-30"
+      },
+      {
+        "title": "About (Doubleback)",
+        "url": "https://doubleback.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "john-weisinger",
+    "type": "person",
+    "name": "John Weisinger",
+    "summary": "Texan who moved to Ashland in the 1970s, planted Gewurztraminer from cuttings supplied by Frank Wisnovsky of Valley View and opened his winery in 1988.",
+    "place": "Ashland, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 October 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-17"
+      },
+      {
+        "title": "About (Weisinger Family Winery)",
+        "url": "https://www.weisingers.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "eric-weisinger",
+    "type": "person",
+    "name": "Eric Weisinger",
+    "summary": "Second-generation winemaker at Weisinger Family Winery in Ashland. He left in 2006 to consult in Oregon, California, Australia and New Zealand, then returned in 2011 to run the family business.",
+    "place": "Ashland, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 October 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-17"
+      },
+      {
+        "title": "About (Weisinger Family Winery)",
+        "url": "https://www.weisingers.com/about"
+      },
+      {
+        "title": "Weinnotes newsletter, 14 August 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-10"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rob-stuart",
+    "type": "person",
+    "name": "Rob Stuart",
+    "summary": "Winemaker and co-founder of R. Stuart & Co. in McMinnville.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 16 October 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-19"
+      },
+      {
+        "title": "About (R. Stuart & Co. Winery)",
+        "url": "https://www.rstuartandco.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "maria-stuart",
+    "type": "person",
+    "name": "Maria Stuart",
+    "summary": "Co-founder of R. Stuart & Co., where she ran marketing, hospitality and public relations, and a former director of the International Pinot Noir Celebration. She wrote the Pinot Mom blog and died in October 2021.",
+    "aka": [
+      "Pinotmom"
+    ],
+    "died": 2021,
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 16 October 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-19"
+      },
+      {
+        "title": "About (R. Stuart & Co. Winery)",
+        "url": "https://www.rstuartandco.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chris-hermann",
+    "type": "person",
+    "name": "Chris Hermann",
+    "summary": "Corvallis-raised wine lawyer who started 00 Wines with his father Richard and built it into a Chardonnay and Pinot noir label with his wife Kathryn.",
+    "aka": [
+      "Chris Herman"
+    ],
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 23 October 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-20"
+      },
+      {
+        "title": "About (00 Wines)",
+        "url": "https://www.00wines.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kathryn-hermann",
+    "type": "person",
+    "name": "Kathryn Hermann",
+    "summary": "Co-founder and general director of 00 Wines with her husband Chris Hermann.",
+    "aka": [
+      "Kathryn Herman"
+    ],
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 23 October 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-20"
+      },
+      {
+        "title": "About (00 Wines)",
+        "url": "https://www.00wines.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "richard-hermann",
+    "type": "person",
+    "name": "Richard Hermann",
+    "summary": "Munich-born botanist at Oregon State and wine collector who, at 90, began the 00 Wines project with his son Chris. He has since died.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 23 October 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-20"
+      },
+      {
+        "title": "About (00 Wines)",
+        "url": "https://www.00wines.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nate-wall",
+    "type": "person",
+    "name": "Nate Wall",
+    "summary": "Winemaker at Troon Vineyard in the Applegate Valley since 2018, after about ten years in the Willamette Valley, including Day Wines, and time in Virginia.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 November 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-22"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "erik-kramer",
+    "type": "person",
+    "name": "Erik Kramer",
+    "summary": "Winemaker hired by Domaine Serene in 2011.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 13 November 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-23"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-paige",
+    "type": "person",
+    "name": "David Paige",
+    "summary": "Adelsheim Vineyard winemaker who worked alongside Gina Hennen for years before leaving in 2017 to start his own label, David Paige Wines.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 20 November 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-24"
+      },
+      {
+        "title": "Weinnotes newsletter, 1 May 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-8"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "cj-mccollum",
+    "type": "person",
+    "name": "CJ McCollum",
+    "summary": "NBA guard, then with the Portland Trail Blazers, who launched the McCollum Heritage 91 label with Adelsheim in 2019 and in 2021 bought 318 acres in the Yamhill-Carlton AVA next to Resonance Vineyard.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 20 November 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-24"
+      },
+      {
+        "title": "Weinnotes newsletter, 25 September 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-16"
+      },
+      {
+        "title": "McCollum Family Vineyard",
+        "url": "https://mccollumfamilyvineyard.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "paul-de-lancellotti",
+    "type": "person",
+    "name": "Paul de Lancellotti",
+    "summary": "Owner and grower at de Lancellotti Family Vineyards, an early adopter of biodynamic farming who credits Jimi Brooks with teaching him much about it.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 4 December 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-26"
+      },
+      {
+        "title": "About (de Lancellotti Family Vineyards)",
+        "url": "https://www.delancellottifamilyvineyards.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "robert-brittan",
+    "type": "person",
+    "name": "Robert Brittan",
+    "summary": "UC Davis graduate who was the first winemaker at Far Niente and spent 16 years at Stags' Leap Winery before buying land in the McMinnville foothills in 2004 for Brittan Vineyards. He also makes or consults on wine for several Willamette Valley labels.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 4 December 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-26"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "don-hagge",
+    "type": "person",
+    "name": "Don Hagge",
+    "summary": "Founder of Vidon Vineyard near Newberg, known for his experiments, including an early planting of Pinot noir clone 95 from cuttings given by Dick Erath. He and his wife Vicki sold to Dru and Erin Allen in 2020.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 11 December 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-27"
+      },
+      {
+        "title": "Weinnotes newsletter, 7 May 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-46"
+      },
+      {
+        "title": "Vidon Vineyard Announces New Name, Compris Vineyard (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2022/05/04/vidon-vineyard-new-name-compris-vineyard/"
+      },
+      {
+        "title": "Weinnotes newsletter, 20 March 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-10"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jessica-mozeico",
+    "type": "person",
+    "name": "Jessica Mozeico",
+    "summary": "Co-founder, president and winemaker of Et Fille Wines, which she started with her late father Howard.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 8 January 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-29"
+      },
+      {
+        "title": "Et Fille Wines",
+        "url": "https://www.etfillewines.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "michael-lundeen",
+    "type": "person",
+    "name": "Michael Lundeen",
+    "summary": "University of Oregon journalism graduate who began in the cellar at WillaKenzie and Domaine Serene, worked a 2005 harvest in Piedmont and studied at Chemeketa before launching Lundeen Wines. An early Oregon sparkling producer.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 29 January 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-32"
+      },
+      {
+        "title": "Lundeen Wines",
+        "url": "https://www.lundeenwines.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "piper-underbrink",
+    "type": "person",
+    "name": "Piper Underbrink",
+    "summary": "Owner of Privé Vineyard, which she bought in 2020.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 19 February 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-35"
+      },
+      {
+        "title": "Weinnotes newsletter, 27 November 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-25"
+      },
+      {
+        "title": "Weinnotes newsletter, 10 July 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-5"
+      },
+      {
+        "title": "Our Story (Privé Vineyard)",
+        "url": "https://www.privevineyard.com/about-us"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "werner-nistler",
+    "type": "person",
+    "name": "Werner Nistler Jr.",
+    "summary": "Co-founder of Amaterra with his wife Colleen; founder of the Touchmark retirement-community company.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 26 February 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-36"
+      },
+      {
+        "title": "About (Amaterra)",
+        "url": "https://amaterrawines.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "colleen-nistler",
+    "type": "person",
+    "name": "Colleen Nistler",
+    "summary": "Co-founder of Amaterra with her husband Werner Nistler Jr.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 26 February 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-36"
+      },
+      {
+        "title": "About (Amaterra)",
+        "url": "https://amaterrawines.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "marcus-breuer",
+    "type": "person",
+    "name": "Marcus Breuer",
+    "summary": "Co-founder and CEO of Amaterra and chief executive of Touchmark; a grade-school friend of winemaker Matt Vuylsteke.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 26 February 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-36"
+      },
+      {
+        "title": "About (Amaterra)",
+        "url": "https://amaterrawines.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "matt-vuylsteke",
+    "type": "person",
+    "name": "Matt Vuylsteke",
+    "summary": "Founding winemaker of Amaterra and founder of the 51Weeks label.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 26 February 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-36"
+      },
+      {
+        "title": "About (Amaterra)",
+        "url": "https://amaterrawines.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "michael-mega",
+    "type": "person",
+    "name": "Michael Mega",
+    "summary": "Owner and winemaker of Nysa Vineyard in the Dundee Hills.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 26 March 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-40"
+      },
+      {
+        "title": "About Us (Nysa Vineyard)",
+        "url": "https://www.nysavineyard.com/about-us"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "janie-brooks-heuck",
+    "type": "person",
+    "name": "Janie Brooks Heuck",
+    "summary": "Sister of Jimi Brooks and managing director of Brooks Wine, which she has run since his death in 2004 on behalf of his son Pascal.",
+    "aka": [
+      "Janie Brooks"
+    ],
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 April 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-41"
+      },
+      {
+        "title": "Our Story (Brooks Wine)",
+        "url": "https://www.brookswine.com/our-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "pascal-brooks",
+    "type": "person",
+    "name": "Pascal Brooks",
+    "summary": "Son of Jimi Brooks, who inherited Brooks Wine at the age of eight when his father died in 2004 and remains its sole owner.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 April 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-41"
+      },
+      {
+        "title": "Our Story (Brooks Wine)",
+        "url": "https://www.brookswine.com/our-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bryan-laing",
+    "type": "person",
+    "name": "Bryan Laing",
+    "summary": "Winemaker and co-owner of Hazelfern Cellars with his wife Laura.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 16 April 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-43"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "laura-laing",
+    "type": "person",
+    "name": "Laura Laing",
+    "summary": "Co-owner of Hazelfern Cellars with her husband Bryan.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 16 April 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-43"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "vincent-fritzsche",
+    "type": "person",
+    "name": "Vincent Fritzsche",
+    "summary": "Owner and winemaker of Vincent Wine Company, which he runs single-handed.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 16 April 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-43"
+      },
+      {
+        "title": "Weinnotes newsletter, 6 March 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-20"
+      },
+      {
+        "title": "Vincent Wine Company",
+        "url": "https://vincentwinecompany.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "teal-walker",
+    "type": "person",
+    "name": "Teal Walker",
+    "summary": "Proprietor of Audeant, the Willamette Valley label she created with winemaker Andrew Riechers after a tasting at Antica Terra.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 23 April 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-44"
+      },
+      {
+        "title": "Audeant",
+        "url": "https://www.audeant.com/"
+      },
+      {
+        "title": "About (Audeant)",
+        "url": "https://www.audeant.com/about-us"
+      },
+      {
+        "title": "Weinnotes newsletter, 12 June 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-1"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "andrew-riechers",
+    "type": "person",
+    "name": "Andrew Riechers",
+    "summary": "Winemaker of Audeant since its first vintage in 2016; previously Maggie Harrison's assistant winemaker at Antica Terra.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 23 April 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-44"
+      },
+      {
+        "title": "Audeant",
+        "url": "https://www.audeant.com/"
+      },
+      {
+        "title": "About (Audeant)",
+        "url": "https://www.audeant.com/about-us"
+      },
+      {
+        "title": "Weinnotes newsletter, 12 June 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-1"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chris-mazepink",
+    "type": "person",
+    "name": "Chris Mazepink",
+    "summary": "Founder and winemaker of White Walnut Estate. A New Yorker who came to Oregon State in 2000, he worked at Willamette Valley Vineyards, Shea, Benton-Lane and Archery Summit, and ran his own Ebony Wines label from 2009.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 30 April 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-45"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ximena-orrego",
+    "type": "person",
+    "name": "Ximena Orrego",
+    "summary": "Owner and winemaker of Atticus Wine.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 30 April 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-45"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "laura-volkman",
+    "type": "person",
+    "name": "Laura Volkman",
+    "summary": "Grower and winemaker behind Laura Volkman Vineyards, mentored by Michael Etzel of Beaux Frères; she sold the property in 2012.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 May 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-46"
+      },
+      {
+        "title": "Weinnotes newsletter, 23 January 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-30"
+      },
+      {
+        "title": "Our Story (Potter's Vineyard)",
+        "url": "https://pottersvineyard.com/story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bill-sanchez",
+    "type": "person",
+    "name": "Bill Sanchez",
+    "summary": "Co-owner and winemaker of Potter's Vineyard and its Vino Vasai label with his wife Sandy.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 May 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-46"
+      },
+      {
+        "title": "Weinnotes newsletter, 26 March 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-40"
+      },
+      {
+        "title": "Weinnotes newsletter, 23 January 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-30"
+      },
+      {
+        "title": "Our Story (Potter's Vineyard)",
+        "url": "https://pottersvineyard.com/story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sandy-sanchez",
+    "type": "person",
+    "name": "Sandy Sanchez",
+    "summary": "Co-owner of Potter's Vineyard with her husband Bill.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 May 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-46"
+      },
+      {
+        "title": "Weinnotes newsletter, 23 January 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-30"
+      },
+      {
+        "title": "Our Story (Potter's Vineyard)",
+        "url": "https://pottersvineyard.com/story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ron-johnson",
+    "type": "person",
+    "name": "Ron Johnson",
+    "summary": "Planted Dion Vineyard with his wife Joanne from 1973 and in the 1990s wrote the first petition for a Laurelwood appellation within the Chehalem Mountains.",
+    "place": "Cornelius, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 14 May 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-47"
+      },
+      {
+        "title": "Dion Vineyard",
+        "url": "https://www.dionvineyard.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "joanne-johnson",
+    "type": "person",
+    "name": "Joanne Johnson",
+    "summary": "Co-founder of Dion Vineyard with her husband Ron.",
+    "place": "Cornelius, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 14 May 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-47"
+      },
+      {
+        "title": "Dion Vineyard",
+        "url": "https://www.dionvineyard.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kevin-johnson",
+    "type": "person",
+    "name": "Kevin Johnson",
+    "summary": "Son of Dion Vineyard founders Ron and Joanne Johnson; a Navy and aerospace veteran who came back to make the family's wines.",
+    "place": "Cornelius, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 14 May 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-47"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "beth-klingner",
+    "type": "person",
+    "name": "Beth Klingner",
+    "summary": "Winemaker at Dion Vineyard with her husband Kevin Johnson. A former Intel employee from Colorado, she worked weekend shifts at Archery Summit before joining Dion for the 2011 vintage.",
+    "place": "Cornelius, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 14 May 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-47"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "joel-myers",
+    "type": "person",
+    "name": "Joel Myers",
+    "summary": "Grower who helped plant the Letts' vineyard as a boy, became vineyard and cellar manager at Eyrie after 1979, studied with Swiss researcher Werner Koblet and founded the Vinetenders vineyard management company in 1984. Co-owner of Siltstone Wines.",
+    "place": "Dayton, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 21 May 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-48"
+      },
+      {
+        "title": "Siltstone Wines",
+        "url": "http://www.siltstonewines.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "louise-myers",
+    "type": "person",
+    "name": "Louise Myers",
+    "summary": "Teacher and artist from a local farm family who worked at Eyrie, married Joel Myers in 1981 and runs Siltstone Wines with him.",
+    "aka": [
+      "Louise Bernards"
+    ],
+    "place": "Dayton, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 21 May 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-48"
+      },
+      {
+        "title": "Siltstone Wines",
+        "url": "http://www.siltstonewines.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "joel-sokoloff",
+    "type": "person",
+    "name": "Joel Sokoloff",
+    "summary": "Farm and vineyard manager at Soter Vineyards from 2022, after more than seven years with Horsepower Vineyards in the Walla Walla Valley.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 11 June 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-51"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "pascal-marchand",
+    "type": "person",
+    "name": "Pascal Marchand",
+    "summary": "Quebec-born Burgundy winemaker, formerly at Domaine de la Vougeraie, who trained Isabelle Meunier and recommended her to Evening Land.",
+    "outsideOregon": true,
+    "place": "Burgundy, France",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 July 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-54"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "leah-jorgensen",
+    "type": "person",
+    "name": "Leah Jørgensen",
+    "aka": [
+      "Leah Jorgensen"
+    ],
+    "summary": "Winemaker behind Leah Jørgensen Cellars, known for Oregon Cabernet franc. She came to Oregon Pinot Camp in 2004 and worked under Drew Voit at Shea Wine Cellars before starting her own label.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 9 July 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-55"
+      },
+      {
+        "title": "Leah Jørgensen Cellars",
+        "url": "https://leahjorgensencellars.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "james-frey",
+    "type": "person",
+    "name": "James Frey",
+    "summary": "Winemaker at Trisaetum on Ribbon Ridge; his daughter Tatum helped start the estate's Brixeur Spirits.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 16 July 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-56"
+      },
+      {
+        "title": "Trisaetum",
+        "url": "https://www.trisaetum.com/"
+      },
+      {
+        "title": "Weinnotes newsletter, 17 October 2020",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-1"
+      },
+      {
+        "title": "Our Story (Trisaetum)",
+        "url": "https://www.trisaetum.com/our-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "vince-vidrine",
+    "type": "person",
+    "name": "Vince Vidrine",
+    "summary": "Winemaker who worked at Irvine & Roberts and Benton-Lane before moving to Cowhorn in Southern Oregon in 2022.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 August 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-59"
+      },
+      {
+        "title": "Weinnotes newsletter, 14 August 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-10"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tresider-burns",
+    "type": "person",
+    "name": "Tresider Burns",
+    "summary": "Winemaker named to lead Alexana Winery in July 2022, succeeding Bryan Weil. He previously ran winemaking at White Rose Estate and was associate winemaker at Brittan Vineyards, and also worked at Lemelson.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 August 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-59"
+      },
+      {
+        "title": "Tresider Burns named winemaker for Alexana Winery (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/?p=60292"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chris-figgins",
+    "type": "person",
+    "name": "Chris Figgins",
+    "summary": "Winemaker at Leonetti Cellar in Walla Walla and founding winemaker of Doubleback; his Toil project makes Oregon Pinot noir.",
+    "outsideOregon": true,
+    "place": "Walla Walla, WA",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 13 August 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-60"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "matt-perry",
+    "type": "person",
+    "name": "Matt Perry",
+    "summary": "Winemaker at 00 Wines in 2022 who had left by 2025 to start a project of his own; married to Kimberly Abrahams.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 3 September 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-63"
+      },
+      {
+        "title": "Weinnotes newsletter, 3 May 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-K8WoaEdB"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kimberly-abrahams",
+    "type": "person",
+    "name": "Kimberly Abrahams",
+    "summary": "Wine professional who joined Archery Summit in 2025; married to former 00 Wines winemaker Matt Perry.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 3 May 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-K8WoaEdB"
+      },
+      {
+        "title": "Weinnotes newsletter, 5 December 2020",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-15"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dave-specter",
+    "type": "person",
+    "name": "Dave Specter",
+    "summary": "Former attorney who became the winemaker and co-owner of Bells Up Winery.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 17 September 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-65"
+      },
+      {
+        "title": "Bells Up Winery",
+        "url": "https://bellsupwinery.com/"
+      },
+      {
+        "title": "Weinnotes newsletter, 15 May 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-13"
+      },
+      {
+        "title": "About (Bells Up Winery)",
+        "url": "https://bellsupwinery.com/about/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sara-specter",
+    "type": "person",
+    "name": "Sara Specter",
+    "summary": "Co-owner of Bells Up Winery with Dave Specter.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 17 September 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-65"
+      },
+      {
+        "title": "Bells Up Winery",
+        "url": "https://bellsupwinery.com/"
+      },
+      {
+        "title": "About (Bells Up Winery)",
+        "url": "https://bellsupwinery.com/about/"
+      },
+      {
+        "title": "Weinnotes newsletter, 15 May 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-13"
+      }
+    ],
+    "verified": false,
+    "aka": [
+      "Sara Pearson Specter"
+    ]
+  },
+  {
+    "id": "travis-todd",
+    "type": "person",
+    "name": "Travis Todd",
+    "summary": "Winemaker and co-founder of de la boue. A former wine buyer at the Yellowstone Club in Montana, he worked harvest at Wine by Joe in 2014, moved to Oregon in 2017 and rose to head winemaker at Integrated Beverage Group in 2020.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 24 September 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-66"
+      },
+      {
+        "title": "About (de la boue wines)",
+        "url": "https://www.delaboue.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chris-andrew",
+    "type": "person",
+    "name": "Chris Andrew",
+    "summary": "Co-founder of de la boue with Travis Todd, whom he met at the Yellowstone Club.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 24 September 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-66"
+      },
+      {
+        "title": "About (de la boue wines)",
+        "url": "https://www.delaboue.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "antony-beck",
+    "type": "person",
+    "name": "Antony Beck",
+    "summary": "Member of the family behind South Africa's Graham Beck sparkling wine house and equal partner with Andy Lytle in Lytle-Barnett.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 15 October 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-69"
+      },
+      {
+        "title": "Weinnotes newsletter, 11 February 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-84"
+      },
+      {
+        "title": "Weinnotes newsletter, 13 February 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-27"
+      }
+    ],
+    "verified": false,
+    "aka": [
+      "Anthony Beck"
+    ]
+  },
+  {
+    "id": "chris-thomas",
+    "type": "person",
+    "name": "Chris Thomas",
+    "summary": "Co-owner of Celestial Hill with his wife Melissa; the couple bought the former Falcon Glen vineyard near McMinnville in 2020 after first looking at property in France.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 22 October 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-70"
+      },
+      {
+        "title": "Celestial Hill Vineyard",
+        "url": "https://www.celestialhillvineyard.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "melissa-thomas",
+    "type": "person",
+    "name": "Melissa Thomas",
+    "summary": "Co-owner of Celestial Hill with her husband Chris.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 22 October 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-70"
+      },
+      {
+        "title": "Celestial Hill Vineyard",
+        "url": "https://www.celestialhillvineyard.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jay-somers",
+    "type": "person",
+    "name": "Jay Somers",
+    "summary": "Founder of J. Christopher Wines and the first winemaker for Celestial Hill.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 22 October 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-70"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "alisa-le",
+    "type": "person",
+    "name": "Alisa Le",
+    "summary": "Winemaker who was assistant winemaker at Authentique before joining Wynne Peterson-Nedry on the Celestial Hill winemaking team in 2023.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 8 April 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-92"
+      },
+      {
+        "title": "Weinnotes newsletter, 1 February 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-15"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "derek-einberger",
+    "type": "person",
+    "name": "Derek Einberger",
+    "summary": "Winemaker at Dobbes Family Estate as of 2022.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 3 December 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-76"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "john-carter",
+    "type": "person",
+    "name": "John Carter",
+    "summary": "Owner of Dusky Goose with Linda Carter; the couple established Rambouillet Vineyard in the Dundee Hills in 2001.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 5 November 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-72"
+      },
+      {
+        "title": "About (Dusky Goose)",
+        "url": "https://www.duskygoose.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "linda-carter",
+    "type": "person",
+    "name": "Linda Carter",
+    "summary": "Owner of Dusky Goose with John Carter.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 5 November 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-72"
+      },
+      {
+        "title": "About (Dusky Goose)",
+        "url": "https://www.duskygoose.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "joe-wright",
+    "type": "person",
+    "name": "Joe Wright",
+    "summary": "Head winemaker at Left Coast Estate since 2011. He started as a cellar hand at Willamette Valley Vineyards in 1996, joined Belle Vallée Cellars in 2002, and also has his own J. Wright Vintner label.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 12 November 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-73"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-oreilly",
+    "type": "person",
+    "name": "David O'Reilly",
+    "summary": "Former owner of Owen Roe and a mentor to Steve Lutz of Lenné Estate.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 3 December 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-76"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "angelica-oreilly",
+    "type": "person",
+    "name": "Angelica O'Reilly",
+    "summary": "Founder, with her daughters, of Distaff Wine in Newberg; wife of David O'Reilly.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 3 December 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-76"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "corby-stonebraker-soles",
+    "type": "person",
+    "name": "Corby Stonebraker-Soles",
+    "aka": [
+      "Corby Soles"
+    ],
+    "summary": "Co-owner and business manager of ROCO Winery with her husband Rollin Soles. She was previously married to Ken Wright and is the mother of Purple Hands winemaker Cody Wright.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 1 April 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-91"
+      },
+      {
+        "title": "Rollin Soles and Corby Stonebraker-Soles interview (Linfield, Oregon Wine History Archive)",
+        "url": "https://digitalcommons.linfield.edu/owha_willamette_interviews/83"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "erin-percheron",
+    "type": "person",
+    "name": "Erin Percheron",
+    "summary": "Winemaker at Andante Vineyard, as listed on the winery's site in early 2023.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 21 January 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-81"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chase-renton",
+    "type": "person",
+    "name": "Chase Renton",
+    "summary": "Winemaker for L'Angolo Estate and for Chosen Family Wines.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 28 January 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-82"
+      },
+      {
+        "title": "Weinnotes newsletter, 27 February 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-25"
+      },
+      {
+        "title": "People (L'Angolo Estate)",
+        "url": "https://www.langoloestate.com/people/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "howard-mozeico",
+    "type": "person",
+    "name": "Howard Mozeico",
+    "summary": "Co-founder of Et Fille Wines with his daughter Jessica.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 11 March 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-88"
+      },
+      {
+        "title": "Et Fille Wines",
+        "url": "https://www.etfillewines.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "andrea-lassa",
+    "type": "person",
+    "name": "Andrea Lassa",
+    "aka": [
+      "Andrea Frey"
+    ],
+    "summary": "Co-founder of Trisaetum with her husband, winemaker James Frey.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 17 October 2020",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-1"
+      },
+      {
+        "title": "Our Story (Trisaetum)",
+        "url": "https://www.trisaetum.com/our-story/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "joel-kiff",
+    "type": "person",
+    "name": "Joel Kiff",
+    "summary": "Co-owner of J.L. Kiff Vineyard, where he farms the vines and makes the wine.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 14 November 2020",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-34"
+      },
+      {
+        "title": "J.L. Kiff Vineyard",
+        "url": "http://jlkiffvineyard.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "laurie-kiff",
+    "type": "person",
+    "name": "Laurie Kiff",
+    "summary": "Oregon-born co-owner of J.L. Kiff Vineyard with her husband Joel.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 14 November 2020",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-34"
+      },
+      {
+        "title": "J.L. Kiff Vineyard",
+        "url": "http://jlkiffvineyard.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "carl-thoma",
+    "type": "person",
+    "name": "Carl Thoma",
+    "summary": "Proprietor, with Marilynn Thoma, of Van Duzer Vineyards, which they established in 1998.",
+    "sources": [
+      {
+        "title": "Van Duzer Vineyards",
+        "url": "https://vanduzervineyards.com/"
+      },
+      {
+        "title": "Weinnotes newsletter, 3 July 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-4"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "marilynn-thoma",
+    "type": "person",
+    "name": "Marilynn Thoma",
+    "summary": "Proprietor, with Carl Thoma, of Van Duzer Vineyards, which they established in 1998.",
+    "sources": [
+      {
+        "title": "Van Duzer Vineyards",
+        "url": "https://vanduzervineyards.com/"
+      },
+      {
+        "title": "Weinnotes newsletter, 3 July 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-4"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "janis-pate",
+    "type": "person",
+    "name": "Janis Pate",
+    "summary": "Founder and owner of Arlyn, a farm, vineyard and wine label near Newberg that she started after more than 20 years in risk management at Disney.",
+    "sources": [
+      {
+        "title": "Story (Arlyn)",
+        "url": "https://www.arlyn.farm/story"
+      },
+      {
+        "title": "Weinnotes newsletter, 5 December 2020",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-15"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kathy-mcbride",
+    "type": "person",
+    "name": "Kathy McBride",
+    "summary": "Australian winemaker who travels to Oregon each harvest as assistant winemaker at Walter Scott Wines.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 16 January 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-31"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "dan-warnshuis",
+    "type": "person",
+    "name": "Dan Warnshuis",
+    "summary": "Owner and winemaker of Utopia Vineyard. A former Silicon Valley worker and Napa wine-shop owner, he moved to Oregon in 2007 and was president of the Ribbon Ridge Winegrowers Association in 2021.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 30 January 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-29"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "andrew-dirks",
+    "type": "person",
+    "name": "Andrew Dirks",
+    "summary": "Director of hospitality at Abbott Claim. He started at Anne Amie, worked as a sommelier in San Francisco restaurants and was hospitality manager at Antica Terra.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 13 February 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-27"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "hollings-renton",
+    "type": "person",
+    "name": "Hollings Renton",
+    "summary": "Proprietor of L'Angolo Estate with his wife Lou, and father of winemaker Chase Renton; a former biotechnology executive.",
+    "sources": [
+      {
+        "title": "People (L'Angolo Estate)",
+        "url": "https://www.langoloestate.com/people/"
+      },
+      {
+        "title": "Weinnotes newsletter, 27 February 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-25"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lou-renton",
+    "type": "person",
+    "name": "Lou Renton",
+    "summary": "Proprietor of L'Angolo Estate with her husband Hollings, and mother of winemaker Chase Renton.",
+    "sources": [
+      {
+        "title": "People (L'Angolo Estate)",
+        "url": "https://www.langoloestate.com/people/"
+      },
+      {
+        "title": "Weinnotes newsletter, 27 February 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-25"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jacob-gray",
+    "type": "person",
+    "name": "Jacob Gray",
+    "aka": [
+      "Jake Gray"
+    ],
+    "summary": "General manager of L'Angolo Estate in 2021, who came to wine from the film industry.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 27 February 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-25"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-nemarnik",
+    "type": "person",
+    "name": "David Nemarnik",
+    "summary": "Proprietor and vineyard manager of Alloro Vineyard, which he began planting in 1999 on a hillside he used to pass on bike rides.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 27 March 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-9"
+      },
+      {
+        "title": "People (Alloro Vineyard)",
+        "url": "https://www.allorovineyard.com/about/our-team"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tom-fitzpatrick",
+    "type": "person",
+    "name": "Tom Fitzpatrick",
+    "summary": "Winemaker at Alloro Vineyard since 2010 and owner-winemaker of Élevée Winegrowers. He holds a master's degree in viticulture and enology from UC Davis and worked in Burgundy.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 27 March 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-9"
+      },
+      {
+        "title": "People (Alloro Vineyard)",
+        "url": "https://www.allorovineyard.com/about/our-team"
+      },
+      {
+        "title": "Élevée Winegrowers",
+        "url": "https://www.eleveewines.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sid-heinze",
+    "type": "person",
+    "name": "Sid Heinze",
+    "summary": "Co-founder of King's North with his younger brother Mac.",
+    "sources": [
+      {
+        "title": "About (King's North)",
+        "url": "https://kingsnorthwine.com/pages/about-us-1"
+      },
+      {
+        "title": "Weinnotes newsletter, 24 April 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-7"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mac-heinze",
+    "type": "person",
+    "name": "Mac Heinze",
+    "summary": "Co-founder of King's North with his older brother Sid.",
+    "sources": [
+      {
+        "title": "About (King's North)",
+        "url": "https://kingsnorthwine.com/pages/about-us-1"
+      },
+      {
+        "title": "Weinnotes newsletter, 24 April 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-7"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jessica-cortell",
+    "type": "person",
+    "name": "Jessica Cortell",
+    "summary": "Willamette Valley vineyard manager who farms Namaste Vineyard and looks after Audeant's estate planting on Parrett Mountain, and who introduces small producers to growers.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 12 June 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-1"
+      },
+      {
+        "title": "Weinnotes newsletter, 26 June 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-3"
+      },
+      {
+        "title": "About (Audeant)",
+        "url": "https://www.audeant.com/about-us"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tracy-kendall",
+    "type": "person",
+    "name": "Tracy Kendall",
+    "summary": "Associate winemaker at Nicolas-Jay from 2014, after a first harvest at Torii Mor in 2009, harvests in Australia and New Zealand and four years as enologist at Adelsheim. She later became consulting winemaker at L'Angolo Estate.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 1 May 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-8"
+      },
+      {
+        "title": "People (L'Angolo Estate)",
+        "url": "https://www.langoloestate.com/people/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jacques-tardy",
+    "type": "person",
+    "name": "Jacques Tardy",
+    "summary": "Burgundy-born winemaker at Torii Mor Winery, under whom Tracy Kendall worked her first harvest in 2009.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 1 May 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-8"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "wayne-bailey",
+    "type": "person",
+    "name": "Wayne Bailey",
+    "summary": "Farmer and winemaker who bought Youngberg Hill in 2003; the vineyard blocks are named for his daughters.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 22 May 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-14"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rachel-rose",
+    "type": "person",
+    "name": "Rachel Rose",
+    "summary": "Winemaker and vineyard manager at Bryn Mawr Vineyards. She studied viticulture and oenology in Australia and worked at Ponzi and Penner-Ash before joining the Lauers.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 29 May 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-19"
+      },
+      {
+        "title": "About (Bryn Mawr Vineyards)",
+        "url": "https://www.brynmawrvineyards.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jon-lauer",
+    "type": "person",
+    "name": "Jon Lauer",
+    "summary": "Co-owner of Bryn Mawr Vineyards with his wife Kathy since 2009.",
+    "sources": [
+      {
+        "title": "About (Bryn Mawr Vineyards)",
+        "url": "https://www.brynmawrvineyards.com/about"
+      },
+      {
+        "title": "Weinnotes newsletter, 29 May 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-19"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kathy-lauer",
+    "type": "person",
+    "name": "Kathy Lauer",
+    "summary": "Co-owner of Bryn Mawr Vineyards with her husband Jon since 2009.",
+    "sources": [
+      {
+        "title": "About (Bryn Mawr Vineyards)",
+        "url": "https://www.brynmawrvineyards.com/about"
+      },
+      {
+        "title": "Weinnotes newsletter, 29 May 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-19"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "karyn-howard-smith",
+    "type": "person",
+    "name": "Karyn Howard Smith",
+    "summary": "Director of hospitality at Bryn Mawr Vineyards from May 2018; married to winemaker Egon Smith.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 29 May 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-19"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "egon-smith",
+    "type": "person",
+    "name": "Egon Smith",
+    "summary": "Winemaker at Anne Amie Vineyards in 2021 and husband of Karyn Howard Smith.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 29 May 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-19"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "mark-hammond",
+    "type": "person",
+    "name": "Mark Hammond",
+    "summary": "Co-founder of Privé Vineyard with his wife Tina; he also ran a hardware store in town.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 10 July 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-5"
+      },
+      {
+        "title": "Our Story (Privé Vineyard)",
+        "url": "https://www.privevineyard.com/about-us"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tina-hammond",
+    "type": "person",
+    "name": "Tina Hammond",
+    "summary": "Co-founder and original winemaker of Privé Vineyard, which she and her husband Mark sold in 2020.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 10 July 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-5"
+      },
+      {
+        "title": "Our Story (Privé Vineyard)",
+        "url": "https://www.privevineyard.com/about-us"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tahmiene-momtazi",
+    "type": "person",
+    "name": "Tahmiene Momtazi",
+    "summary": "Winemaker at Maysara Winery, who presented its 2017 Jamsheed Pinot noir at the 2021 IPNC Grand Seminar.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 31 July 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-8"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ken-austin",
+    "type": "person",
+    "name": "Ken Austin",
+    "summary": "Owner, with his wife, of Rain Dance Vineyards and its Raindance Vineyard near the Allison Inn in Newberg.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 August 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-9"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ed-walk",
+    "type": "person",
+    "name": "Ed Walk",
+    "summary": "Co-owner of Hummingbird Estate with his wife Susan, after four decades farming in Illinois.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 14 August 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-10"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "susan-walk",
+    "type": "person",
+    "name": "Susan Walk",
+    "summary": "Co-owner of Hummingbird Estate with her husband Ed.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 14 August 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-10"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "doug-irvine",
+    "type": "person",
+    "name": "Doug Irvine",
+    "summary": "Co-founder of Irvine & Roberts Vineyards in Ashland.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 14 August 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-10"
+      },
+      {
+        "title": "Irvine & Roberts Vineyards",
+        "url": "https://www.irvinerobertsvineyards.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jack-day",
+    "type": "person",
+    "name": "Jack Day",
+    "summary": "Member of the family behind Hillcrest Orchard in Medford who planted its first vines in 1997, leading to RoxyAnn Winery. He died in October 2020.",
+    "died": 2020,
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 14 August 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-10"
+      },
+      {
+        "title": "About (RoxyAnn Winery)",
+        "url": "https://roxyann.com/about/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rob-folin",
+    "type": "person",
+    "name": "Rob Folin",
+    "summary": "Winemaker at Belle Fiore Winery, making wine in Southern Oregon since 2005; he interned at Domaine Serene.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 14 August 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-10"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sarah-thompson",
+    "type": "person",
+    "name": "Sarah Thompson",
+    "summary": "Winemaker at Cowhorn from 2021, previously assistant winemaker at Troon Vineyard.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 4 September 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-13"
+      }
+    ],
+    "verified": false
   }
 ]

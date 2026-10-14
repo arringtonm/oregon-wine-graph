@@ -228,5 +228,1169 @@
       }
     ],
     "verified": false
+  },
+  {
+    "id": "temperance-hill-vineyard",
+    "type": "vineyard",
+    "name": "Temperance Hill Vineyard",
+    "summary": "Organic, dry-farmed vineyard of about 90 acres at 660 to 880 feet in the Eola-Amity Hills, first planted in 1981 and owned by the Koo family of San Diego. Dai Crisp has managed it since 1999 and it sells fruit to more than two dozen wineries.",
+    "planted": 1981,
+    "sources": [
+      {
+        "title": "2014 Grower of the Year: Temperance Hill (Wine & Spirits Magazine)",
+        "url": "https://www.wineandspiritsmagazine.com/?p=695"
+      },
+      {
+        "title": "PinotFile 12.27, February 2022 (The Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/pinotfile/12/27/print/"
+      },
+      {
+        "title": "St. Innocent Winery: Vineyards",
+        "url": "https://www.stinnocentwine.com/vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "freedom-hill-vineyard",
+    "type": "vineyard",
+    "name": "Freedom Hill Vineyard",
+    "summary": "Vineyard in the Coast Range foothills about ten miles southwest of Salem, planted by Dan and Helen Dusschee in the early 1980s and still family-owned. The original Pinot noir vines were lost to phylloxera and replanted from 2003.",
+    "planted": 1982,
+    "sources": [
+      {
+        "title": "Vineyard: Freedom Hill (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/vineyard/187/"
+      },
+      {
+        "title": "St. Innocent Winery: Vineyards",
+        "url": "https://www.stinnocentwine.com/vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "hyland-vineyard",
+    "type": "vineyard",
+    "name": "Hyland Vineyard",
+    "summary": "Vineyard in the Coast Range foothills southwest of McMinnville, established in 1971 and described as the oldest commercial planting in the McMinnville AVA, with own-rooted Coury, Pommard and Wadenswil Pinot noir. Laurent and Danielle Andrus Montalieu and John Niemeyer bought it in 2007.",
+    "planted": 1971,
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "Hyland Vineyard and King Estate (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=113667"
+      },
+      {
+        "title": "Hyland Estates (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1820/index.html"
+      },
+      {
+        "title": "Vineyard: Hyland (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/vineyard/195/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "abbey-ridge-vineyard",
+    "type": "vineyard",
+    "name": "Abbey Ridge Vineyard",
+    "summary": "High-elevation Dundee Hills vineyard (650 to 800 feet) planted by Bill and Julia Wayne on a former prune orchard in the late 1970s. It is the oldest of the vineyards Cameron Winery draws on.",
+    "planted": 1977,
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Vineyard: Abbey Ridge (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/vineyard/541/index.html"
+      },
+      {
+        "title": "Cameron Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1373/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "durant-vineyard",
+    "type": "vineyard",
+    "name": "Durant Vineyard",
+    "aka": [
+      "Durant Vineyards"
+    ],
+    "summary": "Dry-farmed Dundee Hills vineyard of more than 60 acres established by Ken and Penny Durant in 1973. The family sold grapes to other wineries for decades and released its first Durant Vineyards wine in 2003.",
+    "planted": 1973,
+    "place": "Dayton, OR",
+    "sources": [
+      {
+        "title": "Durant Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/972/index.html"
+      },
+      {
+        "title": "Ken and Penny Durant Interview (Oregon Wine History Archive, Linfield)",
+        "url": "https://digitalcommons.linfield.edu/owha_willamette_interviews/96"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "zenith-vineyard",
+    "type": "vineyard",
+    "name": "Zenith Vineyard",
+    "aka": [
+      "O'Connor Vineyard"
+    ],
+    "summary": "Eola-Amity Hills vineyard originally planted by Pat O'Connor in the early 1980s as O'Connor Vineyard. Tim and Kari Ramey bought it in 2002, replanted the phylloxera-stricken vines and formed Zenith Vineyard LLC with St. Innocent's Mark Vlossak in 2006.",
+    "sources": [
+      {
+        "title": "Vineyard: Zenith (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/vineyard/901/index.html"
+      },
+      {
+        "title": "St. Innocent Winery: About",
+        "url": "https://www.stinnocentwine.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "carter-vineyard",
+    "type": "vineyard",
+    "name": "Carter Vineyard",
+    "summary": "Eola-Amity Hills vineyard about ten miles west of Salem, planted in 1983 by Jack and Kathleen Carter. Long farmed by Ken Wright Cellars, it is now owned by Ken and Karen Wright.",
+    "planted": 1983,
+    "sources": [
+      {
+        "title": "Panther Creek Cellars Carter Vineyard Pinot Noir (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=69627"
+      },
+      {
+        "title": "Vineyard: Carter (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/vineyard/180/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "canary-hill-vineyard",
+    "type": "vineyard",
+    "name": "Canary Hill Vineyard",
+    "summary": "Eola-Amity Hills vineyard founded by Nancy Daniel, with first vines planted in 1983. Nancy and Dick Daniel sold it to Ken Wright in 2006.",
+    "planted": 1983,
+    "sources": [
+      {
+        "title": "Nancy Daniel interview photograph (Oregon Wine History Archive, Linfield)",
+        "url": "https://digitalcommons.linfield.edu/owha_willamette_ohphotos/347"
+      },
+      {
+        "title": "Ken Wright Cellars: Vineyards",
+        "url": "https://kenwrightcellars.com/vineyards/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "guadalupe-vineyard",
+    "type": "vineyard",
+    "name": "Guadalupe Vineyard",
+    "summary": "Vineyard planted in 1989 on Willakenzie soils and owned by Jim Stonebridge and Kathleen Boeve. It is one of Ken Wright Cellars' single-vineyard Pinot noir sites.",
+    "planted": 1989,
+    "sources": [
+      {
+        "title": "Vineyard: Guadalupe (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/vineyard/183/index.html"
+      },
+      {
+        "title": "Ken Wright Cellars: Vineyards",
+        "url": "https://kenwrightcellars.com/vineyards/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "momtazi-vineyard",
+    "type": "vineyard",
+    "name": "Momtazi Vineyard",
+    "summary": "Biodynamic vineyard in the McMinnville AVA on a former wheat farm that Moe and Flora Momtazi bought in 1997. Planting began in March 1998 with 13 acres of Pommard-clone Pinot noir and has grown to more than 200 acres.",
+    "planted": 1998,
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "Moe and Hanna Momtazi interview photograph (Oregon Wine History Archive, Linfield)",
+        "url": "https://digitalcommons.linfield.edu/owha_willamette_ohphotos/411"
+      },
+      {
+        "title": "Vineyard: Momtazi (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/vineyard/298/index.html"
+      },
+      {
+        "title": "Maysara Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/722/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "elton-vineyard",
+    "type": "vineyard",
+    "name": "Elton Vineyard",
+    "summary": "Eola-Amity Hills vineyard planted in 1983 by Dick and Betty O'Brien on land Betty inherited, and named for her father, Elton Ingram. When the O'Briens retired in 2007 it went under long-term lease to Willamette Valley Vineyards.",
+    "planted": 1983,
+    "sources": [
+      {
+        "title": "Elton Wines (Willamette Valley Vineyards)",
+        "url": "https://www.wvv.com/about-elton-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "resonance-vineyard",
+    "type": "vineyard",
+    "name": "Resonance Vineyard",
+    "aka": [
+      "Résonance Vineyard"
+    ],
+    "summary": "Own-rooted, biodynamically farmed vineyard in the Yamhill-Carlton AVA first planted to Pinot noir in 1981 by Kevin and Carla Chambers, who sold the fruit for about 20 years before starting their own label in 2006. Maison Louis Jadot bought it in August 2013.",
+    "planted": 1981,
+    "sources": [
+      {
+        "title": "Burgundy's Louis Jadot Purchases Oregon Pinot Noir Vineyard (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/48812"
+      },
+      {
+        "title": "Resonance Vineyard (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/630/index.html"
+      },
+      {
+        "title": "Résonance est Arrivé (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/resonance-est-arrive"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "quail-run-vineyards",
+    "type": "vineyard",
+    "name": "Quail Run Vineyards",
+    "summary": "Rogue Valley vineyards farmed by the Moore family since 1989, known for warm-climate reds such as Cabernet Sauvignon, Merlot and Syrah. The fruit goes into Willamette Valley Vineyards' Griffin Creek label, and growers Don and Traute Moore also ran South Stage Cellars in Jacksonville.",
+    "planted": 1989,
+    "sources": [
+      {
+        "title": "2021 Griffin Creek Syrah (Willamette Valley Vineyards)",
+        "url": "https://www.wvv.com/product/2021-Griffin-Creek-Syrah"
+      },
+      {
+        "title": "Wines of the Rogue Valley (Portrait Magazine / Great Northwest Wine)",
+        "url": "https://www.portraitmagazine.com/wines-of-the-rogue-valley"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "le-puits-sec-vineyard",
+    "type": "vineyard",
+    "name": "Le Puits Sec Vineyard",
+    "summary": "Evesham Wood's non-irrigated estate vineyard in the Eola-Amity Hills. Its first three acres of own-rooted Pommard-clone Pinot noir were planted in 1986.",
+    "planted": 1986,
+    "sources": [
+      {
+        "title": "Evesham Wood (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2228/"
+      },
+      {
+        "title": "Erin Nuccio, Evesham Wood | Haden Fig (Eola-Amity Hills Winegrowers)",
+        "url": "https://eolaamityhills.com/winemakers/erin-nuccio/"
+      }
+    ],
+    "verified": false,
+    "aka": [
+      "Le Puits Sec"
+    ]
+  },
+  {
+    "id": "stoller-estate-vineyard",
+    "type": "vineyard",
+    "name": "Stoller Estate Vineyard",
+    "summary": "Vineyard on the Stoller family's former turkey farm, which Bill Stoller bought in 1993. He planted the first 10 acres each of Pinot noir and Chardonnay in 1995, and it now covers 225 acres.",
+    "planted": 1995,
+    "sources": [
+      {
+        "title": "Stoller Family Estate: About",
+        "url": "https://www.stollerfamilyestate.com/about/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "beacon-hill-vineyard",
+    "type": "vineyard",
+    "name": "Beacon Hill Vineyard",
+    "summary": "Yamhill-Carlton vineyard with plantings dating to 1988. Tony and Michelle Soter bought it in 1997 as the first home of Soter Vineyards and sold it in 2005.",
+    "planted": 1988,
+    "sources": [
+      {
+        "title": "Soter Vineyards: Founders",
+        "url": "https://sotervineyards.com/founders"
+      },
+      {
+        "title": "Soter Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/140/index.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "brooks-estate-vineyard",
+    "type": "vineyard",
+    "name": "Brooks Estate Vineyard",
+    "summary": "A 20-acre Eola-Amity Hills vineyard planted to Pinot noir and Riesling between 1973 and 1977. Jimi Brooks farmed it biodynamically from 2002, and Brooks later bought it; it was Demeter certified in 2012.",
+    "planted": 1973,
+    "sources": [
+      {
+        "title": "Brooks Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/1858/"
+      },
+      {
+        "title": "Brooks Wine: The People of Brooks",
+        "url": "https://brookswine.com/About-Us"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "zena-crown-vineyard",
+    "type": "vineyard",
+    "name": "Zena Crown Vineyard",
+    "aka": [
+      "Zena Crown"
+    ],
+    "summary": "Eola-Amity Hills vineyard assembled by Jackson Family Wines, which bought the final parcel in May 2013. It is the source of the Zena Crown label.",
+    "sources": [
+      {
+        "title": "Jackson Family Wines (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2228/"
+      },
+      {
+        "title": "Jackson Family Continues Oregon Pinot Noir Expansion, Buying WillaKenzie Estate (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/jackson-family-buys-willakenzie-estate"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "seven-hills-vineyard",
+    "type": "vineyard",
+    "name": "Seven Hills Vineyard",
+    "summary": "Vineyard near Milton-Freewater on the Oregon side of the Walla Walla Valley, planted in the early 1980s by physicians James McClellan and Herb Hendricks. Crimson Wine Group bought its oldest blocks in 2016, reuniting them with Seven Hills Winery.",
+    "sources": [
+      {
+        "title": "Seven Hills Winery (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=49130"
+      },
+      {
+        "title": "Crimson Wine Group Buys 66 Acres of Walla Walla Valley Vines (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/crimson-wine-group-buys-seven-hills-vineyard"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "vista-hills-vineyard",
+    "type": "vineyard",
+    "name": "Vista Hills Vineyard",
+    "summary": "Dundee Hills vineyard on Hilltop Lane in Dayton, at 670 to 870 feet. Francis Ford Coppola's wine company bought it in 2018; ROCO Winery acquired the 59-acre property, 41 acres of it under vine, in March 2026.",
+    "sources": [
+      {
+        "title": "Italian wine group acquires Dundee Hills vineyard from Coppola-owned Domaine Lumineux (Newsberg)",
+        "url": "https://newsberg.org/2026/03/24/italian-wine-group-acquires-dundee-hills-vineyard-from-coppola-owned-domaine-lumineux/"
+      },
+      {
+        "title": "Coppola Debut (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/coppola-debut"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "watermill-estate-vineyard",
+    "type": "vineyard",
+    "name": "Watermill Estate Vineyard",
+    "summary": "Watermill Winery's 13.25-acre vineyard in The Rocks District of Milton-Freewater, planted in 2006.",
+    "planted": 2006,
+    "sources": [
+      {
+        "title": "Oregon's Walla Walla (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/oregons-walla-walla"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "red-hill-vineyard",
+    "type": "vineyard",
+    "name": "Red Hill Vineyard",
+    "aka": [
+      "Sienna Ridge Estate"
+    ],
+    "summary": "The only vineyard in the Red Hill Douglas County AVA, on red Jory soil at 800 to 1,200 feet. First planted in the late 1960s, it was expanded by Wayne Hitchings from seven acres in 1991 to about 450, and is the home of the Sienna Ridge Estate label.",
+    "sources": [
+      {
+        "title": "AVA Unto Its Own: Wayne Hitchings (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/ava-unto-its-own-wayne-hitchings"
+      },
+      {
+        "title": "Red Hill Douglas County, Oregon AVA (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Red_Hill_Douglas_County,_Oregon_AVA"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "maes-vineyard",
+    "type": "vineyard",
+    "name": "Mae's Vineyard",
+    "summary": "Quady North's estate vineyard in the Applegate Valley, planted by Herb Quady in 2006 to Viognier, Syrah and Cabernet franc.",
+    "planted": 2006,
+    "sources": [
+      {
+        "title": "Herb Quady resigns from Troon Vineyard (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=15657"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "doerner-vineyards",
+    "type": "vineyard",
+    "name": "Doerner Vineyards",
+    "summary": "Century-farm vineyard in the Melrose area of the Umpqua Valley, first planted by Adam Doerner in 1889 and still farmed by his descendants. It covered about 22 acres in 2018, including Zinfandel regrafted from the original plantings.",
+    "planted": 1889,
+    "place": "Melrose, OR",
+    "sources": [
+      {
+        "title": "Way-Back Wine: Doerner Vineyards (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/way-back-wine-doerner-vineyards"
+      },
+      {
+        "title": "Doerner Vineyards (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/2975/"
+      },
+      {
+        "title": "Oregon Wine History (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=184"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-hill-vineyard",
+    "type": "vineyard",
+    "name": "David Hill Vineyard",
+    "aka": [
+      "Wine Hill",
+      "Reuter's Hill"
+    ],
+    "summary": "Hillside site west of Forest Grove, earlier known as Wine Hill or Reuter's Hill, where the Reuter family grew wine grapes before Prohibition; those vines were pulled and replaced with fruit trees and potatoes. Charles Coury replanted it from 1965 as the estate of Charles Coury Vineyards, and since 1992 it has belonged to Milan and Jean Stoyanov's David Hill Vineyards & Winery.",
+    "planted": 1965,
+    "place": "Forest Grove, OR",
+    "sources": [
+      {
+        "title": "Legacy (David Hill Vineyards & Winery)",
+        "url": "https://davidhillwinery.com/legacy.html"
+      },
+      {
+        "title": "Charles Coury and the Coury selection (Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/article/2390/"
+      },
+      {
+        "title": "David Hill Vineyard & Winery (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1140/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "abetina-vineyard",
+    "type": "vineyard",
+    "name": "Abetina Vineyard",
+    "summary": "Ponzi Vineyards site in the Laurelwood District, planted by Dick Ponzi in 1975 alongside Oregon State University. It is listed with Madrona Vineyard in LIVE's certified-member directory.",
+    "planted": 1975,
+    "sources": [
+      {
+        "title": "A Long Story, Still Being Told (Ponzi Vineyards)",
+        "url": "https://www.ponzivineyards.com/our-story/"
+      },
+      {
+        "title": "Certified members directory (LIVE Certified)",
+        "url": "https://livecertified.org/certified-members/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "anahata-vineyard",
+    "type": "vineyard",
+    "name": "Anahata Vineyard",
+    "summary": "Roughly 24-acre vineyard surrounding the AtTheJoy estate in the Eola-Amity Hills, with eight blocks named for words meaning joy; the estate source for Aubaine and Lytle-Barnett.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 27 May 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-99"
+      },
+      {
+        "title": "Aubaine (AtTheJoy)",
+        "url": "https://atthejoy.com/aubaine/"
+      },
+      {
+        "title": "Aubaine's Story (AtTheJoy)",
+        "url": "https://atthejoy.com/aubaines-story/"
+      },
+      {
+        "title": "Weinnotes newsletter, 6 December 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-HfMTMeSy"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "case-vineyard",
+    "type": "vineyard",
+    "name": "Case Vineyard",
+    "summary": "Organically farmed Chardonnay and Pinot noir vineyard near Newberg owned by Kathleen Keppinger, a fruit source for Jachter Family Wines.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 January 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-uTJyX7Ue"
+      },
+      {
+        "title": "Former Oregon car dealer gears up with Jachter Family Wines (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/2021/02/16/former-oregon-car-dealer-gears-up-with-jachter-family-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "raindance-vineyard",
+    "type": "vineyard",
+    "name": "Raindance Vineyard",
+    "summary": "Vineyard owned by Ken Austin, who also owns The Allison Inn; source of Jachter Family Wines' Raindance Foothills Chardonnay.",
+    "aka": [
+      "Raindance Foothills Vineyard"
+    ],
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 January 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-uTJyX7Ue"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "blackfeather-vineyard",
+    "type": "vineyard",
+    "name": "Blackfeather Vineyard",
+    "summary": "Estate vineyard of Greywing Wines, named for Johnson Blackfeather.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 15 July 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-106"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lonesome-rock-vineyard",
+    "type": "vineyard",
+    "name": "Lonesome Rock Vineyard",
+    "summary": "High-elevation, ocean-influenced vineyard west of Carlton, just outside the Yamhill-Carlton AVA. Formerly the De Ponte Cellars owners' Lonesome Rock Ranch, it is now about 15 acres of Pinot noir, Chardonnay and Pinot Meunier and sells fruit to Corollary Wines.",
+    "aka": [
+      "Lonesome Rock Ranch"
+    ],
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 7 October 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-111"
+      },
+      {
+        "title": "Lonesome Rock",
+        "url": "https://lonesomerock.com/"
+      },
+      {
+        "title": "De Ponte Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/144/"
+      },
+      {
+        "title": "Weinnotes newsletter, 2 May 2026",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-2"
+      },
+      {
+        "title": "Lonesome Rock",
+        "url": "https://lonesomerock.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "windfall-vineyard",
+    "type": "vineyard",
+    "name": "Windfall Vineyard",
+    "summary": "117-acre vineyard on the west side of the Eola-Amity Hills, first harvested in 2024 for Aubaine.",
+    "sources": [
+      {
+        "title": "Aubaine's Story (AtTheJoy)",
+        "url": "https://atthejoy.com/aubaines-story/"
+      },
+      {
+        "title": "Weinnotes newsletter, 6 June 2026",
+        "url": "https://block55.beehiiv.com/p/weinnotes-june-2026"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "armstrong-vineyard",
+    "type": "vineyard",
+    "name": "Armstrong Vineyard",
+    "summary": "Ribbon Ridge vineyard developed by Doug and Michele Ackerman and planted in 2007, mostly to Pinot noir; the sole fruit source for Red Electric.",
+    "planted": 2007,
+    "sources": [
+      {
+        "title": "Red Electric Wines",
+        "url": "https://www.redelectricwines.com"
+      },
+      {
+        "title": "Weinnotes newsletter, 4 May 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-6"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "saffron-fields-vineyard",
+    "type": "vineyard",
+    "name": "Saffron Fields Vineyard",
+    "summary": "Willamette Valley vineyard that supplies Pinot noir and Chardonnay to EIEIO & Company.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 8 June 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-7"
+      },
+      {
+        "title": "EIEIO & Company",
+        "url": "https://onhisfarm.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "white-cloud-vineyard",
+    "type": "vineyard",
+    "name": "White Cloud Vineyard",
+    "summary": "Vineyard near the EIEIO farm, notable for vines trained in an umbrella-like shape rather than on a standard trellis; a fruit source for EIEIO.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 8 June 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-7"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bayliss-bower-vineyard",
+    "type": "vineyard",
+    "name": "Bayliss-Bower Vineyard",
+    "summary": "Estate vineyard of Ghost Hill Cellars on the Bayliss family farm in Yamhill-Carlton, first planted with four acres of Pinot noir in 1999.",
+    "planted": 1999,
+    "sources": [
+      {
+        "title": "Our Story (Ghost Hill Cellars)",
+        "url": "https://www.ghosthillcellars.com/our-story/"
+      },
+      {
+        "title": "Weinnotes newsletter, 3 August 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-9"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "le-cadeau-estate-vineyard",
+    "type": "vineyard",
+    "name": "Le Cadeau Vineyard (estate)",
+    "summary": "Vineyard on 28 acres of rocky, previously forested hillside on Parrett Mountain bought by Tom Mortimer in 1997; the first six acres of Pinot noir were planted in 1999 and it now holds 18 Pinot noir clones.",
+    "planted": 1999,
+    "place": "Parrett Mountain, OR",
+    "sources": [
+      {
+        "title": "Our Story (Le Cadeau Vineyard)",
+        "url": "https://lecadeauvineyard.com/our-story/"
+      },
+      {
+        "title": "Weinnotes newsletter, 12 October 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-11"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "x-novo-vineyard",
+    "type": "vineyard",
+    "name": "X Novo Vineyard",
+    "aka": [
+      "X Novo",
+      "X-NOVO"
+    ],
+    "summary": "Eola-Amity Hills vineyard that former Joseph Phelps winemaker Craig Williams and his wife Robin began planting in 2010, known for a Chardonnay block holding about fifteen clones.",
+    "planted": 2010,
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 5 July 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-MWaK65f1"
+      },
+      {
+        "title": "X Novo",
+        "url": "http://www.xnovo.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "x-omni-vineyard",
+    "type": "vineyard",
+    "name": "X Omni Vineyard",
+    "aka": [
+      "X Omni",
+      "X-OMNI"
+    ],
+    "summary": "Craig Williams's second Eola-Amity Hills vineyard, planted a few years after neighbouring X Novo; it supplies Chardonnay and Pinot noir to a number of small producers.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 5 July 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-MWaK65f1"
+      },
+      {
+        "title": "X Novo",
+        "url": "http://www.xnovo.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "hope-well-vineyard",
+    "type": "vineyard",
+    "name": "Hope Well Vineyard",
+    "aka": [
+      "Hopewell Vineyard",
+      "Coulee Estate Vineyard"
+    ],
+    "summary": "Willamette Valley vineyard formerly owned and farmed by Mimi Casteel, now the Coulee Estate vineyard of Bledsoe|McDaniels.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 8 March 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-LnUXjUjN"
+      },
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "meredith-mitchell-vineyard",
+    "type": "vineyard",
+    "name": "Meredith Mitchell Vineyard",
+    "summary": "Cool site of about 22 planted acres in the McMinnville AVA, with Pinot blanc vines dating from 1990. Fruit goes to Harper Voit and Elevee, among others; the property was listed for sale in 2021.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 9 October 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-18"
+      },
+      {
+        "title": "Weinnotes newsletter, 25 September 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-16"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bieze-vineyard",
+    "type": "vineyard",
+    "name": "Bieze Vineyard",
+    "summary": "Low-yielding rocky ridgetop vineyard in the Eola-Amity Hills near Seven Springs, supplying Pinot noir to Harper Voit and Big Table Farm.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 9 October 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-18"
+      },
+      {
+        "title": "Vineyards (Harper Voit)",
+        "url": "https://www.harpervoit.com/vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "de-lancellotti-estate-vineyard",
+    "type": "vineyard",
+    "name": "de Lancellotti Estate Vineyard",
+    "summary": "About 4.5 acres at the end of Calkins Lane, planted in the early 2000s and farmed biodynamically. Bergström Wines bottled fruit from the site until 2018.",
+    "planted": 2001,
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 4 December 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-26"
+      },
+      {
+        "title": "About (de Lancellotti Family Vineyards)",
+        "url": "https://www.delancellottifamilyvineyards.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "koosah-vineyard",
+    "type": "vineyard",
+    "name": "Koosah Vineyard",
+    "summary": "High-elevation Eola-Amity Hills vineyard at about 1,100 feet, developed by Kevin and Carla Chambers and sold to Resonance in early 2022.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 18 June 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-52"
+      },
+      {
+        "title": "Weinnotes newsletter, 15 January 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-30"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "holstein-vineyard",
+    "type": "vineyard",
+    "name": "Holstein Vineyard",
+    "summary": "Holstein family vineyard planted in 1972, bottled as a vineyard designate by Purple Hands.",
+    "planted": 1972,
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 18 June 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-52"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bunker-hill-vineyard",
+    "type": "vineyard",
+    "name": "Bunker Hill Vineyard",
+    "summary": "Eola-Amity Hills Chardonnay site that supplied Lundeen Wines before Larry Stone bought it for Lingua Franca.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 29 January 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-32"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nysa-vineyard",
+    "type": "vineyard",
+    "name": "Nysa Vineyard",
+    "summary": "Densely planted 40-acre Dundee Hills vineyard established in 1990 by Michael Mega, bordering Domaine Drouhin, Archery Summit and Domaine Serene. Mega bottles long-aged estate wines and sells fruit to Audeant, Nicolas-Jay and Lavinea.",
+    "planted": 1990,
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 26 March 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-40"
+      },
+      {
+        "title": "About Us (Nysa Vineyard)",
+        "url": "https://www.nysavineyard.com/about-us"
+      },
+      {
+        "title": "About (Audeant)",
+        "url": "https://www.audeant.com/about-us"
+      },
+      {
+        "title": "Vineyards (Nicolas-Jay)",
+        "url": "https://www.nicolas-jay.com/vineyards/"
+      },
+      {
+        "title": "Weinnotes newsletter, 5 June 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "luminous-hills-vineyard",
+    "type": "vineyard",
+    "name": "Luminous Hills Vineyard",
+    "summary": "Willamette Valley vineyard bottled as a single-vineyard Pinot noir by Audeant.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 23 April 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-44"
+      },
+      {
+        "title": "Weinnotes newsletter, 1 January 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-28"
+      },
+      {
+        "title": "Weinnotes newsletter, 12 June 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-1"
+      },
+      {
+        "title": "Weinnotes newsletter, 24 April 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-7"
+      },
+      {
+        "title": "About (Audeant)",
+        "url": "https://www.audeant.com/about-us"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lazy-river-vineyard",
+    "type": "vineyard",
+    "name": "Lazy River Vineyard",
+    "summary": "Vineyard on the south slope of Mount Richmond near Yamhill, with Pinot noir planted in 2000 and Chardonnay in 2005; a fruit source for Lavinea.",
+    "planted": 2000,
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 2 July 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-54"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "vista-grande-vineyard",
+    "type": "vineyard",
+    "name": "Vista Grande Vineyard",
+    "summary": "Chehalem Mountains vineyard at about 800 feet that supplies Pinot noir to de la boue.",
+    "place": "Chehalem Mountains, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 24 September 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-66"
+      },
+      {
+        "title": "About (de la boue wines)",
+        "url": "https://www.delaboue.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "gregory-ranch-vineyard",
+    "type": "vineyard",
+    "name": "Gregory Ranch Vineyard",
+    "aka": [
+      "Gregory Ranch"
+    ],
+    "summary": "Biodynamically farmed Yamhill-Carlton vineyard that has supplied Bergström and now de la boue, whose winemaker Travis Todd farms it.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 24 September 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-66"
+      },
+      {
+        "title": "About (de la boue wines)",
+        "url": "https://www.delaboue.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "la-cantera-vineyard",
+    "type": "vineyard",
+    "name": "La Cantera Vineyard",
+    "summary": "Vineyard at about 690 feet above the Rex Hill winery, source of a Lundeen single-vineyard Pinot noir.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 1 October 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-67"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "celestial-hill-estate-vineyard",
+    "type": "vineyard",
+    "name": "Celestial Hill estate vineyard",
+    "aka": [
+      "Falcon Glen Vineyard"
+    ],
+    "summary": "52-acre property outside McMinnville with 12 acres of vines planted in the 1990s, known as Falcon Glen before Chris and Melissa Thomas bought it in 2020. Planted to Pinot noir, with some vines since grafted to Chardonnay.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 22 October 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-70"
+      },
+      {
+        "title": "Celestial Hill Vineyard",
+        "url": "https://www.celestialhillvineyard.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "fennwood-vineyard",
+    "type": "vineyard",
+    "name": "Fennwood Vineyard",
+    "summary": "Yamhill-Carlton vineyard that supplies Chardonnay to Celestial Hill and is one of Dusky Goose's vineyard sources.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 22 October 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-70"
+      },
+      {
+        "title": "Weinnotes newsletter, 1 February 2025",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-15"
+      },
+      {
+        "title": "About (Dusky Goose)",
+        "url": "https://www.duskygoose.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "orchard-house-vineyard",
+    "type": "vineyard",
+    "name": "Orchard House Vineyard",
+    "aka": [
+      "Orchard House Estate"
+    ],
+    "summary": "Organically farmed estate vineyard of Iterum Wines at Joe and Patricia Dobbes's home in the Eola-Amity Hills, planted to Pinot noir and Chardonnay.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 29 October 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-71"
+      },
+      {
+        "title": "Weinnotes newsletter, 5 November 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-72"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "oak-grove-vineyard",
+    "type": "vineyard",
+    "name": "Oak Grove Vineyard",
+    "summary": "Sauvignon blanc source for Iterum Wines that Joe Dobbes first worked with in 1989.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 29 October 2022",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-71"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "murto-vineyard",
+    "type": "vineyard",
+    "name": "Murto Vineyard",
+    "summary": "Dundee Hills vineyard from which Authentique makes a single-vineyard Pinot noir.",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 4 February 2023",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-83"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "clos-gallia-vineyard",
+    "type": "vineyard",
+    "name": "Clos Gallia",
+    "summary": "Domaine Divio's estate vineyard, planted by winemaker Bruno Corneaux around the tasting room near Newberg.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 6 February 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-28"
+      },
+      {
+        "title": "Domaine Divio",
+        "url": "https://www.domainedivio.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "abbott-claim-vineyard",
+    "type": "vineyard",
+    "name": "Abbott Claim Vineyard",
+    "summary": "Vineyard on Savannah Ridge near Carlton, named for homesteader John F. Abbott. Ken Wright planted it to Pinot noir in 2001 and sold the land to Antony Beck in two stages, in 2006 and 2012; it is now the home vineyard of the Abbott Claim winery.",
+    "planted": 2001,
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 13 February 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-27"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bishop-creek-vineyard",
+    "type": "vineyard",
+    "name": "Bishop Creek Vineyard",
+    "summary": "Organically farmed estate vineyard of Nicolas-Jay in the northern Yamhill-Carlton AVA, bought in 2014; mostly Pinot noir with a little Chardonnay.",
+    "sources": [
+      {
+        "title": "Vineyards (Nicolas-Jay)",
+        "url": "https://www.nicolas-jay.com/vineyards/"
+      },
+      {
+        "title": "Weinnotes newsletter, 1 May 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-8"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "youngberg-hill-vineyard",
+    "type": "vineyard",
+    "name": "Youngberg Hill Vineyard",
+    "summary": "Estate vineyard of Youngberg Hill, about 21 acres. Its two oldest Pinot noir blocks, Natasha and Jordan, were planted in 1989 by Ken Wright for Panther Creek.",
+    "planted": 1989,
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 22 May 2021",
+        "url": "https://weinnotes.kit.com/posts/oregon-vino-country-14"
+      },
+      {
+        "title": "About Us (Youngberg Hill)",
+        "url": "https://youngberghill.com/about-us/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "namaste-vineyard",
+    "type": "vineyard",
+    "name": "Namaste Vineyard",
+    "summary": "Late-ripening vineyard planted in 1980 and farmed by Jessica Cortell; a Chardonnay source for Corollary's sparkling wines.",
+    "planted": 1980,
+    "sources": [
+      {
+        "title": "Weinnotes newsletter, 26 June 2021",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-3"
+      }
+    ],
+    "verified": false
   }
 ]

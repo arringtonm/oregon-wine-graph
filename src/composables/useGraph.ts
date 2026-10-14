@@ -13,6 +13,9 @@ import {
 // AVA nodes are not toggled by type: they appear with the geography layer.
 export type ToggleableNodeType = Exclude<NodeType, 'ava'>
 
+// Review mode writes approvals to the data files through the dev server, so it only exists in `npm run dev`
+export const reviewEnabled = import.meta.env.DEV
+
 export interface Connection {
   edge: GraphEdge
   other: GraphNode
@@ -51,6 +54,7 @@ const state = reactive({
   ...defaultFilters(),
   // Whether the filter drawer is open; only matters on tablet and smaller
   filtersOpen: false,
+  reviewError: null as string | null,
 })
 
 const nodes = computed(() => state.graph?.nodes ?? [])
@@ -217,6 +221,56 @@ function select(id: string | null) {
   }
 }
 
+const unverified = computed(() => ({
+  nodes: nodes.value.filter((node) => !node.verified).length,
+  edges: edges.value.filter((edge) => !edge.verified).length,
+}))
+
+async function setVerified(kind: 'node' | 'edge', record: GraphNode | GraphEdge, verified: boolean) {
+  state.reviewError = null
+  try {
+    const response = await fetch('/__review/verify', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ kind, id: record.id, verified }),
+    })
+    if (!response.ok) throw new Error((await response.text()) || `HTTP ${response.status}`)
+    record.verified = verified
+  } catch (error) {
+    state.reviewError = `Could not save "${record.id}": ${error instanceof Error ? error.message : error}`
+  }
+}
+
+// Approves a node together with every connection listed on its card
+async function approveCard(node: GraphNode) {
+  if (!node.verified) await setVerified('node', node, true)
+  for (const edge of edges.value) {
+    if (!edge.verified && (edge.source === node.id || edge.target === node.id)) {
+      await setVerified('edge', edge, true)
+    }
+  }
+}
+
+function needsReview(node: GraphNode): boolean {
+  return (
+    !node.verified ||
+    edges.value.some((edge) => !edge.verified && (edge.source === node.id || edge.target === node.id))
+  )
+}
+
+// Selects the next node, after the current one, that still has something to review
+function selectNextUnverified() {
+  const list = nodes.value
+  const start = list.findIndex((node) => node.id === state.selectedId)
+  for (let offset = 1; offset <= list.length; offset++) {
+    const node = list[(start + offset) % list.length]
+    if (needsReview(node)) {
+      select(node.id)
+      return
+    }
+  }
+}
+
 function resetFilters() {
   Object.assign(state, defaultFilters())
 }
@@ -252,6 +306,10 @@ export function useGraph() {
     search,
     select,
     resetFilters,
+    unverified,
+    setVerified,
+    approveCard,
+    selectNextUnverified,
     init,
   }
 }
