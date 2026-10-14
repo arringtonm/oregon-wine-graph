@@ -119,7 +119,8 @@ const facts = computed(() =>
         came from and how its people are related.
       </p>
       <p class="detail__facts">
-        Drag to pan, scroll to zoom. Hover a line to read the connection.
+        Scroll with two fingers to move around and pinch to zoom, or use the buttons on the graph.
+        Hover a line to read the connection.
       </p>
     </template>
   </aside>

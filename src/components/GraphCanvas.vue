@@ -4,12 +4,28 @@ import fcose from 'cytoscape-fcose'
 import { nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 import { edgeLabel, formatYears, nodeYears, useGraph } from '../composables/useGraph'
 import { EDGE_RULES } from '../data/schema'
+import NodeGlyph from './NodeGlyph.vue'
 
 cytoscape.use(fcose)
 
-const { state, degree, nodeById, visibleNodes, visibleEdges, select, resetFilters } = useGraph()
+const {
+  state,
+  degree,
+  nodeById,
+  visibleNodes,
+  visibleEdges,
+  select,
+  resetFilters,
+  canGoBack,
+  canGoForward,
+  goBack,
+  goForward,
+  goToHistory,
+  historyEntries,
+} = useGraph()
 
 const container = ref<HTMLDivElement>()
+const historyOpen = ref(false)
 const tooltip = reactive({ show: false, x: 0, y: 0, title: '', detail: '' })
 let cy: Core | undefined
 let layout: cytoscape.Layouts | undefined
@@ -137,6 +153,25 @@ function zoomBy(factor: number) {
   })
 }
 
+// Two-finger scrolling moves the graph; pinching (which browsers report as a
+// wheel event with ctrlKey) or Ctrl/Cmd + wheel zooms about the pointer.
+// Dragging alone is unreliable in a dense graph because it picks up nodes.
+function onWheel(event: WheelEvent) {
+  if (!cy) return
+  event.preventDefault()
+  event.stopImmediatePropagation()
+  const unit = event.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16 : 1
+  if (event.ctrlKey || event.metaKey) {
+    const bounds = container.value!.getBoundingClientRect()
+    cy.zoom({
+      level: cy.zoom() * Math.exp(-event.deltaY * unit * 0.01),
+      renderedPosition: { x: event.clientX - bounds.left, y: event.clientY - bounds.top },
+    })
+  } else {
+    cy.panBy({ x: -event.deltaX * unit, y: -event.deltaY * unit })
+  }
+}
+
 // Back to the starting view: default filters, nothing selected, fresh layout
 async function reset() {
   resetFilters()
@@ -233,6 +268,7 @@ onMounted(() => {
 
   cy.on('tap', (event) => {
     state.filtersOpen = false
+    historyOpen.value = false
     if (event.target === cy) select(null)
   })
   cy.on('tap', 'node', (event) => select(event.target.id()))
@@ -251,11 +287,14 @@ onMounted(() => {
   cy.on('mouseover', 'edge', (event) => event.target.addClass('hovered'))
   cy.on('mouseout', 'edge', (event) => event.target.removeClass('hovered'))
 
+  // Capture phase, so this runs instead of Cytoscape's own wheel-to-zoom handler
+  container.value!.addEventListener('wheel', onWheel, { capture: true, passive: false })
   darkQuery.addEventListener('change', applyTheme)
   syncElements()
 })
 
 onBeforeUnmount(() => {
+  container.value?.removeEventListener('wheel', onWheel, { capture: true })
   darkQuery.removeEventListener('change', applyTheme)
   cy?.destroy()
 })
@@ -291,6 +330,29 @@ watch(
         Search &amp; filters
       </button>
       <div class="graph-canvas__group">
+        <button type="button" aria-label="Back" title="Back to the previous selection" :disabled="!canGoBack" @click="goBack">
+          ‹
+        </button>
+        <button
+          type="button"
+          aria-label="Forward"
+          title="Forward to the next selection"
+          :disabled="!canGoForward"
+          @click="goForward"
+        >
+          ›
+        </button>
+        <button
+          type="button"
+          title="Everything selected this session"
+          :aria-expanded="historyOpen"
+          :disabled="historyEntries.length === 0"
+          @click="historyOpen = !historyOpen"
+        >
+          History
+        </button>
+      </div>
+      <div class="graph-canvas__group">
         <button type="button" aria-label="Zoom in" title="Zoom in" @click="zoomBy(1.3)">+</button>
         <button type="button" aria-label="Zoom out" title="Zoom out" @click="zoomBy(1 / 1.3)">−</button>
         <button type="button" title="Fit the whole graph in view" @click="fit">Fit</button>
@@ -298,6 +360,18 @@ watch(
           Reset
         </button>
       </div>
+      <ol v-if="historyOpen" class="graph-canvas__history" aria-label="Selection history, most recent first">
+        <li v-for="{ index, node } in historyEntries" :key="index">
+          <button
+            type="button"
+            :aria-current="index === state.historyIndex ? 'true' : undefined"
+            @click="(goToHistory(index), (historyOpen = false))"
+          >
+            <NodeGlyph :type="node.type" />
+            {{ node.name }}
+          </button>
+        </li>
+      </ol>
     </div>
   </div>
 </template>
@@ -362,8 +436,53 @@ watch(
   pointer-events: auto;
 }
 
-.graph-canvas__toolbar button:hover {
+.graph-canvas__toolbar button:hover:not(:disabled) {
   background: var(--surface);
+}
+
+.graph-canvas__toolbar button:disabled {
+  color: var(--text-secondary);
+  cursor: default;
+  opacity: 0.6;
+}
+
+.graph-canvas__history {
+  flex-basis: 100%;
+  align-self: flex-start;
+  max-width: 280px;
+  max-height: min(50vh, 360px);
+  margin: 0;
+  padding: 4px;
+  overflow-y: auto;
+  list-style: none;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  background: var(--surface-raised);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  pointer-events: auto;
+}
+
+.graph-canvas__toolbar .graph-canvas__history button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: auto;
+  min-height: 32px;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  text-align: left;
+}
+
+.graph-canvas__toolbar .graph-canvas__history button:hover {
+  background: var(--wash);
+}
+
+.graph-canvas__toolbar .graph-canvas__history button[aria-current] {
+  background: var(--wash);
+  font-weight: 600;
 }
 
 .graph-canvas__filters {

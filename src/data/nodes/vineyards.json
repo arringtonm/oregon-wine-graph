@@ -85,7 +85,7 @@
         "url": "https://www.winewithseth.com/winewiki/evening-land-vineyards/"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "ridgecrest-vineyards",
@@ -955,7 +955,7 @@
         "url": "http://www.xnovo.com/"
       }
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "x-omni-vineyard",

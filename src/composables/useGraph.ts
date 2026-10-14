@@ -55,7 +55,12 @@ const state = reactive({
   // Whether the filter drawer is open; only matters on tablet and smaller
   filtersOpen: false,
   reviewError: null as string | null,
+  // Nodes selected this session, oldest first. Kept in the app only, not in browser history.
+  history: [] as string[],
+  historyIndex: -1,
 })
+
+const HISTORY_LIMIT = 100
 
 const nodes = computed(() => state.graph?.nodes ?? [])
 const edges = computed(() => state.graph?.edges ?? [])
@@ -213,13 +218,48 @@ function search(query: string): GraphNode[] {
     .slice(0, 8)
 }
 
-function select(id: string | null) {
+function showSelection(id: string | null) {
   state.selectedId = id
   const hash = id ? `#${id}` : ''
   if (window.location.hash !== hash) {
-    history.replaceState(null, '', hash || window.location.pathname + window.location.search)
+    window.history.replaceState(null, '', hash || window.location.pathname + window.location.search)
   }
 }
+
+// Selecting a node adds it to the history, dropping anything "forward" of the current position
+function select(id: string | null) {
+  if (id && id !== state.history[state.historyIndex]) {
+    state.history = [...state.history.slice(0, state.historyIndex + 1), id].slice(-HISTORY_LIMIT)
+    state.historyIndex = state.history.length - 1
+  }
+  showSelection(id)
+}
+
+// Moves to a position in the history without rewriting it
+function goToHistory(index: number) {
+  if (index < 0 || index >= state.history.length) return
+  state.historyIndex = index
+  showSelection(state.history[index])
+}
+
+// With nothing selected, Back returns to the last selected node rather than the one before it
+const canGoBack = computed(() => state.historyIndex > 0 || (state.historyIndex === 0 && !state.selectedId))
+const canGoForward = computed(() => state.historyIndex < state.history.length - 1)
+
+function goBack() {
+  goToHistory(state.selectedId ? state.historyIndex - 1 : state.historyIndex)
+}
+
+function goForward() {
+  goToHistory(state.historyIndex + 1)
+}
+
+const historyEntries = computed(() =>
+  state.history
+    .map((id, index) => ({ index, node: nodeById.value.get(id) }))
+    .filter((entry): entry is { index: number; node: GraphNode } => entry.node !== undefined)
+    .reverse(),
+)
 
 const unverified = computed(() => ({
   nodes: nodes.value.filter((node) => !node.verified).length,
@@ -277,7 +317,7 @@ function resetFilters() {
 
 function selectFromHash() {
   const id = decodeURIComponent(window.location.hash.slice(1))
-  state.selectedId = nodeById.value.has(id) ? id : null
+  select(nodeById.value.has(id) ? id : null)
 }
 
 let started = false
@@ -305,6 +345,12 @@ export function useGraph() {
     connectionsOf,
     search,
     select,
+    canGoBack,
+    canGoForward,
+    goBack,
+    goForward,
+    goToHistory,
+    historyEntries,
     resetFilters,
     unverified,
     setVerified,
