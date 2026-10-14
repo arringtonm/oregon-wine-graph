@@ -12,7 +12,8 @@
         "url": "https://en.wikipedia.org/wiki/David_Lett"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "diana-lett--founded--the-eyrie-vineyards",
@@ -26,7 +27,8 @@
         "url": "https://en.wikipedia.org/wiki/David_Lett"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "david-lett--winemaker--the-eyrie-vineyards",
@@ -40,7 +42,8 @@
         "url": "https://en.wikipedia.org/wiki/David_Lett"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "jason-lett--winemaker--the-eyrie-vineyards",
@@ -56,7 +59,8 @@
         "url": "https://en.wikipedia.org/wiki/The_Eyrie_Vineyards"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "jason-lett--owns--the-eyrie-vineyards",
@@ -165,7 +169,8 @@
         "url": "https://eyrievineyards.com/inform.shtml"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "the-eyrie-vineyard--located-in--dundee-hills",
@@ -853,7 +858,8 @@
         "url": "https://timatkin.com/celebrating-25-years-of-the-ipnc/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "linfield-university--hosts--ipnc",
@@ -931,7 +937,8 @@
         "url": "https://www.princeofpinot.com/article/1642/index.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "maison-joseph-drouhin--participated-in--drouhin-rematch-1980",
@@ -1262,7 +1269,8 @@
         "url": "https://www.willamettewines.com/about-us/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "the-eyrie-vineyards--member-of--willamette-valley-wineries-association",
@@ -1371,7 +1379,8 @@
         "url": "https://www.winespectator.com/articles/profiles-in-pinot-noir-domaine-drouhin-1804"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "maison-joseph-drouhin--owns--domaine-drouhin-oregon",
@@ -1445,7 +1454,8 @@
         "url": "https://www.winespectator.com/articles/profiles-in-pinot-noir-domaine-drouhin-1804"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "veronique-drouhin--worked-at--adelsheim-vineyard",
@@ -1522,7 +1532,8 @@
         "url": "https://drouhin.com/en_US/presentation/pioneers-in-oregon"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "roserock-vineyard--located-in--eola-amity-hills",
@@ -4352,7 +4363,8 @@
         "url": "https://www.winespectator.com/articles/joe-campbell-pioneering-willamette-valley-winemaker-dies"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "joe-campbell--founded--elk-cove-vineyards",
@@ -4456,7 +4468,8 @@
         "url": "https://elkcove.com/about-us/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "elk-cove-vineyards--draws-from--yamhill-carlton",
@@ -5887,7 +5900,8 @@
         "url": "https://www.princeofpinot.com/article/1858/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "brooks-wine--owns--brooks-estate-vineyard",
@@ -6840,7 +6854,8 @@
         "url": "https://1859oregonmagazine.com/think-oregon/business/carlton-winemakers/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "luisa-ponzi--founded--carlton-winemakers-studio",
@@ -11385,7 +11400,8 @@
         "url": "https://www.saludauction.org/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "lingua-franca--member-of--salud",
@@ -12911,7 +12927,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-103"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "jared-etzel--owns--lenne-estate",
@@ -12926,7 +12943,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-103"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "eugene-labunsky--owns--lenne-estate",
@@ -15470,7 +15488,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-13"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "jared-etzel--worked-at--sequitur",
@@ -16675,7 +16694,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-16"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "luisa-ponzi--owns--carlton-winemakers-studio",
@@ -17124,7 +17144,8 @@
         "url": "https://www.00wines.com/about"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "mark-tarlov--founded--00-wines",
@@ -17188,7 +17209,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-20"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "nate-wall--winemaker--troon-vineyard",
@@ -19843,7 +19865,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-68"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "antony-beck--founded--lytle-barnett",
@@ -21650,7 +21673,8 @@
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-27"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "andrew-dirks--worked-at--abbott-claim",
@@ -28317,7 +28341,8 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/joe-pat-adam-anna-campbell/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "joe-campbell--family--anna-campbell",
@@ -31050,5 +31075,178 @@
       }
     ],
     "verified": false
+  },
+  {
+    "id": "angela-summers--founded--saffron-fields",
+    "source": "angela-summers",
+    "target": "saffron-fields",
+    "type": "founded",
+    "role": "co-founder",
+    "sources": [
+      {
+        "title": "The Saffron Story and The Owner (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
+      },
+      {
+        "title": "Oral history interview with Sanjeev Lahoti and Angela Summers, 2020 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/sanjeev-lahoti-and-angela-summers/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sanjeev-lahoti--founded--saffron-fields",
+    "source": "sanjeev-lahoti",
+    "target": "saffron-fields",
+    "type": "founded",
+    "role": "co-founder",
+    "sources": [
+      {
+        "title": "The Saffron Story and The Owner (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
+      },
+      {
+        "title": "Oral history interview with Sanjeev Lahoti and Angela Summers, 2020 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/sanjeev-lahoti-and-angela-summers/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "angela-summers--owns--saffron-fields",
+    "source": "angela-summers",
+    "target": "saffron-fields",
+    "type": "owns",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "The Owner (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sanjeev-lahoti--owns--saffron-fields",
+    "source": "sanjeev-lahoti",
+    "target": "saffron-fields",
+    "type": "owns",
+    "endYear": 2020,
+    "sources": [
+      {
+        "title": "The Saffron Story (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "angela-summers--founded--saffron-fields-vineyard",
+    "source": "angela-summers",
+    "target": "saffron-fields-vineyard",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 2007,
+    "sources": [
+      {
+        "title": "The Saffron Story (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "sanjeev-lahoti--founded--saffron-fields-vineyard",
+    "source": "sanjeev-lahoti",
+    "target": "saffron-fields-vineyard",
+    "type": "founded",
+    "role": "co-founder",
+    "startYear": 2007,
+    "sources": [
+      {
+        "title": "The Saffron Story (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "saffron-fields--owns--saffron-fields-vineyard",
+    "source": "saffron-fields",
+    "target": "saffron-fields-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "The Saffron Story (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "angela-summers--family--sanjeev-lahoti",
+    "source": "angela-summers",
+    "target": "sanjeev-lahoti",
+    "type": "family",
+    "role": "spouse",
+    "endYear": 2020,
+    "sources": [
+      {
+        "title": "The Owner (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
+      },
+      {
+        "title": "Oral history interview with Sanjeev Lahoti and Angela Summers, 2020 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/sanjeev-lahoti-and-angela-summers/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tony-rynders--winemaker--saffron-fields",
+    "source": "tony-rynders",
+    "target": "saffron-fields",
+    "type": "winemaker",
+    "role": "made the first harvest",
+    "startYear": 2009,
+    "endYear": 2009,
+    "sources": [
+      {
+        "title": "The Saffron Story (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "saffron-fields--draws-from--yamhill-carlton",
+    "source": "saffron-fields",
+    "target": "yamhill-carlton",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "The Saffron Story (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "saffron-fields-vineyard--located-in--yamhill-carlton",
+    "source": "saffron-fields-vineyard",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "The Saffron Story and The Owner (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
   }
 ]

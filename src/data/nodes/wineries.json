@@ -27,7 +27,7 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/the-eyrie-vineyards-collection/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "address": "935 NE 10th Avenue, McMinnville, Oregon 97128",
     "coordinates": {
       "lat": 45.2139,
@@ -39,7 +39,8 @@
         "title": "The Eyrie Vineyards collection",
         "date": "2007-10-05"
       }
-    ]
+    ],
+    "verifiedBy": "person"
   },
   {
     "id": "abacela",
@@ -312,14 +313,15 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/domaine-drouhin-oregon-collection/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/domaine-drouhin-oregon-collection/",
         "title": "Domaine Drouhin Oregon collection",
         "date": "2024-04-10"
       }
-    ]
+    ],
+    "verifiedBy": "person"
   },
   {
     "id": "panther-creek-cellars",
@@ -610,7 +612,7 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/willamette-valley-vineyards-collection/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "address": "8800 Enchanted Way SE Turner OR 97392",
     "coordinates": {
       "lat": 44.82726,
@@ -622,7 +624,8 @@
         "title": "Willamette Valley Vineyards collection",
         "date": "2025-12-16"
       }
-    ]
+    ],
+    "verifiedBy": "person"
   },
   {
     "id": "penner-ash-wine-cellars",
@@ -1490,14 +1493,15 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/maysara-winery-collection/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/maysara-winery-collection/",
         "title": "Maysara Winery collection",
         "date": "2017-12-05"
       }
-    ]
+    ],
+    "verifiedBy": "person"
   },
   {
     "id": "yamhill-valley-vineyards",
@@ -6012,7 +6016,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-68"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "j-christopher-wines",
@@ -9798,5 +9803,36 @@
       }
     ],
     "verifiedBy": "jev"
+  },
+  {
+    "id": "saffron-fields",
+    "name": "Saffron Fields",
+    "aka": [
+      "Saffron Fields Vineyard"
+    ],
+    "summary": "Small, independently owned estate winery in the Yamhill-Carlton AVA, making Pinot noir, Chardonnay, rosé and sparkling wine from its own vineyard. Its first estate wines came from the 2010 harvest, and its hospitality center opened in 2013.",
+    "sources": [
+      {
+        "title": "The Saffron Story and The Owner (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
+      },
+      {
+        "title": "Oral history interview with Sanjeev Lahoti and Angela Summers, 2020 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/sanjeev-lahoti-and-angela-summers/"
+      },
+      {
+        "title": "Saffron Fields collection, 2020 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/saffron-fields-collection/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/saffron-fields-collection/",
+        "title": "Saffron Fields collection",
+        "date": "2020-08-13"
+      }
+    ]
   }
 ]

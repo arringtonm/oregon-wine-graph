@@ -515,7 +515,8 @@
         "url": "https://en.wikipedia.org/wiki/Maison_Joseph_Drouhin"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "veronique-drouhin",
@@ -6954,14 +6955,15 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/cameron-and-bernadette-bower/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/cameron-and-bernadette-bower/",
         "title": "Cameron and Bernadette Bower",
         "date": "2024-05-28"
       }
-    ]
+    ],
+    "verifiedBy": "person"
   },
   {
     "id": "cameron-bower",
@@ -15674,5 +15676,54 @@
       }
     ],
     "verifiedBy": "jev"
+  },
+  {
+    "id": "angela-summers",
+    "name": "Angela Summers",
+    "summary": "Engineer and vintner who co-founded Saffron Fields with her husband, Sanjeev Lahoti, and has run it since his death in 2020. She also founded the process safety firm SIS-TECH Solutions.",
+    "sources": [
+      {
+        "title": "The Saffron Story and The Owner (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
+      },
+      {
+        "title": "Oral history interview with Sanjeev Lahoti and Angela Summers, 2020 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/sanjeev-lahoti-and-angela-summers/"
+      }
+    ],
+    "verified": false,
+    "type": "person",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/interviews/sanjeev-lahoti-and-angela-summers/",
+        "title": "Sanjeev Lahoti & Angela Summers",
+        "date": "2020-08-13"
+      }
+    ]
+  },
+  {
+    "id": "sanjeev-lahoti",
+    "name": "Sanjeev Lahoti",
+    "summary": "Co-founder of Saffron Fields with his wife, Angela Summers. The couple bought a Yamhill-Carlton grass seed farm and planted its vineyard in 2007.",
+    "sources": [
+      {
+        "title": "The Saffron Story and The Owner (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
+      },
+      {
+        "title": "Oral history interview with Sanjeev Lahoti and Angela Summers, 2020 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/sanjeev-lahoti-and-angela-summers/"
+      }
+    ],
+    "verified": false,
+    "type": "person",
+    "died": 2020,
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/interviews/sanjeev-lahoti-and-angela-summers/",
+        "title": "Sanjeev Lahoti & Angela Summers",
+        "date": "2020-08-13"
+      }
+    ]
   }
 ]

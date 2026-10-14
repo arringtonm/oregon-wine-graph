@@ -275,6 +275,10 @@ function runLayout(randomize: boolean) {
     idealEdgeLength: 220,
     gravity: 0.04,
     nodeSeparation: 120,
+    // fcose packs nodes without connections into a square grid by default. Filters such as
+    // verified-only leave hundreds of nodes unconnected, and the grid then outlived the
+    // filter. Let forces place them instead, like every other node.
+    tile: false,
     // Pull members of an AVA region together. Without this a region's vineyards drift
     // towards their wineries all over the graph and the region grows to enclose them:
     // Dundee Hills measured about 9,000 by 12,000 units, against 1,900 by 1,500 with it
@@ -298,15 +302,18 @@ function syncElements() {
   const firstRender = cy.elements().empty()
   let changed = false
   let regrouped = false
+  let churn = 0
   cy.batch(() => {
     const stale = cy!.elements().filter((element) => !wantedIds.has(element.id()))
     changed = stale.nonempty()
+    churn = stale.length
     stale.remove()
     for (const element of wanted) {
       const existing = cy!.getElementById(element.data.id!)
       if (existing.empty()) {
         cy!.add(element)
         changed = true
+        churn++
       } else if (element.group === 'nodes' && (existing.data('parent') ?? undefined) !== element.data.parent) {
         // Turning AVA regions on or off moves nodes into or out of them
         existing.move({ parent: element.data.parent ?? null })
@@ -315,8 +322,11 @@ function syncElements() {
       }
     }
   })
-  // Regions turned on or off need a fresh layout; keeping old positions leaves regions sprawling
-  if (changed) runLayout(firstRender || regrouped)
+  // Regions turned on or off need a fresh layout; keeping old positions leaves regions sprawling.
+  // So does a large change, such as a filter restoring hundreds of connections: nodes kept
+  // where the filter left them end up joined by long lines across the whole graph
+  const large = churn > wanted.length * 0.1
+  if (changed) runLayout(firstRender || regrouped || large)
   applySelection()
 }
 

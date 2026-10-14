@@ -48,7 +48,8 @@ describe('setVerified', () => {
 
   it('flips an edge and can flip it back', () => {
     const file = join(dataDir, 'edges.json')
-    const id = 'david-lett--founded--the-eyrie-vineyards'
+    // Any edge not yet verified; which ones are changes as records are reviewed
+    const id = read(file).find((edge) => !edge.verified)!.id
     const original = readFileSync(file, 'utf8')
 
     expect(setVerified(dataDir, 'edge', id, true)).toBe(file)

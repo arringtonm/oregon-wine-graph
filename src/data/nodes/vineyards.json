@@ -994,7 +994,7 @@
     "id": "saffron-fields-vineyard",
     "type": "vineyard",
     "name": "Saffron Fields Vineyard",
-    "summary": "Willamette Valley vineyard that supplies Pinot noir and Chardonnay to EIEIO & Company.",
+    "summary": "Estate vineyard of Saffron Fields in the Yamhill-Carlton AVA, planted in 2007 on a former grass seed farm. It also supplies Pinot noir and Chardonnay to EIEIO & Company.",
     "sources": [
       {
         "title": "Weinnotes newsletter, 8 June 2024",
@@ -1007,16 +1007,15 @@
       {
         "title": "Saffron Fields collection, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/saffron-fields-collection/"
+      },
+      {
+        "title": "The Saffron Story (Saffron Fields)",
+        "url": "https://www.saffronfields.com"
       }
     ],
-    "verified": false,
-    "interviews": [
-      {
-        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/saffron-fields-collection/",
-        "title": "Saffron Fields collection",
-        "date": "2020-08-13"
-      }
-    ]
+    "verified": true,
+    "planted": 2007,
+    "verifiedBy": "person"
   },
   {
     "id": "white-cloud-vineyard",
