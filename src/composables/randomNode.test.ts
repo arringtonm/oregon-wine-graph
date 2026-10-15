@@ -9,7 +9,7 @@ window.matchMedia = ((query: string) => ({
   removeEventListener() {},
 })) as unknown as typeof window.matchMedia
 
-const { state, init, select, visibleNodes, randomNodeId, resetFilters } = useGraph()
+const { state, init, select, visibleNodes, randomNodeId, resetFilters, applyView, activeView, avasOf } = useGraph()
 
 beforeAll(async () => {
   await init()
@@ -42,6 +42,42 @@ describe('random node', () => {
       const id = randomNodeId()
       expect(id).not.toBeNull()
       expect(id).not.toBe(state.selectedId)
+    }
+    resetFilters()
+  })
+
+  it('within chosen AVAs, rolls among the region’s own records, not its one-step context', () => {
+    resetFilters()
+    state.avas = ['rogue-valley']
+    const rogue = new Set(['rogue-valley', 'applegate-valley'])
+    for (let i = 0; i < 200; i++) {
+      const id = randomNodeId()!
+      const node = visibleNodes.value.find((shown) => shown.id === id)!
+      if (node.type === 'winery' || node.type === 'vineyard') {
+        expect(avasOf(id).some((ava) => rogue.has(ava))).toBe(true)
+      }
+      // Tualatin Vineyards is shown only through Willamette Valley Vineyards' Rogue holdings
+      expect(id).not.toBe('tualatin-vineyards')
+    }
+    resetFilters()
+  })
+})
+
+describe('guided views', () => {
+  it('set their filters, and end when a filter changes', () => {
+    applyView('sparkling')
+    expect(activeView.value?.id).toBe('sparkling')
+    expect(visibleNodes.value.some((node) => node.id === 'method-oregon')).toBe(true)
+    state.nodeTypes.person = false
+    expect(activeView.value).toBeUndefined()
+    resetFilters()
+  })
+
+  it('show at least 20 records each', () => {
+    for (const id of ['beyond-the-willamette', 'southern-oregon', 'sparkling', 'young-vintages', 'library-wines', 'who-started-what', 'family-and-mentors', 'following-the-fruit']) {
+      applyView(id)
+      expect(activeView.value?.id).toBe(id)
+      expect(visibleNodes.value.length).toBeGreaterThanOrEqual(20)
     }
     resetFilters()
   })

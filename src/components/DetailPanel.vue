@@ -9,7 +9,6 @@ import ReviewTools from './ReviewTools.vue'
 import FlagButton from './FlagButton.vue'
 import FlagNotes from './FlagNotes.vue'
 import VerificationSummary from './VerificationSummary.vue'
-import { pickInvite } from '../graph/busyPhrases'
 import { factsOf } from '../services/facts'
 import { flagsAvailable } from '../services/flags'
 
@@ -31,12 +30,6 @@ const {
   selectNextFlagged,
 } = useGraph()
 
-// The empty panel's random button: a new label from the cellar each time the panel empties
-const invite = ref(pickInvite())
-watch(
-  () => !selectedNode.value,
-  (empty) => empty && (invite.value = pickInvite(invite.value)),
-)
 
 // The empty panel's "Recently viewed": the last few records viewed in this browser, kept
 // across visits (state.recent), skipping any no longer in the data
@@ -335,32 +328,17 @@ const canFlag = flagsAvailable()
       <ul class="detail__ways">
         <li><strong>Click</strong> a person or place on the graph to open it.</li>
         <li><strong>Search</strong> for a name you know, like Eyrie or David Lett.</li>
-        <li><strong>Ask</strong> a question, such as “Who founded Adelsheim Vineyard?”</li>
+        <li>
+          <strong>Guides</strong> offers curated views, like Southern Oregon or Sparkling, and answers questions
+          such as “Who founded Adelsheim Vineyard?”
+        </li>
         <li><strong>Filter</strong> by people, wineries, kinds of connection or AVA.</li>
         <li><strong>List view</strong> shows everything by name, for reading rather than roaming.</li>
+        <li><strong>Roll the dice</strong> in the toolbar, or press R, for a random person or place.</li>
       </ul>
       <p class="detail__facts">
         Scroll with two fingers to move around and pinch to zoom. Press ? for all the controls.
       </p>
-      <p class="detail__random-lead">Or pick one at random:</p>
-      <!-- Its name starts with what it shows, so speech control can say the label -->
-      <button
-        type="button"
-        class="detail__random"
-        :aria-label="`${invite}: a random person, winery, vineyard or organization`"
-        @click="state.randomRequest++"
-      >
-        <svg viewBox="0 0 20 20" aria-hidden="true">
-          <rect x="3" y="3" width="14" height="14" rx="3.2" />
-          <circle cx="7" cy="7" r="1.25" />
-          <circle cx="13" cy="7" r="1.25" />
-          <circle cx="10" cy="10" r="1.25" />
-          <circle cx="7" cy="13" r="1.25" />
-          <circle cx="13" cy="13" r="1.25" />
-        </svg>
-        {{ invite }}
-      </button>
-
       <!-- The last few records viewed, at the foot of the panel -->
       <section v-if="recent.length" class="detail__recent">
         <h3>Recently viewed</h3>
@@ -636,46 +614,6 @@ ul + .detail__verb {
 
 .detail__ways strong {
   font-weight: 600;
-}
-
-.detail__random-lead {
-  margin-top: 0.4rem;
-}
-
-/* The empty panel's invitation to roll a random record: the panel's full width, the dice
-   large beside a short label */
-.detail__random {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  min-height: 3rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius);
-  background: var(--surface);
-  color: var(--text-primary);
-  font: inherit;
-  font-size: 1.0625rem;
-  text-align: left;
-  cursor: pointer;
-}
-
-.detail__random:hover {
-  background: var(--wash);
-}
-
-.detail__random svg {
-  flex: none;
-  width: 1.75rem;
-  height: 1.75rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.5;
-}
-
-.detail__random circle {
-  fill: currentColor;
-  stroke: none;
 }
 
 /* Recently viewed sits at the foot of the empty panel */

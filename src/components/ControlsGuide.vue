@@ -33,7 +33,7 @@ const sections = computed<Section[]>(() =>
           title: 'Find',
           rows: [
             { action: 'Find a person or place by name', ways: ['Search'] },
-            { action: 'Ask a question', ways: ['Ask'] },
+            { action: 'A guided view, or ask a question', ways: ['Guides'] },
             { action: 'Somewhere new at random', ways: ['Dice button'] },
             { action: 'Browse everything by name', ways: ['List view'] },
             { action: 'Show only some types or regions', ways: ['Filters button'] },
@@ -77,8 +77,8 @@ const sections = computed<Section[]>(() =>
           title: 'Find',
           rows: [
             { action: 'Find a person or place by name', ways: ['Search'] },
-            { action: 'Ask a question', ways: ['Ask'] },
-            { action: 'Somewhere new at random', ways: ['Dice button'] },
+            { action: 'A guided view, or ask a question', ways: ['Guides'] },
+            { action: 'Somewhere new at random', ways: ['Dice button', 'R key'] },
             { action: 'Browse everything by name', ways: ['List view'] },
             { action: 'Show only some types or regions', ways: ['Filters'] },
           ],

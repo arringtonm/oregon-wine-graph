@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import cytoscape, { type Core, type ElementDefinition, type StylesheetJson } from 'cytoscape'
 import fcose from 'cytoscape-fcose'
-import { computed, defineAsyncComponent, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 import { edgeLabel, formatYears, nodeYears, rememberCollapsed, useGraph } from '../composables/useGraph'
 import { EDGE_RULES, NODE_TYPES } from '../data/schema'
 import savedLayoutFile from '../data/layout.json'
 import { iconDataUri } from '../graph/icons'
 import { sizeTiers } from '../graph/nodeSize'
 import { coverage, placeNear, toSaved, type Point, type SavedLayout } from '../graph/placement'
-import { pickBusyPhrase } from '../graph/busyPhrases'
+import { pickBusyPhrase, pickInvite } from '../graph/busyPhrases'
 import { isDark } from '../services/theme'
 import { removeOverlaps } from '../graph/removeOverlaps'
 import {
@@ -34,8 +34,7 @@ cytoscape.use(fcose)
 
 // Questions need a server holding the decision model's key: the dev server, or a deployed
 // endpoint set in VITE_ASK_URL. Without either, the build leaves the component out
-const AskPopover =
-  import.meta.env.DEV || import.meta.env.VITE_ASK_URL ? defineAsyncComponent(() => import('./AskPopover.vue')) : null
+import GuidesPopover from './GuidesPopover.vue'
 
 const {
   state,
@@ -67,8 +66,12 @@ const shownCount = computed(() => {
 // Reset shows while it lays the graph out), so the roll reads as a roll. Focus stays on the
 // button, so it can be pressed again; the selection is announced as any selection is
 const RANDOM_PAUSE_MS = 900
+// The dice's tooltip opens with a label from the cellar, new after each roll
+const invite = ref(pickInvite())
+
 async function goRandom() {
   if (arranging.value) return
+  invite.value = pickInvite(invite.value)
   const id = randomNodeId()
   if (!id) return
   // The overlay belongs to the graph; the list view picks straight away
@@ -391,11 +394,17 @@ function zoomBy(factor: number) {
   })
 }
 
-// + and − on the keyboard do what the zoom buttons do; ignored while typing, and with
-// ⌘, Ctrl or Alt held, which the browser uses for zooming the page
-function onZoomKey(event: KeyboardEvent) {
-  if (state.listView || event.metaKey || event.ctrlKey || event.altKey) return
+// Keys: + and − do what the zoom buttons do, and R rolls the dice (Ctrl+R would reload the
+// page). Ignored while typing, and with ⌘, Ctrl or Alt held, which the browser uses
+function onKey(event: KeyboardEvent) {
+  if (event.metaKey || event.ctrlKey || event.altKey || event.defaultPrevented) return
   if ((event.target as HTMLElement | null)?.closest?.('input, textarea, select, [contenteditable="true"]')) return
+  if (event.key === 'r' || event.key === 'R') {
+    event.preventDefault()
+    void goRandom()
+    return
+  }
+  if (state.listView) return
   const factor = event.key === '+' || event.key === '=' ? 1.3 : event.key === '-' || event.key === '_' ? 1 / 1.3 : 0
   if (!factor) return
   event.preventDefault()
@@ -748,7 +757,7 @@ onMounted(() => {
     toolbarObserver = new ResizeObserver(measureToolbar)
     toolbarObserver.observe(toolbar.value)
   }
-  document.addEventListener('keydown', onZoomKey)
+  document.addEventListener('keydown', onKey)
   waitForFonts().then(syncElements)
 })
 
@@ -766,7 +775,7 @@ onBeforeUnmount(() => {
   container.value?.removeEventListener('wheel', onWheel, { capture: true })
   compactQuery.removeEventListener('change', onCompactChange)
   toolbarObserver?.disconnect()
-  document.removeEventListener('keydown', onZoomKey)
+  document.removeEventListener('keydown', onKey)
   cy?.destroy()
 })
 
@@ -775,13 +784,13 @@ watch([visibleNodes, visibleEdges], syncElements)
 watch(isDark, () => nextTick(applyTheme))
 // The filter drawer's Reset, on smaller screens
 watch(() => state.resetRequest, reset)
-// The detail panel's "Pick a random…" button. The button goes once a record is chosen, so
-// focus moves to the record's name, as a pick from search does
+// A guided view, from the Guides menu: its filters are set; lay it out afresh and frame it
 watch(
-  () => state.randomRequest,
+  () => state.viewRequest,
   async () => {
-    await goRandom()
-    if (state.selectedId) state.focusDetailsRequest++
+    opening = true
+    await nextTick()
+    runLayout(true)
   },
 )
 watch(
@@ -855,7 +864,7 @@ watch(
         <span class="graph-canvas__filters-label">Filters</span>
       </button>
       <SearchBox />
-      <AskPopover v-if="AskPopover" />
+      <GuidesPopover />
       <!-- Smaller screens: the guide's ? ends the first row of the bar -->
       <ControlsGuide v-if="compact" v-show="!state.listView" />
       <div class="graph-canvas__group">
@@ -914,8 +923,14 @@ watch(
             </DropdownMenuContent>
           </DropdownMenuPortal>
         </DropdownMenuRoot>
-        <Tip label="Random person or place you haven't visited">
-          <button type="button" class="graph-canvas__random" aria-label="Random" @click="goRandom">
+        <!-- Reset sits with the ways of moving between records, not with zoom and Fit: it
+             changes the filters and selection, not the framing. Smaller screens: it moves to
+             the filter drawer -->
+        <button v-if="!compact" v-show="!state.listView" type="button" aria-describedby="reset-description" @click="reset">
+          Reset
+        </button>
+        <Tip :label="`${invite} (Select random person or place)`">
+          <button type="button" class="graph-canvas__random" aria-label="Random person or place" aria-keyshortcuts="R" @click="goRandom">
             <svg viewBox="0 0 20 20" aria-hidden="true">
               <rect x="3" y="3" width="14" height="14" rx="3.2" />
               <circle cx="7" cy="7" r="1.25" />
@@ -954,10 +969,7 @@ watch(
           </svg>
         </ToggleGroupItem>
       </ToggleGroupRoot>
-      <!-- Smaller screens: Reset moves to the filter drawer -->
-      <ZoomControls v-show="!state.listView" class="graph-canvas__zoom" @zoom="zoomBy" @fit="fitAnimated">
-        <button v-if="!compact" type="button" aria-describedby="reset-description" @click="reset">Reset</button>
-      </ZoomControls>
+      <ZoomControls v-show="!state.listView" class="graph-canvas__zoom" @zoom="zoomBy" @fit="fitAnimated" />
       <span id="reset-description" class="visually-hidden">Clear filters and selection, and lay the graph out again</span>
     </div>
     <div v-if="!compact" class="graph-canvas__side">

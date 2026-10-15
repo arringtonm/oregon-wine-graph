@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { HIDDEN_TYPES, useGraph, type ToggleableNodeType } from '../composables/useGraph'
+import { viewById } from '../graph/views'
 import { EDGE_CATEGORIES, EDGE_CATEGORY_LABELS, NODE_TYPE_LABELS } from '../data/schema'
 import { PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'reka-ui'
 import Check from './Check.vue'
@@ -8,7 +9,10 @@ import Chevron from './Chevron.vue'
 import VerifiedInfo from './VerifiedInfo.vue'
 import NodeGlyph from './NodeGlyph.vue'
 
-const { state, avas } = useGraph()
+const { state, avas, activeView, resetFilters } = useGraph()
+
+// A guided view's focus, while one is set: shown above the filters, removable
+const focusLabel = computed(() => viewById(state.focus)?.focus?.label)
 
 const sortedAvas = computed(() => [...avas.value].sort((a, b) => a.name.localeCompare(b.name)))
 const avaSummary = computed(() => {
@@ -92,6 +96,22 @@ function onDrawerKey(event: KeyboardEvent) {
     @keydown="onDrawerKey"
   >
     <button type="button" class="controls__close" @click="state.filtersOpen = false">Done</button>
+
+    <!-- The guided view showing (the toolbar's Guides menu), or a view's focus kept after
+         other filters changed -->
+    <p v-if="activeView || focusLabel" class="controls__view">
+      <span>
+        <template v-if="activeView">Showing: <strong>{{ activeView.title }}</strong></template>
+        <template v-else>Only: <strong>{{ focusLabel }}</strong></template>
+      </span>
+      <button
+        type="button"
+        class="controls__view-clear"
+        @click="activeView ? resetFilters() : (state.focus = null)"
+      >
+        Clear<span class="visually-hidden"> {{ activeView ? 'the guided view' : focusLabel }}</span>
+      </button>
+    </p>
 
     <fieldset>
       <legend>Show</legend>
@@ -370,6 +390,34 @@ legend {
 
 .controls__build a:hover {
   color: var(--text-primary);
+}
+
+.controls__view {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--wash);
+  box-shadow: inset 3px 0 0 var(--fill);
+  font-size: 0.875rem;
+}
+
+.controls__view strong {
+  font-weight: 600;
+}
+
+.controls__view-clear {
+  flex: none;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--link);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .controls__reset {

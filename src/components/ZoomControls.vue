@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import Tip from './Tip.vue'
 
-// Zoom in, zoom out and Fit, joined as one group in the toolbar. Anything after them (the
-// desktop's Reset) goes in the slot.
+// Zoom in, zoom out and Fit, joined as one group in the toolbar
 defineEmits<{ zoom: [factor: number]; fit: [] }>()
 </script>
 
@@ -15,7 +14,6 @@ defineEmits<{ zoom: [factor: number]; fit: [] }>()
       <button type="button" class="zoom__out" aria-label="Zoom out" @click="$emit('zoom', 1 / 1.3)"><span aria-hidden="true">−</span></button>
     </Tip>
     <button type="button" class="zoom__fit" aria-describedby="fit-description" @click="$emit('fit')">Fit</button>
-    <slot />
     <span id="fit-description" class="visually-hidden">Fit the whole graph in view</span>
   </div>
 </template>

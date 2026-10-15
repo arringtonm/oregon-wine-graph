@@ -1,7 +1,8 @@
-import { computed, reactive } from 'vue'
+import { computed, reactive, watch } from 'vue'
 import { loadGraph } from '../data'
 import { cardParts, connectionLabel, formatYears, HIDDEN_TYPES, SINGULAR_TYPE } from '../graph/format'
 import { foldText } from '../graph/textMatch'
+import { focusRecords, viewById, VIEWS, type GuideView } from '../graph/views'
 import { describe, recordUrl, SITE, SITE_DESCRIPTION } from '../seo/recordPage'
 // Re-exported for the components that have always imported them from here
 export { edgeLabel, formatYears, HIDDEN_TYPES, nodeYears, SINGULAR_TYPE } from '../graph/format'
@@ -81,6 +82,9 @@ function defaultFilters() {
     verifiedOnly: false,
     // AVA node ids to narrow the graph to; empty for all
     avas: [] as string[],
+    // A guided view's focus (graph/views.ts), by the view's id: only the records its rule
+    // picks. Set by views only; the drawer shows it as a removable chip
+    focus: null as string | null,
   }
 }
 
@@ -169,8 +173,8 @@ const state = reactive({
   focusDetailsRequest: 0,
   // Bumped to ask the graph to reset: default filters, nothing selected, fresh layout
   resetRequest: 0,
-  // Bumped to ask the graph to roll a random record, as its Random button does
-  randomRequest: 0,
+  // Bumped when a guided view is applied, asking the graph for a fresh layout
+  viewRequest: 0,
 })
 
 const APP_TITLE = 'Oregon Wine Graph'
@@ -200,7 +204,8 @@ const isDefaultView = computed(() => {
     Object.entries(defaults.categories).every(([category, on]) => state.categories[category as EdgeCategory] === on) &&
     state.oregonOnly === defaults.oregonOnly &&
     state.verifiedOnly === defaults.verifiedOnly &&
-    state.avas.length === 0
+    state.avas.length === 0 &&
+    state.focus === null
   )
 })
 
@@ -268,6 +273,12 @@ const avaScope = computed(() => {
   return scope
 })
 
+// The focus's records: its core (Random rolls among these) and what it shows
+const focus = computed(() => {
+  const rule = viewById(state.focus)?.focus
+  return rule && state.graph ? { rule, ...focusRecords(state.graph, rule) } : null
+})
+
 const visibleNodes = computed(() =>
   nodes.value.filter((node) => {
     if (HIDDEN_TYPES.has(node.type)) return false
@@ -275,6 +286,7 @@ const visibleNodes = computed(() =>
     if (state.oregonOnly && node.outsideOregon) return false
     if (state.verifiedOnly && !node.verified) return false
     if (avaScope.value && !avaScope.value.has(node.id)) return false
+    if (focus.value && !focus.value.shown.has(node.id)) return false
     return true
   }),
 )
@@ -414,9 +426,44 @@ function showAddress(node: GraphNode | undefined) {
 // made from a list or a link rather than on the canvas.
 // A random node among those showing, skipping anything already visited this session; once
 // everything showing has been visited, any but the current one. Null when nothing qualifies
+// The records that belong to the chosen AVAs, for Random. The AVA filter also shows
+// everything one connection from the region's wineries and vineyards, as context; Random
+// keeps to the region itself: its wineries and vineyards, and the people and organizations
+// tied to one wholly inside it, or to two or more of them. Someone linked only through a
+// company with vineyards in several regions stays context
+const regionCore = computed(() => {
+  if (state.avas.length === 0) return null
+  const scope = withSubAvas(state.avas)
+  const members = new Set(
+    nodes.value
+      .filter((node) => (node.type === 'winery' || node.type === 'vineyard') && avasOf(node.id).some((ava) => scope.has(ava)))
+      .map((node) => node.id),
+  )
+  const local = new Set([...members].filter((id) => avasOf(id).every((ava) => scope.has(ava))))
+  const core = new Set(members)
+  const ties = new Map<string, number>()
+  for (const edge of edges.value) {
+    if (EDGE_RULES[edge.type].category === 'geography') continue
+    for (const [member, other] of [
+      [edge.source, edge.target],
+      [edge.target, edge.source],
+    ]) {
+      if (!members.has(member) || members.has(other)) continue
+      if (local.has(member)) core.add(other)
+      ties.set(other, (ties.get(other) ?? 0) + 1)
+    }
+  }
+  for (const [id, count] of ties) if (count >= 2) core.add(id)
+  return core
+})
+
 function randomNodeId(): string | null {
   const visited = new Set(state.history)
-  const showing = visibleNodes.value.filter((node) => node.id !== state.selectedId)
+  const own = (id: string) => (!regionCore.value || regionCore.value.has(id)) && (!focus.value || focus.value.core.has(id))
+  const shown = visibleNodes.value.filter((node) => node.id !== state.selectedId)
+  // The region's or view's own records, unless none of them is showing
+  const belonging = shown.filter((node) => own(node.id))
+  const showing = belonging.length > 0 ? belonging : shown
   const fresh = showing.filter((node) => !visited.has(node.id))
   const pool = fresh.length > 0 ? fresh : showing
   return pool.length > 0 ? pool[Math.floor(Math.random() * pool.length)].id : null
@@ -426,6 +473,8 @@ function randomNodeId(): string | null {
 // layer, so that turns on; focus moves to the node's details; the tablet drawer closes
 function pickNode(id: string) {
   if (avas.value.some((ava) => ava.id === id)) state.categories.geography = true
+  // A record a guided view hides: the view ends, so the record shows
+  if (state.focus && !visibleNodes.value.some((node) => node.id === id)) resetFilters()
   select(id, { focusDetails: true })
   state.filtersOpen = false
 }
@@ -645,6 +694,53 @@ function resetFilters() {
 }
 
 // The record in the address: /<id>, or an older #<id> link, which becomes /<id>
+// Guided views (graph/views.ts). Applying one starts from the default filters, sets the
+// view's, clears the selection and asks the graph for a fresh layout
+function applyView(id: string) {
+  const view = viewById(id)
+  if (!view) return
+  Object.assign(state, viewFilters(view))
+  select(null)
+  state.filtersOpen = false
+  state.viewRequest++
+  announce(`${view.title}: ${visibleNodes.value.length} people and places`)
+}
+
+function viewFilters(view: GuideView) {
+  const filters = defaultFilters()
+  Object.assign(filters.nodeTypes, view.nodeTypes)
+  Object.assign(filters.categories, view.categories)
+  filters.avas = [...(view.avas ?? [])]
+  filters.focus = view.focus ? view.id : null
+  return filters
+}
+
+// The view showing: one whose filters match the current ones exactly. Changing any filter
+// ends it
+const activeView = computed(() =>
+  VIEWS.find((view) => {
+    const filters = viewFilters(view)
+    return (
+      Object.entries(filters.nodeTypes).every(([type, on]) => state.nodeTypes[type as ToggleableNodeType] === on) &&
+      Object.entries(filters.categories).every(([category, on]) => state.categories[category as EdgeCategory] === on) &&
+      state.oregonOnly === filters.oregonOnly &&
+      state.verifiedOnly === filters.verifiedOnly &&
+      state.focus === filters.focus &&
+      [...state.avas].sort().join() === [...filters.avas].sort().join()
+    )
+  }),
+)
+
+// The address carries the view, /?view=<id>, so it can be shared; it goes when the view ends
+watch(activeView, (view) => {
+  const params = new URLSearchParams(window.location.search)
+  if ((params.get('view') ?? undefined) === view?.id) return
+  if (view) params.set('view', view.id)
+  else params.delete('view')
+  const query = params.toString()
+  window.history.replaceState(null, '', window.location.pathname + (query ? `?${query}` : ''))
+})
+
 function selectFromLocation() {
   const fromHash = decodeURIComponent(window.location.hash.slice(1))
   const id = fromHash || decodeURIComponent(window.location.pathname.replace(/^\/+|\/+$/g, ''))
@@ -664,6 +760,12 @@ async function init() {
     state.graph = await loadGraph()
     if (import.meta.env.DEV) state.checks = (await import('../data/checks.json')).default as unknown as CheckStore
     void loadFlags()
+    const shared = new URLSearchParams(window.location.search).get('view')
+    // A shared view: its filters, laid out afresh once the graph has drawn
+    if (viewById(shared)) {
+      Object.assign(state, viewFilters(viewById(shared)!))
+      state.viewRequest++
+    }
     selectFromLocation()
     window.addEventListener('popstate', selectFromLocation)
     window.addEventListener('hashchange', selectFromLocation)
@@ -686,6 +788,8 @@ export function useGraph() {
     select,
     pickNode,
     randomNodeId,
+    applyView,
+    activeView,
     loadFlags,
     openFlags,
     flagsFor,
