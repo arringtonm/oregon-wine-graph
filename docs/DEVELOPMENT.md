@@ -197,6 +197,8 @@ Pages about people and places not yet in the graph are ranked with `npm run disc
 
 ## App structure
 
+Before committing a change readers will see, run the UX audit in `.claude/skills/ux-audit/` (Nielsen Norman Group heuristics, visual hierarchy, icon usability and severity ratings, against the site's baseline and recorded design decisions). Its `capture.sh` screenshots the production build at every width in light and dark.
+
 - `src/composables/useGraph.ts`: shared state, filters and derived views
 - `src/components/GraphCanvas.vue`: the Cytoscape.js graph, toolbar and placement logic
 - `src/components/GraphControls.vue`: search, filters and the question box

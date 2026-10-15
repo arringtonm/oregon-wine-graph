@@ -138,7 +138,13 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
           <span aria-hidden="true">?</span>
         </button>
       </PopoverTrigger>
-      <PopoverContent class="guide__panel" align="end" :side-offset="4" aria-labelledby="controls-guide-heading">
+      <PopoverContent
+        class="guide__panel"
+        align="end"
+        :side-offset="4"
+        :collision-padding="12"
+        aria-labelledby="controls-guide-heading"
+      >
         <header class="guide__header">
           <h2 id="controls-guide-heading">{{ touchOnly ? 'Touch controls' : 'Controls' }}</h2>
           <span class="guide__platform">{{ touchOnly ? 'Phone or tablet' : mac ? 'Mac' : 'Windows or Linux' }}</span>
@@ -224,9 +230,9 @@ kbd {
 .guide__panel {
   display: flex;
   flex-direction: column;
-  width: 30rem;
-  max-width: 100%;
-  max-height: min(75vh, 40rem);
+  /* Never wider or taller than the screen leaves (it ran off phones at a fixed 30rem) */
+  width: min(30rem, calc(100vw - 2rem));
+  max-height: min(var(--reka-popover-content-available-height, 75vh), 40rem);
   z-index: 30;
   border: 1px solid var(--border-strong);
   border-radius: 8px;
