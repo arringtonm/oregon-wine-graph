@@ -21,7 +21,7 @@ Fix severity 3–4 findings that don't conflict with a recorded decision. Report
    - the graph (nodes, count, About);
    - the list view;
    - the detail panel: empty, a record, a long record (`temperance-hill-vineyard`), admin rows;
-   - popovers: Controls, History, Guides (views and Ask), verification, Flag, About, the verified "i";
+   - popovers: Controls, History, Guides, the search box's Ask answer, verification, Flag, About, the verified "i";
    - hover cards, the busy overlay, the record pages for search engines.
 2. **Capture.** Run `.claude/skills/ux-audit/capture.sh [out-dir]` for the static states:
    - widths 1512, 1024, 820, 393 and 360;
@@ -33,7 +33,7 @@ Fix severity 3–4 findings that don't conflict with a recorded decision. Report
 
    Limits of the captures:
    - Headless Chrome won't lay a page out narrower than 500px, so the script puts phone widths in an exact-width frame.
-   - In that frame the graph isn't drawn and the lazily loaded question box may be missing.
+   - In that frame the graph isn't drawn and nothing async is missing now that Ask lives in search, but check the Ask row needs the question service (dev server or VITE_ASK_URL).
    - Check those at phone width in the real browser instead: an exact-width iframe on the preview server (`npx vite preview --port 5191`).
 3. **Evaluate** each capture against the checklists below: heuristics, hierarchy, icons, targets.
 4. **Rate** each finding 0–4 (NN/g):
@@ -149,7 +149,8 @@ From [Icon Usability](https://www.nngroup.com/articles/icon-usability/):
   | Sidebar | toolbar, desktop | – | Tip | "Filters" |
   | Funnel | toolbar, ≤600px | "Filters" above 600px | – | via text |
   | Magnifier | search | placeholder "Search" | – | "Search people and places" |
-  | Signpost | Guides menu (guided views, Ask) | "Guides", "Guides: <view>" on desktop | – | via text |
+  | Signpost | Guides menu (guided views) | "Guides", "Guides: <view>" on desktop | – | via text |
+  | Speech bubble | the search results' "Ask: …" row | "Ask: “<text>”" | – | via text |
   | ‹ › | Back, Forward | – | Tip | "Back", "Forward" |
   | Clock + chevron | History | – | data-tip | "History" |
   | Dice | Random (key R) | – | Tip | "Random person or place"; tooltip: a cellar phrase, then "(Select random person or place)" |
@@ -205,7 +206,8 @@ Rate a tension with one of these, and leave the call to him:
   - no type line under the name.
 - **Start panel:** "Ways to explore", then Recently viewed (saved in the browser). The random button there went (15 Oct): it vanished once a record opened. The toolbar's dice is the one random control; its tooltip opens with a cellar phrase (`RANDOM_INVITES`), new after each roll, then "(Select random person or place)".
 - **Reset** sits in the history group, between the History menu and the dice, not with zoom and Fit: it changes the filters and selection, not the framing (15 Oct).
-- **Guides:** the toolbar's Ask became Guides, holding curated views (graph/views.ts) above the question box; the name is Michael's choice over "Explore" and "Smart" (15 Oct).
+- **Guides:** the toolbar's Ask became Guides, holding curated views (graph/views.ts); the name is Michael's choice over "Explore" and "Smart" (15 Oct).
+- **Search and Ask are one box** (15 Oct, Michael's choice): an "Ask: …" row joins the results, first when the text reads as a question or nothing matches, otherwise last; its answer opens under the box.
 - **Theme switch:** two glasses side by side, a Chardonnay for light and a red for dark, with a neutral slider behind the one showing (15 Oct).
 - **Graph:** the count ("1,235 people and places · 1,909 connections") in the bottom-left corner; About is an "i" in the bottom-right; the vineyard green is olive.
 - **Busy overlay:** cellar phrases (`BUSY_PHRASES`); Random pauses about 0.9s.

@@ -78,13 +78,29 @@ describe('search combobox', () => {
     const input = wrapper.get('input[role="combobox"]')
     await input.setValue('David Lett')
     await flushPromises()
-    await key(input.element, 'ArrowDown')
+    // The first result is highlighted as the list opens; the Ask row comes after it
     const requests = state.focusDetailsRequest
 
     await key(input.element, 'Enter')
     expect(state.selectedId).toBe('david-lett')
     expect(state.focusDetailsRequest).toBe(requests + 1)
     expect((input.element as HTMLInputElement).value).toBe('')
+    wrapper.unmount()
+  })
+
+  it('offers to ask the text as a question, first when it reads as one', async () => {
+    const wrapper = mount(SearchBox, { attachTo: document.body })
+    const input = wrapper.get('input[role="combobox"]')
+    await input.setValue('David Lett')
+    await flushPromises()
+    let options = [...document.querySelectorAll('.search-results__option')].map((option) => option.textContent?.trim())
+    expect(options[0]).toContain('David Lett')
+    expect(options.at(-1)).toBe('Ask: “David Lett”')
+    await input.setValue('who founded eyrie?')
+    await flushPromises()
+    options = [...document.querySelectorAll('.search-results__option')].map((option) => option.textContent?.trim())
+    expect(options[0]).toBe('Ask: “who founded eyrie?”')
+    await key(input.element, 'Escape')
     wrapper.unmount()
   })
 
@@ -155,10 +171,18 @@ describe('filter drawer', () => {
     const wrapper = mountControls()
     state.filtersOpen = true
     await flushPromises()
+    // At the start there's nothing to reset: marked unavailable, and pressing it does nothing
     const requests = state.resetRequest
+    expect(wrapper.get('.controls__reset').attributes('aria-disabled')).toBe('true')
+    await wrapper.get('.controls__reset').trigger('click')
+    expect(state.resetRequest).toBe(requests)
+    state.nodeTypes.person = false
+    await flushPromises()
+    expect(wrapper.get('.controls__reset').attributes('aria-disabled')).toBeUndefined()
     await wrapper.get('.controls__reset').trigger('click')
     expect(state.resetRequest).toBe(requests + 1)
     expect(state.filtersOpen).toBe(false)
+    state.nodeTypes.person = true
     wrapper.unmount()
   })
 
@@ -170,8 +194,6 @@ describe('filter drawer', () => {
     await flushPromises()
     const input = search.get('input[role="combobox"]')
     await input.setValue('Jason Lett')
-    await flushPromises()
-    input.element.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowDown', bubbles: true, cancelable: true }))
     await flushPromises()
     input.element.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true, cancelable: true }))
     await flushPromises()

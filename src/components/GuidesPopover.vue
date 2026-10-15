@@ -1,24 +1,15 @@
 <script setup lang="ts">
 import { PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'reka-ui'
-import { defineAsyncComponent, ref } from 'vue'
+import { ref } from 'vue'
 import { useGraph } from '../composables/useGraph'
 import { VIEWS } from '../graph/views'
 import Chevron from './Chevron.vue'
 
 // The toolbar's Guides menu: curated views of the graph (graph/views.ts), each setting
-// several filters at once, and, where the question service is set up, a question box.
-// Choosing a view or a record in an answer closes the menu.
-const { pickNode, applyView, activeView } = useGraph()
+// several filters at once. Questions are asked from the search box. Choosing a view closes
+// the menu
+const { applyView, activeView } = useGraph()
 const open = ref(false)
-
-// The question box needs the question service: the dev server, or a build that names it
-const AskQuestion =
-  import.meta.env.DEV || import.meta.env.VITE_ASK_URL ? defineAsyncComponent(() => import('./AskQuestion.vue')) : null
-
-function pick(id: string) {
-  pickNode(id)
-  open.value = false
-}
 
 function choose(id: string) {
   applyView(id)
@@ -48,13 +39,16 @@ function choose(id: string) {
                 :aria-pressed="activeView?.id === view.id"
                 @click="choose(view.id)"
               >
+                <!-- A check, centred at the left, marks the view showing -->
+                <svg v-if="activeView?.id === view.id" class="guides-panel__check" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="m4.5 10.5 3.5 3.5 7.5-8" />
+                </svg>
                 <span class="guides-panel__title">{{ view.title }}</span>
                 <span class="guides-panel__blurb">{{ view.blurb }}</span>
               </button>
             </li>
           </ul>
         </section>
-        <component :is="AskQuestion" v-if="AskQuestion" class="guides-panel__ask" @pick="pick" />
       </PopoverContent>
     </PopoverPortal>
   </PopoverRoot>
@@ -151,11 +145,13 @@ function choose(id: string) {
 }
 
 .guides-panel__view {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
   width: 100%;
-  padding: 0.45rem 0.5rem;
+  /* Room at the left for the active view's check */
+  padding: 0.45rem 0.5rem 0.45rem 1.75rem;
   border: 0;
   border-radius: var(--radius-sm);
   background: none;
@@ -169,10 +165,23 @@ function choose(id: string) {
   background: var(--wash);
 }
 
-/* The view showing: a bar in the accent at its left */
+/* The view showing: the hover's wash, and a check */
 .guides-panel__view[aria-pressed='true'] {
   background: var(--wash);
-  box-shadow: inset 3px 0 0 var(--fill);
+}
+
+.guides-panel__check {
+  position: absolute;
+  top: 50%;
+  left: 0.4rem;
+  width: 1rem;
+  height: 1rem;
+  transform: translateY(-50%);
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .guides-panel__title {
@@ -183,11 +192,5 @@ function choose(id: string) {
   color: var(--text-secondary);
   font-size: 0.875rem;
   line-height: 1.35;
-}
-
-.guides-panel__ask {
-  margin-top: 1rem;
-  padding-top: 0.875rem;
-  border-top: 1px solid var(--border);
 }
 </style>

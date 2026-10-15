@@ -66,6 +66,10 @@ const shownCount = computed(() => {
 // Reset shows while it lays the graph out), so the roll reads as a roll. Focus stays on the
 // button, so it can be pressed again; the selection is announced as any selection is
 const RANDOM_PAUSE_MS = 900
+// Reset has nothing to do at the start: default filters, nothing selected. It's marked
+// unavailable (aria-disabled) rather than disabled, so pressing it keeps keyboard focus there
+const atStart = computed(() => isDefaultView.value && !state.selectedId)
+
 // The dice's tooltip opens with a label from the cellar, new after each roll
 const invite = ref(pickInvite())
 
@@ -926,7 +930,14 @@ watch(
         <!-- Reset sits with the ways of moving between records, not with zoom and Fit: it
              changes the filters and selection, not the framing. Smaller screens: it moves to
              the filter drawer -->
-        <button v-if="!compact" v-show="!state.listView" type="button" aria-describedby="reset-description" @click="reset">
+        <button
+          v-if="!compact"
+          v-show="!state.listView"
+          type="button"
+          aria-describedby="reset-description"
+          :aria-disabled="atStart || undefined"
+          @click="atStart || reset()"
+        >
           Reset
         </button>
         <Tip :label="`${invite} (Select random person or place)`">
@@ -1094,14 +1105,15 @@ watch(
   pointer-events: auto;
 }
 
-.graph-canvas__toolbar button:hover:not(:disabled) {
+.graph-canvas__toolbar button:hover:not(:disabled, [aria-disabled='true']) {
   background: var(--wash);
   color: var(--text-primary);
 }
 
 /* Not available yet (no history to go back or forward through): the button keeps its
    frosted background, like its neighbours, and only its symbol fades */
-.graph-canvas__toolbar button:disabled {
+.graph-canvas__toolbar button:disabled,
+.graph-canvas__toolbar button[aria-disabled='true'] {
   color: color-mix(in srgb, var(--text-secondary) 45%, transparent);
   cursor: default;
 }

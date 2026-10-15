@@ -9,7 +9,10 @@ import Chevron from './Chevron.vue'
 import VerifiedInfo from './VerifiedInfo.vue'
 import NodeGlyph from './NodeGlyph.vue'
 
-const { state, avas, activeView, resetFilters } = useGraph()
+const { state, avas, activeView, resetFilters, isDefaultView } = useGraph()
+
+// Reset has nothing to do at the start: default filters, nothing selected
+const atStart = computed(() => isDefaultView.value && !state.selectedId)
 
 // A guided view's focus, while one is set: shown above the filters, removable
 const focusLabel = computed(() => viewById(state.focus)?.focus?.label)
@@ -171,7 +174,14 @@ function onDrawerKey(event: KeyboardEvent) {
     </fieldset>
 
     <div class="controls__foot">
-      <button v-if="compact" type="button" class="controls__reset" aria-describedby="reset-description" @click="resetGraph">
+      <button
+        v-if="compact"
+        type="button"
+        class="controls__reset"
+        aria-describedby="reset-description"
+        :aria-disabled="atStart || undefined"
+        @click="atStart || resetGraph()"
+      >
         Reset graph
       </button>
       <p class="controls__build">
@@ -401,7 +411,6 @@ legend {
   padding: 0.5rem 0.75rem;
   border-radius: var(--radius-sm);
   background: var(--wash);
-  box-shadow: inset 3px 0 0 var(--fill);
   font-size: 0.875rem;
 }
 
@@ -429,6 +438,12 @@ legend {
   color: inherit;
   font: inherit;
   cursor: pointer;
+}
+
+/* Nothing to reset: marked unavailable rather than disabled, so it keeps focus */
+.controls__reset[aria-disabled='true'] {
+  color: color-mix(in srgb, var(--text-secondary) 45%, transparent);
+  cursor: default;
 }
 </style>
 

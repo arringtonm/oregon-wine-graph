@@ -327,11 +327,11 @@ const canFlag = flagsAvailable()
       <h3>Ways to explore</h3>
       <ul class="detail__ways">
         <li><strong>Click</strong> a person or place on the graph to open it.</li>
-        <li><strong>Search</strong> for a name you know, like Eyrie or David Lett.</li>
         <li>
-          <strong>Guides</strong> offers curated views, like Southern Oregon or Sparkling, and answers questions
-          such as “Who founded Adelsheim Vineyard?”
+          <strong>Search</strong> for a name you know, like Eyrie or David Lett, or ask a question, such as
+          “Who founded Adelsheim Vineyard?”
         </li>
+        <li><strong>Guides</strong> offers curated views, like Southern Oregon or Sparkling.</li>
         <li><strong>Filter</strong> by people, wineries, kinds of connection or AVA.</li>
         <li><strong>List view</strong> shows everything by name, for reading rather than roaming.</li>
         <li><strong>Roll the dice</strong> in the toolbar, or press R, for a random person or place.</li>
