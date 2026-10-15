@@ -74,6 +74,8 @@ onBeforeUnmount(() => {
       <pre v-if="state.error" class="app__error" role="alert">{{ state.error }}</pre>
       <main v-else-if="state.graph" class="app__main" :class="{ 'app__main--collapsed': state.filtersCollapsed }">
         <GraphControls />
+        <!-- Dims the graph beside the open drawer; a tap on it closes the drawer -->
+        <div v-if="drawerModal" class="app__scrim" aria-hidden="true" @click="state.filtersOpen = false"></div>
         <GraphCanvas :inert="drawerModal" />
         <DetailPanel :inert="drawerModal" />
       </main>
@@ -215,6 +217,13 @@ onBeforeUnmount(() => {
     --inset-right: 0px;
     grid-template-columns: minmax(0, 1fr);
   }
+}
+
+.app__scrim {
+  position: absolute;
+  z-index: 6;
+  inset: var(--inset-top) 0 0;
+  background: rgba(10, 4, 6, 0.4);
 }
 
 @media (max-width: 600px) {

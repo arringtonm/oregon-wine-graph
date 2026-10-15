@@ -51,6 +51,13 @@ watch(
   },
 )
 
+// Smaller screens only: Reset lives here rather than on the crowded toolbar. The drawer
+// closes so the fresh layout can be seen
+function resetGraph() {
+  state.resetRequest++
+  state.filtersOpen = false
+}
+
 function onDrawerKey(event: KeyboardEvent) {
   if (event.key === 'Escape' && isDialog.value) state.filtersOpen = false
 }
@@ -123,9 +130,14 @@ function onDrawerKey(event: KeyboardEvent) {
       <Check v-model="state.verifiedOnly">Verified records only</Check>
     </fieldset>
 
-    <p class="controls__count" role="status">
-      {{ visibleNodes.length }} nodes, {{ visibleEdges.length }} connections shown
-    </p>
+    <div class="controls__foot">
+      <p class="controls__count" role="status">
+        {{ visibleNodes.length }} nodes, {{ visibleEdges.length }} connections shown
+      </p>
+      <button v-if="compact" type="button" class="controls__reset" aria-describedby="reset-description" @click="resetGraph">
+        Reset graph
+      </button>
+    </div>
   </aside>
 </template>
 
@@ -184,7 +196,8 @@ function onDrawerKey(event: KeyboardEvent) {
 @media (max-width: 1024px) {
   .controls {
     position: absolute;
-    z-index: 3;
+    /* Above its backdrop and the graph's toolbar (see GraphCanvas for the layers) */
+    z-index: 7;
     top: var(--inset-top, 0px);
     bottom: 0;
     left: 0;
@@ -193,12 +206,24 @@ function onDrawerKey(event: KeyboardEvent) {
     box-shadow: 4px 0 16px rgba(0, 0, 0, 0.2);
   }
 
+  /* A dialog here: solid enough that the toolbar behind doesn't show through */
   .controls--open {
     display: flex;
+    background: color-mix(in srgb, var(--surface-raised) 94%, transparent);
   }
 
   .controls__close {
     display: block;
+  }
+}
+
+/* Phones: the drawer takes the full width, like the details sheet */
+@media (max-width: 600px) {
+  .controls {
+    right: 0;
+    width: auto;
+    border-right: 0;
+    box-shadow: none;
   }
 }
 
@@ -281,10 +306,30 @@ legend {
   border-radius: 50%;
 }
 
+.controls__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 0.75rem;
+  margin-top: auto;
+}
+
 .controls__count {
-  margin: auto 0 0;
+  margin: 0;
   color: var(--text-secondary);
   font-size: 0.875rem;
+}
+
+.controls__reset {
+  min-height: 36px;
+  padding: 0 0.75rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
 }
 </style>
 
@@ -325,7 +370,10 @@ legend {
   cursor: pointer;
 }
 
+/* Padded so the boxes' focus rings aren't clipped by the scrolling edge */
 .ava-picker__list {
+  margin: -3px -4px;
+  padding: 3px 4px;
   overflow-y: auto;
 }
 </style>

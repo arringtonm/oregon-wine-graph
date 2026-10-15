@@ -57,15 +57,28 @@ function checkedToken(limit = 30_000): Promise<string> {
   })
 }
 
+// The thanks closes itself after a while; it has already been announced (aria-live)
+const THANKS_MS = 10_000
+let thanksTimer: ReturnType<typeof setTimeout> | undefined
+const stopThanksTimer = () => clearTimeout(thanksTimer)
+watch(sent, (isSent) => {
+  stopThanksTimer()
+  if (isSent) thanksTimer = setTimeout(() => (open.value = false), THANKS_MS)
+})
+
 // A fresh form each time it opens
 watch(open, async (isOpen) => {
+  stopThanksTimer()
   if (!isOpen) return removeTurnstile()
   Object.assign(form, { reason: '', note: '', sourceUrl: '', website: '' })
   sent.value = false
   error.value = ''
   await startCheck()
 })
-onBeforeUnmount(() => removeTurnstile())
+onBeforeUnmount(() => {
+  removeTurnstile()
+  stopThanksTimer()
+})
 
 async function send() {
   const input: FlagInput = { recordKind: props.kind, recordId: props.id, recordLabel: props.label, ...form }

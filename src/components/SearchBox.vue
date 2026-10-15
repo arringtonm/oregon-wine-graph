@@ -134,9 +134,11 @@ function onEscape(event: KeyboardEvent) {
   font: inherit;
 }
 
+/* Smaller screens: as wide as the toolbar's first row allows (see GraphCanvas) */
 @media (max-width: 1024px) {
   .search__input {
-    width: 12rem;
+    width: 100%;
+    min-width: 0;
     height: 40px;
   }
 }

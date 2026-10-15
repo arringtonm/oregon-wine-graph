@@ -70,6 +70,13 @@ function pick(id: string) {
     height: 40px;
   }
 }
+
+/* Phones: no chevron, leaving the search box more of the row */
+@media (max-width: 600px) {
+  .ask-toggle :deep(.chevron) {
+    display: none;
+  }
+}
 </style>
 
 <style>

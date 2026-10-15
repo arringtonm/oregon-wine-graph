@@ -95,7 +95,7 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
     <PopoverRoot v-model:open="open">
       <PopoverTrigger as-child>
         <button type="button" class="guide__toggle" aria-keyshortcuts="?">
-          <kbd aria-hidden="true">?</kbd> Controls<Chevron />
+          <kbd aria-hidden="true">?</kbd> <span class="guide__label">Controls</span><Chevron />
         </button>
       </PopoverTrigger>
       <PopoverContent class="guide__panel" align="end" :side-offset="4" aria-labelledby="controls-guide-heading">
@@ -126,15 +126,13 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
 
 <style scoped>
 .guide {
-  position: absolute;
-  z-index: 4;
-  top: calc(var(--inset-top, 0px) + 12px);
-  right: calc(var(--inset-right, 0px) + 12px);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 4px;
-  max-width: calc(100% - 24px);
+  max-width: 100%;
+  /* The column it sits in lets taps through to the graph */
+  pointer-events: auto;
 }
 
 .guide__toggle {
@@ -170,8 +168,25 @@ kbd {
 }
 
 @media (max-width: 1024px) {
+  /* Just the ? key, the width of the zoom column below it; still named "Controls" */
   .guide__toggle {
+    justify-content: center;
+    width: 40px;
     height: 40px;
+    padding: 0;
+  }
+
+  .guide__toggle .chevron {
+    display: none;
+  }
+
+  .guide__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
   }
 }
 </style>

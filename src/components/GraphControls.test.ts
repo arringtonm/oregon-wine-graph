@@ -146,6 +146,22 @@ describe('filter drawer', () => {
     wrapper.unmount()
   })
 
+  it('offers Reset on small screens only, asking the graph to reset and closing', async () => {
+    const wide = mountControls()
+    expect(wide.find('.controls__reset').exists()).toBe(false)
+    wide.unmount()
+
+    compact = true
+    const wrapper = mountControls()
+    state.filtersOpen = true
+    await flushPromises()
+    const requests = state.resetRequest
+    await wrapper.get('.controls__reset').trigger('click')
+    expect(state.resetRequest).toBe(requests + 1)
+    expect(state.filtersOpen).toBe(false)
+    wrapper.unmount()
+  })
+
   it('closes when a search result is picked, leaving focus off the toggle', async () => {
     compact = true
     const wrapper = mountControls()

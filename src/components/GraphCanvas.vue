@@ -25,6 +25,7 @@ import GraphList from './GraphList.vue'
 import NodeGlyph from './NodeGlyph.vue'
 import SearchBox from './SearchBox.vue'
 import Tip from './Tip.vue'
+import ZoomControls from './ZoomControls.vue'
 
 cytoscape.use(fcose)
 
@@ -71,6 +72,15 @@ const knownPositions = {
 const positionsNow = () => knownPositions[state.categories.geography ? 'regions' : 'flat']
 
 const container = ref<HTMLDivElement>()
+const root = ref<HTMLDivElement>()
+const toolbar = ref<HTMLDivElement>()
+
+// Where the toolbar ends, however many rows it wraps to; the list view starts below it
+let toolbarObserver: ResizeObserver | undefined
+function measureToolbar() {
+  if (!root.value || !toolbar.value) return
+  root.value.style.setProperty('--toolbar-bottom', `${toolbar.value.offsetTop + toolbar.value.offsetHeight}px`)
+}
 const historyOpen = ref(false)
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
 // Animation length, or none for readers who ask for reduced motion
@@ -108,6 +118,9 @@ let layout: cytoscape.Layouts | undefined
 const darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
 // Matches the breakpoint where the detail panel becomes a bottom sheet
 const compactQuery = window.matchMedia('(max-width: 1024px)')
+// Where the zoom buttons go: the toolbar when wide, a column down the right edge when compact
+const compact = ref(compactQuery.matches)
+const onCompactChange = () => (compact.value = compactQuery.matches)
 
 function token(name: string): string {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim()
@@ -640,10 +653,15 @@ function centerOnSelection() {
     return
   }
   if (compactQuery.matches) {
-    // The detail sheet covers the lower part of the graph, so aim above it
+    // Aim between the toolbar and the detail sheet, which covers the lower part of the graph
+    const area = visibleArea()
+    const canvasTop = container.value!.getBoundingClientRect().top
+    const sheet = document.getElementById('details')?.getBoundingClientRect()
+    // Before the sheet first opens, assume its full height (45% of the screen)
+    const bottom = sheet && sheet.height > 0 ? sheet.top - canvasTop : cy.height() * 0.55
     const rendered = selected.renderedPosition()
     cy.animate(
-      { panBy: { x: cy.width() / 2 - rendered.x, y: cy.height() * 0.28 - rendered.y } },
+      { panBy: { x: area.left + area.width / 2 - rendered.x, y: (area.top + bottom) / 2 - rendered.y } },
       { duration: motion(300) },
     )
     return
@@ -701,6 +719,11 @@ onMounted(() => {
 
   // Capture phase, so this runs instead of Cytoscape's own wheel-to-zoom handler
   container.value!.addEventListener('wheel', onWheel, { capture: true, passive: false })
+  compactQuery.addEventListener('change', onCompactChange)
+  if (window.ResizeObserver && toolbar.value) {
+    toolbarObserver = new ResizeObserver(measureToolbar)
+    toolbarObserver.observe(toolbar.value)
+  }
   darkQuery.addEventListener('change', applyTheme)
   document.addEventListener('keydown', onZoomKey)
   waitForFonts().then(syncElements)
@@ -718,12 +741,16 @@ async function waitForFonts() {
 
 onBeforeUnmount(() => {
   container.value?.removeEventListener('wheel', onWheel, { capture: true })
+  compactQuery.removeEventListener('change', onCompactChange)
+  toolbarObserver?.disconnect()
   darkQuery.removeEventListener('change', applyTheme)
   document.removeEventListener('keydown', onZoomKey)
   cy?.destroy()
 })
 
 watch([visibleNodes, visibleEdges], syncElements)
+// The filter drawer's Reset, on smaller screens
+watch(() => state.resetRequest, reset)
 watch(
   () => state.selectedId,
   () => {
@@ -734,7 +761,7 @@ watch(
 </script>
 
 <template>
-  <div class="graph-canvas">
+  <div ref="root" class="graph-canvas">
     <div
       ref="container"
       class="graph-canvas__stage"
@@ -747,14 +774,13 @@ watch(
       <strong>{{ tooltip.title }}</strong>
       <span v-if="tooltip.detail">{{ tooltip.detail }}</span>
     </div>
-    <ControlsGuide v-show="!state.listView" />
     <div v-if="arranging && !state.listView" class="graph-canvas__arranging" role="status">
       <span class="graph-canvas__arranging-card">
         <span class="graph-canvas__dots" aria-hidden="true"><i></i><i></i><i></i></span>
         Arranging the graph…
       </span>
     </div>
-    <div class="graph-canvas__toolbar" role="group" aria-label="Graph navigation">
+    <div ref="toolbar" class="graph-canvas__toolbar" role="group" aria-label="Graph navigation">
       <Tip :label="state.filtersCollapsed ? 'Show filters' : 'Hide filters'">
         <button
           id="sidebar-toggle"
@@ -781,10 +807,15 @@ watch(
         :aria-expanded="state.filtersOpen"
         @click="state.filtersOpen = !state.filtersOpen"
       >
-        Filters
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M3 4.5h14l-5.5 6.5v4.5l-3 1.5v-6z" />
+        </svg>
+        <span class="graph-canvas__filters-label">Filters</span>
       </button>
       <SearchBox />
       <AskPopover v-if="AskPopover" />
+      <!-- Smaller screens: the guide's ? ends the first row of the bar -->
+      <ControlsGuide v-if="compact" v-show="!state.listView" />
       <div class="graph-canvas__group">
         <Tip label="Back to the previous selection">
           <button type="button" aria-label="Back" :disabled="!canGoBack" @click="goBack">
@@ -799,7 +830,11 @@ watch(
         <DropdownMenuRoot v-model:open="historyOpen" :modal="false">
           <DropdownMenuTrigger as-child>
             <button id="history-toggle" type="button" class="graph-canvas__history-toggle" :disabled="historyEntries.length === 0">
-              History<Chevron />
+              <svg class="graph-canvas__history-icon" viewBox="0 0 20 20" aria-hidden="true">
+                <circle cx="10" cy="10" r="7" />
+                <path d="M10 6v4l2.5 2" />
+              </svg>
+              <span class="graph-canvas__history-label">History</span><Chevron />
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuPortal>
@@ -850,18 +885,14 @@ watch(
         <ToggleGroupItem value="graph">Graph</ToggleGroupItem>
         <ToggleGroupItem value="list">List</ToggleGroupItem>
       </ToggleGroupRoot>
-      <div v-show="!state.listView" class="graph-canvas__group">
-        <Tip label="Zoom in">
-          <button type="button" aria-label="Zoom in" @click="zoomBy(1.3)"><span aria-hidden="true">+</span></button>
-        </Tip>
-        <Tip label="Zoom out">
-          <button type="button" aria-label="Zoom out" @click="zoomBy(1 / 1.3)"><span aria-hidden="true">−</span></button>
-        </Tip>
-        <button type="button" aria-describedby="fit-description" @click="fitAnimated">Fit</button>
-        <button type="button" aria-describedby="reset-description" @click="reset">Reset</button>
-      </div>
-      <span id="fit-description" class="visually-hidden">Fit the whole graph in view</span>
+      <!-- Smaller screens: Reset moves to the filter drawer -->
+      <ZoomControls v-show="!state.listView" class="graph-canvas__zoom" @zoom="zoomBy" @fit="fitAnimated">
+        <button v-if="!compact" type="button" aria-describedby="reset-description" @click="reset">Reset</button>
+      </ZoomControls>
       <span id="reset-description" class="visually-hidden">Clear filters and selection, and lay the graph out again</span>
+    </div>
+    <div v-if="!compact" class="graph-canvas__side">
+      <ControlsGuide v-show="!state.listView" />
     </div>
   </div>
 </template>
@@ -873,6 +904,19 @@ watch(
   background: var(--surface);
 }
 
+/* Layers, shared with App.vue, GraphControls and DetailPanel: the graph and list (auto),
+   the sheet (2), the arranging overlay (3), the toolbar and the guide (4), tooltips (5),
+   then on smaller screens the drawer's backdrop (6) and the drawer (7) */
+
+/* Wide screens: the controls guide, top right */
+.graph-canvas__side {
+  position: absolute;
+  z-index: 4;
+  top: calc(var(--inset-top, 0px) + 12px);
+  right: calc(var(--inset-right, 0px) + 12px);
+  max-width: calc(100% - 24px);
+}
+
 .graph-canvas__stage {
   position: absolute;
   inset: 0;
@@ -881,13 +925,14 @@ watch(
 .graph-canvas__list {
   position: absolute;
   inset: 0 var(--inset-right, 0px) 0 var(--inset-left, 0px);
-  padding-top: calc(var(--inset-top, 0px) + 4.5rem);
+  padding-top: calc(var(--toolbar-bottom, calc(var(--inset-top, 0px) + 3.75rem)) + 0.75rem);
   overflow-y: auto;
   background: var(--surface);
 }
 
 .graph-canvas__tooltip {
   position: absolute;
+  z-index: 5;
   transform: translate(-50%, -100%);
   display: flex;
   flex-direction: column;
@@ -911,6 +956,7 @@ watch(
 
 .graph-canvas__toolbar {
   position: absolute;
+  z-index: 4;
   top: calc(var(--inset-top, 0px) + 12px);
   left: calc(var(--inset-left, 0px) + 12px);
   /* Room for the controls guide's button in the top-right corner */
@@ -953,6 +999,17 @@ watch(
 .graph-canvas__toolbar .graph-canvas__history-toggle {
   display: inline-flex;
   align-items: center;
+}
+
+.graph-canvas__history-icon {
+  display: none;
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 
@@ -1056,6 +1113,15 @@ watch(
   border-radius: 6px;
 }
 
+.graph-canvas__filters svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
 /* Buttons in a joined group share borders; the focused one rises above its neighbours so
    its whole focus ring shows */
 .graph-canvas__group button:focus-visible,
@@ -1144,7 +1210,9 @@ watch(
 
 @media (max-width: 1024px) {
   .graph-canvas__filters {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
   }
 
   /* Tablets use the drawer and its "Search & filters" button instead */
@@ -1152,9 +1220,93 @@ watch(
     display: none;
   }
 
+  /* One solid bar across the top holding every control, so nothing behind it can be
+     hovered or tapped */
+  .graph-canvas__toolbar {
+    top: var(--inset-top, 0px);
+    right: 0;
+    left: 0;
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    background: var(--frost);
+    -webkit-backdrop-filter: var(--frost-blur);
+    backdrop-filter: var(--frost-blur);
+    pointer-events: auto;
+  }
+
+  /* The toolbar's buttons are frosted already; inside the bar they'd blur it twice */
+  .graph-canvas__toolbar button,
+  .graph-canvas__toolbar .graph-canvas__view {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
   .graph-canvas__toolbar button {
     min-width: 40px;
     height: 40px;
+  }
+
+  /* 32px inside the track, so the switch is as tall as the buttons beside it */
+  .graph-canvas__toolbar .graph-canvas__view button {
+    height: 32px;
+  }
+
+  /* The search box fills what the first row leaves */
+  .graph-canvas__toolbar :deep(.search) {
+    flex: 1 1 8rem;
+    min-width: 8rem;
+  }
+}
+
+/* Phones: the history menu shows a clock, so the second row holds back, forward, history,
+   random, the view switch and zoom, with the switch centred between them */
+@media (max-width: 600px) {
+  .graph-canvas__history-icon {
+    display: block;
+  }
+
+  /* Just the funnel; still named "Filters" */
+  .graph-canvas__toolbar .graph-canvas__filters {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .graph-canvas__filters-label,
+  .graph-canvas__history-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .graph-canvas__toolbar .graph-canvas__view {
+    margin-inline: auto;
+  }
+
+  .graph-canvas__toolbar .graph-canvas__view button {
+    min-width: 0;
+    padding: 0 0.6rem;
+  }
+}
+
+/* Narrow phones (an iPhone 15 is 393px): Random, a nice-to-have, gives way so the second
+   row still fits; History becomes the group's last button. Fit gives way below 440px (ZoomControls) */
+@media (max-width: 399px) {
+  .graph-canvas__toolbar .graph-canvas__random {
+    display: none;
+  }
+
+  .graph-canvas__toolbar .graph-canvas__history-toggle {
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+}
+
+/* Small Android phones (360px): the clock without its menu arrow, so the row still fits */
+@media (max-width: 379px) {
+  .graph-canvas__history-toggle :deep(.chevron) {
+    display: none;
   }
 }
 </style>

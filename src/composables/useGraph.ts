@@ -129,6 +129,8 @@ const state = reactive({
   announcement: '',
   // Bumped to ask the detail panel to move keyboard focus to its heading
   focusDetailsRequest: 0,
+  // Bumped to ask the graph to reset: default filters, nothing selected, fresh layout
+  resetRequest: 0,
 })
 
 const SINGULAR_TYPE: Record<NodeType, string> = {
