@@ -380,6 +380,16 @@ function showSelection(id: string | null) {
 // Selecting a node adds it to the history, dropping anything "forward" of the current position.
 // With `focusDetails`, keyboard focus moves to the detail panel's heading, for selections
 // made from a list or a link rather than on the canvas.
+// A random node among those showing, skipping anything already visited this session; once
+// everything showing has been visited, any but the current one. Null when nothing qualifies
+function randomNodeId(): string | null {
+  const visited = new Set(state.history)
+  const showing = visibleNodes.value.filter((node) => node.id !== state.selectedId)
+  const fresh = showing.filter((node) => !visited.has(node.id))
+  const pool = fresh.length > 0 ? fresh : showing
+  return pool.length > 0 ? pool[Math.floor(Math.random() * pool.length)].id : null
+}
+
 // Choosing a node from search or an answer: an AVA is only drawn with the AVA regions
 // layer, so that turns on; focus moves to the node's details; the tablet drawer closes
 function pickNode(id: string) {
@@ -594,6 +604,7 @@ export function useGraph() {
     search,
     select,
     pickNode,
+    randomNodeId,
     announce,
     canGoBack,
     canGoForward,

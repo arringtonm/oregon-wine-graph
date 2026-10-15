@@ -121,7 +121,8 @@ function onEscape(event: KeyboardEvent) {
 }
 
 .search__input {
-  width: 12rem;
+  /* Narrow enough for the toolbar to stay on one row; results open wider (16rem or more) */
+  width: 10rem;
   height: 36px;
   padding: 0 0.6rem 0 2rem;
   border: 1px solid var(--border-strong);

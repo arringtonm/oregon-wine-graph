@@ -48,7 +48,15 @@ const {
   goToHistory,
   historyEntries,
   isDefaultView,
+  randomNodeId,
 } = useGraph()
+
+// Rolls to a random node not yet visited. Focus stays on the button, so it can be pressed
+// again; the selection is announced as any selection is
+function goRandom() {
+  const id = randomNodeId()
+  if (id) select(id)
+}
 
 // The default view's layout, saved from the dev server and shipped with the data, so the
 // graph appears without laying it out again (a full layout freezes the page for 1–2s)
@@ -817,6 +825,18 @@ watch(
             </DropdownMenuContent>
           </DropdownMenuPortal>
         </DropdownMenuRoot>
+        <Tip label="Random person or place you haven't visited">
+          <button type="button" class="graph-canvas__random" aria-label="Random" @click="goRandom">
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <rect x="3" y="3" width="14" height="14" rx="3.2" />
+              <circle cx="7" cy="7" r="1.25" />
+              <circle cx="13" cy="7" r="1.25" />
+              <circle cx="10" cy="10" r="1.25" />
+              <circle cx="7" cy="13" r="1.25" />
+              <circle cx="13" cy="13" r="1.25" />
+            </svg>
+          </button>
+        </Tip>
       </div>
       <ToggleGroupRoot
         type="single"
@@ -894,7 +914,7 @@ watch(
   right: calc(var(--inset-right, 0px) + 9rem);
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   pointer-events: none;
 }
 
@@ -998,6 +1018,24 @@ watch(
   display: inline-grid;
   place-items: center;
   border-radius: var(--radius);
+}
+
+.graph-canvas__toolbar .graph-canvas__random {
+  display: inline-grid;
+  place-items: center;
+}
+
+.graph-canvas__random svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.graph-canvas__random circle {
+  fill: currentColor;
+  stroke: none;
 }
 
 .graph-canvas__sidebar-toggle svg {

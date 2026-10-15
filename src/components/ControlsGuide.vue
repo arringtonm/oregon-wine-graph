@@ -62,6 +62,7 @@ const sections = computed<Section[]>(() =>
           rows: [
             { action: 'Back and forward', ways: ['‹ / › buttons'] },
             { action: 'Earlier selections', ways: ['History menu'] },
+            { action: 'Somewhere new at random', ways: ['Dice button'] },
           ],
         },
         {
