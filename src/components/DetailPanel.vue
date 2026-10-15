@@ -328,14 +328,21 @@ const canFlag = flagsAvailable()
     <template v-else>
       <h2 ref="emptyHeading" tabindex="-1">Oregon wine, connected</h2>
       <p>
-        Select a person, winery or vineyard to see who founded it, who made the wine, where the fruit
-        came from and how its people are related.
+        The people, wineries and vineyards of Oregon wine: who founded what, who made the wine, where
+        the fruit came from and how its people are related.
       </p>
+      <h3>Ways to explore</h3>
+      <ul class="detail__ways">
+        <li><strong>Click</strong> a person or place on the graph to open it.</li>
+        <li><strong>Search</strong> for a name you know, like Eyrie or David Lett.</li>
+        <li><strong>Ask</strong> a question, such as “Who founded Adelsheim Vineyard?”</li>
+        <li><strong>Filter</strong> by people, wineries, kinds of connection or AVA.</li>
+        <li><strong>List view</strong> shows everything by name, for reading rather than roaming.</li>
+      </ul>
       <p class="detail__facts">
-        Scroll with two fingers to move around and pinch to zoom, or use the buttons on the graph.
-        Hover a line to read the connection.
+        Scroll with two fingers to move around and pinch to zoom. Press ? for all the controls.
       </p>
-      <!-- The same roll as the graph's Random button, with its short pause -->
+      <p class="detail__random-lead">Or pick one at random:</p>
       <!-- Its name starts with what it shows, so speech control can say the label -->
       <button
         type="button"
@@ -605,6 +612,27 @@ ul + .detail__verb {
   gap: 8px;
 }
 
+/* The empty panel's ways to start: a short list, each led by its action */
+.detail__ways {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-left: 1.1rem;
+  list-style: disc;
+}
+
+.detail__ways li {
+  display: list-item;
+}
+
+.detail__ways strong {
+  font-weight: 600;
+}
+
+.detail__random-lead {
+  margin-top: 0.4rem;
+}
+
 /* The empty panel's invitation to roll a random record: the panel's full width, the dice
    large beside a short label */
 .detail__random {
@@ -612,7 +640,6 @@ ul + .detail__verb {
   align-items: center;
   gap: 0.75rem;
   min-height: 3rem;
-  margin-top: 0.75rem;
   padding: 0.5rem 1rem;
   border: 1px solid var(--border-strong);
   border-radius: var(--radius);

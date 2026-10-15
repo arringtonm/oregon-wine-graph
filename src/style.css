@@ -40,8 +40,10 @@
   background: var(--page);
 }
 
+/* Dark: when the system prefers it, unless the reader chose light with the header's glass;
+   or when they chose dark (services/theme.ts). The two blocks hold the same tokens */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme='light']) {
     color-scheme: dark;
     /* Warm near-black with a faint red undertone; colour-blind separation 17 or more */
     --page: #140e10;
@@ -65,6 +67,31 @@
     --node-neutral: #a8a2b8;
     --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
   }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  /* Warm near-black with a faint red undertone; colour-blind separation 17 or more */
+  --page: #140e10;
+  --surface: #1d1518;
+  --surface-raised: #261c20;
+  --wash: rgba(255, 235, 240, 0.06);
+  --text-primary: #f3ece9;
+  --text-secondary: #c8babd;
+  --border: rgba(255, 230, 235, 0.1);
+  --border-strong: #5a4a4f;
+  --accent: #e58ba2;
+  --accent-contrast: #1d1518;
+  /* Lighter than light mode's burgundy, so a filled thumb stands out on the dark page */
+  --fill: #9b2d4f;
+  --on-fill: #fbeff2;
+  --danger: #f2b8b5;
+  --edge: #7e6f73;
+  --node-winery: #c94a70;
+  --node-vineyard: #8cc06a;
+  --node-person: #f0c45a;
+  --node-neutral: #a8a2b8;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
 *,

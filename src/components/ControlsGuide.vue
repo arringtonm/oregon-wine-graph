@@ -30,13 +30,31 @@ const sections = computed<Section[]>(() =>
           ],
         },
         {
-          title: 'Select',
+          title: 'Find',
           rows: [
-            { action: 'Select a person or place', ways: ['Tap node'] },
-            { action: 'Close the selection', ways: ['Tap empty area', '× in panel'] },
+            { action: 'Find a person or place by name', ways: ['Search'] },
+            { action: 'Ask a question', ways: ['Ask'] },
+            { action: 'Somewhere new at random', ways: ['Dice button'] },
+            { action: 'Browse everything by name', ways: ['List view'] },
+            { action: 'Show only some types or regions', ways: ['Filters button'] },
           ],
         },
-        { title: 'History', rows: [{ action: 'Back and forward', ways: ['‹ / › buttons'] }] },
+        {
+          title: 'Read a record',
+          rows: [
+            { action: 'Open a person or place', ways: ['Tap node', 'Tap a name'] },
+            { action: 'See how its facts were checked', ways: ['Verified, at its foot'] },
+            { action: 'Report a mistake', ways: ['Flag, at its foot'] },
+            { action: 'Close it', ways: ['Tap empty area', '× in panel'] },
+          ],
+        },
+        {
+          title: 'History',
+          rows: [
+            { action: 'Back and forward', ways: ['‹ / › buttons'] },
+            { action: 'Earlier selections', ways: ['History menu'] },
+          ],
+        },
       ]
     : [
         {
@@ -45,15 +63,28 @@ const sections = computed<Section[]>(() =>
             { action: 'Pan', ways: ['Two-finger scroll', 'Scroll wheel', 'Drag empty area'] },
             { action: 'Zoom', ways: ['Pinch', `${modifier} + Scroll`, '+ / − keys', '+ / − buttons'] },
             { action: 'Fit the whole graph', ways: ['Fit button'] },
+            { action: 'Move a node', ways: ['Drag node'] },
           ],
         },
         {
-          title: 'Select',
+          title: 'Find',
           rows: [
-            { action: 'Select a person or place', ways: ['Click node'] },
+            { action: 'Find a person or place by name', ways: ['Search'] },
+            { action: 'Ask a question', ways: ['Ask'] },
+            { action: 'Somewhere new at random', ways: ['Dice button'] },
+            { action: 'Browse everything by name', ways: ['List view'] },
+            { action: 'Show only some types or regions', ways: ['Filters'] },
+          ],
+        },
+        {
+          title: 'Read a record',
+          rows: [
+            { action: 'Open a person or place', ways: ['Click node', 'Click a name'] },
             { action: 'Read a connection', ways: ['Hover line'] },
-            { action: 'Close the selection', ways: ['Esc', 'Click empty area'] },
-            { action: 'Move a node', ways: ['Drag node'] },
+            { action: 'Preview a linked record', ways: ['Hover its name'] },
+            { action: 'See how its facts were checked', ways: ['Verified, at its foot'] },
+            { action: 'Report a mistake', ways: ['Flag, at its foot'] },
+            { action: 'Close it', ways: ['Esc', 'Click empty area'] },
           ],
         },
         {
@@ -61,7 +92,6 @@ const sections = computed<Section[]>(() =>
           rows: [
             { action: 'Back and forward', ways: ['‹ / › buttons'] },
             { action: 'Earlier selections', ways: ['History menu'] },
-            { action: 'Somewhere new at random', ways: ['Dice button'] },
           ],
         },
         {
@@ -69,6 +99,7 @@ const sections = computed<Section[]>(() =>
           rows: [
             { action: 'Show or hide filters', ways: ['Sidebar button'] },
             { action: 'Show or hide this guide', ways: ['?'] },
+            { action: 'About the site', ways: ['i button'] },
           ],
         },
       ],

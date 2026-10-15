@@ -5,6 +5,7 @@ import DetailPanel from './components/DetailPanel.vue'
 import GraphCanvas from './components/GraphCanvas.vue'
 import GraphControls from './components/GraphControls.vue'
 import { ICONS } from './graph/icons'
+import ThemeToggle from './components/ThemeToggle.vue'
 import { useGraph } from './composables/useGraph'
 
 const { state, init, select } = useGraph()
@@ -69,7 +70,10 @@ onBeforeUnmount(() => {
           Oregon Wine Graph
         </h1>
         <p>The people, wineries and vineyards of Oregon wine, and how they connect</p>
-        <ModeSwitch v-if="ModeSwitch" />
+        <div class="app__header-end">
+          <ModeSwitch v-if="ModeSwitch" />
+          <ThemeToggle />
+        </div>
       </header>
       <pre v-if="state.error" class="app__error" role="alert">{{ state.error }}</pre>
       <main v-else-if="state.graph" class="app__main" :class="{ 'app__main--collapsed': state.filtersCollapsed }">
@@ -134,6 +138,15 @@ onBeforeUnmount(() => {
   -webkit-backdrop-filter: var(--frost-blur);
   backdrop-filter: var(--frost-blur);
   white-space: nowrap;
+}
+
+/* Right of the header: the theme glass, after the dev server's admin/viewer switch */
+.app__header-end {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
 }
 
 .app__header h1 {

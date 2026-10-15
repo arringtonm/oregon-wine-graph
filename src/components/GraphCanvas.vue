@@ -9,6 +9,7 @@ import { iconDataUri } from '../graph/icons'
 import { sizeTiers } from '../graph/nodeSize'
 import { coverage, placeNear, toSaved, type Point, type SavedLayout } from '../graph/placement'
 import { pickBusyPhrase } from '../graph/busyPhrases'
+import { isDark } from '../services/theme'
 import { removeOverlaps } from '../graph/removeOverlaps'
 import {
   DropdownMenuContent,
@@ -127,7 +128,6 @@ function chooseFromHistory(index: number) {
 const tooltip = reactive({ show: false, x: 0, y: 0, title: '', detail: '' })
 let cy: Core | undefined
 let layout: cytoscape.Layouts | undefined
-const darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
 // Matches the breakpoint where the detail panel becomes a bottom sheet
 const compactQuery = window.matchMedia('(max-width: 1024px)')
 // Where the zoom buttons go: the toolbar when wide, a column down the right edge when compact
@@ -741,7 +741,6 @@ onMounted(() => {
     toolbarObserver = new ResizeObserver(measureToolbar)
     toolbarObserver.observe(toolbar.value)
   }
-  darkQuery.addEventListener('change', applyTheme)
   document.addEventListener('keydown', onZoomKey)
   waitForFonts().then(syncElements)
 })
@@ -760,12 +759,13 @@ onBeforeUnmount(() => {
   container.value?.removeEventListener('wheel', onWheel, { capture: true })
   compactQuery.removeEventListener('change', onCompactChange)
   toolbarObserver?.disconnect()
-  darkQuery.removeEventListener('change', applyTheme)
   document.removeEventListener('keydown', onZoomKey)
   cy?.destroy()
 })
 
 watch([visibleNodes, visibleEdges], syncElements)
+// The canvas draws with the theme's colours, read when the theme changes (services/theme.ts)
+watch(isDark, () => nextTick(applyTheme))
 // The filter drawer's Reset, on smaller screens
 watch(() => state.resetRequest, reset)
 // The detail panel's "Pick a random…" button. The button goes once a record is chosen, so
