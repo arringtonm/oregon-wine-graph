@@ -37,6 +37,8 @@ export async function renderTurnstile(element: HTMLElement, onToken: (token: str
   const id = api.render(element, {
     sitekey: turnstileSiteKey,
     appearance: 'interaction-only',
+    // The server accepts only tokens issued for flagging (worker/_shared/turnstile.ts)
+    action: 'flag',
     callback: onToken,
     'expired-callback': () => onToken(''),
   })

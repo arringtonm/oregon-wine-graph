@@ -42,6 +42,21 @@ async function startCheck() {
   }
 }
 
+// The check usually finishes in a second or two, unseen; a send waits for it (or for the
+// reader to tick the box, if Cloudflare asks) rather than failing
+function checkedToken(limit = 30_000): Promise<string> {
+  if (token.value) return Promise.resolve(token.value)
+  return new Promise((done) => {
+    const timeout = setTimeout(() => finish(''), limit)
+    const stop = watch(token, (value) => value && finish(value))
+    function finish(value: string) {
+      clearTimeout(timeout)
+      stop()
+      done(value)
+    }
+  })
+}
+
 // A fresh form each time it opens
 watch(open, async (isOpen) => {
   if (!isOpen) return removeTurnstile()
@@ -58,17 +73,22 @@ async function send() {
   if (error.value) return
   busy.value = true
   try {
-    if (turnstileSiteKey && !token.value) {
-      error.value = 'One moment: confirming you’re a person.'
-      return
+    let checked: string | undefined
+    if (turnstileSiteKey) {
+      checked = await checkedToken()
+      if (!checked) {
+        error.value = 'Couldn’t confirm you’re a person; if a box appears below, tick it and send again.'
+        return
+      }
     }
-    await submitFlag(input, token.value || undefined)
+    await submitFlag(input, checked)
     sent.value = true
     // On the dev server, admin mode lists the new flag straight away
     void loadFlags()
   } catch (failure) {
     error.value = failure instanceof Error ? failure.message : 'Something went wrong; please try again.'
-    if (token.value) void startCheck()
+    // Each token is good for one send, so start a fresh check for the retry
+    if (turnstileSiteKey) void startCheck()
   } finally {
     busy.value = false
   }

@@ -3,7 +3,7 @@
 // and stored in D1. Nothing personal is kept: not even the IP address, which only Turnstile sees.
 import { parseFlagRecord } from '../../src/services/flagRecord'
 import { error, json, readJson } from '../_shared/http'
-import { passesTurnstile } from '../_shared/turnstile'
+import { checkTurnstile } from '../_shared/turnstile'
 
 export interface FlagsEnv {
   FLAGS_DB: D1Database
@@ -15,8 +15,11 @@ export async function handleFlags(request: Request, env: FlagsEnv): Promise<Resp
   if (!body) return error(400, 'Send the flag as JSON.')
 
   if (env.TURNSTILE_SECRET) {
-    const human = await passesTurnstile(env.TURNSTILE_SECRET, body.turnstileToken, request.headers.get('cf-connecting-ip'))
-    if (!human) return error(403, "Couldn't confirm you're a person; please try again.")
+    const problems = await checkTurnstile(env.TURNSTILE_SECRET, body.turnstileToken, request.headers.get('cf-connecting-ip'), 'flag')
+    if (problems.length) {
+      console.warn(`[flags] Turnstile refused: ${problems.join(', ')}`)
+      return json({ error: "Couldn't confirm you're a person; please try again.", codes: problems }, { status: 403 })
+    }
   }
 
   let flag
