@@ -140,19 +140,19 @@ const canFlag = flagsAvailable()
     </div>
 
     <template v-if="selectedNode">
+      <!-- The type's icon, the name (wrapping if long) and the close button. A direct child of
+           the panel so it can stay pinned to the top of the sheet on phones and tablets -->
+      <div class="detail__title">
+        <NodeGlyph :type="selectedNode.type" />
+        <h2 ref="heading" tabindex="-1">{{ selectedNode.name }}</h2>
+        <button type="button" class="detail__close" aria-label="Close details" @click="select(null)">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
       <header>
-        <!-- The name (wrapping if long) with the close button on its first line, then the
-             type with its icon -->
-        <div class="detail__title">
-          <h2 ref="heading" tabindex="-1">{{ selectedNode.name }}</h2>
-          <button type="button" class="detail__close" aria-label="Close details" @click="select(null)">
-            <span aria-hidden="true">×</span>
-          </button>
-          <p class="detail__type">
-            <NodeGlyph :type="selectedNode.type" />
-            {{ typeName }}<template v-if="selectedNode.outsideOregon"> · outside Oregon</template>
-          </p>
-        </div>
+        <p class="detail__type">
+          {{ typeName }}<template v-if="selectedNode.outsideOregon"> · outside Oregon</template>
+        </p>
         <p v-if="selectedNode.aka" class="detail__aka">Also known as {{ selectedNode.aka.join(', ') }}</p>
         <p v-if="facts" class="detail__facts">{{ facts }}</p>
         <p v-if="avaNames.length" class="detail__facts">
@@ -312,20 +312,53 @@ const canFlag = flagsAvailable()
   .detail--empty {
     display: none;
   }
+
+  /* The name and close button stay pinned to the top of the sheet while the rest scrolls
+     under them: full bleed over the panel's padding, and opaque so text below doesn't
+     show through */
+  .detail__title {
+    position: sticky;
+    z-index: 1;
+    top: -16px;
+    /* Takes in the panel's gap above when the review tools come first */
+    margin: -12px -16px 0;
+    padding: 16px 16px 8px;
+    background: var(--surface-raised);
+    /* The shadow above fills the sliver that rounding can leave between the row and the
+       sheet's top edge, so scrolled text never peeks over it */
+    box-shadow:
+      0 -4px 0 var(--surface-raised),
+      0 1px 0 var(--border);
+  }
+
+  .detail__title:first-child {
+    margin-top: -16px;
+  }
 }
 
-/* The name and close button share the first row (the name wraps beside it); the type
-   runs underneath */
+/* The icon, name and close button share the first row (the name wraps beside them); the
+   type runs underneath */
 .detail__title {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: start;
-  gap: 0.2rem 0.5rem;
+  gap: 0.5rem;
+}
+
+/* Centred on the name's first line */
+.detail__title .node-glyph {
+  width: 20px;
+  height: 20px;
+  margin-top: calc((1.75rem - 20px) / 2);
+}
+
+/* Tuck the type line up under the name, against the panel's own gap */
+.detail__title + header {
+  margin-top: calc(0.2rem - 12px);
 }
 
 .detail__type {
   display: flex;
-  grid-column: 1 / -1;
   align-items: center;
   gap: 6px;
   margin-bottom: 0.3rem;
