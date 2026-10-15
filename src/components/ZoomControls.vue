@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import Tip from './Tip.vue'
 
-// Zoom in, zoom out and Fit, joined as one group in the toolbar
+// Zoom in, zoom out and Fit, joined as one group: in the toolbar, or on smaller screens stacked
+// upright on the graph's corner (vertical)
+defineProps<{ vertical?: boolean }>()
 defineEmits<{ zoom: [factor: number]; fit: [] }>()
 </script>
 
 <template>
-  <div class="zoom" role="group" aria-label="Zoom">
+  <div class="zoom" :class="{ 'zoom--vertical': vertical }" role="group" aria-label="Zoom">
     <Tip label="Zoom in">
       <button type="button" aria-label="Zoom in" @click="$emit('zoom', 1.3)"><span aria-hidden="true">+</span></button>
     </Tip>
@@ -69,15 +71,31 @@ defineEmits<{ zoom: [factor: number]; fit: [] }>()
   }
 }
 
-/* Narrow phones: Fit, a nice-to-have, gives way so the toolbar's second row fits (pinching
-   zooms too); zoom out becomes the group's last button */
-@media (max-width: 429px) {
-  .zoom__fit {
-    display: none;
-  }
+/* Smaller screens: stacked upright on the graph, frosted like the other controls there. The 44px
+   buttons suit a thumb */
+.zoom--vertical {
+  flex-direction: column;
+}
 
-  .zoom__out {
-    border-radius: 0 var(--radius) var(--radius) 0;
-  }
+.zoom--vertical :deep(button) {
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  padding: 0;
+  -webkit-backdrop-filter: var(--frost-blur);
+  backdrop-filter: var(--frost-blur);
+}
+
+.zoom--vertical :deep(button + button) {
+  border-top: 0;
+  border-left: 1px solid var(--border-strong);
+}
+
+.zoom--vertical :deep(button:first-of-type) {
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.zoom--vertical :deep(button:last-of-type) {
+  border-radius: 0 0 var(--radius) var(--radius);
 }
 </style>

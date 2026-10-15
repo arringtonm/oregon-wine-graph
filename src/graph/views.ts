@@ -1,7 +1,7 @@
 import type { EdgeCategory, Graph, NodeType } from '../data/schema'
 
 // Guided views: curated ways into the graph, each setting several filters at once, offered
-// in the toolbar's Guides menu and shareable as /?view=<id>. A view is data only; useGraph
+// in the toolbar's Guides menu, each at its own address, /guides/<id>. A view is data only; useGraph
 // applies it (applyView) and knows when one is showing (activeView).
 //
 // Most views are plain filters. A few also set a focus, which keeps only the records its

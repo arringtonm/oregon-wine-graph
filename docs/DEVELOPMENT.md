@@ -135,15 +135,21 @@ Every record has its own address, `oregonwine.app/<id>` (e.g. `/david-lett`), so
   - the record as plain HTML inside `#app`, with its connections linking to their pages, for search engines and readers without JavaScript. The app replaces it when it starts.
 
   The page content comes from `src/seo/recordPage.ts`, which uses the same words as the card (`src/graph/format.ts`). The build stops if a record id would clash with one of the site's files.
-- **Sitemap.** The build writes `dist/sitemap.xml` (the home page and every record page, with the build date), and `public/robots.txt` points to it.
+- **Guide addresses.** Each guide (`src/graph/views.ts`) lives under `/guides/`, so no record id can collide with one, and readers' own guides can join them later.
+  - `/guides/<guide>` shows the guide. The build writes `dist/guides/<guide>.html`, with the guide's title and blurb, its own canonical address, share tags and the records it picks as links.
+  - `/guides/<guide>/<id>` shows the guide with a record open; closing the record returns to `/guides/<guide>`. It isn't a page of its own: the Worker serves the record's page (`worker/guides.ts`), so its canonical is `/<id>` and search engines see one page per record.
+  - Changing a filter ends the guide, and the address drops it. Old `/?view=<guide>` links move to `/guides/<guide>`.
+  - `guides` is reserved: the build stops if a record id takes it.
+- **Sitemap.** The build writes `dist/sitemap.xml` (the home page, every guide and every record page, with the build date), and `public/robots.txt` points to it.
 - **Share image.** `public/og.png` (1200×630) is used for every page for now.
 - **Search Console.** Add `oregonwine.app` to Google Search Console and submit `https://oregonwine.app/sitemap.xml` once; Google rereads it after that.
-- **Testing locally.** `vite preview` doesn't serve `/<id>` from `<id>.html`; `npm run build && npx wrangler dev` does, as Cloudflare would.
+- **Testing locally.** `vite preview` doesn't serve `/<id>` from `<id>.html`, or guide addresses as Cloudflare does; `npm run build && npx wrangler dev` does both.
 
 ## Deploying (Cloudflare Worker, oregonwine.app)
 
-The site is one Cloudflare Worker, `oregon-wine-graph`, configured by `wrangler.toml`. Cloudflare serves the built `dist/` as static assets (free, unlimited); only `/api/*` runs the code in `worker/`:
+The site is one Cloudflare Worker, `oregon-wine-graph`, configured by `wrangler.toml`. Cloudflare serves the built `dist/` as static assets (free, unlimited); only `/api/*` and `/guides/*` run the code in `worker/`:
 
+- `/guides/*` (`worker/guides.ts`): a guide's page as a file; a guide with a record open is served the record's page.
 - `POST /api/ask` (`worker/api/ask.ts`) runs the same `askGraph()` as the dev server, with the Jev key as a Worker secret. Identical questions are answered from Cloudflare's cache for a day.
 - `POST /api/flags` (`worker/api/flags.ts`) checks a flag with the shared rules (`src/services/flagRecord.ts`), confirms the sender is a person with Turnstile when `TURNSTILE_SECRET` is set, and inserts it into the D1 table defined in `migrations/`.
 - `.env.production` points production builds at those paths. `npm run build` also type-checks the Worker.

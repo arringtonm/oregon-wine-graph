@@ -1,5 +1,6 @@
 import { EDGE_CATEGORIES, EDGE_CATEGORY_LABELS, EDGE_RULES, type EdgeCategory, type Graph, type GraphNode } from '../data/schema'
 import { cardParts, formatYears, HIDDEN_TYPES, nodeYears, SINGULAR_TYPE } from '../graph/format'
+import { focusRecords, type GuideView, VIEWS } from '../graph/views'
 
 // What search engines and link previews read for each record: a page at /<id> with its own
 // title, description, share tags and structured data, and its facts as plain HTML. The
@@ -17,6 +18,12 @@ export const escapeHtml = (text: string) =>
   text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
 export const recordUrl = (id: string) => `${SITE}/${id}`
+// Guides live under their own folder, so no record id can collide with one, and readers'
+// own guides can join them later: /guides/<guide>, and /guides/<guide>/<record> with a
+// record open in it
+export const GUIDES_PATH = 'guides'
+export const guidePath = (view: string, record?: string) => `/${GUIDES_PATH}/${view}${record ? `/${record}` : ''}`
+export const guideUrl = (view: string) => `${SITE}${guidePath(view)}`
 export const recordTitle = (node: GraphNode) => `${node.name} · ${SITE_NAME}`
 
 // A summary short enough for a search result, cut at a word with an ellipsis
@@ -176,9 +183,42 @@ export function recordPage(graph: Graph, node: GraphNode): RecordPage {
   }
 }
 
+// A guide's page, at /guides/<id>: its title and blurb, and for a guide with a focus, the
+// records it picks, as links to their own pages. The app replaces it when it starts
+export function guidePage(graph: Graph, view: GuideView): RecordPage {
+  const title = `${view.title} · ${SITE_NAME}`
+  const lines = [`<article class="record-page">`, `<h1>${escapeHtml(view.title)}</h1>`, `<p>${escapeHtml(view.blurb)}</p>`]
+  if (view.focus) {
+    const { core } = focusRecords(graph, view.focus)
+    const picked = shownRecords(graph)
+      .filter((node) => core.has(node.id))
+      .sort((a, b) => a.name.localeCompare(b.name))
+    lines.push('<ul>', ...picked.map((node) => `<li><a href="/${node.id}">${escapeHtml(node.name)}</a></li>`), '</ul>')
+  }
+  lines.push(`<p><a href="/">Explore the ${SITE_NAME}</a></p>`, '</article>')
+  return {
+    title,
+    head: headTags({
+      title,
+      description: describe(view.blurb),
+      url: guideUrl(view.id),
+      type: 'website',
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: view.title,
+        description: view.blurb,
+        url: guideUrl(view.id),
+        isPartOf: website,
+      },
+    }),
+    body: lines.join('\n'),
+  }
+}
+
 // Every page, for search engines to find: the home page and each record's
 export function sitemap(graph: Graph, date: string): string {
-  const urls = [`${SITE}/`, ...shownRecords(graph).map((node) => recordUrl(node.id))]
+  const urls = [`${SITE}/`, ...VIEWS.map((view) => guideUrl(view.id)), ...shownRecords(graph).map((node) => recordUrl(node.id))]
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',

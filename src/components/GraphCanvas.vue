@@ -146,7 +146,14 @@ let layout: cytoscape.Layouts | undefined
 const compactQuery = window.matchMedia('(max-width: 1024px)')
 // Where the zoom buttons go: the toolbar when wide, a column down the right edge when compact
 const compact = ref(compactQuery.matches)
-const onCompactChange = () => (compact.value = compactQuery.matches)
+// Phones and tablets: zoom floats on the graph's corner, as in a map, leaving the toolbar
+// room for Reset and the dice
+const phoneQuery = window.matchMedia('(max-width: 1024px)')
+const phone = ref(phoneQuery.matches)
+const onCompactChange = () => {
+  compact.value = compactQuery.matches
+  phone.value = phoneQuery.matches
+}
 
 function token(name: string): string {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim()
@@ -755,6 +762,7 @@ onMounted(() => {
   // Capture phase, so this runs instead of Cytoscape's own wheel-to-zoom handler
   container.value!.addEventListener('wheel', onWheel, { capture: true, passive: false })
   compactQuery.addEventListener('change', onCompactChange)
+  phoneQuery.addEventListener('change', onCompactChange)
   // The width may have changed since setup read it, before this listened
   onCompactChange()
   if (window.ResizeObserver && toolbar.value) {
@@ -778,6 +786,7 @@ async function waitForFonts() {
 onBeforeUnmount(() => {
   container.value?.removeEventListener('wheel', onWheel, { capture: true })
   compactQuery.removeEventListener('change', onCompactChange)
+  phoneQuery.removeEventListener('change', onCompactChange)
   toolbarObserver?.disconnect()
   document.removeEventListener('keydown', onKey)
   cy?.destroy()
@@ -928,11 +937,10 @@ watch(
           </DropdownMenuPortal>
         </DropdownMenuRoot>
         <!-- Reset sits with the ways of moving between records, not with zoom and Fit: it
-             changes the filters and selection, not the framing. Smaller screens: it moves to
-             the filter drawer -->
+             changes the filters and selection, not the framing. On every screen -->
         <button
-          v-if="!compact"
           v-show="!state.listView"
+          class="graph-canvas__reset"
           type="button"
           aria-describedby="reset-description"
           :aria-disabled="atStart || undefined"
@@ -980,9 +988,18 @@ watch(
           </svg>
         </ToggleGroupItem>
       </ToggleGroupRoot>
-      <ZoomControls v-show="!state.listView" class="graph-canvas__zoom" @zoom="zoomBy" @fit="fitAnimated" />
+      <ZoomControls v-if="!phone" v-show="!state.listView" class="graph-canvas__zoom" @zoom="zoomBy" @fit="fitAnimated" />
       <span id="reset-description" class="visually-hidden">Clear filters and selection, and lay the graph out again</span>
     </div>
+    <!-- Phones and tablets: zoom on the graph's corner, above About, after the toolbar in tab order -->
+    <ZoomControls
+      v-if="phone"
+      v-show="!state.listView"
+      vertical
+      class="graph-canvas__zoom-float"
+      @zoom="zoomBy"
+      @fit="fitAnimated"
+    />
     <div v-if="!compact" class="graph-canvas__side">
       <ControlsGuide v-show="!state.listView" />
     </div>
@@ -1026,6 +1043,14 @@ watch(
   z-index: 1;
   right: calc(var(--inset-right, 0px) + 12px);
   bottom: 12px;
+}
+
+/* Phones and tablets: zoom stacked above About (44px and a gap) */
+.graph-canvas__zoom-float {
+  position: absolute;
+  z-index: 1;
+  right: 12px;
+  bottom: 68px;
 }
 
 /* Wide screens: the controls guide, top right */
@@ -1440,18 +1465,6 @@ watch(
 
   .graph-canvas__toolbar .graph-canvas__view {
     margin-inline: auto;
-  }
-}
-
-/* Small phones (360px): Random, a nice-to-have, gives way so the second row still fits;
-   History becomes the group's last button. Fit gives way below 430px (ZoomControls) */
-@media (max-width: 379px) {
-  .graph-canvas__toolbar .graph-canvas__random {
-    display: none;
-  }
-
-  .graph-canvas__toolbar .graph-canvas__history-toggle {
-    border-radius: 0 var(--radius) var(--radius) 0;
   }
 }
 

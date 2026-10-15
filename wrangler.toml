@@ -6,9 +6,11 @@ compatibility_date = "2026-10-01"
 
 [assets]
 directory = "dist"
+binding = "ASSETS"
 not_found_handling = "single-page-application"
-# Only API requests run the Worker; everything else is served as a file, free
-run_worker_first = ["/api/*"]
+# Only API requests and guide addresses run the Worker (a record open in a guide is served
+# the record's own page; see worker/guides.ts); everything else is served as a file, free
+run_worker_first = ["/api/*", "/guides/*"]
 
 # Flags from readers: the D1 database "oregon-wine-flags", its table from migrations/;
 # `wrangler dev` uses a local copy

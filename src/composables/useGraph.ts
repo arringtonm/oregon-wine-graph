@@ -3,7 +3,7 @@ import { loadGraph } from '../data'
 import { cardParts, connectionLabel, formatYears, HIDDEN_TYPES, SINGULAR_TYPE } from '../graph/format'
 import { foldText } from '../graph/textMatch'
 import { focusRecords, viewById, VIEWS, type GuideView } from '../graph/views'
-import { describe, recordUrl, SITE, SITE_DESCRIPTION } from '../seo/recordPage'
+import { describe, GUIDES_PATH, guidePath, guideUrl, recordUrl, SITE, SITE_DESCRIPTION } from '../seo/recordPage'
 // Re-exported for the components that have always imported them from here
 export { edgeLabel, formatYears, HIDDEN_TYPES, nodeYears, SINGULAR_TYPE } from '../graph/format'
 import type { Flag } from '../services/flagTypes'
@@ -410,15 +410,19 @@ function showSelection(id: string | null) {
 // Each record has its own address, /<id>, which the build also writes a page for, so search
 // engines and shared links reach it (seo/recordPage.ts). The address, canonical link and
 // description follow the selection
+// With a guide showing, the address keeps it: /guides/<guide>, or /guides/<guide>/<id> with a
+// record open. The canonical link stays the record's own page
 function showAddress(node: GraphNode | undefined) {
-  const path = node ? `/${node.id}` : '/'
-  if (window.location.pathname !== path || window.location.hash) {
-    window.history.replaceState(null, '', path + window.location.search)
+  const view = activeView.value
+  const path = view ? guidePath(view.id, node?.id) : node ? `/${node.id}` : '/'
+  if (window.location.pathname !== path || window.location.hash || window.location.search) {
+    window.history.replaceState(null, '', path)
   }
-  document.querySelector('link[rel="canonical"]')?.setAttribute('href', node ? recordUrl(node.id) : `${SITE}/`)
+  const canonical = node ? recordUrl(node.id) : view ? guideUrl(view.id) : `${SITE}/`
+  document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
   document
     .querySelector('meta[name="description"]')
-    ?.setAttribute('content', node ? describe(node.summary) : SITE_DESCRIPTION)
+    ?.setAttribute('content', node ? describe(node.summary) : view ? describe(view.blurb) : SITE_DESCRIPTION)
 }
 
 // Selecting a node adds it to the history, dropping anything "forward" of the current position.
@@ -731,19 +735,23 @@ const activeView = computed(() =>
   }),
 )
 
-// The address carries the view, /?view=<id>, so it can be shared; it goes when the view ends
-watch(activeView, (view) => {
-  const params = new URLSearchParams(window.location.search)
-  if ((params.get('view') ?? undefined) === view?.id) return
-  if (view) params.set('view', view.id)
-  else params.delete('view')
-  const query = params.toString()
-  window.history.replaceState(null, '', window.location.pathname + (query ? `?${query}` : ''))
+// The address follows the guide too: it joins when a guide starts and goes when it ends
+watch(activeView, () => {
+  if (state.graph) showAddress(selectedNode.value ?? undefined)
 })
 
+// Opens what the address names: /<id>, an old #<id> link, /guides/<guide>[/<id>], or an
+// old /?view=<guide> link. A guide not already showing is applied and laid out afresh
 function selectFromLocation() {
+  const segments = window.location.pathname.split('/').filter(Boolean).map(decodeURIComponent)
+  const guided = segments[0] === GUIDES_PATH
+  const view = viewById(guided ? segments[1] : new URLSearchParams(window.location.search).get('view'))
+  if (view && activeView.value?.id !== view.id) {
+    Object.assign(state, viewFilters(view))
+    state.viewRequest++
+  }
   const fromHash = decodeURIComponent(window.location.hash.slice(1))
-  const id = fromHash || decodeURIComponent(window.location.pathname.replace(/^\/+|\/+$/g, ''))
+  const id = fromHash || (guided ? (segments[2] ?? '') : segments.join('/'))
   const node = nodeById.value.get(id)
   // A link to a hidden type opens nothing, rather than a node the app doesn't show
   select(node && !HIDDEN_TYPES.has(node.type) ? id : null)
@@ -760,12 +768,6 @@ async function init() {
     state.graph = await loadGraph()
     if (import.meta.env.DEV) state.checks = (await import('../data/checks.json')).default as unknown as CheckStore
     void loadFlags()
-    const shared = new URLSearchParams(window.location.search).get('view')
-    // A shared view: its filters, laid out afresh once the graph has drawn
-    if (viewById(shared)) {
-      Object.assign(state, viewFilters(viewById(shared)!))
-      state.viewRequest++
-    }
     selectFromLocation()
     window.addEventListener('popstate', selectFromLocation)
     window.addEventListener('hashchange', selectFromLocation)

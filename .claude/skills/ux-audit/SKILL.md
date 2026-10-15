@@ -205,7 +205,8 @@ Rate a tension with one of these, and leave the call to him:
   - roles show as short titles (`src/data/role-titles.json`);
   - no type line under the name.
 - **Start panel:** "Ways to explore", then Recently viewed (saved in the browser). The random button there went (15 Oct): it vanished once a record opened. The toolbar's dice is the one random control; its tooltip opens with a cellar phrase (`RANDOM_INVITES`), new after each roll, then "(Select random person or place)".
-- **Reset** sits in the history group, between the History menu and the dice, not with zoom and Fit: it changes the filters and selection, not the framing (15 Oct).
+- **Reset** sits in the history group, between the History menu and the dice, not with zoom and Fit: it changes the filters and selection, not the framing (15 Oct). It shows at every width, and rests (dimmed) at the start.
+- **Zoom floats on phones and tablets** (≤1024px, 15 Oct): +, − and Fit stack upright at the graph's bottom-right above About, as in a map, leaving the toolbar room for Reset and the dice. The dice no longer hides at 360px.
 - **Guides:** the toolbar's Ask became Guides, holding curated views (graph/views.ts); the name is Michael's choice over "Explore" and "Smart" (15 Oct).
 - **Search and Ask are one box** (15 Oct, Michael's choice): an "Ask: …" row joins the results, first when the text reads as a question or nothing matches, otherwise last; its answer opens under the box.
 - **Theme switch:** two glasses side by side, a Chardonnay for light and a red for dark, with a neutral slider behind the one showing (15 Oct).

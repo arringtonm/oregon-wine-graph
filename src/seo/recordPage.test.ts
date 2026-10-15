@@ -2,7 +2,8 @@ import { beforeAll, describe, expect, it } from 'vitest'
 import { loadGraph } from '../data'
 import type { Graph, GraphNode } from '../data/schema'
 import { clashes } from '../../tools/seo/prerender'
-import { describe as summarise, escapeHtml, fillTemplate, recordPage, shownRecords, sitemap } from './recordPage'
+import { VIEWS } from '../graph/views'
+import { describe as summarise, escapeHtml, fillTemplate, guidePage, recordPage, shownRecords, sitemap } from './recordPage'
 
 let graph: Graph
 const node = (id: string) => graph.nodes.find((record) => record.id === id)!
@@ -62,9 +63,10 @@ describe('a record’s page', () => {
 })
 
 describe('the sitemap', () => {
-  it('lists the home page and every record the site shows, and no hidden ones', () => {
+  it('lists the home page, every guide and every record the site shows, and no hidden ones', () => {
     const xml = sitemap(graph, '2026-10-15')
-    expect(xml.match(/<url>/g)!.length).toBe(shownRecords(graph).length + 1)
+    expect(xml.match(/<url>/g)!.length).toBe(shownRecords(graph).length + VIEWS.length + 1)
+    expect(xml).toContain('<loc>https://oregonwine.app/guides/sparkling</loc>')
     expect(xml).toContain('<loc>https://oregonwine.app/david-lett</loc><lastmod>2026-10-15</lastmod>')
     const event = graph.nodes.find((record) => record.type === 'event')
     if (event) expect(xml).not.toContain(`/${event.id}<`)
@@ -72,6 +74,22 @@ describe('the sitemap', () => {
 
   it('stops the build when a record id would clash with one of the site’s files', () => {
     expect(clashes(['david-lett', 'robots', 'og'], ['index.html', 'robots.txt', 'og.png', 'assets'])).toEqual(['robots', 'og'])
-    expect(clashes(shownRecords(graph).map((record) => record.id), ['index.html', 'robots.txt', 'og.png', 'sitemap.xml', 'assets', 'favicon.svg', 'favicon-32.png', 'apple-touch-icon.png'])).toEqual([])
+    expect(clashes(shownRecords(graph).map((record) => record.id), ['index.html', 'robots.txt', 'og.png', 'sitemap.xml', 'assets', 'favicon.svg', 'favicon-32.png', 'apple-touch-icon.png', 'guides'])).toEqual([])
+  })
+})
+
+describe('guide pages', () => {
+  it('name the guide as their own canonical address, with its title and blurb', () => {
+    const view = VIEWS.find((guide) => guide.id === 'sparkling')!
+    const page = guidePage(graph, view)
+    expect(page.title).toBe('Sparkling · Oregon Wine Graph')
+    expect(page.head).toContain('<link rel="canonical" href="https://oregonwine.app/guides/sparkling" />')
+    expect(page.head).toContain('<meta property="og:url" content="https://oregonwine.app/guides/sparkling" />')
+    // Its records link to their own pages, the canonical addresses
+    expect(page.body).toContain('<a href="/argyle-winery">')
+  })
+
+  it('have ids that are plain path segments', () => {
+    for (const view of VIEWS) expect(view.id).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*$/)
   })
 })
