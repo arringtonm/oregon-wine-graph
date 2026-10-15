@@ -4,6 +4,7 @@ import { nodeYears, reviewing, SINGULAR_TYPE, useGraph, type Connection } from '
 import { EDGE_CATEGORY_LABELS } from '../data/schema'
 import AddConnection from './AddConnection.vue'
 import NodeGlyph from './NodeGlyph.vue'
+import NodePreview from './NodePreview.vue'
 import ReviewTools from './ReviewTools.vue'
 import FlagButton from './FlagButton.vue'
 import FlagNotes from './FlagNotes.vue'
@@ -182,10 +183,12 @@ const canFlag = flagsAvailable()
           <h4 class="detail__verb">{{ list.verb }}</h4>
           <ul>
             <li v-for="{ edge, other, label, detail, years } in list.connections" :key="edge.id">
-              <button type="button" class="detail__link" @click="select(other.id, { focusDetails: true })">
-                <NodeGlyph :type="other.type" />
-                {{ other.name }}
-              </button>
+              <NodePreview :node="other">
+                <button type="button" class="detail__link" @click="select(other.id, { focusDetails: true })">
+                  <NodeGlyph :type="other.type" />
+                  {{ other.name }}
+                </button>
+              </NodePreview>
               <span v-if="detail || years" class="detail__years">{{ [detail, years].filter(Boolean).join(', ') }}</span>
               <!-- Viewers find each connection's sources in the verification note at the foot -->
               <span v-if="reviewing" class="detail__refs">
@@ -233,10 +236,12 @@ const canFlag = flagsAvailable()
         <h3>Nearby tasting rooms</h3>
         <ul>
           <li v-for="{ node, km } in neighbours" :key="node.id">
-            <button type="button" class="detail__link" @click="select(node.id, { focusDetails: true })">
-              <NodeGlyph :type="node.type" />
-              {{ node.name }}
-            </button>
+            <NodePreview :node="node">
+              <button type="button" class="detail__link" @click="select(node.id, { focusDetails: true })">
+                <NodeGlyph :type="node.type" />
+                {{ node.name }}
+              </button>
+            </NodePreview>
             <span class="detail__years">{{ (km * 0.621371).toFixed(1) }} mi</span>
           </li>
         </ul>
