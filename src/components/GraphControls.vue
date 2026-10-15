@@ -5,6 +5,7 @@ import { EDGE_CATEGORIES, EDGE_CATEGORY_LABELS, NODE_TYPE_LABELS } from '../data
 import { PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'reka-ui'
 import Check from './Check.vue'
 import Chevron from './Chevron.vue'
+import VerifiedInfo from './VerifiedInfo.vue'
 import NodeGlyph from './NodeGlyph.vue'
 
 const { state, avas } = useGraph()
@@ -140,7 +141,11 @@ function onDrawerKey(event: KeyboardEvent) {
         <span class="controls__outside" aria-hidden="true"></span>
         A dashed outline on the graph marks people and places outside Oregon.
       </p>
-      <Check v-model="state.verifiedOnly">Verified records only</Check>
+      <!-- The "i" explains how records are verified -->
+      <div class="controls__with-info">
+        <Check v-model="state.verifiedOnly">Verified records only</Check>
+        <VerifiedInfo />
+      </div>
     </fieldset>
 
     <div class="controls__foot">
@@ -303,6 +308,16 @@ legend {
 
 .controls__line--geography {
   border-top-style: dotted;
+}
+
+.controls__with-info {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.controls__with-info > :first-child {
+  flex: 1;
 }
 
 .controls__hint {

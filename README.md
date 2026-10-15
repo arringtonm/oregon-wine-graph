@@ -47,7 +47,7 @@ A record is either **verified** or an **unverified draft**. Drafts are shown, be
 2. **Checked against its sources automatically.** A decision model reads the text of each cited page and judges whether it supports the record: the relationship itself, each year, and the role. A record is approved only when a source supports the relationship, and every detail is supported, each with a confidence of at least 0.9. To measure how often that goes wrong, we deliberately corrupted one fact in each of about 400 records that had passed (a year changed, a relationship swapped) and checked them again: 1.2% still passed, every one of them by swapping a closely related relationship, such as "founded" for "helped organize". Sources the model can't read, such as pages behind bot protection, never count for or against a record.
 3. **Confirmed by AVA boundaries.** A vineyard's AVA can be confirmed by testing its location against the official AVA boundary maps. This is available but not yet in use, as no vineyard has mapped coordinates yet.
 
-Today 1,980 records are verified by the automated check and 125 by a person; the remaining 1,014 are drafts.
+Today 1,980 records are verified by the automated check and 128 by a person; the remaining 1,011 are drafts. The site's "Verified records only" filter has an ⓘ that shows the current counts.
 
 ### Rules we follow
 
