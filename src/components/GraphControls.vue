@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import { computed, defineAsyncComponent, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useGraph, type ToggleableNodeType } from '../composables/useGraph'
-import { EDGE_CATEGORIES, EDGE_CATEGORY_LABELS, NODE_TYPE_LABELS, type NodeType } from '../data/schema'
+import { EDGE_CATEGORIES, EDGE_CATEGORY_LABELS, NODE_TYPE_LABELS } from '../data/schema'
+import { PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'reka-ui'
+import Check from './Check.vue'
+import Chevron from './Chevron.vue'
 import NodeGlyph from './NodeGlyph.vue'
 
-// Questions need the dev server, where the decision model's key lives; the production build
-// leaves the whole component out
-const AskQuestion = import.meta.env.DEV ? defineAsyncComponent(() => import('./AskQuestion.vue')) : null
-
-const { state, avas, visibleNodes, visibleEdges, search, select, announce } = useGraph()
+const { state, avas, visibleNodes, visibleEdges } = useGraph()
 
 const sortedAvas = computed(() => [...avas.value].sort((a, b) => a.name.localeCompare(b.name)))
 const avaSummary = computed(() => {
@@ -18,57 +17,9 @@ const avaSummary = computed(() => {
 })
 
 const toggleableTypes = Object.keys(state.nodeTypes) as ToggleableNodeType[]
-// Read after each search result, so "Eyrie" is heard as a winery or a vineyard
-const TYPE_NAMES: Record<NodeType, string> = {
-  person: 'person',
-  winery: 'winery',
-  vineyard: 'vineyard',
-  ava: 'AVA',
-  organization: 'organization',
-  event: 'event',
-}
 
-// Search follows the ARIA combobox pattern: the input owns a listbox of results and
-// points at the highlighted one with aria-activedescendant
-const query = ref('')
-const results = computed(() => search(query.value))
-const expanded = computed(() => query.value.trim() !== '')
-const active = ref(-1)
-const searchInput = ref<HTMLInputElement>()
-
-watch(query, () => {
-  active.value = -1
-  if (!expanded.value) return
-  const count = results.value.length
-  announce(count === 0 ? 'No matches' : `${count} result${count === 1 ? '' : 's'}, use the up and down arrows to choose`)
-})
-
-function pick(id: string) {
-  // An AVA is only drawn with the AVA regions layer, so turn it on to show the one picked
-  if (avas.value.some((ava) => ava.id === id)) state.categories.geography = true
-  select(id, { focusDetails: true })
-  query.value = ''
-  // Focus goes to the chosen node's details, not back to the drawer's button
-  keepFocusOnClose = true
-  state.filtersOpen = false
-}
-
-function onSearchKey(event: KeyboardEvent) {
-  const count = results.value.length
-  if (event.key === 'ArrowDown' && count) {
-    event.preventDefault()
-    active.value = (active.value + 1) % count
-  } else if (event.key === 'ArrowUp' && count) {
-    event.preventDefault()
-    active.value = (active.value - 1 + count) % count
-  } else if (event.key === 'Enter' && count) {
-    event.preventDefault()
-    pick(results.value[Math.max(active.value, 0)].id)
-  } else if (event.key === 'Escape' && query.value) {
-    // Escape clears the search first; a second Escape closes the drawer
-    event.stopPropagation()
-    query.value = ''
-  }
+function setAva(id: string, chosen: boolean) {
+  state.avas = chosen ? [...state.avas, id] : state.avas.filter((other) => other !== id)
 }
 
 // On small screens the sidebar is a drawer over the graph, behaving as a modal dialog
@@ -78,17 +29,24 @@ const onCompactChange = () => (compact.value = compactQuery.matches)
 onMounted(() => compactQuery.addEventListener('change', onCompactChange))
 onBeforeUnmount(() => compactQuery.removeEventListener('change', onCompactChange))
 const isDialog = computed(() => compact.value && state.filtersOpen)
-let keepFocusOnClose = false
+// Hidden on desktop by the toolbar's sidebar button; out of the tab order while hidden
+const collapsedOnDesktop = computed(() => !compact.value && state.filtersCollapsed)
+const aside = ref<HTMLElement>()
 
 watch(
   () => state.filtersOpen,
   async (open) => {
     if (!compact.value) return
     await nextTick()
-    // Opening moves focus into the drawer; closing returns it to the button that opened it
-    if (open) searchInput.value?.focus()
-    else if (!keepFocusOnClose) document.getElementById('filters-toggle')?.focus()
-    keepFocusOnClose = false
+    if (open) {
+      // Opening moves focus into the drawer
+      aside.value?.querySelector<HTMLElement>('button, [role="checkbox"]')?.focus()
+      return
+    }
+    // Closing returns focus to the button that opened it, if focus was in the drawer or lost;
+    // a pick elsewhere has already moved it to the chosen node's details
+    const focus = document.activeElement
+    if (!focus || focus === document.body || aside.value?.contains(focus)) document.getElementById('filters-toggle')?.focus()
   },
 )
 
@@ -100,100 +58,68 @@ function onDrawerKey(event: KeyboardEvent) {
 <template>
   <aside
     id="filters"
+    ref="aside"
     class="controls"
-    :class="{ 'controls--open': state.filtersOpen }"
-    aria-label="Search and filters"
+    :class="{ 'controls--open': state.filtersOpen, 'controls--collapsed': collapsedOnDesktop }"
+    :inert="collapsedOnDesktop || undefined"
+    aria-label="Filters"
     :role="isDialog ? 'dialog' : undefined"
     :aria-modal="isDialog ? 'true' : undefined"
     @keydown="onDrawerKey"
   >
     <button type="button" class="controls__close" @click="state.filtersOpen = false">Done</button>
-    <div class="controls__search">
-      <label for="search" class="visually-hidden">Search people and places</label>
-      <input
-        id="search"
-        ref="searchInput"
-        v-model="query"
-        type="search"
-        placeholder="Search people and places"
-        role="combobox"
-        autocomplete="off"
-        aria-autocomplete="list"
-        aria-controls="search-results"
-        :aria-expanded="expanded"
-        :aria-activedescendant="active >= 0 ? `search-option-${active}` : undefined"
-        @keydown="onSearchKey"
-      />
-      <ul v-show="expanded" id="search-results" class="controls__results" role="listbox" aria-label="Search results">
-        <li
-          v-for="(node, index) in results"
-          :id="`search-option-${index}`"
-          :key="node.id"
-          role="option"
-          :aria-selected="index === active"
-          :class="{ 'controls__option--active': index === active }"
-          @mousedown.prevent
-          @click="pick(node.id)"
-        >
-          <NodeGlyph :type="node.type" />
-          {{ node.name }}
-          <span class="visually-hidden">, {{ TYPE_NAMES[node.type] }}</span>
-        </li>
-        <li v-if="results.length === 0" class="controls__empty" role="presentation">No matches</li>
-      </ul>
-    </div>
-
-    <AskQuestion v-if="AskQuestion" class="controls__ask" @pick="pick" />
 
     <fieldset>
       <legend>Show</legend>
-      <label v-for="type in toggleableTypes" :key="type">
-        <input v-model="state.nodeTypes[type]" type="checkbox" />
-        <NodeGlyph :type="type" />
+      <Check v-for="type in toggleableTypes" :key="type" v-model="state.nodeTypes[type]">
         {{ NODE_TYPE_LABELS[type] }}
-      </label>
+        <template #icon><NodeGlyph :type="type" /></template>
+      </Check>
     </fieldset>
 
     <fieldset>
       <legend>Connections</legend>
-      <label v-for="category in EDGE_CATEGORIES" :key="category">
-        <input v-model="state.categories[category]" type="checkbox" />
-        <span class="controls__line" :class="`controls__line--${category}`" aria-hidden="true"></span>
+      <Check v-for="category in EDGE_CATEGORIES" :key="category" v-model="state.categories[category]">
         {{ category === 'geography' ? 'AVA regions' : EDGE_CATEGORY_LABELS[category] }}
-        <NodeGlyph v-if="category === 'geography'" type="ava" />
-      </label>
+        <template #icon>
+          <NodeGlyph v-if="category === 'geography'" type="ava" />
+          <span v-else class="controls__line" :class="`controls__line--${category}`" aria-hidden="true"></span>
+        </template>
+      </Check>
     </fieldset>
 
     <fieldset>
       <legend>Narrow</legend>
-      <details class="controls__avas">
-        <summary>
+      <PopoverRoot>
+        <PopoverTrigger class="controls__avas-toggle">
           AVA
-          <span class="controls__avas-chosen">{{ avaSummary }}</span>
-        </summary>
-        <fieldset class="controls__avas-list">
-          <legend class="visually-hidden">AVAs to show</legend>
-          <button v-if="state.avas.length" type="button" class="controls__clear" @click="state.avas = []">
-            Clear AVAs
-          </button>
-          <label v-for="ava in sortedAvas" :key="ava.id">
-            <input v-model="state.avas" type="checkbox" :value="ava.id" />
-            {{ ava.name.replace(/ AVA$/, '') }}
-          </label>
-        </fieldset>
-      </details>
-      <label>
-        <input v-model="state.oregonOnly" type="checkbox" aria-describedby="oregon-only-hint" />
-        Oregon only
-      </label>
+          <span class="controls__avas-chosen">{{ avaSummary }}<Chevron /></span>
+        </PopoverTrigger>
+        <PopoverPortal>
+          <PopoverContent class="ava-picker" side="bottom" align="start" :side-offset="6" aria-label="AVAs to show">
+            <div class="ava-picker__head">
+              <span>Show only these AVAs</span>
+              <button v-if="state.avas.length" type="button" class="ava-picker__clear" @click="state.avas = []">Clear</button>
+            </div>
+            <div class="ava-picker__list">
+              <Check
+                v-for="ava in sortedAvas"
+                :key="ava.id"
+                :model-value="state.avas.includes(ava.id)"
+                @update:model-value="(chosen: boolean) => setAva(ava.id, chosen)"
+              >
+                {{ ava.name.replace(/ AVA$/, '') }}
+              </Check>
+            </div>
+          </PopoverContent>
+        </PopoverPortal>
+      </PopoverRoot>
+      <Check v-model="state.oregonOnly" describedby="oregon-only-hint">Oregon only</Check>
       <p id="oregon-only-hint" class="controls__hint">
         <span class="controls__outside" aria-hidden="true"></span>
         A dashed outline on the graph marks people and places outside Oregon.
       </p>
-      <label>
-        <input v-model="state.verifiedOnly" type="checkbox" />
-        Verified records only
-      </label>
+      <Check v-model="state.verifiedOnly">Verified records only</Check>
     </fieldset>
 
     <p class="controls__count" role="status">
@@ -210,7 +136,10 @@ function onDrawerKey(event: KeyboardEvent) {
   padding: 1rem;
   overflow-y: auto;
   border-right: 1px solid var(--border);
-  background: var(--surface-raised);
+  /* A little of the graph shows through, blurred, so the panel reads as floating over it */
+  background: var(--frost);
+  -webkit-backdrop-filter: var(--frost-blur);
+  backdrop-filter: var(--frost-blur);
 }
 
 .controls__close {
@@ -226,12 +155,36 @@ function onDrawerKey(event: KeyboardEvent) {
   cursor: pointer;
 }
 
+/* Desktop, hidden: slides out to the left, then leaves the accessibility tree */
+@media (min-width: 1025px) {
+  .controls {
+    transition:
+      transform 0.22s ease,
+      visibility 0s linear 0s;
+  }
+
+  .controls--collapsed {
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition:
+      transform 0.22s ease,
+      visibility 0s linear 0.22s;
+  }
+}
+
+@media (min-width: 1025px) and (prefers-reduced-motion: reduce) {
+  .controls,
+  .controls--collapsed {
+    transition: none;
+  }
+}
+
 /* Tablet and smaller: the filters become a drawer over the graph */
 @media (max-width: 1024px) {
   .controls {
     position: absolute;
     z-index: 3;
-    top: 0;
+    top: var(--inset-top, 0px);
     bottom: 0;
     left: 0;
     display: none;
@@ -248,54 +201,11 @@ function onDrawerKey(event: KeyboardEvent) {
   }
 }
 
-.controls__search {
-  position: relative;
-}
 
-.controls__search input {
-  width: 100%;
-}
 
-.controls__results {
-  position: absolute;
-  z-index: 2;
-  top: calc(100% + 4px);
-  left: 0;
-  right: 0;
-  margin: 0;
-  padding: 4px;
-  list-style: none;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--surface-raised);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
 
-.controls__results [role='option'] {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 32px;
-  padding: 0.375rem 0.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
-.controls__results [role='option']:hover,
-.controls__option--active {
-  background: var(--wash);
-}
 
-/* The highlighted option is shown with an outline as well as the wash, since focus stays in the input */
-.controls__option--active {
-  outline: 2px solid var(--link);
-  outline-offset: -2px;
-}
-
-.controls__empty {
-  padding: 0.375rem 0.5rem;
-  color: var(--text-secondary);
-}
 
 fieldset {
   display: flex;
@@ -317,44 +227,25 @@ legend {
   text-transform: uppercase;
 }
 
-label {
+.controls__avas-toggle {
   display: flex;
   align-items: center;
-  gap: 8px;
-  cursor: pointer;
-}
-
-.controls__avas summary {
-  display: flex;
   justify-content: space-between;
   gap: 8px;
+  min-height: 1.75rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
   cursor: pointer;
 }
 
 .controls__avas-chosen {
+  display: inline-flex;
+  align-items: center;
   color: var(--text-secondary);
-}
-
-.controls__avas[open] {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.controls__avas[open] summary {
-  margin-bottom: 4px;
-}
-
-.controls__clear {
-  align-self: flex-start;
-  padding: 0.125rem 0.5rem;
-  border: 1px solid var(--border-strong);
-  border-radius: 6px;
-  background: var(--surface);
-  color: inherit;
-  font: inherit;
-  font-size: 0.875rem;
-  cursor: pointer;
 }
 
 .controls__line {
@@ -371,15 +262,11 @@ label {
   border-top-style: dotted;
 }
 
-.controls__avas-list {
-  gap: 0.25rem;
-}
-
 .controls__hint {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
-  margin: 0 0 0 1.5rem;
+  margin: 0 0 0 1.75rem;
   color: var(--text-secondary);
   font-size: 0.875rem;
 }
@@ -397,5 +284,47 @@ label {
   margin: auto 0 0;
   color: var(--text-secondary);
   font-size: 0.875rem;
+}
+</style>
+
+<style>
+/* The AVA picker is teleported to the page body, outside this component's scoped styles */
+.ava-picker {
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: var(--reka-popover-trigger-width);
+  min-width: 15rem;
+  max-height: min(60vh, 28rem);
+  padding: 0.75rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow);
+}
+
+.ava-picker__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.ava-picker__clear {
+  padding: 0.125rem 0.5rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.ava-picker__list {
+  overflow-y: auto;
 }
 </style>

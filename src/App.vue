@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
+import { TooltipProvider } from 'reka-ui'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import DetailPanel from './components/DetailPanel.vue'
 import GraphCanvas from './components/GraphCanvas.vue'
 import GraphControls from './components/GraphControls.vue'
+import { ICONS } from './graph/icons'
 import { useGraph } from './composables/useGraph'
 
 const { state, init, select } = useGraph()
@@ -15,9 +17,8 @@ const onCompactChange = () => (compact.value = compactQuery.matches)
 // While the drawer is open on a small screen it behaves as a dialog: the rest is inert
 const drawerModal = computed(() => compact.value && state.filtersOpen)
 
-async function skipToSearch() {
-  if (compact.value) state.filtersOpen = true
-  await nextTick()
+// Search lives in the graph toolbar, visible in every layout
+function skipToSearch() {
   document.getElementById('search')?.focus()
 }
 
@@ -26,11 +27,13 @@ function skipToDetails() {
 }
 
 // Escape closes the selected node, unless something nearer the focus uses Escape itself:
-// a text field (it clears the search), the filter drawer as a dialog, or the history list
+// a text field (it clears the search), the filter drawer as a dialog, or an open menu
 function onKeydown(event: KeyboardEvent) {
   if (event.key !== 'Escape' || event.defaultPrevented || !state.selectedId) return
   const target = event.target as HTMLElement | null
-  if (target?.closest('input, textarea, select, [contenteditable="true"], #history-list')) return
+  if (target?.closest('input, textarea, select, [contenteditable="true"]')) return
+  // An open menu, popover or dialog closes first; Reka marks each such layer
+  if (document.querySelector('[data-dismissable-layer]')) return
   if (drawerModal.value) return
   const detailsHadFocus = !!target?.closest('#details')
   select(null)
@@ -50,29 +53,36 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="app">
-    <nav class="app__skip" aria-label="Skip links">
-      <a href="#search" @click.prevent="skipToSearch">Skip to search</a>
-      <a href="#details" @click.prevent="skipToDetails">Skip to details</a>
-    </nav>
-    <header class="app__header">
-      <h1>Oregon Wine Graph</h1>
-      <p>The people, wineries and vineyards of Oregon wine, and how they connect</p>
-    </header>
-    <pre v-if="state.error" class="app__error" role="alert">{{ state.error }}</pre>
-    <main v-else-if="state.graph" class="app__main">
-      <GraphControls />
-      <GraphCanvas :inert="drawerModal" />
-      <DetailPanel :inert="drawerModal" />
-    </main>
-    <div class="visually-hidden" aria-live="polite" aria-atomic="true">{{ state.announcement }}</div>
-  </div>
+  <TooltipProvider :delay-duration="400">
+    <div class="app">
+      <nav class="app__skip" aria-label="Skip links">
+        <a href="#search" @click.prevent="skipToSearch">Skip to search</a>
+        <a href="#details" @click.prevent="skipToDetails">Skip to details</a>
+      </nav>
+      <header class="app__header">
+        <h1>
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <svg class="app__mark" viewBox="0 0 24 24" aria-hidden="true" v-html="ICONS.winery" />
+          Oregon Wine Graph
+        </h1>
+        <p>The people, wineries and vineyards of Oregon wine, and how they connect</p>
+      </header>
+      <pre v-if="state.error" class="app__error" role="alert">{{ state.error }}</pre>
+      <main v-else-if="state.graph" class="app__main" :class="{ 'app__main--collapsed': state.filtersCollapsed }">
+        <GraphControls />
+        <GraphCanvas :inert="drawerModal" />
+        <DetailPanel :inert="drawerModal" />
+      </main>
+      <div class="visually-hidden" aria-live="polite" aria-atomic="true">{{ state.announcement }}</div>
+    </div>
+  </TooltipProvider>
 </template>
 
 <style scoped>
 .app {
+  position: relative;
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
   height: 100dvh;
 }
 
@@ -100,31 +110,93 @@ onBeforeUnmount(() => {
   transform: none;
 }
 
+/* The header floats over the top of the graph, frosted like the sidebars, on one line */
 .app__header {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.25rem 1rem;
-  padding: 0.75rem 1rem;
+  align-items: center;
+  gap: 1rem;
+  height: var(--header-h);
+  padding: 0 1rem;
+  overflow: hidden;
   border-bottom: 1px solid var(--border);
-  background: var(--surface-raised);
+  background: var(--frost);
+  -webkit-backdrop-filter: var(--frost-blur);
+  backdrop-filter: var(--frost-blur);
+  white-space: nowrap;
 }
 
 .app__header h1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   margin: 0;
-  font-size: 1.125rem;
+  font-size: 1.1875rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.app__mark {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: var(--node-winery);
 }
 
 .app__header p {
+  overflow: hidden;
   margin: 0;
   color: var(--text-secondary);
+  text-overflow: ellipsis;
+}
+
+.app__error {
+  margin-top: calc(var(--header-h) + 1rem);
 }
 
 .app__main {
+  --inset-top: var(--header-h);
+  --sidebar-width: 17rem;
+  --inset-left: var(--sidebar-width);
+  --inset-right: 23rem;
   position: relative;
   display: grid;
-  grid-template-columns: 17rem minmax(0, 1fr) 23rem;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr) var(--inset-right);
   min-height: 0;
+}
+
+/* Wide screens: the graph runs under both sidebars, which float over it, translucent */
+@media (min-width: 1025px) {
+  .app__main > * {
+    grid-row: 1;
+  }
+
+  .app__main > .graph-canvas {
+    grid-column: 1 / -1;
+  }
+
+  .app__main > .controls,
+  .app__main > .detail {
+    z-index: 2;
+    /* Below the header, which floats over the graph's top edge */
+    margin-top: var(--inset-top);
+  }
+
+  .app__main > .controls {
+    grid-column: 1;
+  }
+
+  /* With the sidebar hidden, the toolbar and the visible area reach the left edge */
+  .app__main--collapsed {
+    --inset-left: 0px;
+  }
+
+  .app__main > .detail {
+    grid-column: 3;
+  }
 }
 
 .app__error {
@@ -134,6 +206,9 @@ onBeforeUnmount(() => {
 
 @media (max-width: 1024px) {
   .app__main {
+    /* The sidebars are a drawer and a sheet here, already over the graph */
+    --inset-left: 0px;
+    --inset-right: 0px;
     grid-template-columns: minmax(0, 1fr);
   }
 }

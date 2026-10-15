@@ -1,0 +1,130 @@
+# Developer guide
+
+Everything needed to run, extend and curate Oregon Wine Graph. The [README](../README.md) is the reader-facing overview.
+
+## Running it
+
+```sh
+npm install
+npm run dev     # local dev server, with review tools and "Ask a question"
+npm test        # unit and component tests, and validation of the data files
+npm run build   # type-check and build the read-only site into dist/
+```
+
+Vue 3, Vite and TypeScript. The graph is drawn with [Cytoscape.js](https://js.cytoscape.org) and laid out with fcose; interactive controls (search, menus, popovers, checkboxes, the view switch, tooltips) are [Reka UI](https://reka-ui.com) primitives, styled with our own CSS. The typeface is Nunito, self-hosted through `@fontsource-variable/nunito`.
+
+## Data
+
+All content lives in JSON files under `src/data/`:
+
+- `nodes/people.json`, `wineries.json`, `vineyards.json`, `avas.json`, `organizations.json`, `events.json`
+- `edges.json`, one record per relationship
+- `checks.json`, the record check's raw scores (dev server only, not in the built site)
+- `layout.json`, the saved arrangement of the default view
+
+`src/data/schema.ts` defines the shape of every record and the `EDGE_RULES` table, which says what each edge type means, which way it points, and which node types it may join. `npm test` checks the real files against it: schema, unique IDs, edge endpoints, allowed endpoint types, year order, and at least one source per record.
+
+Conventions:
+
+- IDs are kebab-case slugs (`david-lett`). Edge IDs are `source--edge-type--target`, with a `-2` suffix for a second edge of the same type between the same pair.
+- A winery and a vineyard are separate nodes, joined by `owns` (estate) or `sources_from`.
+- `located_in` is for a vineyard's physical place in an AVA. A winery uses `draws_from` for the AVAs it makes wine from; an AVA never "supplies" a winery.
+- Several edges may join the same pair: one person can be founder, owner and winemaker of the same winery, or hold two separate stints.
+- `ongoing: true` means the relationship still holds. A missing `endYear` on its own means the end date is unknown.
+- Entities based outside Oregon carry `outsideOregon: true`.
+- Addresses and coordinates are visitor information (often a tasting room), never evidence of where grapes grow.
+- Every record needs a source. A source normally has a URL; one without (an emailed newsletter issue, say) is cited by title and date. Private newsletters contribute facts only, never their text.
+- `verified` stays `false` until a person or the record check confirms the record against its sources. Verified records carry `verifiedBy`: `person`, `jev` or `boundary`.
+- People, wineries and vineyards may carry `interviews`: oral history interviews from the Oregon Wine History Archive.
+
+`src/data/index.ts` is the only module that reads the JSON, so moving to a hosted database later means reimplementing `loadGraph()` there.
+
+## Reviewing records
+
+On the dev server the detail panel gains a review box. Each node and each connection has an Approve button (and Undo), its sources are linked beside it, and "Next unverified" walks through whatever is left. Approving writes `verified: true` straight into the JSON file, so a review session ends as an ordinary git diff to read and commit. Review mode lives in `tools/reviewPlugin.ts`; the built site is read-only.
+
+### Checking records against their sources
+
+Most of the backlog is cleared by machine:
+
+```sh
+npm run check:fetch      # download every cited page once into .cache/ (not committed)
+npm run check            # ask Jev whether each record's own sources support it
+npm run check:apply      # mark the supported ones verified, as verified by Jev
+```
+
+`npm run check` breaks each record into claims (the relationship, each year, the role), cuts each cited page down to the passages naming the parties, and has [Jev](https://typesafe.ai), a decision model, score every claim. Raw scores go to `src/data/checks.json`, so the threshold can change without asking again. A record is supported when some source states or implies it and every detail holds; otherwise it is partly supported, unsupported, contradicted, or unreadable. Records first checked before their source was fetched are re-checked automatically once it is cached.
+
+`npm run check:calibrate` measures the risk: it breaks one fact in each of about 400 passing records and counts how many still pass. At the threshold in use (0.9) that was 1.2%, all from swapping in a neighbouring relationship such as "founded" for "helped organize". `npm run check:apply -- --undo` unverifies everything Jev verified.
+
+In review mode each record shows Jev's verdict and an Evidence disclosure with the passages it read. A connection can be edited (role, years), which re-checks it, or removed.
+
+Put a key in `.env.local` to use Jev:
+
+```
+JEV_API_KEY=...
+```
+
+## Adding a connection in plain language
+
+Also on the dev server, each node's panel has an "Add new connection" box. Type a sentence about that node, such as "Dan and Jeanne are married" on Dan Diephouse's page, optionally with a source URL. The app shows what it understood as an editable preview; nothing is saved until you confirm. Our code finds the candidate nodes and years, Jev chooses among them and among the allowed connection types, and the edge rules have the last word. Without a key, keyword rules stand in. The code is in `tools/jev/`.
+
+## Ask a question
+
+The sidebar's "Ask a question" box (dev server only) answers questions about the data. Jev reads which of about fifteen common questions it is (who founded, who made the wine, who mentored, fruit sources, AVAs, how two names are connected…) and which record it is about; the answer itself is read from the graph's records, so it cannot invent facts. Uncertain readings are labelled as best guesses with a "Did you mean" alternative, and other questions fall back to Jev ranking likely records. See `tools/jev/askGraph.ts` and its tests. The component is loaded only in development and is absent from the production build.
+
+## Saved layout and performance
+
+The graph opens with a saved arrangement (`src/data/layout.json`), so it appears without laying the graph out in the browser. The dev server saves it whenever the default view gets a fresh layout: on the first load without one, or on Reset. Commit it alongside data changes. Nodes added since the last save are placed beside their connections. To start over, run `npm run layout:reset` and reload.
+
+Filter changes never re-run the force layout: hidden nodes are removed and returning ones go back to their remembered positions. Labels are measured in Nunito, so the layout waits for the font to load. `.claude/skills/graph-layout/SKILL.md` records the visualization practices, the measurements behind them, and a console harness for measuring layout changes.
+
+## Design tokens
+
+Colours, radii and shadows are CSS custom properties in `src/style.css`, defined for light and dark themes. The "cellar" palette pairs a burgundy accent (`--accent` for text and focus, `--fill`/`--on-fill` for filled surfaces) with node colours drawn from wine: claret wineries, vine-green vineyards, Chardonnay-gold people and warm-grey organizations, events and AVAs. Node colours keep at least 3:1 contrast and stay distinguishable under simulated protanopia, deuteranopia and tritanopia. The graph's node silhouettes (`src/graph/icons.ts`) read the same tokens. On wide screens the graph runs under both sidebars, which are translucent with a backdrop blur; `--inset-left` and `--inset-right` (set in `App.vue`) keep the toolbar, controls guide and list view clear of them, and fitting and centring use the visible middle area.
+
+## Sources and research tools
+
+### Oregon Wine History Archive
+
+Linfield University's oral-history archive ([oregonwinehistoryarchive.org](https://oregonwinehistoryarchive.org)) serves all its pages through its public WordPress API, so no crawling is needed.
+
+```sh
+npm run owha:fetch   # download and parse every page into .cache/owha/, and cache each as a source
+npm run owha:match   # match interviews to people and collections to wineries we already have
+npm run owha:link    # add those interviews to the nodes, with the archive page as a source
+```
+
+Pages about people and places not yet in the graph are ranked with `npm run discover:triage -- owha-unmatched` and extracted by research agents.
+
+### Adding records from a source
+
+`tools/discover/BRIEF.md` sets out the conventions for turning a source into records: what to cite, how to model wineries and vineyards, and what never to guess. Research output goes to a file under `.cache/`, and `npm run discover:merge -- <file.json> ...` folds it into the data: existing nodes and relationships gain only sources, connections to unknown nodes and orphan nodes are dropped, and the whole graph is validated before anything is written. Run `npm run check:fetch`, `npm run check` and `npm run check:apply` afterwards.
+
+### Geography
+
+- `npm run geo:locate` finds each Oregon winery's visitor address on its own website, has Jev confirm which address is the winery's, and geocodes it with the US Census geocoder. Addresses feed the "Nearby tasting rooms" list and nothing else.
+- `npm run geo:avas` tests located vineyards against the official AVA boundaries (UC Davis Library, public domain), verifying "located in" connections that match and adding missing ones. Wineries are not tested, since a tasting room can sit far from the vines.
+- With "AVA regions" on, vineyards are drawn inside a region for their AVA, nested inside parent AVAs. Wineries stay outside the regions and are joined to the vineyards they own or buy from.
+
+## App structure
+
+- `src/composables/useGraph.ts`: shared state, filters and derived views
+- `src/components/GraphCanvas.vue`: the Cytoscape.js graph, toolbar and placement logic
+- `src/components/GraphControls.vue`: search, filters and the question box
+- `src/components/DetailPanel.vue`: the selected node, its connections, sources and oral histories
+- `src/components/GraphList.vue`: the accessible list view
+- `src/components/ControlsGuide.vue`: the `?` controls guide
+- `src/graph/`: pure helpers (size tiers, overlap removal, placement, icons, text matching), each with tests
+
+The selected node is kept in the URL hash, so `/#david-lett` links straight to a node.
+
+## Ideas for future work
+
+- A timeline or year slider showing the network as it stood in a given year, and a lineage view for mentorship and family.
+- Read oral history transcripts for the most important figures; summaries are mined, transcripts are not yet.
+- Record source disagreements (founding years, AVA dates) on the record itself, so the choice made is visible.
+- More relationship types: AVA petitioners, donors, "sold vines to", regulators.
+- Widen coverage beyond the northern Willamette Valley.
+- Split the JavaScript bundle; the data and graph library make the single chunk large.
+- Publish the site, with a small server holding the Jev key so "Ask a question" can work for everyone.

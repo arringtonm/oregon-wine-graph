@@ -54,6 +54,25 @@ function defaultFilters() {
   }
 }
 
+const COLLAPSED_KEY = 'oregon-wine-graph:filters-collapsed'
+
+// A convenience remembered in this browser only; storage may be unavailable (private mode)
+function readCollapsed(): boolean {
+  try {
+    return localStorage.getItem(COLLAPSED_KEY) === 'true'
+  } catch {
+    return false
+  }
+}
+
+export function rememberCollapsed(collapsed: boolean) {
+  try {
+    localStorage.setItem(COLLAPSED_KEY, String(collapsed))
+  } catch {
+    // Nothing to do: the choice just isn't remembered
+  }
+}
+
 const state = reactive({
   graph: null as Graph | null,
   error: null as string | null,
@@ -61,6 +80,8 @@ const state = reactive({
   ...defaultFilters(),
   // Whether the filter drawer is open; only matters on tablet and smaller
   filtersOpen: false,
+  // Whether the search and filters sidebar is hidden; desktop only, remembered per browser
+  filtersCollapsed: readCollapsed(),
   reviewError: null as string | null,
   // Jev's scores for each record against its sources; loaded on the dev server only
   checks: null as CheckStore | null,
@@ -359,6 +380,14 @@ function showSelection(id: string | null) {
 // Selecting a node adds it to the history, dropping anything "forward" of the current position.
 // With `focusDetails`, keyboard focus moves to the detail panel's heading, for selections
 // made from a list or a link rather than on the canvas.
+// Choosing a node from search or an answer: an AVA is only drawn with the AVA regions
+// layer, so that turns on; focus moves to the node's details; the tablet drawer closes
+function pickNode(id: string) {
+  if (avas.value.some((ava) => ava.id === id)) state.categories.geography = true
+  select(id, { focusDetails: true })
+  state.filtersOpen = false
+}
+
 function select(id: string | null, { focusDetails = false } = {}) {
   if (focusDetails && id) state.focusDetailsRequest++
   if (id && id !== state.history[state.historyIndex]) {
@@ -564,6 +593,7 @@ export function useGraph() {
     connectionsOf,
     search,
     select,
+    pickNode,
     announce,
     canGoBack,
     canGoForward,

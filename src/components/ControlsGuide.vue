@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
+import { PopoverContent, PopoverRoot, PopoverTrigger } from 'reka-ui'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import Chevron from './Chevron.vue'
 
 // How to move around the graph, for the device in hand: touch gestures on a phone or
@@ -12,8 +13,6 @@ interface Section {
 }
 
 const open = ref(false)
-const panel = ref<HTMLElement>()
-const toggle = ref<HTMLButtonElement>()
 
 const touchOnly = window.matchMedia('(pointer: coarse)').matches && !window.matchMedia('(any-pointer: fine)').matches
 const platform =
@@ -45,7 +44,7 @@ const sections = computed<Section[]>(() =>
           title: 'Move around',
           rows: [
             { action: 'Pan', ways: ['Two-finger scroll', 'Scroll wheel', 'Drag empty area'] },
-            { action: 'Zoom', ways: ['Pinch', `${modifier} + Scroll`, '+ / − buttons'] },
+            { action: 'Zoom', ways: ['Pinch', `${modifier} + Scroll`, '+ / − keys', '+ / − buttons'] },
             { action: 'Fit the whole graph', ways: ['Fit button'] },
           ],
         },
@@ -65,83 +64,62 @@ const sections = computed<Section[]>(() =>
             { action: 'Earlier selections', ways: ['History menu'] },
           ],
         },
-        { title: 'Help', rows: [{ action: 'Show or hide this guide', ways: ['?'] }] },
+        {
+          title: 'Panels',
+          rows: [
+            { action: 'Show or hide filters', ways: ['Sidebar button'] },
+            { action: 'Show or hide this guide', ways: ['?'] },
+          ],
+        },
       ],
 )
-
-async function setOpen(value: boolean, { focusPanel = false } = {}) {
-  open.value = value
-  if (value && focusPanel) {
-    await nextTick()
-    panel.value?.focus()
-  }
-}
 
 function isTyping(target: EventTarget | null) {
   return !!(target as HTMLElement | null)?.closest?.('input, textarea, select, [contenteditable="true"]')
 }
 
-// Listens in the capture phase, ahead of the app's own Escape handler (which mounts
-// first, since the graph waits for its data), so Escape closes the guide before it would
-// close the selection
+// The popover handles Escape, outside clicks and focus itself; ? toggles it from anywhere
 function onKeydown(event: KeyboardEvent) {
-  if (event.key === '?' && !isTyping(event.target) && !event.metaKey && !event.ctrlKey && !event.altKey) {
-    event.preventDefault()
-    setOpen(!open.value, { focusPanel: true })
-  } else if (event.key === 'Escape' && open.value) {
-    event.preventDefault()
-    const hadFocus = panel.value?.contains(document.activeElement)
-    setOpen(false)
-    if (hadFocus) toggle.value?.focus()
-  }
+  if (event.key !== '?' || isTyping(event.target) || event.metaKey || event.ctrlKey || event.altKey) return
+  event.preventDefault()
+  open.value = !open.value
 }
 
-onMounted(() => document.addEventListener('keydown', onKeydown, { capture: true }))
-onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown, { capture: true }))
+onMounted(() => document.addEventListener('keydown', onKeydown))
+onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
 </script>
 
 <template>
   <div class="guide">
-    <button
-      ref="toggle"
-      type="button"
-      class="guide__toggle"
-      aria-controls="controls-guide"
-      :aria-expanded="open"
-      aria-keyshortcuts="?"
-      @click="setOpen(!open)"
-    >
-      <kbd aria-hidden="true">?</kbd> Controls<Chevron />
-    </button>
-    <section
-      v-show="open"
-      id="controls-guide"
-      ref="panel"
-      class="guide__panel"
-      tabindex="-1"
-      aria-labelledby="controls-guide-heading"
-    >
-      <header class="guide__header">
-        <h2 id="controls-guide-heading">{{ touchOnly ? 'Touch controls' : 'Controls' }}</h2>
-        <span class="guide__platform">{{ touchOnly ? 'Phone or tablet' : mac ? 'Mac' : 'Windows or Linux' }}</span>
-      </header>
-      <div class="guide__body">
-        <section v-for="section in sections" :key="section.title" :aria-labelledby="`guide-${section.title}`">
-          <h3 :id="`guide-${section.title}`">{{ section.title }}</h3>
-          <dl>
-            <div v-for="row in section.rows" :key="row.action" class="guide__row">
-              <dt>{{ row.action }}</dt>
-              <dd>
-                <template v-for="(way, index) in row.ways" :key="way">
-                  <span v-if="index > 0" class="visually-hidden">or</span>
-                  <kbd>{{ way }}</kbd>
-                </template>
-              </dd>
-            </div>
-          </dl>
-        </section>
-      </div>
-    </section>
+    <PopoverRoot v-model:open="open">
+      <PopoverTrigger as-child>
+        <button type="button" class="guide__toggle" aria-keyshortcuts="?">
+          <kbd aria-hidden="true">?</kbd> Controls<Chevron />
+        </button>
+      </PopoverTrigger>
+      <PopoverContent class="guide__panel" align="end" :side-offset="4" aria-labelledby="controls-guide-heading">
+        <header class="guide__header">
+          <h2 id="controls-guide-heading">{{ touchOnly ? 'Touch controls' : 'Controls' }}</h2>
+          <span class="guide__platform">{{ touchOnly ? 'Phone or tablet' : mac ? 'Mac' : 'Windows or Linux' }}</span>
+        </header>
+        <div class="guide__body">
+          <section v-for="section in sections" :key="section.title" :aria-labelledby="`guide-${section.title}`">
+            <h3 :id="`guide-${section.title}`">{{ section.title }}</h3>
+            <dl>
+              <div v-for="row in section.rows" :key="row.action" class="guide__row">
+                <dt>{{ row.action }}</dt>
+                <dd>
+                  <template v-for="(way, index) in row.ways" :key="way">
+                    <span v-if="index > 0" class="visually-hidden">or</span>
+                    <kbd>{{ way }}</kbd>
+                  </template>
+                </dd>
+              </div>
+            </dl>
+          </section>
+        </div>
+      </PopoverContent>
+    </PopoverRoot>
   </div>
 </template>
 
@@ -149,8 +127,8 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown, { captu
 .guide {
   position: absolute;
   z-index: 4;
-  top: 12px;
-  right: 12px;
+  top: calc(var(--inset-top, 0px) + 12px);
+  right: calc(var(--inset-right, 0px) + 12px);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -166,7 +144,9 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown, { captu
   padding: 0 10px;
   border: 1px solid var(--border-strong);
   border-radius: 6px;
-  background: var(--surface-raised);
+  background: var(--frost);
+  -webkit-backdrop-filter: var(--frost-blur);
+  backdrop-filter: var(--frost-blur);
   color: inherit;
   font: inherit;
   cursor: pointer;
@@ -188,12 +168,22 @@ kbd {
   white-space: nowrap;
 }
 
+@media (max-width: 1024px) {
+  .guide__toggle {
+    height: 40px;
+  }
+}
+</style>
+
+<style>
+/* Reka wraps the popover in its own positioning element, beyond this component's scoped styles */
 .guide__panel {
   display: flex;
   flex-direction: column;
   width: 30rem;
   max-width: 100%;
   max-height: min(75vh, 40rem);
+  z-index: 30;
   border: 1px solid var(--border-strong);
   border-radius: 8px;
   background: var(--surface-raised);
@@ -224,7 +214,7 @@ kbd {
   padding: 0.25rem 1.125rem 1rem;
 }
 
-h3 {
+.guide__panel h3 {
   margin: 1rem 0 0.375rem;
   color: var(--text-secondary);
   font-size: 0.8125rem;
@@ -233,7 +223,7 @@ h3 {
   text-transform: uppercase;
 }
 
-dl {
+.guide__panel dl {
   margin: 0;
 }
 
@@ -245,21 +235,26 @@ dl {
   padding: 0.3125rem 0;
 }
 
-dt {
+.guide__panel dt {
   min-width: 0;
 }
 
-dd {
+.guide__panel dd {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.375rem;
   margin: 0;
 }
-
-@media (max-width: 1024px) {
-  .guide__toggle {
-    height: 40px;
-  }
+.guide__panel kbd {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 5px;
+  background: var(--surface);
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 </style>

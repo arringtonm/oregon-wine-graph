@@ -243,7 +243,10 @@ const facts = computed(() =>
   padding: 16px;
   overflow-y: auto;
   border-left: 1px solid var(--border);
-  background: var(--surface-raised);
+  /* A little of the graph shows through, blurred, so the panel reads as floating over it */
+  background: var(--frost);
+  -webkit-backdrop-filter: var(--frost-blur);
+  backdrop-filter: var(--frost-blur);
 }
 
 /* Tablet and smaller: a sheet over the bottom of the graph, only when a node is selected */
@@ -431,6 +434,6 @@ li {
 }
 
 a {
-  color: var(--link);
+  color: var(--accent);
 }
 </style>

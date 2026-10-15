@@ -1,20 +1,36 @@
 <script setup lang="ts">
 import cytoscape, { type Core, type ElementDefinition, type StylesheetJson } from 'cytoscape'
 import fcose from 'cytoscape-fcose'
-import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
-import { edgeLabel, formatYears, nodeYears, useGraph } from '../composables/useGraph'
+import { computed, defineAsyncComponent, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
+import { edgeLabel, formatYears, nodeYears, rememberCollapsed, useGraph } from '../composables/useGraph'
 import { EDGE_RULES, NODE_TYPES } from '../data/schema'
 import savedLayoutFile from '../data/layout.json'
 import { iconDataUri } from '../graph/icons'
 import { sizeTiers } from '../graph/nodeSize'
 import { coverage, placeNear, toSaved, type Point, type SavedLayout } from '../graph/placement'
 import { removeOverlaps } from '../graph/removeOverlaps'
+import {
+  DropdownMenuContent,
+  DropdownMenuPortal,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuRoot,
+  DropdownMenuTrigger,
+  ToggleGroupItem,
+  ToggleGroupRoot,
+} from 'reka-ui'
 import Chevron from './Chevron.vue'
 import ControlsGuide from './ControlsGuide.vue'
 import GraphList from './GraphList.vue'
 import NodeGlyph from './NodeGlyph.vue'
+import SearchBox from './SearchBox.vue'
+import Tip from './Tip.vue'
 
 cytoscape.use(fcose)
+
+// Questions need the dev server, where the decision model's key lives; the production build
+// leaves the whole component out
+const AskPopover = import.meta.env.DEV ? defineAsyncComponent(() => import('./AskPopover.vue')) : null
 
 const {
   state,
@@ -47,8 +63,6 @@ const positionsNow = () => knownPositions[state.categories.geography ? 'regions'
 
 const container = ref<HTMLDivElement>()
 const historyOpen = ref(false)
-const historyList = ref<HTMLOListElement>()
-const historyMenu = ref<HTMLDivElement>()
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
 // Animation length, or none for readers who ask for reduced motion
 const motion = (ms: number) => (reducedMotion.matches ? 0 : ms)
@@ -66,33 +80,17 @@ const canvasLabel = computed(() => {
     .join('. ')
 })
 
-// A press anywhere outside the open history list closes it
-function onPointerOutsideHistory(event: PointerEvent) {
-  if (!historyMenu.value?.contains(event.target as Node)) closeHistory({ returnFocus: false })
-}
-watch(historyOpen, (open) => {
-  if (open) document.addEventListener('pointerdown', onPointerOutsideHistory)
-  else document.removeEventListener('pointerdown', onPointerOutsideHistory)
-})
-onBeforeUnmount(() => document.removeEventListener('pointerdown', onPointerOutsideHistory))
-
-async function toggleHistory() {
-  historyOpen.value = !historyOpen.value
-  if (!historyOpen.value) return
-  await nextTick()
-  // Opening moves focus to the current entry, or the most recent one
-  const list = historyList.value
-  ;(list?.querySelector<HTMLButtonElement>('[aria-current]') ?? list?.querySelector<HTMLButtonElement>('button'))?.focus()
-}
-
-function closeHistory({ returnFocus = true } = {}) {
-  historyOpen.value = false
-  if (returnFocus) document.getElementById('history-toggle')?.focus()
+// The menu closes itself on choosing; focus goes on to the chosen node's details rather
+// than back to the History button
+let choseFromHistory = false
+function onHistoryClosed(event: Event) {
+  if (choseFromHistory) event.preventDefault()
+  choseFromHistory = false
 }
 
 function chooseFromHistory(index: number) {
+  choseFromHistory = true
   goToHistory(index)
-  closeHistory({ returnFocus: false })
   state.focusDetailsRequest++
 }
 const tooltip = reactive({ show: false, x: 0, y: 0, title: '', detail: '' })
@@ -113,6 +111,9 @@ const NODE_COLOUR_TOKENS: Partial<Record<string, string>> = {
   vineyard: '--node-vineyard',
 }
 const nodeColour = (type: string) => token(NODE_COLOUR_TOKENS[type] ?? '--node-neutral')
+
+// Labels are drawn on the canvas in the app's typeface; see waitForFonts
+const LABEL_FONT = '"Nunito Variable", system-ui, -apple-system, "Segoe UI", sans-serif'
 
 function buildStyle(): StylesheetJson {
   const surface = token('--surface')
@@ -137,7 +138,7 @@ function buildStyle(): StylesheetJson {
         label: 'data(label)',
         color: ink,
         'font-size': 'data(fontSize)',
-        'font-family': 'system-ui, -apple-system, "Segoe UI", sans-serif',
+        'font-family': LABEL_FONT,
         'text-valign': 'bottom',
         'text-margin-y': 4,
         'text-outline-color': surface,
@@ -169,7 +170,7 @@ function buildStyle(): StylesheetJson {
         'target-arrow-shape': 'none',
         'arrow-scale': 0.6,
         'font-size': 9,
-        'font-family': 'system-ui, -apple-system, "Segoe UI", sans-serif',
+        'font-family': LABEL_FONT,
         color: token('--text-secondary'),
         'text-rotation': 'autorotate',
         'text-background-color': surface,
@@ -202,7 +203,7 @@ function buildStyle(): StylesheetJson {
     // A soft disc behind the selected node's silhouette
     {
       selector: 'node.selected',
-      style: { 'underlay-color': ink, 'underlay-opacity': 0.3, 'underlay-padding': 8, 'underlay-shape': 'ellipse' },
+      style: { 'underlay-color': token('--accent'), 'underlay-opacity': 0.35, 'underlay-padding': 8, 'underlay-shape': 'ellipse' },
     },
     {
       selector: 'edge.highlighted, edge.hovered',
@@ -276,24 +277,77 @@ function buildElements(): ElementDefinition[] {
 
 // Fit the whole graph in view. A small graph would otherwise be fitted at a
 // zoom that makes nodes enormous, so the zoom is capped.
-function fit() {
+// The part of the canvas not covered by the sidebars (which float over the graph on wide
+// screens) or the toolbar, in rendered pixels
+function visibleArea() {
+  const canvas = container.value!.getBoundingClientRect()
+  const covered = (id: string) => {
+    const element = document.getElementById(id)
+    if (!element || compactQuery.matches || element.offsetParent === null) return null
+    return element.getBoundingClientRect()
+  }
+  const filters = covered('filters')
+  const details = covered('details')
+  const left = filters ? Math.max(0, filters.right - canvas.left) : 0
+  const right = details ? Math.max(0, canvas.right - details.left) : 0
+  // Below the toolbar (itself below the floating header), however many rows it wraps to
+  const toolbar = container.value!.parentElement?.querySelector('.graph-canvas__toolbar')?.getBoundingClientRect()
+  const top = Math.max(0, (toolbar ? toolbar.bottom : canvas.top) - canvas.top) + 8
+  return { left, top, width: Math.max(1, canvas.width - left - right), height: Math.max(1, canvas.height - top) }
+}
+
+// The opening view (first load, and Reset) is a little closer than a full fit; Fit shows
+// everything. Set until the opening view has been framed once
+const OPENING_ZOOM = 1.25
+let opening = true
+
+function fitOpening() {
+  fit(opening ? OPENING_ZOOM : 1)
+  opening = false
+}
+
+function fit(closer = 1) {
   if (!cy) return
   // Re-read the container's size: with a saved layout the first fit happens straight after
   // mounting, before Cytoscape's cached size is current
   cy.resize()
-  cy.fit(undefined, 40)
-  if (cy.zoom() > 1.25) {
-    cy.zoom(1.25)
-    cy.center()
-  }
+  const area = visibleArea()
+  const padding = 40
+  const box = cy.elements().boundingBox()
+  if (box.w === 0 || box.h === 0) return
+  const zoom = Math.max(
+    cy.minZoom(),
+    Math.min(1.25, cy.maxZoom(), (closer * (area.width - 2 * padding)) / box.w, (closer * (area.height - 2 * padding)) / box.h),
+  )
+  // Centre the graph in the visible area, not the whole canvas
+  cy.viewport({
+    zoom,
+    pan: {
+      x: area.left + area.width / 2 - (box.x1 + box.w / 2) * zoom,
+      y: area.top + area.height / 2 - (box.y1 + box.h / 2) * zoom,
+    },
+  })
 }
 
+// Zooms about the middle of what is visible between the sidebars
 function zoomBy(factor: number) {
   if (!cy) return
+  const area = visibleArea()
   cy.zoom({
     level: cy.zoom() * factor,
-    renderedPosition: { x: cy.width() / 2, y: cy.height() / 2 },
+    renderedPosition: { x: area.left + area.width / 2, y: area.top + area.height / 2 },
   })
+}
+
+// + and − on the keyboard do what the zoom buttons do; ignored while typing, and with
+// ⌘, Ctrl or Alt held, which the browser uses for zooming the page
+function onZoomKey(event: KeyboardEvent) {
+  if (state.listView || event.metaKey || event.ctrlKey || event.altKey) return
+  if ((event.target as HTMLElement | null)?.closest?.('input, textarea, select, [contenteditable="true"]')) return
+  const factor = event.key === '+' || event.key === '=' ? 1.3 : event.key === '-' || event.key === '_' ? 1 / 1.3 : 0
+  if (!factor) return
+  event.preventDefault()
+  zoomBy(factor)
 }
 
 // Two-finger scrolling moves the graph; pinching (which browsers report as a
@@ -317,6 +371,7 @@ function onWheel(event: WheelEvent) {
 
 // Back to the starting view: default filters, nothing selected, fresh layout
 async function reset() {
+  opening = true
   resetFilters()
   select(null)
   await nextTick()
@@ -363,7 +418,7 @@ function runLayout(randomize: boolean) {
   layout.one('layoutstop', () => {
     separateNodes()
     if (randomize) saveLayout()
-    fit()
+    fitOpening()
     centerOnSelection()
   })
   layout.run()
@@ -397,6 +452,15 @@ function separateNodes() {
 }
 
 const plainNodes = () => cy!.nodes().filter((node) => node.isChildless())
+
+// Desktop: hide or show the search and filters sidebar. The graph pans by half the
+// sidebar's width, so what was centred in view stays centred
+function toggleSidebar() {
+  const width = document.getElementById('filters')?.getBoundingClientRect().width ?? 0
+  state.filtersCollapsed = !state.filtersCollapsed
+  rememberCollapsed(state.filtersCollapsed)
+  if (cy && width) cy.animate({ panBy: { x: (state.filtersCollapsed ? -width : width) / 2, y: 0 } }, { duration: motion(220) })
+}
 
 function rememberPositions() {
   if (!cy) return
@@ -493,7 +557,7 @@ function syncElements() {
         saveLayout()
       }
       rememberPositions()
-      fit()
+      fitOpening()
       centerOnSelection()
     } else {
       runLayout(true)
@@ -544,10 +608,16 @@ function centerOnSelection() {
     )
     return
   }
-  const { x1, y1, x2, y2 } = cy.extent()
-  const { x, y } = selected.position()
-  if (x < x1 || x > x2 || y < y1 || y > y2) {
-    cy.animate({ center: { eles: selected } }, { duration: motion(300) })
+  // Brought into view only if it is hidden, behind a sidebar or off screen
+  const area = visibleArea()
+  const rendered = selected.renderedPosition()
+  const inside =
+    rendered.x >= area.left && rendered.x <= area.left + area.width && rendered.y >= area.top && rendered.y <= area.top + area.height
+  if (!inside) {
+    cy.animate(
+      { panBy: { x: area.left + area.width / 2 - rendered.x, y: area.top + area.height / 2 - rendered.y } },
+      { duration: motion(300) },
+    )
   }
 }
 
@@ -559,7 +629,8 @@ onMounted(() => {
   cy = cytoscape({
     container: container.value,
     style: buildStyle(),
-    minZoom: 0.2,
+    // Low enough to fit the whole graph in the space between the sidebars
+    minZoom: 0.08,
     maxZoom: 3,
   })
   // Exposed on the dev server for measuring layouts from the browser console
@@ -591,12 +662,24 @@ onMounted(() => {
   // Capture phase, so this runs instead of Cytoscape's own wheel-to-zoom handler
   container.value!.addEventListener('wheel', onWheel, { capture: true, passive: false })
   darkQuery.addEventListener('change', applyTheme)
-  syncElements()
+  document.addEventListener('keydown', onZoomKey)
+  waitForFonts().then(syncElements)
 })
+
+// Label sizes feed the layout and the overlap pass, and the saved layout was measured in
+// Nunito; measured in a fallback font, labels would collide once Nunito arrived
+async function waitForFonts() {
+  try {
+    await Promise.all([document.fonts.load('400 12px "Nunito Variable"'), document.fonts.load('700 12px "Nunito Variable"')])
+  } catch {
+    // Without the font, labels are measured in the fallback, as they are drawn
+  }
+}
 
 onBeforeUnmount(() => {
   container.value?.removeEventListener('wheel', onWheel, { capture: true })
   darkQuery.removeEventListener('change', applyTheme)
+  document.removeEventListener('keydown', onZoomKey)
   cy?.destroy()
 })
 
@@ -626,6 +709,24 @@ watch(
     </div>
     <ControlsGuide v-show="!state.listView" />
     <div class="graph-canvas__toolbar" role="group" aria-label="Graph navigation">
+      <Tip :label="state.filtersCollapsed ? 'Show filters' : 'Hide filters'">
+        <button
+          id="sidebar-toggle"
+          type="button"
+          class="graph-canvas__sidebar-toggle"
+          aria-label="Filters"
+          aria-controls="filters"
+          :aria-expanded="!state.filtersCollapsed"
+          @click="toggleSidebar"
+        >
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <rect x="2.5" y="3.5" width="15" height="13" rx="2.5" />
+            <path d="M7.5 3.5v13" />
+            <path v-if="state.filtersCollapsed" d="m11 8 2 2-2 2" />
+            <path v-else d="m13 8-2 2 2 2" />
+          </svg>
+        </button>
+      </Tip>
       <button
         id="filters-toggle"
         type="button"
@@ -634,61 +735,71 @@ watch(
         :aria-expanded="state.filtersOpen"
         @click="state.filtersOpen = !state.filtersOpen"
       >
-        Search &amp; filters
+        Filters
       </button>
+      <SearchBox />
+      <AskPopover v-if="AskPopover" />
       <div class="graph-canvas__group">
-        <button type="button" aria-label="Back" title="Back to the previous selection" :disabled="!canGoBack" @click="goBack">
-          <span aria-hidden="true">‹</span>
-        </button>
-        <button
-          type="button"
-          aria-label="Forward"
-          title="Forward to the next selection"
-          :disabled="!canGoForward"
-          @click="goForward"
-        >
-          <span aria-hidden="true">›</span>
-        </button>
-        <div ref="historyMenu" class="graph-canvas__history-menu">
-          <button
-            id="history-toggle"
-            type="button"
-            aria-controls="history-list"
-            :aria-expanded="historyOpen"
-            :disabled="historyEntries.length === 0"
-            @click="toggleHistory"
-          >
-            History<Chevron />
+        <Tip label="Back to the previous selection">
+          <button type="button" aria-label="Back" :disabled="!canGoBack" @click="goBack">
+            <span aria-hidden="true">‹</span>
           </button>
-          <ol
-            v-if="historyOpen"
-            id="history-list"
-            ref="historyList"
-            class="graph-canvas__history"
-            aria-label="Selection history, most recent first"
-            @keydown.escape="closeHistory()"
-          >
-            <li v-for="{ index, node } in historyEntries" :key="index">
-              <button
-                type="button"
-                :aria-current="index === state.historyIndex ? 'true' : undefined"
-                @click="chooseFromHistory(index)"
-              >
-                <NodeGlyph :type="node.type" />
-                {{ node.name }}
-              </button>
-            </li>
-          </ol>
-        </div>
+        </Tip>
+        <Tip label="Forward to the next selection">
+          <button type="button" aria-label="Forward" :disabled="!canGoForward" @click="goForward">
+            <span aria-hidden="true">›</span>
+          </button>
+        </Tip>
+        <DropdownMenuRoot v-model:open="historyOpen" :modal="false">
+          <DropdownMenuTrigger as-child>
+            <button id="history-toggle" type="button" class="graph-canvas__history-toggle" :disabled="historyEntries.length === 0">
+              History<Chevron />
+            </button>
+          </DropdownMenuTrigger>
+          <DropdownMenuPortal>
+            <DropdownMenuContent
+              class="graph-canvas__history"
+              align="start"
+              :side-offset="4"
+              aria-label="Selection history, most recent first"
+              @close-auto-focus="onHistoryClosed"
+            >
+              <!-- The current selection reads as the checked entry -->
+              <DropdownMenuRadioGroup :model-value="String(state.historyIndex)">
+                <DropdownMenuRadioItem
+                  v-for="{ index, node } in historyEntries"
+                  :key="index"
+                  :value="String(index)"
+                  class="graph-canvas__history-item"
+                  @select="chooseFromHistory(index)"
+                >
+                  <NodeGlyph :type="node.type" />
+                  {{ node.name }}
+                </DropdownMenuRadioItem>
+              </DropdownMenuRadioGroup>
+            </DropdownMenuContent>
+          </DropdownMenuPortal>
+        </DropdownMenuRoot>
       </div>
-      <div class="graph-canvas__group graph-canvas__view" role="group" aria-label="View">
-        <button type="button" :aria-pressed="!state.listView" @click="state.listView = false">Graph</button>
-        <button type="button" :aria-pressed="state.listView" @click="state.listView = true">List</button>
-      </div>
+      <ToggleGroupRoot
+        type="single"
+        class="graph-canvas__view"
+        :data-view="state.listView ? 'list' : 'graph'"
+        aria-label="View"
+        :model-value="state.listView ? 'list' : 'graph'"
+        @update:model-value="(view) => view && (state.listView = view === 'list')"
+      >
+        <ToggleGroupItem value="graph">Graph</ToggleGroupItem>
+        <ToggleGroupItem value="list">List</ToggleGroupItem>
+      </ToggleGroupRoot>
       <div v-show="!state.listView" class="graph-canvas__group">
-        <button type="button" aria-label="Zoom in" title="Zoom in" @click="zoomBy(1.3)"><span aria-hidden="true">+</span></button>
-        <button type="button" aria-label="Zoom out" title="Zoom out" @click="zoomBy(1 / 1.3)"><span aria-hidden="true">−</span></button>
-        <button type="button" aria-describedby="fit-description" @click="fit">Fit</button>
+        <Tip label="Zoom in">
+          <button type="button" aria-label="Zoom in" @click="zoomBy(1.3)"><span aria-hidden="true">+</span></button>
+        </Tip>
+        <Tip label="Zoom out">
+          <button type="button" aria-label="Zoom out" @click="zoomBy(1 / 1.3)"><span aria-hidden="true">−</span></button>
+        </Tip>
+        <button type="button" aria-describedby="fit-description" @click="fit()">Fit</button>
         <button type="button" aria-describedby="reset-description" @click="reset">Reset</button>
       </div>
       <span id="fit-description" class="visually-hidden">Fit the whole graph in view</span>
@@ -711,8 +822,8 @@ watch(
 
 .graph-canvas__list {
   position: absolute;
-  inset: 0;
-  padding-top: 4.5rem;
+  inset: 0 var(--inset-right, 0px) 0 var(--inset-left, 0px);
+  padding-top: calc(var(--inset-top, 0px) + 4.5rem);
   overflow-y: auto;
   background: var(--surface);
 }
@@ -740,10 +851,10 @@ watch(
 
 .graph-canvas__toolbar {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: calc(var(--inset-top, 0px) + 12px);
+  left: calc(var(--inset-left, 0px) + 12px);
   /* Room for the controls guide's button in the top-right corner */
-  right: 9rem;
+  right: calc(var(--inset-right, 0px) + 9rem);
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -759,7 +870,9 @@ watch(
   height: 36px;
   padding: 0 10px;
   border: 1px solid var(--border-strong);
-  background: var(--surface-raised);
+  background: var(--frost);
+  -webkit-backdrop-filter: var(--frost-blur);
+  backdrop-filter: var(--frost-blur);
   color: inherit;
   font: inherit;
   cursor: pointer;
@@ -767,7 +880,8 @@ watch(
 }
 
 .graph-canvas__toolbar button:hover:not(:disabled) {
-  background: var(--surface);
+  background: var(--wash);
+  color: var(--text-primary);
 }
 
 .graph-canvas__toolbar button:disabled {
@@ -776,69 +890,87 @@ watch(
   opacity: 0.6;
 }
 
-.graph-canvas__history-menu {
-  position: relative;
-}
-
-/* The history toggle closes the back/forward group, so it takes that group's right corners */
-.graph-canvas__group .graph-canvas__history-menu > button {
+.graph-canvas__toolbar .graph-canvas__history-toggle {
   display: inline-flex;
   align-items: center;
-  border-left: 0;
-  border-radius: 0 6px 6px 0;
 }
 
-.graph-canvas__history {
-  position: absolute;
-  z-index: 5;
-  top: calc(100% + 4px);
-  left: 0;
-  min-width: 16rem;
-  max-width: 20rem;
-  max-height: min(50vh, 26rem);
-  margin: 0;
-  padding: 4px;
-  overflow-y: auto;
-  list-style: none;
+
+/* A switch rather than two buttons: a rounded track with a burgundy thumb that slides
+   behind whichever view is on */
+.graph-canvas__view {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3px;
   border: 1px solid var(--border-strong);
-  border-radius: 6px;
-  background: var(--surface-raised);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+  background: var(--frost);
+  -webkit-backdrop-filter: var(--frost-blur);
+  backdrop-filter: var(--frost-blur);
   pointer-events: auto;
 }
 
-.graph-canvas__toolbar .graph-canvas__history button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  height: auto;
-  min-height: 32px;
-  padding: 4px 8px;
+.graph-canvas__view::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  width: calc(50% - 3px);
+  border-radius: 999px;
+  background: var(--fill);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.graph-canvas__view[data-view='list']::before {
+  transform: translateX(100%);
+}
+
+.graph-canvas__toolbar .graph-canvas__view button {
+  position: relative;
+  height: 28px;
+  min-width: 4.25rem;
+  padding: 0 0.875rem;
   border: 0;
-  border-radius: 4px;
+  border-radius: 999px;
   background: none;
-  text-align: left;
-}
-
-.graph-canvas__toolbar .graph-canvas__history button:hover {
-  background: var(--wash);
-}
-
-.graph-canvas__toolbar .graph-canvas__history button[aria-current] {
-  background: var(--wash);
+  color: var(--text-secondary);
   font-weight: 600;
+  transition: color 0.2s ease;
 }
 
-.graph-canvas__view button[aria-pressed='true'] {
-  background: var(--text-primary);
-  border-color: var(--text-primary);
-  color: var(--surface);
-  font-weight: 600;
+.graph-canvas__toolbar .graph-canvas__view button:hover:not([data-state='on']) {
+  background: none;
+  color: var(--text-primary);
 }
 
-.graph-canvas__view button[aria-pressed='true']:hover {
-  background: var(--text-primary);
+.graph-canvas__toolbar .graph-canvas__view button[data-state='on'] {
+  color: var(--on-fill);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .graph-canvas__view::before,
+  .graph-canvas__toolbar .graph-canvas__view button {
+    transition: none;
+  }
+}
+
+.graph-canvas__toolbar .graph-canvas__sidebar-toggle {
+  display: inline-grid;
+  place-items: center;
+  border-radius: var(--radius);
+}
+
+.graph-canvas__sidebar-toggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .graph-canvas__filters {
@@ -851,11 +983,11 @@ watch(
 }
 
 .graph-canvas__group button:first-child {
-  border-radius: 6px 0 0 6px;
+  border-radius: var(--radius) 0 0 var(--radius);
 }
 
 .graph-canvas__group button:last-child {
-  border-radius: 0 6px 6px 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
 }
 
 @media (max-width: 1024px) {
@@ -863,9 +995,49 @@ watch(
     display: block;
   }
 
+  /* Tablets use the drawer and its "Search & filters" button instead */
+  .graph-canvas__toolbar .graph-canvas__sidebar-toggle {
+    display: none;
+  }
+
   .graph-canvas__toolbar button {
     min-width: 40px;
     height: 40px;
   }
+}
+</style>
+
+<style>
+/* The history menu is teleported to the page body, outside this component's scoped styles */
+.graph-canvas__history {
+  z-index: 40;
+  min-width: 16rem;
+  max-width: 20rem;
+  max-height: min(50vh, 26rem);
+  padding: 4px;
+  overflow-y: auto;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow);
+}
+
+.graph-canvas__history-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  outline: none;
+}
+
+.graph-canvas__history-item[data-highlighted] {
+  background: var(--wash);
+}
+
+.graph-canvas__history-item[data-state='checked'] {
+  font-weight: 700;
 }
 </style>

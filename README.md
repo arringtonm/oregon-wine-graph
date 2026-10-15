@@ -1,126 +1,88 @@
 # Oregon Wine Graph
 
-An explorable graph of the people, wineries and vineyards of Oregon wine history, and how they connect.
+An explorable map of the people, wineries and vineyards behind Oregon wine, and how they connect: who founded what, who made the wine where, who trained whom, which vineyards supply which wineries, and how families and careers run through the industry from the 1960s pioneers to today.
 
-## Running it
+![The Eyrie Vineyards selected in the graph, with its founders, winemakers and estate vineyard listed beside it](docs/screenshot.png)
+
+## What you can explore
+
+- **The graph.** Every person, winery, vineyard, AVA, organization and event is a node; every relationship between them is a line. Better-connected nodes are drawn larger. Select one to see its story, its connections and the sources for each.
+- **Search and filters.** Find anyone by name, show or hide kinds of people and places or kinds of relationship, narrow to particular AVAs, or show only records that have been verified.
+- **AVA regions.** Switch on "AVA regions" to see vineyards grouped inside the American Viticultural Areas they sit in.
+- **List view.** The same people and places as a searchable list, readable by keyboard and screen reader.
+- **Oral histories.** Hundreds of people and places link to their interview in Linfield University's Oregon Wine History Archive, with video and transcript.
+- **Nearby tasting rooms.** Wineries with a known visitor address list the tasting rooms within 10 km.
+- **Controls guide.** Press <kbd>?</kbd> for the controls on your device, mouse, trackpad or touch.
+- **More room.** Hide the filters sidebar with the sidebar button at the left of the toolbar; the app remembers your choice.
+
+Links share a selection: `/#the-eyrie-vineyards` opens straight to The Eyrie Vineyards.
+
+## What's in it
+
+As of 14 October 2026:
+
+| | Records |
+|---|---|
+| People | 627 |
+| Wineries | 364 |
+| Vineyards | 94 |
+| Organizations | 48 |
+| AVAs | 20 |
+| Events | 12 |
+| **Connections** | **1,954** |
+
+Of these 3,119 records, **2,105 (67%) are verified** against their sources, as described below. 725 people and places link to oral history interviews.
+
+Coverage is strongest for the northern Willamette Valley, where Oregon's modern wine industry began and where most published history concentrates. Southern Oregon, the Columbia Gorge and Walla Walla are thinner. Interview summaries have been read; full interview transcripts have not yet, so some careers are less detailed than the record allows.
+
+## How we know: the evidence behind each record
+
+Every node and every connection in the graph cites at least one source, and each connection carries its own citations, so "David Lett founded The Eyrie Vineyards in 1966" points to the pages that say so. Select any record to see them.
+
+### Verification
+
+A record is either **verified** or an **unverified draft**. Drafts are shown, because a cited but unchecked fact is still useful, but "Verified records only" hides them. A record becomes verified in one of three ways:
+
+1. **Reviewed by a person.** Someone has read the cited sources and confirmed the record.
+2. **Checked against its sources automatically.** A decision model reads the text of each cited page and judges whether it supports the record: the relationship itself, each year, and the role. A record is approved only when a source supports the relationship, and every detail is supported, each with a confidence of at least 0.9. To measure how often that goes wrong, we deliberately corrupted one fact in each of about 400 records that had passed (a year changed, a relationship swapped) and checked them again: 1.2% still passed, every one of them by swapping a closely related relationship, such as "founded" for "helped organize". Sources the model can't read, such as pages behind bot protection, never count for or against a record.
+3. **Confirmed by AVA boundaries.** A vineyard's AVA can be confirmed by testing its location against the official AVA boundary maps. This is available but not yet in use, as no vineyard has mapped coordinates yet.
+
+Today 1,980 records are verified by the automated check and 125 by a person; the remaining 1,014 are drafts.
+
+### Rules we follow
+
+- **Nothing is guessed.** If no source gives a year, the record has no year. Hedged statements ("I think", "reportedly") don't become records.
+- **Where sources disagree, the record says so.** For example, The Eyrie Vineyards' founding is dated 1965 by some sources and 1966 by others, and its record notes that.
+- **Addresses are for visitors.** A winery's address is where you can taste, often a tasting room some distance from its vines. It is never used as evidence of where grapes are grown; vineyards and the AVAs a winery draws fruit from are recorded separately.
+- **Private sources contribute facts, not text.** Some records come from a subscriber newsletter; only the facts are kept, never its wording.
+- **Summaries are our own words.**
+
+### Sources
+
+The main sources, by how many records cite them:
+
+- [Oregon Wine History Archive](https://oregonwinehistoryarchive.org), Linfield University: oral history interviews and their summaries
+- Weinnotes, a monthly Oregon wine newsletter
+- [The Prince of Pinot](https://www.princeofpinot.com)
+- [Wikipedia](https://en.wikipedia.org)
+- [Oregon Wine Press](https://www.oregonwinepress.com)
+- [Wine Spectator](https://www.winespectator.com) and [Great Northwest Wine](https://www.greatnorthwestwine.com)
+- Wineries' own websites, for their founders, winemakers and vineyards
+- [UC Davis Library AVA boundaries](https://github.com/UCDavisLibrary/ava) (public domain), for AVA geography
+
+## Corrections and contributions
+
+Found something wrong or missing? [Open an issue](https://github.com/arringtonm/oregon-wine-graph/issues) with the record and, ideally, a source. The most useful sources are published and specific: an interview, a winery's own history page, a news story or book naming the people and the years. Corrections that come with a source are checked and applied like any other record.
+
+## Running it yourself
 
 ```sh
 npm install
-npm run dev     # local dev server
-npm test        # validate the data files
-npm run build   # type-check and build
+npm run dev
 ```
 
-## Data
+Then open the address it prints. The [developer guide](docs/DEVELOPMENT.md) covers the data format, the review tools, the automated source check and the research tools.
 
-All content lives in JSON files under `src/data/`:
+## Credits
 
-- `nodes/people.json`, `wineries.json`, `vineyards.json`, `avas.json`, `organizations.json`, `events.json`
-- `edges.json`, one record per relationship
-
-`src/data/schema.ts` defines the shape of every record and the `EDGE_RULES` table, which says what each edge type means, which way it points, and which node types it may join. `npm test` checks the real files against it: schema, unique IDs, edge endpoints, allowed endpoint types, year order, and at least one source per record.
-
-Conventions:
-
-- IDs are kebab-case slugs (`david-lett`). Edge IDs are `source--edge-type--target`, with a `-2` suffix for a second edge of the same type between the same pair.
-- A winery and a vineyard are separate nodes, joined by `owns` (estate) or `sources_from`.
-- Several edges may join the same pair: one person can be founder, owner and winemaker of the same winery, or hold two separate stints.
-- `ongoing: true` means the relationship still holds. A missing `endYear` on its own means the end date is unknown.
-- Entities based outside Oregon carry `outsideOregon: true`.
-- Every record needs a source. A source normally has a URL; one without (an emailed newsletter issue, say) is cited by title and date. `verified` stays `false` until someone has checked the record against its sources.
-
-`src/data/index.ts` is the only module that reads the JSON, so moving to a hosted database later means reimplementing `loadGraph()` there.
-
-## Reviewing records
-
-Run `npm run dev` and the detail panel gains a review box. Each node and each connection has an Approve button (and Undo), its sources are linked beside it, and "Next unverified" walks through whatever is left. Approving writes `verified: true` straight into the JSON file, so a review session ends as an ordinary git diff to read and commit.
-
-### Checking records against their sources
-
-Most of the backlog is cleared by machine. Three commands, run in order:
-
-```sh
-npm run check:fetch      # download every cited page once into .cache/ (not committed)
-npm run check            # ask Jev whether each record's own sources support it
-npm run check:apply      # mark the supported ones verified, as verified by Jev
-```
-
-`npm run check` breaks each record into claims (the relationship, each year, the role), cuts each cited page down to the passages naming the parties, and has Jev score every claim. Raw scores go to `src/data/checks.json`, so the threshold can change without asking again. A record is supported when some source states or implies it and every detail holds; otherwise it is partly supported, unsupported, contradicted, or unreadable.
-
-`npm run check:calibrate` measures the risk: it breaks one fact in each of about 400 passing records and counts how many still pass. At the threshold in use (0.9) that was 1.2%, all from swapping in a neighbouring relationship such as "founded" for "helped organize".
-
-Verified records carry `verifiedBy`: `person`, `jev` or `boundary`. `npm run check:apply -- --undo` unverifies everything Jev verified.
-
-In review mode, each record shows Jev's verdict and an Evidence button with the passages it read. The review box has a button per verdict that jumps to the next node needing attention. A connection can be edited (role, years), which re-checks it, or removed.
-
-Review mode exists only on the dev server (`tools/reviewPlugin.ts`); the built site is read-only and shows unverified records with an "Unverified draft" badge.
-
-## Adding a connection in plain language
-
-Also on the dev server, each node's panel has an "Add new connection" box. Type a sentence about that node, such as "Dan and Jeanne are married" on Dan Diephouse's page, optionally with a source URL. The app shows what it understood as an editable preview; nothing is saved until you confirm. A saved connection is appended to `edges.json` as an unverified record. Without a URL it cites you and the date.
-
-The reading is done by [Jev](https://typesafe.ai), a decision model: our code finds the candidate nodes and years, Jev chooses among them and among the allowed connection types, and the edge rules have the last word. Put a key in `.env.local` to use it:
-
-```
-JEV_API_KEY=...
-```
-
-Without a key, keyword rules stand in for Jev so the feature still works; the preview says which one read the sentence. If the sentence names someone or something the graph does not have, the preview offers to create it as a new unverified node, with a name and type you can correct before saving. One sentence adds one connection. The code is in `tools/jev/`.
-
-## Saved layout
-
-The graph opens with a saved arrangement (`src/data/layout.json`), so it appears without laying the graph out in the browser. The dev server saves it whenever the default view gets a fresh layout: on the first load without one, or on Reset. Commit it alongside data changes. Nodes added since the last save are placed beside their connections. To start over, run `npm run layout:reset` and reload.
-
-## Oregon Wine History Archive
-
-Linfield University's oral-history archive ([oregonwinehistoryarchive.org](https://oregonwinehistoryarchive.org)) serves all its pages through its public WordPress API, so no crawling is needed.
-
-```sh
-npm run owha:fetch   # download and parse every page into .cache/owha/, and cache each as a source
-npm run owha:match   # match interviews to people and collections to wineries we already have
-npm run owha:link    # add those interviews to the nodes, with the archive page as a source
-```
-
-A matched node shows an "Oral history" section in the detail panel linking to its interview, with the video and transcript on the archive page. Pages about people and places not yet in the graph are ranked with `npm run discover:triage -- owha-unmatched` and extracted by research agents.
-
-## Adding records from a source
-
-`tools/discover/BRIEF.md` sets out the conventions for turning a source into records: what to cite, how to model wineries and vineyards, and what never to guess. Research output goes to a file under `.cache/`, and `npm run discover:merge -- <file.json> ...` folds it into the data: existing nodes and relationships gain only sources, connections to unknown nodes and orphan nodes are dropped, and the whole graph is validated before anything is written. Run `npm run check` and `npm run check:apply` afterwards.
-
-## Geography
-
-- `npm run geo:locate` finds each Oregon winery's visitor address on its own website (trying the usual domain patterns when none is cited), has Jev confirm which address is the winery's, and geocodes it with the US Census geocoder. Addresses are visitor information: often a tasting room, which can move and can sit far from the vines. They feed the "Nearby tasting rooms" list and nothing else.
-- `npm run geo:avas` tests located vineyards against the official AVA boundaries (UC Davis Library, public domain), verifying "located in" connections that match and adding missing ones. Wineries are not tested, for the reason above.
-- With "AVA regions" on, vineyards are drawn inside a region for their AVA, nested inside parent AVAs. Wineries stay outside the regions, since a winery can source from vineyards in several AVAs; they are joined to the vineyards they own or buy from, and any "located in" they have is drawn as a line to the region.
-
-## App
-
-- `src/composables/useGraph.ts`: shared state, filters and derived views
-- `src/components/GraphCanvas.vue`: the Cytoscape.js graph
-- `src/components/GraphControls.vue`: search, legend and filters
-- `src/components/DetailPanel.vue`: the selected node, its connections and sources
-
-AVA nodes appear only when the Geography layer is on, since they would otherwise connect to almost everything. The AVA filter works either way. The selected node is kept in the URL hash, so `/#david-lett` links straight to a node.
-
-## Ideas for future work
-
-Visualization:
-
-- Size nodes by importance, not just connection count. Today a node's size is its number of connections; an explicit `importance` field or a centrality measure would let pioneering figures stand out even when few of their ties are recorded.
-- Offer more than one view of the same data: a timeline or year slider showing the network as it stood in a given year, a map by AVA, and a lineage view for mentorship and family ("who trained whom").
-- Tint or group nodes by AVA, and consider a color per connection category once there is a palette that stays readable.
-- Show at a glance on the graph itself which records are verified.
-- Photos or logos on nodes and in the detail panel.
-
-Data:
-
-- Review the seed data. Every record is an unverified draft; check each against its sources and set `verified: true`.
-- Record source disagreements (founding years, AVA dates) on the record itself, so the choice made is visible.
-- More relationship types that came up in research but have no home yet: AVA petitioners, donors, "sold vines to", and regulators such as the OLCC for the 1970s labeling rules.
-- Widen coverage beyond the northern Willamette Valley: Columbia Gorge, Rogue and Applegate valleys, Walla Walla.
-
-Platform:
-
-- Move the data to Firebase or similar, with an in-app editor so others can contribute.
-- Split the JavaScript bundle; the graph library makes the single chunk large.
-- Check and polish the light theme and small-screen layout.
+Data from the sources above, with particular thanks to Linfield University's Oregon Wine History Archive. Built with [Vue](https://vuejs.org), [Cytoscape.js](https://js.cytoscape.org), [Reka UI](https://reka-ui.com) and [Zod](https://zod.dev); set in [Nunito](https://fonts.google.com/specimen/Nunito) (SIL Open Font License). Automated source checks use [Jev](https://typesafe.ai) from TypeSafe AI.

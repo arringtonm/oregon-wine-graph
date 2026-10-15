@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { CollapsibleContent, CollapsibleRoot, CollapsibleTrigger } from 'reka-ui'
 import { nextTick, ref } from 'vue'
 import type { AskAnswer, AskOverride } from '../../tools/jev/askGraph'
 import { useGraph } from '../composables/useGraph'
@@ -70,20 +71,14 @@ async function ask(override?: AskOverride) {
       <button type="submit" :disabled="busy || !question.trim()">{{ busy ? 'Asking…' : 'Ask' }}</button>
     </form>
 
-    <button
-      type="button"
-      class="ask__examples-toggle"
-      aria-controls="ask-examples"
-      :aria-expanded="examplesOpen"
-      @click="examplesOpen = !examplesOpen"
-    >
-      Example questions<Chevron />
-    </button>
-    <ul v-show="examplesOpen" id="ask-examples" class="ask__examples">
-      <li v-for="example in EXAMPLES" :key="example">
-        <button type="button" @click="useExample(example)">{{ example }}</button>
-      </li>
-    </ul>
+    <CollapsibleRoot v-model:open="examplesOpen" class="ask__examples-wrap">
+      <CollapsibleTrigger class="ask__examples-toggle">Example questions<Chevron /></CollapsibleTrigger>
+      <CollapsibleContent as="ul" class="ask__examples">
+        <li v-for="example in EXAMPLES" :key="example">
+          <button type="button" @click="useExample(example)">{{ example }}</button>
+        </li>
+      </CollapsibleContent>
+    </CollapsibleRoot>
 
     <div class="ask__answer" aria-live="polite">
       <p v-if="error" class="ask__error">{{ error }}</p>
@@ -175,6 +170,12 @@ form button,
   font: inherit;
   font-size: 0.875rem;
   cursor: pointer;
+}
+
+.ask__examples-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .ask__examples,

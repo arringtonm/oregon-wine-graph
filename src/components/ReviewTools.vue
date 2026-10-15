@@ -2,6 +2,7 @@
 import { computed, reactive, ref } from 'vue'
 import type { Evidence } from '../../tools/check/edit'
 import { useGraph } from '../composables/useGraph'
+import { CollapsibleContent, CollapsibleRoot, CollapsibleTrigger } from 'reka-ui'
 import Chevron from './Chevron.vue'
 import type { GraphEdge, GraphNode } from '../data/schema'
 
@@ -10,7 +11,6 @@ import type { GraphEdge, GraphNode } from '../data/schema'
 // `label` names the record in button names, e.g. "founded by Susan Sokol Blosser", since a
 // card repeats Evidence, Edit and Remove for every connection
 const props = defineProps<{ kind: 'node' | 'edge'; record: GraphNode | GraphEdge; label: string }>()
-const evidenceId = computed(() => `evidence-${props.kind}-${props.record.id}`)
 const validYear = (year: string) => year === '' || /^\d{4}$/.test(year)
 const { state, decisionFor, loadEvidence, removeEdge, updateEdge } = useGraph()
 
@@ -79,7 +79,8 @@ function save() {
 </script>
 
 <template>
-  <div class="tools">
+  <!-- Evidence opens once Jev's reading of the sources has loaded -->
+  <CollapsibleRoot class="tools" :open="!!evidence" @update:open="toggleEvidence">
     <p class="tools__row">
       <span v-if="record.verified && record.verifiedBy === 'jev'" class="tools__chip">verified by Jev</span>
       <span v-else-if="record.verified && record.verifiedBy === 'boundary'" class="tools__chip">verified by boundary</span>
@@ -88,16 +89,7 @@ function save() {
         {{ VERDICT_LABELS[decision.verdict] }}<template v-if="failing">: {{ failing }}</template>
       </span>
       <span v-else class="tools__chip">not checked</span>
-      <button
-        type="button"
-        :aria-expanded="!!evidence"
-        :aria-controls="evidenceId"
-        :aria-label="`Evidence for ${label}`"
-        :disabled="busy"
-        @click="toggleEvidence"
-      >
-        Evidence<Chevron />
-      </button>
+      <CollapsibleTrigger :aria-label="`Evidence for ${label}`" :disabled="busy">Evidence<Chevron /></CollapsibleTrigger>
       <template v-if="kind === 'edge'">
         <button
           type="button"
@@ -134,7 +126,7 @@ function save() {
       </button>
     </form>
 
-    <div v-if="evidence" :id="evidenceId" class="tools__evidence">
+    <CollapsibleContent v-if="evidence" class="tools__evidence">
       <p><strong>Checked:</strong> {{ evidence.claims.main }}</p>
       <ul v-if="Object.keys(evidence.claims.details).length">
         <li v-for="(statement, id) in evidence.claims.details" :key="id">{{ statement }}</li>
@@ -148,8 +140,8 @@ function save() {
         </p>
         <blockquote v-if="source.passage">{{ source.passage }}</blockquote>
       </section>
-    </div>
-  </div>
+    </CollapsibleContent>
+  </CollapsibleRoot>
 </template>
 
 <style scoped>
@@ -265,6 +257,6 @@ blockquote {
 }
 
 a {
-  color: var(--link);
+  color: var(--accent);
 }
 </style>

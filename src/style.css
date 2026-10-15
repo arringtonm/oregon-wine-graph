@@ -1,22 +1,38 @@
 :root {
   color-scheme: light;
-  --page: #f9f9f7;
-  --surface: #fcfcfb;
+  /* Cellar palette: cream paper, burgundy accent, node colours drawn from wine. Node colours
+     keep at least 3:1 contrast here, and stay apart under simulated protanopia,
+     deuteranopia and tritanopia (CIELAB distance of 21 or more between any two) */
+  --page: #f8f4ef;
+  --surface: #fdfaf6;
   --surface-raised: #ffffff;
-  --wash: rgba(11, 11, 11, 0.05);
-  --text-primary: #0b0b0b;
-  --text-secondary: #52514e;
-  --border: rgba(11, 11, 11, 0.1);
-  --border-strong: #c3c2b7;
-  --link: #1c5cab;
+  --wash: rgba(74, 20, 36, 0.05);
+  --text-primary: #21161a;
+  --text-secondary: #5e4f54;
+  --border: rgba(60, 20, 30, 0.12);
+  --border-strong: #c9bcbf;
+  --accent: #7b1e3a;
+  --accent-contrast: #ffffff;
+  /* Burgundy for filled surfaces (the view switch, checked boxes), with --on-fill text */
+  --fill: #7b1e3a;
+  --on-fill: #fdf6f3;
+  --link: var(--accent);
   --danger: #b3261e;
-  --edge: #898781;
-  --node-person: #2a78d6;
-  --node-winery: #eb6834;
-  --node-vineyard: #1baf7a;
-  --node-neutral: #898781;
+  --edge: #9b8d91;
+  --node-winery: #7f1d3c;
+  --node-vineyard: #4f7d3a;
+  --node-person: #b07a0b;
+  --node-neutral: #8a8079;
+  --shadow: 0 6px 20px rgba(40, 10, 20, 0.14);
+  /* Panels floating over the graph: translucent, with the graph blurred behind them */
+  --frost: color-mix(in srgb, var(--surface-raised) 60%, transparent);
+  --frost-blur: blur(14px) saturate(1.15);
+  --header-h: 3.25rem;
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-lg: 12px;
 
-  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-family: 'Nunito Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
   /* 14px at the browser default, and scales with the reader's own font-size setting */
   font-size: 87.5%;
   line-height: 1.45;
@@ -27,19 +43,27 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --page: #0d0d0d;
-    --surface: #1a1a19;
-    --surface-raised: #222220;
-    --wash: rgba(255, 255, 255, 0.07);
-    --text-primary: #f0efec;
-    --text-secondary: #c3c2b7;
-    --border: rgba(255, 255, 255, 0.1);
-    --border-strong: #52514e;
-    --link: #86b6ef;
+    /* Warm near-black with a faint red undertone; colour-blind separation 17 or more */
+    --page: #140e10;
+    --surface: #1d1518;
+    --surface-raised: #261c20;
+    --wash: rgba(255, 235, 240, 0.06);
+    --text-primary: #f3ece9;
+    --text-secondary: #c8babd;
+    --border: rgba(255, 230, 235, 0.1);
+    --border-strong: #5a4a4f;
+    --accent: #e58ba2;
+    --accent-contrast: #1d1518;
+    /* Lighter than light mode's burgundy, so a filled thumb stands out on the dark page */
+    --fill: #9b2d4f;
+    --on-fill: #fbeff2;
     --danger: #f2b8b5;
-    --node-person: #3987e5;
-    --node-winery: #d95926;
-    --node-vineyard: #199e70;
+    --edge: #7e6f73;
+    --node-winery: #c94a70;
+    --node-vineyard: #8cc06a;
+    --node-person: #f0c45a;
+    --node-neutral: #a8a2b8;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
   }
 }
 
@@ -64,7 +88,7 @@ select {
 }
 
 :focus-visible {
-  outline: 2px solid var(--link);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
