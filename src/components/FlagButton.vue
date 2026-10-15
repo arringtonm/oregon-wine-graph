@@ -236,7 +236,8 @@ async function send() {
 .flag-form {
   z-index: 45;
   width: min(22rem, calc(100vw - 2rem));
-  max-height: min(80vh, 40rem);
+  /* No taller than the room Reka finds beside the Flag button, so it never runs off screen */
+  max-height: min(var(--reka-popover-content-available-height, 80vh), 40rem);
   overflow-y: auto;
   padding: 0.85rem 1rem 1rem;
   border: 1px solid var(--border-strong);

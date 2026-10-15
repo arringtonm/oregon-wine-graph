@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { HoverCardContent, HoverCardPortal, HoverCardRoot, HoverCardTrigger } from 'reka-ui'
 import { computed } from 'vue'
-import { nodeYears, SINGULAR_TYPE, useGraph } from '../composables/useGraph'
+import { nodeYears, useGraph } from '../composables/useGraph'
 import type { GraphNode } from '../data/schema'
 import NodeGlyph from './NodeGlyph.vue'
 
@@ -11,11 +11,9 @@ import NodeGlyph from './NodeGlyph.vue'
 const props = defineProps<{ node: GraphNode }>()
 const { degree } = useGraph()
 
-const type = computed(() => {
-  const name = SINGULAR_TYPE[props.node.type]
-  return name.charAt(0).toUpperCase() + name.slice(1) + (props.node.outsideOregon ? ' · outside Oregon' : '')
-})
-const facts = computed(() => [nodeYears(props.node), props.node.place].filter(Boolean).join(' · '))
+const facts = computed(() =>
+  [nodeYears(props.node), props.node.place, props.node.outsideOregon && 'outside Oregon'].filter(Boolean).join(' · '),
+)
 const connections = computed(() => {
   const count = degree.value.get(props.node.id) ?? 0
   return `${count} connection${count === 1 ? '' : 's'}`
@@ -29,8 +27,7 @@ const connections = computed(() => {
     </HoverCardTrigger>
     <HoverCardPortal>
       <HoverCardContent class="node-preview" side="left" align="start" :side-offset="10" :collision-padding="12" aria-hidden="true">
-        <p class="node-preview__type"><NodeGlyph :type="node.type" />{{ type }}</p>
-        <p class="node-preview__name">{{ node.name }}</p>
+        <p class="node-preview__name"><NodeGlyph :type="node.type" />{{ node.name }}</p>
         <p v-if="facts" class="node-preview__facts">{{ facts }}</p>
         <p class="node-preview__summary">{{ node.summary }}</p>
         <p class="node-preview__facts">{{ connections }}</p>
@@ -59,16 +56,20 @@ const connections = computed(() => {
   margin: 0;
 }
 
-.node-preview__type {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  color: var(--text-secondary);
-}
-
+/* The icon stays on the name's first line if a long name wraps */
 .node-preview__name {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
   font-size: 0.9375rem;
   font-weight: 700;
+}
+
+/* 14px, centred on the name's first line (1.45em tall), a hair high to sit with the capitals */
+.node-preview .node-preview__name .node-glyph {
+  width: 14px;
+  height: 14px;
+  margin-top: calc((1.45em - 14px) / 2 - 0.5px);
 }
 
 .node-preview__facts {

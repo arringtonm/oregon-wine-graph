@@ -79,12 +79,32 @@ watch(
 
 const groups = computed(() => (selectedNode.value ? connectionsOf(selectedNode.value.id) : []))
 
-// Within a section, connections sharing a verb are listed under it once: "Supplies fruit to",
-// then one line per winery. Verbs keep the order they first appear in
-function byVerb(connections: Connection[]): { verb: string; connections: Connection[] }[] {
-  const lists = new Map<string, Connection[]>()
-  for (const connection of connections) lists.set(connection.verb, [...(lists.get(connection.verb) ?? []), connection])
-  return [...lists].map(([verb, list]) => ({ verb: verb.charAt(0).toUpperCase() + verb.slice(1), connections: list }))
+// Within a section, each connection leads with the other record's name and follows it with
+// the verb: "Adelsheim Vineyard (founded)". A verb shared by three or more connections is
+// written once instead, as a subheading over them ("Supplies fruit to", then the wineries);
+// those lists come after the single connections, so subheadings never sit between them
+const VERB_HEADING_MIN = 3
+interface ConnectionBlock {
+  heading?: string
+  connections: Connection[]
+}
+// What follows the name, in brackets: the verb (unless a subheading gives it), the edge's
+// own detail and its years. "founded, from 1971"; "employed: vineyard manager, 1999–present"
+function aboutConnection(block: ConnectionBlock, verb: string, detail?: string, years?: string): string {
+  const what = block.heading ? detail : [verb, detail].filter(Boolean).join(': ')
+  return [what, years].filter(Boolean).join(', ')
+}
+
+function blocksOf(connections: Connection[]): ConnectionBlock[] {
+  const byVerb = new Map<string, Connection[]>()
+  for (const connection of connections) byVerb.set(connection.verb, [...(byVerb.get(connection.verb) ?? []), connection])
+  const single: Connection[] = []
+  const headed: ConnectionBlock[] = []
+  for (const [verb, list] of byVerb) {
+    if (list.length >= VERB_HEADING_MIN) headed.push({ heading: verb.charAt(0).toUpperCase() + verb.slice(1), connections: list })
+    else single.push(...list)
+  }
+  return [...(single.length ? [{ connections: single }] : []), ...headed]
 }
 const unverifiedOnCard = computed(
   () =>
@@ -93,14 +113,11 @@ const unverifiedOnCard = computed(
 )
 const facts = computed(() =>
   selectedNode.value
-    ? [nodeYears(selectedNode.value), selectedNode.value.place].filter(Boolean).join(' · ')
+    ? [nodeYears(selectedNode.value), selectedNode.value.place, selectedNode.value.outsideOregon && 'outside Oregon']
+        .filter(Boolean)
+        .join(' · ')
     : '',
 )
-// "Winery", "Person", "AVA"
-const typeName = computed(() => {
-  const name = selectedNode.value ? SINGULAR_TYPE[selectedNode.value.type] : ''
-  return name.charAt(0).toUpperCase() + name.slice(1)
-})
 // Every fact on the card, for its verification note and its flag
 const cardFacts = computed(() => (selectedNode.value ? factsOf(selectedNode.value, groups.value) : []))
 
@@ -144,15 +161,15 @@ const canFlag = flagsAvailable()
            the panel so it can stay pinned to the top of the sheet on phones and tablets -->
       <div class="detail__title">
         <NodeGlyph :type="selectedNode.type" />
-        <h2 ref="heading" tabindex="-1">{{ selectedNode.name }}</h2>
+        <!-- The icon shows the type; screen readers hear it after the name -->
+        <h2 ref="heading" tabindex="-1">
+          {{ selectedNode.name }}<span class="visually-hidden">, {{ SINGULAR_TYPE[selectedNode.type] }}</span>
+        </h2>
         <button type="button" class="detail__close" aria-label="Close details" @click="select(null)">
           <span aria-hidden="true">×</span>
         </button>
       </div>
       <header>
-        <p class="detail__type">
-          {{ typeName }}<template v-if="selectedNode.outsideOregon"> · outside Oregon</template>
-        </p>
         <p v-if="selectedNode.aka" class="detail__aka">Also known as {{ selectedNode.aka.join(', ') }}</p>
         <p v-if="facts" class="detail__facts">{{ facts }}</p>
         <p v-if="avaNames.length" class="detail__facts">
@@ -179,17 +196,23 @@ const canFlag = flagsAvailable()
 
       <section v-for="group in groups" :key="group.category">
         <h3>{{ EDGE_CATEGORY_LABELS[group.category] }}</h3>
-        <template v-for="list in byVerb(group.connections)" :key="list.verb">
-          <h4 class="detail__verb">{{ list.verb }}</h4>
+        <template v-for="block in blocksOf(group.connections)" :key="block.heading ?? ''">
+          <h4 v-if="block.heading" class="detail__verb">{{ block.heading }}</h4>
           <ul>
-            <li v-for="{ edge, other, label, detail, years } in list.connections" :key="edge.id">
-              <NodePreview :node="other">
-                <button type="button" class="detail__link" @click="select(other.id, { focusDetails: true })">
-                  <NodeGlyph :type="other.type" />
-                  {{ other.name }}
-                </button>
-              </NodePreview>
-              <span v-if="detail || years" class="detail__years">{{ [detail, years].filter(Boolean).join(', ') }}</span>
+            <li v-for="{ edge, other, label, verb, detail, years } in block.connections" :key="edge.id">
+              <!-- The name and what follows it read as one line of text, wrapping as a sentence does -->
+              <span class="detail__entry">
+                <NodePreview :node="other">
+                  <!-- No space between icon and name: the icon's margin makes the gap, so the
+                       underline starts at the name -->
+                  <button type="button" class="detail__link" @click="select(other.id, { focusDetails: true })">
+                    <NodeGlyph :type="other.type" />{{ other.name }}
+                  </button>
+                </NodePreview>
+                <span v-if="aboutConnection(block, verb, detail, years)" class="detail__role">
+                  ({{ aboutConnection(block, verb, detail, years) }})
+                </span>
+              </span>
               <!-- Viewers find each connection's sources in the verification note at the foot -->
               <span v-if="reviewing" class="detail__refs">
                 <template v-for="(source, index) in edge.sources" :key="source.title">
@@ -336,8 +359,7 @@ const canFlag = flagsAvailable()
   }
 }
 
-/* The icon, name and close button share the first row (the name wraps beside them); the
-   type runs underneath */
+/* The icon, name and close button share the first row; the name wraps beside them */
 .detail__title {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
@@ -352,18 +374,9 @@ const canFlag = flagsAvailable()
   margin-top: calc((1.75rem - 20px) / 2);
 }
 
-/* Tuck the type line up under the name, against the panel's own gap */
+/* Tuck the lines about the record up under the name, against the panel's own gap */
 .detail__title + header {
   margin-top: calc(0.2rem - 12px);
-}
-
-.detail__type {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 0.3rem;
-  color: var(--text-secondary);
-  font-size: 0.875rem;
 }
 
 h2 {
@@ -372,8 +385,9 @@ h2 {
   line-height: 1.25;
 }
 
+/* Each section stands apart: 26px above its heading (the panel's 12px gap and this) */
 h3 {
-  margin: 4px 0 6px;
+  margin: 14px 0 6px;
   color: var(--text-secondary);
   font-size: 0.875rem;
   font-weight: 600;
@@ -432,8 +446,34 @@ li {
   font-weight: 600;
 }
 
-.detail__verb + ul + .detail__verb {
-  margin-top: 0.75rem;
+/* A subheaded list after other connections stands a little apart from them */
+ul + .detail__verb {
+  margin-top: 1.2rem;
+}
+
+/* What follows a connection's name: "(founded, from 1971)" */
+/* Inline text rather than a flex row, so the brackets follow the name and wrap under it */
+.detail__entry {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+/* Lined up on the name's text, not its icon, so the brackets share the name's baseline */
+.detail__entry .detail__link {
+  display: inline-block;
+}
+
+.detail__entry .detail__link .node-glyph {
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: -0.15em;
+}
+
+/* Secondary, so no larger than the note beneath */
+.detail__role {
+  margin-left: 0.3em;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
 }
 
 .detail__aka,

@@ -33,15 +33,15 @@ function mountPreview() {
 const card = () => document.querySelector('.node-preview')
 
 describe('previewing a linked record', () => {
-  it('shows a card about the record when the mouse rests on its link', async () => {
+  it('shows a card about the record, its icon beside its name, when the mouse rests on its link', async () => {
     vi.useFakeTimers()
     const wrapper = mountPreview()
     await wrapper.get('button').trigger('pointerenter', { pointerType: 'mouse' })
     vi.advanceTimersByTime(400)
     await flushPromises()
     const text = card()?.textContent ?? ''
-    expect(text).toContain('Person')
     expect(text).toContain('David Lett')
+    expect(card()?.querySelector('.node-preview__name .node-glyph--person')).not.toBeNull()
     expect(text).toMatch(/\d+ connections?/)
     expect(card()?.getAttribute('aria-hidden')).toBe('true')
     wrapper.unmount()

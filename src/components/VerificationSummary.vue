@@ -172,7 +172,8 @@ onBeforeUnmount(() => clearTimeout(timer))
 .verification-note {
   z-index: 45;
   width: min(22rem, calc(100vw - 2rem));
-  max-height: min(60vh, 24rem);
+  /* No taller than the room beside the button (Reka measures it), so it never runs off screen */
+  max-height: min(var(--reka-popover-content-available-height, 60vh), 24rem);
   padding: 0.7rem 0.85rem;
   overflow-y: auto;
   border: 1px solid var(--border-strong);
