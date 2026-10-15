@@ -1,8 +1,9 @@
-// Flags sent on the dev server when Firebase isn't configured, kept in .cache/flags.json
-// (git-ignored). The same shape as the Firestore documents, plus an id.
+// Flags sent on the dev server, kept in .cache/flags.json (git-ignored). The same fields as
+// the published site's D1 table (migrations/0001_flags.sql).
 import { randomUUID } from 'node:crypto'
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
+import { parseFlagRecord } from '../../src/services/flagRecord'
 import type { Flag } from '../../src/services/flagTypes'
 
 export interface StoredFlag extends Flag {
@@ -22,31 +23,9 @@ function write(flags: StoredFlag[]) {
   writeFileSync(FILE, `${JSON.stringify(flags, null, 1)}\n`)
 }
 
-const REASONS = new Set(['incorrect', 'outdated', 'unsupported', 'duplicate', 'other'])
-
-// Accepts only the fields a flag has, of the right types and sizes
+// Accepts only the fields a flag has, of the right types and sizes (see flagRecord.ts)
 export function addLocalFlag(input: Record<string, unknown>): StoredFlag {
-  const text = (key: string, limit: number, required = false) => {
-    const value = input[key]
-    if (value === undefined && !required) return undefined
-    if (typeof value !== 'string' || value.length > limit || (required && !value.trim())) throw new Error(`Bad ${key}`)
-    return value
-  }
-  if (input.recordKind !== 'node' && input.recordKind !== 'edge') throw new Error('Bad recordKind')
-  if (typeof input.reason !== 'string' || !REASONS.has(input.reason)) throw new Error('Bad reason')
-  const flag: StoredFlag = {
-    id: randomUUID(),
-    source: 'local',
-    recordKind: input.recordKind,
-    recordId: text('recordId', 200, true)!,
-    recordLabel: text('recordLabel', 300, true)!,
-    reason: input.reason as StoredFlag['reason'],
-    ...(text('note', 1000) ? { note: text('note', 1000) } : {}),
-    ...(text('sourceUrl', 2000) ? { sourceUrl: text('sourceUrl', 2000) } : {}),
-    pageUrl: text('pageUrl', 2000, true)!,
-    createdAt: new Date().toISOString(),
-    appVersion: text('appVersion', 40) ?? 'unknown',
-  }
+  const flag: StoredFlag = { ...parseFlagRecord(input, randomUUID()), source: 'local' }
   write([...readLocalFlags(), flag])
   return flag
 }

@@ -29,3 +29,7 @@ temp/
 
 # Fetched source pages and other local working files
 .cache/
+
+# Cloudflare: local state and local secrets (never commit)
+.wrangler/
+.dev.vars

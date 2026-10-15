@@ -1,0 +1,19 @@
+# Cloudflare Worker for oregonwine.app: the built site (dist/) as static assets, plus the
+# code in worker/ for /api/ask and /api/flags. See docs/DEVELOPMENT.md, "Deploying".
+name = "oregon-wine-graph"
+main = "worker/index.ts"
+compatibility_date = "2026-10-01"
+
+[assets]
+directory = "dist"
+not_found_handling = "single-page-application"
+# Only API requests run the Worker; everything else is served as a file, free
+run_worker_first = ["/api/*"]
+
+# Flags from readers: the D1 database "oregon-wine-flags", its table from migrations/;
+# `wrangler dev` uses a local copy
+[[d1_databases]]
+binding = "FLAGS_DB"
+database_name = "oregon-wine-flags"
+database_id = "de64bf5b-19b8-40eb-a10b-1606c2d5e7e7"
+migrations_dir = "migrations"

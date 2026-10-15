@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vue-tsc -b && tsc -p worker/tsconfig.json && vite build",
     "preview": "vite preview",
     "test": "vitest run",
     "check:fetch": "tsx tools/check/fetchSources.ts",
@@ -20,7 +20,9 @@
     "owha:match": "tsx tools/discover/owhaMatch.ts",
     "owha:link": "tsx tools/discover/owhaLink.ts",
     "discover:merge": "tsx tools/discover/merge.ts",
-    "layout:reset": "node -e \"require('fs').writeFileSync('src/data/layout.json', JSON.stringify({version: 1, positions: {}}, null, 1) + '\\\\n')\""
+    "layout:reset": "node -e \"require('fs').writeFileSync('src/data/layout.json', JSON.stringify({version: 1, positions: {}}, null, 1) + '\\\\n')\"",
+    "db:migrate:local": "wrangler d1 migrations apply oregon-wine-flags --local",
+    "worker:dev": "npm run build && wrangler dev --port 8788"
   },
   "dependencies": {
     "@fontsource-variable/nunito": "^5.3.0",
@@ -31,6 +33,7 @@
     "zod": "4.6.7"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261015.1",
     "@types/cytoscape-fcose": "2.2.5",
     "@types/node": "22.20.5",
     "@vitejs/plugin-vue": "^5.2.1",
@@ -42,6 +45,7 @@
     "typescript": "~5.6.2",
     "vite": "^6.0.5",
     "vitest": "5.0.4",
-    "vue-tsc": "^2.2.0"
+    "vue-tsc": "^2.2.0",
+    "wrangler": "^4.151.0"
   }
 }

@@ -75,7 +75,7 @@ Both modes show a small check beside verified records. It opens a note saying ho
 
 Beside each node summary and connection, a flag opens a short form (what's wrong, an optional note and source link) for reporting a fact for review. It collects nothing personal. For now flags are stored only on the dev server, in `.cache/flags.json` (git-ignored); admin mode shows "Flagged N" in the review box, the flags on each record, and Resolve. The code is `src/services/flags.ts`, `src/components/FlagButton.vue` and `FlagNotes.vue`, and `tools/flags/localStore.ts`.
 
-The published site has nowhere to send flags yet, so the button is hidden there. Sending them from the published site needs a small backend; `submitFlag()` is the one place to add it.
+The published site sends flags to `/api/flags` (below), which stores them in Cloudflare D1.
 
 
 
@@ -94,6 +94,35 @@ Filter changes never re-run the force layout: hidden nodes are removed and retur
 ## Design tokens
 
 Colours, radii and shadows are CSS custom properties in `src/style.css`, defined for light and dark themes. The "cellar" palette pairs a burgundy accent (`--accent` for text and focus, `--fill`/`--on-fill` for filled surfaces) with node colours drawn from wine: claret wineries, vine-green vineyards, Chardonnay-gold people and warm-grey organizations, events and AVAs. Node colours keep at least 3:1 contrast and stay distinguishable under simulated protanopia, deuteranopia and tritanopia. The graph's node silhouettes (`src/graph/icons.ts`) read the same tokens. On wide screens the graph runs under both sidebars, which are translucent with a backdrop blur; `--inset-left` and `--inset-right` (set in `App.vue`) keep the toolbar, controls guide and list view clear of them, and fitting and centring use the visible middle area.
+
+## Deploying (Cloudflare Worker, oregonwine.app)
+
+The site is one Cloudflare Worker, `oregon-wine-graph`, configured by `wrangler.toml`. Cloudflare serves the built `dist/` as static assets (free, unlimited); only `/api/*` runs the code in `worker/`:
+
+- `POST /api/ask` (`worker/api/ask.ts`) runs the same `askGraph()` as the dev server, with the Jev key as a Worker secret. Identical questions are answered from Cloudflare's cache for a day.
+- `POST /api/flags` (`worker/api/flags.ts`) checks a flag with the shared rules (`src/services/flagRecord.ts`), confirms the sender is a person with Turnstile when `TURNSTILE_SECRET` is set, and inserts it into the D1 table defined in `migrations/`.
+- `.env.production` points production builds at those paths. `npm run build` also type-checks the Worker.
+
+The Worker is connected to the GitHub repo: every push to `main` builds (`npm run build`) and deploys (`npx wrangler deploy`).
+
+### Running it locally
+
+```sh
+grep '^JEV_API_KEY=' .env.local > .dev.vars   # wrangler's local secrets (git-ignored)
+npm run db:migrate:local                       # create the flags table in a local D1
+npm run worker:dev                             # build, then serve site + API on :8788
+npx wrangler d1 execute oregon-wine-flags --local --command "SELECT * FROM flags"
+```
+
+### Cloudflare settings (once)
+
+- **Flags database:** D1 database `oregon-wine-flags`; its id is in `wrangler.toml`, and its table was created from `migrations/0001_flags.sql`.
+- **Secrets** (Worker → Settings → Variables and secrets): `JEV_API_KEY`, and `TURNSTILE_SECRET` once Turnstile is set up.
+- **Turnstile:** a widget for `oregonwine.app`; its public site key is `VITE_TURNSTILE_SITE_KEY` in `.env.production`.
+- **Domain:** `oregonwine.app` under the Worker's Domains.
+- **Rate limit:** Security → WAF → Rate limiting rules: paths starting with `/api/`, about 20 requests in 10 seconds per IP.
+
+Reading flags: `npx wrangler d1 execute oregon-wine-flags --remote --command "SELECT * FROM flags WHERE resolved_at IS NULL ORDER BY created_at DESC"`, or the D1 console in the dashboard.
 
 ## Sources and research tools
 
@@ -139,4 +168,4 @@ The selected node is kept in the URL hash, so `/#david-lett` links straight to a
 - More relationship types: AVA petitioners, donors, "sold vines to", regulators.
 - Widen coverage beyond the northern Willamette Valley.
 - Split the JavaScript bundle; the data and graph library make the single chunk large.
-- Publish the site, with a small backend: one endpoint to receive flags and one holding the Jev key so "Ask a question" works for everyone. The app already reads an `VITE_ASK_URL` setting for the latter.
+- Pull production flags from D1 into the dev server's admin mode, so flags from the live site join the same review workflow.

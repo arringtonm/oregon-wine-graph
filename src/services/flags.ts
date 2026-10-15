@@ -1,7 +1,7 @@
-// Flags: readers marking a fact for review. For now a flag goes to a local file on the dev
-// server (.cache/flags.json), which review mode reads; the published site has no flag store
-// yet, so the button is hidden there. No personal data is collected: what was flagged, why,
-// an optional note and source, the page and the time.
+// Flags: readers marking a fact for review. On the dev server a flag goes to a local file
+// (.cache/flags.json), which review mode reads; the published site posts to its flags
+// endpoint (VITE_FLAGS_URL, the Cloudflare Worker, worker/api/flags.ts). No personal
+// data is collected: what was flagged, why, an optional note and source, the page and time.
 
 import { type Flag, type FlagReason } from './flagTypes'
 
@@ -22,9 +22,11 @@ export interface FlagInput {
 export const NOTE_LIMIT = 1000
 export const LABEL_LIMIT = 300
 
-// Whether a flag can be sent from here: only the dev server has somewhere to keep it so far
+const FLAGS_URL = import.meta.env.VITE_FLAGS_URL
+
+// Whether a flag can be sent from here: the dev server's local file, or a flags endpoint
 export function flagsAvailable(): boolean {
-  return import.meta.env.DEV
+  return import.meta.env.DEV || Boolean(FLAGS_URL)
 }
 
 // The first problem with the form, or null when it can be sent
@@ -58,7 +60,8 @@ export function toFlag(input: FlagInput, page = window.location.href, now = new 
   }
 }
 
-export async function submitFlag(input: FlagInput): Promise<void> {
+// `turnstileToken`: from the Turnstile widget, where the site uses one
+export async function submitFlag(input: FlagInput, turnstileToken?: string): Promise<void> {
   const problem = validateFlag(input)
   if (problem) throw new Error(problem)
   // Looks sent to whoever filled the hidden field, so a bot learns nothing
@@ -71,6 +74,18 @@ export async function submitFlag(input: FlagInput): Promise<void> {
       body: JSON.stringify(flag),
     })
     if (!response.ok) throw new Error(`Couldn't save the flag (${response.status})`)
+    return
+  }
+  if (FLAGS_URL) {
+    const response = await fetch(FLAGS_URL, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ ...flag, turnstileToken }),
+    })
+    if (!response.ok) {
+      const message = ((await response.json().catch(() => null)) as { error?: string } | null)?.error
+      throw new Error(message ?? `Couldn't send the flag (${response.status}); please try again.`)
+    }
     return
   }
   throw new Error('Flagging is not available on this site yet.')

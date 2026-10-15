@@ -8,9 +8,10 @@ import {
   RadioGroupItem,
   RadioGroupRoot,
 } from 'reka-ui'
-import { reactive, ref, watch } from 'vue'
+import { nextTick, onBeforeUnmount, reactive, ref, watch } from 'vue'
 import { useGraph } from '../composables/useGraph'
 import { FLAG_REASONS, NOTE_LIMIT, submitFlag, validateFlag, type FlagInput } from '../services/flags'
+import { renderTurnstile, turnstileSiteKey } from '../services/turnstile'
 
 // A small flag beside a fact. It opens a short form to report it for review; the report goes
 // to the site's flag store (see services/flags.ts). Nothing personal is asked for.
@@ -23,13 +24,24 @@ const busy = ref(false)
 const error = ref('')
 const form = reactive({ reason: '' as FlagInput['reason'], note: '', sourceUrl: '', website: '' })
 
+// Where the site uses Turnstile, its check sits at the foot of the form; usually invisible
+const human = ref<HTMLElement>()
+const token = ref('')
+let removeTurnstile = () => {}
+
 // A fresh form each time it opens
-watch(open, (isOpen) => {
+watch(open, async (isOpen) => {
+  removeTurnstile()
   if (!isOpen) return
   Object.assign(form, { reason: '', note: '', sourceUrl: '', website: '' })
   sent.value = false
   error.value = ''
+  token.value = ''
+  if (!turnstileSiteKey) return
+  await nextTick()
+  if (human.value) removeTurnstile = await renderTurnstile(human.value, (value) => (token.value = value))
 })
+onBeforeUnmount(() => removeTurnstile())
 
 async function send() {
   const input: FlagInput = { recordKind: props.kind, recordId: props.id, recordLabel: props.label, ...form }
@@ -37,7 +49,11 @@ async function send() {
   if (error.value) return
   busy.value = true
   try {
-    await submitFlag(input)
+    if (turnstileSiteKey && !token.value) {
+      error.value = 'One moment: confirming you’re a person.'
+      return
+    }
+    await submitFlag(input, token.value || undefined)
     sent.value = true
     // On the dev server, admin mode lists the new flag straight away
     void loadFlags()
@@ -95,6 +111,7 @@ async function send() {
           <!-- Hidden from people and screen readers; bots fill it in -->
           <input v-model="form.website" class="flag-form__trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
+          <div v-if="turnstileSiteKey" ref="human" class="flag-form__human"></div>
           <p v-if="error" class="flag-form__error" role="alert">{{ error }}</p>
           <button type="submit" class="flag-form__send" :disabled="busy">{{ busy ? 'Sending…' : 'Send flag' }}</button>
         </form>
