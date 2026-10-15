@@ -4,7 +4,6 @@ import { computed, defineAsyncComponent, onBeforeUnmount, onMounted, ref } from 
 import DetailPanel from './components/DetailPanel.vue'
 import GraphCanvas from './components/GraphCanvas.vue'
 import GraphControls from './components/GraphControls.vue'
-import { ICONS } from './graph/icons'
 import ThemeToggle from './components/ThemeToggle.vue'
 import { useGraph } from './composables/useGraph'
 
@@ -64,11 +63,7 @@ onBeforeUnmount(() => {
         <a href="#details" @click.prevent="skipToDetails">Skip to details</a>
       </nav>
       <header class="app__header">
-        <h1>
-          <!-- eslint-disable-next-line vue/no-v-html -->
-          <svg class="app__mark" viewBox="0 0 24 24" aria-hidden="true" v-html="ICONS.winery" />
-          Oregon Wine Graph
-        </h1>
+        <h1>Oregon Wine Graph</h1>
         <p>The people, wineries and vineyards of Oregon wine, and how they connect</p>
         <div class="app__header-end">
           <ModeSwitch v-if="ModeSwitch" />
@@ -150,19 +145,10 @@ onBeforeUnmount(() => {
 }
 
 .app__header h1 {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
   margin: 0;
   font-size: 1.1875rem;
   font-weight: 800;
   letter-spacing: -0.01em;
-}
-
-.app__mark {
-  width: 1.25rem;
-  height: 1.25rem;
-  fill: var(--node-winery);
 }
 
 .app__header p {
