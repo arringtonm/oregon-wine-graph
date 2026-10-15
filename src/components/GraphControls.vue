@@ -19,8 +19,10 @@ const avaSummary = computed(() => {
 // Hidden types (see HIDDEN_TYPES) get no checkbox
 const toggleableTypes = (Object.keys(state.nodeTypes) as ToggleableNodeType[]).filter((type) => !HIDDEN_TYPES.has(type))
 
-// Which build this is, for readers reporting a problem: "Build 8dd7333 · Oct 14, 2026"
-const build = `Build ${__APP_VERSION__} · ${new Date(__BUILD_DATE__).toLocaleDateString('en-US', {
+// Which version this is, for readers reporting a problem: "v1.00 · Oct 15, 2026". The exact
+// commit shows on hover
+const buildCommit = `Build ${__BUILD_COMMIT__}`
+const build = `${__SITE_VERSION__} · ${new Date(__BUILD_DATE__).toLocaleDateString('en-US', {
   month: 'short',
   day: 'numeric',
   year: 'numeric',
@@ -148,7 +150,7 @@ function onDrawerKey(event: KeyboardEvent) {
       <button v-if="compact" type="button" class="controls__reset" aria-describedby="reset-description" @click="resetGraph">
         Reset graph
       </button>
-      <p class="controls__build">{{ build }}</p>
+      <p class="controls__build" :title="buildCommit">{{ build }}</p>
     </div>
   </aside>
 </template>
@@ -244,6 +246,12 @@ function onDrawerKey(event: KeyboardEvent) {
 
 
 
+
+/* Each group stands apart as the detail panel's sections do: 26px above its heading (the
+   sidebar's 14px gap and this) */
+fieldset + fieldset {
+  margin-top: 12px;
+}
 
 fieldset {
   display: flex;

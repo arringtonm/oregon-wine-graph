@@ -1,7 +1,8 @@
 /// <reference types="vite/client" />
 
-// Set in vite.config.ts: the commit the site was built from
-declare const __APP_VERSION__: string
+// Set in vite.config.ts: the public version ("v1.00") and the commit the site was built from
+declare const __SITE_VERSION__: string
+declare const __BUILD_COMMIT__: string
 // Set in vite.config.ts: when the site was built, as an ISO timestamp
 declare const __BUILD_DATE__: string
 

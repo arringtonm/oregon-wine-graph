@@ -1,5 +1,6 @@
 import { computed, reactive } from 'vue'
 import { loadGraph } from '../data'
+import { roleTitle } from '../data/roleTitles'
 import { foldText } from '../graph/textMatch'
 import type { Flag } from '../services/flagTypes'
 import { claimsFingerprint, claimsFor, type CheckedRecord } from '../../tools/check/claims'
@@ -48,8 +49,8 @@ export interface Connection {
   other: GraphNode
   // The whole phrase, "supplies fruit to (2019 Pinot noir)", for sentences and labels
   label: string
-  // Its parts, for the card, which lists connections under each verb once: the verb
-  // ("supplies fruit to") and the edge's own detail ("2019 Pinot noir"), if any
+  // How the card shows it: the verb ("supplies fruit to"), or the role's short title in its
+  // place ("co-owner"), and the edge's own detail ("2019 Pinot noir"), if any
   verb: string
   detail?: string
   years: string
@@ -136,6 +137,8 @@ const state = reactive({
   focusDetailsRequest: 0,
   // Bumped to ask the graph to reset: default filters, nothing selected, fresh layout
   resetRequest: 0,
+  // Bumped to ask the graph to roll a random record, as its Random button does
+  randomRequest: 0,
 })
 
 export const SINGULAR_TYPE: Record<NodeType, string> = {
@@ -373,6 +376,14 @@ function connectionLabel(edge: GraphEdge, outgoing: boolean): string {
   return detail ? `${verb} (${detail})` : verb
 }
 
+// How the card shows it: a role that names a position ("co-owner", "head winemaker") stands
+// in for the verb, condensed to a short title if it's long (data/roleTitles.ts). Other roles
+// keep the verb, with the role as detail ("supplies fruit to: 2019 Pinot noir")
+function cardParts(edge: GraphEdge, outgoing: boolean): { verb: string; detail?: string } {
+  const title = roleTitle(edge)
+  return title ? { verb: title } : connectionParts(edge, outgoing)
+}
+
 // All connections of a node, grouped by category, regardless of active filters
 function connectionsOf(id: string): { category: EdgeCategory; connections: Connection[] }[] {
   const groups = new Map<EdgeCategory, Connection[]>()
@@ -386,7 +397,7 @@ function connectionsOf(id: string): { category: EdgeCategory; connections: Conne
       edge,
       other,
       label: connectionLabel(edge, outgoing),
-      ...connectionParts(edge, outgoing),
+      ...cardParts(edge, outgoing),
       years: formatYears(edge),
     }
     groups.set(rule.category, [...(groups.get(rule.category) ?? []), connection])

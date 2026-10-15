@@ -33,3 +33,6 @@ temp/
 # Cloudflare: local state and local secrets (never commit)
 .wrangler/
 .dev.vars
+
+# Jev's role-title picks, for review before they go into src/data/role-titles.json
+tools/roles/proposals.json

@@ -767,6 +767,15 @@ onBeforeUnmount(() => {
 watch([visibleNodes, visibleEdges], syncElements)
 // The filter drawer's Reset, on smaller screens
 watch(() => state.resetRequest, reset)
+// The detail panel's "Pick a random…" button. The button goes once a record is chosen, so
+// focus moves to the record's name, as a pick from search does
+watch(
+  () => state.randomRequest,
+  async () => {
+    await goRandom()
+    if (state.selectedId) state.focusDetailsRequest++
+  },
+)
 watch(
   () => state.selectedId,
   () => {

@@ -36,6 +36,7 @@ Conventions:
 - Every record needs a source. A source normally has a URL; one without (an emailed newsletter issue, say) is cited by title and date. Private newsletters contribute facts only, never their text.
 - `verified` stays `false` until a person or the record check confirms the record against its sources. Verified records carry `verifiedBy`: `person`, `jev` or `boundary`.
 - People, wineries and vineyards may carry `interviews`: oral history interviews from the Oregon Wine History Archive.
+- An edge's `role` is free text and stays as written. On a record's card, the role of a founded, owns, worked at, winemaker, consulted, member of or mentored edge stands in for the verb ("Mark Wisnovsky (co-owner, from 2005)"). Roles of four words or more, and short ones that don't read as titles ("winemaking"), show a short title from `role-titles.json` instead ("operates the winery with family" becomes "operator"). The full role still shows in the verification note, flags and admin mode. New long roles need a title, and `npm test` lists any missing: run `npm run roles:titles`, which has Jev pick from each type's vocabulary (`src/data/roleTitles.ts`) into `tools/roles/proposals.json`, then review the picks and add them to `role-titles.json`.
 
 `src/data/index.ts` is the only module that reads the JSON, so moving to a hosted database later means reimplementing `loadGraph()` there.
 
@@ -94,6 +95,31 @@ Filter changes never re-run the force layout: hidden nodes are removed and retur
 ## Design tokens
 
 Colours, radii and shadows are CSS custom properties in `src/style.css`, defined for light and dark themes. The "cellar" palette pairs a burgundy accent (`--accent` for text and focus, `--fill`/`--on-fill` for filled surfaces) with node colours drawn from wine: claret wineries, vine-green vineyards, Chardonnay-gold people and warm-grey organizations, events and AVAs. Node colours keep at least 3:1 contrast and stay distinguishable under simulated protanopia, deuteranopia and tritanopia. The graph's node silhouettes (`src/graph/icons.ts`) read the same tokens. On wide screens the graph runs under both sidebars, which are translucent with a backdrop blur; `--inset-left` and `--inset-right` (set in `App.vue`) keep the toolbar, controls guide and list view clear of them, and fitting and centring use the visible middle area.
+
+## Versions
+
+The site shows its version and build date under the filters: "v1.00 · Oct 15, 2026". The version comes from `package.json` (major.minor; the patch number is unused) and is formatted by `tools/siteVersion.ts`. Hovering it shows the exact commit, and every flag records both, as "v1.00 (4fa3696)", so a report can be matched to exactly what the reader saw.
+
+**A minor release (v1.01, v1.02, …)** is any push to `main` that changes what readers see or can do:
+
+- a new or changed feature, control or page;
+- a design or layout change;
+- a batch of new or corrected records;
+- a fix a reader would notice.
+
+Bump once per push, not per commit: run `npm run release` (1.0.0 → 1.1.0, shown as v1.01) and commit it with the change. After v1.99 comes v1.100; it doesn't roll over.
+
+**No bump** for what readers can't see: tests, docs, tooling, refactors with no visible change, and anything only on the dev server (admin mode, review tools). Those still deploy, and the date and commit still update.
+
+**A major release (v2.00)** is rare: the site has become a different thing for its readers. Signs:
+
+- the main way of exploring changes (the graph is no longer at the centre);
+- the scope grows beyond Oregon wine;
+- readers get accounts, or can add records themselves;
+- links people have shared stop working (a new address scheme);
+- a redesign throughout.
+
+The test: would a returning reader need to relearn the site? A large feature, a big data import or a visual refresh is still a minor release. Run `npm version major --no-git-tag-version`.
 
 ## Deploying (Cloudflare Worker, oregonwine.app)
 

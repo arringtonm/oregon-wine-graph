@@ -1,9 +1,10 @@
 {
   "name": "oregon-wine-graph",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "release": "npm version minor --no-git-tag-version",
     "dev": "vite",
     "build": "vue-tsc -b && tsc -p worker/tsconfig.json && vite build",
     "preview": "vite preview",
@@ -20,6 +21,7 @@
     "owha:match": "tsx tools/discover/owhaMatch.ts",
     "owha:link": "tsx tools/discover/owhaLink.ts",
     "discover:merge": "tsx tools/discover/merge.ts",
+    "roles:titles": "tsx tools/roles/titles.ts",
     "layout:reset": "node -e \"require('fs').writeFileSync('src/data/layout.json', JSON.stringify({version: 1, positions: {}}, null, 1) + '\\\\n')\"",
     "db:migrate:local": "wrangler d1 migrations apply oregon-wine-flags --local",
     "worker:dev": "npm run build && wrangler dev --port 8788"

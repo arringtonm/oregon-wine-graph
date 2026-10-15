@@ -28,7 +28,16 @@ const {
   nodeById,
   openFlags,
   selectNextFlagged,
+  historyEntries,
+  goToHistory,
 } = useGraph()
+
+// The empty panel's "Recently viewed": the last few records, newest first, each once
+const RECENT_LIMIT = 4
+const recent = computed(() => {
+  const seen = new Set<string>()
+  return historyEntries.value.filter(({ node }) => !seen.has(node.id) && seen.add(node.id)).slice(0, RECENT_LIMIT)
+})
 
 // A winery's or vineyard's AVAs, by name
 const avaNames = computed(() =>
@@ -300,6 +309,39 @@ const canFlag = flagsAvailable()
         Scroll with two fingers to move around and pinch to zoom, or use the buttons on the graph.
         Hover a line to read the connection.
       </p>
+      <!-- The same roll as the graph's Random button, with its short pause -->
+      <!-- Its name starts with what it shows, so speech control can say "Surprise me" -->
+      <button
+        type="button"
+        class="detail__random"
+        aria-label="Surprise me with a random person, winery, vineyard or organization"
+        @click="state.randomRequest++"
+      >
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <rect x="3" y="3" width="14" height="14" rx="3.2" />
+          <circle cx="7" cy="7" r="1.25" />
+          <circle cx="13" cy="7" r="1.25" />
+          <circle cx="10" cy="10" r="1.25" />
+          <circle cx="7" cy="13" r="1.25" />
+          <circle cx="13" cy="13" r="1.25" />
+        </svg>
+        Surprise me
+      </button>
+
+      <!-- The last few records viewed, at the foot of the panel -->
+      <section v-if="recent.length" class="detail__recent">
+        <h3>Recently viewed</h3>
+        <ul>
+          <li v-for="{ index, node } in recent" :key="node.id">
+            <NodePreview :node="node">
+              <button type="button" class="detail__link" @click="goToHistory(index); state.focusDetailsRequest++">
+                <NodeGlyph :type="node.type" />
+                {{ node.name }}
+              </button>
+            </NodePreview>
+          </li>
+        </ul>
+      </section>
     </template>
   </section>
 </template>
@@ -310,7 +352,11 @@ const canFlag = flagsAvailable()
   flex-direction: column;
   gap: 12px;
   padding: 16px;
+  /* Scrolls up and down only. Where the system shows scrollbars all the time, room is kept
+     for one, so the content doesn't jump sideways when a long record needs it */
+  overflow-x: hidden;
   overflow-y: auto;
+  scrollbar-gutter: stable;
   border-left: 1px solid var(--border);
   /* A little of the graph shows through, blurred, so the panel reads as floating over it */
   background: var(--frost);
@@ -531,6 +577,49 @@ ul + .detail__verb {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+/* The empty panel's invitation to roll a random record: the panel's full width, the dice
+   large beside a short label */
+.detail__random {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 3rem;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.detail__random:hover {
+  background: var(--wash);
+}
+
+.detail__random svg {
+  flex: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.detail__random circle {
+  fill: currentColor;
+  stroke: none;
+}
+
+/* Recently viewed sits at the foot of the empty panel */
+.detail__recent {
+  margin-top: auto;
 }
 
 .detail__checks {

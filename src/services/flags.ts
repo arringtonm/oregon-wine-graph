@@ -56,7 +56,8 @@ export function toFlag(input: FlagInput, page = window.location.href, now = new 
     ...(input.sourceUrl.trim() ? { sourceUrl: input.sourceUrl.trim() } : {}),
     pageUrl: page,
     createdAt: now.toISOString(),
-    appVersion: __APP_VERSION__,
+    // The version and the exact build, "v1.00 (4fa3696)"
+    appVersion: `${__SITE_VERSION__} (${__BUILD_COMMIT__})`,
   }
 }
 
