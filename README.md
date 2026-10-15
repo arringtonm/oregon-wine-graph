@@ -83,6 +83,10 @@ npm run dev
 
 Then open the address it prints. The [developer guide](docs/DEVELOPMENT.md) covers the data format, the review tools, the automated source check and the research tools.
 
+## TODO
+
+- About page
+
 ## Credits
 
 Data from the sources above, with particular thanks to Linfield University's Oregon Wine History Archive. Built with [Vue](https://vuejs.org), [Cytoscape.js](https://js.cytoscape.org), [Reka UI](https://reka-ui.com) and [Zod](https://zod.dev); set in [Nunito](https://fonts.google.com/specimen/Nunito) (SIL Open Font License). Automated source checks use [Jev](https://typesafe.ai) from TypeSafe AI.

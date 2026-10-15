@@ -46,7 +46,12 @@ export function rememberAdminMode(admin: boolean) {
 export interface Connection {
   edge: GraphEdge
   other: GraphNode
+  // The whole phrase, "supplies fruit to (2019 Pinot noir)", for sentences and labels
   label: string
+  // Its parts, for the card, which lists connections under each verb once: the verb
+  // ("supplies fruit to") and the edge's own detail ("2019 Pinot noir"), if any
+  verb: string
+  detail?: string
   years: string
 }
 
@@ -133,7 +138,7 @@ const state = reactive({
   resetRequest: 0,
 })
 
-const SINGULAR_TYPE: Record<NodeType, string> = {
+export const SINGULAR_TYPE: Record<NodeType, string> = {
   person: 'person',
   winery: 'winery',
   vineyard: 'vineyard',
@@ -353,14 +358,19 @@ export function edgeLabel(edge: GraphEdge): string {
 }
 
 // How an edge reads from one end, e.g. "founded", "founded by", "child of"
-function connectionLabel(edge: GraphEdge, outgoing: boolean): string {
+// A family role is itself the verb ("sibling of"); any other role details the verb
+function connectionParts(edge: GraphEdge, outgoing: boolean): { verb: string; detail?: string } {
   const rule = EDGE_RULES[edge.type]
   if (edge.type === 'family' && edge.role) {
-    if (edge.role === 'parent') return outgoing ? 'parent of' : 'child of'
-    return edge.role
+    if (edge.role === 'parent') return { verb: outgoing ? 'parent of' : 'child of' }
+    return { verb: edge.role }
   }
-  const verb = outgoing ? rule.label : rule.inverseLabel
-  return edge.role ? `${verb} (${edge.role})` : verb
+  return { verb: outgoing ? rule.label : rule.inverseLabel, detail: edge.role }
+}
+
+function connectionLabel(edge: GraphEdge, outgoing: boolean): string {
+  const { verb, detail } = connectionParts(edge, outgoing)
+  return detail ? `${verb} (${detail})` : verb
 }
 
 // All connections of a node, grouped by category, regardless of active filters
@@ -376,6 +386,7 @@ function connectionsOf(id: string): { category: EdgeCategory; connections: Conne
       edge,
       other,
       label: connectionLabel(edge, outgoing),
+      ...connectionParts(edge, outgoing),
       years: formatYears(edge),
     }
     groups.set(rule.category, [...(groups.get(rule.category) ?? []), connection])

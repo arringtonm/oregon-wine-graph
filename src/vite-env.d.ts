@@ -2,6 +2,8 @@
 
 // Set in vite.config.ts: the commit the site was built from
 declare const __APP_VERSION__: string
+// Set in vite.config.ts: when the site was built, as an ISO timestamp
+declare const __BUILD_DATE__: string
 
 interface ImportMetaEnv {
   // A deployed endpoint for "Ask", which holds the decision model's key server side

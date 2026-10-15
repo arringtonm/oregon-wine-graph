@@ -8,21 +8,26 @@ import {
   RadioGroupItem,
   RadioGroupRoot,
 } from 'reka-ui'
-import { nextTick, onBeforeUnmount, reactive, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, reactive, ref, watch } from 'vue'
 import { useGraph } from '../composables/useGraph'
 import { FLAG_REASONS, NOTE_LIMIT, submitFlag, validateFlag, type FlagInput } from '../services/flags'
+import type { Fact } from '../services/facts'
 import { renderTurnstile, turnstileSiteKey } from '../services/turnstile'
 
-// A small flag beside a fact. It opens a short form to report it for review; the report goes
-// to the site's flag store (see services/flags.ts). Nothing personal is asked for.
-const props = defineProps<{ kind: 'node' | 'edge'; id: string; label: string }>()
+// The flag at the foot of a record's card. It opens a short form: which of the card's facts
+// is wrong, and how; the report goes to the site's flag store (see services/flags.ts).
+// Nothing personal is asked for.
+const props = defineProps<{ facts: Fact[] }>()
+
+const factKey = (fact: Fact) => `${fact.kind}:${fact.record.id}`
 
 const { loadFlags } = useGraph()
 const open = ref(false)
 const sent = ref(false)
 const busy = ref(false)
 const error = ref('')
-const form = reactive({ reason: '' as FlagInput['reason'], note: '', sourceUrl: '', website: '' })
+const form = reactive({ fact: '', reason: '' as FlagInput['reason'], note: '', sourceUrl: '', website: '' })
+const chosen = computed(() => props.facts.find((fact) => factKey(fact) === form.fact))
 
 // Where the site uses Turnstile, its check sits at the foot of the form; usually invisible
 const human = ref<HTMLElement>()
@@ -70,7 +75,9 @@ watch(sent, (isSent) => {
 watch(open, async (isOpen) => {
   stopThanksTimer()
   if (!isOpen) return removeTurnstile()
-  Object.assign(form, { reason: '', note: '', sourceUrl: '', website: '' })
+  // A card with one fact needs no choosing
+  const only = props.facts.length === 1 ? factKey(props.facts[0]) : ''
+  Object.assign(form, { fact: only, reason: '', note: '', sourceUrl: '', website: '' })
   sent.value = false
   error.value = ''
   await startCheck()
@@ -81,7 +88,21 @@ onBeforeUnmount(() => {
 })
 
 async function send() {
-  const input: FlagInput = { recordKind: props.kind, recordId: props.id, recordLabel: props.label, ...form }
+  const fact = chosen.value
+  if (!fact) {
+    error.value = 'Choose the fact to flag.'
+    return
+  }
+  const { reason, note, sourceUrl, website } = form
+  const input: FlagInput = {
+    recordKind: fact.kind,
+    recordId: fact.record.id,
+    recordLabel: fact.flagLabel,
+    reason,
+    note,
+    sourceUrl,
+    website,
+  }
   error.value = validateFlag(input) ?? ''
   if (error.value) return
   busy.value = true
@@ -110,14 +131,15 @@ async function send() {
 
 <template>
   <PopoverRoot v-model:open="open">
-    <PopoverTrigger class="flag" :aria-label="`Flag for review: ${label}`">
+    <PopoverTrigger class="flag" aria-label="Flag a fact for review">
       <svg viewBox="0 0 16 16" aria-hidden="true">
         <path d="M3.5 14.5v-12" />
         <path d="M3.5 3c2.5-1.6 4.5 1 7 0l1.8-.6v6.8l-1.8.6c-2.5 1-4.5-1.6-7 0" />
       </svg>
+      Flag
     </PopoverTrigger>
     <PopoverPortal>
-      <PopoverContent class="flag-form" side="left" align="start" :side-offset="8" :collision-padding="12">
+      <PopoverContent class="flag-form" side="top" align="end" :side-offset="8" :collision-padding="12">
         <div aria-live="polite">
           <template v-if="sent">
             <p class="flag-form__title">Thanks, flagged for review</p>
@@ -126,7 +148,18 @@ async function send() {
         </div>
         <form v-if="!sent" novalidate @submit.prevent="send">
           <p class="flag-form__title">Flag for review</p>
-          <p class="flag-form__fact">{{ label }}</p>
+
+          <fieldset>
+            <legend>Which fact?</legend>
+            <RadioGroupRoot v-model="form.fact" class="flag-form__reasons flag-form__facts" aria-label="Which fact?">
+              <label v-for="fact in facts" :key="factKey(fact)" class="flag-form__reason">
+                <RadioGroupItem :value="factKey(fact)" class="flag-form__radio">
+                  <RadioGroupIndicator class="flag-form__dot" />
+                </RadioGroupItem>
+                <span class="flag-form__fact" :class="{ 'flag-form__fact--summary': fact.kind === 'node' }">{{ fact.label }}</span>
+              </label>
+            </RadioGroupRoot>
+          </fieldset>
 
           <fieldset>
             <legend>What's wrong?</legend>
@@ -165,20 +198,19 @@ async function send() {
 
 <style scoped>
 .flag {
-  display: inline-grid;
-  place-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  min-height: 0;
-  margin: -0.2rem 0;
-  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2rem;
+  padding: 0 0.6rem 0 0.45rem;
   border: 0;
-  border-radius: 50%;
+  border-radius: var(--radius-sm);
   background: none;
   color: var(--text-secondary);
-  vertical-align: middle;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
   cursor: pointer;
-  opacity: 0.7;
 }
 
 .flag:hover,
@@ -186,7 +218,6 @@ async function send() {
 .flag[data-state='open'] {
   background: var(--wash);
   color: var(--text-primary);
-  opacity: 1;
 }
 
 .flag svg {
@@ -204,7 +235,9 @@ async function send() {
 /* Teleported to the page body, outside the scoped styles above */
 .flag-form {
   z-index: 45;
-  width: min(20rem, calc(100vw - 2rem));
+  width: min(22rem, calc(100vw - 2rem));
+  max-height: min(80vh, 40rem);
+  overflow-y: auto;
   padding: 0.85rem 1rem 1rem;
   border: 1px solid var(--border-strong);
   border-radius: var(--radius);
@@ -227,7 +260,6 @@ async function send() {
   font-weight: 700;
 }
 
-.flag-form__fact,
 .flag-form__hint,
 .flag-form__optional {
   color: var(--text-secondary);
@@ -257,6 +289,33 @@ async function send() {
   gap: 0.5rem;
   min-height: 1.6rem;
   cursor: pointer;
+}
+
+/* A long card's facts scroll inside the form */
+.flag-form__facts {
+  max-height: 12rem;
+  margin: 0 -0.25rem;
+  padding: 0.15rem 0.25rem;
+  overflow-y: auto;
+}
+
+.flag-form__facts .flag-form__reason {
+  /* Rows keep their height and the list scrolls, rather than squeezing them together */
+  flex: none;
+  align-items: flex-start;
+  padding: 0.15rem 0;
+}
+
+.flag-form__facts .flag-form__radio {
+  margin-top: 0.15rem;
+}
+
+.flag-form__fact--summary {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
 
 .flag-form__radio {

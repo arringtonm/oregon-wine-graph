@@ -19,6 +19,13 @@ const avaSummary = computed(() => {
 // Hidden types (see HIDDEN_TYPES) get no checkbox
 const toggleableTypes = (Object.keys(state.nodeTypes) as ToggleableNodeType[]).filter((type) => !HIDDEN_TYPES.has(type))
 
+// Which build this is, for readers reporting a problem: "Build 8dd7333 · Oct 14, 2026"
+const build = `Build ${__APP_VERSION__} · ${new Date(__BUILD_DATE__).toLocaleDateString('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+})}`
+
 function setAva(id: string, chosen: boolean) {
   state.avas = chosen ? [...state.avas, id] : state.avas.filter((other) => other !== id)
 }
@@ -137,6 +144,7 @@ function onDrawerKey(event: KeyboardEvent) {
       <button v-if="compact" type="button" class="controls__reset" aria-describedby="reset-description" @click="resetGraph">
         Reset graph
       </button>
+      <p class="controls__build">{{ build }}</p>
     </div>
   </aside>
 </template>
@@ -319,6 +327,13 @@ legend {
   margin: 0;
   color: var(--text-secondary);
   font-size: 0.875rem;
+}
+
+.controls__build {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
 }
 
 .controls__reset {

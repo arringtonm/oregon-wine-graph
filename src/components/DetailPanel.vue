@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { computed, nextTick, ref, watch } from 'vue'
-import { nodeYears, reviewing, useGraph } from '../composables/useGraph'
-import { EDGE_CATEGORY_LABELS, NODE_TYPE_LABELS } from '../data/schema'
+import { nodeYears, reviewing, SINGULAR_TYPE, useGraph, type Connection } from '../composables/useGraph'
+import { EDGE_CATEGORY_LABELS } from '../data/schema'
 import AddConnection from './AddConnection.vue'
 import NodeGlyph from './NodeGlyph.vue'
 import ReviewTools from './ReviewTools.vue'
 import FlagButton from './FlagButton.vue'
 import FlagNotes from './FlagNotes.vue'
-import VerifiedMark from './VerifiedMark.vue'
+import VerificationSummary from './VerificationSummary.vue'
+import { factsOf } from '../services/facts'
 import { flagsAvailable } from '../services/flags'
 
 const {
@@ -76,6 +77,14 @@ watch(
 )
 
 const groups = computed(() => (selectedNode.value ? connectionsOf(selectedNode.value.id) : []))
+
+// Within a section, connections sharing a verb are listed under it once: "Supplies fruit to",
+// then one line per winery. Verbs keep the order they first appear in
+function byVerb(connections: Connection[]): { verb: string; connections: Connection[] }[] {
+  const lists = new Map<string, Connection[]>()
+  for (const connection of connections) lists.set(connection.verb, [...(lists.get(connection.verb) ?? []), connection])
+  return [...lists].map(([verb, list]) => ({ verb: verb.charAt(0).toUpperCase() + verb.slice(1), connections: list }))
+}
 const unverifiedOnCard = computed(
   () =>
     (selectedNode.value && !selectedNode.value.verified ? 1 : 0) +
@@ -86,6 +95,13 @@ const facts = computed(() =>
     ? [nodeYears(selectedNode.value), selectedNode.value.place].filter(Boolean).join(' · ')
     : '',
 )
+// "Winery", "Person", "AVA"
+const typeName = computed(() => {
+  const name = selectedNode.value ? SINGULAR_TYPE[selectedNode.value.type] : ''
+  return name.charAt(0).toUpperCase() + name.slice(1)
+})
+// Every fact on the card, for its verification note and its flag
+const cardFacts = computed(() => (selectedNode.value ? factsOf(selectedNode.value, groups.value) : []))
 
 // Flagging needs somewhere to send flags: Firestore, or the dev server's local file
 const canFlag = flagsAvailable()
@@ -124,15 +140,18 @@ const canFlag = flagsAvailable()
 
     <template v-if="selectedNode">
       <header>
-        <p class="detail__type">
-          <NodeGlyph :type="selectedNode.type" />
-          {{ NODE_TYPE_LABELS[selectedNode.type] }}
-          <template v-if="selectedNode.outsideOregon"> · outside Oregon</template>
-        </p>
-        <button type="button" class="detail__close" aria-label="Close details" @click="select(null)">
-          <span aria-hidden="true">×</span>
-        </button>
-        <h2 ref="heading" tabindex="-1">{{ selectedNode.name }}</h2>
+        <!-- The name (wrapping if long) with the close button on its first line, then the
+             type with its icon -->
+        <div class="detail__title">
+          <h2 ref="heading" tabindex="-1">{{ selectedNode.name }}</h2>
+          <button type="button" class="detail__close" aria-label="Close details" @click="select(null)">
+            <span aria-hidden="true">×</span>
+          </button>
+          <p class="detail__type">
+            <NodeGlyph :type="selectedNode.type" />
+            {{ typeName }}<template v-if="selectedNode.outsideOregon"> · outside Oregon</template>
+          </p>
+        </div>
         <p v-if="selectedNode.aka" class="detail__aka">Also known as {{ selectedNode.aka.join(', ') }}</p>
         <p v-if="facts" class="detail__facts">{{ facts }}</p>
         <p v-if="avaNames.length" class="detail__facts">
@@ -142,12 +161,8 @@ const canFlag = flagsAvailable()
       </header>
 
       <p>{{ selectedNode.summary }}</p>
-      <p class="detail__status">
-        <span v-if="reviewing && !selectedNode.verified" class="detail__badge">Unverified draft</span>
-        <span class="detail__marks">
-          <VerifiedMark kind="node" :record="selectedNode" :label="selectedNode.name" />
-          <FlagButton v-if="canFlag" kind="node" :id="selectedNode.id" :label="`${selectedNode.name}: ${selectedNode.summary}`" />
-        </span>
+      <p v-if="reviewing" class="detail__status">
+        <span v-if="!selectedNode.verified" class="detail__badge">Unverified draft</span>
         <button
           v-if="reviewing"
           type="button"
@@ -163,44 +178,43 @@ const canFlag = flagsAvailable()
 
       <section v-for="group in groups" :key="group.category">
         <h3>{{ EDGE_CATEGORY_LABELS[group.category] }}</h3>
-        <ul>
-          <li v-for="{ edge, other, label, years } in group.connections" :key="edge.id">
-            <span class="detail__verb">{{ label }}</span>
-            <button type="button" class="detail__link" @click="select(other.id, { focusDetails: true })">
-              <NodeGlyph :type="other.type" />
-              {{ other.name }}
-            </button>
-            <span v-if="years" class="detail__years">{{ years }}</span>
-            <span class="detail__marks">
-              <VerifiedMark kind="edge" :record="edge" :label="`${label} ${other.name}`" />
-              <FlagButton v-if="canFlag" kind="edge" :id="edge.id" :label="`${selectedNode.name} ${label} ${other.name}`" />
-            </span>
-            <span class="detail__refs">
-              <template v-for="(source, index) in edge.sources" :key="source.title">
-                <a v-if="source.url" :href="source.url" :title="source.title" target="_blank" rel="noopener">
-                  <span aria-hidden="true">[{{ index + 1 }}]</span>
-                  <span class="visually-hidden">Source {{ index + 1 }}: {{ source.title }} (opens in a new tab)</span>
-                </a>
-                <span v-else :title="source.title">
-                  <span aria-hidden="true">[{{ index + 1 }}]</span>
-                  <span class="visually-hidden">Source {{ index + 1 }}: {{ source.title }}</span>
-                </span>
-              </template>
-            </span>
-            <button
-              v-if="reviewing"
-              type="button"
-              class="detail__approve"
-              :aria-label="`${edge.verified ? 'Undo approval of' : 'Approve'} ${label} ${other.name}`"
-              @click="setVerified('edge', edge, !edge.verified)"
-            >
-              {{ edge.verified ? 'Undo' : 'Approve' }}
-            </button>
-            <span v-if="edge.note" class="detail__note">{{ edge.note }}</span>
-            <FlagNotes v-if="reviewing" kind="edge" :id="edge.id" />
-            <ReviewTools v-if="reviewing" :key="edge.id" kind="edge" :record="edge" :label="`${label} ${other.name}`" />
-          </li>
-        </ul>
+        <template v-for="list in byVerb(group.connections)" :key="list.verb">
+          <h4 class="detail__verb">{{ list.verb }}</h4>
+          <ul>
+            <li v-for="{ edge, other, label, detail, years } in list.connections" :key="edge.id">
+              <button type="button" class="detail__link" @click="select(other.id, { focusDetails: true })">
+                <NodeGlyph :type="other.type" />
+                {{ other.name }}
+              </button>
+              <span v-if="detail || years" class="detail__years">{{ [detail, years].filter(Boolean).join(', ') }}</span>
+              <!-- Viewers find each connection's sources in the verification note at the foot -->
+              <span v-if="reviewing" class="detail__refs">
+                <template v-for="(source, index) in edge.sources" :key="source.title">
+                  <a v-if="source.url" :href="source.url" :title="source.title" target="_blank" rel="noopener">
+                    <span aria-hidden="true">[{{ index + 1 }}]</span>
+                    <span class="visually-hidden">Source {{ index + 1 }}: {{ source.title }} (opens in a new tab)</span>
+                  </a>
+                  <span v-else :title="source.title">
+                    <span aria-hidden="true">[{{ index + 1 }}]</span>
+                    <span class="visually-hidden">Source {{ index + 1 }}: {{ source.title }}</span>
+                  </span>
+                </template>
+              </span>
+              <button
+                v-if="reviewing"
+                type="button"
+                class="detail__approve"
+                :aria-label="`${edge.verified ? 'Undo approval of' : 'Approve'} ${label} ${other.name}`"
+                @click="setVerified('edge', edge, !edge.verified)"
+              >
+                {{ edge.verified ? 'Undo' : 'Approve' }}
+              </button>
+              <span v-if="edge.note" class="detail__note">{{ edge.note }}</span>
+              <FlagNotes v-if="reviewing" kind="edge" :id="edge.id" />
+              <ReviewTools v-if="reviewing" :key="edge.id" kind="edge" :record="edge" :label="`${label} ${other.name}`" />
+            </li>
+          </ul>
+        </template>
       </section>
       <p v-if="groups.length === 0" class="detail__facts">No connections recorded yet.</p>
 
@@ -241,6 +255,11 @@ const canFlag = flagsAvailable()
           </li>
         </ul>
       </section>
+
+      <footer class="detail__checks">
+        <VerificationSummary :facts="cardFacts" :name="selectedNode.name" />
+        <FlagButton v-if="canFlag" :facts="cardFacts" />
+      </footer>
     </template>
 
     <template v-else>
@@ -290,12 +309,27 @@ const canFlag = flagsAvailable()
   }
 }
 
-header {
-  position: relative;
+/* The name and close button share the first row (the name wraps beside it); the type
+   runs underneath */
+.detail__title {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 0.2rem 0.5rem;
+}
+
+.detail__type {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0.3rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
 }
 
 h2 {
-  margin: 4px 32px 0 0;
+  margin: 0;
   font-size: 1.4rem;
   line-height: 1.25;
 }
@@ -329,20 +363,10 @@ li {
   gap: 2px 6px;
 }
 
-.detail__type {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--text-secondary);
-  font-size: 0.875rem;
-}
-
 .detail__close {
-  position: absolute;
-  top: -4px;
-  right: -4px;
   width: 28px;
   height: 28px;
+  margin: calc((1.75rem - 28px) / 2) -4px 0 0;
   border: 0;
   border-radius: 4px;
   background: none;
@@ -361,6 +385,17 @@ li {
 .detail__verb,
 .detail__years {
   color: var(--text-secondary);
+}
+
+/* The verb a list of connections shares, under the section's heading */
+.detail__verb {
+  margin: 0.4rem 0 0.3rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.detail__verb + ul + .detail__verb {
+  margin-top: 0.75rem;
 }
 
 .detail__aka,
@@ -420,13 +455,15 @@ li {
   gap: 8px;
 }
 
-.detail__marks {
-  display: inline-flex;
+.detail__checks {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-}
-
-.detail__marks:empty {
-  display: none;
+  justify-content: space-between;
+  gap: 0.25rem 0.75rem;
+  margin: 0 -0.4rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
 }
 
 .detail__refs {
