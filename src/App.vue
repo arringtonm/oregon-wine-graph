@@ -153,12 +153,19 @@ onBeforeUnmount(() => {
   align-items: center;
   gap: 0.55rem;
   margin: 0;
-  font-size: 1.1875rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
+  /* Fraunces: a soft serif whose rounded forms pair with Nunito's (main.ts loads it) */
+  font-family: 'Fraunces Variable', Georgia, serif;
+  font-size: 1.3125rem;
+  font-weight: 650;
+  font-optical-sizing: auto;
+  letter-spacing: -0.005em;
 }
 
 .app__header p {
+  /* Fraunces sits lower in its line than Nunito, so with both centred the tagline would
+     ride about 2px above the title's baseline; this lowers it to share it */
+  position: relative;
+  top: 0.15em;
   overflow: hidden;
   margin: 0;
   color: var(--text-secondary);

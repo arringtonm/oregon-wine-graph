@@ -464,6 +464,14 @@ h2 {
   line-height: 1.25;
 }
 
+/* A record's name, in the header title's serif (App.vue) */
+.detail__title h2 {
+  font-family: 'Fraunces Variable', Georgia, serif;
+  font-weight: 650;
+  font-optical-sizing: auto;
+  letter-spacing: -0.005em;
+}
+
 /* Each section stands apart: 26px above its heading (the panel's 12px gap and this) */
 h3 {
   margin: 14px 0 6px;
