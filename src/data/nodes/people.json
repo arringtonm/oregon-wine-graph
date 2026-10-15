@@ -1382,7 +1382,7 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/dick-erath/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/dick-erath-2/",
@@ -1416,7 +1416,8 @@
         "title": "Dick Erath",
         "minutes": 47
       }
-    ]
+    ],
+    "verifiedBy": "person"
   },
   {
     "id": "cal-knudsen",

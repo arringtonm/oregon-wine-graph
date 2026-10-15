@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { TooltipProvider } from 'reka-ui'
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, defineAsyncComponent, onBeforeUnmount, onMounted, ref } from 'vue'
 import DetailPanel from './components/DetailPanel.vue'
 import GraphCanvas from './components/GraphCanvas.vue'
 import GraphControls from './components/GraphControls.vue'
@@ -8,6 +8,9 @@ import { ICONS } from './graph/icons'
 import { useGraph } from './composables/useGraph'
 
 const { state, init, select } = useGraph()
+
+// The admin/viewer switch exists only on the dev server; the published site is viewer only
+const ModeSwitch = import.meta.env.DEV ? defineAsyncComponent(() => import('./components/ModeSwitch.vue')) : null
 
 // Matches the breakpoint where the filters become a drawer over the graph
 const compactQuery = window.matchMedia('(max-width: 1024px)')
@@ -66,6 +69,7 @@ onBeforeUnmount(() => {
           Oregon Wine Graph
         </h1>
         <p>The people, wineries and vineyards of Oregon wine, and how they connect</p>
+        <ModeSwitch v-if="ModeSwitch" />
       </header>
       <pre v-if="state.error" class="app__error" role="alert">{{ state.error }}</pre>
       <main v-else-if="state.graph" class="app__main" :class="{ 'app__main--collapsed': state.filtersCollapsed }">

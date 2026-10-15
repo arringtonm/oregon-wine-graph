@@ -7,6 +7,7 @@ import { readGraph, setVerifiedWhere } from '../reviewPlugin'
 import { claimsFingerprint, claimsFor, recordKey, type CheckedRecord } from './claims'
 import { APPLY_THRESHOLD, decide } from './decide'
 import { readChecks } from './store'
+import { writeVerifiedSources } from './verifiedSources'
 
 const dataDir = resolve('src/data')
 
@@ -38,3 +39,7 @@ if (process.argv.includes('--undo')) {
   const changed = setVerifiedWhere(dataDir, (kind, record) => supported.has(`${kind}:${record.id}`), true, 'jev')
   console.log(`Verified ${changed} records at threshold ${APPLY_THRESHOLD}; ${stale} not checked or stale`)
 }
+
+// Either way, refresh which source supported each record the check verified
+const sources = writeVerifiedSources(dataDir, readGraph(dataDir), readChecks())
+console.log(`Recorded the supporting source for ${sources} records in verified-sources.json`)

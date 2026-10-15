@@ -19,6 +19,7 @@ import { claimsFingerprint, claimsFor, recordKey } from './check/claims'
 import { evidenceFor, findRecord, removeEdge, updateEdge } from './check/edit'
 import { readCached } from './check/fetchSources'
 import { compact, CHECKS_FILE, readChecks, writeChecks } from './check/store'
+import { addLocalFlag, readLocalFlags, resolveLocalFlag } from './flags/localStore'
 import { askGraph, type AskOverride } from './jev/askGraph'
 import { jevModel, stubModel } from './jev/model'
 import { parseConnection, slugify, type ProposedEdge } from './jev/parseConnection'
@@ -276,6 +277,20 @@ export function reviewPlugin(dataDir = resolve('src/data')): Plugin {
           const edge = updateEdge(dataDir, id, changes)
           ownWrites.add(join(dataDir, 'edges.json'))
           return { edge, check: await recheck('edge', id) }
+        }),
+      )
+
+      // Flags from readers (when Firebase isn't configured): add one, list them, resolve one
+      server.middlewares.use('/__flags/add', route((body) => addLocalFlag(body)))
+      server.middlewares.use(
+        '/__flags/list',
+        route(() => readLocalFlags()),
+      )
+      server.middlewares.use(
+        '/__flags/resolve',
+        route(({ id }) => {
+          if (typeof id !== 'string' || !resolveLocalFlag(id)) throw new Error('Unknown flag')
+          return { resolved: id }
         }),
       )
 

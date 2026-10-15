@@ -1,6 +1,7 @@
 import { computed, reactive } from 'vue'
 import { loadGraph } from '../data'
 import { foldText } from '../graph/textMatch'
+import type { Flag } from '../services/flagTypes'
 import { claimsFingerprint, claimsFor, type CheckedRecord } from '../../tools/check/claims'
 import { APPLY_THRESHOLD, decide, type Decision, type Verdict } from '../../tools/check/decide'
 import type { EdgeChanges, Evidence } from '../../tools/check/edit'
@@ -21,7 +22,26 @@ import {
 export type ToggleableNodeType = Exclude<NodeType, 'ava'>
 
 // Review mode writes approvals to the data files through the dev server, so it only exists in `npm run dev`
-export const reviewEnabled = import.meta.env.DEV
+// The review tools exist only on the dev server, which writes the data files; there they
+// show in admin mode, and viewer mode previews the published site. See \`reviewing\` below.
+const ADMIN_KEY = 'oregon-wine-graph:admin-mode'
+
+function readAdminMode(): boolean {
+  if (!import.meta.env.DEV) return false
+  try {
+    return localStorage.getItem(ADMIN_KEY) !== 'false'
+  } catch {
+    return true
+  }
+}
+
+export function rememberAdminMode(admin: boolean) {
+  try {
+    localStorage.setItem(ADMIN_KEY, String(admin))
+  } catch {
+    // Not remembered; the mode still applies for this visit
+  }
+}
 
 export interface Connection {
   edge: GraphEdge
@@ -30,6 +50,10 @@ export interface Connection {
   years: string
 }
 
+// Node types hidden from the whole app for now: the graph, filters, search, list, Random and
+// the detail panel's connections. The records stay in the data; remove a type to bring it back
+export const HIDDEN_TYPES = new Set<NodeType>(['event'])
+
 function defaultFilters() {
   return {
     nodeTypes: {
@@ -37,7 +61,7 @@ function defaultFilters() {
       winery: true,
       vineyard: true,
       organization: true,
-      event: true,
+      event: !HIDDEN_TYPES.has('event'),
     } as Record<ToggleableNodeType, boolean>,
     categories: {
       ownership: true,
@@ -52,6 +76,13 @@ function defaultFilters() {
     // AVA node ids to narrow the graph to; empty for all
     avas: [] as string[],
   }
+}
+
+// A flag as the admin sees it: what was sent, plus where it is stored and whether handled
+export interface AdminFlag extends Flag {
+  id: string
+  source: 'local' | 'firestore'
+  resolvedAt?: string
 }
 
 const COLLAPSED_KEY = 'oregon-wine-graph:filters-collapsed'
@@ -82,6 +113,10 @@ const state = reactive({
   filtersOpen: false,
   // Whether the search and filters sidebar is hidden; desktop only, remembered per browser
   filtersCollapsed: readCollapsed(),
+  // Admin shows the review tools (dev server only); viewer is how the published site looks
+  adminMode: readAdminMode(),
+  // Flags readers have sent, loaded on the dev server for admin mode
+  flags: [] as AdminFlag[],
   reviewError: null as string | null,
   // Jev's scores for each record against its sources; loaded on the dev server only
   checks: null as CheckStore | null,
@@ -118,6 +153,9 @@ const HISTORY_LIMIT = 100
 const nodes = computed(() => state.graph?.nodes ?? [])
 const edges = computed(() => state.graph?.edges ?? [])
 const nodeById = computed(() => new Map(nodes.value.map((node) => [node.id, node])))
+// Whether review tools show: on the dev server, in admin mode
+export const reviewing = computed(() => import.meta.env.DEV && state.adminMode)
+
 const avas = computed(() => nodes.value.filter((node) => node.type === 'ava'))
 
 // Whether the filters are as the app starts: the view whose layout is saved and shipped
@@ -198,6 +236,7 @@ const avaScope = computed(() => {
 
 const visibleNodes = computed(() =>
   nodes.value.filter((node) => {
+    if (HIDDEN_TYPES.has(node.type)) return false
     if (node.type === 'ava' ? !state.categories.geography : !state.nodeTypes[node.type]) return false
     if (state.oregonOnly && node.outsideOregon) return false
     if (state.verifiedOnly && !node.verified) return false
@@ -329,7 +368,7 @@ function connectionsOf(id: string): { category: EdgeCategory; connections: Conne
     const outgoing = edge.source === id
     if (!outgoing && edge.target !== id) continue
     const other = nodeById.value.get(outgoing ? edge.target : edge.source)
-    if (!other) continue
+    if (!other || HIDDEN_TYPES.has(other.type)) continue
     const rule = EDGE_RULES[edge.type]
     const connection: Connection = {
       edge,
@@ -512,8 +551,48 @@ async function postJson<T>(url: string, body: unknown): Promise<T> {
 
 // Asks the dev server to read a sentence typed on a node's page as a connection
 // Dev server only: Jev reads the question, the graph supplies the answer
+// Flags, for admin mode on the dev server: loaded from /__flags/list, stepped through, resolved
+async function loadFlags() {
+  if (!import.meta.env.DEV) return
+  try {
+    state.flags = await postJson<AdminFlag[]>('/__flags/list', {})
+  } catch {
+    // The review box simply shows no flags
+  }
+}
+
+const openFlags = computed(() => state.flags.filter((flag) => !flag.resolvedAt))
+
+// The open flags on one node or connection
+function flagsFor(kind: 'node' | 'edge', id: string): AdminFlag[] {
+  return openFlags.value.filter((flag) => flag.recordKind === kind && flag.recordId === id)
+}
+
+// The node whose card shows a flag: the node itself, or a connection's source
+function flagNodeId(flag: AdminFlag): string | undefined {
+  if (flag.recordKind === 'node') return flag.recordId
+  return edges.value.find((edge) => edge.id === flag.recordId)?.source
+}
+
+function selectNextFlagged() {
+  const ids = [...new Set(openFlags.value.map(flagNodeId).filter((id): id is string => !!id))]
+  if (ids.length === 0) return
+  const next = ids[(ids.indexOf(state.selectedId ?? '') + 1) % ids.length]
+  select(next, { focusDetails: true })
+}
+
+async function resolveFlag(id: string) {
+  await postJson('/__flags/resolve', { id })
+  const flag = state.flags.find((entry) => entry.id === id)
+  if (flag) flag.resolvedAt = new Date().toISOString()
+}
+
+// Questions go to a server holding the decision model's key: the dev server's /__ask, or a
+// deployed endpoint (VITE_ASK_URL, e.g. a Cloud Function). The key never reaches the browser
+export const askUrl = import.meta.env.VITE_ASK_URL || (import.meta.env.DEV ? '/__ask' : '')
+
 function askJev(question: string, override?: AskOverride): Promise<AskAnswer> {
-  return postJson('/__ask', { question, override })
+  return postJson(askUrl, { question, override })
 }
 
 function parseConnection(text: string, contextId: string): Promise<Proposal> {
@@ -574,7 +653,9 @@ function resetFilters() {
 
 function selectFromHash() {
   const id = decodeURIComponent(window.location.hash.slice(1))
-  select(nodeById.value.has(id) ? id : null)
+  const node = nodeById.value.get(id)
+  // A link to a hidden type opens nothing, rather than a node the app doesn't show
+  select(node && !HIDDEN_TYPES.has(node.type) ? id : null)
 }
 
 let started = false
@@ -584,6 +665,7 @@ async function init() {
   try {
     state.graph = await loadGraph()
     if (import.meta.env.DEV) state.checks = (await import('../data/checks.json')).default as unknown as CheckStore
+    void loadFlags()
     selectFromHash()
     window.addEventListener('hashchange', selectFromHash)
   } catch (error) {
@@ -605,6 +687,11 @@ export function useGraph() {
     select,
     pickNode,
     randomNodeId,
+    loadFlags,
+    openFlags,
+    flagsFor,
+    selectNextFlagged,
+    resolveFlag,
     announce,
     canGoBack,
     canGoForward,

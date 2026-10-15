@@ -28,9 +28,10 @@ import Tip from './Tip.vue'
 
 cytoscape.use(fcose)
 
-// Questions need the dev server, where the decision model's key lives; the production build
-// leaves the whole component out
-const AskPopover = import.meta.env.DEV ? defineAsyncComponent(() => import('./AskPopover.vue')) : null
+// Questions need a server holding the decision model's key: the dev server, or a deployed
+// endpoint set in VITE_ASK_URL. Without either, the build leaves the component out
+const AskPopover =
+  import.meta.env.DEV || import.meta.env.VITE_ASK_URL ? defineAsyncComponent(() => import('./AskPopover.vue')) : null
 
 const {
   state,
@@ -891,15 +892,17 @@ watch(
   display: flex;
   flex-direction: column;
   gap: 2px;
-  max-width: 240px;
+  /* Long names wrap inside the box rather than running past its edge */
+  width: max-content;
+  max-width: 20rem;
   padding: 6px 10px;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: var(--surface-raised);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow);
   font-size: 12px;
   pointer-events: none;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .graph-canvas__tooltip span {

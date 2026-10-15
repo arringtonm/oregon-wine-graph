@@ -65,7 +65,19 @@ Put a key in `.env.local` to use Jev:
 JEV_API_KEY=...
 ```
 
-## Adding a connection in plain language
+## Admin and viewer modes
+
+On the dev server the header has a "Viewing as: Admin | Viewer" switch (remembered per browser). Admin shows the review tools; viewer hides them (approve and undo, unverified badges, Evidence, edit, remove, add connection) and previews the published site, which is always viewer only.
+
+Both modes show a small check beside verified records. It opens a note saying how the record was verified: by the automated check, against the source that supported it best; by a person; or against AVA boundaries. The supporting source comes from `src/data/verified-sources.json`, which `npm run check:apply` rewrites; it maps each record verified by the check to the index of its best source, since the published site doesn't load `checks.json`.
+
+### Flags
+
+Beside each node summary and connection, a flag opens a short form (what's wrong, an optional note and source link) for reporting a fact for review. It collects nothing personal. For now flags are stored only on the dev server, in `.cache/flags.json` (git-ignored); admin mode shows "Flagged N" in the review box, the flags on each record, and Resolve. The code is `src/services/flags.ts`, `src/components/FlagButton.vue` and `FlagNotes.vue`, and `tools/flags/localStore.ts`.
+
+The published site has nowhere to send flags yet, so the button is hidden there. Sending them from the published site needs a small backend; `submitFlag()` is the one place to add it.
+
+
 
 Also on the dev server, each node's panel has an "Add new connection" box. Type a sentence about that node, such as "Dan and Jeanne are married" on Dan Diephouse's page, optionally with a source URL. The app shows what it understood as an editable preview; nothing is saved until you confirm. Our code finds the candidate nodes and years, Jev chooses among them and among the allowed connection types, and the edge rules have the last word. Without a key, keyword rules stand in. The code is in `tools/jev/`.
 
@@ -127,4 +139,4 @@ The selected node is kept in the URL hash, so `/#david-lett` links straight to a
 - More relationship types: AVA petitioners, donors, "sold vines to", regulators.
 - Widen coverage beyond the northern Willamette Valley.
 - Split the JavaScript bundle; the data and graph library make the single chunk large.
-- Publish the site, with a small server holding the Jev key so "Ask a question" can work for everyone.
+- Publish the site, with a small backend: one endpoint to receive flags and one holding the Jev key so "Ask a question" works for everyone. The app already reads an `VITE_ASK_URL` setting for the latter.

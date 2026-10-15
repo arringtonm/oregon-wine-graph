@@ -28,7 +28,7 @@ describe('random node', () => {
 
   it('picks only from what the filters show', () => {
     resetFilters()
-    for (const type of Object.keys(state.nodeTypes) as (keyof typeof state.nodeTypes)[]) state.nodeTypes[type] = type === 'event'
+    for (const type of Object.keys(state.nodeTypes) as (keyof typeof state.nodeTypes)[]) state.nodeTypes[type] = type === 'organization'
     const showing = new Set(visibleNodes.value.map((node) => node.id))
     for (let i = 0; i < 50; i++) expect(showing.has(randomNodeId()!)).toBe(true)
     resetFilters()
@@ -36,7 +36,7 @@ describe('random node', () => {
 
   it('once everything showing has been visited, picks anything but the current node', () => {
     resetFilters()
-    for (const type of Object.keys(state.nodeTypes) as (keyof typeof state.nodeTypes)[]) state.nodeTypes[type] = type === 'event'
+    for (const type of Object.keys(state.nodeTypes) as (keyof typeof state.nodeTypes)[]) state.nodeTypes[type] = type === 'organization'
     for (const node of visibleNodes.value) select(node.id)
     for (let i = 0; i < 50; i++) {
       const id = randomNodeId()

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { useGraph, type ToggleableNodeType } from '../composables/useGraph'
+import { HIDDEN_TYPES, useGraph, type ToggleableNodeType } from '../composables/useGraph'
 import { EDGE_CATEGORIES, EDGE_CATEGORY_LABELS, NODE_TYPE_LABELS } from '../data/schema'
 import { PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'reka-ui'
 import Check from './Check.vue'
@@ -16,7 +16,8 @@ const avaSummary = computed(() => {
   return avas.value.find((ava) => ava.id === state.avas[0])?.name.replace(/ AVA$/, '') ?? '1 chosen'
 })
 
-const toggleableTypes = Object.keys(state.nodeTypes) as ToggleableNodeType[]
+// Hidden types (see HIDDEN_TYPES) get no checkbox
+const toggleableTypes = (Object.keys(state.nodeTypes) as ToggleableNodeType[]).filter((type) => !HIDDEN_TYPES.has(type))
 
 function setAva(id: string, chosen: boolean) {
   state.avas = chosen ? [...state.avas, id] : state.avas.filter((other) => other !== id)

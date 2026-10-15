@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import { computed, nextTick, ref, watch } from 'vue'
-import { nodeYears, reviewEnabled, useGraph } from '../composables/useGraph'
+import { nodeYears, reviewing, useGraph } from '../composables/useGraph'
 import { EDGE_CATEGORY_LABELS, NODE_TYPE_LABELS } from '../data/schema'
 import AddConnection from './AddConnection.vue'
 import NodeGlyph from './NodeGlyph.vue'
 import ReviewTools from './ReviewTools.vue'
+import FlagButton from './FlagButton.vue'
+import FlagNotes from './FlagNotes.vue'
+import VerifiedMark from './VerifiedMark.vue'
+import { flagsAvailable } from '../services/flags'
 
 const {
   state,
@@ -20,6 +24,8 @@ const {
   nearby,
   avasOf,
   nodeById,
+  openFlags,
+  selectNextFlagged,
 } = useGraph()
 
 // A winery's or vineyard's AVAs, by name
@@ -80,11 +86,14 @@ const facts = computed(() =>
     ? [nodeYears(selectedNode.value), selectedNode.value.place].filter(Boolean).join(' · ')
     : '',
 )
+
+// Flagging needs somewhere to send flags: Firestore, or the dev server's local file
+const canFlag = flagsAvailable()
 </script>
 
 <template>
   <section id="details" class="detail" :class="{ 'detail--empty': !selectedNode }" aria-label="Details" tabindex="-1">
-    <div v-if="reviewEnabled" class="detail__review">
+    <div v-if="reviewing" class="detail__review">
       <p>
         <strong>Review</strong>
         {{ unverified.nodes }} nodes and {{ unverified.edges }} connections unverified
@@ -103,6 +112,9 @@ const facts = computed(() =>
         @click="selectNextWithVerdict(group.verdict)"
       >
         {{ QUEUE_LABELS[group.verdict] }} {{ group.nodeIds.length }}
+      </button>
+      <button v-if="openFlags.length" type="button" class="detail__flagged" @click="selectNextFlagged">
+        Flagged {{ openFlags.length }}
       </button>
       <button v-if="selectedNode && unverifiedOnCard > 0" type="button" @click="approveCard(selectedNode)">
         Approve all {{ unverifiedOnCard }} on this card
@@ -131,9 +143,11 @@ const facts = computed(() =>
 
       <p>{{ selectedNode.summary }}</p>
       <p class="detail__status">
-        <span v-if="!selectedNode.verified" class="detail__badge">Unverified draft</span>
+        <span v-if="reviewing && !selectedNode.verified" class="detail__badge">Unverified draft</span>
+        <VerifiedMark kind="node" :record="selectedNode" :label="selectedNode.name" />
+        <FlagButton v-if="canFlag" kind="node" :id="selectedNode.id" :label="`${selectedNode.name}: ${selectedNode.summary}`" />
         <button
-          v-if="reviewEnabled"
+          v-if="reviewing"
           type="button"
           class="detail__approve"
           :aria-label="`${selectedNode.verified ? 'Undo approval of' : 'Approve'} ${selectedNode.name}`"
@@ -142,7 +156,8 @@ const facts = computed(() =>
           {{ selectedNode.verified ? 'Undo' : 'Approve' }}
         </button>
       </p>
-      <ReviewTools v-if="reviewEnabled" :key="selectedNode.id" kind="node" :record="selectedNode" :label="selectedNode.name" />
+      <FlagNotes v-if="reviewing" kind="node" :id="selectedNode.id" />
+      <ReviewTools v-if="reviewing" :key="selectedNode.id" kind="node" :record="selectedNode" :label="selectedNode.name" />
 
       <section v-for="group in groups" :key="group.category">
         <h3>{{ EDGE_CATEGORY_LABELS[group.category] }}</h3>
@@ -154,6 +169,8 @@ const facts = computed(() =>
               {{ other.name }}
             </button>
             <span v-if="years" class="detail__years">{{ years }}</span>
+            <VerifiedMark kind="edge" :record="edge" :label="`${label} ${other.name}`" />
+            <FlagButton v-if="canFlag" kind="edge" :id="edge.id" :label="`${selectedNode.name} ${label} ${other.name}`" />
             <span class="detail__refs">
               <template v-for="(source, index) in edge.sources" :key="source.title">
                 <a v-if="source.url" :href="source.url" :title="source.title" target="_blank" rel="noopener">
@@ -167,7 +184,7 @@ const facts = computed(() =>
               </template>
             </span>
             <button
-              v-if="reviewEnabled"
+              v-if="reviewing"
               type="button"
               class="detail__approve"
               :aria-label="`${edge.verified ? 'Undo approval of' : 'Approve'} ${label} ${other.name}`"
@@ -176,7 +193,8 @@ const facts = computed(() =>
               {{ edge.verified ? 'Undo' : 'Approve' }}
             </button>
             <span v-if="edge.note" class="detail__note">{{ edge.note }}</span>
-            <ReviewTools v-if="reviewEnabled" :key="edge.id" kind="edge" :record="edge" :label="`${label} ${other.name}`" />
+            <FlagNotes v-if="reviewing" kind="edge" :id="edge.id" />
+            <ReviewTools v-if="reviewing" :key="edge.id" kind="edge" :record="edge" :label="`${label} ${other.name}`" />
           </li>
         </ul>
       </section>
@@ -206,7 +224,7 @@ const facts = computed(() =>
         </ul>
       </section>
 
-      <AddConnection v-if="reviewEnabled" :key="selectedNode.id" :node="selectedNode" />
+      <AddConnection v-if="reviewing" :key="selectedNode.id" :node="selectedNode" />
 
       <section>
         <h3>Sources</h3>
