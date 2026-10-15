@@ -88,6 +88,16 @@ const README = 'https://github.com/arringtonm/oregon-wine-graph#how-we-know-the-
   cursor: pointer;
 }
 
+/* On touch screens the tap area grows to 44px (WCAG's enhanced size) without moving
+   anything: the negative margin gives back the extra space */
+@media (pointer: coarse) {
+  .verified-info {
+    width: 44px;
+    height: 44px;
+    margin: -10px;
+  }
+}
+
 .verified-info:hover,
 .verified-info[data-state='open'] {
   background: var(--wash);

@@ -31,7 +31,11 @@ function mark(theme: Theme | null) {
 }
 
 export function toggleTheme() {
-  const next: Theme = isDark.value ? 'light' : 'dark'
+  setTheme(isDark.value ? 'light' : 'dark')
+}
+
+// The reader's choice, remembered in this browser
+export function setTheme(next: Theme) {
   chosen.value = next
   mark(next)
   try {

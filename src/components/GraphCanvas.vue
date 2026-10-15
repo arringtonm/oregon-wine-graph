@@ -56,6 +56,13 @@ const {
   randomNodeId,
 } = useGraph()
 
+// The graph corner's count, in readers' words: "1,235 people and places · 1,909 connections"
+const shownCount = computed(() => {
+  const records = visibleNodes.value.length
+  const links = visibleEdges.value.length
+  return `${records.toLocaleString('en-US')} ${records === 1 ? 'person or place' : 'people and places'} · ${links.toLocaleString('en-US')} ${links === 1 ? 'connection' : 'connections'}`
+})
+
 // Rolls to a random node not yet visited, after a short pause behind the busy overlay (as
 // Reset shows while it lays the graph out), so the roll reads as a roll. Focus stays on the
 // button, so it can be pressed again; the selection is announced as any selection is
@@ -809,7 +816,7 @@ watch(
     </div>
     <!-- What the filters leave showing, in the graph's corner; the list view has its own count -->
     <p v-show="!state.listView" class="graph-canvas__count" role="status">
-      {{ visibleNodes.length }} nodes, {{ visibleEdges.length }} connections shown
+      {{ shownCount }}
     </p>
     <!-- Who made the site, in the graph's bottom-right corner -->
     <div class="graph-canvas__about">
@@ -854,12 +861,12 @@ watch(
       <div class="graph-canvas__group">
         <Tip label="Back to the previous selection">
           <button type="button" aria-label="Back" :disabled="!canGoBack" @click="goBack">
-            <span aria-hidden="true">‹</span>
+            <svg class="graph-canvas__step" viewBox="0 0 20 20" aria-hidden="true"><path d="M12 5 7 10l5 5" /></svg>
           </button>
         </Tip>
         <Tip label="Forward to the next selection">
           <button type="button" aria-label="Forward" :disabled="!canGoForward" @click="goForward">
-            <span aria-hidden="true">›</span>
+            <svg class="graph-canvas__step" viewBox="0 0 20 20" aria-hidden="true"><path d="m8 5 5 5-5 5" /></svg>
           </button>
         </Tip>
         <DropdownMenuRoot v-model:open="historyOpen" :modal="false">
@@ -1091,6 +1098,19 @@ watch(
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
+}
+
+/* Back and Forward: drawn chevrons, the same family as the other toolbar icons */
+.graph-canvas__step {
+  display: block;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .graph-canvas__history-icon {

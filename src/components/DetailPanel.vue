@@ -326,7 +326,7 @@ const canFlag = flagsAvailable()
     </template>
 
     <template v-else>
-      <h2 ref="emptyHeading" tabindex="-1">Oregon wine, connected</h2>
+      <h2 ref="emptyHeading" class="detail__start-title" tabindex="-1">Oregon wine, connected</h2>
       <p>
         The people, wineries and vineyards of Oregon wine: who founded what, who made the wine, where
         the fruit came from and how its people are related.
@@ -464,8 +464,9 @@ h2 {
   line-height: 1.25;
 }
 
-/* A record's name, in the header title's serif (App.vue) */
-.detail__title h2 {
+/* A record's name, and the start panel's heading, in the header title's serif (App.vue) */
+.detail__title h2,
+.detail__start-title {
   font-family: 'Fraunces Variable', Georgia, serif;
   font-weight: 650;
   font-optical-sizing: auto;

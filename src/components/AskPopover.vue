@@ -55,7 +55,8 @@ function pick(id: string) {
   background: var(--wash);
 }
 
-.ask-toggle svg {
+/* The speech bubble; the chevron keeps its own size (Chevron.vue), as elsewhere */
+.ask-toggle svg:not(.chevron) {
   width: 1.1rem;
   height: 1.1rem;
   fill: none;

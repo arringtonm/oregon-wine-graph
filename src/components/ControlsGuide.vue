@@ -58,7 +58,7 @@ const sections = computed<Section[]>(() =>
         {
           title: 'Site',
           rows: [
-            { action: 'Light or dark mode', ways: ['Wine glass, top right'] },
+            { action: 'Light or dark mode', ways: ['Glasses, top right'] },
             { action: 'About the site', ways: ['i button'] },
           ],
         },
@@ -106,7 +106,7 @@ const sections = computed<Section[]>(() =>
           rows: [
             { action: 'Show or hide filters', ways: ['Sidebar button'] },
             { action: 'Show or hide this guide', ways: ['?'] },
-            { action: 'Light or dark mode', ways: ['Wine glass, top right'] },
+            { action: 'Light or dark mode', ways: ['Glasses, top right'] },
             { action: 'About the site', ways: ['i button'] },
           ],
         },

@@ -156,7 +156,7 @@ From [Icon Usability](https://www.nngroup.com/articles/icon-usability/):
   | Network / list | view switch | – | data-tip | "Graph view", "List view" |
   | + − | zoom | – | Tip | "Zoom in/out" |
   | ? | Controls | – | data-tip | "Controls" |
-  | Wine glass | theme switch | – | Tip | "Switch to dark/light mode" |
+  | Two glasses (Chardonnay, red) | theme switch, header | – | Tip each | "Light mode", "Dark mode", in a group named "Theme" |
   | i | About (graph corner) | – | data-tip | "About the site" |
   | i | beside "Verified records only" | – | – | "How records are verified" |
   | Check circle | verification bar | "15 of 18 verified" | – | full sentence |
@@ -204,7 +204,8 @@ Rate a tension with one of these, and leave the call to him:
   - roles show as short titles (`src/data/role-titles.json`);
   - no type line under the name.
 - **Start panel:** "Ways to explore", then a random button whose label rotates through cellar phrases (`RANDOM_INVITES`) in regular weight, then Recently viewed (saved in the browser).
-- **Graph:** the node count in the bottom-left corner; About is an "i" in the bottom-right; the vineyard green is olive.
+- **Theme switch:** two glasses side by side, a Chardonnay for light and a red for dark, with a neutral slider behind the one showing (15 Oct).
+- **Graph:** the count ("1,235 people and places · 1,909 connections") in the bottom-left corner; About is an "i" in the bottom-right; the vineyard green is olive.
 - **Busy overlay:** cellar phrases (`BUSY_PHRASES`); Random pauses about 0.9s.
 - **Sidebar:** hidden by default at 1512px and narrower; the version line links to the release notes.
 
