@@ -995,5 +995,29 @@
     "type": "organization",
     "kind": "company",
     "verifiedBy": "jev"
+  },
+  {
+    "id": "method-oregon",
+    "type": "organization",
+    "kind": "trade-body",
+    "name": "Method Oregon",
+    "summary": "Nonprofit association of Oregon sparkling wine producers, launched in 2026 with the first official standard for Oregon sparkling wine: Oregon fruit from the Willamette Valley, Columbia Gorge or Southern Oregon, made by the traditional method with a second fermentation in bottle, and aged at least 24 months en tirage. It had 56 member wineries by August 2026 and holds an annual Grand Tasting Weekend each July.",
+    "founded": 2026,
+    "sources": [
+      {
+        "title": "Method Oregon launches nonprofit organization and first official standard for Oregon sparkling wine (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/03/17/method-oregon-launches-nonprofit-organization-and-first-official-standard-for-oregon-sparkling-wine/"
+      },
+      {
+        "title": "Method Oregon sets 2027 dates following sold-out three-day celebration of Oregon sparkling wine (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/08/04/method-oregon-sets-2027-dates-following-sold-out-three-day-celebration-of-oregon-sparkling-wine/"
+      },
+      {
+        "title": "Method Oregon announces board leadership transition (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/08/24/method-oregon-announces-board-leadership-transition/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
   }
 ]

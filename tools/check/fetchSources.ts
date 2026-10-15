@@ -73,6 +73,45 @@ function kitPostHtml(page: string): string | null {
   return match ? (JSON.parse(match[1]) as string) : null
 }
 
+// The Method Oregon trail map renders client-side; its wineries are in the page's embedded
+// Next.js data. Each becomes a paragraph: name, region, address, website and descriptions.
+export function methodTrailHtml(page: string): string | null {
+  const flight = [...page.matchAll(/self\.__next_f\.push\((\[[\s\S]*?\])\)<\/script>/g)]
+    .map((match) => JSON.parse(match[1]) as unknown[])
+    .map((chunk) => (typeof chunk[1] === 'string' ? chunk[1] : ''))
+    .join('')
+  const wineries = new Map<string, Record<string, string>>()
+  for (const start of flight.matchAll(/\{"slug":"/g)) {
+    let depth = 0
+    for (let i = start.index; i < flight.length; i++) {
+      if (flight[i] === '{') depth++
+      else if (flight[i] === '}' && --depth === 0) {
+        try {
+          const winery = JSON.parse(flight.slice(start.index, i + 1)) as Record<string, string>
+          if (winery.name && winery.address && !wineries.has(winery.slug)) wineries.set(winery.slug, winery)
+        } catch {
+          // a fragment that only looks like a winery
+        }
+        break
+      }
+    }
+  }
+  if (wineries.size === 0) return null
+  const title = page.match(/<title>([^<]*)<\/title>/)?.[1] ?? ''
+  const paragraph = (text: string) => `<p>${text.replace(/</g, '&lt;')}</p>`
+  return [
+    `<h1>${title}</h1>`,
+    ...[...wineries.values()].map((winery) =>
+      paragraph(
+        [`${winery.name} (${winery.region})`, winery.address, winery.website, winery.description, winery.longDescription]
+          .filter(Boolean)
+          .join('. ')
+          .replace(/\.\s*\./g, '.'),
+      ),
+    ),
+  ].join('\n')
+}
+
 async function fetchSource(url: string): Promise<CachedSource> {
   const result = (status: FetchStatus, text = '', detail?: string): CachedSource => ({
     url,
@@ -96,7 +135,13 @@ async function fetchSource(url: string): Promise<CachedSource> {
     const type = response.headers.get('content-type') ?? ''
     if (!/text|html|xml|json/.test(type)) return result('not-text', '', type)
     const page = await response.text()
-    const text = htmlToText(new URL(url).hostname.endsWith('kit.com') ? (kitPostHtml(page) ?? page) : page)
+    const { hostname, pathname } = new URL(url)
+    const html = hostname.endsWith('kit.com')
+      ? (kitPostHtml(page) ?? page)
+      : hostname.endsWith('methodoregon.com') && pathname.startsWith('/trail')
+        ? (methodTrailHtml(page) ?? page)
+        : page
+    const text = htmlToText(html)
     return text.length < MIN_TEXT_LENGTH ? result('empty', text) : result('ok', text)
   } catch (error) {
     return result('error', '', error instanceof Error ? error.message : String(error))

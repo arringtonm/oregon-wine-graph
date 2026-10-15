@@ -5638,7 +5638,7 @@
     "id": "dan-diephouse",
     "type": "person",
     "name": "Dan Diephouse",
-    "summary": "Co-founder of the sparkling wine producer Corollary Wines.",
+    "summary": "Co-founder of the sparkling wine producer Corollary Wines, and a founding board member of Method Oregon, the sparkling wine producers' association launched in 2026.",
     "sources": [
       {
         "title": "Weinnotes newsletter, 20 May 2023",
@@ -5655,6 +5655,10 @@
       {
         "title": "Oral history interview with Jeanne Feldkamp & Dan Diephouse, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/jeanne-feldkamp-and-dan-diephouse/"
+      },
+      {
+        "title": "Corollary Wines announces four new releases (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/10/07/corollary-wines-announces-four-new-releases/"
       }
     ],
     "verified": true,
@@ -5675,7 +5679,7 @@
     "id": "jeanne-feldkamp",
     "type": "person",
     "name": "Jeanne Feldkamp",
-    "summary": "Co-founder of the sparkling wine producer Corollary Wines.",
+    "summary": "Co-founder of the sparkling wine producer Corollary Wines, and a founding board member of Method Oregon, the sparkling wine producers' association launched in 2026.",
     "sources": [
       {
         "title": "Weinnotes newsletter, 20 May 2023",
@@ -5692,6 +5696,14 @@
       {
         "title": "Oral history interview with Jeanne Feldkamp & Dan Diephouse, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/jeanne-feldkamp-and-dan-diephouse/"
+      },
+      {
+        "title": "Method Oregon launches nonprofit organization and first official standard for Oregon sparkling wine (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/03/17/method-oregon-launches-nonprofit-organization-and-first-official-standard-for-oregon-sparkling-wine/"
+      },
+      {
+        "title": "Corollary Wines announces four new releases (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/10/07/corollary-wines-announces-four-new-releases/"
       }
     ],
     "verified": true,
@@ -15754,6 +15766,20 @@
     ],
     "verified": true,
     "type": "person",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "will-kobyluck",
+    "type": "person",
+    "name": "Will Kobyluck",
+    "summary": "General manager of ROCO Winery, who joined the Method Oregon board in August 2026 in place of Andrew Davis. Earlier he was director of consumer sales and marketing at Anne Amie Vineyards, where he led its Bubbles Fest.",
+    "sources": [
+      {
+        "title": "Method Oregon announces board leadership transition (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/08/24/method-oregon-announces-board-leadership-transition/"
+      }
+    ],
+    "verified": true,
     "verifiedBy": "jev"
   }
 ]

@@ -23228,6 +23228,328 @@
     "verified": true
   },
   {
+    "id": "jeanne-feldkamp--member-of--method-oregon",
+    "source": "jeanne-feldkamp",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "founding board member",
+    "startYear": 2026,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Method Oregon launches nonprofit organization and first official standard for Oregon sparkling wine (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/03/17/method-oregon-launches-nonprofit-organization-and-first-official-standard-for-oregon-sparkling-wine/"
+      },
+      {
+        "title": "Corollary Wines announces four new releases (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/10/07/corollary-wines-announces-four-new-releases/"
+      },
+      {
+        "title": "Michael Arrington, 15 October 2026: Jeanne Feldkamp is a founding board member of Method Oregon"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "dan-diephouse--member-of--method-oregon",
+    "source": "dan-diephouse",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "founding board member",
+    "startYear": 2026,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Corollary Wines announces four new releases (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/10/07/corollary-wines-announces-four-new-releases/"
+      },
+      {
+        "title": "Method Oregon announces board leadership transition (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/08/24/method-oregon-announces-board-leadership-transition/"
+      }
+    ],
+    "verified": true,
+    "note": "President of the board by August 2026.",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "andy-lytle--member-of--method-oregon",
+    "source": "andy-lytle",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "founding board member",
+    "startYear": 2026,
+    "sources": [
+      {
+        "title": "Method Oregon launches nonprofit organization and first official standard for Oregon sparkling wine (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/03/17/method-oregon-launches-nonprofit-organization-and-first-official-standard-for-oregon-sparkling-wine/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "andrew-davis--member-of--method-oregon",
+    "source": "andrew-davis",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "founding board member",
+    "startYear": 2026,
+    "endYear": 2026,
+    "note": "Stepped down in August 2026 to travel and to spend more time making wine for Lytle-Barnett.",
+    "sources": [
+      {
+        "title": "Method Oregon launches nonprofit organization and first official standard for Oregon sparkling wine (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/03/17/method-oregon-launches-nonprofit-organization-and-first-official-standard-for-oregon-sparkling-wine/"
+      },
+      {
+        "title": "Method Oregon announces board leadership transition (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/08/24/method-oregon-announces-board-leadership-transition/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "will-kobyluck--member-of--method-oregon",
+    "source": "will-kobyluck",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "board member",
+    "startYear": 2026,
+    "ongoing": true,
+    "note": "Took Andrew Davis’s seat in August 2026.",
+    "sources": [
+      {
+        "title": "Method Oregon announces board leadership transition (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/08/24/method-oregon-announces-board-leadership-transition/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "kate-payne-brown--member-of--method-oregon",
+    "source": "kate-payne-brown",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "founding group",
+    "note": "Named among the winemakers who drew up the Method Oregon standard.",
+    "sources": [
+      {
+        "title": "Oregon sparkling wine (Unicorn Auctions)",
+        "url": "https://unicornauctions.com/unicorn-review/oregon-sparkling-wine"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "jim-bernau--member-of--method-oregon",
+    "source": "jim-bernau",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "founding group",
+    "note": "Named among the winemakers who drew up the Method Oregon standard.",
+    "sources": [
+      {
+        "title": "Oregon sparkling wine (Unicorn Auctions)",
+        "url": "https://unicornauctions.com/unicorn-review/oregon-sparkling-wine"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "rollin-soles--member-of--method-oregon",
+    "source": "rollin-soles",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "founding group",
+    "note": "Named among the winemakers who drew up the Method Oregon standard.",
+    "sources": [
+      {
+        "title": "Oregon sparkling wine (Unicorn Auctions)",
+        "url": "https://unicornauctions.com/unicorn-review/oregon-sparkling-wine"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "lytle-barnett--member-of--method-oregon",
+    "source": "lytle-barnett",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Oregon sparkling wine (Unicorn Auctions)",
+        "url": "https://unicornauctions.com/unicorn-review/oregon-sparkling-wine"
+      },
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "corollary-wines--member-of--method-oregon",
+    "source": "corollary-wines",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Oregon sparkling wine (Unicorn Auctions)",
+        "url": "https://unicornauctions.com/unicorn-review/oregon-sparkling-wine"
+      },
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "arabilis--member-of--method-oregon",
+    "source": "arabilis",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Oregon sparkling wine (Unicorn Auctions)",
+        "url": "https://unicornauctions.com/unicorn-review/oregon-sparkling-wine"
+      },
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "gran-moraine--member-of--method-oregon",
+    "source": "gran-moraine",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Oregon sparkling wine (Unicorn Auctions)",
+        "url": "https://unicornauctions.com/unicorn-review/oregon-sparkling-wine"
+      },
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "argyle-winery--member-of--method-oregon",
+    "source": "argyle-winery",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Oregon sparkling wine (Unicorn Auctions)",
+        "url": "https://unicornauctions.com/unicorn-review/oregon-sparkling-wine"
+      },
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "roco-winery--member-of--method-oregon",
+    "source": "roco-winery",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "startYear": 2026,
+    "note": "Joined in August 2026, bringing membership to 56 wineries.",
+    "sources": [
+      {
+        "title": "Method Oregon announces board leadership transition (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/08/24/method-oregon-announces-board-leadership-transition/"
+      },
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "will-kobyluck--worked-at--roco-winery",
+    "source": "will-kobyluck",
+    "target": "roco-winery",
+    "type": "worked_at",
+    "role": "general manager",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Method Oregon announces board leadership transition (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/08/24/method-oregon-announces-board-leadership-transition/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "will-kobyluck--worked-at--anne-amie-vineyards",
+    "source": "will-kobyluck",
+    "target": "anne-amie-vineyards",
+    "type": "worked_at",
+    "role": "director of consumer sales and marketing",
+    "note": "Led Anne Amie's Bubbles Fest.",
+    "sources": [
+      {
+        "title": "Method Oregon announces board leadership transition (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/08/24/method-oregon-announces-board-leadership-transition/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
     "id": "emily-gladhart--founded--winters-hill-vineyard",
     "source": "emily-gladhart",
     "target": "winters-hill-vineyard",
@@ -31477,5 +31799,1137 @@
       }
     ],
     "verified": false
+  },
+  {
+    "id": "alloro-vineyard--member-of--method-oregon",
+    "source": "alloro-vineyard",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "cramoisi-vineyard--member-of--method-oregon",
+    "source": "cramoisi-vineyard",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "de-ponte-cellars--member-of--method-oregon",
+    "source": "de-ponte-cellars",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "ambar-estate--member-of--method-oregon",
+    "source": "ambar-estate",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "benza-vineyard--member-of--method-oregon",
+    "source": "benza-vineyard",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "chehalem-winery--member-of--method-oregon",
+    "source": "chehalem-winery",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "domaine-willamette--member-of--method-oregon",
+    "source": "domaine-willamette",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "trisaetum--member-of--method-oregon",
+    "source": "trisaetum",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "stoller-family-estate--member-of--method-oregon",
+    "source": "stoller-family-estate",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "bjornson-vineyard--member-of--method-oregon",
+    "source": "bjornson-vineyard",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "cho-wines--member-of--method-oregon",
+    "source": "cho-wines",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "dion-vineyard--member-of--method-oregon",
+    "source": "dion-vineyard",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "elk-cove-vineyards--member-of--method-oregon",
+    "source": "elk-cove-vineyards",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "granville-wine-co--member-of--method-oregon",
+    "source": "granville-wine-co",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "lucidwild--member-of--method-oregon",
+    "source": "lucidwild",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "brooks-wine--member-of--method-oregon",
+    "source": "brooks-wine",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "erath-winery--member-of--method-oregon",
+    "source": "erath-winery",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "fairsing-vineyard--member-of--method-oregon",
+    "source": "fairsing-vineyard",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "irvine-and-roberts-vineyards--member-of--method-oregon",
+    "source": "irvine-and-roberts-vineyards",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "flaneur-wines--member-of--method-oregon",
+    "source": "flaneur-wines",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "lundeen-wines--member-of--method-oregon",
+    "source": "lundeen-wines",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "prive-vineyard--member-of--method-oregon",
+    "source": "prive-vineyard",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "quady-north--member-of--method-oregon",
+    "source": "quady-north",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "soter-vineyards--member-of--method-oregon",
+    "source": "soter-vineyards",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "approachment--member-of--method-oregon",
+    "source": "approachment",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "bryn-mawr-vineyards--member-of--method-oregon",
+    "source": "bryn-mawr-vineyards",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "king-estate--member-of--method-oregon",
+    "source": "king-estate",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "rex-hill--member-of--method-oregon",
+    "source": "rex-hill",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "r-stuart-and-co--member-of--method-oregon",
+    "source": "r-stuart-and-co",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "st-innocent-winery--member-of--method-oregon",
+    "source": "st-innocent-winery",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "winters-hill-estate--member-of--method-oregon",
+    "source": "winters-hill-estate",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "iterum-wines--member-of--method-oregon",
+    "source": "iterum-wines",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "walnut-ridge-vineyard--member-of--method-oregon",
+    "source": "walnut-ridge-vineyard",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "willakenzie-estate--member-of--method-oregon",
+    "source": "willakenzie-estate",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "capitello-wines--member-of--method-oregon",
+    "source": "capitello-wines",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "banke-wines--member-of--method-oregon",
+    "source": "banke-wines",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "knudsen-vineyards-winery--member-of--method-oregon",
+    "source": "knudsen-vineyards-winery",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "knudsen-vineyards-winery--owns--knudsen-vineyards",
+    "source": "knudsen-vineyards-winery",
+    "target": "knudsen-vineyards",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Knudsen Vineyards",
+        "url": "https://knudsenvineyards.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "knudsen-vineyards-winery--draws-from--dundee-hills",
+    "source": "knudsen-vineyards-winery",
+    "target": "dundee-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Knudsen Vineyards",
+        "url": "https://knudsenvineyards.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "landmass-wines--member-of--method-oregon",
+    "source": "landmass-wines",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "nysa-vineyard-winery--member-of--method-oregon",
+    "source": "nysa-vineyard-winery",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "nysa-vineyard-winery--owns--nysa-vineyard",
+    "source": "nysa-vineyard-winery",
+    "target": "nysa-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Nysa Vineyard",
+        "url": "https://www.nysavineyard.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nysa-vineyard-winery--draws-from--dundee-hills",
+    "source": "nysa-vineyard-winery",
+    "target": "dundee-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Nysa Vineyard",
+        "url": "https://www.nysavineyard.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "sivilli-wine-co--member-of--method-oregon",
+    "source": "sivilli-wine-co",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "sivilli-wine-co--sources-from--abbey-ridge-vineyard",
+    "source": "sivilli-wine-co",
+    "target": "abbey-ridge-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "A Willamette sparkling wine project (Sivilli Wine Co.)",
+        "url": "https://www.sivilliwine.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "sivilli-wine-co--sources-from--temperance-hill-vineyard",
+    "source": "sivilli-wine-co",
+    "target": "temperance-hill-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "A Willamette sparkling wine project (Sivilli Wine Co.)",
+        "url": "https://www.sivilliwine.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "perlee--member-of--method-oregon",
+    "source": "perlee",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "varnum-vintners--member-of--method-oregon",
+    "source": "varnum-vintners",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "concinnitas-farm--member-of--method-oregon",
+    "source": "concinnitas-farm",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "winderlea--member-of--method-oregon",
+    "source": "winderlea",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "winderlea--draws-from--dundee-hills",
+    "source": "winderlea",
+    "target": "dundee-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Winderlea",
+        "url": "https://www.winderlea.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "balsall-creek--member-of--method-oregon",
+    "source": "balsall-creek",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "balsall-creek--draws-from--chehalem-mountains",
+    "source": "balsall-creek",
+    "target": "chehalem-mountains",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Balsall Creek",
+        "url": "https://balsallcreek.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "goodfellow-family-cellars--member-of--method-oregon",
+    "source": "goodfellow-family-cellars",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "kramer-vineyards--member-of--method-oregon",
+    "source": "kramer-vineyards",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "kramer-vineyards--draws-from--yamhill-carlton",
+    "source": "kramer-vineyards",
+    "target": "yamhill-carlton",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Kramer Vineyards",
+        "url": "https://www.kramervineyards.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "mellen-meyer--member-of--method-oregon",
+    "source": "mellen-meyer",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "durant-vineyards--member-of--method-oregon",
+    "source": "durant-vineyards",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "durant-vineyards--owns--durant-vineyard",
+    "source": "durant-vineyards",
+    "target": "durant-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Durant Vineyards",
+        "url": "https://durantoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "durant-vineyards--draws-from--dundee-hills",
+    "source": "durant-vineyards",
+    "target": "dundee-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Durant Vineyards",
+        "url": "https://durantoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "six-peaks-winery--member-of--method-oregon",
+    "source": "six-peaks-winery",
+    "target": "method-oregon",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Members (Method Oregon)",
+        "url": "https://www.methodoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
   }
 ]

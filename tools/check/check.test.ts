@@ -4,7 +4,7 @@ import type { Answer, DecisionModel } from '../jev/model'
 import { checkRecord } from './checkRecord'
 import { claimsFingerprint, claimsFor } from './claims'
 import { decide, type SourceCheck } from './decide'
-import { htmlToText, type CachedSource } from './fetchSources'
+import { htmlToText, methodTrailHtml, type CachedSource } from './fetchSources'
 import { extractPassages, nameVariants } from './passages'
 
 const graph = await loadGraph()
@@ -147,5 +147,17 @@ describe('htmlToText', () => {
     expect(htmlToText('<p>Jes&uacute;s Guill&eacute;n &mdash; R&eacute;sonance, Bergstr&ouml;m, Nu&ntilde;ez, J&oslash;rgensen&rsquo;s</p>')).toBe(
       'Jesús Guillén — Résonance, Bergström, Nuñez, Jørgensen’s',
     )
+  })
+})
+
+describe('methodTrailHtml', () => {
+  it('reads the wineries from the trail map’s embedded data', () => {
+    const winery = { slug: 'kramer', name: 'Kramer Vineyards', region: 'Willamette Valley', address: '26830 NW Olson Rd, Gaston, OR 97119', website: 'https://www.kramervineyards.com', description: 'Sparkling.', events: [] }
+    const chunk = JSON.stringify([1, `5:["$","div",null,{"wineries":[${JSON.stringify(winery)},${JSON.stringify(winery)}]}]`])
+    const page = `<title>Method Oregon Trail</title><div>Loading trail...</div><script>self.__next_f.push(${chunk})</script>`
+    expect(htmlToText(methodTrailHtml(page)!)).toBe(
+      'Method Oregon Trail\nKramer Vineyards (Willamette Valley). 26830 NW Olson Rd, Gaston, OR 97119. https://www.kramervineyards.com. Sparkling.',
+    )
+    expect(methodTrailHtml('<p>no map here</p>')).toBeNull()
   })
 })

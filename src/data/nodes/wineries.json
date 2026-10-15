@@ -111,6 +111,10 @@
       {
         "title": "King Estate Winery collection, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/king-estate-winery-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -121,7 +125,12 @@
         "title": "King Estate Winery collection",
         "date": "2019-06-13"
       }
-    ]
+    ],
+    "address": "80854 Territorial Hwy, Eugene, OR 97405",
+    "coordinates": {
+      "lat": 43.86103,
+      "lng": -123.25075
+    }
   },
   {
     "id": "valley-view-winery",
@@ -496,6 +505,10 @@
       {
         "title": "Dundee Vineyards collection (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/dundee-vineyards-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -510,7 +523,12 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/dundee-vineyards-collection/",
         "title": "Dundee Vineyards collection"
       }
-    ]
+    ],
+    "address": "691 OR-99W, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27789,
+      "lng": -123.01143
+    }
   },
   {
     "id": "roco-winery",
@@ -534,6 +552,10 @@
       {
         "title": "Roco Winery collection (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/roco-winery-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": false,
@@ -542,7 +564,12 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/roco-winery-collection/",
         "title": "Roco Winery collection"
       }
-    ]
+    ],
+    "address": "11425 NE Hendricks Rd, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.30114,
+      "lng": -123.11718
+    }
   },
   {
     "id": "chehalem-winery",
@@ -689,10 +716,19 @@
       {
         "title": "Rex Hill (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/400/index.html"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "30835 N Hwy 99W, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.31652,
+      "lng": -122.92223
+    }
   },
   {
     "id": "evening-land-vineyards",
@@ -1149,6 +1185,10 @@
       {
         "title": "Elk Cove Vineyards collection, 2023 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/elk-cove-vineyards-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -1159,7 +1199,12 @@
         "title": "Elk Cove Vineyards collection",
         "date": "2023-06-28"
       }
-    ]
+    ],
+    "address": "27751 NW Olson Rd., Gaston, OR 97119",
+    "coordinates": {
+      "lat": 45.41464,
+      "lng": -123.18229
+    }
   },
   {
     "id": "tualatin-vineyards",
@@ -1210,7 +1255,7 @@
     "name": "St. Innocent Winery",
     "summary": "Winery founded by Mark Vlossak in 1988, known for single-vineyard wines from sites including Freedom Hill, Temperance Hill, Shea and Momtazi. It operated at Zenith Vineyard from 2006 and moved in 2019 to its Enchanted Way Vineyard in the South Salem Hills.",
     "founded": 1988,
-    "place": "Salem, OR",
+    "place": "Jefferson, OR",
     "sources": [
       {
         "title": "St. Innocent Winery: About",
@@ -1223,6 +1268,14 @@
       {
         "title": "St. Innocent Winery collection, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/st-innocent-winery-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      },
+      {
+        "title": "St. Innocent Winery (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=13618"
       }
     ],
     "verified": true,
@@ -1233,7 +1286,12 @@
         "title": "St. Innocent Winery collection",
         "date": "2019-05-30"
       }
-    ]
+    ],
+    "address": "10052 Enchanted Way SE, Jefferson, OR 97352",
+    "coordinates": {
+      "lat": 44.81107,
+      "lng": -123.02417
+    }
   },
   {
     "id": "cameron-winery",
@@ -1463,6 +1521,10 @@
       {
         "title": "Brooks Winery collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/brooks-winery-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -1473,7 +1535,13 @@
         "title": "Brooks Winery collection",
         "date": "2026-07-02"
       }
-    ]
+    ],
+    "place": "Amity, OR",
+    "address": "21101 SE Cherry Blossom Lane, Amity, OR 97101",
+    "coordinates": {
+      "lat": 45.10738,
+      "lng": -123.1347
+    }
   },
   {
     "id": "maysara-winery",
@@ -1553,6 +1621,10 @@
       {
         "title": "Willakenzie Estate Winery collection, 2022 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/willakenzie-estate-winery-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": false,
@@ -1562,7 +1634,13 @@
         "title": "Willakenzie Estate Winery collection",
         "date": "2022-03-09"
       }
-    ]
+    ],
+    "place": "Yamhill, OR",
+    "address": "19143 NE Laughlin Rd, Yamhill, OR 97148",
+    "coordinates": {
+      "lat": 45.36096,
+      "lng": -123.13795
+    }
   },
   {
     "id": "evesham-wood",
@@ -1615,12 +1693,22 @@
       {
         "title": "Weinnotes newsletter, 5 April 2025",
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-6H3JlzWC"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": false,
     "aka": [
       "Stoller"
-    ]
+    ],
+    "place": "Dayton, OR",
+    "address": "16161 NE McDougall Rd, Dayton, OR 97114",
+    "coordinates": {
+      "lat": 45.24108,
+      "lng": -123.06999
+    }
   },
   {
     "id": "soter-vineyards",
@@ -1648,6 +1736,10 @@
       {
         "title": "Soter Vineyards collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/soter-vineyards-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": false,
@@ -1657,7 +1749,13 @@
         "title": "Soter Vineyards collection",
         "date": "2026-05-14"
       }
-    ]
+    ],
+    "place": "Carlton, OR",
+    "address": "10880 NE Mineral Springs Rd, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.29536,
+      "lng": -123.1324
+    }
   },
   {
     "id": "foris-vineyards",
@@ -1934,7 +2032,8 @@
         "title": "Gran Moraine Winery collection",
         "date": "2020-07-21"
       }
-    ]
+    ],
+    "place": "Yamhill, OR"
   },
   {
     "id": "seven-hills-winery",
@@ -2288,10 +2387,20 @@
       {
         "title": "Q&A: Herb Quady (Oregon Wine Press)",
         "url": "https://www.oregonwinepress.com/q-and-a-herb-quady"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "place": "Jacksonville, OR",
+    "address": "9800 OR-238, Jacksonville, OR 97530",
+    "coordinates": {
+      "lat": 42.24048,
+      "lng": -123.08089
+    }
   },
   {
     "id": "cowhorn-vineyard-and-garden",
@@ -3163,6 +3272,10 @@
       {
         "title": "Granville Wine Company collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/granville-wine-company-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": false,
@@ -3172,7 +3285,12 @@
         "title": "Granville Wine Company collection",
         "date": "2025-08-20"
       }
-    ]
+    ],
+    "address": "10464 NE Jory Lane, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.2914,
+      "lng": -123.03396
+    }
   },
   {
     "id": "lytle-barnett",
@@ -3208,6 +3326,10 @@
       {
         "title": "Lytle-Barnett collection, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/lytle-barnett-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -3221,7 +3343,12 @@
         "title": "Lytle-Barnett collection",
         "date": "2020-07-16"
       }
-    ]
+    ],
+    "address": "110A SW 7th Street, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27819,
+      "lng": -123.01104
+    }
   },
   {
     "id": "aubaine",
@@ -3321,6 +3448,10 @@
       {
         "title": "Corollary Wines collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/corollary-wines-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -3333,7 +3464,13 @@
         "title": "Corollary Wines collection",
         "date": "2025-07-07"
       }
-    ]
+    ],
+    "place": "Amity, OR",
+    "address": "6850 SE Sartore Rd, Amity, OR 97101",
+    "coordinates": {
+      "lat": 45.0875,
+      "lng": -123.17164
+    }
   },
   {
     "id": "cho-wines",
@@ -3357,6 +3494,10 @@
       {
         "title": "Cho Wines collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/cho-wines-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -3367,7 +3508,13 @@
         "title": "Cho Wines collection",
         "date": "2025-06-25"
       }
-    ]
+    ],
+    "place": "Hillsboro, OR",
+    "address": "24399 NE Albertson, Hillsboro, OR 97140",
+    "coordinates": {
+      "lat": 45.3931,
+      "lng": -123.06575
+    }
   },
   {
     "id": "rodeo-hills",
@@ -3904,7 +4051,8 @@
     "coordinates": {
       "lat": 45.30746,
       "lng": -123.06837
-    }
+    },
+    "place": "Newberg, OR"
   },
   {
     "id": "human-cellars",
@@ -3970,6 +4118,10 @@
       {
         "title": "Arabilis Wines collection, 2023 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/arabilis-wines-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -3980,7 +4132,13 @@
         "title": "Arabilis Wines collection",
         "date": "2023-08-03"
       }
-    ]
+    ],
+    "place": "Amity, OR",
+    "address": "203 5th St, Amity, OR 97101",
+    "coordinates": {
+      "lat": 45.11521,
+      "lng": -123.20782
+    }
   },
   {
     "id": "audeant",
@@ -4107,9 +4265,18 @@
       {
         "title": "Walnut Ridge La Petite Fete (Cellar 503)",
         "url": "https://www.cellar503.com/wines/la-petite-fete/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "97439 Turnbow Ln, Junction City, OR 97405",
+    "coordinates": {
+      "lat": 44.23738,
+      "lng": -123.34516
+    }
   },
   {
     "id": "antiquum-farm",
@@ -4152,7 +4319,7 @@
       "Approachment Wine Co."
     ],
     "summary": "Small Willamette Valley label started by the married winemakers Jess and Paden West, known for Chardonnay, Gamay and traditional-method sparkling; it operates out of Benza Vineyard.",
-    "place": "McMinnville, OR",
+    "place": "Hillsboro, OR",
     "sources": [
       {
         "title": "Weinnotes newsletter, 6 April 2024",
@@ -4169,6 +4336,10 @@
       {
         "title": "Approachment Wine collection, 2022 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/approachment-wine-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": false,
@@ -4178,7 +4349,12 @@
         "title": "Approachment Wine collection",
         "date": "2022-06-21"
       }
-    ]
+    ],
+    "address": "16860 SW Pinot Place, Hillsboro, OR 97123",
+    "coordinates": {
+      "lat": 45.39793,
+      "lng": -122.98945
+    }
   },
   {
     "id": "benza-vineyard",
@@ -4205,6 +4381,10 @@
       {
         "title": "Benza Vineyards collection, 2023 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/benza-vineyards-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -4215,7 +4395,13 @@
         "title": "Benza Vineyards collection",
         "date": "2023-06-05"
       }
-    ]
+    ],
+    "place": "Hillsboro, OR",
+    "address": "16740 SW Pinot Pl, Hillsboro, OR 97123",
+    "coordinates": {
+      "lat": 45.39849,
+      "lng": -122.98918
+    }
   },
   {
     "id": "lucidwild",
@@ -4247,6 +4433,10 @@
       {
         "title": "Lucidwild Estate collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/lucidwild-estate-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -4257,7 +4447,12 @@
         "title": "Lucidwild Estate collection",
         "date": "2025-08-19"
       }
-    ]
+    ],
+    "address": "9380 Northeast Worden Hill Road, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.28313,
+      "lng": -123.05539
+    }
   },
   {
     "id": "red-electric",
@@ -4853,6 +5048,10 @@
       {
         "title": "Iterum Wines collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/iterum-wines-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -4863,7 +5062,12 @@
         "title": "Iterum Wines collection",
         "date": "2025-07-14"
       }
-    ]
+    ],
+    "address": "5917 Orchard Heights Rd NW, Salem, OR 97304",
+    "coordinates": {
+      "lat": 44.97485,
+      "lng": -123.15119
+    }
   },
   {
     "id": "sun-break-wines",
@@ -5085,6 +5289,10 @@
       {
         "title": "R. Stuart and Co. Winery collection (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/r-stuart-co-winery-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": false,
@@ -5093,7 +5301,12 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/r-stuart-co-winery-collection/",
         "title": "R. Stuart and Co. Winery collection"
       }
-    ]
+    ],
+    "address": "528 NE 3rd Street, McMinnville, OR 97128",
+    "coordinates": {
+      "lat": 45.20996,
+      "lng": -123.19381
+    }
   },
   {
     "id": "david-paige-wines",
@@ -5255,6 +5468,10 @@
       {
         "title": "Lundeen Wines collection, 2022 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/lundeen-wines-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -5265,7 +5482,12 @@
         "title": "Lundeen Wines collection",
         "date": "2022-05-12"
       }
-    ]
+    ],
+    "address": "475 NE 17th St., McMinnville, OR 97128",
+    "coordinates": {
+      "lat": 45.22021,
+      "lng": -123.19487
+    }
   },
   {
     "id": "prive-vineyard",
@@ -5297,6 +5519,10 @@
       {
         "title": "Privé Vineyard collection, 2022 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/prive-vineyard-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": false,
@@ -5309,7 +5535,12 @@
         "title": "Privé Vineyard collection",
         "date": "2022-01-27"
       }
-    ]
+    ],
+    "address": "28155 NE Bell Road, Newberg, OR 97123",
+    "coordinates": {
+      "lat": 45.33285,
+      "lng": -122.94768
+    }
   },
   {
     "id": "amaterra",
@@ -5619,6 +5850,10 @@
       {
         "title": "Dion Vineyards collection, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/dion-vineyards-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -5629,7 +5864,12 @@
         "title": "Dion Vineyards collection",
         "date": "2019-11-15"
       }
-    ]
+    ],
+    "address": "33155 Riedweg Road, Cornelius, OR 97113",
+    "coordinates": {
+      "lat": 45.45875,
+      "lng": -123.02035
+    }
   },
   {
     "id": "siltstone-wines",
@@ -5726,6 +5966,10 @@
       {
         "title": "Trisaetum Wines collection, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/trisaetum-wines-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -5740,7 +5984,12 @@
         "title": "Trisaetum Wines collection",
         "date": "2020-02-24"
       }
-    ]
+    ],
+    "address": "18401 Ribbon Ridge Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.35012,
+      "lng": -123.07707
+    }
   },
   {
     "id": "irvine-and-roberts-vineyards",
@@ -5766,6 +6015,10 @@
       {
         "title": "Irvine & Roberts Vineyards collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/rogue-valley/irvine-roberts-vineyards-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": false,
@@ -5775,7 +6028,13 @@
         "title": "Irvine & Roberts Vineyards collection",
         "date": "2026-03-16"
       }
-    ]
+    ],
+    "place": "Ashland, OR",
+    "address": "1614 Emigrant Creek Rd, Ashland, OR 97520",
+    "coordinates": {
+      "lat": 42.17584,
+      "lng": -122.62959
+    }
   },
   {
     "id": "white-rose-estate",
@@ -6023,10 +6282,19 @@
       {
         "title": "Weinnotes newsletter, 8 October 2022",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-68"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
-    "verifiedBy": "person"
+    "verifiedBy": "person",
+    "address": "19255 Hwy 99W, Dayton, OR 97114",
+    "coordinates": {
+      "lat": 45.25034,
+      "lng": -123.04213
+    }
   },
   {
     "id": "j-christopher-wines",
@@ -6606,6 +6874,10 @@
       {
         "title": "Bryn Mawr Vineyards collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/bryn-mawr-vineyards-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -6616,7 +6888,12 @@
         "title": "Bryn Mawr Vineyards collection",
         "date": "2026-08-19"
       }
-    ]
+    ],
+    "address": "5935 Bethel Heights Rd NW, Salem, OR 97304",
+    "coordinates": {
+      "lat": 45.04538,
+      "lng": -123.15601
+    }
   },
   {
     "id": "rain-dance-vineyards",
@@ -6726,10 +7003,20 @@
       {
         "title": "Bees, Birds and Pinot Take Center Stage at Winter's Hill Estate (Portland Monthly, sponsored)",
         "url": "https://www.pdxmonthly.com/articles/bees-birds-and-pinot-take-center-stage-at-winter-s-hill-estate-in-the-dundee-hills"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "place": "Dayton, OR",
+    "address": "6451 NE Hilltop Lane, Dayton, OR 97114",
+    "coordinates": {
+      "lat": 45.25718,
+      "lng": -123.07605
+    }
   },
   {
     "id": "guillen-family-wines",
@@ -7283,6 +7570,10 @@
       {
         "title": "FlâNeur Wines collection, 2022 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/flaneur-wines-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": false,
@@ -7293,7 +7584,12 @@
         "title": "FlâNeur Wines collection",
         "date": "2022-06-29"
       }
-    ]
+    ],
+    "address": "168 S Pine Street Carlton, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.29339,
+      "lng": -123.17687
+    }
   },
   {
     "id": "bonny-doon-vineyard",
@@ -7462,6 +7758,10 @@
       {
         "title": "Bjornson Vineyard collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/bjornson-vineyard-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -7473,7 +7773,13 @@
         "date": "2026-08-10"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "place": "Salem, OR",
+    "address": "3635 Bethel Heights Rd NW, Salem, OR 97304",
+    "coordinates": {
+      "lat": 45.06284,
+      "lng": -123.10891
+    }
   },
   {
     "id": "blizzard-wines",
@@ -8276,6 +8582,10 @@
       {
         "title": "Fairsing Vineyard collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/fairsing-vineyard-collection/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
       }
     ],
     "verified": true,
@@ -8287,7 +8597,12 @@
         "date": "2025-08-25"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "21455 NE Burkett Hill Rd, Yamhill, OR 97148",
+    "coordinates": {
+      "lat": 45.37272,
+      "lng": -123.12519
+    }
   },
   {
     "id": "rose-and-arrow-estate",
@@ -9910,5 +10225,393 @@
     "verified": true,
     "type": "winery",
     "verifiedBy": "jev"
+  },
+  {
+    "id": "capitello-wines",
+    "type": "winery",
+    "name": "Capitello Wines",
+    "summary": "Eugene winery started in 2003 by winemaker Ray Walsh, who began his career in New Zealand. It makes still wines and traditional-method sparkling wine given long ageing on the lees.",
+    "founded": 2003,
+    "place": "Eugene, OR",
+    "address": "540 Charnelton Street, Eugene, OR 97401",
+    "coordinates": {
+      "lat": 44.05388,
+      "lng": -123.09604
+    },
+    "sources": [
+      {
+        "title": "Our story (Capitello Wines)",
+        "url": "https://capitello.wine/our-story"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "banke-wines",
+    "type": "winery",
+    "name": "Banke Wines",
+    "summary": "McMinnville sparkling wine house whose Willamette Valley sparklers blend in reserve wine from past vintages and spend at least three years en tirage. Alex Nichols is its winemaker.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "Banke Wines",
+        "url": "https://www.bankewines.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "knudsen-vineyards-winery",
+    "type": "winery",
+    "name": "Knudsen Vineyards",
+    "summary": "The Knudsen family's winery in the Dundee Hills, making Pinot noir, Chardonnay and traditional-method sparkling wine from the family vineyard planted in 1971, long a source of fruit for Oregon sparkling wine.",
+    "place": "Dundee, OR",
+    "address": "9419 NE Worden Hill Rd., Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.28018,
+      "lng": -123.06338
+    },
+    "sources": [
+      {
+        "title": "Knudsen Vineyards",
+        "url": "https://knudsenvineyards.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "landmass-wines",
+    "type": "winery",
+    "name": "Landmass Wines",
+    "summary": "Portland winery led by two women, making sparkling wines from high-elevation sites and vineyards across Oregon. It says it is the only Oregon winery to make sparkling wine by all four methods itself.",
+    "place": "Portland, OR",
+    "address": "4727 NE Fremont St, Portland, OR 97213",
+    "coordinates": {
+      "lat": 45.54845,
+      "lng": -122.61441
+    },
+    "sources": [
+      {
+        "title": "Landmass Wines",
+        "url": "https://www.landmasswines.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "nysa-vineyard-winery",
+    "type": "winery",
+    "name": "Nysa Vineyard",
+    "summary": "Winery at Nysa Vineyard in the Dundee Hills, which releases its estate wines after long bottle ageing. Its sparkling wines, made by a father-and-daughter team from estate fruit, rest five to ten years en tirage.",
+    "place": "Dundee, OR",
+    "address": "18655 NE Trunk Rd, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.26457,
+      "lng": -123.04658
+    },
+    "sources": [
+      {
+        "title": "Nysa Vineyard",
+        "url": "https://www.nysavineyard.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "sivilli-wine-co",
+    "type": "winery",
+    "name": "Sivilli Wine Co.",
+    "aka": [
+      "Sivilli Wine Co"
+    ],
+    "summary": "One-person Willamette Valley winery making traditional-method sparkling wine from old vineyards. The wines spend a year in neutral barrels and three years en tirage, and are disgorged by hand with little or no dosage.",
+    "place": "Dundee, OR",
+    "address": "8200 NE Worden Hill Rd, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.281,
+      "lng": -123.02744
+    },
+    "sources": [
+      {
+        "title": "A Willamette sparkling wine project (Sivilli Wine Co.)",
+        "url": "https://www.sivilliwine.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "perlee",
+    "type": "winery",
+    "name": "Perlée",
+    "aka": [
+      "Perlée Vineyard"
+    ],
+    "summary": "Dundee sparkling wine producer making low-intervention traditional-method wines, fermented with native yeast and neither fined nor filtered.",
+    "place": "Dundee, OR",
+    "address": "11050 NE Worden Hill Rd, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.29627,
+      "lng": -123.06194
+    },
+    "sources": [
+      {
+        "title": "Perlée",
+        "url": "https://www.perleevineyards.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "varnum-vintners",
+    "type": "winery",
+    "name": "Varnum Vintners",
+    "summary": "Small winery owned and run by Taralyn and Cyler Varnum, making small lots of wine in new styles, including hand-disgorged sparkling wine. Its tasting room is on Eola Hills Road near Amity.",
+    "place": "Amity, OR",
+    "address": "9500 SE Eola Hills Rd, Amity, OR 97101",
+    "coordinates": {
+      "lat": 45.10722,
+      "lng": -123.13938
+    },
+    "sources": [
+      {
+        "title": "Varnum Vintners",
+        "url": "https://www.varnumvintners.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "concinnitas-farm",
+    "type": "winery",
+    "name": "Concinnitas Farm",
+    "aka": [
+      "Concinnitas Fermentations"
+    ],
+    "summary": "Certified organic farm near Yamhill that grows grapes alongside fruit trees, hops and grains. It makes sparkling wines, among them a 2021 Blanc de Blancs and Blanc de Noirs, with native yeasts and no filtration, in small quantities sold mainly by allocation.",
+    "place": "Yamhill, OR",
+    "address": "22701 NW Russell Creek Rd, Yamhill, OR 97148",
+    "coordinates": {
+      "lat": 45.38169,
+      "lng": -123.17348
+    },
+    "sources": [
+      {
+        "title": "Concinnitas Farm",
+        "url": "https://www.concinnitasfarm.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "winderlea",
+    "type": "winery",
+    "name": "Winderlea",
+    "aka": [
+      "Winderlea Vineyard & Winery"
+    ],
+    "summary": "Biodynamic Dundee Hills estate that has made traditional-method sparkling wines, a blanc de blancs, a brut rosé and a brut, since its 2016 vintage.",
+    "place": "Dundee, OR",
+    "address": "8905 NE Worden Hill Road, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27906,
+      "lng": -123.04307
+    },
+    "sources": [
+      {
+        "title": "Winderlea",
+        "url": "https://www.winderlea.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "balsall-creek",
+    "type": "winery",
+    "name": "Balsall Creek",
+    "summary": "Family winery near Newberg run by two generations of the Owens family. Its wines are estate grown and organically farmed in the Chehalem Mountains, including traditional-method sparkling from Pinot Meunier, Pinot noir and Chardonnay.",
+    "place": "Newberg, OR",
+    "address": "18430 NE Calkins Lane, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.34977,
+      "lng": -123.04828
+    },
+    "sources": [
+      {
+        "title": "Balsall Creek",
+        "url": "https://balsallcreek.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "goodfellow-family-cellars",
+    "type": "winery",
+    "name": "Goodfellow Family Cellars",
+    "summary": "Winemaker-owned Willamette Valley winery founded in 2002, making about 4,000 cases a year from old vines on distinctive sites. Its sparkling wines, inspired by grower Champagne, are mostly multi-vintage cuvées.",
+    "founded": 2002,
+    "place": "McMinnville, OR",
+    "address": "888 NE 8th, McMinnville, OR 97128",
+    "coordinates": {
+      "lat": 45.213,
+      "lng": -123.19021
+    },
+    "sources": [
+      {
+        "title": "About (Goodfellow Family Cellars)",
+        "url": "https://goodfellowfamilycellars.com/about"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "kramer-vineyards",
+    "type": "winery",
+    "name": "Kramer Vineyards",
+    "summary": "Family estate winery in the Yamhill-Carlton AVA near Gaston, planted in 1984 and now run by the second generation, Kim and Becky Kramer. It has made traditional-method sparkling wine for about twenty years.",
+    "founded": 1984,
+    "place": "Gaston, OR",
+    "address": "26830 NW Olson Rd, Gaston, OR 97119",
+    "coordinates": {
+      "lat": 45.41054,
+      "lng": -123.16885
+    },
+    "sources": [
+      {
+        "title": "Kramer Vineyards",
+        "url": "https://www.kramervineyards.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "mellen-meyer",
+    "type": "winery",
+    "name": "Mellen Meyer",
+    "summary": "Sparkling wine label Bobby Rowett started in 2013 with 70 cases made at Goodfellow Family Cellars, where he was assistant winemaker. It now makes about 1,000 cases a year of Willamette Valley sparkling wine at Winter's Hill Estate in the Dundee Hills.",
+    "founded": 2013,
+    "sources": [
+      {
+        "title": "Mellen Meyer Sparkling Wine",
+        "url": "https://www.mellenmeyer.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "durant-vineyards",
+    "type": "winery",
+    "name": "Durant Vineyards",
+    "aka": [
+      "Durant"
+    ],
+    "summary": "The Durant family's winery in the Dundee Hills, where the family has farmed since 1973. It makes Pinot noir, Chardonnay, Sauvignon blanc and traditional-method sparkling wine from its estate vineyards, and olive oil from its own mill.",
+    "place": "Dayton, OR",
+    "address": "5430 NE Breyman Orchards Rd., Dayton, OR 97114",
+    "coordinates": {
+      "lat": 45.25601,
+      "lng": -123.05654
+    },
+    "sources": [
+      {
+        "title": "Durant Vineyards",
+        "url": "https://durantoregon.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "six-peaks-winery",
+    "type": "winery",
+    "name": "Six Peaks Winery",
+    "aka": [
+      "Six Peaks Wine"
+    ],
+    "summary": "Albin family winery on Bald Peak, named for its view of Cascade peaks and run by John and Lynn Albin and their son Andrew. The family bought the site in 1980 to make sparkling wine and planted its first vineyard in 1981.",
+    "place": "Hillsboro, OR",
+    "address": "19495 NE Vista Hill Dr, Hillsboro, OR 97123",
+    "coordinates": {
+      "lat": 45.39397,
+      "lng": -123.03702
+    },
+    "sources": [
+      {
+        "title": "Six Peaks Wine",
+        "url": "https://sixpeakswine.com/"
+      },
+      {
+        "title": "Method Oregon Trail: winery map (methodoregon.com)",
+        "url": "https://methodoregon.com/trail"
+      }
+    ],
+    "verified": false
   }
 ]
