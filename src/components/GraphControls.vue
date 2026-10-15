@@ -20,9 +20,11 @@ const avaSummary = computed(() => {
 // Hidden types (see HIDDEN_TYPES) get no checkbox
 const toggleableTypes = (Object.keys(state.nodeTypes) as ToggleableNodeType[]).filter((type) => !HIDDEN_TYPES.has(type))
 
-// Which version this is, for readers reporting a problem: "v1.00 · Oct 15, 2026". The exact
-// commit shows on hover
-const buildCommit = `Build ${__BUILD_COMMIT__}`
+// Which version this is, for readers reporting a problem: "v1.06 · Oct 15, 2026", then
+// "Release notes": the commit the site was built from, whose message describes the release
+const releaseNotes = /^[0-9a-f]{7,40}$/.test(__BUILD_COMMIT__)
+  ? `https://github.com/arringtonm/oregon-wine-graph/commit/${__BUILD_COMMIT__}`
+  : undefined
 const build = `${__SITE_VERSION__} · ${new Date(__BUILD_DATE__).toLocaleDateString('en-US', {
   month: 'short',
   day: 'numeric',
@@ -152,7 +154,14 @@ function onDrawerKey(event: KeyboardEvent) {
       <button v-if="compact" type="button" class="controls__reset" aria-describedby="reset-description" @click="resetGraph">
         Reset graph
       </button>
-      <p class="controls__build" :title="buildCommit">{{ build }}</p>
+      <p class="controls__build">
+        {{ build }}<template v-if="releaseNotes">
+          ·
+          <a :href="releaseNotes" target="_blank" rel="noopener">
+            Release notes<span class="visually-hidden"> (opens in a new tab)</span>
+          </a>
+        </template>
+      </p>
     </div>
   </aside>
 </template>
@@ -352,6 +361,15 @@ legend {
   margin: 0;
   color: var(--text-secondary);
   font-size: 0.75rem;
+}
+
+.controls__build a {
+  color: inherit;
+  text-underline-offset: 2px;
+}
+
+.controls__build a:hover {
+  color: var(--text-primary);
 }
 
 .controls__reset {

@@ -98,7 +98,7 @@ Colours, radii and shadows are CSS custom properties in `src/style.css`, defined
 
 ## Versions
 
-The site shows its version and build date under the filters: "v1.00 · Oct 15, 2026". The version comes from `package.json` (major.minor; the patch number is unused) and is formatted by `tools/siteVersion.ts`. Hovering it shows the exact commit, and every flag records both, as "v1.00 (4fa3696)", so a report can be matched to exactly what the reader saw.
+The site shows its version and build date under the filters: "v1.00 · Oct 15, 2026". The version comes from `package.json` (major.minor; the patch number is unused) and is formatted by `tools/siteVersion.ts`. Its "Release notes" link opens the commit the site was built from on GitHub, whose message describes the release, and every flag records both, as "v1.00 (4fa3696)", so a report can be matched to exactly what the reader saw.
 
 **A minor release (v1.01, v1.02, …)** is any push to `main` that changes what readers see or can do:
 

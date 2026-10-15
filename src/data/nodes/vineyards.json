@@ -1912,11 +1912,22 @@
       {
         "title": "Sealionne Wines collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/sealionne-wines-collection/"
+      },
+      {
+        "title": "Our Vineyards (Privé Vineyard)",
+        "url": "https://privevineyard.com/our-vineyards"
+      },
+      {
+        "title": "Westwind Vineyard / Privé Vineyard & Winery (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/westwind-vineyard-prive-vineyard-winery/"
       }
     ],
     "verified": true,
     "type": "vineyard",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "aka": [
+      "Westwind Vineyard"
+    ]
   },
   {
     "id": "weber-vineyard",
@@ -1956,5 +1967,503 @@
     "verified": true,
     "type": "vineyard",
     "verifiedBy": "jev"
+  },
+  {
+    "id": "looney-vineyard",
+    "name": "Looney Vineyard",
+    "summary": "Seven-acre estate vineyard on Ribbon Ridge planted by Ed and Darlene Looney of Aramenta Cellars.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Aramenta Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/959"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "bramble-hill-vineyard",
+    "name": "Bramble Hill Vineyard",
+    "summary": "Pinot Noir vineyard on Ribbon Ridge near Newberg, not open to visitors, whose fruit goes into a vineyard-designated Penner-Ash Pinot Noir.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Bramble Hill Vineyard (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/bramble-hill-vineyard/"
+      },
+      {
+        "title": "Women of the Willamette Valley: Pioneering the Future (Scout Magazine)",
+        "url": "https://scoutmagazine.ca/2019/10/01/women-of-the-willamette-valley-pioneering-the-future/"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard"
+  },
+  {
+    "id": "halliday-hill-vineyard",
+    "name": "Halliday Hill Vineyard",
+    "aka": [
+      "Halliday Hill"
+    ],
+    "summary": "Certified biodynamic Pinot Noir vineyard of about 1.5 acres on Ribbon Ridge, owned by Jim and Karen Halliday and farmed by Doug Tunnell of Brick House Vineyards; it calls itself the smallest commercial vineyard in the Willamette Valley.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Halliday Hill (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/halliday-hill/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "planted": 2005,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "le-pre-du-col-vineyard",
+    "name": "Le Pré du Col Vineyard",
+    "aka": [
+      "Le Pre du Col Vineyard",
+      "Le Pré Du Col"
+    ],
+    "summary": "Sixteen-acre Pinot Noir and Chardonnay vineyard on Ribbon Ridge planted by the Hill family from 2006 to 2011 and farmed biodynamically by Bergström Wines since 2008.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Le Pré Du Col Vineyard (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/le-pre-du-col-vineyard/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "planted": 2006,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "meyerhofer-vineyard",
+    "name": "Meyerhofer Vineyard",
+    "aka": [
+      "Meyerhofer Vineyards"
+    ],
+    "summary": "Three-acre Pinot Noir vineyard on the south end of Ribbon Ridge, planted in 2014 and leased to and farmed by neighboring Domaine Divio.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Meyerhofer Vineyards (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/meyerhofer-vineyards/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "planted": 2014,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "belle-colline-vineyard",
+    "name": "Belle Colline Vineyard",
+    "summary": "Organically farmed Pinot noir and Chardonnay vineyard in the Chehalem Mountains, bought in 2016 by Danell and Kipp Myers as the estate of Anacréon Winery.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Our Story (Anacréon Winery)",
+        "url": "https://www.anacreonwinery.com/about"
+      },
+      {
+        "title": "Anacréon Winery (home page)",
+        "url": "https://www.anacreonwinery.com/"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard"
+  },
+  {
+    "id": "battle-creek-vineyard",
+    "name": "Battle Creek Vineyard",
+    "summary": "Pinot noir vineyard of about 110 acres on a south-facing slope near Turner, southeast of Salem, planted in 1998 in small blocks on volcanic basalt soil; the namesake source for Battle Creek Cellars.",
+    "place": "Turner, OR",
+    "sources": [
+      {
+        "title": "Oregon (Battle Creek Cellars)",
+        "url": "https://www.battlecreekcellars.com/oregon"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "planted": 1998,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "warriors-rest-vineyard",
+    "name": "Warrior's Rest Vineyard",
+    "summary": "Bellingar family estate vineyard on North Valley Road west of Newberg, on a farm settled in 1918 by Italian immigrant Louis Dare. The first phase of the current planting went in in 2017, with Chardonnay and Pinot noir.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Vineyard (Bellingar Estates)",
+        "url": "https://www.bellingarestates.com/vineyard/"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard",
+    "planted": 2017
+  },
+  {
+    "id": "brigadoon-vineyards",
+    "name": "Brigadoon Vineyards",
+    "summary": "The Shown family's 66-acre organically farmed vineyard in the Lower Long Tom AVA northwest of Eugene, on a tributary of Ferguson Creek, home to Brigadoon Wine Co.",
+    "place": "Junction City, OR",
+    "sources": [
+      {
+        "title": "Our Vineyards (Brigadoon Wine Co)",
+        "url": "https://www.brigadoonwineco.com/vineyard.html"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "tukwilla-vineyard",
+    "name": "Tukwilla Vineyard",
+    "aka": [
+      "Original Tukwilla Vineyard",
+      "Tuckwilla Vineyard"
+    ],
+    "summary": "Estate vineyard of Burton Bittman Wines in the middle of the Dundee Hills, begun in 1990 with seven acres of Pinot noir and since grown to about 19 acres including Pinot gris and Pinot blanc.",
+    "sources": [
+      {
+        "title": "Vines (Burton Bittman Wines)",
+        "url": "https://burtonbittmanwines.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "planted": 1990,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "geary-claim-vineyard",
+    "name": "Geary Claim Vineyard",
+    "summary": "Dundee Hills estate vineyard of Burton Bittman Wines, next to Tukwilla Vineyard on part of an early Oregon land claim that once grew fruit and walnuts. Pinot noir and Chardonnay were first planted there in 2017.",
+    "sources": [
+      {
+        "title": "Vines (Burton Bittman Wines)",
+        "url": "https://burtonbittmanwines.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "planted": 2017,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "wade-vineyard",
+    "name": "Wade Vineyard",
+    "summary": "Small high-elevation vineyard in the Dundee Hills established by Lance Wade, now farmed by Burton Bittman Wines mainly for late-ripening Pinot gris.",
+    "sources": [
+      {
+        "title": "Vines (Burton Bittman Wines)",
+        "url": "https://burtonbittmanwines.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "old-wagon-road-vineyard",
+    "name": "Old Wagon Road Vineyard",
+    "summary": "Estate vineyard of Chris James Cellars in the Coast Range foothills west of Carlton, first planted in 2013 and now about 25 acres of 16 varieties. Some of its fruit is sold to other wineries.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "Old Wagon Road Vineyard (Chris James Cellars)",
+        "url": "https://chrisjamescellars.com/old-wagon-road-vineyard/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "planted": 2013,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "patton-valley-vineyard",
+    "name": "Patton Valley Vineyard",
+    "summary": "Gaston vineyard that Failla describes as its first Oregon estate vineyard and the home of its Oregon winery and tasting room.",
+    "place": "Gaston, OR",
+    "sources": [
+      {
+        "title": "Vineyards (Failla Oregon)",
+        "url": "https://www.faillawinesoregon.com/vineyards"
+      },
+      {
+        "title": "About (Failla Oregon)",
+        "url": "https://www.faillawinesoregon.com/about"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard"
+  },
+  {
+    "id": "haakon-lenai-vineyard",
+    "name": "Haakon/Lenai Vineyard",
+    "summary": "High-slope Dundee Hills vineyard that Cody and Marque Wright acquired in 2018, the estate of their Haakon/Lenai wines.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Story (Haakon/Lenai)",
+        "url": "https://www.haakonlenai.com/story"
+      },
+      {
+        "title": "Visit (Haakon/Lenai)",
+        "url": "https://www.haakonlenai.com/visit"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "pelos-sandberg-vineyard",
+    "name": "Pelos Sandberg Vineyard",
+    "summary": "Dry-farmed estate vineyard of iOTA Cellars in the Eola-Amity Hills, first planted in 2002 at 300 to 500 feet.",
+    "place": "Amity, OR",
+    "sources": [
+      {
+        "title": "iOTA Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1032/index.html"
+      },
+      {
+        "title": "iOTA Cellars",
+        "url": "https://www.iotacellars.com/"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard",
+    "planted": 2002
+  },
+  {
+    "id": "finnigan-hill-vineyard",
+    "name": "Finnigan Hill Vineyard",
+    "aka": [
+      "Finnigan Hill Vineyards"
+    ],
+    "summary": "Higher-elevation, organically farmed Pinot noir site in the Chehalem Mountains that supplies other producers' Willamette Valley blends.",
+    "sources": [
+      {
+        "title": "Bellande Pinot Noir Willamette Valley 2025 (Bowler Wine)",
+        "url": "https://www.bowlerwine.com/wine-or-spirit/pinot-noir-willamette-valley/2025"
+      },
+      {
+        "title": "Finnigan Hill Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/finnigan-hill-vineyards/2289/"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard"
+  },
+  {
+    "id": "inguz-row",
+    "name": "Inguz Row",
+    "aka": [
+      "Inguz Row Vineyard & Farm"
+    ],
+    "summary": "Five-acre vineyard and farm near 900 feet on Chehalem Mountain, planted in 2012 and bought in 2020 by Mark and Charla Cain, who also grow lavender, olives and other crops. A first small release of their own Pinot noir and Chardonnay was announced as coming soon.",
+    "place": "Hillsboro, OR",
+    "sources": [
+      {
+        "title": "Land (Inguz Row)",
+        "url": "https://www.inguzrow.com/land"
+      },
+      {
+        "title": "Story (Inguz Row)",
+        "url": "https://www.inguzrow.com/story"
+      },
+      {
+        "title": "Inguz Row Vineyard & Farm (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/inguz-row-vineyard-%26-farm/1767/"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard",
+    "planted": 2012
+  },
+  {
+    "id": "alchemy-vineyard",
+    "name": "Alchemy Vineyard",
+    "summary": "Vineyard behind K & M Winery’s single-vineyard Pinot Noir, which carries the Chehalem Mountains appellation.",
+    "sources": [
+      {
+        "title": "K & M Winery Réserve Alchemy Vineyard Pinot Noir 2012 (Delectable)",
+        "url": "https://delectable.com/wine/k-and-m-winery/reserve-alchemy-vineyard-pinot-noir/2012"
+      },
+      {
+        "title": "K&M Wines, Alchemy Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/k%26m-wines-alchemy-vineyard/78/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "aegrina-vineyard",
+    "name": "Aegrina Vineyard",
+    "summary": "Vineyard on a southwest-facing slope near McMinnville, in the McMinnville AVA, farmed since 2007. It supplies La Biblioteca and North Valley Vineyards.",
+    "sources": [
+      {
+        "title": "Our Vineyards (La Biblioteca Wine)",
+        "url": "https://labibliotecawine.com/our-vineyards/"
+      },
+      {
+        "title": "About (North Valley Vineyards)",
+        "url": "https://www.northvalleyvineyards.com/about"
+      },
+      {
+        "title": "Soter Vineyards Announces Sale of North Valley Brand (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2021/05/05/soter-vineyards-announces-sale-of-north-valley-brand"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard",
+    "planted": 2007
+  },
+  {
+    "id": "north-valley-vineyard",
+    "name": "North Valley Vineyard",
+    "summary": "Ten-acre Yamhill-Carlton vineyard planted in 2007, an estate vineyard for both La Biblioteca and North Valley Vineyards.",
+    "sources": [
+      {
+        "title": "Our Vineyards (La Biblioteca Wine)",
+        "url": "https://labibliotecawine.com/our-vineyards/"
+      },
+      {
+        "title": "About (North Valley Vineyards)",
+        "url": "https://www.northvalleyvineyards.com/about"
+      },
+      {
+        "title": "Soter Vineyards Announces Sale of North Valley Brand (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2021/05/05/soter-vineyards-announces-sale-of-north-valley-brand"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard",
+    "planted": 2007
+  },
+  {
+    "id": "lachini-estate-vineyard",
+    "name": "Lachini Estate Vineyard",
+    "summary": "45-acre biodynamically farmed estate of Lachini Vineyards on the southeastern edge of the Chehalem Mountains AVA, mostly Pinot Noir with some Chardonnay; the first five acres went in in 1999.",
+    "sources": [
+      {
+        "title": "Place (Lachini Vineyards)",
+        "url": "https://www.lachinivineyards.com/place"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "planted": 1999,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "monksgate-vineyard",
+    "name": "MonksGate Vineyard",
+    "summary": "20-acre Yamhill-Carlton vineyard of the Moore family beside a Trappist abbey, planted from 2000 to 2007, which supplies the MonksGate label and contracting wineries.",
+    "sources": [
+      {
+        "title": "Our Story (MonksGate)",
+        "url": "https://www.monksgate.com/our-story"
+      },
+      {
+        "title": "MonksGate",
+        "url": "https://www.monksgate.com/"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard",
+    "planted": 2000
+  },
+  {
+    "id": "tidalstar-vineyard",
+    "name": "Tidalstar Vineyard",
+    "summary": "30-acre vineyard on the western edge of the Yamhill-Carlton AVA, planted in 1999 and bought by Montinore Estate in 2016, which converted it to biodynamic farming.",
+    "sources": [
+      {
+        "title": "Vineyards (Montinore Estate)",
+        "url": "https://montinore.com/vineyards"
+      },
+      {
+        "title": "Landlines Estates (Montinore Estate)",
+        "url": "https://montinore.com/landlines-estates"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard",
+    "planted": 1999
+  },
+  {
+    "id": "laughlin-road-ranch",
+    "name": "Laughlin Road Ranch",
+    "summary": "Farm in northeastern Yamhill-Carlton that Montinore Estate bought in 2019 and planted to vines; its first harvest was in 2023.",
+    "sources": [
+      {
+        "title": "Vineyards (Montinore Estate)",
+        "url": "https://montinore.com/vineyards"
+      },
+      {
+        "title": "About Us (Montinore Estate)",
+        "url": "https://montinore.com/about-us"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "tuscowallame-vineyard",
+    "name": "Tuscowallame Vineyard",
+    "summary": "Raptor Ridge Winery's estate vineyard in the Chehalem Mountains; its name is glossed as a native word for where owls live.",
+    "sources": [
+      {
+        "title": "Raptor Ridge Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/641/index.html"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "redhawk-vineyard",
+    "name": "Redhawk Vineyard",
+    "summary": "23-acre estate vineyard of RH Wines in the Eola-Amity Hills, west of Salem.",
+    "sources": [
+      {
+        "title": "RH Estate Wines at Redhawk Vineyard (Eola-Amity Hills Winegrowers Association)",
+        "url": "https://eolaamityhills.com/portfolio/rh-estate-wines-at-redhawk-vineyard/"
+      },
+      {
+        "title": "RH Wines",
+        "url": "https://www.rhestatewines.com/"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "roots-estate-vineyard",
+    "name": "Roots Estate Vineyard",
+    "summary": "Estate vineyard of Roots Wine Co. in the Yamhill-Carlton AVA, established in 1999 and 2000.",
+    "sources": [
+      {
+        "title": "Vines (Roots Wine Co.)",
+        "url": "https://roots.wine/vineyards"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard",
+    "planted": 1999
   }
 ]

@@ -32931,5 +32931,3281 @@
     ],
     "verified": true,
     "verifiedBy": "person"
+  },
+  {
+    "id": "balsall-creek--member-of--willamette-valley-wineries-association",
+    "source": "balsall-creek",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Balsall Creek (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/balsall-creek/2672/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kramer-vineyards--member-of--willamette-valley-wineries-association",
+    "source": "kramer-vineyards",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Kramer Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/kramer-vineyards/80/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "six-peaks-winery--member-of--willamette-valley-wineries-association",
+    "source": "six-peaks-winery",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Six Peaks Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/six-peaks/257/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "winderlea--member-of--willamette-valley-wineries-association",
+    "source": "winderlea",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Winderlea (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/winderlea-vineyard-and-winery/209/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "aramenta-cellars--draws-from--ribbon-ridge",
+    "source": "aramenta-cellars",
+    "target": "ribbon-ridge",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Aramenta Cellars (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/aramenta-cellars/"
+      },
+      {
+        "title": "Aramenta Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/959"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "aramenta-cellars--owns--looney-vineyard",
+    "source": "aramenta-cellars",
+    "target": "looney-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Aramenta Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/959"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "looney-vineyard--located-in--ribbon-ridge",
+    "source": "looney-vineyard",
+    "target": "ribbon-ridge",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Aramenta Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/959"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "ayres-vineyard--draws-from--ribbon-ridge",
+    "source": "ayres-vineyard",
+    "target": "ribbon-ridge",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Ayres Vineyard & Winery (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/ayres-vineyard-winery/"
+      },
+      {
+        "title": "Ayres Vineyard",
+        "url": "https://ayresvineyard.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "bramble-hill-vineyard--located-in--ribbon-ridge",
+    "source": "bramble-hill-vineyard",
+    "target": "ribbon-ridge",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Bramble Hill Vineyard (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/bramble-hill-vineyard/"
+      },
+      {
+        "title": "Women of the Willamette Valley: Pioneering the Future (Scout Magazine)",
+        "url": "https://scoutmagazine.ca/2019/10/01/women-of-the-willamette-valley-pioneering-the-future/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "penner-ash-wine-cellars--sources-from--bramble-hill-vineyard",
+    "source": "penner-ash-wine-cellars",
+    "target": "bramble-hill-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Women of the Willamette Valley: Pioneering the Future (Scout Magazine)",
+        "url": "https://scoutmagazine.ca/2019/10/01/women-of-the-willamette-valley-pioneering-the-future/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "eminent-domaine--draws-from--ribbon-ridge",
+    "source": "eminent-domaine",
+    "target": "ribbon-ridge",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Eminent Domaine (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/eminent-domaine/"
+      },
+      {
+        "title": "Eminent Domaine (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1747"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "drew-voit--winemaker--eminent-domaine",
+    "source": "drew-voit",
+    "target": "eminent-domaine",
+    "type": "winemaker",
+    "startYear": 2012,
+    "sources": [
+      {
+        "title": "Eminent Domaine (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1747"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "halliday-hill-vineyard--located-in--ribbon-ridge",
+    "source": "halliday-hill-vineyard",
+    "target": "ribbon-ridge",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Halliday Hill (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/halliday-hill/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "doug-tunnell--worked-at--halliday-hill-vineyard",
+    "source": "doug-tunnell",
+    "target": "halliday-hill-vineyard",
+    "type": "worked_at",
+    "role": "farms the vineyard",
+    "sources": [
+      {
+        "title": "Halliday Hill (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/halliday-hill/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "le-pre-du-col-vineyard--located-in--ribbon-ridge",
+    "source": "le-pre-du-col-vineyard",
+    "target": "ribbon-ridge",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Le Pré Du Col Vineyard (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/le-pre-du-col-vineyard/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "bergstrom-wines--sources-from--le-pre-du-col-vineyard",
+    "source": "bergstrom-wines",
+    "target": "le-pre-du-col-vineyard",
+    "type": "sources_from",
+    "role": "manages and farms the vineyard",
+    "startYear": 2008,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Le Pré Du Col Vineyard (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/le-pre-du-col-vineyard/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "goodfellow-family-cellars--draws-from--ribbon-ridge",
+    "source": "goodfellow-family-cellars",
+    "target": "ribbon-ridge",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Vineyard Sources (Goodfellow Family Cellars)",
+        "url": "https://goodfellowfamilycellars.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "goodfellow-family-cellars--draws-from--dundee-hills",
+    "source": "goodfellow-family-cellars",
+    "target": "dundee-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Vineyard Sources (Goodfellow Family Cellars)",
+        "url": "https://goodfellowfamilycellars.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "goodfellow-family-cellars--draws-from--eola-amity-hills",
+    "source": "goodfellow-family-cellars",
+    "target": "eola-amity-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Vineyard Sources (Goodfellow Family Cellars)",
+        "url": "https://goodfellowfamilycellars.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "goodfellow-family-cellars--draws-from--yamhill-carlton",
+    "source": "goodfellow-family-cellars",
+    "target": "yamhill-carlton",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Vineyard Sources (Goodfellow Family Cellars)",
+        "url": "https://goodfellowfamilycellars.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "goodfellow-family-cellars--sources-from--durant-vineyard",
+    "source": "goodfellow-family-cellars",
+    "target": "durant-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Vineyard Sources (Goodfellow Family Cellars)",
+        "url": "https://goodfellowfamilycellars.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "goodfellow-family-cellars--sources-from--temperance-hill-vineyard",
+    "source": "goodfellow-family-cellars",
+    "target": "temperance-hill-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Vineyard Sources (Goodfellow Family Cellars)",
+        "url": "https://goodfellowfamilycellars.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "meyerhofer-vineyard--located-in--ribbon-ridge",
+    "source": "meyerhofer-vineyard",
+    "target": "ribbon-ridge",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Meyerhofer Vineyards (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/meyerhofer-vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "domaine-divio--sources-from--meyerhofer-vineyard",
+    "source": "domaine-divio",
+    "target": "meyerhofer-vineyard",
+    "type": "sources_from",
+    "role": "leases and manages the vineyard",
+    "sources": [
+      {
+        "title": "Meyerhofer Vineyards (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/meyerhofer-vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "omero-cellars--draws-from--ribbon-ridge",
+    "source": "omero-cellars",
+    "target": "ribbon-ridge",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Omero Cellars, Oregon wine country revisited part 6 (Wine Anorak)",
+        "url": "https://wineanorak.com/Oregon/Oregon_6_OmeroCellars.htm"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "chad-stock--winemaker--omero-cellars",
+    "source": "chad-stock",
+    "target": "omero-cellars",
+    "type": "winemaker",
+    "startYear": 2014,
+    "sources": [
+      {
+        "title": "Omero Cellars, Oregon wine country revisited part 6 (Wine Anorak)",
+        "url": "https://wineanorak.com/Oregon/Oregon_6_OmeroCellars.htm"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "styring-vineyards--draws-from--ribbon-ridge",
+    "source": "styring-vineyards",
+    "target": "ribbon-ridge",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Styring Vineyards (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/styring-vineyards/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "the-south-face-winery--draws-from--ribbon-ridge",
+    "source": "the-south-face-winery",
+    "target": "ribbon-ridge",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Place (The South Face Winery)",
+        "url": "https://www.thesouthfacewinery.com/place"
+      },
+      {
+        "title": "The South Face Winery (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/the-south-face-winery/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "drew-voit--winemaker--the-south-face-winery",
+    "source": "drew-voit",
+    "target": "the-south-face-winery",
+    "type": "winemaker",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "People (The South Face Winery)",
+        "url": "https://www.thesouthfacewinery.com/people"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "prive-vineyard--draws-from--ribbon-ridge",
+    "source": "prive-vineyard",
+    "target": "ribbon-ridge",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Our Vineyards (Privé Vineyard)",
+        "url": "https://privevineyard.com/our-vineyards"
+      },
+      {
+        "title": "Westwind Vineyard / Privé Vineyard & Winery (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/westwind-vineyard-prive-vineyard-winery/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "prive-vineyard--sources-from--west-wind-vineyard",
+    "source": "prive-vineyard",
+    "target": "west-wind-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Our Vineyards (Privé Vineyard)",
+        "url": "https://privevineyard.com/our-vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "west-wind-vineyard--located-in--ribbon-ridge",
+    "source": "west-wind-vineyard",
+    "target": "ribbon-ridge",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Our Vineyards (Privé Vineyard)",
+        "url": "https://privevineyard.com/our-vineyards"
+      },
+      {
+        "title": "Westwind Vineyard / Privé Vineyard & Winery (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/westwind-vineyard-prive-vineyard-winery/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "amalie-robert-estate--member-of--willamette-valley-wineries-association",
+    "source": "amalie-robert-estate",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Amalie Robert Estate (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/amalie-robert-estate/2286/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "amalie-robert-estate--draws-from--willamette-valley",
+    "source": "amalie-robert-estate",
+    "target": "willamette-valley",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Sub-AVA and Portfolio Update: Vinous Edition 2020 (Amalie Robert Estate)",
+        "url": "https://amalierobert.substack.com/p/sub-ava-and-portfolio-update-vinous-20-09-24"
+      },
+      {
+        "title": "Amalie Robert Estate (home page)",
+        "url": "https://www.amalierobert.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "anacreon-winery--member-of--willamette-valley-wineries-association",
+    "source": "anacreon-winery",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Anacréon Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/anacr%c3%a9on-winery/1462/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "anacreon-winery--owns--belle-colline-vineyard",
+    "source": "anacreon-winery",
+    "target": "belle-colline-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "startYear": 2016,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Our Story (Anacréon Winery)",
+        "url": "https://www.anacreonwinery.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "belle-colline-vineyard--located-in--chehalem-mountains",
+    "source": "belle-colline-vineyard",
+    "target": "chehalem-mountains",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Our Story (Anacréon Winery)",
+        "url": "https://www.anacreonwinery.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "anna-matzinger--winemaker--anacreon-winery",
+    "source": "anna-matzinger",
+    "target": "anacreon-winery",
+    "type": "winemaker",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Our Team (Anacréon Winery)",
+        "url": "https://www.anacreonwinery.com/team"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "anderson-family-vineyard--member-of--willamette-valley-wineries-association",
+    "source": "anderson-family-vineyard",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Anderson Family Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/anderson-family-vineyard/506/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "anderson-family-vineyard--draws-from--dundee-hills",
+    "source": "anderson-family-vineyard",
+    "target": "dundee-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Anderson Family Vineyard (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/661/index.html"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "ankeny-vineyard--member-of--willamette-valley-wineries-association",
+    "source": "ankeny-vineyard",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Ankeny Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/ankeny-vineyard/1512/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "drew-voit--winemaker--ankeny-vineyard",
+    "source": "drew-voit",
+    "target": "ankeny-vineyard",
+    "type": "winemaker",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "About (Ankeny Vineyard)",
+        "url": "https://ankenyvineyard.com/about/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "artist-block--member-of--willamette-valley-wineries-association",
+    "source": "artist-block",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Artist Block Wine (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/artist-block-wine/2664/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "artist-block--draws-from--willamette-valley",
+    "source": "artist-block",
+    "target": "willamette-valley",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "The Wine (Artist Block Wine)",
+        "url": "https://www.artistblockwine.com/pages/the-wine"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "artist-block--draws-from--eola-amity-hills",
+    "source": "artist-block",
+    "target": "eola-amity-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "The Wine (Artist Block Wine)",
+        "url": "https://www.artistblockwine.com/pages/the-wine"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "tracy-kendall--winemaker--artist-block",
+    "source": "tracy-kendall",
+    "target": "artist-block",
+    "type": "winemaker",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "The Wine (Artist Block Wine)",
+        "url": "https://www.artistblockwine.com/pages/the-wine"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "aubaine--member-of--willamette-valley-wineries-association",
+    "source": "aubaine",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "AtTheJoy (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/atthejoy/67/"
+      },
+      {
+        "title": "AtTheJoy (home page)",
+        "url": "https://atthejoy.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lytle-barnett--member-of--willamette-valley-wineries-association",
+    "source": "lytle-barnett",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "AtTheJoy (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/atthejoy/67/"
+      },
+      {
+        "title": "AtTheJoy (home page)",
+        "url": "https://atthejoy.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "august-cellars--member-of--willamette-valley-wineries-association",
+    "source": "august-cellars",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "August Cellars (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/august-cellars/522/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "forrest-schaad--worked-at--august-cellars",
+    "source": "forrest-schaad",
+    "target": "august-cellars",
+    "type": "worked_at",
+    "role": "assistant to the winery",
+    "startYear": 2024,
+    "sources": [
+      {
+        "title": "Our Story (August Cellars)",
+        "url": "https://www.augustcellars.com/our-story"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "aurora-vineyards--member-of--willamette-valley-wineries-association",
+    "source": "aurora-vineyards",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Aurora Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/aurora-vineyards/295/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "barking-dog--member-of--willamette-valley-wineries-association",
+    "source": "barking-dog",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Barking Dog (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/barking-dog/4926/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "barking-dog--draws-from--chehalem-mountains",
+    "source": "barking-dog",
+    "target": "chehalem-mountains",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "2024 Pinot Noir: Barking Dog Vineyard & Winery (Oregon Wine Board marketplace)",
+        "url": "https://industry.oregonwine.org/marketplace/2024-pinot-noir-2/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "battle-creek-cellars--member-of--willamette-valley-wineries-association",
+    "source": "battle-creek-cellars",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Battle Creek Cellars (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/battle-creek-cellars/5640/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "battle-creek-cellars--sources-from--battle-creek-vineyard",
+    "source": "battle-creek-cellars",
+    "target": "battle-creek-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Oregon (Battle Creek Cellars)",
+        "url": "https://www.battlecreekcellars.com/oregon"
+      },
+      {
+        "title": "Battle Creek Cellars (home page)",
+        "url": "https://www.battlecreekcellars.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "bellingar-estates--member-of--willamette-valley-wineries-association",
+    "source": "bellingar-estates",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Bellingar Estates (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/bellingar-estates/961/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bluebird-hill-cellars--member-of--willamette-valley-wineries-association",
+    "source": "bluebird-hill-cellars",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Bluebird Hill Cellars (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/bluebird-hill-cellars/970/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "brigadoon-wine-co--member-of--willamette-valley-wineries-association",
+    "source": "brigadoon-wine-co",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Brigadoon Wine Co (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/brigadoon-wine-co/1764/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "burton-bittman-wines--member-of--willamette-valley-wineries-association",
+    "source": "burton-bittman-wines",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Burton Bittman Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/burton-bittman-wines/4588/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "canas-feast-winery--member-of--willamette-valley-wineries-association",
+    "source": "canas-feast-winery",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Cana's Feast Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/cana%e2%80%99s-feast-winery/554/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chris-james-cellars--member-of--willamette-valley-wineries-association",
+    "source": "chris-james-cellars",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Chris James Cellars (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/chris-james-cellars/264/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "coeur-de-terre-vineyard--member-of--willamette-valley-wineries-association",
+    "source": "coeur-de-terre-vineyard",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Coeur de Terre Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/coeur-de-terre-vineyard/565/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "coleman-vineyard--member-of--willamette-valley-wineries-association",
+    "source": "coleman-vineyard",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Coleman Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/coleman-vineyard/566/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "crowley-wines--member-of--willamette-valley-wineries-association",
+    "source": "crowley-wines",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Crowley Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/crowley-wines/326/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "coria-estates--member-of--willamette-valley-wineries-association",
+    "source": "coria-estates",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Cória Estates (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/c%c3%b3ria-estates/5/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "bellingar-estates--owns--warriors-rest-vineyard",
+    "source": "bellingar-estates",
+    "target": "warriors-rest-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Vineyard (Bellingar Estates)",
+        "url": "https://www.bellingarestates.com/vineyard/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "brigadoon-wine-co--owns--brigadoon-vineyards",
+    "source": "brigadoon-wine-co",
+    "target": "brigadoon-vineyards",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Brigadoon Wine Co",
+        "url": "https://www.brigadoonwineco.com/"
+      },
+      {
+        "title": "Our Vineyards (Brigadoon Wine Co)",
+        "url": "https://www.brigadoonwineco.com/vineyard.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "burton-bittman-wines--owns--tukwilla-vineyard",
+    "source": "burton-bittman-wines",
+    "target": "tukwilla-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Vines (Burton Bittman Wines)",
+        "url": "https://burtonbittmanwines.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "tukwilla-vineyard--located-in--dundee-hills",
+    "source": "tukwilla-vineyard",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Vines (Burton Bittman Wines)",
+        "url": "https://burtonbittmanwines.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "burton-bittman-wines--owns--geary-claim-vineyard",
+    "source": "burton-bittman-wines",
+    "target": "geary-claim-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Vines (Burton Bittman Wines)",
+        "url": "https://burtonbittmanwines.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "geary-claim-vineyard--located-in--dundee-hills",
+    "source": "geary-claim-vineyard",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Vines (Burton Bittman Wines)",
+        "url": "https://burtonbittmanwines.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "burton-bittman-wines--owns--wade-vineyard",
+    "source": "burton-bittman-wines",
+    "target": "wade-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Vines (Burton Bittman Wines)",
+        "url": "https://burtonbittmanwines.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "wade-vineyard--located-in--dundee-hills",
+    "source": "wade-vineyard",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Vines (Burton Bittman Wines)",
+        "url": "https://burtonbittmanwines.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "burton-bittman-wines--draws-from--dundee-hills",
+    "source": "burton-bittman-wines",
+    "target": "dundee-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Vines (Burton Bittman Wines)",
+        "url": "https://burtonbittmanwines.com/vineyards"
+      },
+      {
+        "title": "Burton Bittman Wines",
+        "url": "https://burtonbittmanwines.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "chris-james-cellars--owns--old-wagon-road-vineyard",
+    "source": "chris-james-cellars",
+    "target": "old-wagon-road-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Old Wagon Road Vineyard (Chris James Cellars)",
+        "url": "https://chrisjamescellars.com/old-wagon-road-vineyard/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "old-wagon-road-vineyard--located-in--yamhill-carlton",
+    "source": "old-wagon-road-vineyard",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Old Wagon Road Vineyard (Chris James Cellars)",
+        "url": "https://chrisjamescellars.com/old-wagon-road-vineyard/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "chris-james-cellars--draws-from--yamhill-carlton",
+    "source": "chris-james-cellars",
+    "target": "yamhill-carlton",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Old Wagon Road Vineyard (Chris James Cellars)",
+        "url": "https://chrisjamescellars.com/old-wagon-road-vineyard/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "chris-james-cellars--draws-from--willamette-valley",
+    "source": "chris-james-cellars",
+    "target": "willamette-valley",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Chris James Cellars",
+        "url": "https://chrisjamescellars.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "coeur-de-terre-vineyard--draws-from--mcminnville",
+    "source": "coeur-de-terre-vineyard",
+    "target": "mcminnville",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Coeur de Terre Vineyard",
+        "url": "https://cdtvineyard.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "coleman-vineyard--draws-from--mcminnville",
+    "source": "coleman-vineyard",
+    "target": "mcminnville",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Coleman Vineyard",
+        "url": "https://www.colemanwine.com/"
+      },
+      {
+        "title": "The Place (Coleman Vineyard)",
+        "url": "https://www.colemanwine.com/place/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "coria-estates--draws-from--willamette-valley",
+    "source": "coria-estates",
+    "target": "willamette-valley",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Cória Estates",
+        "url": "https://www.coriaestates.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "crowley-wines--draws-from--willamette-valley",
+    "source": "crowley-wines",
+    "target": "willamette-valley",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Crowley Wines (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/764/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "crowley-wines--draws-from--dundee-hills",
+    "source": "crowley-wines",
+    "target": "dundee-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Crowley Wines (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/764/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "crowley-wines--draws-from--ribbon-ridge",
+    "source": "crowley-wines",
+    "target": "ribbon-ridge",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Crowley Wines (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/764/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "crowley-wines--sources-from--tukwilla-vineyard",
+    "source": "crowley-wines",
+    "target": "tukwilla-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Crowley Wines (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/764/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "division-winemaking-company--member-of--willamette-valley-wineries-association",
+    "source": "division-winemaking-company",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Division Winemaking Company (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/division-winemaking-company/236/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "eila--member-of--willamette-valley-wineries-association",
+    "source": "eila",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Eila Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/eila-wines/4237/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "failla--member-of--willamette-valley-wineries-association",
+    "source": "failla",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Failla Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/failla-wines/237/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "five-fourteen-vineyards--member-of--willamette-valley-wineries-association",
+    "source": "five-fourteen-vineyards",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Five Fourteen Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/five-fourteen-vineyards/231/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "gemini-vineyards--member-of--willamette-valley-wineries-association",
+    "source": "gemini-vineyards",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Gemini Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/gemini-vineyards/5381/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "haakon-lenai--member-of--willamette-valley-wineries-association",
+    "source": "haakon-lenai",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Haakon Lenai Vineyard and Tasting Room (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/haakon-lenai-vineyard-and-tasting-room/2201/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "hudak-house--member-of--willamette-valley-wineries-association",
+    "source": "hudak-house",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Hudak Family Vineyards / Hudak House (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/hudak-family-vineyards-hudak-house/5342/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "iota-cellars--member-of--willamette-valley-wineries-association",
+    "source": "iota-cellars",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "iOTA Cellars (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/iota-cellars/69/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "division-winemaking-company--sources-from--temperance-hill-vineyard",
+    "source": "division-winemaking-company",
+    "target": "temperance-hill-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Division Wine Company (Wine Anorak)",
+        "url": "https://wineanorak.com/Oregon/Oregon_15_divisionwinecompany.htm"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "eila--draws-from--eola-amity-hills",
+    "source": "eila",
+    "target": "eola-amity-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "A Taste of Eila Wines (Enofylz Wine Blog)",
+        "url": "https://enofylzwineblog.com/2023/10/05/a-taste-of-eila-wines/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "eila--draws-from--chehalem-mountains",
+    "source": "eila",
+    "target": "chehalem-mountains",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "A Taste of Eila Wines (Enofylz Wine Blog)",
+        "url": "https://enofylzwineblog.com/2023/10/05/a-taste-of-eila-wines/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "eila--sources-from--le-cadeau-estate-vineyard",
+    "source": "eila",
+    "target": "le-cadeau-estate-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "A Taste of Eila Wines (Enofylz Wine Blog)",
+        "url": "https://enofylzwineblog.com/2023/10/05/a-taste-of-eila-wines/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "failla--sources-from--seven-springs-vineyard",
+    "source": "failla",
+    "target": "seven-springs-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Vineyards (Failla Oregon)",
+        "url": "https://www.faillawinesoregon.com/vineyards"
+      },
+      {
+        "title": "Failla Oregon (Oregon Wine Press, 2018)",
+        "url": "https://www.oregonwinepress.com/failla-oregon"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "failla--sources-from--zenith-vineyard",
+    "source": "failla",
+    "target": "zenith-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Failla Oregon (Oregon Wine Press, 2018)",
+        "url": "https://www.oregonwinepress.com/failla-oregon"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "failla--owns--patton-valley-vineyard",
+    "source": "failla",
+    "target": "patton-valley-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Vineyards (Failla Oregon)",
+        "url": "https://www.faillawinesoregon.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "failla--draws-from--eola-amity-hills",
+    "source": "failla",
+    "target": "eola-amity-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Vineyards (Failla Oregon)",
+        "url": "https://www.faillawinesoregon.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "failla--draws-from--van-duzer-corridor",
+    "source": "failla",
+    "target": "van-duzer-corridor",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Vineyards (Failla Oregon)",
+        "url": "https://www.faillawinesoregon.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "five-fourteen-vineyards--draws-from--willamette-valley",
+    "source": "five-fourteen-vineyards",
+    "target": "willamette-valley",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Visit (Five Fourteen Vineyards)",
+        "url": "https://www.fivefourteenvineyards.com/visit"
+      },
+      {
+        "title": "Five Fourteen Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2984/index.html"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "drew-voit--winemaker--five-fourteen-vineyards",
+    "source": "drew-voit",
+    "target": "five-fourteen-vineyards",
+    "type": "winemaker",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Visit (Five Fourteen Vineyards)",
+        "url": "https://www.fivefourteenvineyards.com/visit"
+      },
+      {
+        "title": "Five Fourteen Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2984/index.html"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "gemini-vineyards--draws-from--chehalem-mountains",
+    "source": "gemini-vineyards",
+    "target": "chehalem-mountains",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Gemini Vineyards",
+        "url": "https://www.geminivineyard.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "cody-wright--founded--haakon-lenai",
+    "source": "cody-wright",
+    "target": "haakon-lenai",
+    "type": "founded",
+    "sources": [
+      {
+        "title": "Haakon/Lenai",
+        "url": "https://www.haakonlenai.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "cody-wright--winemaker--haakon-lenai",
+    "source": "cody-wright",
+    "target": "haakon-lenai",
+    "type": "winemaker",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "Haakon/Lenai",
+        "url": "https://www.haakonlenai.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "haakon-lenai--draws-from--dundee-hills",
+    "source": "haakon-lenai",
+    "target": "dundee-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Story (Haakon/Lenai)",
+        "url": "https://www.haakonlenai.com/story"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "haakon-lenai--owns--haakon-lenai-vineyard",
+    "source": "haakon-lenai",
+    "target": "haakon-lenai-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Story (Haakon/Lenai)",
+        "url": "https://www.haakonlenai.com/story"
+      },
+      {
+        "title": "Visit (Haakon/Lenai)",
+        "url": "https://www.haakonlenai.com/visit"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "cody-wright--owns--haakon-lenai-vineyard",
+    "source": "cody-wright",
+    "target": "haakon-lenai-vineyard",
+    "type": "owns",
+    "startYear": 2018,
+    "sources": [
+      {
+        "title": "Story (Haakon/Lenai)",
+        "url": "https://www.haakonlenai.com/story"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "haakon-lenai-vineyard--located-in--dundee-hills",
+    "source": "haakon-lenai-vineyard",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Story (Haakon/Lenai)",
+        "url": "https://www.haakonlenai.com/story"
+      },
+      {
+        "title": "Purple Hands (Owen Bargreen, 2024)",
+        "url": "https://owenbargreen.com/blog/2024/6/10/purple-hands"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "purple-hands-winery--sources-from--haakon-lenai-vineyard",
+    "source": "purple-hands-winery",
+    "target": "haakon-lenai-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Purple Hands (Owen Bargreen, 2024)",
+        "url": "https://owenbargreen.com/blog/2024/6/10/purple-hands"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "hudak-house--draws-from--eola-amity-hills",
+    "source": "hudak-house",
+    "target": "eola-amity-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Hudak House",
+        "url": "https://www.hudakhouse.com/"
+      },
+      {
+        "title": "About Us (Hudak House)",
+        "url": "https://www.hudakhouse.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "iota-cellars--draws-from--eola-amity-hills",
+    "source": "iota-cellars",
+    "target": "eola-amity-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "iOTA Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1032/index.html"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "iota-cellars--owns--pelos-sandberg-vineyard",
+    "source": "iota-cellars",
+    "target": "pelos-sandberg-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "iOTA Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1032/index.html"
+      },
+      {
+        "title": "iOTA Cellars",
+        "url": "https://www.iotacellars.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "pelos-sandberg-vineyard--located-in--eola-amity-hills",
+    "source": "pelos-sandberg-vineyard",
+    "target": "eola-amity-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "iOTA Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1032/index.html"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "finnigan-hill-vineyard--located-in--chehalem-mountains",
+    "source": "finnigan-hill-vineyard",
+    "target": "chehalem-mountains",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Bellande Pinot Noir Willamette Valley 2025 (Bowler Wine)",
+        "url": "https://www.bowlerwine.com/wine-or-spirit/pinot-noir-willamette-valley/2025"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "inguz-row--located-in--laurelwood-district",
+    "source": "inguz-row",
+    "target": "laurelwood-district",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Land (Inguz Row)",
+        "url": "https://www.inguzrow.com/land"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "stirling-fox--worked-at--inguz-row",
+    "source": "stirling-fox",
+    "target": "inguz-row",
+    "type": "worked_at",
+    "role": "vineyard management",
+    "sources": [
+      {
+        "title": "Land (Inguz Row)",
+        "url": "https://www.inguzrow.com/land"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "joel-gott-wines--member-of--willamette-valley-wineries-association",
+    "source": "joel-gott-wines",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Joel Gott Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/joel-gott-wines/144/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "k-and-m-wines--member-of--willamette-valley-wineries-association",
+    "source": "k-and-m-wines",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "K&M Wines, Alchemy Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/k%26m-wines-alchemy-vineyard/78/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "la-biblioteca--member-of--willamette-valley-wineries-association",
+    "source": "la-biblioteca",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "La Biblioteca Wine (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/la-biblioteca-wine/3152/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "lachini-vineyards--member-of--willamette-valley-wineries-association",
+    "source": "lachini-vineyards",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Lachini Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/lachini-vineyards/82/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "laurel-ridge-winery--member-of--willamette-valley-wineries-association",
+    "source": "laurel-ridge-winery",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Laurel Ridge Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/laurel-ridge-winery/84/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "love-and-squalor--member-of--willamette-valley-wineries-association",
+    "source": "love-and-squalor",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Love & Squalor Wine at Portland Wine Company (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/love-%26-squalor-wine-at-portland-wine-company/4183/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "maison-noir-wines--member-of--willamette-valley-wineries-association",
+    "source": "maison-noir-wines",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Maison Noir Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/maison-noir-wines/337/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "monksgate--member-of--willamette-valley-wineries-association",
+    "source": "monksgate",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "MonksGate Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/monksgate-vineyard/100/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "montinore-estate--member-of--willamette-valley-wineries-association",
+    "source": "montinore-estate",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Montinore Estate (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/montinore-estate/101/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "natalies-estate-winery--member-of--willamette-valley-wineries-association",
+    "source": "natalies-estate-winery",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Natalie's Estate Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/natalie%e2%80%99s-estate-winery/104/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "native-flora--member-of--willamette-valley-wineries-association",
+    "source": "native-flora",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Native Flora (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/native-flora/365/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "joel-gott-wines--draws-from--eola-amity-hills",
+    "source": "joel-gott-wines",
+    "target": "eola-amity-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Oregon Pinot Noir (Joel Gott Wines)",
+        "url": "https://www.gottwines.com/wine/oregon-pinot-noir/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "joel-gott-wines--draws-from--ribbon-ridge",
+    "source": "joel-gott-wines",
+    "target": "ribbon-ridge",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Oregon Pinot Noir (Joel Gott Wines)",
+        "url": "https://www.gottwines.com/wine/oregon-pinot-noir/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "joel-gott-wines--draws-from--yamhill-carlton",
+    "source": "joel-gott-wines",
+    "target": "yamhill-carlton",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Oregon Pinot Noir (Joel Gott Wines)",
+        "url": "https://www.gottwines.com/wine/oregon-pinot-noir/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "k-and-m-wines--sources-from--alchemy-vineyard",
+    "source": "k-and-m-wines",
+    "target": "alchemy-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "K & M Winery Réserve Alchemy Vineyard Pinot Noir 2012 (Delectable)",
+        "url": "https://delectable.com/wine/k-and-m-winery/reserve-alchemy-vineyard-pinot-noir/2012"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "alchemy-vineyard--located-in--chehalem-mountains",
+    "source": "alchemy-vineyard",
+    "target": "chehalem-mountains",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "K & M Winery Réserve Alchemy Vineyard Pinot Noir 2012 (Delectable)",
+        "url": "https://delectable.com/wine/k-and-m-winery/reserve-alchemy-vineyard-pinot-noir/2012"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "la-biblioteca--owns--aegrina-vineyard",
+    "source": "la-biblioteca",
+    "target": "aegrina-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Our Vineyards (La Biblioteca Wine)",
+        "url": "https://labibliotecawine.com/our-vineyards/"
+      },
+      {
+        "title": "La Biblioteca Wine",
+        "url": "https://labibliotecawine.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "la-biblioteca--owns--north-valley-vineyard",
+    "source": "la-biblioteca",
+    "target": "north-valley-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Our Vineyards (La Biblioteca Wine)",
+        "url": "https://labibliotecawine.com/our-vineyards/"
+      },
+      {
+        "title": "La Biblioteca Wine",
+        "url": "https://labibliotecawine.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "aegrina-vineyard--located-in--mcminnville",
+    "source": "aegrina-vineyard",
+    "target": "mcminnville",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Our Vineyards (La Biblioteca Wine)",
+        "url": "https://labibliotecawine.com/our-vineyards/"
+      },
+      {
+        "title": "About (North Valley Vineyards)",
+        "url": "https://www.northvalleyvineyards.com/about"
+      },
+      {
+        "title": "Soter Vineyards Announces Sale of North Valley Brand (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2021/05/05/soter-vineyards-announces-sale-of-north-valley-brand"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "north-valley-vineyard--located-in--yamhill-carlton",
+    "source": "north-valley-vineyard",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Our Vineyards (La Biblioteca Wine)",
+        "url": "https://labibliotecawine.com/our-vineyards/"
+      },
+      {
+        "title": "About (North Valley Vineyards)",
+        "url": "https://www.northvalleyvineyards.com/about"
+      },
+      {
+        "title": "Soter Vineyards Announces Sale of North Valley Brand (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2021/05/05/soter-vineyards-announces-sale-of-north-valley-brand"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "lachini-vineyards--owns--lachini-estate-vineyard",
+    "source": "lachini-vineyards",
+    "target": "lachini-estate-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "startYear": 1998,
+    "sources": [
+      {
+        "title": "Place (Lachini Vineyards)",
+        "url": "https://www.lachinivineyards.com/place"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "lachini-estate-vineyard--located-in--chehalem-mountains",
+    "source": "lachini-estate-vineyard",
+    "target": "chehalem-mountains",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Place (Lachini Vineyards)",
+        "url": "https://www.lachinivineyards.com/place"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "laurel-ridge-winery--draws-from--yamhill-carlton",
+    "source": "laurel-ridge-winery",
+    "target": "yamhill-carlton",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Laurel Ridge Winery",
+        "url": "https://www.laurelridgewinery.com/"
+      },
+      {
+        "title": "Laurel Ridge (Yamhill-Carlton Winegrowers Association)",
+        "url": "https://yamhillcarlton.org/wineries/laurel-ridge/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "love-and-squalor--sources-from--temperance-hill-vineyard",
+    "source": "love-and-squalor",
+    "target": "temperance-hill-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "The Vineyards (Portland Wine Company)",
+        "url": "https://www.portlandwinecompany.com/thevineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "love-and-squalor--draws-from--eola-amity-hills",
+    "source": "love-and-squalor",
+    "target": "eola-amity-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "The Vineyards (Portland Wine Company)",
+        "url": "https://www.portlandwinecompany.com/thevineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "love-and-squalor--draws-from--ribbon-ridge",
+    "source": "love-and-squalor",
+    "target": "ribbon-ridge",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "The Vineyards (Portland Wine Company)",
+        "url": "https://www.portlandwinecompany.com/thevineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "love-and-squalor--draws-from--chehalem-mountains",
+    "source": "love-and-squalor",
+    "target": "chehalem-mountains",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "The Vineyards (Portland Wine Company)",
+        "url": "https://www.portlandwinecompany.com/thevineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "love-and-squalor--draws-from--laurelwood-district",
+    "source": "love-and-squalor",
+    "target": "laurelwood-district",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "The Vineyards (Portland Wine Company)",
+        "url": "https://www.portlandwinecompany.com/thevineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "maison-noir-wines--draws-from--willamette-valley",
+    "source": "maison-noir-wines",
+    "target": "willamette-valley",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "André Mack's Oregon-made Maison Noir Wines (KOIN)",
+        "url": "https://digital-release.koin.com/news/oregon/andre-macks-oregon-made-maison-noir-wines/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "monksgate--owns--monksgate-vineyard",
+    "source": "monksgate",
+    "target": "monksgate-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Our Story (MonksGate)",
+        "url": "https://www.monksgate.com/our-story"
+      },
+      {
+        "title": "MonksGate",
+        "url": "https://www.monksgate.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "monksgate-vineyard--located-in--yamhill-carlton",
+    "source": "monksgate-vineyard",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Our Story (MonksGate)",
+        "url": "https://www.monksgate.com/our-story"
+      },
+      {
+        "title": "Monksgate Vineyard and Wines (Yamhill-Carlton Winegrowers Association)",
+        "url": "https://yamhillcarlton.org/wineries/monksgate-vineyard/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "montinore-estate--draws-from--tualatin-hills",
+    "source": "montinore-estate",
+    "target": "tualatin-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Tualatin Hills AVA Granted Official Status (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2020/06/03/tualatin-hills-ava-granted-official-status/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "montinore-estate--owns--tidalstar-vineyard",
+    "source": "montinore-estate",
+    "target": "tidalstar-vineyard",
+    "type": "owns",
+    "startYear": 2016,
+    "sources": [
+      {
+        "title": "Landlines Estates (Montinore Estate)",
+        "url": "https://montinore.com/landlines-estates"
+      },
+      {
+        "title": "Vineyards (Montinore Estate)",
+        "url": "https://montinore.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "montinore-estate--owns--laughlin-road-ranch",
+    "source": "montinore-estate",
+    "target": "laughlin-road-ranch",
+    "type": "owns",
+    "sources": [
+      {
+        "title": "Vineyards (Montinore Estate)",
+        "url": "https://montinore.com/vineyards"
+      },
+      {
+        "title": "About Us (Montinore Estate)",
+        "url": "https://montinore.com/about-us"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "tidalstar-vineyard--located-in--yamhill-carlton",
+    "source": "tidalstar-vineyard",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Vineyards (Montinore Estate)",
+        "url": "https://montinore.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "laughlin-road-ranch--located-in--yamhill-carlton",
+    "source": "laughlin-road-ranch",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Vineyards (Montinore Estate)",
+        "url": "https://montinore.com/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "natalies-estate-winery--draws-from--chehalem-mountains",
+    "source": "natalies-estate-winery",
+    "target": "chehalem-mountains",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Natalie's Estate Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1722/index.html"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "native-flora--draws-from--dundee-hills",
+    "source": "native-flora",
+    "target": "dundee-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Native Flora Wines (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2540/index.html"
+      },
+      {
+        "title": "Native Flora",
+        "url": "https://www.nativeflora.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "north-valley-vineyards--member-of--willamette-valley-wineries-association",
+    "source": "north-valley-vineyards",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "North Valley Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/north-valley-vineyards/1505/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "olive-hamilton-russell-wine--member-of--willamette-valley-wineries-association",
+    "source": "olive-hamilton-russell-wine",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Olive Hamilton Russell (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/olive-hamilton-russell/4505/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "pike-road-wines--member-of--willamette-valley-wineries-association",
+    "source": "pike-road-wines",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Pike Road Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/pike-road-wines/114/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "raptor-ridge-winery--member-of--willamette-valley-wineries-association",
+    "source": "raptor-ridge-winery",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Raptor Ridge Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/raptor-ridge-winery/132/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "rh-wines--member-of--willamette-valley-wineries-association",
+    "source": "rh-wines",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "RH Wines at Redhawk Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/rh-wines-at-redhawk-vineyard/135/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "roots-wine-co--member-of--willamette-valley-wineries-association",
+    "source": "roots-wine-co",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Roots Wine Co. (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/roots-wine-co/2821/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "seufert-winery--member-of--willamette-valley-wineries-association",
+    "source": "seufert-winery",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Seufert Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/seufert-winery/148/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sineann--member-of--willamette-valley-wineries-association",
+    "source": "sineann",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Sineann (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/sineann/152/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "stephen-goff-wines--member-of--willamette-valley-wineries-association",
+    "source": "stephen-goff-wines",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Stephen Goff Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/stephen-goff-wines/6272/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "sweet-cheeks-winery--member-of--willamette-valley-wineries-association",
+    "source": "sweet-cheeks-winery",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Sweet Cheeks Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/sweet-cheeks-winery/167/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "terra-vina-wines--member-of--willamette-valley-wineries-association",
+    "source": "terra-vina-wines",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Terra Vina Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/terra-vina-wines/171/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "trinity-vineyards--member-of--willamette-valley-wineries-association",
+    "source": "trinity-vineyards",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Trinity Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/trinity-vineyards/6097/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "chateau-bianca-winery--member-of--willamette-valley-wineries-association",
+    "source": "chateau-bianca-winery",
+    "target": "willamette-valley-wineries-association",
+    "type": "member_of",
+    "role": "member",
+    "sources": [
+      {
+        "title": "Wetzel Estate (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/wetzel-estate/1875/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tony-soter--founded--north-valley-vineyards",
+    "source": "tony-soter",
+    "target": "north-valley-vineyards",
+    "type": "founded",
+    "role": "co-founder",
+    "sources": [
+      {
+        "title": "North Valley Vineyards (Yamhill-Carlton AVA)",
+        "url": "https://yamhillcarlton.org/wineries/north-valley/"
+      },
+      {
+        "title": "Soter Vineyards Announces Sale of North Valley Brand (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2021/05/05/soter-vineyards-announces-sale-of-north-valley-brand"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "north-valley-vineyards--owns--north-valley-vineyard",
+    "source": "north-valley-vineyards",
+    "target": "north-valley-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "About (North Valley Vineyards)",
+        "url": "https://www.northvalleyvineyards.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "north-valley-vineyards--owns--aegrina-vineyard",
+    "source": "north-valley-vineyards",
+    "target": "aegrina-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "About (North Valley Vineyards)",
+        "url": "https://www.northvalleyvineyards.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "north-valley-vineyards--sources-from--zena-crown-vineyard",
+    "source": "north-valley-vineyards",
+    "target": "zena-crown-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "About (North Valley Vineyards)",
+        "url": "https://www.northvalleyvineyards.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "north-valley-vineyards--draws-from--dundee-hills",
+    "source": "north-valley-vineyards",
+    "target": "dundee-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "About (North Valley Vineyards)",
+        "url": "https://www.northvalleyvineyards.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "north-valley-vineyards--draws-from--ribbon-ridge",
+    "source": "north-valley-vineyards",
+    "target": "ribbon-ridge",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "About (North Valley Vineyards)",
+        "url": "https://www.northvalleyvineyards.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "north-valley-vineyards--draws-from--eola-amity-hills",
+    "source": "north-valley-vineyards",
+    "target": "eola-amity-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "About (North Valley Vineyards)",
+        "url": "https://www.northvalleyvineyards.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "north-valley-vineyards--draws-from--yamhill-carlton",
+    "source": "north-valley-vineyards",
+    "target": "yamhill-carlton",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "About (North Valley Vineyards)",
+        "url": "https://www.northvalleyvineyards.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "north-valley-vineyards--draws-from--chehalem-mountains",
+    "source": "north-valley-vineyards",
+    "target": "chehalem-mountains",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "About (North Valley Vineyards)",
+        "url": "https://www.northvalleyvineyards.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "north-valley-vineyards--draws-from--mcminnville",
+    "source": "north-valley-vineyards",
+    "target": "mcminnville",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "About (North Valley Vineyards)",
+        "url": "https://www.northvalleyvineyards.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "olive-hamilton-russell--founded--olive-hamilton-russell-wine",
+    "source": "olive-hamilton-russell",
+    "target": "olive-hamilton-russell-wine",
+    "type": "founded",
+    "sources": [
+      {
+        "title": "Olive Hamilton Russell (Eola-Amity Hills Winegrowers Association)",
+        "url": "https://eolaamityhills.com/portfolio/olive-hamilton-russell/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "olive-hamilton-russell--winemaker--olive-hamilton-russell-wine",
+    "source": "olive-hamilton-russell",
+    "target": "olive-hamilton-russell-wine",
+    "type": "winemaker",
+    "sources": [
+      {
+        "title": "Olive Hamilton Russell (Eola-Amity Hills Winegrowers Association)",
+        "url": "https://eolaamityhills.com/portfolio/olive-hamilton-russell/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "olive-hamilton-russell-wine--sources-from--zena-crown-vineyard",
+    "source": "olive-hamilton-russell-wine",
+    "target": "zena-crown-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Olive Hamilton Russell (Eola-Amity Hills Winegrowers Association)",
+        "url": "https://eolaamityhills.com/portfolio/olive-hamilton-russell/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "olive-hamilton-russell-wine--draws-from--eola-amity-hills",
+    "source": "olive-hamilton-russell-wine",
+    "target": "eola-amity-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Olive Hamilton Russell (Eola-Amity Hills Winegrowers Association)",
+        "url": "https://eolaamityhills.com/portfolio/olive-hamilton-russell/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "elk-cove-vineyards--owns--pike-road-wines",
+    "source": "elk-cove-vineyards",
+    "target": "pike-road-wines",
+    "type": "owns",
+    "role": "sister winery",
+    "sources": [
+      {
+        "title": "Pike Road Wines",
+        "url": "https://www.pikeroadwines.com/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "adam-campbell--owns--pike-road-wines",
+    "source": "adam-campbell",
+    "target": "pike-road-wines",
+    "type": "owns",
+    "sources": [
+      {
+        "title": "About (Pike Road Wines)",
+        "url": "https://www.pikeroadwines.com/about/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "adam-campbell--winemaker--pike-road-wines",
+    "source": "adam-campbell",
+    "target": "pike-road-wines",
+    "type": "winemaker",
+    "sources": [
+      {
+        "title": "About (Pike Road Wines)",
+        "url": "https://www.pikeroadwines.com/about/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "pike-road-wines--draws-from--chehalem-mountains",
+    "source": "pike-road-wines",
+    "target": "chehalem-mountains",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Our Vineyards (Pike Road Wines)",
+        "url": "https://www.pikeroadwines.com/about/vineyards/"
+      },
+      {
+        "title": "Pike Road Wines (Yamhill-Carlton AVA)",
+        "url": "https://yamhillcarlton.org/wineries/pike-road-wines/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "pike-road-wines--draws-from--dundee-hills",
+    "source": "pike-road-wines",
+    "target": "dundee-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Our Vineyards (Pike Road Wines)",
+        "url": "https://www.pikeroadwines.com/about/vineyards/"
+      },
+      {
+        "title": "Pike Road Wines (Yamhill-Carlton AVA)",
+        "url": "https://yamhillcarlton.org/wineries/pike-road-wines/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "pike-road-wines--draws-from--eola-amity-hills",
+    "source": "pike-road-wines",
+    "target": "eola-amity-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Our Vineyards (Pike Road Wines)",
+        "url": "https://www.pikeroadwines.com/about/vineyards/"
+      },
+      {
+        "title": "Pike Road Wines (Yamhill-Carlton AVA)",
+        "url": "https://yamhillcarlton.org/wineries/pike-road-wines/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "pike-road-wines--draws-from--laurelwood-district",
+    "source": "pike-road-wines",
+    "target": "laurelwood-district",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Our Vineyards (Pike Road Wines)",
+        "url": "https://www.pikeroadwines.com/about/vineyards/"
+      },
+      {
+        "title": "Pike Road Wines (Yamhill-Carlton AVA)",
+        "url": "https://yamhillcarlton.org/wineries/pike-road-wines/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "pike-road-wines--draws-from--tualatin-hills",
+    "source": "pike-road-wines",
+    "target": "tualatin-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Our Vineyards (Pike Road Wines)",
+        "url": "https://www.pikeroadwines.com/about/vineyards/"
+      },
+      {
+        "title": "Pike Road Wines (Yamhill-Carlton AVA)",
+        "url": "https://yamhillcarlton.org/wineries/pike-road-wines/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "pike-road-wines--draws-from--yamhill-carlton",
+    "source": "pike-road-wines",
+    "target": "yamhill-carlton",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Our Vineyards (Pike Road Wines)",
+        "url": "https://www.pikeroadwines.com/about/vineyards/"
+      },
+      {
+        "title": "Pike Road Wines (Yamhill-Carlton AVA)",
+        "url": "https://yamhillcarlton.org/wineries/pike-road-wines/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "pike-road-wines--sources-from--shea-vineyard",
+    "source": "pike-road-wines",
+    "target": "shea-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Our Vineyards (Pike Road Wines)",
+        "url": "https://www.pikeroadwines.com/about/vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "pike-road-wines--sources-from--temperance-hill-vineyard",
+    "source": "pike-road-wines",
+    "target": "temperance-hill-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Our Vineyards (Pike Road Wines)",
+        "url": "https://www.pikeroadwines.com/about/vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "pike-road-wines--sources-from--zenith-vineyard",
+    "source": "pike-road-wines",
+    "target": "zenith-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Our Vineyards (Pike Road Wines)",
+        "url": "https://www.pikeroadwines.com/about/vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "pike-road-wines--sources-from--fennwood-vineyard",
+    "source": "pike-road-wines",
+    "target": "fennwood-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Our Vineyards (Pike Road Wines)",
+        "url": "https://www.pikeroadwines.com/about/vineyards/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "raptor-ridge-winery--owns--tuscowallame-vineyard",
+    "source": "raptor-ridge-winery",
+    "target": "tuscowallame-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Raptor Ridge Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/641/index.html"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "tuscowallame-vineyard--located-in--chehalem-mountains",
+    "source": "tuscowallame-vineyard",
+    "target": "chehalem-mountains",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Raptor Ridge Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/641/index.html"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "raptor-ridge-winery--draws-from--chehalem-mountains",
+    "source": "raptor-ridge-winery",
+    "target": "chehalem-mountains",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Raptor Ridge Winery (Oregon Wine Board industry directory)",
+        "url": "https://industry.oregonwine.org/?p=37841"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "raptor-ridge-winery--draws-from--laurelwood-district",
+    "source": "raptor-ridge-winery",
+    "target": "laurelwood-district",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Raptor Ridge Winery (Oregon Wine Board industry directory)",
+        "url": "https://industry.oregonwine.org/?p=37841"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "raptor-ridge-winery--draws-from--mcminnville",
+    "source": "raptor-ridge-winery",
+    "target": "mcminnville",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Raptor Ridge Winery (Oregon Wine Board industry directory)",
+        "url": "https://industry.oregonwine.org/?p=37841"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "raptor-ridge-winery--draws-from--eola-amity-hills",
+    "source": "raptor-ridge-winery",
+    "target": "eola-amity-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Raptor Ridge Winery (Oregon Wine Board industry directory)",
+        "url": "https://industry.oregonwine.org/?p=37841"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "raptor-ridge-winery--draws-from--yamhill-carlton",
+    "source": "raptor-ridge-winery",
+    "target": "yamhill-carlton",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Raptor Ridge Winery (Oregon Wine Board industry directory)",
+        "url": "https://industry.oregonwine.org/?p=37841"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "rh-wines--owns--redhawk-vineyard",
+    "source": "rh-wines",
+    "target": "redhawk-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "RH Estate Wines at Redhawk Vineyard (Eola-Amity Hills Winegrowers Association)",
+        "url": "https://eolaamityhills.com/portfolio/rh-estate-wines-at-redhawk-vineyard/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "redhawk-vineyard--located-in--eola-amity-hills",
+    "source": "redhawk-vineyard",
+    "target": "eola-amity-hills",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "RH Estate Wines at Redhawk Vineyard (Eola-Amity Hills Winegrowers Association)",
+        "url": "https://eolaamityhills.com/portfolio/rh-estate-wines-at-redhawk-vineyard/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "rh-wines--draws-from--eola-amity-hills",
+    "source": "rh-wines",
+    "target": "eola-amity-hills",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "RH Estate Wines at Redhawk Vineyard (Eola-Amity Hills Winegrowers Association)",
+        "url": "https://eolaamityhills.com/portfolio/rh-estate-wines-at-redhawk-vineyard/"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "roots-wine-co--owns--roots-estate-vineyard",
+    "source": "roots-wine-co",
+    "target": "roots-estate-vineyard",
+    "type": "owns",
+    "role": "estate vineyard",
+    "sources": [
+      {
+        "title": "Vines (Roots Wine Co.)",
+        "url": "https://roots.wine/vineyards"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "roots-estate-vineyard--located-in--yamhill-carlton",
+    "source": "roots-estate-vineyard",
+    "target": "yamhill-carlton",
+    "type": "located_in",
+    "sources": [
+      {
+        "title": "Vines (Roots Wine Co.)",
+        "url": "https://roots.wine/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "roots-wine-co--draws-from--yamhill-carlton",
+    "source": "roots-wine-co",
+    "target": "yamhill-carlton",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Roots Wine (Yamhill-Carlton AVA)",
+        "url": "https://yamhillcarlton.org/wineries/roots-wine/"
+      },
+      {
+        "title": "Vines (Roots Wine Co.)",
+        "url": "https://roots.wine/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "roots-wine-co--sources-from--saffron-fields-vineyard",
+    "source": "roots-wine-co",
+    "target": "saffron-fields-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Vines (Roots Wine Co.)",
+        "url": "https://roots.wine/vineyards"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "seufert-winery--sources-from--bishop-creek-vineyard",
+    "source": "seufert-winery",
+    "target": "bishop-creek-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Seufert Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/993/index.html"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "seufert-winery--sources-from--momtazi-vineyard",
+    "source": "seufert-winery",
+    "target": "momtazi-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Seufert Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/993/index.html"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "seufert-winery--sources-from--zenith-vineyard",
+    "source": "seufert-winery",
+    "target": "zenith-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Seufert Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/993/index.html"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "david-oreilly--founded--sineann",
+    "source": "david-oreilly",
+    "target": "sineann",
+    "type": "founded",
+    "role": "co-founder",
+    "sources": [
+      {
+        "title": "Sineann (WineBid producer profile)",
+        "url": "https://www.winebid.com/BuyWine/Producer/Sineann/2639"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "sineann--sources-from--resonance-vineyard",
+    "source": "sineann",
+    "target": "resonance-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Sineann Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/406/index.html"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "sineann--draws-from--columbia-gorge",
+    "source": "sineann",
+    "target": "columbia-gorge",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Sineann Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/406/index.html"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "stephen-goff-wines--sources-from--shea-vineyard",
+    "source": "stephen-goff-wines",
+    "target": "shea-vineyard",
+    "type": "sources_from",
+    "sources": [
+      {
+        "title": "Stephen Goff Wines (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2468/index.html"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "terra-vina-wines--draws-from--chehalem-mountains",
+    "source": "terra-vina-wines",
+    "target": "chehalem-mountains",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Terra Vina Vineyard Tasting Room (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=13898"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "trinity-vineyards--draws-from--willamette-valley",
+    "source": "trinity-vineyards",
+    "target": "willamette-valley",
+    "type": "draws_from",
+    "sources": [
+      {
+        "title": "Trinity Vineyards (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=14438"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
   }
 ]

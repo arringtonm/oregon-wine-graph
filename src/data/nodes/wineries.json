@@ -3330,6 +3330,14 @@
       {
         "title": "Method Oregon Trail: winery map (methodoregon.com)",
         "url": "https://methodoregon.com/trail"
+      },
+      {
+        "title": "AtTheJoy (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/atthejoy/67/"
+      },
+      {
+        "title": "AtTheJoy's Story (AtTheJoy)",
+        "url": "https://atthejoy.com/atthejoys-story/"
       }
     ],
     "verified": true,
@@ -3380,6 +3388,14 @@
       {
         "title": "Aubaine's Story (AtTheJoy)",
         "url": "https://atthejoy.com/aubaines-story/"
+      },
+      {
+        "title": "AtTheJoy (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/atthejoy/67/"
+      },
+      {
+        "title": "AtTheJoy's Story (AtTheJoy)",
+        "url": "https://atthejoy.com/atthejoys-story/"
       }
     ],
     "verified": true,
@@ -5523,6 +5539,14 @@
       {
         "title": "Method Oregon Trail: winery map (methodoregon.com)",
         "url": "https://methodoregon.com/trail"
+      },
+      {
+        "title": "Westwind Vineyard / Privé Vineyard & Winery (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/westwind-vineyard-prive-vineyard-winery/"
+      },
+      {
+        "title": "Our Vineyards (Privé Vineyard)",
+        "url": "https://privevineyard.com/our-vineyards"
       }
     ],
     "verified": false,
@@ -8200,6 +8224,14 @@
       {
         "title": "Chateau Bianca collection, 2015 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/chateau-bianca-collection/"
+      },
+      {
+        "title": "Wetzel Estate Winery and Vineyard (Visit Corvallis)",
+        "url": "https://www.visitcorvallis.com/account/wetzel-estate-winery-and-vineyard"
+      },
+      {
+        "title": "Wetzel Estate (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/wetzel-estate/1875/"
       }
     ],
     "verified": true,
@@ -8211,7 +8243,10 @@
         "date": "2015-07-20"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "aka": [
+      "Wetzel Estate"
+    ]
   },
   {
     "id": "tior-wines",
@@ -10464,6 +10499,10 @@
       {
         "title": "Method Oregon Trail: winery map (methodoregon.com)",
         "url": "https://methodoregon.com/trail"
+      },
+      {
+        "title": "Winderlea (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/winderlea-vineyard-and-winery/209/"
       }
     ],
     "verified": true,
@@ -10488,6 +10527,10 @@
       {
         "title": "Method Oregon Trail: winery map (methodoregon.com)",
         "url": "https://methodoregon.com/trail"
+      },
+      {
+        "title": "Balsall Creek (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/balsall-creek/2672/"
       }
     ],
     "verified": true,
@@ -10513,10 +10556,17 @@
       {
         "title": "Method Oregon Trail: winery map (methodoregon.com)",
         "url": "https://methodoregon.com/trail"
+      },
+      {
+        "title": "Matello Wine (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/matello-wine/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "aka": [
+      "Matello"
+    ]
   },
   {
     "id": "kramer-vineyards",
@@ -10538,6 +10588,10 @@
       {
         "title": "Method Oregon Trail: winery map (methodoregon.com)",
         "url": "https://methodoregon.com/trail"
+      },
+      {
+        "title": "Kramer Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/kramer-vineyards/80/"
       }
     ],
     "verified": true,
@@ -10610,8 +10664,1738 @@
       {
         "title": "Method Oregon Trail: winery map (methodoregon.com)",
         "url": "https://methodoregon.com/trail"
+      },
+      {
+        "title": "Six Peaks Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/six-peaks/257/"
       }
     ],
     "verified": false
+  },
+  {
+    "id": "aramenta-cellars",
+    "name": "Aramenta Cellars",
+    "summary": "Small Pinot Noir winery on Ribbon Ridge near Newberg, founded in 2000 by Ed and Darlene Looney on land their relatives farmed in the early 1900s; Ed makes the wines.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Aramenta Cellars",
+        "url": "https://aramentacellars.com/"
+      },
+      {
+        "title": "Aramenta Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/959"
+      },
+      {
+        "title": "Aramenta Cellars (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/aramenta-cellars/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "founded": 2000,
+    "address": "17979 NE Lewis Rogers Lane, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.34669,
+      "lng": -123.07223
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "ayres-vineyard",
+    "name": "Ayres Vineyard",
+    "aka": [
+      "Ayres Vineyard & Winery",
+      "Ayres"
+    ],
+    "summary": "Family estate on Ribbon Ridge near Newberg of Brad and Kathleen McLeroy, who moved to Oregon in 2000. Brad, who rose from cellar hand to cellar master at Domaine Drouhin Oregon, makes its estate Pinot Noir.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "About the Winery (Ayres Vineyard & Winery)",
+        "url": "https://ayresvineyard.com/about-ayres-winery"
+      },
+      {
+        "title": "Ayres Vineyard",
+        "url": "https://ayresvineyard.com/"
+      },
+      {
+        "title": "Ayres Vineyard & Winery (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/ayres-vineyard-winery/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "founded": 2000,
+    "address": "17971 NE Lewis Rogers Lane, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.34634,
+      "lng": -123.07191
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "eminent-domaine",
+    "name": "Eminent Domaine",
+    "summary": "Family-run Ribbon Ridge winery near Newberg started by Jeff Meader, named after his court fight over a property the city and TriMet sought for a light-rail line; its estate vineyard was first planted in 2009 and Rob Alstrin joined as a partner in 2012.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Eminent Domaine (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1747"
+      },
+      {
+        "title": "Eminent Domaine (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/eminent-domaine/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "address": "20875 NE Ribbon Ridge Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.36957,
+      "lng": -123.07986
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "omero-cellars",
+    "name": "Omero Cellars",
+    "summary": "Wine brand started in 2008 by David Moore and his father with a 26-acre vineyard on Ribbon Ridge, with Chad Stock as winemaker. It is now one of three brands of Craft Wine Co. in Carlton, with Minimus and Origin.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "Omero Cellars, Oregon wine country revisited part 6 (Wine Anorak)",
+        "url": "https://wineanorak.com/Oregon/Oregon_6_OmeroCellars.htm"
+      },
+      {
+        "title": "Craft Wine Co. (Yamhill-Carlton AVA)",
+        "url": "https://yamhillcarlton.org/wineries/craft-wine-co/"
+      },
+      {
+        "title": "Omero Cellars (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/omero-cellars/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "founded": 2008,
+    "address": "213 N Yamhill St, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.29543,
+      "lng": -123.17968
+    }
+  },
+  {
+    "id": "styring-vineyards",
+    "name": "Styring Vineyards",
+    "aka": [
+      "Styring Vineyards & Winery"
+    ],
+    "summary": "Small family vineyard and winery on Ribbon Ridge Road near Newberg, started by Steve and Kelley Styring after they left corporate jobs in Dallas and bought land there in 2003; its first commercial vintage was 2004.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Styring Vineyards & Winery",
+        "url": "https://www.styring.com/"
+      },
+      {
+        "title": "Styring Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/719"
+      },
+      {
+        "title": "Oral history interview with Steve & Kelley Styring, 2019 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/steve-and-kelley-styring/"
+      },
+      {
+        "title": "Styring Vineyards (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/styring-vineyards/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/interviews/steve-and-kelley-styring/",
+        "title": "Steve & Kelley Styring",
+        "date": "2019-08-02",
+        "minutes": 99
+      }
+    ],
+    "address": "19960 NE Ribbon Ridge Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.3607,
+      "lng": -123.07693
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "the-south-face-winery",
+    "name": "The South Face Winery",
+    "aka": [
+      "The South Face"
+    ],
+    "summary": "Estate Pinot Noir winery on a south-facing hilltop at the southern tip of Ribbon Ridge near Newberg, owned by Barry Mong and Joanne Salerno; its first wines were from 2018.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "People (The South Face Winery)",
+        "url": "https://www.thesouthfacewinery.com/people"
+      },
+      {
+        "title": "Place (The South Face Winery)",
+        "url": "https://www.thesouthfacewinery.com/place"
+      },
+      {
+        "title": "The South Face Winery",
+        "url": "https://www.thesouthfacewinery.com/"
+      },
+      {
+        "title": "The South Face Winery (Ribbon Ridge AVA winery directory)",
+        "url": "https://ribbonridgeava.org/wineries/the-south-face-winery/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "address": "16295 NE North Valley Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.33215,
+      "lng": -123.07038
+    }
+  },
+  {
+    "id": "amalie-robert-estate",
+    "name": "Amalie Robert Estate",
+    "summary": "Estate Pinot noir producer in the hills outside Dallas, owned by Dena Drews and Ernie Pink, who bought a former cherry orchard in 1999 and turned it into a vineyard. Their first crush of estate fruit was in 2006, in a gravity-flow winery among the vines, and they earlier sold grapes to producers including Beaux Frères, Cristom and Elk Cove.",
+    "place": "Dallas, OR",
+    "sources": [
+      {
+        "title": "About (Amalie Robert Estate)",
+        "url": "https://www.amalierobert.com/about"
+      },
+      {
+        "title": "Ernie Pink biography (Amalie Robert Estate)",
+        "url": "https://www.amalierobert.com/ernies-bio"
+      },
+      {
+        "title": "Dena Drews biography (Amalie Robert Estate)",
+        "url": "https://www.amalierobert.com/denas-bio"
+      },
+      {
+        "title": "Amalie Robert Estate (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/amalie-robert-estate/2286/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "address": "13531 Bursell Road, Dallas, OR 97338",
+    "coordinates": {
+      "lat": 44.87258,
+      "lng": -123.29369
+    }
+  },
+  {
+    "id": "anacreon-winery",
+    "name": "Anacréon Winery",
+    "aka": [
+      "Anacreon Winery",
+      "Anacréon"
+    ],
+    "summary": "Small Chehalem Mountains winery near Newberg owned and run by Danell and Kipp Myers, formerly of Salt Lake City, who bought their Belle Colline Vineyard in 2016. Anna Matzinger makes its wines.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Anacréon Winery (home page)",
+        "url": "https://www.anacreonwinery.com/"
+      },
+      {
+        "title": "Our Story (Anacréon Winery)",
+        "url": "https://www.anacreonwinery.com/about"
+      },
+      {
+        "title": "Our Team (Anacréon Winery)",
+        "url": "https://www.anacreonwinery.com/team"
+      },
+      {
+        "title": "Anacréon Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/anacr%c3%a9on-winery/1462/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "founded": 2016,
+    "address": "17580 NE Dopp Road, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.34229,
+      "lng": -123.05684
+    }
+  },
+  {
+    "id": "anderson-family-vineyard",
+    "name": "Anderson Family Vineyard",
+    "summary": "Family estate of Cliff and Allison Anderson in the Dundee Hills, whose organically farmed vineyard was planted in 1992; much of its fruit has gone to other wineries. The Andersons began their own label of Pinot noir, Pinot gris and Chardonnay in 2002.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Anderson Family Vineyard (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/661/index.html"
+      },
+      {
+        "title": "Anderson Family Vineyard (Oregon Wine Board listing)",
+        "url": "https://www.oregonwine.org/wineries/anderson-family-vineyard/"
+      },
+      {
+        "title": "Cliff and Allison Anderson interview (Oregon Wine History Archive, Linfield)",
+        "url": "https://digitalcommons.linfield.edu/owha_willamette_interviews/117"
+      },
+      {
+        "title": "Anderson Family Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/anderson-family-vineyard/506/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "founded": 2002,
+    "address": "20120 NE Herring Ln, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.30943,
+      "lng": -123.03199
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "ankeny-vineyard",
+    "name": "Ankeny Vineyard",
+    "summary": "Estate winery in the Salem Hills south of Salem, founded by Joe Olexa in 1980 on an Oregon Trail pioneer's former orchard land. It grows mainly Pinot noir and Pinot gris; Rod Phelan is owner and winegrower and Drew Voit makes the wines.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "About (Ankeny Vineyard)",
+        "url": "https://ankenyvineyard.com/about/"
+      },
+      {
+        "title": "Contact (Ankeny Vineyard)",
+        "url": "https://ankenyvineyard.com/contact/"
+      },
+      {
+        "title": "Ankeny Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/ankeny-vineyard/1512/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "founded": 1980,
+    "address": "2565 Riverside Dr. South, Salem, OR 97306",
+    "coordinates": {
+      "lat": 44.81958,
+      "lng": -123.08519
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "artist-block",
+    "name": "Artist Block",
+    "aka": [
+      "Artist Block Wine"
+    ],
+    "summary": "Dundee Hills winery and art gallery founded by pop artist Anna Sweet, whose first vintage was 2021 and whose tasting room pairs wine with her artwork. It makes organically farmed Willamette Valley and Eola-Amity Hills wines, with Tracy Kendall as winemaker.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "This Is Us (Artist Block Wine)",
+        "url": "https://www.artistblockwine.com/pages/about-us"
+      },
+      {
+        "title": "The Wine (Artist Block Wine)",
+        "url": "https://www.artistblockwine.com/pages/the-wine"
+      },
+      {
+        "title": "Visit Us (Artist Block Wine)",
+        "url": "https://www.artistblockwine.com/pages/visit-us"
+      },
+      {
+        "title": "Artist Block Wine (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/artist-block-wine/2664/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "founded": 2023,
+    "address": "9650 NE Fox Lane, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.28554,
+      "lng": -123.03728
+    }
+  },
+  {
+    "id": "august-cellars",
+    "name": "August Cellars",
+    "summary": "Family winery on the Schaad farm on Chehalem Mountain east of Newberg, started in 2002 and named for patriarch August Schaad. Its hillside building also serves as a shared facility for several small tenant wineries; Tom Schaad became winemaker after his brother Jim died in 2020.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Our Story (August Cellars)",
+        "url": "https://www.augustcellars.com/our-story"
+      },
+      {
+        "title": "Contact Us (August Cellars)",
+        "url": "https://www.augustcellars.com/contact-us"
+      },
+      {
+        "title": "August Cellars (home page)",
+        "url": "https://www.augustcellars.com/"
+      },
+      {
+        "title": "August Cellars (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/august-cellars/522/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "founded": 2002,
+    "address": "14000 NE Quarry Road, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.31633,
+      "lng": -122.91234
+    }
+  },
+  {
+    "id": "aurora-vineyards",
+    "name": "Aurora Vineyards",
+    "aka": [
+      "Aurora Colony Vineyards"
+    ],
+    "summary": "Family-owned estate winery, restaurant and event venue in Aurora, first planted in 2002 as Aurora Colony Vineyards and renamed in 2024. Its first estate vintage was 2011, made at a custom-crush facility, with production moving to its own winery in 2017; John Moore is the owner.",
+    "place": "Aurora, OR",
+    "sources": [
+      {
+        "title": "The Vineyards and Winery (Aurora Vineyards)",
+        "url": "https://avwine.com/vineyards-and-winery/"
+      },
+      {
+        "title": "Our Team (Aurora Vineyards)",
+        "url": "https://avwine.com/our-team/"
+      },
+      {
+        "title": "Aurora Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/aurora-vineyards/295/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "founded": 2002,
+    "address": "21338 Oak Lane NE, Aurora, OR 97002",
+    "coordinates": {
+      "lat": 45.2292,
+      "lng": -122.77118
+    }
+  },
+  {
+    "id": "barking-dog",
+    "name": "Barking Dog",
+    "aka": [
+      "Barking Dog Vineyard & Winery",
+      "Barking Dog Winery",
+      "Barking Dog Vineyard"
+    ],
+    "summary": "Vineyard and small label of Emory and Mary Fry on high, south-facing slopes of the Chehalem Mountains near Bald Peak, dry farmed and LIVE certified. It sells Pinot noir fruit to other wineries and bottled its first vintages under its own label in 2022.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "2024 Pinot Noir: Barking Dog Vineyard & Winery (Oregon Wine Board marketplace)",
+        "url": "https://industry.oregonwine.org/marketplace/2024-pinot-noir-2/"
+      },
+      {
+        "title": "Willamette Valley Exhibition - Barking Dog Wines (Gallery 110)",
+        "url": "https://gallery110.com/exhibitions/willamette-valley-exhibition-barking-dog-wines"
+      },
+      {
+        "title": "Barking Dog (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/barking-dog/4926/"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "battle-creek-cellars",
+    "name": "Battle Creek Cellars",
+    "summary": "Oregon Pinot noir label made since 1998 from its namesake vineyard near Turner and other vineyards around the state, with Sarah Cabot as winemaker. Its tasting room is in Portland's Pearl District.",
+    "place": "Portland, OR",
+    "sources": [
+      {
+        "title": "Battle Creek Cellars (home page)",
+        "url": "https://www.battlecreekcellars.com/"
+      },
+      {
+        "title": "Oregon (Battle Creek Cellars)",
+        "url": "https://www.battlecreekcellars.com/oregon"
+      },
+      {
+        "title": "Winemaker (Battle Creek Cellars)",
+        "url": "https://www.battlecreekcellars.com/winemaker"
+      },
+      {
+        "title": "Battle Creek Cellars (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/battle-creek-cellars/5640/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "founded": 1998,
+    "address": "820 NW 13th Ave, Portland, OR 97209",
+    "coordinates": {
+      "lat": 45.5288,
+      "lng": -122.68428
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "bellingar-estates",
+    "name": "Bellingar Estates",
+    "summary": "Small family winery and farm west of Newberg run by Evan Bellingar, a longtime Willamette Valley vineyard manager, and Kim Bellingar, formerly chief operating officer of Adelsheim Vineyard. Its first commercial vintage was 2014, and its estate wines now come from Warrior's Rest Vineyard.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Bellingar Estates",
+        "url": "https://www.bellingarestates.com/"
+      },
+      {
+        "title": "Our Story (Bellingar Estates)",
+        "url": "https://www.bellingarestates.com/story/"
+      },
+      {
+        "title": "Bellingar Estates (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/bellingar-estates/961/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "address": "24055 NE North Valley Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.32974,
+      "lng": -122.98996
+    }
+  },
+  {
+    "id": "bluebird-hill-cellars",
+    "name": "Bluebird Hill Cellars",
+    "summary": "Small winery in the village of Alpine, west of Monroe in the southern Willamette Valley, founded by Neil and Sue Shay, who began planting a three-acre high-density estate vineyard in 2013. It is now owned by Kevin Zhang and Cleo Song.",
+    "place": "Monroe, OR",
+    "sources": [
+      {
+        "title": "Bluebird Hill Cellars",
+        "url": "https://www.bluebirdhillcellars.com/"
+      },
+      {
+        "title": "About Us (Bluebird Hill Cellars)",
+        "url": "https://www.bluebirdhillcellars.com/about"
+      },
+      {
+        "title": "Bluebird Hill Cellars (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/bluebird-hill-cellars/970/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "address": "25059 Larson Rd, Monroe, OR 97456",
+    "coordinates": {
+      "lat": 44.34202,
+      "lng": -123.3692
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "brigadoon-wine-co",
+    "name": "Brigadoon Wine Co",
+    "aka": [
+      "Brigadoon Wine Company"
+    ],
+    "summary": "Shown family winery near Junction City in the Lower Long Tom AVA, northwest of Eugene. Chris Shown farms the family's organically farmed Brigadoon Vineyards and his son Matt Shown is winemaker.",
+    "place": "Junction City, OR",
+    "sources": [
+      {
+        "title": "Brigadoon Wine Co",
+        "url": "https://www.brigadoonwineco.com/"
+      },
+      {
+        "title": "About Us (Brigadoon Wine Co)",
+        "url": "https://www.brigadoonwineco.com/about.html"
+      },
+      {
+        "title": "Visit Us (Brigadoon Wine Co)",
+        "url": "https://www.brigadoonwineco.com/visit.html"
+      },
+      {
+        "title": "Brigadoon Wine Co (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/brigadoon-wine-co/1764/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "address": "25167 Ferguson Rd, Junction City, OR 97448",
+    "coordinates": {
+      "lat": 44.24805,
+      "lng": -123.35575
+    }
+  },
+  {
+    "id": "burton-bittman-wines",
+    "name": "Burton Bittman Wines",
+    "summary": "Family label in the Dundee Hills with no tasting room of its own, made since 2010 from the family's estate vineyards, which it has farmed since 1987. The name honors two grandmothers, Kay Burton and Mary Bittman.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Burton Bittman Wines",
+        "url": "https://burtonbittmanwines.com/"
+      },
+      {
+        "title": "The Story (Burton Bittman Wines)",
+        "url": "https://burtonbittmanwines.com/the-story"
+      },
+      {
+        "title": "Burton Bittman Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/burton-bittman-wines/4588/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "founded": 2010
+  },
+  {
+    "id": "canas-feast-winery",
+    "name": "Cana's Feast Winery",
+    "aka": [
+      "Cana's Feast",
+      "Cuneo Cellars"
+    ],
+    "summary": "Carlton winery, formerly Cuneo Cellars and founded by Gino Cuneo, that makes Italian, Bordeaux and Rhône varieties and Pinot noir largely from Pacific Northwest growers such as Washington's Ciel du Cheval and Destiny Ridge vineyards. Patrick Taylor is winemaker.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "Cana's Feast Winery",
+        "url": "https://canasfeast.com/"
+      },
+      {
+        "title": "Vineyards (Cana's Feast)",
+        "url": "https://canasfeast.com/about-us/vineyards/"
+      },
+      {
+        "title": "Visit Us (Cana's Feast)",
+        "url": "https://canasfeast.com/visit-us/"
+      },
+      {
+        "title": "Cana's Feast Winery (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/967/"
+      },
+      {
+        "title": "Cana's Feast Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/cana%e2%80%99s-feast-winery/554/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "address": "750 W Lincoln St, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.29942,
+      "lng": -123.18039
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "chris-james-cellars",
+    "name": "Chris James Cellars",
+    "summary": "Family winery founded by Chris and Beth, who bought land on the western edge of the Yamhill-Carlton AVA in 2011 and planted Old Wagon Road Vineyard from 2013. It made its first wines in 2015, from estate fruit and Columbia Valley grapes, and also runs a tasting room in McMinnville.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "Chris James Cellars",
+        "url": "https://chrisjamescellars.com/"
+      },
+      {
+        "title": "About (Chris James Cellars)",
+        "url": "https://chrisjamescellars.com/about/"
+      },
+      {
+        "title": "Old Wagon Road Vineyard (Chris James Cellars)",
+        "url": "https://chrisjamescellars.com/old-wagon-road-vineyard/"
+      },
+      {
+        "title": "Chris James Cellars (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/chris-james-cellars/264/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "address": "12000 NW Old Wagon Rd, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.30561,
+      "lng": -123.29503
+    }
+  },
+  {
+    "id": "coeur-de-terre-vineyard",
+    "name": "Coeur de Terre Vineyard",
+    "aka": [
+      "Coeur de Terre",
+      "CdT"
+    ],
+    "summary": "Organically farmed estate winery west of McMinnville, founded in 1998 by Scott Neal, who makes the wine, and Lisa Neal. All its wines, led by Pinot noir from blocks named for family members, are grown and made on the estate in the McMinnville AVA.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "Coeur de Terre Vineyard",
+        "url": "https://cdtvineyard.com/"
+      },
+      {
+        "title": "About Us (Coeur de Terre Vineyard)",
+        "url": "https://cdtvineyard.com/about-us/"
+      },
+      {
+        "title": "Contact Us (Coeur de Terre Vineyard)",
+        "url": "https://cdtvineyard.com/contact/"
+      },
+      {
+        "title": "Coeur de Terre Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/coeur-de-terre-vineyard/565/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "founded": 1998,
+    "address": "21000 SW Eagle Point Rd, McMinnville, OR 97128",
+    "coordinates": {
+      "lat": 45.17783,
+      "lng": -123.33015
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "coleman-vineyard",
+    "name": "Coleman Vineyard",
+    "aka": [
+      "Coleman Vineyards"
+    ],
+    "summary": "Estate winery of Randy and Kim Coleman in the McMinnville AVA near the Van Duzer Corridor. Its dry-farmed vineyard, first planted in 1991, grows Pinot noir and Pinot gris.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "Coleman Vineyard",
+        "url": "https://www.colemanwine.com/"
+      },
+      {
+        "title": "The People (Coleman Vineyard)",
+        "url": "https://www.colemanwine.com/people/"
+      },
+      {
+        "title": "The Place (Coleman Vineyard)",
+        "url": "https://www.colemanwine.com/place/"
+      },
+      {
+        "title": "Coleman Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/coleman-vineyard/566/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "address": "22734 SW Latham Rd, McMinnville, OR 97128",
+    "coordinates": {
+      "lat": 45.12214,
+      "lng": -123.35325
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "crowley-wines",
+    "name": "Crowley Wines",
+    "summary": "Willamette Valley Pinot noir label of Tyson Crowley, a New York transplant who started it after about twelve years at Oregon wineries including Erath, Cameron, Archery Summit, Brick House and J.K. Carriere.",
+    "sources": [
+      {
+        "title": "Crowley Wines (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/764/"
+      },
+      {
+        "title": "Crowley Wines collection (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/crowley-wines-collection/"
+      },
+      {
+        "title": "Crowley Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/crowley-wines/326/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "coria-estates",
+    "name": "Cória Estates",
+    "aka": [
+      "Coria Estates"
+    ],
+    "summary": "Mexican-American family winery in the hills of south Salem, built around a large estate vineyard first planted in 1999. It is owned by Luis and Janice Cória, and their daughter Aurora Cória is winemaker.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Cória Estates",
+        "url": "https://www.coriaestates.com/"
+      },
+      {
+        "title": "Visit (Cória Estates)",
+        "url": "https://www.coriaestates.com/visit/"
+      },
+      {
+        "title": "Cória Estates (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2913/"
+      },
+      {
+        "title": "Cória Estates (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/c%c3%b3ria-estates/5/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "address": "8252 Redstone Ave SE, Salem, OR 97306",
+    "coordinates": {
+      "lat": 44.83512,
+      "lng": -123.051
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "division-winemaking-company",
+    "name": "Division Winemaking Company",
+    "aka": [
+      "Division Wine Co.",
+      "Division Wine Company"
+    ],
+    "summary": "Urban winery in Southeast Portland started in 2010 by Kate Norris and Thomas Monroe, who make low-intervention wines from organically, regeneratively or biodynamically farmed vineyards. Its labels include Division, Division-Villages and Norris's Gamine.",
+    "place": "Portland, OR",
+    "sources": [
+      {
+        "title": "About (Division Winemaking Co.)",
+        "url": "https://www.divisionwineco.com/about/"
+      },
+      {
+        "title": "Division Wine Company (Wine Anorak)",
+        "url": "https://wineanorak.com/Oregon/Oregon_15_divisionwinecompany.htm"
+      },
+      {
+        "title": "Division Winemaking Company (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/division-winemaking-company/236/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "founded": 2010,
+    "address": "2005 SE 8th Ave, Portland, OR 97214",
+    "coordinates": {
+      "lat": 45.50858,
+      "lng": -122.65784
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "eila",
+    "name": "Eila",
+    "aka": [
+      "Eila Wines"
+    ],
+    "summary": "Willamette Valley label of owner-winemaker Peter Sturn, whose first vintage was 2021. He makes stem-inclusive Pinot noir and Chardonnay from cool, higher-elevation vineyards in the Eola-Amity Hills and Chehalem Mountains.",
+    "sources": [
+      {
+        "title": "A Taste of Eila Wines (Enofylz Wine Blog)",
+        "url": "https://enofylzwineblog.com/2023/10/05/a-taste-of-eila-wines/"
+      },
+      {
+        "title": "Barrel Tasting with Eila Wines at The Studio (Willamette Valley Visitors Association)",
+        "url": "https://www.willamettevalley.org/eventdetail/5612/barrel-tasting-with-eila-wines-at-the-studio"
+      },
+      {
+        "title": "Eila Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/eila-wines/4237/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "failla",
+    "name": "Failla",
+    "aka": [
+      "Failla Wines",
+      "Failla Oregon"
+    ],
+    "summary": "Sonoma Coast producer founded in St. Helena in 1998 by winemaker Ehren Jordan, who began making Oregon wine in 2001 from fruit trucked to California and later moved Failla’s Oregon winemaking to Oregon. Its Oregon tasting room is at Patton Valley Vineyard near Gaston.",
+    "outsideOregon": true,
+    "place": "Gaston, OR",
+    "sources": [
+      {
+        "title": "About (Failla Oregon)",
+        "url": "https://www.faillawinesoregon.com/about"
+      },
+      {
+        "title": "Visit (Failla Oregon)",
+        "url": "https://www.faillawinesoregon.com/visit"
+      },
+      {
+        "title": "Vineyards (Failla Oregon)",
+        "url": "https://www.faillawinesoregon.com/vineyards"
+      },
+      {
+        "title": "Failla Oregon (Oregon Wine Press, 2018)",
+        "url": "https://www.oregonwinepress.com/failla-oregon"
+      },
+      {
+        "title": "Failla Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/failla-wines/237/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "founded": 1998,
+    "address": "9449 SW Old Hwy 47, Gaston, OR 97119",
+    "coordinates": {
+      "lat": 45.45403,
+      "lng": -123.15347
+    }
+  },
+  {
+    "id": "five-fourteen-vineyards",
+    "name": "Five Fourteen Vineyards",
+    "summary": "Estate winery northwest of Eugene owned by Tom and Marie Kokkeler, who first bought the property to farm and sell grapes; its first vineyard block dates from 1998. The name marks the couple's first date, May 14, and Drew Voit makes the wines.",
+    "place": "Junction City, OR",
+    "sources": [
+      {
+        "title": "Visit (Five Fourteen Vineyards)",
+        "url": "https://www.fivefourteenvineyards.com/visit"
+      },
+      {
+        "title": "Five Fourteen Vineyards",
+        "url": "https://www.fivefourteenvineyards.com/"
+      },
+      {
+        "title": "Five Fourteen Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2984/index.html"
+      },
+      {
+        "title": "Five Fourteen Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/five-fourteen-vineyards/231/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "address": "91470 Territorial Hwy, Junction City, OR 97448",
+    "coordinates": {
+      "lat": 44.14001,
+      "lng": -123.31918
+    }
+  },
+  {
+    "id": "gemini-vineyards",
+    "name": "Gemini Vineyards",
+    "summary": "Family-owned estate in the northeast Chehalem Mountains near Sherwood, planted in 1995 by the Hatfield family and now run by Luke and Emily de Hayr. It sells grapes to other wineries and bottles small lots of its own Pinot noir, Chardonnay, Pinot gris and Gamay.",
+    "place": "Sherwood, OR",
+    "sources": [
+      {
+        "title": "Gemini Vineyards",
+        "url": "https://www.geminivineyard.com/"
+      },
+      {
+        "title": "About (Gemini Vineyards)",
+        "url": "https://www.geminivineyard.com/about"
+      },
+      {
+        "title": "Visit (Gemini Vineyards)",
+        "url": "https://www.geminivineyard.com/visit"
+      },
+      {
+        "title": "Gemini Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/gemini-vineyards/5381/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "founded": 1995,
+    "address": "21082 SW Lebeau Rd, Sherwood, OR 97140",
+    "coordinates": {
+      "lat": 45.38226,
+      "lng": -122.90024
+    }
+  },
+  {
+    "id": "haakon-lenai",
+    "name": "Haakon/Lenai",
+    "summary": "Dundee Hills estate winery founded by Cody and Marque Wright of Purple Hands, named for their children. It makes about 500 cases a year of organically and biodynamically farmed estate Pinot noir and Chardonnay, sold mainly at its Red Hills Road tasting room.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "Haakon/Lenai",
+        "url": "https://www.haakonlenai.com/"
+      },
+      {
+        "title": "Story (Haakon/Lenai)",
+        "url": "https://www.haakonlenai.com/story"
+      },
+      {
+        "title": "Visit (Haakon/Lenai)",
+        "url": "https://www.haakonlenai.com/visit"
+      },
+      {
+        "title": "Haakon Lenai Vineyard and Tasting Room (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/haakon-lenai-vineyard-and-tasting-room/2201/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "address": "10555 NE Red Hills Rd, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.29262,
+      "lng": -123.02137
+    }
+  },
+  {
+    "id": "hudak-house",
+    "name": "Hudak House",
+    "aka": [
+      "Hudak Family Vineyards"
+    ],
+    "summary": "Family winery in West Salem run by Todd and Lynette Hudak and their four children, making wine only from their 30-acre Eola-Amity Hills estate of older, self-rooted vines. It also hosts a summer concert series.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Hudak House",
+        "url": "https://www.hudakhouse.com/"
+      },
+      {
+        "title": "About Us (Hudak House)",
+        "url": "https://www.hudakhouse.com/about"
+      },
+      {
+        "title": "Hudak House Collection (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/hudak-house-collection/"
+      },
+      {
+        "title": "Hudak Family Vineyards / Hudak House (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/hudak-family-vineyards-hudak-house/5342/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/hudak-house-collection/",
+        "title": "Hudak House Collection",
+        "date": "2023-06-12"
+      }
+    ],
+    "address": "5737 Orchard Heights Rd NW, Salem, OR 97304",
+    "coordinates": {
+      "lat": 44.96921,
+      "lng": -123.14794
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "iota-cellars",
+    "name": "iOTA Cellars",
+    "summary": "Small Amity winery begun in 2006 by Johanna and Don Sandberg with Lynne and Perry Pelos, making mainly Pinot noir from their dry-farmed Pelos Sandberg Vineyard. The Sandbergs make the wine and built an on-site winery in 2010.",
+    "place": "Amity, OR",
+    "sources": [
+      {
+        "title": "iOTA Cellars",
+        "url": "https://www.iotacellars.com/"
+      },
+      {
+        "title": "iOTA Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1032/index.html"
+      },
+      {
+        "title": "iOTA Cellars (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/iota-cellars/69/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "founded": 2006,
+    "address": "7895 SE Amity Rd, Amity, OR 97101",
+    "coordinates": {
+      "lat": 45.1141,
+      "lng": -123.15684
+    }
+  },
+  {
+    "id": "joel-gott-wines",
+    "name": "Joel Gott Wines",
+    "summary": "California wine brand based in St. Helena that also bottles an Oregon Pinot Noir from Willamette Valley fruit, drawn from the Eola-Amity Hills, Ribbon Ridge and Yamhill-Carlton appellations.",
+    "outsideOregon": true,
+    "place": "St. Helena, CA",
+    "sources": [
+      {
+        "title": "Oregon Pinot Noir (Joel Gott Wines)",
+        "url": "https://www.gottwines.com/wine/oregon-pinot-noir/"
+      },
+      {
+        "title": "Joel Gott Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/joel-gott-wines/144/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "k-and-m-wines",
+    "name": "K&M Wines",
+    "aka": [
+      "K & M Wines",
+      "K & M Winery"
+    ],
+    "summary": "Small-production label with a tasting room and shop, Milltown Mercantile, in Carlton. It makes Pinot Noir and Chardonnay from its own vineyard, has bottled a Réserve Alchemy Vineyard Pinot Noir, and buys bigger reds from Central Oregon and Washington.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "K & M Wines (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/wineries/k-m-wines/"
+      },
+      {
+        "title": "K & M Winery Réserve Alchemy Vineyard Pinot Noir 2012 (Delectable)",
+        "url": "https://delectable.com/wine/k-and-m-winery/reserve-alchemy-vineyard-pinot-noir/2012"
+      },
+      {
+        "title": "K&M Wines, Alchemy Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/k%26m-wines-alchemy-vineyard/78/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "address": "128 W Main St, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.29415,
+      "lng": -123.17622
+    }
+  },
+  {
+    "id": "la-biblioteca",
+    "name": "La Biblioteca",
+    "aka": [
+      "La Biblioteca Wine"
+    ],
+    "summary": "Willamette Valley label made from two estate vineyards, Aegrina in the McMinnville AVA and North Valley in Yamhill-Carlton, both planted in 2007. Its labels are illustrated by Carson Ellis, and it now shares a home with North Valley Vineyards.",
+    "sources": [
+      {
+        "title": "La Biblioteca Wine",
+        "url": "https://labibliotecawine.com/"
+      },
+      {
+        "title": "Our Vineyards (La Biblioteca Wine)",
+        "url": "https://labibliotecawine.com/our-vineyards/"
+      },
+      {
+        "title": "La Biblioteca (about)",
+        "url": "https://labibliotecawine.com/about/"
+      },
+      {
+        "title": "La Biblioteca Wine (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/la-biblioteca-wine/3152/"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "lachini-vineyards",
+    "name": "Lachini Vineyards",
+    "summary": "Family winery of Ron and Marianne Lachini, who bought a Chehalem Mountains hillside in 1998 and made their first single-vineyard Pinot Noir in 2001. The estate has been farmed biodynamically since 2008, and the winery also has a production facility and tasting bar in Tualatin.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Lachini Vineyards",
+        "url": "https://www.lachinivineyards.com/"
+      },
+      {
+        "title": "People (Lachini Vineyards)",
+        "url": "https://www.lachinivineyards.com/people"
+      },
+      {
+        "title": "Place (Lachini Vineyards)",
+        "url": "https://www.lachinivineyards.com/place"
+      },
+      {
+        "title": "Lachini Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/lachini-vineyards/82/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "address": "18225 NE Calkins Ln, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.34873,
+      "lng": -123.04933
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "laurel-ridge-winery",
+    "name": "Laurel Ridge Winery",
+    "aka": [
+      "Laurel Ridge"
+    ],
+    "summary": "Second-generation family winery on a farm east of Carlton in the Yamhill-Carlton AVA, bought by David Teppola in 1974; its first vintage was 1986.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "Laurel Ridge Winery",
+        "url": "https://www.laurelridgewinery.com/"
+      },
+      {
+        "title": "Laurel Ridge (Yamhill-Carlton Winegrowers Association)",
+        "url": "https://yamhillcarlton.org/wineries/laurel-ridge/"
+      },
+      {
+        "title": "Laurel Ridge Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/laurel-ridge-winery/84/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "address": "13301 NE Kuehne Rd, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.31477,
+      "lng": -123.09007
+    }
+  },
+  {
+    "id": "love-and-squalor",
+    "name": "Love & Squalor",
+    "aka": [
+      "Portland Wine Company",
+      "Love & Squalor Wine"
+    ],
+    "summary": "Label made by Matt Berson at Portland Wine Company, his urban winery in Southeast Portland, since 2006. It works only with Willamette Valley fruit from growers such as Temperance Hill Vineyard.",
+    "place": "Portland, OR",
+    "sources": [
+      {
+        "title": "Portland Wine Company, home of Love & Squalor",
+        "url": "https://www.portlandwinecompany.com/"
+      },
+      {
+        "title": "The Vineyards (Portland Wine Company)",
+        "url": "https://www.portlandwinecompany.com/thevineyards"
+      },
+      {
+        "title": "Matt Berson Interview, 2019 (Oregon Wine History Archive, Linfield University)",
+        "url": "https://digitalcommons.linfield.edu/owha_urban_interviews/5"
+      },
+      {
+        "title": "Love & Squalor Wine at Portland Wine Company (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/love-%26-squalor-wine-at-portland-wine-company/4183/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "founded": 2006,
+    "interviews": [
+      {
+        "url": "https://digitalcommons.linfield.edu/owha_urban_interviews/5",
+        "title": "Matt Berson",
+        "date": "2019-02-08",
+        "minutes": 77
+      }
+    ],
+    "address": "3201 SE 50th Ave, Portland, OR 97206",
+    "coordinates": {
+      "lat": 45.49954,
+      "lng": -122.61143
+    }
+  },
+  {
+    "id": "maison-noir-wines",
+    "name": "Maison Noir Wines",
+    "aka": [
+      "Maison Noir",
+      "Mouton Noir Wines"
+    ],
+    "summary": "Willamette Valley-made label of former sommelier André Hueston Mack, started in 2007 as Mouton Noir and later renamed.",
+    "sources": [
+      {
+        "title": "André Mack's Oregon-made Maison Noir Wines (KOIN)",
+        "url": "https://digital-release.koin.com/news/oregon/andre-macks-oregon-made-maison-noir-wines/"
+      },
+      {
+        "title": "Maison Noir Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/maison-noir-wines/337/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "founded": 2007
+  },
+  {
+    "id": "monksgate",
+    "name": "MonksGate",
+    "aka": [
+      "MonksGate Vineyard",
+      "Monksgate Vineyard and Wines"
+    ],
+    "summary": "Moore family estate outside Carlton, bought in 1998 by Ron and Linda Moore and now run with their daughter Rebecca. It makes estate Pinot Noir, Riesling and rosé and also sells fruit to other wineries.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "MonksGate",
+        "url": "https://www.monksgate.com/"
+      },
+      {
+        "title": "Our Story (MonksGate)",
+        "url": "https://www.monksgate.com/our-story"
+      },
+      {
+        "title": "Monksgate Vineyard and Wines (Yamhill-Carlton Winegrowers Association)",
+        "url": "https://yamhillcarlton.org/wineries/monksgate-vineyard/"
+      },
+      {
+        "title": "MonksGate Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/monksgate-vineyard/100/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "address": "9500 NE Oak Springs Farm Rd, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.28528,
+      "lng": -123.1077
+    }
+  },
+  {
+    "id": "montinore-estate",
+    "name": "Montinore Estate",
+    "aka": [
+      "Montinore"
+    ],
+    "summary": "Large biodynamic estate at the southern edge of Forest Grove, first planted in 1982, which Rudy Marchesi bought in 2005 and had Demeter certified in 2008. Its tasting room, The Grove, is in downtown McMinnville.",
+    "place": "Forest Grove, OR",
+    "sources": [
+      {
+        "title": "About Us (Montinore Estate)",
+        "url": "https://montinore.com/about-us"
+      },
+      {
+        "title": "Visit Us (Montinore Estate)",
+        "url": "https://www.montinore.com/visit-us"
+      },
+      {
+        "title": "Tualatin Hills AVA Granted Official Status (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2020/06/03/tualatin-hills-ava-granted-official-status/"
+      },
+      {
+        "title": "Montinore Estate (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/montinore-estate/101/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "address": "216 NE 3rd St, McMinnville, OR 97128",
+    "coordinates": {
+      "lat": 45.20996,
+      "lng": -123.1977
+    }
+  },
+  {
+    "id": "natalies-estate-winery",
+    "name": "Natalie's Estate Winery",
+    "summary": "Family winery in the Chehalem Mountains foothills near Newberg, owned by winemaker Boyd Teegarden, with a three-acre estate Pinot Noir planting. Besides Pinot Noir it makes Cabernet Sauvignon, Merlot, Syrah and other reds, partly from Columbia Valley fruit.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Natalie's Estate Winery",
+        "url": "https://www.nataliesestatewinery.com/"
+      },
+      {
+        "title": "Natalie's Estate Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1722/index.html"
+      },
+      {
+        "title": "Natalie's Estate Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/natalie%e2%80%99s-estate-winery/104/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "founded": 1999,
+    "address": "16825 NE Chehalem Dr, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.33793,
+      "lng": -122.99132
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "native-flora",
+    "name": "Native Flora",
+    "summary": "Small Dundee Hills estate of Scott and Denise Flora, founded in 2005 with vines first planted in 2006, making Pinot Noir and Pinot Blanc from its 33-acre site.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Native Flora",
+        "url": "https://www.nativeflora.com/"
+      },
+      {
+        "title": "Native Flora Wines (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2540/index.html"
+      },
+      {
+        "title": "Native Flora (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/native-flora/365/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "founded": 2005,
+    "address": "11812 NE Worden Hill Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.30137,
+      "lng": -123.06819
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "north-valley-vineyards",
+    "name": "North Valley Vineyards",
+    "summary": "Pinot Noir and Chardonnay brand begun as a partnership between Tony Soter and winemaker James Cahill. In 2021 investors led by Cahill bought it from Soter Vineyards, and investor Jay Lee contributed two estate vineyards, in the Yamhill-Carlton and McMinnville AVAs.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "North Valley Vineyards",
+        "url": "https://www.northvalleyvineyards.com/"
+      },
+      {
+        "title": "About (North Valley Vineyards)",
+        "url": "https://www.northvalleyvineyards.com/about"
+      },
+      {
+        "title": "North Valley Vineyards (Yamhill-Carlton AVA)",
+        "url": "https://yamhillcarlton.org/wineries/north-valley/"
+      },
+      {
+        "title": "Soter Vineyards Announces Sale of North Valley Brand (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2021/05/05/soter-vineyards-announces-sale-of-north-valley-brand"
+      },
+      {
+        "title": "North Valley Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/north-valley-vineyards/1505/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "address": "1326 N Highway 99W, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27291,
+      "lng": -123.01544
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "olive-hamilton-russell-wine",
+    "name": "Olive Hamilton Russell Wine",
+    "summary": "Willamette Valley label of Olive Hamilton Russell, who founded it and makes its single-vineyard Pinot Noir and Chardonnay. Its 2023 was her first vintage as sole winemaker, with fruit from Eola-Amity Hills sites such as Zena Crown Vineyard.",
+    "sources": [
+      {
+        "title": "Olive Hamilton Russell Wine",
+        "url": "https://olivehamiltonrussellwine.com/"
+      },
+      {
+        "title": "Olive Hamilton Russell (Eola-Amity Hills Winegrowers Association)",
+        "url": "https://eolaamityhills.com/portfolio/olive-hamilton-russell/"
+      },
+      {
+        "title": "Olive Hamilton Russell (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/olive-hamilton-russell/4505/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "pike-road-wines",
+    "name": "Pike Road Wines",
+    "summary": "McMinnville winery launched in 2016 by the Campbell family of Elk Cove Vineyards, its sister winery. It buys fruit from more than 20 family farms in six northern Willamette Valley AVAs; Adam Campbell is owner and Heather Perkin head winemaker.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "Pike Road Wines",
+        "url": "https://www.pikeroadwines.com/"
+      },
+      {
+        "title": "About (Pike Road Wines)",
+        "url": "https://www.pikeroadwines.com/about/"
+      },
+      {
+        "title": "Our Vineyards (Pike Road Wines)",
+        "url": "https://www.pikeroadwines.com/about/vineyards/"
+      },
+      {
+        "title": "Pike Road Wines (Yamhill-Carlton AVA)",
+        "url": "https://yamhillcarlton.org/wineries/pike-road-wines/"
+      },
+      {
+        "title": "Pike Road Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/pike-road-wines/114/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "founded": 2016,
+    "address": "701 NE Third St, McMinnville, OR 97128",
+    "coordinates": {
+      "lat": 45.21008,
+      "lng": -123.19206
+    },
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "raptor-ridge-winery",
+    "name": "Raptor Ridge Winery",
+    "summary": "Family winery founded in 1995 by Scott Shull, now owned with Annie Shull, with its estate Tuscowallame vineyard in the Chehalem Mountains near Newberg. Scott Shull is the winemaker, and it also buys fruit from other Willamette Valley AVAs.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Raptor Ridge Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/641/index.html"
+      },
+      {
+        "title": "Raptor Ridge Winery (Oregon Wine Board industry directory)",
+        "url": "https://industry.oregonwine.org/?p=37841"
+      },
+      {
+        "title": "Raptor Ridge Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/raptor-ridge-winery/132/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "founded": 1995,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "rh-wines",
+    "name": "RH Wines",
+    "aka": [
+      "RH Estate Wines",
+      "RH Wines at Redhawk Vineyard"
+    ],
+    "summary": "Salem winery making wine from its own 23-acre Redhawk Vineyard. It is owned by Tracey Rogers and Arron Bell, its winemaker, who worked at Domaine Drouhin Oregon for many years before.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "RH Wines",
+        "url": "https://www.rhestatewines.com/"
+      },
+      {
+        "title": "RH Estate Wines at Redhawk Vineyard (Eola-Amity Hills Winegrowers Association)",
+        "url": "https://eolaamityhills.com/portfolio/rh-estate-wines-at-redhawk-vineyard/"
+      },
+      {
+        "title": "RH Wines at Redhawk Vineyard (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/rh-wines-at-redhawk-vineyard/135/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "address": "2995 Michigan City Ln NW, Salem, OR 97304",
+    "coordinates": {
+      "lat": 44.98411,
+      "lng": -123.08781
+    }
+  },
+  {
+    "id": "roots-wine-co",
+    "name": "Roots Wine Co.",
+    "aka": [
+      "Roots Wine Company",
+      "Roots Wine"
+    ],
+    "summary": "Family winery near Yamhill in the Yamhill-Carlton AVA, owned by Chris and Hilary Berg with Chris as winemaker. It started in 2002 alongside the Roots Estate Vineyard and also makes single-vineyard wines from neighbouring growers.",
+    "place": "Yamhill, OR",
+    "sources": [
+      {
+        "title": "Roots Wine Co.",
+        "url": "https://roots.wine/"
+      },
+      {
+        "title": "Vines (Roots Wine Co.)",
+        "url": "https://roots.wine/vineyards"
+      },
+      {
+        "title": "Roots Wine (Yamhill-Carlton AVA)",
+        "url": "https://yamhillcarlton.org/wineries/roots-wine/"
+      },
+      {
+        "title": "Roots Wine Co. (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/roots-wine-co/2821/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "founded": 2002,
+    "address": "19320 NE Woodland Loop Rd, Yamhill, OR 97148",
+    "coordinates": {
+      "lat": 45.35711,
+      "lng": -123.11838
+    }
+  },
+  {
+    "id": "seufert-winery",
+    "name": "Seufert Winery",
+    "summary": "Small Dayton winery owned by winemaker Jim Seufert, focused on single-vineyard Pinot Noir bought from family-owned vineyards, plus white wines.",
+    "place": "Dayton, OR",
+    "sources": [
+      {
+        "title": "Seufert Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/993/index.html"
+      },
+      {
+        "title": "Wine (City of Dayton, Oregon)",
+        "url": "https://www.daytonoregon.org/wine/"
+      },
+      {
+        "title": "Seufert Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/seufert-winery/148/"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "sineann",
+    "name": "Sineann",
+    "aka": [
+      "Sineann Cellars",
+      "Sineann Winery"
+    ],
+    "summary": "Newberg winery started in 1994 by Peter Rosback and David O'Reilly; Rosback owns it and makes the wines. It buys fruit from Willamette Valley, Columbia Gorge and Columbia Valley vineyards, and from a vineyard in Marlborough, New Zealand.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "Sineann Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/406/index.html"
+      },
+      {
+        "title": "Sineann (WineBid producer profile)",
+        "url": "https://www.winebid.com/BuyWine/Producer/Sineann/2639"
+      },
+      {
+        "title": "Sineann (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/sineann/152/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "founded": 1994
+  },
+  {
+    "id": "stephen-goff-wines",
+    "name": "Stephen Goff Wines",
+    "summary": "Small Pinot Noir label of Stephen Goff, winemaker and vineyard manager at Colene Clemens Vineyards and a former assistant winemaker at Beaux Frères, exploring different Willamette Valley sites.",
+    "sources": [
+      {
+        "title": "Stephen Goff Wines (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2468/index.html"
+      },
+      {
+        "title": "Stephen Goff Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/stephen-goff-wines/6272/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "sweet-cheeks-winery",
+    "name": "Sweet Cheeks Winery",
+    "summary": "Family winery in the hills southwest of Eugene founded in 2005 by Dan Smith, who had planted the vineyard in 1978 and sold its grapes to other wineries for decades.",
+    "place": "Eugene, OR",
+    "sources": [
+      {
+        "title": "Sweet Cheeks Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2375/index.html"
+      },
+      {
+        "title": "A legacy of wine, family, and Oregon spirit (University of Oregon Alumni Association)",
+        "url": "https://www.uoalumni.com/index%2Ephp/article/2026/legacy-wine-family-and-oregon-spirit"
+      },
+      {
+        "title": "Sweet Cheeks Winery (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/sweet-cheeks-winery/167/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "founded": 2005
+  },
+  {
+    "id": "terra-vina-wines",
+    "name": "Terra Vina Wines",
+    "summary": "Family winery on Parrett Mountain near Wilsonville in the Chehalem Mountains AVA, founded by Karl and Carole Dinger, who planted the vineyard in the late 1990s. Karl makes the wines, daughter Roxanne runs operations, and there is also a tasting room in McMinnville.",
+    "place": "Wilsonville, OR",
+    "sources": [
+      {
+        "title": "About (Terra Vina Wines)",
+        "url": "https://www.terravinawines.com/about"
+      },
+      {
+        "title": "Terra Vina Vineyard Tasting Room (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=13898"
+      },
+      {
+        "title": "Meet the Growers (Explore Wilsonville)",
+        "url": "https://explorewilsonville.com/meet-the-growers/"
+      },
+      {
+        "title": "Terra Vina Wines (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/terra-vina-wines/171/"
+      }
+    ],
+    "verified": false,
+    "type": "winery",
+    "address": "33750 SW Ladd Hill Rd, Wilsonville, OR 97070",
+    "coordinates": {
+      "lat": 45.27666,
+      "lng": -122.85675
+    }
+  },
+  {
+    "id": "trinity-vineyards",
+    "name": "Trinity Vineyards",
+    "summary": "Small family-owned hilltop vineyard and winery south of Salem run by Steve Parker and his family, focused on Pinot Noir.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "Trinity Vineyards",
+        "url": "https://www.trinityvineyards.com/"
+      },
+      {
+        "title": "Our History (Trinity Vineyards)",
+        "url": "https://trinityvineyards.com/about-trinity/our-history/"
+      },
+      {
+        "title": "Trinity Vineyards (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/?p=14438"
+      },
+      {
+        "title": "Trinity Vineyards (Willamette Valley Wineries Association member listing)",
+        "url": "https://www.willamettewines.com/listing/trinity-vineyards/6097/"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "address": "1031 Wahl Ln S, Salem, OR 97306",
+    "coordinates": {
+      "lat": 44.84088,
+      "lng": -123.0623
+    },
+    "verifiedBy": "jev"
   }
 ]
