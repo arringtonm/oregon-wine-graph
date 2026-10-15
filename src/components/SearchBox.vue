@@ -54,42 +54,45 @@ function onEscape(event: KeyboardEvent) {
 </script>
 
 <template>
-  <ComboboxRoot
-    v-model:open="open"
-    class="search"
-    :model-value="null"
-    ignore-filter
-    :reset-search-term-on-blur="false"
-    @update:model-value="onPicked"
-  >
-    <ComboboxAnchor class="search__anchor">
-      <svg class="search__icon" viewBox="0 0 20 20" aria-hidden="true">
-        <circle cx="8.5" cy="8.5" r="5.5" />
-        <path d="m12.6 12.6 4.4 4.4" />
-      </svg>
-      <ComboboxInput
-        id="search"
-        v-model="query"
-        class="search__input"
-        placeholder="Search"
-        aria-label="Search people and places"
-        autocomplete="off"
-        @keydown.escape="onEscape"
-      />
-    </ComboboxAnchor>
-    <ComboboxPortal>
-      <ComboboxContent class="search-results" position="popper" :side-offset="4" align="start">
-        <ComboboxViewport>
-          <ComboboxItem v-for="node in results" :key="node.id" :value="node.id" :text-value="node.name" class="search-results__option">
-            <NodeGlyph :type="node.type" />
-            {{ node.name }}
-            <span class="visually-hidden">, {{ TYPE_NAMES[node.type] }}</span>
-          </ComboboxItem>
-          <ComboboxEmpty class="search-results__empty">No matches</ComboboxEmpty>
-        </ComboboxViewport>
-      </ComboboxContent>
-    </ComboboxPortal>
-  </ComboboxRoot>
+  <!-- A plain wrapper: the toolbar ignores pointer events so the graph stays draggable, and
+       a scoped style can't reliably reach Reka's root to turn them back on -->
+  <div class="search">
+    <ComboboxRoot
+      v-model:open="open"
+      :model-value="null"
+      ignore-filter
+      :reset-search-term-on-blur="false"
+      @update:model-value="onPicked"
+    >
+      <ComboboxAnchor class="search__anchor">
+        <svg class="search__icon" viewBox="0 0 20 20" aria-hidden="true">
+          <circle cx="8.5" cy="8.5" r="5.5" />
+          <path d="m12.6 12.6 4.4 4.4" />
+        </svg>
+        <ComboboxInput
+          id="search"
+          v-model="query"
+          class="search__input"
+          placeholder="Search"
+          aria-label="Search people and places"
+          autocomplete="off"
+          @keydown.escape="onEscape"
+        />
+      </ComboboxAnchor>
+      <ComboboxPortal>
+        <ComboboxContent class="search-results" position="popper" :side-offset="4" align="start">
+          <ComboboxViewport>
+            <ComboboxItem v-for="node in results" :key="node.id" :value="node.id" :text-value="node.name" class="search-results__option">
+              <NodeGlyph :type="node.type" />
+              {{ node.name }}
+              <span class="visually-hidden">, {{ TYPE_NAMES[node.type] }}</span>
+            </ComboboxItem>
+            <ComboboxEmpty class="search-results__empty">No matches</ComboboxEmpty>
+          </ComboboxViewport>
+        </ComboboxContent>
+      </ComboboxPortal>
+    </ComboboxRoot>
+  </div>
 </template>
 
 <style scoped>

@@ -306,6 +306,17 @@ function fitOpening() {
   opening = false
 }
 
+// The Fit button: the same framing, but gliding there rather than jumping
+function fitAnimated() {
+  if (!cy) return
+  const from = { zoom: cy.zoom(), pan: { ...cy.pan() } }
+  fit()
+  const to = { zoom: cy.zoom(), pan: { ...cy.pan() } }
+  if (reducedMotion.matches) return
+  cy.viewport(from)
+  cy.animate(to, { duration: 300, easing: 'ease-in-out-cubic' })
+}
+
 function fit(closer = 1) {
   if (!cy) return
   // Re-read the container's size: with a saved layout the first fit happens straight after
@@ -378,9 +389,28 @@ async function reset() {
   runLayout(true)
 }
 
-function runLayout(randomize: boolean) {
+// A full layout blocks the page for a second or two. The overlay is painted first (two
+// frames, or a short timeout where frames don't run, as in a background tab), so it shows
+// while the layout runs; its dots animate on the compositor, unaffected by the busy page
+const arranging = ref(false)
+const nextPaint = () =>
+  Promise.race([
+    new Promise<void>((done) => requestAnimationFrame(() => requestAnimationFrame(() => done()))),
+    new Promise<void>((done) => setTimeout(done, 60)),
+  ])
+
+async function runLayout(randomize: boolean) {
   if (!cy) return
   layout?.stop()
+  if (randomize) {
+    arranging.value = true
+    await nextPaint()
+  }
+  layoutNow(randomize)
+}
+
+function layoutNow(randomize: boolean) {
+  if (!cy) return
   layout = cy.layout({
     name: 'fcose',
     // 'proof' quality blocked the page for nearly three seconds on the full graph
@@ -420,6 +450,7 @@ function runLayout(randomize: boolean) {
     if (randomize) saveLayout()
     fitOpening()
     centerOnSelection()
+    arranging.value = false
   })
   layout.run()
 }
@@ -708,6 +739,12 @@ watch(
       <span v-if="tooltip.detail">{{ tooltip.detail }}</span>
     </div>
     <ControlsGuide v-show="!state.listView" />
+    <div v-if="arranging && !state.listView" class="graph-canvas__arranging" role="status">
+      <span class="graph-canvas__arranging-card">
+        <span class="graph-canvas__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        Arranging the graph…
+      </span>
+    </div>
     <div class="graph-canvas__toolbar" role="group" aria-label="Graph navigation">
       <Tip :label="state.filtersCollapsed ? 'Show filters' : 'Hide filters'">
         <button
@@ -799,7 +836,7 @@ watch(
         <Tip label="Zoom out">
           <button type="button" aria-label="Zoom out" @click="zoomBy(1 / 1.3)"><span aria-hidden="true">−</span></button>
         </Tip>
-        <button type="button" aria-describedby="fit-description" @click="fit()">Fit</button>
+        <button type="button" aria-describedby="fit-description" @click="fitAnimated">Fit</button>
         <button type="button" aria-describedby="reset-description" @click="reset">Reset</button>
       </div>
       <span id="fit-description" class="visually-hidden">Fit the whole graph in view</span>
@@ -976,6 +1013,80 @@ watch(
 .graph-canvas__filters {
   display: none;
   border-radius: 6px;
+}
+
+/* Buttons in a joined group share borders; the focused one rises above its neighbours so
+   its whole focus ring shows */
+.graph-canvas__group button:focus-visible,
+.graph-canvas__view button:focus-visible {
+  position: relative;
+  z-index: 1;
+}
+
+.graph-canvas__arranging {
+  position: absolute;
+  z-index: 3;
+  inset: var(--inset-top, 0px) var(--inset-right, 0px) 0 var(--inset-left, 0px);
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--page) 25%, transparent);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.graph-canvas__arranging-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1.1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--surface-raised);
+  box-shadow: var(--shadow);
+  font-weight: 600;
+}
+
+.graph-canvas__dots {
+  display: inline-flex;
+  gap: 0.3rem;
+}
+
+.graph-canvas__dots i {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--fill);
+  animation: graph-canvas-dot 1s ease-in-out infinite;
+}
+
+.graph-canvas__dots i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.graph-canvas__dots i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Opacity and transform only, so the animation runs off the main thread */
+@keyframes graph-canvas-dot {
+  0%,
+  80%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.7);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .graph-canvas__dots i {
+    animation: none;
+    opacity: 0.8;
+  }
 }
 
 .graph-canvas__group button + button {

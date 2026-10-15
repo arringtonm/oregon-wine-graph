@@ -2397,7 +2397,8 @@
         "url": "https://www.winespectator.com/webfeature/show/id/48015"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "rollin-soles--consulted--argyle-winery",
@@ -2533,7 +2534,8 @@
         "url": "https://www.mtouton.com/producers/roco"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "person"
   },
   {
     "id": "rollin-soles--winemaker--roco-winery",
