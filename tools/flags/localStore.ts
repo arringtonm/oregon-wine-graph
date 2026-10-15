@@ -8,7 +8,8 @@ import type { Flag } from '../../src/services/flagTypes'
 
 export interface StoredFlag extends Flag {
   id: string
-  source: 'local' | 'firestore'
+  // Sent on this dev server, or on the published site (remoteStore.ts)
+  source: 'local' | 'remote'
   resolvedAt?: string
 }
 

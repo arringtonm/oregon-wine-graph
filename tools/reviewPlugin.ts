@@ -20,6 +20,7 @@ import { evidenceFor, findRecord, removeEdge, updateEdge } from './check/edit'
 import { readCached } from './check/fetchSources'
 import { compact, CHECKS_FILE, readChecks, writeChecks } from './check/store'
 import { addLocalFlag, readLocalFlags, resolveLocalFlag } from './flags/localStore'
+import { readRemoteFlags, resolveRemoteFlag } from './flags/remoteStore'
 import { askGraph, type AskOverride } from './jev/askGraph'
 import { jevModel, stubModel } from './jev/model'
 import { parseConnection, slugify, type ProposedEdge } from './jev/parseConnection'
@@ -280,16 +281,18 @@ export function reviewPlugin(dataDir = resolve('src/data')): Plugin {
         }),
       )
 
-      // Flags from readers (when Firebase isn't configured): add one, list them, resolve one
+      // Flags from readers: sent here (kept locally) or on the published site (in D1).
+      // Add one locally, list both, resolve one wherever it is kept
       server.middlewares.use('/__flags/add', route((body) => addLocalFlag(body)))
       server.middlewares.use(
         '/__flags/list',
-        route(() => readLocalFlags()),
+        route(async () => [...readLocalFlags(), ...(await readRemoteFlags())]),
       )
       server.middlewares.use(
         '/__flags/resolve',
-        route(({ id }) => {
-          if (typeof id !== 'string' || !resolveLocalFlag(id)) throw new Error('Unknown flag')
+        route(async ({ id }) => {
+          if (typeof id !== 'string') throw new Error('Unknown flag')
+          if (!resolveLocalFlag(id)) await resolveRemoteFlag(id)
           return { resolved: id }
         }),
       )

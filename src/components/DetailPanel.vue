@@ -144,8 +144,10 @@ const canFlag = flagsAvailable()
       <p>{{ selectedNode.summary }}</p>
       <p class="detail__status">
         <span v-if="reviewing && !selectedNode.verified" class="detail__badge">Unverified draft</span>
-        <VerifiedMark kind="node" :record="selectedNode" :label="selectedNode.name" />
-        <FlagButton v-if="canFlag" kind="node" :id="selectedNode.id" :label="`${selectedNode.name}: ${selectedNode.summary}`" />
+        <span class="detail__marks">
+          <VerifiedMark kind="node" :record="selectedNode" :label="selectedNode.name" />
+          <FlagButton v-if="canFlag" kind="node" :id="selectedNode.id" :label="`${selectedNode.name}: ${selectedNode.summary}`" />
+        </span>
         <button
           v-if="reviewing"
           type="button"
@@ -169,8 +171,10 @@ const canFlag = flagsAvailable()
               {{ other.name }}
             </button>
             <span v-if="years" class="detail__years">{{ years }}</span>
-            <VerifiedMark kind="edge" :record="edge" :label="`${label} ${other.name}`" />
-            <FlagButton v-if="canFlag" kind="edge" :id="edge.id" :label="`${selectedNode.name} ${label} ${other.name}`" />
+            <span class="detail__marks">
+              <VerifiedMark kind="edge" :record="edge" :label="`${label} ${other.name}`" />
+              <FlagButton v-if="canFlag" kind="edge" :id="edge.id" :label="`${selectedNode.name} ${label} ${other.name}`" />
+            </span>
             <span class="detail__refs">
               <template v-for="(source, index) in edge.sources" :key="source.title">
                 <a v-if="source.url" :href="source.url" :title="source.title" target="_blank" rel="noopener">
@@ -414,6 +418,15 @@ li {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.detail__marks {
+  display: inline-flex;
+  align-items: center;
+}
+
+.detail__marks:empty {
+  display: none;
 }
 
 .detail__refs {

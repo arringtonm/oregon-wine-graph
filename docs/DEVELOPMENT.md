@@ -118,11 +118,13 @@ npx wrangler d1 execute oregon-wine-flags --local --command "SELECT * FROM flags
 
 - **Flags database:** D1 database `oregon-wine-flags`; its id is in `wrangler.toml`, and its table was created from `migrations/0001_flags.sql`.
 - **Secrets** (Worker → Settings → Variables and secrets): `JEV_API_KEY`, and `TURNSTILE_SECRET` once Turnstile is set up.
-- **Turnstile:** a widget for `oregonwine.app`; its public site key is `VITE_TURNSTILE_SITE_KEY` in `.env.production`.
+- **Turnstile:** the widget "Oregon Wine Graph flags" for `oregonwine.app` (Managed mode); its public site key is `VITE_TURNSTILE_SITE_KEY` in `.env.production`, its secret key the Worker secret `TURNSTILE_SECRET`. To test locally, build with Cloudflare's always-pass test keys: `VITE_TURNSTILE_SITE_KEY=1x00000000000000000000AA` for the build and `TURNSTILE_SECRET=1x0000000000000000000000000000000AA` in `.dev.vars`.
 - **Domain:** `oregonwine.app` under the Worker's Domains.
 - **Rate limit:** Security → WAF → Rate limiting rules: paths starting with `/api/`, about 20 requests in 10 seconds per IP.
 
-Reading flags: `npx wrangler d1 execute oregon-wine-flags --remote --command "SELECT * FROM flags WHERE resolved_at IS NULL ORDER BY created_at DESC"`, or the D1 console in the dashboard.
+Admin mode on the dev server lists flags from the published site alongside local ones, and Resolve works on both. It reads D1 through wrangler, so run `npx wrangler login` once; without it, admin mode shows local flags only.
+
+Reading flags by hand: `npx wrangler d1 execute oregon-wine-flags --remote --command "SELECT * FROM flags WHERE resolved_at IS NULL ORDER BY created_at DESC"`, or the D1 console in the dashboard.
 
 ## Sources and research tools
 
@@ -168,4 +170,3 @@ The selected node is kept in the URL hash, so `/#david-lett` links straight to a
 - More relationship types: AVA petitioners, donors, "sold vines to", regulators.
 - Widen coverage beyond the northern Willamette Valley.
 - Split the JavaScript bundle; the data and graph library make the single chunk large.
-- Pull production flags from D1 into the dev server's admin mode, so flags from the live site join the same review workflow.

@@ -81,7 +81,7 @@ function defaultFilters() {
 // A flag as the admin sees it: what was sent, plus where it is stored and whether handled
 export interface AdminFlag extends Flag {
   id: string
-  source: 'local' | 'firestore'
+  source: 'local' | 'remote'
   resolvedAt?: string
 }
 

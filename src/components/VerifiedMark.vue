@@ -1,30 +1,89 @@
 <script setup lang="ts">
-import { PopoverArrow, PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'reka-ui'
-import { computed } from 'vue'
+import { PopoverAnchor, PopoverArrow, PopoverContent, PopoverPortal, PopoverRoot } from 'reka-ui'
+import { computed, onBeforeUnmount, ref } from 'vue'
 import verifiedSources from '../data/verified-sources.json'
 import type { GraphEdge, GraphNode } from '../data/schema'
 
-// A small check beside a verified record. It opens a note saying how the record was
-// verified and, for the automated check, the source that supported it. A popover rather
-// than a tooltip, since it holds a link and must work by tap and keyboard.
+// A small check beside a verified record. Its note says how the record was verified and,
+// for the automated check, the source that supported it. The note shows on mouse hover, like
+// a tooltip, and stays put on click, tap or Enter; a popover rather than a tooltip because
+// it holds a link, which the pointer can move onto.
 const props = defineProps<{ kind: 'node' | 'edge'; record: GraphNode | GraphEdge; label: string }>()
 
 const supporting = computed(() => {
   const index = (verifiedSources as Record<string, number>)[`${props.kind}:${props.record.id}`]
   return index === undefined ? undefined : props.record.sources[index]
 })
+
+const open = ref(false)
+// Opened by click, tap or keyboard (stays until dismissed), rather than by hovering
+const pinned = ref(false)
+const button = ref<HTMLButtonElement>()
+let timer: ReturnType<typeof setTimeout> | undefined
+
+function hover(entering: boolean, event: PointerEvent) {
+  if (event.pointerType !== 'mouse' || pinned.value) return
+  clearTimeout(timer)
+  timer = setTimeout(() => (open.value = entering), entering ? 150 : 200)
+}
+
+function click() {
+  clearTimeout(timer)
+  // A click on a note opened by hovering keeps it open; otherwise it toggles
+  if (open.value && !pinned.value) pinned.value = true
+  else {
+    pinned.value = !open.value
+    open.value = !open.value
+  }
+}
+
+function dismiss(value: boolean) {
+  if (value) return
+  open.value = false
+  pinned.value = false
+}
+
+// Clicks on the check itself are handled by click(), not treated as clicking outside
+function insideButton(event: Event) {
+  if (button.value?.contains(event.target as Node)) event.preventDefault()
+}
+
+onBeforeUnmount(() => clearTimeout(timer))
 </script>
 
 <template>
-  <PopoverRoot v-if="record.verified">
-    <PopoverTrigger class="verified" :aria-label="`Verified: ${label}`">
-      <svg viewBox="0 0 16 16" aria-hidden="true">
-        <circle cx="8" cy="8" r="7" />
-        <path d="m4.8 8.2 2.1 2.1 4.3-4.6" />
-      </svg>
-    </PopoverTrigger>
+  <PopoverRoot v-if="record.verified" :open="open" @update:open="dismiss">
+    <PopoverAnchor as-child>
+      <button
+        ref="button"
+        type="button"
+        class="verified"
+        :aria-label="`Verified: ${label}`"
+        :aria-expanded="open"
+        aria-haspopup="dialog"
+        :data-state="open ? 'open' : 'closed'"
+        @click="click"
+        @pointerenter="hover(true, $event)"
+        @pointerleave="hover(false, $event)"
+      >
+        <svg viewBox="0 0 16 16" aria-hidden="true">
+          <circle cx="8" cy="8" r="7" />
+          <path d="m4.8 8.2 2.1 2.1 4.3-4.6" />
+        </svg>
+      </button>
+    </PopoverAnchor>
     <PopoverPortal>
-      <PopoverContent class="verified-note" side="top" :side-offset="6" :collision-padding="12">
+      <PopoverContent
+        class="verified-note"
+        side="top"
+        :side-offset="6"
+        :collision-padding="12"
+        @open-auto-focus="!pinned && $event.preventDefault()"
+        @close-auto-focus="!pinned && $event.preventDefault()"
+        @interact-outside="insideButton"
+        @pointerenter="hover(true, $event)"
+        @pointerleave="hover(false, $event)"
+      >
         <template v-if="record.verifiedBy === 'jev'">
           <p><strong>Verified</strong> by Oregon Wine Graph Bot</p>
           <p v-if="supporting">
@@ -61,7 +120,8 @@ const supporting = computed(() => {
   cursor: pointer;
 }
 
-.verified:hover {
+.verified:hover,
+.verified[data-state='open'] {
   background: var(--wash);
 }
 

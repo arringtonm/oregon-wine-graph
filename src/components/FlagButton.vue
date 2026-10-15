@@ -29,17 +29,26 @@ const human = ref<HTMLElement>()
 const token = ref('')
 let removeTurnstile = () => {}
 
-// A fresh form each time it opens
-watch(open, async (isOpen) => {
+// A fresh check: each token is good for one send
+async function startCheck() {
   removeTurnstile()
-  if (!isOpen) return
-  Object.assign(form, { reason: '', note: '', sourceUrl: '', website: '' })
-  sent.value = false
-  error.value = ''
   token.value = ''
   if (!turnstileSiteKey) return
   await nextTick()
-  if (human.value) removeTurnstile = await renderTurnstile(human.value, (value) => (token.value = value))
+  try {
+    if (human.value) removeTurnstile = await renderTurnstile(human.value, (value) => (token.value = value))
+  } catch {
+    error.value = 'The check that you’re a person didn’t load; please try again later.'
+  }
+}
+
+// A fresh form each time it opens
+watch(open, async (isOpen) => {
+  if (!isOpen) return removeTurnstile()
+  Object.assign(form, { reason: '', note: '', sourceUrl: '', website: '' })
+  sent.value = false
+  error.value = ''
+  await startCheck()
 })
 onBeforeUnmount(() => removeTurnstile())
 
@@ -59,6 +68,7 @@ async function send() {
     void loadFlags()
   } catch (failure) {
     error.value = failure instanceof Error ? failure.message : 'Something went wrong; please try again.'
+    if (token.value) void startCheck()
   } finally {
     busy.value = false
   }
