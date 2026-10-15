@@ -47,6 +47,8 @@ function onKeydown(event: KeyboardEvent) {
 onMounted(() => {
   document.addEventListener('keydown', onKeydown)
   compactQuery.addEventListener('change', onCompactChange)
+  // The width may have changed since setup read it, before this listened
+  onCompactChange()
   init()
 })
 onBeforeUnmount(() => {

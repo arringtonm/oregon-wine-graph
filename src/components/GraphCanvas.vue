@@ -720,6 +720,8 @@ onMounted(() => {
   // Capture phase, so this runs instead of Cytoscape's own wheel-to-zoom handler
   container.value!.addEventListener('wheel', onWheel, { capture: true, passive: false })
   compactQuery.addEventListener('change', onCompactChange)
+  // The width may have changed since setup read it, before this listened
+  onCompactChange()
   if (window.ResizeObserver && toolbar.value) {
     toolbarObserver = new ResizeObserver(measureToolbar)
     toolbarObserver.observe(toolbar.value)
@@ -959,8 +961,8 @@ watch(
   z-index: 4;
   top: calc(var(--inset-top, 0px) + 12px);
   left: calc(var(--inset-left, 0px) + 12px);
-  /* Room for the controls guide's button in the top-right corner */
-  right: calc(var(--inset-right, 0px) + 9rem);
+  /* Room for the controls guide's ? button in the top-right corner */
+  right: calc(var(--inset-right, 0px) + 12px + 36px + 8px);
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -990,10 +992,11 @@ watch(
   color: var(--text-primary);
 }
 
+/* Not available yet (no history to go back or forward through): the button keeps its
+   frosted background, like its neighbours, and only its symbol fades */
 .graph-canvas__toolbar button:disabled {
-  color: var(--text-secondary);
+  color: color-mix(in srgb, var(--text-secondary) 45%, transparent);
   cursor: default;
-  opacity: 0.6;
 }
 
 .graph-canvas__toolbar .graph-canvas__history-toggle {

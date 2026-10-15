@@ -34,7 +34,11 @@ function setAva(id: string, chosen: boolean) {
 const compactQuery = window.matchMedia('(max-width: 1024px)')
 const compact = ref(compactQuery.matches)
 const onCompactChange = () => (compact.value = compactQuery.matches)
-onMounted(() => compactQuery.addEventListener('change', onCompactChange))
+onMounted(() => {
+  compactQuery.addEventListener('change', onCompactChange)
+  // The width may have changed since setup read it, before this listened
+  onCompactChange()
+})
 onBeforeUnmount(() => compactQuery.removeEventListener('change', onCompactChange))
 const isDialog = computed(() => compact.value && state.filtersOpen)
 // Hidden on desktop by the toolbar's sidebar button; out of the tab order while hidden

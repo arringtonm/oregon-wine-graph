@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { PopoverContent, PopoverRoot, PopoverTrigger } from 'reka-ui'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
-import Chevron from './Chevron.vue'
+import Tip from './Tip.vue'
 
 // How to move around the graph, for the device in hand: touch gestures on a phone or
 // tablet, mouse and trackpad on a computer, with ⌘ or Ctrl to match the system. The ? key
@@ -93,11 +93,14 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
 <template>
   <div class="guide">
     <PopoverRoot v-model:open="open">
-      <PopoverTrigger as-child>
-        <button type="button" class="guide__toggle" aria-keyshortcuts="?">
-          <kbd aria-hidden="true">?</kbd> <span class="guide__label">Controls</span><Chevron />
-        </button>
-      </PopoverTrigger>
+      <!-- Just "?", its shortcut; named "Controls", which the tooltip shows -->
+      <Tip label="Controls">
+        <PopoverTrigger as-child>
+          <button type="button" class="guide__toggle" aria-label="Controls" aria-keyshortcuts="?">
+            <span aria-hidden="true">?</span>
+          </button>
+        </PopoverTrigger>
+      </Tip>
       <PopoverContent class="guide__panel" align="end" :side-offset="4" aria-labelledby="controls-guide-heading">
         <header class="guide__header">
           <h2 id="controls-guide-heading">{{ touchOnly ? 'Touch controls' : 'Controls' }}</h2>
@@ -136,11 +139,11 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
 }
 
 .guide__toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
   height: 36px;
-  padding: 0 10px;
+  padding: 0;
   border: 1px solid var(--border-strong);
   border-radius: 6px;
   background: var(--frost);
@@ -148,6 +151,9 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
   backdrop-filter: var(--frost-blur);
   color: inherit;
   font: inherit;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1;
   cursor: pointer;
 }
 
@@ -167,26 +173,11 @@ kbd {
   white-space: nowrap;
 }
 
+/* As large as the toolbar's other buttons on smaller screens */
 @media (max-width: 1024px) {
-  /* Just the ? key, the width of the zoom column below it; still named "Controls" */
   .guide__toggle {
-    justify-content: center;
     width: 40px;
     height: 40px;
-    padding: 0;
-  }
-
-  .guide__toggle .chevron {
-    display: none;
-  }
-
-  .guide__label {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
   }
 }
 </style>
