@@ -66,8 +66,62 @@ export const BUSY_PHRASES = [
   'Watching for frost',
 ] as const
 
-// A phrase other than the last one shown, so two in a row never match
-export function pickBusyPhrase(previous?: string, random = Math.random): string {
-  const choices = BUSY_PHRASES.filter((phrase) => phrase !== previous)
+// The empty detail panel's button that rolls a random record: a new label each time the
+// panel shows. Short enough for one line
+export const RANDOM_INVITES = [
+  'Blind Tasting',
+  'New Vintage',
+  'Explore Varietals',
+  'Mystery Pour',
+  'Pull a Cork',
+  'Pour a Surprise',
+  'Sommelier’s Pick',
+  'Uncork a Mystery',
+  'Taste Something New',
+  'Try a Flight',
+  'Off the Wine List',
+  'Wander the Cellar',
+  'Pick a Bottle',
+  'House Pour',
+  'Go Off Menu',
+  'Spin the Bottle',
+  'Pick a Cork',
+  'Roll the Barrel',
+  'Chef’s Choice',
+  'Winemaker’s Whim',
+  'Cellar Door Surprise',
+  'By the Glass',
+  'Pour Me Something',
+  'Surprise Me',
+  'Grab a Glass',
+  'Wild Card Vintage',
+  'Hidden Gem',
+  'Under the Radar',
+  'Back of the Cellar',
+  'Library Release',
+  'Barrel Sample',
+  'Tasting Room Roulette',
+  'Follow the Vine',
+  'Wander the Rows',
+  'Detour to Wine Country',
+  'Take a Back Road',
+  'Lucky Pour',
+  'Fill My Glass',
+  'Top Me Off',
+  'One More Glass',
+  'Tonight’s Special',
+  'Bartender’s Pick',
+  'Staff Favorite',
+  'Shake Up the Rack',
+  'Pick Up the Trail',
+
+] as const
+
+// A phrase from the list other than the last one shown, so two in a row never match
+export function pickPhrase(phrases: readonly string[], previous?: string, random = Math.random): string {
+  const choices = phrases.filter((phrase) => phrase !== previous)
   return choices[Math.floor(random() * choices.length)]
 }
+
+export const pickBusyPhrase = (previous?: string, random = Math.random) => pickPhrase(BUSY_PHRASES, previous, random)
+export const pickInvite = (previous?: string, random = Math.random) => pickPhrase(RANDOM_INVITES, previous, random)

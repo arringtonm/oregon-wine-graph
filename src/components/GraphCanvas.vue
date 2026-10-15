@@ -805,6 +805,10 @@ watch(
         {{ busyPhrase }}…
       </span>
     </div>
+    <!-- What the filters leave showing, in the graph's corner; the list view has its own count -->
+    <p v-show="!state.listView" class="graph-canvas__count" role="status">
+      {{ visibleNodes.length }} nodes, {{ visibleEdges.length }} connections shown
+    </p>
     <div ref="toolbar" class="graph-canvas__toolbar" role="group" aria-label="Graph navigation">
       <Tip :label="state.filtersCollapsed ? 'Show filters' : 'Hide filters'">
         <button
@@ -957,8 +961,27 @@ watch(
 }
 
 /* Layers, shared with App.vue, GraphControls and DetailPanel: the graph and list (auto),
-   the sheet (2), the arranging overlay (3), the toolbar and the guide (4), tooltips (5),
+   the node count (1), the sheet (2), the arranging overlay (3), the toolbar and the guide (4),
+   tooltips (5),
    then on smaller screens the drawer's backdrop (6) and the drawer (7) */
+
+/* Bottom left of the visible graph. Below the detail sheet (1 against its 2), which covers
+   it on smaller screens while a record is open */
+.graph-canvas__count {
+  position: absolute;
+  z-index: 1;
+  bottom: 12px;
+  left: calc(var(--inset-left, 0px) + 12px);
+  margin: 0;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  background: var(--frost);
+  -webkit-backdrop-filter: var(--frost-blur);
+  backdrop-filter: var(--frost-blur);
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  pointer-events: none;
+}
 
 /* Wide screens: the controls guide, top right */
 .graph-canvas__side {

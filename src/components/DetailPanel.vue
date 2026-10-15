@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, ref, watch } from 'vue'
 import { nodeYears, reviewing, SINGULAR_TYPE, useGraph, type Connection } from '../composables/useGraph'
-import { EDGE_CATEGORY_LABELS } from '../data/schema'
+import { EDGE_CATEGORY_LABELS, type GraphNode } from '../data/schema'
 import AddConnection from './AddConnection.vue'
 import NodeGlyph from './NodeGlyph.vue'
 import NodePreview from './NodePreview.vue'
@@ -9,6 +9,7 @@ import ReviewTools from './ReviewTools.vue'
 import FlagButton from './FlagButton.vue'
 import FlagNotes from './FlagNotes.vue'
 import VerificationSummary from './VerificationSummary.vue'
+import { pickInvite } from '../graph/busyPhrases'
 import { factsOf } from '../services/facts'
 import { flagsAvailable } from '../services/flags'
 
@@ -28,16 +29,24 @@ const {
   nodeById,
   openFlags,
   selectNextFlagged,
-  historyEntries,
-  goToHistory,
 } = useGraph()
 
-// The empty panel's "Recently viewed": the last few records, newest first, each once
-const RECENT_LIMIT = 4
-const recent = computed(() => {
-  const seen = new Set<string>()
-  return historyEntries.value.filter(({ node }) => !seen.has(node.id) && seen.add(node.id)).slice(0, RECENT_LIMIT)
-})
+// The empty panel's random button: a new label from the cellar each time the panel empties
+const invite = ref(pickInvite())
+watch(
+  () => !selectedNode.value,
+  (empty) => empty && (invite.value = pickInvite(invite.value)),
+)
+
+// The empty panel's "Recently viewed": the last few records viewed in this browser, kept
+// across visits (state.recent), skipping any no longer in the data
+const RECENT_SHOWN = 4
+const recent = computed(() =>
+  state.recent
+    .map((id) => nodeById.value.get(id))
+    .filter((node): node is GraphNode => node !== undefined)
+    .slice(0, RECENT_SHOWN),
+)
 
 // A winery's or vineyard's AVAs, by name
 const avaNames = computed(() =>
@@ -310,11 +319,11 @@ const canFlag = flagsAvailable()
         Hover a line to read the connection.
       </p>
       <!-- The same roll as the graph's Random button, with its short pause -->
-      <!-- Its name starts with what it shows, so speech control can say "Surprise me" -->
+      <!-- Its name starts with what it shows, so speech control can say the label -->
       <button
         type="button"
         class="detail__random"
-        aria-label="Surprise me with a random person, winery, vineyard or organization"
+        :aria-label="`${invite}: a random person, winery, vineyard or organization`"
         @click="state.randomRequest++"
       >
         <svg viewBox="0 0 20 20" aria-hidden="true">
@@ -325,16 +334,16 @@ const canFlag = flagsAvailable()
           <circle cx="7" cy="13" r="1.25" />
           <circle cx="13" cy="13" r="1.25" />
         </svg>
-        Surprise me
+        {{ invite }}
       </button>
 
       <!-- The last few records viewed, at the foot of the panel -->
       <section v-if="recent.length" class="detail__recent">
         <h3>Recently viewed</h3>
         <ul>
-          <li v-for="{ index, node } in recent" :key="node.id">
+          <li v-for="node in recent" :key="node.id">
             <NodePreview :node="node">
-              <button type="button" class="detail__link" @click="goToHistory(index); state.focusDetailsRequest++">
+              <button type="button" class="detail__link" @click="select(node.id, { focusDetails: true })">
                 <NodeGlyph :type="node.type" />
                 {{ node.name }}
               </button>
@@ -594,7 +603,6 @@ ul + .detail__verb {
   color: var(--text-primary);
   font: inherit;
   font-size: 1.0625rem;
-  font-weight: 600;
   text-align: left;
   cursor: pointer;
 }

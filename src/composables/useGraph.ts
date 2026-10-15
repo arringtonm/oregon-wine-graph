@@ -92,6 +92,27 @@ export interface AdminFlag extends Flag {
 }
 
 const COLLAPSED_KEY = 'oregon-wine-graph:filters-collapsed'
+const RECENT_KEY = 'oregon-wine-graph:recent'
+// Records viewed in this browser, newest first; the empty panel lists a few of them
+const RECENT_LIMIT = 8
+
+function readRecent(): string[] {
+  try {
+    const stored: unknown = JSON.parse(localStorage.getItem(RECENT_KEY) ?? '[]')
+    return Array.isArray(stored) ? stored.filter((id): id is string => typeof id === 'string').slice(0, RECENT_LIMIT) : []
+  } catch {
+    return []
+  }
+}
+
+function rememberRecent(id: string) {
+  state.recent = [id, ...state.recent.filter((other) => other !== id)].slice(0, RECENT_LIMIT)
+  try {
+    localStorage.setItem(RECENT_KEY, JSON.stringify(state.recent))
+  } catch {
+    // Kept for this visit only where storage is unavailable
+  }
+}
 
 // A convenience remembered in this browser only; storage may be unavailable (private mode)
 function readCollapsed(): boolean {
@@ -129,6 +150,8 @@ const state = reactive({
   // Nodes selected this session, oldest first. Kept in the app only, not in browser history.
   history: [] as string[],
   historyIndex: -1,
+  // Records viewed in this browser, newest first, kept across visits (localStorage)
+  recent: readRecent(),
   // Show the visible nodes as an accessible list in place of the canvas
   listView: false,
   // Text for the page's polite live region: selection changes, search result counts
@@ -426,6 +449,7 @@ function showSelection(id: string | null) {
   state.selectedId = id
   const node = id ? nodeById.value.get(id) : undefined
   document.title = node ? `${node.name} · ${APP_TITLE}` : APP_TITLE
+  if (changed && node) rememberRecent(node.id)
   if (changed) {
     if (node) {
       const count = edges.value.filter((edge) => edge.source === node.id || edge.target === node.id).length

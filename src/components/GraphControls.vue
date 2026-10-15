@@ -7,7 +7,7 @@ import Check from './Check.vue'
 import Chevron from './Chevron.vue'
 import NodeGlyph from './NodeGlyph.vue'
 
-const { state, avas, visibleNodes, visibleEdges } = useGraph()
+const { state, avas } = useGraph()
 
 const sortedAvas = computed(() => [...avas.value].sort((a, b) => a.name.localeCompare(b.name)))
 const avaSummary = computed(() => {
@@ -144,9 +144,6 @@ function onDrawerKey(event: KeyboardEvent) {
     </fieldset>
 
     <div class="controls__foot">
-      <p class="controls__count" role="status">
-        {{ visibleNodes.length }} nodes, {{ visibleEdges.length }} connections shown
-      </p>
       <button v-if="compact" type="button" class="controls__reset" aria-describedby="reset-description" @click="resetGraph">
         Reset graph
       </button>
@@ -333,12 +330,6 @@ legend {
   justify-content: space-between;
   gap: 0.5rem 0.75rem;
   margin-top: auto;
-}
-
-.controls__count {
-  margin: 0;
-  color: var(--text-secondary);
-  font-size: 0.875rem;
 }
 
 .controls__build {
