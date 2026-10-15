@@ -85,7 +85,7 @@ Then open the address it prints. The [developer guide](docs/DEVELOPMENT.md) cove
 
 ## TODO
 
-- About page
+Nothing open right now.
 
 ## Credits
 

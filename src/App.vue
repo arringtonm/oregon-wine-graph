@@ -38,10 +38,8 @@ function onKeydown(event: KeyboardEvent) {
   // An open menu, popover or dialog closes first; Reka marks each such layer
   if (document.querySelector('[data-dismissable-layer]')) return
   if (drawerModal.value) return
-  const detailsHadFocus = !!target?.closest('#details')
+  // Focus that was in the panel moves on with it (DetailPanel)
   select(null)
-  // Focus would otherwise be lost with the panel's contents
-  if (detailsHadFocus) document.getElementById('details')?.focus()
 }
 
 onMounted(() => {

@@ -115,12 +115,21 @@ function rememberRecent(id: string) {
 }
 
 // A convenience remembered in this browser only; storage may be unavailable (private mode)
-function readCollapsed(): boolean {
+// Screens this wide or narrower open with the sidebar hidden, leaving the graph the room
+const COLLAPSED_BY_DEFAULT = '(max-width: 1512px)'
+
+function storedCollapsed(): boolean | undefined {
   try {
-    return localStorage.getItem(COLLAPSED_KEY) === 'true'
+    const stored = localStorage.getItem(COLLAPSED_KEY)
+    return stored === 'true' ? true : stored === 'false' ? false : undefined
   } catch {
-    return false
+    return undefined
   }
+}
+
+// The reader's own choice, once they've made one; until then, the default for the screen
+function readCollapsed(): boolean {
+  return storedCollapsed() ?? window.matchMedia?.(COLLAPSED_BY_DEFAULT).matches ?? false
 }
 
 export function rememberCollapsed(collapsed: boolean) {
@@ -710,6 +719,9 @@ let started = false
 async function init() {
   if (started) return
   started = true
+  // Read again now the page is laid out: a page loading in a frame can report its width
+  // before it has one
+  state.filtersCollapsed = readCollapsed()
   try {
     state.graph = await loadGraph()
     if (import.meta.env.DEV) state.checks = (await import('../data/checks.json')).default as unknown as CheckStore

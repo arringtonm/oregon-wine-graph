@@ -84,6 +84,23 @@ const QUEUE_LABELS: Record<string, string> = {
   'not checked': 'Not checked',
 }
 
+// When a record closes (Escape, ×, a tap on the graph), focus that was in the panel, or was
+// lost with it, moves to the empty panel's heading; on smaller screens, where the panel
+// hides, to the graph
+const panel = ref<HTMLElement>()
+const emptyHeading = ref<HTMLHeadingElement>()
+watch(
+  () => !selectedNode.value,
+  async (closed) => {
+    if (!closed) return
+    await nextTick()
+    const focus = document.activeElement
+    if (focus && focus !== document.body && !panel.value?.contains(focus)) return
+    const target = panel.value?.offsetParent ? emptyHeading.value : document.querySelector<HTMLElement>('.graph-canvas__stage')
+    target?.focus({ preventScroll: true })
+  },
+)
+
 // Selections made from a list, a link or search move keyboard focus to the node's heading,
 // so a screen reader reads the new details from the top
 const heading = ref<HTMLHeadingElement>()
@@ -144,7 +161,7 @@ const canFlag = flagsAvailable()
 </script>
 
 <template>
-  <section id="details" class="detail" :class="{ 'detail--empty': !selectedNode }" aria-label="Details" tabindex="-1">
+  <section id="details" ref="panel" class="detail" :class="{ 'detail--empty': !selectedNode }" aria-label="Details" tabindex="-1">
     <div v-if="reviewing" class="detail__review">
       <p>
         <strong>Review</strong>
@@ -309,7 +326,7 @@ const canFlag = flagsAvailable()
     </template>
 
     <template v-else>
-      <h2>Oregon wine, connected</h2>
+      <h2 ref="emptyHeading" tabindex="-1">Oregon wine, connected</h2>
       <p>
         Select a person, winery or vineyard to see who founded it, who made the wine, where the fruit
         came from and how its people are related.

@@ -92,6 +92,15 @@ select {
   outline-offset: 2px;
 }
 
+/* Headings and areas the app moves focus to (a record's name, the detail panel, the graph)
+   aren't controls, so they show no ring; focus moves there so screen readers and the next
+   Tab start from the right place */
+h2[tabindex='-1']:focus-visible,
+#details:focus-visible,
+.graph-canvas__stage:focus-visible {
+  outline: none;
+}
+
 /* Every control meets the WCAG 2.2 minimum target size */
 button,
 select,
@@ -140,6 +149,12 @@ summary {
   pointer-events: none;
   transform: translateX(-50%);
   transition: opacity 0.12s ease;
+}
+
+/* Above the button, for buttons at the foot of the screen */
+[data-tip-side='top']::after {
+  top: auto;
+  bottom: calc(100% + 6px);
 }
 
 [data-tip-align='end']::after {

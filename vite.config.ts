@@ -1,13 +1,14 @@
 import { execSync } from 'node:child_process'
-import { readFileSync } from 'node:fs'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { reviewPlugin } from './tools/reviewPlugin'
 import { siteVersion } from './tools/siteVersion'
+// Imported rather than read, so Vite counts it as part of this config: the dev server
+// restarts when it changes, and picks up a new version from `npm run release`
+import packageJson from './package.json'
 
 // The public version, "v1.00", from package.json (bumped per release: docs/DEVELOPMENT.md)
-const packageVersion = (JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8')) as { version: string })
-  .version
+const packageVersion = packageJson.version
 
 // The commit the site was built from: in the version line's hover title, and recorded with
 // each flag so reports can be matched to exactly what the reader saw. Cloudflare's builds

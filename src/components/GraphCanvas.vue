@@ -27,6 +27,7 @@ import NodeGlyph from './NodeGlyph.vue'
 import SearchBox from './SearchBox.vue'
 import Tip from './Tip.vue'
 import ZoomControls from './ZoomControls.vue'
+import AboutButton from './AboutButton.vue'
 
 cytoscape.use(fcose)
 
@@ -790,6 +791,7 @@ watch(
     <div
       ref="container"
       class="graph-canvas__stage"
+      tabindex="-1"
       role="img"
       :aria-label="canvasLabel"
       :aria-hidden="state.listView ? 'true' : undefined"
@@ -809,6 +811,10 @@ watch(
     <p v-show="!state.listView" class="graph-canvas__count" role="status">
       {{ visibleNodes.length }} nodes, {{ visibleEdges.length }} connections shown
     </p>
+    <!-- Who made the site, in the graph's bottom-right corner -->
+    <div class="graph-canvas__about">
+      <AboutButton />
+    </div>
     <div ref="toolbar" class="graph-canvas__toolbar" role="group" aria-label="Graph navigation">
       <Tip :label="state.filtersCollapsed ? 'Show filters' : 'Hide filters'">
         <button
@@ -961,7 +967,7 @@ watch(
 }
 
 /* Layers, shared with App.vue, GraphControls and DetailPanel: the graph and list (auto),
-   the node count (1), the sheet (2), the arranging overlay (3), the toolbar and the guide (4),
+   the node count and About (1), the sheet (2), the arranging overlay (3), the toolbar and the guide (4),
    tooltips (5),
    then on smaller screens the drawer's backdrop (6) and the drawer (7) */
 
@@ -981,6 +987,15 @@ watch(
   color: var(--text-secondary);
   font-size: 0.8125rem;
   pointer-events: none;
+}
+
+/* Bottom right of the visible graph; under the detail sheet on smaller screens, like the
+   count */
+.graph-canvas__about {
+  position: absolute;
+  z-index: 1;
+  right: calc(var(--inset-right, 0px) + 12px);
+  bottom: 12px;
 }
 
 /* Wide screens: the controls guide, top right */
