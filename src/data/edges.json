@@ -9472,6 +9472,10 @@
       {
         "title": "Straight Out of the Chute at Oregon's Rodeo Hills (Wine Spectator)",
         "url": "https://www.winespectator.com/articles/taking-the-reins-at-oregon-s-rodeo-hills"
+      },
+      {
+        "title": "Weinnotes newsletter, 7 December 2024",
+        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-13"
       }
     ],
     "verified": true,
@@ -15619,21 +15623,6 @@
       }
     ],
     "verified": false
-  },
-  {
-    "id": "jared-etzel--family--mikey-etzel",
-    "source": "jared-etzel",
-    "target": "mikey-etzel",
-    "type": "family",
-    "role": "sibling",
-    "sources": [
-      {
-        "title": "Weinnotes newsletter, 7 December 2024",
-        "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-13"
-      }
-    ],
-    "verified": true,
-    "verifiedBy": "jev"
   },
   {
     "id": "mikey-etzel--studied-at--oregon-state-university",

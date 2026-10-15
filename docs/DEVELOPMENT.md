@@ -38,6 +38,8 @@ Conventions:
 - People, wineries and vineyards may carry `interviews`: oral history interviews from the Oregon Wine History Archive.
 - An edge's `role` is free text and stays as written. On a record's card, the role of a founded, owns, worked at, winemaker, consulted, member of or mentored edge stands in for the verb ("Mark Wisnovsky (co-owner, from 2005)"). Roles of four words or more, and short ones that don't read as titles ("winemaking"), show a short title from `role-titles.json` instead ("operates the winery with family" becomes "operator"). The full role still shows in the verification note, flags and admin mode. New long roles need a title, and `npm test` lists any missing: run `npm run roles:titles`, which has Jev pick from each type's vocabulary (`src/data/roleTitles.ts`) into `tools/roles/proposals.json`, then review the picks and add them to `role-titles.json`.
 
+After adding records, run `npm run audit:duplicates`: it lists records whose names match once case, accents, common words and nicknames are set aside (Mikey and Michael Etzel), for a person to look over. Same-named pairs are often different records (a father and son, a winery and its estate vineyard), so it's a report rather than a test. A connection stored twice, including a two-way family link stored from both ends, does fail `npm test`.
+
 `src/data/index.ts` is the only module that reads the JSON, so moving to a hosted database later means reimplementing `loadGraph()` there.
 
 ## Reviewing records
@@ -120,6 +122,23 @@ Bump once per push, not per commit: run `npm run release` (1.0.0 → 1.1.0, show
 - a redesign throughout.
 
 The test: would a returning reader need to relearn the site? A large feature, a big data import or a visual refresh is still a minor release. Run `npm version major --no-git-tag-version`.
+
+## Search and sharing
+
+Every record has its own address, `oregonwine.app/<id>` (e.g. `/david-lett`), so search engines can index each one and shared links preview the right record. The app keeps the address in step with the selection (`showAddress` in `useGraph.ts`), and old `#<id>` links still open their record and move to the new address.
+
+- **Record pages.** After `vite build`, `tools/seo/prerender.ts` writes `dist/<id>.html` for every shown record (not hidden types), which Cloudflare serves at `/<id>`. Each is the built `index.html` with its own:
+  - title and description (the summary, cut to about 155 characters);
+  - canonical address;
+  - Open Graph and Twitter share tags;
+  - schema.org data (`Person`, `Winery`, `Place` or `Organization`);
+  - the record as plain HTML inside `#app`, with its connections linking to their pages, for search engines and readers without JavaScript. The app replaces it when it starts.
+
+  The page content comes from `src/seo/recordPage.ts`, which uses the same words as the card (`src/graph/format.ts`). The build stops if a record id would clash with one of the site's files.
+- **Sitemap.** The build writes `dist/sitemap.xml` (the home page and every record page, with the build date), and `public/robots.txt` points to it.
+- **Share image.** `public/og.png` (1200×630) is used for every page for now.
+- **Search Console.** Add `oregonwine.app` to Google Search Console and submit `https://oregonwine.app/sitemap.xml` once; Google rereads it after that.
+- **Testing locally.** `vite preview` doesn't serve `/<id>` from `<id>.html`; `npm run build && npx wrangler dev` does, as Cloudflare would.
 
 ## Deploying (Cloudflare Worker, oregonwine.app)
 

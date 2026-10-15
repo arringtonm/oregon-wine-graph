@@ -209,6 +209,23 @@ summary {
   }
 }
 
+/* A record's page as the build writes it (seo/recordPage.ts), for search engines and
+   readers without JavaScript; the app replaces it as soon as it starts */
+.record-page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 4rem 1.25rem;
+}
+
+.record-page h1 {
+  font-family: 'Fraunces Variable', Georgia, serif;
+  font-weight: 650;
+}
+
+.record-page a {
+  color: var(--link);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

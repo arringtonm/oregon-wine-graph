@@ -1,7 +1,10 @@
 import { computed, reactive } from 'vue'
 import { loadGraph } from '../data'
-import { roleTitle } from '../data/roleTitles'
+import { cardParts, connectionLabel, formatYears, HIDDEN_TYPES, SINGULAR_TYPE } from '../graph/format'
 import { foldText } from '../graph/textMatch'
+import { describe, recordUrl, SITE, SITE_DESCRIPTION } from '../seo/recordPage'
+// Re-exported for the components that have always imported them from here
+export { edgeLabel, formatYears, HIDDEN_TYPES, nodeYears, SINGULAR_TYPE } from '../graph/format'
 import type { Flag } from '../services/flagTypes'
 import { claimsFingerprint, claimsFor, type CheckedRecord } from '../../tools/check/claims'
 import { APPLY_THRESHOLD, decide, type Decision, type Verdict } from '../../tools/check/decide'
@@ -56,9 +59,6 @@ export interface Connection {
   years: string
 }
 
-// Node types hidden from the whole app for now: the graph, filters, search, list, Random and
-// the detail panel's connections. The records stay in the data; remove a type to bring it back
-export const HIDDEN_TYPES = new Set<NodeType>(['event'])
 
 function defaultFilters() {
   return {
@@ -173,14 +173,6 @@ const state = reactive({
   randomRequest: 0,
 })
 
-export const SINGULAR_TYPE: Record<NodeType, string> = {
-  person: 'person',
-  winery: 'winery',
-  vineyard: 'vineyard',
-  ava: 'AVA',
-  organization: 'organization',
-  event: 'event',
-}
 const APP_TITLE = 'Oregon Wine Graph'
 
 // Says something to screen-reader users through the page's live region
@@ -349,73 +341,6 @@ const selectedNode = computed(() =>
   state.selectedId ? (nodeById.value.get(state.selectedId) ?? null) : null,
 )
 
-export function formatYears(edge: GraphEdge): string {
-  const { startYear, endYear, ongoing } = edge
-  if (startYear !== undefined && endYear !== undefined) {
-    return startYear === endYear ? `${startYear}` : `${startYear}–${endYear}`
-  }
-  if (startYear !== undefined) return ongoing ? `${startYear}–present` : `from ${startYear}`
-  if (endYear !== undefined) return `until ${endYear}`
-  return ongoing ? 'present' : ''
-}
-
-export function nodeYears(node: GraphNode): string {
-  switch (node.type) {
-    case 'person':
-      if (node.born !== undefined && node.died !== undefined) return `${node.born}–${node.died}`
-      if (node.born !== undefined) return `Born ${node.born}`
-      return node.died !== undefined ? `Died ${node.died}` : ''
-    case 'winery':
-      return [
-        node.founded !== undefined ? `Founded ${node.founded}` : '',
-        node.closed !== undefined ? `closed ${node.closed}` : '',
-      ]
-        .filter(Boolean)
-        .join(', ')
-    case 'vineyard':
-      return node.planted !== undefined ? `Planted ${node.planted}` : ''
-    case 'ava':
-      return node.established !== undefined ? `Established ${node.established}` : ''
-    case 'organization':
-      return node.founded !== undefined ? `Founded ${node.founded}` : ''
-    case 'event':
-      return [
-        node.firstHeld !== undefined ? `First held ${node.firstHeld}` : '',
-        node.lastHeld !== undefined ? `last held ${node.lastHeld}` : '',
-      ]
-        .filter(Boolean)
-        .join(', ')
-  }
-}
-
-export function edgeLabel(edge: GraphEdge): string {
-  return edge.role ?? EDGE_RULES[edge.type].label
-}
-
-// How an edge reads from one end, e.g. "founded", "founded by", "child of"
-// A family role is itself the verb ("sibling of"); any other role details the verb
-function connectionParts(edge: GraphEdge, outgoing: boolean): { verb: string; detail?: string } {
-  const rule = EDGE_RULES[edge.type]
-  if (edge.type === 'family' && edge.role) {
-    if (edge.role === 'parent') return { verb: outgoing ? 'parent of' : 'child of' }
-    return { verb: edge.role }
-  }
-  return { verb: outgoing ? rule.label : rule.inverseLabel, detail: edge.role }
-}
-
-function connectionLabel(edge: GraphEdge, outgoing: boolean): string {
-  const { verb, detail } = connectionParts(edge, outgoing)
-  return detail ? `${verb} (${detail})` : verb
-}
-
-// How the card shows it: a role that names a position ("co-owner", "head winemaker") stands
-// in for the verb, condensed to a short title if it's long (data/roleTitles.ts). Other roles
-// keep the verb, with the role as detail ("supplies fruit to: 2019 Pinot noir")
-function cardParts(edge: GraphEdge, outgoing: boolean): { verb: string; detail?: string } {
-  const title = roleTitle(edge)
-  return title ? { verb: title } : connectionParts(edge, outgoing)
-}
-
 // All connections of a node, grouped by category, regardless of active filters
 function connectionsOf(id: string): { category: EdgeCategory; connections: Connection[] }[] {
   const groups = new Map<EdgeCategory, Connection[]>()
@@ -467,10 +392,21 @@ function showSelection(id: string | null) {
       announce('Selection cleared')
     }
   }
-  const hash = id ? `#${id}` : ''
-  if (window.location.hash !== hash) {
-    window.history.replaceState(null, '', hash || window.location.pathname + window.location.search)
+  showAddress(node)
+}
+
+// Each record has its own address, /<id>, which the build also writes a page for, so search
+// engines and shared links reach it (seo/recordPage.ts). The address, canonical link and
+// description follow the selection
+function showAddress(node: GraphNode | undefined) {
+  const path = node ? `/${node.id}` : '/'
+  if (window.location.pathname !== path || window.location.hash) {
+    window.history.replaceState(null, '', path + window.location.search)
   }
+  document.querySelector('link[rel="canonical"]')?.setAttribute('href', node ? recordUrl(node.id) : `${SITE}/`)
+  document
+    .querySelector('meta[name="description"]')
+    ?.setAttribute('content', node ? describe(node.summary) : SITE_DESCRIPTION)
 }
 
 // Selecting a node adds it to the history, dropping anything "forward" of the current position.
@@ -708,8 +644,10 @@ function resetFilters() {
   Object.assign(state, defaultFilters())
 }
 
-function selectFromHash() {
-  const id = decodeURIComponent(window.location.hash.slice(1))
+// The record in the address: /<id>, or an older #<id> link, which becomes /<id>
+function selectFromLocation() {
+  const fromHash = decodeURIComponent(window.location.hash.slice(1))
+  const id = fromHash || decodeURIComponent(window.location.pathname.replace(/^\/+|\/+$/g, ''))
   const node = nodeById.value.get(id)
   // A link to a hidden type opens nothing, rather than a node the app doesn't show
   select(node && !HIDDEN_TYPES.has(node.type) ? id : null)
@@ -726,8 +664,9 @@ async function init() {
     state.graph = await loadGraph()
     if (import.meta.env.DEV) state.checks = (await import('../data/checks.json')).default as unknown as CheckStore
     void loadFlags()
-    selectFromHash()
-    window.addEventListener('hashchange', selectFromHash)
+    selectFromLocation()
+    window.addEventListener('popstate', selectFromLocation)
+    window.addEventListener('hashchange', selectFromLocation)
   } catch (error) {
     state.error = error instanceof Error ? error.message : String(error)
   }
