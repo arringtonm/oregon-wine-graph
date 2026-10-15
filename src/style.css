@@ -112,6 +112,61 @@ summary {
   border: 0;
 }
 
+/* A label shown under a button on hover or keyboard focus, styled like Tip.vue. For buttons
+   that already open a menu or popover, where a second Reka trigger on the same button would
+   fight over it (both hold the button as their trigger). The button keeps its own
+   aria-label; this is the visible counterpart. data-tip-align="end" lines it up with the
+   button's right edge, for buttons near the right of the screen */
+[data-tip] {
+  position: relative;
+}
+
+[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute;
+  z-index: 50;
+  top: calc(100% + 6px);
+  left: 50%;
+  padding: 0.3rem 0.55rem;
+  border-radius: var(--radius-sm);
+  background: var(--text-primary);
+  box-shadow: var(--shadow);
+  color: var(--page);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.45;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%);
+  transition: opacity 0.12s ease;
+}
+
+[data-tip-align='end']::after {
+  right: 0;
+  left: auto;
+  transform: none;
+}
+
+/* After the same pause as Tip.vue's tooltips; not while its menu is open */
+[data-tip]:hover::after,
+[data-tip]:focus-visible::after {
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+
+[data-tip][aria-expanded='true']::after {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+/* Touch screens have no hover; a tap goes straight to the button's action */
+@media (hover: none) {
+  [data-tip]::after {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { PopoverContent, PopoverRoot, PopoverTrigger } from 'reka-ui'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
-import Tip from './Tip.vue'
 
 // How to move around the graph, for the device in hand: touch gestures on a phone or
 // tablet, mouse and trackpad on a computer, with ⌘ or Ctrl to match the system. The ? key
@@ -93,14 +92,13 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
 <template>
   <div class="guide">
     <PopoverRoot v-model:open="open">
-      <!-- Just "?", its shortcut; named "Controls", which the tooltip shows -->
-      <Tip label="Controls">
-        <PopoverTrigger as-child>
-          <button type="button" class="guide__toggle" aria-label="Controls" aria-keyshortcuts="?">
-            <span aria-hidden="true">?</span>
-          </button>
-        </PopoverTrigger>
-      </Tip>
+      <!-- Just "?", its shortcut; named "Controls", which its tooltip shows (style.css's
+           data-tip: a Reka tooltip on the popover's own trigger would fight it for the button) -->
+      <PopoverTrigger as-child>
+        <button type="button" class="guide__toggle" aria-label="Controls" aria-keyshortcuts="?" data-tip="Controls" data-tip-align="end">
+          <span aria-hidden="true">?</span>
+        </button>
+      </PopoverTrigger>
       <PopoverContent class="guide__panel" align="end" :side-offset="4" aria-labelledby="controls-guide-heading">
         <header class="guide__header">
           <h2 id="controls-guide-heading">{{ touchOnly ? 'Touch controls' : 'Controls' }}</h2>

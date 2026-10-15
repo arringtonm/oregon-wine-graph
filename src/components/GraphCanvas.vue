@@ -8,6 +8,7 @@ import savedLayoutFile from '../data/layout.json'
 import { iconDataUri } from '../graph/icons'
 import { sizeTiers } from '../graph/nodeSize'
 import { coverage, placeNear, toSaved, type Point, type SavedLayout } from '../graph/placement'
+import { pickBusyPhrase } from '../graph/busyPhrases'
 import { removeOverlaps } from '../graph/removeOverlaps'
 import {
   DropdownMenuContent,
@@ -53,11 +54,21 @@ const {
   randomNodeId,
 } = useGraph()
 
-// Rolls to a random node not yet visited. Focus stays on the button, so it can be pressed
-// again; the selection is announced as any selection is
-function goRandom() {
+// Rolls to a random node not yet visited, after a short pause behind the busy overlay (as
+// Reset shows while it lays the graph out), so the roll reads as a roll. Focus stays on the
+// button, so it can be pressed again; the selection is announced as any selection is
+const RANDOM_PAUSE_MS = 900
+async function goRandom() {
+  if (arranging.value) return
   const id = randomNodeId()
-  if (id) select(id)
+  if (!id) return
+  // The overlay belongs to the graph; the list view picks straight away
+  if (!state.listView) {
+    arranging.value = true
+    await new Promise((done) => setTimeout(done, RANDOM_PAUSE_MS))
+    arranging.value = false
+  }
+  select(id)
 }
 
 // The default view's layout, saved from the dev server and shipped with the data, so the
@@ -415,6 +426,9 @@ async function reset() {
 // frames, or a short timeout where frames don't run, as in a background tab), so it shows
 // while the layout runs; its dots animate on the compositor, unaffected by the busy page
 const arranging = ref(false)
+// Its words: a phrase from the cellar, new each time it shows (graph/busyPhrases.ts)
+const busyPhrase = ref(pickBusyPhrase())
+watch(arranging, (busy) => busy && (busyPhrase.value = pickBusyPhrase(busyPhrase.value)))
 const nextPaint = () =>
   Promise.race([
     new Promise<void>((done) => requestAnimationFrame(() => requestAnimationFrame(() => done()))),
@@ -779,7 +793,7 @@ watch(
     <div v-if="arranging && !state.listView" class="graph-canvas__arranging" role="status">
       <span class="graph-canvas__arranging-card">
         <span class="graph-canvas__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        Arranging the graph…
+        {{ busyPhrase }}…
       </span>
     </div>
     <div ref="toolbar" class="graph-canvas__toolbar" role="group" aria-label="Graph navigation">
@@ -830,13 +844,24 @@ watch(
           </button>
         </Tip>
         <DropdownMenuRoot v-model:open="historyOpen" :modal="false">
+          <!-- A clock with an arrow turning back; named "History", which its tooltip shows
+               (data-tip: a Reka tooltip on the menu's own trigger would fight it for the button) -->
           <DropdownMenuTrigger as-child>
-            <button id="history-toggle" type="button" class="graph-canvas__history-toggle" :disabled="historyEntries.length === 0">
+            <button
+              id="history-toggle"
+              type="button"
+              class="graph-canvas__history-toggle"
+              aria-label="History"
+              data-tip="History"
+              :disabled="historyEntries.length === 0"
+            >
               <svg class="graph-canvas__history-icon" viewBox="0 0 20 20" aria-hidden="true">
-                <circle cx="10" cy="10" r="7" />
-                <path d="M10 6v4l2.5 2" />
+                <path d="M3.6 9.2A6.5 6.5 0 1 1 10 16.5" />
+                <path class="graph-canvas__history-trail" d="M10 16.5a6.5 6.5 0 0 1-5.6-3.2" />
+                <path class="graph-canvas__history-arrow" d="M1.7 8.4h3.8l-1.9 2.8z" />
+                <path d="M10 6.4V10l2.6 1.6" />
               </svg>
-              <span class="graph-canvas__history-label">History</span><Chevron />
+              <Chevron />
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuPortal>
@@ -884,8 +909,24 @@ watch(
         :model-value="state.listView ? 'list' : 'graph'"
         @update:model-value="(view) => view && (state.listView = view === 'list')"
       >
-        <ToggleGroupItem value="graph">Graph</ToggleGroupItem>
-        <ToggleGroupItem value="list">List</ToggleGroupItem>
+        <!-- Icons, named "Graph view" and "List view", which their tooltips show (data-tip, as
+             a Reka tooltip would fight the switch for its buttons) -->
+        <ToggleGroupItem value="graph" aria-label="Graph view" data-tip="Graph view">
+          <svg class="graph-canvas__view-icon" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M7.1 5.8l5.8-.9M6 8.2l2.9 4.7M14.1 7.2l-3 5.7" />
+            <circle cx="5" cy="6.2" r="2.1" />
+            <circle cx="15" cy="5" r="2.1" />
+            <circle cx="10" cy="15" r="2.1" />
+          </svg>
+        </ToggleGroupItem>
+        <ToggleGroupItem value="list" aria-label="List view" data-tip="List view">
+          <svg class="graph-canvas__view-icon" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M8 5h9M8 10h9M8 15h9" />
+            <circle class="graph-canvas__view-dot" cx="4" cy="5" r="1.2" />
+            <circle class="graph-canvas__view-dot" cx="4" cy="10" r="1.2" />
+            <circle class="graph-canvas__view-dot" cx="4" cy="15" r="1.2" />
+          </svg>
+        </ToggleGroupItem>
       </ToggleGroupRoot>
       <!-- Smaller screens: Reset moves to the filter drawer -->
       <ZoomControls v-show="!state.listView" class="graph-canvas__zoom" @zoom="zoomBy" @fit="fitAnimated">
@@ -1002,17 +1043,27 @@ watch(
 .graph-canvas__toolbar .graph-canvas__history-toggle {
   display: inline-flex;
   align-items: center;
+  gap: 0.2rem;
 }
 
 .graph-canvas__history-icon {
-  display: none;
-  width: 1.15rem;
-  height: 1.15rem;
+  width: 1.2rem;
+  height: 1.2rem;
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.5;
+  stroke-width: 1.6;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+/* The way back: dashed where the clock's face hasn't yet been travelled */
+.graph-canvas__history-trail {
+  stroke-dasharray: 0.9 1.7;
+}
+
+.graph-canvas__history-arrow {
+  fill: currentColor;
+  stroke: none;
 }
 
 
@@ -1050,9 +1101,12 @@ watch(
 
 .graph-canvas__toolbar .graph-canvas__view button {
   position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  min-width: 0;
   height: 28px;
-  min-width: 4.25rem;
-  padding: 0 0.875rem;
+  padding: 0;
   border: 0;
   border-radius: 999px;
   background: none;
@@ -1068,6 +1122,20 @@ watch(
 
 .graph-canvas__toolbar .graph-canvas__view button[data-state='on'] {
   color: var(--on-fill);
+}
+
+.graph-canvas__view-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+.graph-canvas__view-dot {
+  fill: currentColor;
+  stroke: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1261,21 +1329,16 @@ watch(
   }
 }
 
-/* Phones: the history menu shows a clock, so the second row holds back, forward, history,
-   random, the view switch and zoom, with the switch centred between them */
+/* Phones: the second row holds back, forward, history, random, the view switch and zoom,
+   with the switch centred between them */
 @media (max-width: 600px) {
-  .graph-canvas__history-icon {
-    display: block;
-  }
-
   /* Just the funnel; still named "Filters" */
   .graph-canvas__toolbar .graph-canvas__filters {
     justify-content: center;
     padding: 0;
   }
 
-  .graph-canvas__filters-label,
-  .graph-canvas__history-label {
+  .graph-canvas__filters-label {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -1287,16 +1350,11 @@ watch(
   .graph-canvas__toolbar .graph-canvas__view {
     margin-inline: auto;
   }
-
-  .graph-canvas__toolbar .graph-canvas__view button {
-    min-width: 0;
-    padding: 0 0.6rem;
-  }
 }
 
-/* Narrow phones (an iPhone 15 is 393px): Random, a nice-to-have, gives way so the second
-   row still fits; History becomes the group's last button. Fit gives way below 440px (ZoomControls) */
-@media (max-width: 399px) {
+/* Small phones (360px): Random, a nice-to-have, gives way so the second row still fits;
+   History becomes the group's last button. Fit gives way below 430px (ZoomControls) */
+@media (max-width: 379px) {
   .graph-canvas__toolbar .graph-canvas__random {
     display: none;
   }

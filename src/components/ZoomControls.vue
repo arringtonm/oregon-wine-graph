@@ -73,7 +73,7 @@ defineEmits<{ zoom: [factor: number]; fit: [] }>()
 
 /* Narrow phones: Fit, a nice-to-have, gives way so the toolbar's second row fits (pinching
    zooms too); zoom out becomes the group's last button */
-@media (max-width: 439px) {
+@media (max-width: 429px) {
   .zoom__fit {
     display: none;
   }

@@ -48,6 +48,18 @@ describe('controls guide', () => {
     wrapper.unmount()
   })
 
+  it('opens and closes with each click of its button', async () => {
+    const wrapper = mountGuide()
+    const toggle = wrapper.get('button')
+    await toggle.trigger('click')
+    await flushPromises()
+    expect(toggle.attributes('aria-expanded')).toBe('true')
+    await toggle.trigger('click')
+    await flushPromises()
+    expect(toggle.attributes('aria-expanded')).toBe('false')
+    wrapper.unmount()
+  })
+
   it('ignores ? typed into a text field', async () => {
     const wrapper = mountGuide()
     const input = document.createElement('input')
