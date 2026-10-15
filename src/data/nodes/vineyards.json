@@ -1610,15 +1610,27 @@
   },
   {
     "id": "desiree-estate",
-    "name": "Desiree Estate",
-    "summary": "Added from the statement: \"Update description: it has an estate vineyard: Desiree Estate\".",
+    "type": "vineyard",
+    "name": "Desiree Vineyard",
+    "aka": [
+      "Desiree Estate"
+    ],
+    "summary": "Fox Farm Vineyards' estate vineyard in the Dundee Hills, on the five acres of Jory soil and southeast-facing slope that David Fish and Desiree Neel bought with their home in 2007. Fox Farm bottles Desiree Estate Chardonnay and Pinot noir from it.",
+    "place": "Dundee Hills, OR",
     "sources": [
       {
-        "title": "Added by Michael Arrington, 13 October 2026: \"Update description: it has an estate vineyard: Desiree Estate\""
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      },
+      {
+        "title": "Buy Fox Farm Vineyards wines (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/buy-fox-farm-vineyards-wines/"
+      },
+      {
+        "title": "Michael Arrington, 15 October 2026: Fox Farm Vineyards has its own estate vineyard, Desiree Vineyard"
       }
     ],
     "verified": true,
-    "type": "vineyard",
     "verifiedBy": "person"
   },
   {

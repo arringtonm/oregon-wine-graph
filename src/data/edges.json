@@ -23833,9 +23833,66 @@
     "source": "fox-farm-vineyards",
     "target": "desiree-estate",
     "type": "owns",
+    "role": "estate vineyard",
+    "ongoing": true,
     "sources": [
       {
-        "title": "Added by Michael Arrington, 13 October 2026: \"Update description: it has an estate vineyard: Desiree Estate\""
+        "title": "Buy Fox Farm Vineyards wines (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/buy-fox-farm-vineyards-wines/"
+      },
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      },
+      {
+        "title": "Michael Arrington, 15 October 2026: Fox Farm Vineyards has its own estate vineyard, Desiree Vineyard"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "person"
+  },
+  {
+    "id": "desiree-estate--located-in--dundee-hills",
+    "source": "desiree-estate",
+    "target": "dundee-hills",
+    "type": "located_in",
+    "note": "The source places the property in the Dundee Hills; it hasn't been tested against the AVA boundary.",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "david-fish--owns--desiree-estate",
+    "source": "david-fish",
+    "target": "desiree-estate",
+    "type": "owns",
+    "role": "co-owner",
+    "startYear": 2007,
+    "note": "Bought the property, with a home and five acres, with Desiree Neel in 2007.",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "desiree-neel--owns--desiree-estate",
+    "source": "desiree-neel",
+    "target": "desiree-estate",
+    "type": "owns",
+    "role": "co-owner",
+    "startYear": 2007,
+    "note": "Bought the property, with a home and five acres, with David Fish in 2007.",
+    "sources": [
+      {
+        "title": "David Fish of Fox Farm Vineyards (Fox Farm Vineyards)",
+        "url": "https://foxfarmvineyards.com/david-fish-of-fox-farm-vineyards/"
       }
     ],
     "verified": false
