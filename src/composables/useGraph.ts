@@ -97,6 +97,17 @@ export interface AdminFlag extends Flag {
 }
 
 const COLLAPSED_KEY = 'oregon-wine-graph:filters-collapsed'
+// Graph or list, remembered in this browser, so a reload comes back to the same view
+const LIST_VIEW_KEY = 'oregon-wine-graph:list-view'
+
+function readListView(): boolean {
+  try {
+    return localStorage.getItem(LIST_VIEW_KEY) === 'true'
+  } catch {
+    return false
+  }
+}
+
 const TOUR_KEY = 'oregon-wine-graph:tour'
 
 interface TourProgress {
@@ -247,7 +258,7 @@ const state = reactive({
   // Records viewed in this browser, newest first, kept across visits (localStorage)
   recent: readRecent(),
   // Show the visible nodes as an accessible list in place of the canvas
-  listView: false,
+  listView: readListView(),
   // Text for the page's polite live region: selection changes, search result counts
   announcement: '',
   // Bumped to ask the detail panel to move keyboard focus to its heading
@@ -835,6 +846,17 @@ const activeView = computed(() =>
       [...state.avas].sort().join() === [...filters.avas].sort().join()
     )
   }),
+)
+
+watch(
+  () => state.listView,
+  (list) => {
+    try {
+      localStorage.setItem(LIST_VIEW_KEY, String(list))
+    } catch {
+      // Kept for this visit only where storage is unavailable
+    }
+  },
 )
 
 // The address follows the guide too: it joins when a guide starts and goes when it ends

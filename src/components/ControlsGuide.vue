@@ -2,6 +2,7 @@
 import { PopoverContent, PopoverRoot, PopoverTrigger } from 'reka-ui'
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useGraph } from '../composables/useGraph'
+import { deviceName, modifier, touchOnly } from '../services/device'
 
 // How to move around the graph, for the device in hand: touch gestures on a phone or
 // tablet, mouse and trackpad on a computer, with ⌘ or Ctrl to match the system. The ? key
@@ -35,11 +36,6 @@ watch(
   },
 )
 
-const touchOnly = window.matchMedia('(pointer: coarse)').matches && !window.matchMedia('(any-pointer: fine)').matches
-const platform =
-  (navigator as Navigator & { userAgentData?: { platform?: string } }).userAgentData?.platform ?? navigator.platform ?? ''
-const mac = /mac|iphone|ipad/i.test(platform)
-const modifier = mac ? '⌘' : 'Ctrl'
 
 const sections = computed<Section[]>(() =>
   touchOnly
@@ -49,6 +45,7 @@ const sections = computed<Section[]>(() =>
           rows: [
             { action: 'Pan', ways: ['Drag'] },
             { action: 'Zoom', ways: ['Pinch', '+ / − buttons'] },
+            { action: 'Fit the whole graph', ways: ['Fit button'] },
           ],
         },
         {
@@ -75,6 +72,7 @@ const sections = computed<Section[]>(() =>
           rows: [
             { action: 'Back and forward', ways: ['‹ / › buttons'] },
             { action: 'Earlier selections', ways: ['History menu'] },
+            { action: 'All filters and settings back to default', ways: ['Reset button'] },
           ],
         },
         {
@@ -121,6 +119,7 @@ const sections = computed<Section[]>(() =>
           rows: [
             { action: 'Back and forward', ways: ['‹ / › buttons'] },
             { action: 'Earlier selections', ways: ['History menu'] },
+            { action: 'All filters and settings back to default', ways: ['Reset button'] },
           ],
         },
         {
@@ -173,7 +172,7 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
       >
         <header class="guide__header">
           <h2 id="controls-guide-heading">{{ touchOnly ? 'Touch controls' : 'Controls' }}</h2>
-          <span class="guide__platform">{{ touchOnly ? 'Phone or tablet' : mac ? 'Mac' : 'Windows or Linux' }}</span>
+          <span class="guide__platform">{{ deviceName }}</span>
           <button type="button" class="guide__tour" @click="takeTour">Take the tour</button>
         </header>
         <div class="guide__body">

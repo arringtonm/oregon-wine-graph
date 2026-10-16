@@ -1,23 +1,37 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
-import { useGraph } from '../composables/useGraph'
-import { TOUR_STEPS } from '../tour/steps'
+import { SINGULAR_TYPE, useGraph } from '../composables/useGraph'
+import { pickPhrase } from '../graph/busyPhrases'
+import { TOUR_STEPS, wording } from '../tour/steps'
 
 // The tour's card: centred on the screen, where it stays from step to step, while the
 // spotlight shows the control each step names (the ringed node is picked clear of it,
 // GraphCanvas.vue). Non-modal, so the reader can try things with it open; Esc or × closes
 // it, remembering the step for later
 const props = defineProps<{
-  // Where a node sits on screen, for the step that rings one
-  nodeRect: (id: string) => DOMRect | null
+  // Where a node sits on screen, for the step that rings one; with `connected`, the node and
+  // everything it connects to
+  nodeRect: (id: string, connected?: boolean) => DOMRect | null
 }>()
-const { state, tourStep, closeTour, finishTour } = useGraph()
+const { state, tourStep, closeTour, finishTour, nodeById, degree } = useGraph()
 
 const step = computed(() => (state.tour === null ? null : TOUR_STEPS[state.tour]))
 
-// A line split into text and [keys]
-const parts = (line: string) =>
-  line.split(/(\[[^\]]+\])/).filter(Boolean).map((text) => (text.startsWith('[') ? { key: text.slice(1, -1) } : { text }))
+// A line split into text, [keys], _italics_ and the {flag} icon
+type Part = { text: string } | { key: string } | { em: string } | { icon: 'flag' }
+const parts = (line: string): Part[] =>
+  line
+    .split(/(\[[^\]]+\]|\{flag\}|_[^_]+_)/)
+    .filter(Boolean)
+    .map((text) =>
+      text === '{flag}'
+        ? { icon: 'flag' }
+        : text.startsWith('[')
+          ? { key: text.slice(1, -1) }
+          : text.startsWith('_') && text.endsWith('_') && text.length > 2
+            ? { em: text.slice(1, -1) }
+            : { text },
+    )
 const last = computed(() => state.tour === TOUR_STEPS.length - 1)
 
 // The step's elements: every one of its selectors that's showing (laid out, and on screen:
@@ -35,20 +49,25 @@ function targetElements(): HTMLElement[] {
 // The spotlight: while a step shows, the page is dimmed around the controls it names, so
 // the eye goes there. Only a picture: clicks still reach everything, as the tour is
 // non-modal. Followed every frame, as panels slide, the graph pans and menus open
-type Spot = { x: number; y: number; width: number; height: number; radius: number }
+// A soft spot fades out gradually instead of ending in a hard edge
+type Spot = { x: number; y: number; width: number; height: number; radius: number; soft?: boolean }
 const spots = ref<Spot[]>([])
 let frame = 0
 
 function spotTargets(): Spot[] {
   const current = step.value
   if (!current) return []
-  // The step that rings a node: a circle around it, as the graph fills the screen
-  const node = current.hint === 'node' && state.hintNodeId ? props.nodeRect(state.hintNodeId) : null
+  // The step that picks out a node: a soft glow around it, clear at the middle and fading
+  // into the dimming, as the graph fills the screen. Once a record's open, the glow widens
+  // to take in everything it connects to
+  const opened = current.hint === 'node' && state.selectedId ? props.nodeRect(state.selectedId, true) : null
+  const node = opened ?? (current.hint === 'node' && state.hintNodeId ? props.nodeRect(state.hintNodeId) : null)
   if (node && node.width > 0) {
-    const size = Math.max(node.width, node.height) + 36
+    // Wide enough that the farthest corner of the area stays in the clear middle
+    const size = opened ? Math.hypot(node.width, node.height) * 1.7 + 160 : Math.max(node.width, node.height) * 2 + 140
     const x = node.left + node.width / 2 - size / 2
     const y = node.top + node.height / 2 - size / 2
-    return [{ x, y, width: size, height: size, radius: size / 2 }]
+    return [{ x, y, width: size, height: size, radius: size / 2, soft: true }]
   }
   return targetElements().map((element) => {
     const rect = element.getBoundingClientRect()
@@ -57,6 +76,30 @@ function spotTargets(): Spot[] {
     return { x: rect.left - pad, y: rect.top - pad, width: rect.width + pad * 2, height: rect.height + pad * 2, radius: 10 }
   })
 }
+
+// Phones: the card goes to whichever half of the screen the spotlight isn't in, so it
+// doesn't cover what it's describing (an open filters drawer, the zoom buttons). Wider
+// screens keep it centred
+const phoneQuery = window.matchMedia?.('(max-width: 600px)')
+const phone = ref(phoneQuery?.matches ?? false)
+const onPhone = () => (phone.value = phoneQuery?.matches ?? false)
+phoneQuery?.addEventListener('change', onPhone)
+onBeforeUnmount(() => phoneQuery?.removeEventListener('change', onPhone))
+// Of the foot, the middle and the top, the place that covers least of the spotlight
+// (ties go in that order: the foot is easiest to reach, and covers least of the graph)
+const edge = computed<'top' | 'bottom' | null>(() => {
+  if (!phone.value || spots.value.length === 0) return phone.value ? 'bottom' : null
+  const height = document.querySelector<HTMLElement>('.tour')?.offsetHeight ?? 260
+  const screen = window.innerHeight
+  const places = [
+    { edge: 'bottom' as const, top: screen - 12 - height },
+    { edge: null, top: (screen - height) / 2 },
+    { edge: 'top' as const, top: 12 },
+  ]
+  const covered = (top: number) =>
+    spots.value.reduce((sum, spot) => sum + Math.max(0, Math.min(top + height, spot.y + spot.height) - Math.max(top, spot.y)) * spot.width, 0)
+  return places.reduce((best, place) => (covered(place.top) < covered(best.top) ? place : best)).edge
+})
 
 let spotKey = ''
 function followSpot() {
@@ -102,6 +145,9 @@ onBeforeUnmount(() => {
 const cheers = ref(false)
 let cheersTimer = 0
 function finish() {
+  // The toast takes the card's height, so it sits in the card's place
+  const card = document.querySelector<HTMLElement>('.tour')
+  if (card) document.documentElement.style.setProperty('--tour-card-height', `${card.offsetHeight}px`)
   finishTour()
   cheers.value = true
   clearTimeout(cheersTimer)
@@ -113,17 +159,50 @@ function finish() {
 // keys, or on a record opening; then the card says so and Next is the thing to press.
 // Never required: Next works either way
 const tried = ref(false)
+// What the card says once they have: a new word of praise each time, never the same twice
+// in a row
+const PRAISE = ['Well done!', 'You found it!', 'Good job!', 'Nicely done!', 'Spot on!', "That's the one!"]
+const praise = ref(PRAISE[0])
+watch(tried, (done) => done && (praise.value = pickPhrase(PRAISE, praise.value)))
+// The record step: the record the reader has open (from step 1, or opened now), what it is
+// and how many connections it has, and where they went from it
+const picked = ref<string | null>(null)
+const movedTo = ref<string | null>(null)
+const another = computed(() => step.value?.tryIt?.another === true)
+const pickedRecord = computed(() => {
+  const node = picked.value ? nodeById.value.get(picked.value) : undefined
+  return node ? { node, connections: degree.value.get(node.id) ?? 0 } : null
+})
+// A record with nothing to click through to: there's no other record to try
+const alone = computed(() => another.value && pickedRecord.value?.connections === 0)
+const article = (word: string) => (/^[aeiou]/i.test(word) ? 'an' : 'a')
+const pickedNote = computed(() => {
+  const record = pickedRecord.value
+  if (!another.value || !record) return ''
+  if (record.connections === 0) return "You found a record without any connections. That's pretty rare!"
+  const type = SINGULAR_TYPE[record.node.type]
+  const count = `${record.connections} connection${record.connections === 1 ? '' : 's'}`
+  return `You picked ${record.node.name}, ${article(type)} ${type} with ${count}.`
+})
+const tryText = computed(() => {
+  if (another.value && !pickedRecord.value) return wording('Try it: {click} an icon on the graph to open a record.')
+  return step.value?.tryIt ? wording(step.value.tryIt.text) : ''
+})
+const movedName = computed(() => (movedTo.value ? nodeById.value.get(movedTo.value)?.name : undefined))
+
 watch(
   () => state.tour,
   (_index, previous) => {
     tried.value = false
+    picked.value = state.selectedId
+    movedTo.value = null
     // Leaving the List view step: back to the graph, where the rest of the controls are
     if (previous !== null && previous !== undefined && TOUR_STEPS[previous].hint === 'list') state.listView = false
   },
 )
 function onPointer(event: PointerEvent) {
   const current = step.value
-  if (!current?.tryIt || current.tryIt.select) return
+  if (!current?.tryIt || current.tryIt.select || current.tryIt.another) return
   const target = event.target as Element | null
   if (target?.closest('.tour')) return
   if (current.target.some((selector) => target?.closest(selector))) tried.value = true
@@ -144,6 +223,14 @@ watch(
   () => state.selectedId,
   (id) => {
     if (id && step.value?.tryIt?.select) tried.value = true
+    if (another.value && id) {
+      // The first record opened here is the one picked; moving on from it is the try
+      if (!picked.value) picked.value = id
+      else if (id !== picked.value && !alone.value) {
+        movedTo.value = id
+        tried.value = true
+      }
+    }
   },
 )
 document.addEventListener('pointerdown', onPointer, true)
@@ -158,7 +245,17 @@ onBeforeUnmount(() => {
   <Teleport to="body">
     <!-- The dimming: the whole screen, with a clear hole over each spotlit control -->
     <Transition name="tour-spot">
-      <svg v-if="step && spots.length" class="tour-spot" aria-hidden="true">
+      <!-- Dimmed even when nothing of the step is on screen (a phone's record panel, before a
+           record is open), so the tour looks the same from step to step -->
+      <svg v-if="step" class="tour-spot" aria-hidden="true">
+        <defs>
+          <!-- Clear at the middle, fading out to the full dimming at the edge -->
+          <radialGradient id="tour-spot-soft">
+            <stop offset="0" stop-color="black" />
+            <stop offset="0.45" stop-color="black" />
+            <stop offset="1" stop-color="white" />
+          </radialGradient>
+        </defs>
         <mask id="tour-spot-holes">
           <rect width="100%" height="100%" fill="white" />
           <rect
@@ -166,7 +263,7 @@ onBeforeUnmount(() => {
             :key="index"
             class="tour-spot__hole"
             :rx="hole.radius"
-            fill="black"
+            :fill="hole.soft ? 'url(#tour-spot-soft)' : 'black'"
             :style="`x: ${hole.x}px; y: ${hole.y}px; width: ${hole.width}px; height: ${hole.height}px`"
           />
         </mask>
@@ -194,7 +291,7 @@ onBeforeUnmount(() => {
     </Transition>
   </Teleport>
   <Teleport to="body">
-      <div v-if="step" class="tour" role="dialog" aria-labelledby="tour-title">
+      <div v-if="step" class="tour" :class="edge && `tour--${edge}`" role="dialog" aria-labelledby="tour-title">
         <div class="tour__top">
           <span class="tour__count">{{ (state.tour ?? 0) + 1 }} of {{ TOUR_STEPS.length }}</span>
           <button type="button" class="tour__close" aria-label="Close the tour" @click="closeTour">
@@ -202,19 +299,31 @@ onBeforeUnmount(() => {
           </button>
         </div>
         <h2 id="tour-title" ref="title" class="tour__title" tabindex="-1">{{ step.title }}</h2>
-        <p v-for="line in step.body" :key="line" class="tour__body">
-          <template v-for="(part, index) in parts(line)" :key="index">
+        <p v-for="(line, lineIndex) in step.body" :key="lineIndex" class="tour__body">
+          <template v-for="(part, index) in parts(wording(line))" :key="index">
             <kbd v-if="'key' in part">{{ part.key }}</kbd>
+            <em v-else-if="'em' in part">{{ part.em }}</em>
+            <!-- "Flag" and the Flag button's own icon (FlagButton.vue), never split across lines -->
+            <span v-else-if="'icon' in part" class="tour__nowrap">
+              Flag<svg class="tour__icon" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M3.5 14.5v-12" />
+                <path d="M3.5 3c2.5-1.6 4.5 1 7 0l1.8-.6v6.8l-1.8.6c-2.5 1-4.5-1.6-7 0" />
+              </svg>
+            </span>
             <template v-else>{{ part.text }}</template>
           </template>
         </p>
         <!-- What to try, with the real control; ticked once they have -->
-        <p v-if="step.tryIt" class="tour__try" :class="{ 'tour__try--done': tried }" aria-live="polite">
-          <template v-if="tried"><span aria-hidden="true">✓</span> That's it.</template>
+        <!-- The record step: what the reader picked -->
+        <p v-if="pickedNote" class="tour__body tour__picked" aria-live="polite">{{ pickedNote }}</p>
+        <p v-if="step.tryIt && !alone" class="tour__try" :class="{ 'tour__try--done': tried }" aria-live="polite">
+          <template v-if="tried">
+            <span aria-hidden="true">✓</span> {{ praise }}<template v-if="movedName"> Now you're on {{ movedName }}.</template>
+          </template>
           <template v-else>
-            <template v-for="(part, index) in parts(step.tryIt.text)" :key="index">
+            <template v-for="(part, index) in parts(tryText)" :key="index">
               <kbd v-if="'key' in part">{{ part.key }}</kbd>
-              <template v-else>{{ part.text }}</template>
+              <template v-else-if="'text' in part">{{ part.text }}</template>
             </template>
           </template>
         </p>
@@ -278,8 +387,14 @@ onBeforeUnmount(() => {
   top: 50%;
   left: 50%;
   display: grid;
+  align-content: center;
   justify-items: center;
   gap: 0.4rem;
+  box-sizing: border-box;
+  /* The tour card's box (.tour: the same width, centred the same way), so the toast takes
+     the card's place exactly as it closes */
+  width: min(28rem, calc(100vw - 2rem));
+  min-height: var(--tour-card-height, 12rem);
   padding: 1.25rem 1.75rem 1rem;
   border: 1px solid var(--accent);
   border-radius: var(--radius);
@@ -424,6 +539,22 @@ onBeforeUnmount(() => {
   font-size: 0.9375rem;
 }
 
+/* Phones: at the top or foot of the screen, away from the spotlight */
+.tour--top,
+.tour--bottom {
+  transform: translateX(-50%);
+  max-height: calc(50vh - 1rem);
+}
+
+.tour--top {
+  top: calc(env(safe-area-inset-top, 0px) + 0.75rem);
+}
+
+.tour--bottom {
+  top: auto;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 0.75rem);
+}
+
 .tour__top {
   display: flex;
   align-items: center;
@@ -473,6 +604,26 @@ onBeforeUnmount(() => {
   line-height: 1.45;
 }
 
+.tour__picked {
+  font-weight: 600;
+}
+
+.tour__nowrap {
+  white-space: nowrap;
+}
+
+.tour__icon {
+  margin-left: 0.25em;
+  width: 0.95em;
+  height: 0.95em;
+  vertical-align: -0.12em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .tour__body kbd {
   padding: 0 0.3em;
   border: 1px solid var(--border-strong);
@@ -487,7 +638,8 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  margin-top: 1rem;
+  /* Clear room between the words and Back and Next */
+  margin-top: 1.4rem;
 }
 
 .tour__steps {
@@ -521,8 +673,9 @@ onBeforeUnmount(() => {
 }
 
 /* Next, once the step's been tried: a ring that pulses, as the way on */
+/* Once tried, Next gives a single soft pulse to say it's the thing to press, then rests */
 .tour__step--ready {
-  animation: tour-ready 1.6s ease-out infinite;
+  animation: tour-ready 1.2s ease-out 1;
 }
 
 @keyframes tour-ready {

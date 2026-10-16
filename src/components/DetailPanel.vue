@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, nextTick, ref, watch } from 'vue'
+import { Click, modifier, touchOnly } from '../services/device'
 import { TOUR_STEPS } from '../tour/steps'
 import { nodeYears, reviewing, SINGULAR_TYPE, useGraph, type Connection, type Hint } from '../composables/useGraph'
 import { EDGE_CATEGORY_LABELS, type GraphNode } from '../data/schema'
@@ -382,11 +383,13 @@ const canFlag = flagsAvailable()
            control (state.hint), pressing it does what the control does -->
       <ul class="detail__ways">
         <li>
-          <button type="button" class="detail__ways-action" v-bind="pointsTo('node')" @click="openShown">Click</button>
+          <button type="button" class="detail__ways-action" v-bind="pointsTo('node')" @click="openShown">{{ Click }}</button>
           a person or place on the graph to open it.
         </li>
         <li>
-          <strong>Move around</strong> by dragging, or scrolling with two fingers, and pinch to zoom. Press
+          <strong>Move around</strong>
+          <template v-if="touchOnly">by dragging, and pinch to zoom. Tap</template>
+          <template v-else>by dragging or scrolling with two fingers, and pinch or <kbd>{{ modifier }}</kbd> + scroll to zoom.  </template>
           <button
             type="button"
             class="detail__ways-key"
@@ -427,12 +430,13 @@ const canFlag = flagsAvailable()
           <button type="button" class="detail__ways-action" v-bind="pointsTo('random')" @click="state.randomRequest++">
             Roll the dice
           </button>
-          in the toolbar, or press <kbd>R</kbd>, for a random person or place.
+          in the toolbar<template v-if="!touchOnly">, or press <kbd>R</kbd>,</template> for a random person or place.
         </li>
         <li>
-          Press <kbd>Esc</kbd> to close a record, or
+          <template v-if="touchOnly">Tap × to close a record, or</template>
+          <template v-else>Press <kbd>Esc</kbd> to close a record, or </template>
           <button type="button" class="detail__ways-action" v-bind="pointsTo('reset')" @click="resetAll">Reset</button>
-          to clear the filters and start over.
+          to put all filters and settings back to default.
         </li>
       </ul>
       <!-- The last few records viewed, at the foot of the panel -->

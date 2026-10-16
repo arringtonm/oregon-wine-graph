@@ -806,11 +806,12 @@ watch(() => state.resetRequest, reset)
 // The tour's "Fit the graph"
 watch(() => state.fitRequest, () => fitAnimated())
 
-// Where a node sits on the page, for the tour's card
-function nodeRect(id: string): DOMRect | null {
+// Where a node sits on the page, for the tour's spotlight; with `connected`, the node and
+// everything it connects to
+function nodeRect(id: string, connected = false): DOMRect | null {
   const node = cy?.getElementById(id)
   if (!node || node.empty() || !container.value) return null
-  const box = node.renderedBoundingBox()
+  const box = (connected ? node.closedNeighborhood().nodes() : node).renderedBoundingBox()
   const stage = container.value.getBoundingClientRect()
   return new DOMRect(stage.left + box.x1, stage.top + box.y1, box.w, box.h)
 }
@@ -938,6 +939,35 @@ watch(
         <span class="graph-canvas__filters-label">Filters</span>
       </button>
       <SearchBox />
+      <!-- Graph or list: beside the search, as both are ways of finding someone. On phones it
+           drops to the second row (order, below) -->
+      <ToggleGroupRoot
+        type="single"
+        class="graph-canvas__view"
+        :data-view="state.listView ? 'list' : 'graph'"
+        aria-label="View"
+        :model-value="state.listView ? 'list' : 'graph'"
+        @update:model-value="(view) => view && (state.listView = view === 'list')"
+      >
+        <!-- Icons, named "Graph view" and "List view", which their tooltips show (data-tip, as
+             a Reka tooltip would fight the switch for its buttons) -->
+        <ToggleGroupItem value="graph" aria-label="Graph view" data-tip="Graph view" :class="{ 'is-hinted': state.hint === 'graph' }">
+          <svg class="graph-canvas__view-icon" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M7.1 5.8l5.8-.9M6 8.2l2.9 4.7M14.1 7.2l-3 5.7" />
+            <circle cx="5" cy="6.2" r="2.1" />
+            <circle cx="15" cy="5" r="2.1" />
+            <circle cx="10" cy="15" r="2.1" />
+          </svg>
+        </ToggleGroupItem>
+        <ToggleGroupItem value="list" aria-label="List view" data-tip="List view" :class="{ 'is-hinted': state.hint === 'list' }">
+          <svg class="graph-canvas__view-icon" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M8 5h9M8 10h9M8 15h9" />
+            <circle class="graph-canvas__view-dot" cx="4" cy="5" r="1.2" />
+            <circle class="graph-canvas__view-dot" cx="4" cy="10" r="1.2" />
+            <circle class="graph-canvas__view-dot" cx="4" cy="15" r="1.2" />
+          </svg>
+        </ToggleGroupItem>
+      </ToggleGroupRoot>
       <GuidesPopover />
       <!-- Smaller screens: the guide's ? ends the first row of the bar -->
       <ControlsGuide v-if="compact" v-show="!state.listView" />
@@ -1037,33 +1067,6 @@ watch(
           </button>
         </Tip>
       </div>
-      <ToggleGroupRoot
-        type="single"
-        class="graph-canvas__view"
-        :data-view="state.listView ? 'list' : 'graph'"
-        aria-label="View"
-        :model-value="state.listView ? 'list' : 'graph'"
-        @update:model-value="(view) => view && (state.listView = view === 'list')"
-      >
-        <!-- Icons, named "Graph view" and "List view", which their tooltips show (data-tip, as
-             a Reka tooltip would fight the switch for its buttons) -->
-        <ToggleGroupItem value="graph" aria-label="Graph view" data-tip="Graph view" :class="{ 'is-hinted': state.hint === 'graph' }">
-          <svg class="graph-canvas__view-icon" viewBox="0 0 20 20" aria-hidden="true">
-            <path d="M7.1 5.8l5.8-.9M6 8.2l2.9 4.7M14.1 7.2l-3 5.7" />
-            <circle cx="5" cy="6.2" r="2.1" />
-            <circle cx="15" cy="5" r="2.1" />
-            <circle cx="10" cy="15" r="2.1" />
-          </svg>
-        </ToggleGroupItem>
-        <ToggleGroupItem value="list" aria-label="List view" data-tip="List view" :class="{ 'is-hinted': state.hint === 'list' }">
-          <svg class="graph-canvas__view-icon" viewBox="0 0 20 20" aria-hidden="true">
-            <path d="M8 5h9M8 10h9M8 15h9" />
-            <circle class="graph-canvas__view-dot" cx="4" cy="5" r="1.2" />
-            <circle class="graph-canvas__view-dot" cx="4" cy="10" r="1.2" />
-            <circle class="graph-canvas__view-dot" cx="4" cy="15" r="1.2" />
-          </svg>
-        </ToggleGroupItem>
-      </ToggleGroupRoot>
       <ZoomControls
         v-if="!phone"
         v-show="!state.listView"
@@ -1163,7 +1166,7 @@ watch(
 .graph-canvas__list {
   position: absolute;
   inset: 0 var(--inset-right, 0px) 0 var(--inset-left, 0px);
-  padding-top: calc(var(--toolbar-bottom, calc(var(--inset-top, 0px) + 3.75rem)) + 0.75rem);
+  /* No padding for the toolbar here: the list's sticky bar makes the room (GraphList.vue) */
   overflow-y: auto;
   background: var(--surface);
 }
@@ -1580,7 +1583,9 @@ watch(
     white-space: nowrap;
   }
 
+  /* Last in the bar, so it sits in the second row, centred in the room History leaves */
   .graph-canvas__toolbar .graph-canvas__view {
+    order: 1;
     margin-inline: auto;
   }
 }

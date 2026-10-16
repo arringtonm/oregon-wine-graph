@@ -1,4 +1,13 @@
 import type { Hint } from '../composables/useGraph'
+import { Click, click, modifier, touchOnly } from '../services/device'
+
+// Words for the device in hand: a line can differ for touch screens and for a mouse and
+// keyboard, and {click} / {Click} read "tap" / "Tap" on a touch screen, {mod} ⌘ or Ctrl
+export type Line = string | { touch: string; mouse: string }
+export function wording(line: Line): string {
+  const text = typeof line === 'string' ? line : touchOnly ? line.touch : line.mouse
+  return text.replace(/\{click\}/g, click).replace(/\{Click\}/g, Click).replace(/\{mod\}/g, modifier)
+}
 
 // The tour: an optional walk through the site, a step at a time, launched from the start
 // panel or the Controls guide (never on its own, per Nielsen Norman Group: help readers
@@ -8,14 +17,17 @@ import type { Hint } from '../composables/useGraph'
 
 export interface TourStep {
   title: string
-  // A key in [brackets], like [Esc], is drawn as a key
-  body: string[]
+  // A key in [brackets], like [Esc], is drawn as a key; _underscores_ set words in italics;
+  // {flag} is the word Flag with the Flag button's icon, kept together on one line
+  body: Line[]
   hint: Hint | null
   // What the spotlight shows: CSS selectors, each lit where it's showing
   target: string[]
   // What to try, with the real control: done on a click in any of the target's selectors,
   // on one of `keys`, or, with `select`, on opening a record
-  tryIt?: { text: string; keys?: string[]; select?: boolean }
+  // on opening a record, or, with `another`, on moving from the record open to another (the
+  // card names the first one and counts its connections)
+  tryIt?: { text: Line; keys?: string[]; select?: boolean; another?: boolean }
 }
 
 export const TOUR_STEPS: TourStep[] = [
@@ -27,50 +39,61 @@ export const TOUR_STEPS: TourStep[] = [
     ],
     hint: 'node',
     target: ['.graph-canvas__stage'],
-    tryIt: { text: 'Try it: click the ringed one, or any other.', select: true },
+    tryIt: { text: 'Try it: {click} an icon on the graph.', select: true },
   },
   {
     title: 'A record',
     body: [
-      'Opening one shows who and what it connects to, grouped by kind, with roles and years in brackets.',
-      'Every fact cites its sources. Unchecked drafts are marked, and Flag reports a mistake.',
+      'Opening one shows who and what it connects to, grouped by kind, with roles and years in brackets. {Click} any name there to move on to that record, and keep exploring from one connection to the next.',
+      "Every fact cites its sources, or notes it's unverified. The {flag} lets you report a mistake.",
     ],
     hint: null,
     target: ['#details'],
+    tryIt: { text: 'Try it: {click} a name in its connections to open that record.', another: true },
   },
   {
     title: 'Search or ask',
-    body: ['Type a name, like Eyrie or David Lett, or ask a question, like “Who founded Adelsheim?”'],
+    body: [
+      'Type a name, like Eyrie or David Lett, or ask a question, like “Who founded Adelsheim?”',
+      "The search is _kind of_ smart. It uses a low-level AI to guess whether you're asking a question or looking for a record, and does its best to answer for you.",
+    ],
     hint: 'search',
     target: ['#search'],
-    tryIt: { text: 'Try it: click the search box.' },
+    tryIt: { text: 'Try it: {click} the search box.' },
   },
   {
     title: 'Filters',
     body: [
       'Show or hide different kinds of record, like people, wineries and vineyards, and categories of connection.',
-      'You can also narrow to AVAs, Oregon, or records checked against their sources.',
+      'You can also narrow to AVAs, to Oregon only (some important contributors from outside Oregon are included in the data), or to records checked against their sources.',
     ],
     hint: 'filters',
     // And the filters themselves once they're showing
     target: ['#filters', '#sidebar-toggle', '#filters-toggle'],
-    tryIt: { text: 'Try it: click the filters button to show or hide them.' },
+    tryIt: { text: 'Try it: {click} the filters button to show or hide them.' },
   },
   {
     title: 'Guides',
     body: [
       'Custom sets of filters that are designed to help visualize the data in ways that tell specific stories, such as the sparkling wine community, or how fruit is sourced between vineyards and wineries.',
+      'Filters and Guides cut down the visual noise, but they can also hide connections and entries you might expect to see. If someone seems to be missing, Reset brings everything back.',
     ],
     hint: 'guides',
     // And the menu itself once it's open
     target: ['.guides-panel', '.guides-toggle'],
-    tryIt: { text: 'Try it: click Guides.' },
+    tryIt: { text: 'Try it: {click} Guides.' },
   },
   {
     title: 'Getting around',
     body: [
-      'Drag to move, pinch or [⌘] + scroll to zoom, and Fit to see everything.',
-      'Back, Forward and History retrace your steps; [Esc] closes a record, and Reset starts over.',
+      {
+        touch: 'Drag to move, pinch or use + and − to zoom, and Fit to see everything.',
+        mouse: 'Drag or scroll to move, pinch or [{mod}] + scroll to zoom, and Fit to see everything.',
+      },
+      {
+        touch: 'Back, Forward and History retrace your steps; × closes a record, and Reset puts all filters and settings back to default.',
+        mouse: 'Back, Forward and History retrace your steps; [Esc] closes a record, and Reset puts all filters and settings back to default.',
+      },
     ],
     hint: 'zoom',
     // Zoom and Fit, and Back, Forward, History and Reset beside the dice
@@ -82,19 +105,27 @@ export const TOUR_STEPS: TourStep[] = [
       '#history-toggle',
       '.graph-canvas__reset',
     ],
-    tryIt: { text: 'Try it: zoom in or out, press Fit, or step Back.', keys: ['+', '=', '-'] },
+    tryIt: {
+      text: { touch: 'Try it: tap + or −, Fit, or Back.', mouse: 'Try it: zoom in or out, press Fit, or step Back.' },
+      keys: ['+', '=', '-'],
+    },
   },
   {
     title: 'Roll the dice',
-    body: ['Roll the dice, or press [R], to jump to someone or somewhere new.'],
+    body: [
+      {
+        touch: 'Roll the dice to jump to someone or somewhere new.',
+        mouse: 'Roll the dice, or press [R], to jump to someone or somewhere new.',
+      },
+    ],
     hint: 'random',
     target: ['.graph-canvas__random'],
-    tryIt: { text: 'Try it: click the dice, or press [R].', keys: ['r', 'R'] },
+    tryIt: { text: { touch: 'Try it: tap the dice.', mouse: 'Try it: click the dice, or press [R].' }, keys: ['r', 'R'] },
   },
   {
     title: 'List view',
     body: [
-      'Rather read than roam? This switch flips between the graph and a list of everything by name.',
+      'Rather read than roam? This switch flips between the graph and a list of everything by name, where you can jump between people, wineries and vineyards, or sort by most connected.',
       'You may have noticed that the controls change slightly between views.',
     ],
     hint: 'list',
@@ -103,9 +134,14 @@ export const TOUR_STEPS: TourStep[] = [
   },
   {
     title: 'Help',
-    body: ['The [?] button lists every control and shortcut, and brings back this tour any time.'],
+    body: [
+      {
+        touch: 'The [?] button lists every gesture and control, and brings back this tour any time.',
+        mouse: 'The [?] button lists every control and shortcut, and brings back this tour any time.',
+      },
+    ],
     hint: 'controls',
     target: ['.guide__toggle'],
-    tryIt: { text: 'Try it: click [?], or press it.', keys: ['?'] },
+    tryIt: { text: { touch: 'Try it: tap [?].', mouse: 'Try it: click [?], or press it.' }, keys: ['?'] },
   },
 ]
