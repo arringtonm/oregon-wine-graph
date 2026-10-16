@@ -1,4 +1,4 @@
-import type { EdgeCategory, Graph, NodeType } from '../data/schema'
+import { EDGE_RULES, type EdgeCategory, type Graph, type NodeType } from '../data/schema'
 
 // Guided views: curated ways into the graph, each setting several filters at once, offered
 // in the toolbar's Guides menu, each at its own address, /guides/<id>. A view is data only; useGraph
@@ -8,10 +8,12 @@ import type { EdgeCategory, Graph, NodeType } from '../data/schema'
 // rule picks, joined by the connections among them:
 // - members: an organization's members, and the people and places tied to them
 // - era: records by year (wineries founded, vineyards planted, people's first recorded role)
+// - linked: records with at least one connection of the given kinds, so none sits alone
 
 export type FocusRule =
   | { kind: 'members'; org: string; label: string }
   | { kind: 'era'; from?: number; before?: number; label: string }
+  | { kind: 'linked'; categories: EdgeCategory[]; label: string }
 
 export interface GuideView {
   id: string
@@ -84,6 +86,7 @@ export const VIEWS: GuideView[] = [
     blurb: 'Which wineries buy grapes from which vineyards.',
     nodeTypes: only(TYPES, ['winery', 'vineyard']),
     categories: only(KINDS, ['fruit']),
+    focus: { kind: 'linked', categories: ['fruit'], label: 'Wineries and vineyards with fruit links' },
   },
 ]
 
@@ -109,6 +112,15 @@ export function startYears(graph: Graph): Map<string, number> {
 // The records a focus keeps (its core, which Random rolls among), and what it shows: the
 // core plus, for members, the people and places tied to them
 export function focusRecords(graph: Graph, rule: FocusRule): { core: Set<string>; shown: Set<string> } {
+  if (rule.kind === 'linked') {
+    const core = new Set<string>()
+    for (const edge of graph.edges) {
+      if (!rule.categories.includes(EDGE_RULES[edge.type].category)) continue
+      core.add(edge.source)
+      core.add(edge.target)
+    }
+    return { core, shown: core }
+  }
   if (rule.kind === 'era') {
     const core = new Set<string>()
     for (const [id, year] of startYears(graph)) {

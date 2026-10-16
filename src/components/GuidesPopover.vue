@@ -18,6 +18,13 @@ watch(
     open.value = true
   },
 )
+// The tour moving on (or closing) closes the menu a step opened
+watch(
+  () => state.tour,
+  (_step, previous) => {
+    if (previous !== null) open.value = false
+  },
+)
 
 function choose(id: string) {
   applyView(id)

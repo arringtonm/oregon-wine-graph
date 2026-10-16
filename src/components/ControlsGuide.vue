@@ -27,6 +27,13 @@ watch(
     open.value = true
   },
 )
+// The tour moving on (or closing) closes the guide, so it doesn't sit over the next step
+watch(
+  () => state.tour,
+  (_step, previous) => {
+    if (previous !== null) open.value = false
+  },
+)
 
 const touchOnly = window.matchMedia('(pointer: coarse)').matches && !window.matchMedia('(any-pointer: fine)').matches
 const platform =
@@ -253,7 +260,8 @@ kbd {
   /* Never wider or taller than the screen leaves (it ran off phones at a fixed 30rem) */
   width: min(30rem, calc(100vw - 2rem));
   max-height: min(var(--reka-popover-content-available-height, 75vh), 40rem);
-  z-index: 30;
+  /* Over the tour's dimming (39), for the tour's Help step */
+  z-index: 41;
   border: 1px solid var(--border-strong);
   border-radius: 8px;
   background: var(--surface-raised);

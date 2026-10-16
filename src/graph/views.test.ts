@@ -32,4 +32,11 @@ describe('guided views', () => {
     // David Lett planted the Willamette Valley's first Pinot noir in 1965
     expect(library.has('the-eyrie-vineyards')).toBe(true)
   })
+
+  it('keep only records with a connection of the given kinds', () => {
+    const { core } = focusRecords(graph, { kind: 'linked', categories: ['fruit'], label: '' })
+    const linked = new Set(graph.edges.filter((edge) => edge.type === 'sources_from').flatMap((edge) => [edge.source, edge.target]))
+    expect(core.size).toBeGreaterThanOrEqual(20)
+    expect(core).toEqual(linked)
+  })
 })

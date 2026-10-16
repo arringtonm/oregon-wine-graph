@@ -116,6 +116,15 @@ function readTourProgress(): TourProgress {
   return { step: 0, done: false }
 }
 
+// Never opened on this browser: the start panel's tour button stands out until it is
+function tourIsFresh(): boolean {
+  try {
+    return localStorage.getItem(TOUR_KEY) === null
+  } catch {
+    return true
+  }
+}
+
 function rememberTour() {
   try {
     localStorage.setItem(TOUR_KEY, JSON.stringify(state.tourProgress))
@@ -135,6 +144,7 @@ function startTour(from?: number) {
 function showTourStep(step: number) {
   const index = Math.max(0, Math.min(step, TOUR_STEPS.length - 1))
   state.tour = index
+  state.tourFresh = false
   state.tourProgress = { ...state.tourProgress, step: index }
   state.hint = TOUR_STEPS[index].hint
   rememberTour()
@@ -261,6 +271,7 @@ const state = reactive({
   tour: null as number | null,
   // Where the reader left it, remembered in this browser: a step to resume, or done
   tourProgress: readTourProgress(),
+  tourFresh: tourIsFresh(),
   // Bumped to ask the graph to fit everything in view, as its Fit button does
   fitRequest: 0,
 })

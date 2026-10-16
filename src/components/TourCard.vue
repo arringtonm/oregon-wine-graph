@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import { PopoverAnchor, PopoverContent, PopoverPortal, PopoverRoot } from 'reka-ui'
-import { computed, nextTick, onBeforeUnmount, onMounted, ref, shallowRef, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import { useGraph } from '../composables/useGraph'
-import { TOUR_STEPS, type TourAction } from '../tour/steps'
+import { TOUR_STEPS } from '../tour/steps'
 
-// The tour's card: beside the control its step names (which is ringed), or docked at the
-// foot of the screen on phones and when the control isn't showing. Non-modal, so the reader
-// can try things with it open; Esc or × closes it, remembering the step for later
+// The tour's card: docked at the foot of the screen, where it stays from step to step, while
+// the spotlight shows the control each step names. Non-modal, so the reader can try things
+// with it open; Esc or × closes it, remembering the step for later
 const props = defineProps<{
   // Where a node sits on screen, for the step that rings one
   nodeRect: (id: string) => DOMRect | null
 }>()
-const { state, tourStep, closeTour, finishTour, select, showFilters } = useGraph()
+const { state, tourStep, closeTour, finishTour } = useGraph()
 
 const step = computed(() => (state.tour === null ? null : TOUR_STEPS[state.tour]))
 
@@ -20,103 +20,186 @@ const parts = (line: string) =>
   line.split(/(\[[^\]]+\])/).filter(Boolean).map((text) => (text.startsWith('[') ? { key: text.slice(1, -1) } : { text }))
 const last = computed(() => state.tour === TOUR_STEPS.length - 1)
 
-// Phones: always docked
-const phoneQuery = window.matchMedia('(max-width: 600px)')
-const phone = ref(phoneQuery.matches)
-const onPhone = () => (phone.value = phoneQuery.matches)
-
-// What the card is placed against: an element, a node's spot on the graph, or the foot of
-// the screen. Worked out again after each step, and after anything that moves things
-type Reference = { getBoundingClientRect: () => DOMRect }
-const reference = shallowRef<Reference>()
-const docked = ref(false)
-const foot: Reference = {
+// Where the card sits: centred at the foot of the screen
+const foot = {
   getBoundingClientRect: () => new DOMRect(window.innerWidth / 2, window.innerHeight - 12, 0, 0),
 }
 
-function place() {
-  const current = step.value
-  if (!current) return
-  let target: Reference | undefined
-  if (!phone.value) {
-    if (current.hint === 'node' && state.hintNodeId) {
-      const id = state.hintNodeId
-      target = { getBoundingClientRect: () => props.nodeRect(id) ?? new DOMRect() }
-    } else {
-      const element = current.target
-        .map((selector) => document.querySelector<HTMLElement>(selector))
-        .find((candidate) => candidate && candidate.offsetParent !== null && candidate.getBoundingClientRect().width > 0)
-      if (element) target = element
-    }
-  }
-  docked.value = !target
-  reference.value = target ?? foot
+// The step's elements: every one of its selectors that's showing (laid out, and on screen:
+// the collapsed filters sit just off its left edge), so a button and the panel it opens
+// are lit together
+function showing(element: HTMLElement): boolean {
+  if (element.offsetParent === null) return false
+  const rect = element.getBoundingClientRect()
+  return rect.width > 0 && rect.right > 0 && rect.left < window.innerWidth
+}
+function targetElements(): HTMLElement[] {
+  return (step.value?.target ?? []).map((selector) => [...document.querySelectorAll<HTMLElement>(selector)].find(showing)).filter((element) => element !== undefined)
 }
 
-const side = computed(() => (docked.value ? 'top' : step.value?.hint === 'node' ? 'right' : (step.value?.side ?? 'bottom')))
+// The spotlight: while a step shows, the page is dimmed around the controls it names, so
+// the eye goes there. Only a picture: clicks still reach everything, as the tour is
+// non-modal. Followed every frame, as panels slide, the graph pans and menus open
+type Spot = { x: number; y: number; width: number; height: number; radius: number }
+const spots = ref<Spot[]>([])
+let frame = 0
 
-// Each step: place the card, and move focus to its title, so the step is read out
+function spotTargets(): Spot[] {
+  const current = step.value
+  if (!current) return []
+  // The step that rings a node: a circle around it, as the graph fills the screen
+  const node = current.hint === 'node' && state.hintNodeId ? props.nodeRect(state.hintNodeId) : null
+  if (node && node.width > 0) {
+    const size = Math.max(node.width, node.height) + 36
+    const x = node.left + node.width / 2 - size / 2
+    const y = node.top + node.height / 2 - size / 2
+    return [{ x, y, width: size, height: size, radius: size / 2 }]
+  }
+  return targetElements().map((element) => {
+    const rect = element.getBoundingClientRect()
+    // A little room around a control; none around a whole panel or the graph
+    const pad = rect.width * rect.height > (window.innerWidth * window.innerHeight) / 8 ? 0 : 6
+    return { x: rect.left - pad, y: rect.top - pad, width: rect.width + pad * 2, height: rect.height + pad * 2, radius: 10 }
+  })
+}
+
+let spotKey = ''
+function followSpot() {
+  const next = spotTargets()
+  const key = JSON.stringify(next)
+  if (key !== spotKey) {
+    spotKey = key
+    spots.value = next
+  }
+  frame = state.tour === null ? 0 : requestAnimationFrame(followSpot)
+}
+
+watch(
+  () => state.tour !== null,
+  (open) => {
+    cancelAnimationFrame(frame)
+    frame = open ? requestAnimationFrame(followSpot) : 0
+    if (!open) {
+      spots.value = []
+      spotKey = ''
+    }
+  },
+  { immediate: true },
+)
+
+// Each step: move focus to its title, so the step is read out
 const title = ref<HTMLElement>()
 watch(
-  () => [state.tour, state.hintNodeId, state.selectedId, state.listView, state.filtersCollapsed],
+  () => state.tour,
   async () => {
-    await nextTick()
-    place()
     if (state.tour !== null) {
       await nextTick()
       title.value?.focus()
     }
   },
 )
-onMounted(() => {
-  phoneQuery.addEventListener('change', onPhone)
-  window.addEventListener('resize', place)
-})
 onBeforeUnmount(() => {
-  phoneQuery.removeEventListener('change', onPhone)
-  window.removeEventListener('resize', place)
+  cancelAnimationFrame(frame)
+  clearTimeout(cheersTimer)
 })
 
-// "Try it": what the step's control does
-function run(action: TourAction) {
-  switch (action) {
-    case 'open-node':
-      if (state.hintNodeId) select(state.hintNodeId)
-      else state.randomRequest++
-      break
-    case 'open-record':
-      if (!state.selectedId) state.randomRequest++
-      break
-    case 'search':
-      document.getElementById('search')?.focus()
-      break
-    case 'guides':
-      state.guidesRequest++
-      break
-    case 'filters':
-      showFilters(true)
-      break
-    case 'fit':
-      state.fitRequest++
-      break
-    case 'random':
-      state.randomRequest++
-      break
-  }
+// Done: the tour's finished, with a toast of two clinking flutes that clears itself
+const cheers = ref(false)
+let cheersTimer = 0
+function finish() {
+  finishTour()
+  cheers.value = true
+  clearTimeout(cheersTimer)
+  cheersTimer = window.setTimeout(() => (cheers.value = false), 2600)
 }
+
+// "Try it": the reader using the step's real control. Noticed on a click in its spotlit
+// element (or any of its selectors, like a toggle and the panel it opens), on one of its
+// keys, or on a record opening; then the card says so and Next is the thing to press.
+// Never required: Next works either way
+const tried = ref(false)
+watch(
+  () => state.tour,
+  (_index, previous) => {
+    tried.value = false
+    // Leaving the List view step: back to the graph, where the rest of the controls are
+    if (previous !== null && previous !== undefined && TOUR_STEPS[previous].hint === 'list') state.listView = false
+  },
+)
+function onPointer(event: PointerEvent) {
+  const current = step.value
+  if (!current?.tryIt || current.tryIt.select) return
+  const target = event.target as Element | null
+  if (target?.closest('.tour')) return
+  if (current.target.some((selector) => target?.closest(selector))) tried.value = true
+}
+function onKey(event: KeyboardEvent) {
+  const keys = step.value?.tryIt?.keys
+  const typing = (event.target as Element | null)?.closest('input, textarea, select, [contenteditable="true"]')
+  if (keys?.includes(event.key) && !typing && !event.metaKey && !event.ctrlKey && !event.altKey) tried.value = true
+}
+watch(
+  () => state.selectedId,
+  (id) => {
+    if (id && step.value?.tryIt?.select) tried.value = true
+  },
+)
+document.addEventListener('pointerdown', onPointer, true)
+document.addEventListener('keydown', onKey, true)
+onBeforeUnmount(() => {
+  document.removeEventListener('pointerdown', onPointer, true)
+  document.removeEventListener('keydown', onKey, true)
+})
 </script>
 
 <template>
+  <Teleport to="body">
+    <!-- The dimming: the whole screen, with a clear hole over each spotlit control -->
+    <Transition name="tour-spot">
+      <svg v-if="step && spots.length" class="tour-spot" aria-hidden="true">
+        <mask id="tour-spot-holes">
+          <rect width="100%" height="100%" fill="white" />
+          <rect
+            v-for="(hole, index) in spots"
+            :key="index"
+            class="tour-spot__hole"
+            :rx="hole.radius"
+            fill="black"
+            :style="`x: ${hole.x}px; y: ${hole.y}px; width: ${hole.width}px; height: ${hole.height}px`"
+          />
+        </mask>
+        <rect class="tour-spot__dim" width="100%" height="100%" mask="url(#tour-spot-holes)" />
+      </svg>
+    </Transition>
+    <!-- The end of the tour: two flutes clink -->
+    <Transition name="cheers">
+      <div v-if="cheers" class="cheers" role="status">
+        <svg class="cheers__glasses" viewBox="0 0 120 110" aria-hidden="true">
+          <g class="cheers__glass cheers__glass--left" transform="translate(10 6)">
+            <path class="cheers__wine" d="M10.5 20h19l-2.6 27.5Q20 55 13.1 47.5z" />
+            <path class="cheers__flute" d="M8 4h24l-3 44Q20 57 11 48zM20 54v32M10 89q10-4 20 0" />
+          </g>
+          <g class="cheers__glass cheers__glass--right" transform="translate(70 6)">
+            <path class="cheers__wine" d="M10.5 20h19l-2.6 27.5Q20 55 13.1 47.5z" />
+            <path class="cheers__flute" d="M8 4h24l-3 44Q20 57 11 48zM20 54v32M10 89q10-4 20 0" />
+          </g>
+          <g class="cheers__sparks">
+            <path d="M60 2v-8M52 5l-6-6M68 5l6-6M48 13h-8M72 13h8" />
+          </g>
+        </svg>
+        <p>Cheers! You're ready to explore.</p>
+      </div>
+    </Transition>
+  </Teleport>
   <PopoverRoot :open="step !== null" @update:open="(open) => !open && closeTour()">
-    <PopoverAnchor :reference="reference" />
+    <PopoverAnchor :reference="foot" />
     <PopoverPortal>
       <PopoverContent
         v-if="step"
         class="tour"
-        :class="{ 'tour--docked': docked }"
-        :side="side"
+        side="top"
         align="center"
-        :side-offset="docked ? 0 : 12"
+        :side-offset="0"
         :collision-padding="12"
         role="dialog"
         aria-labelledby="tour-title"
@@ -136,14 +219,29 @@ function run(action: TourAction) {
             <template v-else>{{ part.text }}</template>
           </template>
         </p>
+        <!-- What to try, with the real control; ticked once they have -->
+        <p v-if="step.tryIt" class="tour__try" :class="{ 'tour__try--done': tried }" aria-live="polite">
+          <template v-if="tried"><span aria-hidden="true">✓</span> That's it.</template>
+          <template v-else>
+            <template v-for="(part, index) in parts(step.tryIt.text)" :key="index">
+              <kbd v-if="'key' in part">{{ part.key }}</kbd>
+              <template v-else>{{ part.text }}</template>
+            </template>
+          </template>
+        </p>
         <div class="tour__actions">
-          <button v-if="step.action" type="button" class="tour__try" @click="run(step.action.run)">
-            {{ step.action.label }}
-          </button>
           <span class="tour__steps">
             <button v-if="(state.tour ?? 0) > 0" type="button" class="tour__step" @click="tourStep(-1)">‹ Back</button>
-            <button v-if="!last" type="button" class="tour__step tour__step--next" @click="tourStep(1)">Next ›</button>
-            <button v-else type="button" class="tour__step tour__step--next" @click="finishTour">Done</button>
+            <button
+              v-if="!last"
+              type="button"
+              class="tour__step tour__step--next"
+              :class="{ 'tour__step--ready': tried }"
+              @click="tourStep(1)"
+            >
+              Next ›
+            </button>
+            <button v-else type="button" class="tour__step tour__step--next" @click="finish">Done</button>
           </span>
         </div>
       </PopoverContent>
@@ -152,21 +250,183 @@ function run(action: TourAction) {
 </template>
 
 <style>
+/* The spotlight: the screen dimmed but for a hole over each of the step's controls.
+   Under the menus and popovers a step opens (z-index 40 and up), over the rest */
+.tour-spot {
+  position: fixed;
+  z-index: 39;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.tour-spot__dim {
+  fill: var(--tour-dim);
+}
+
+.tour-spot__hole {
+  transition:
+    x 0.25s ease,
+    y 0.25s ease,
+    width 0.25s ease,
+    height 0.25s ease;
+}
+
+.tour-spot-enter-active,
+.tour-spot-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.tour-spot-enter-from,
+.tour-spot-leave-to {
+  opacity: 0;
+}
+
+/* Cheers: a toast in the middle of the screen as the tour ends */
+.cheers {
+  position: fixed;
+  z-index: 47;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  justify-items: center;
+  gap: 0.4rem;
+  padding: 1.25rem 1.75rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.cheers p {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 650;
+}
+
+.cheers__glasses {
+  width: 9rem;
+  overflow: visible;
+}
+
+.cheers__flute {
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cheers__wine {
+  fill: #e9c46a;
+  opacity: 0.85;
+}
+
+/* Each flute tips in from its foot, meets the other at the rim, and settles */
+.cheers__glass {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+
+.cheers__glass--left {
+  animation: cheers-left 1.1s cubic-bezier(0.3, 0.7, 0.4, 1) both;
+}
+
+.cheers__glass--right {
+  animation: cheers-right 1.1s cubic-bezier(0.3, 0.7, 0.4, 1) both;
+}
+
+@keyframes cheers-left {
+  0% {
+    transform: translate(10px, 6px) rotate(-14deg);
+  }
+  45% {
+    transform: translate(10px, 6px) rotate(12deg);
+  }
+  60%,
+  100% {
+    transform: translate(10px, 6px) rotate(9deg);
+  }
+}
+
+@keyframes cheers-right {
+  0% {
+    transform: translate(70px, 6px) rotate(14deg);
+  }
+  45% {
+    transform: translate(70px, 6px) rotate(-12deg);
+  }
+  60%,
+  100% {
+    transform: translate(70px, 6px) rotate(-9deg);
+  }
+}
+
+/* The clink: a burst of lines where the rims meet */
+.cheers__sparks {
+  fill: none;
+  stroke: #e9c46a;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: cheers-sparks 0.9s ease-out 0.45s both;
+}
+
+@keyframes cheers-sparks {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+}
+
+.cheers-enter-active,
+.cheers-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.cheers-enter-from,
+.cheers-leave-to {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tour-spot__hole,
+  .tour-spot-enter-active,
+  .tour-spot-leave-active {
+    transition: none;
+  }
+
+  /* The flutes shown already touching, without the motion */
+  .cheers__glass--left,
+  .cheers__glass--right,
+  .cheers__sparks {
+    animation-duration: 0s;
+  }
+}
+
 /* Teleported to the page body */
 .tour {
   z-index: 46;
-  width: min(20rem, calc(100vw - 2rem));
+  width: min(28rem, calc(100vw - 2rem));
   padding: 0.75rem 1rem 0.9rem;
   border: 1px solid var(--accent);
   border-radius: var(--radius);
   background: var(--surface-raised);
   box-shadow: var(--shadow);
   font-size: 0.9375rem;
-}
-
-/* At the foot of the screen: full width on a phone */
-.tour--docked {
-  width: min(28rem, calc(100vw - 2rem));
 }
 
 .tour__top {
@@ -232,7 +492,7 @@ function run(action: TourAction) {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  margin-top: 0.7rem;
+  margin-top: 1rem;
 }
 
 .tour__steps {
@@ -241,7 +501,51 @@ function run(action: TourAction) {
   margin-left: auto;
 }
 
-.tour__try,
+/* "Try it": a line in the accent under the step's words; green and ticked once done */
+.tour__try {
+  margin: 0.15rem 0 0;
+  color: var(--accent);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.tour__try kbd {
+  padding: 0 0.3em;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  font: inherit;
+  font-size: 0.875em;
+}
+
+.tour__try--done {
+  color: var(--text-primary);
+}
+
+.tour__try--done span {
+  color: var(--node-vineyard);
+}
+
+/* Next, once the step's been tried: a ring that pulses, as the way on */
+.tour__step--ready {
+  animation: tour-ready 1.6s ease-out infinite;
+}
+
+@keyframes tour-ready {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--fill) 55%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 9px transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tour__step--ready {
+    animation: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--fill) 40%, transparent);
+  }
+}
+
 .tour__step {
   min-height: 32px;
   padding: 0 0.7rem;
@@ -254,7 +558,6 @@ function run(action: TourAction) {
   cursor: pointer;
 }
 
-.tour__try:hover,
 .tour__step:hover {
   background: var(--wash);
 }

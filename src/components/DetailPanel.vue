@@ -373,7 +373,7 @@ const canFlag = flagsAvailable()
         the fruit came from and how its people are related.
       </p>
       <!-- The tour's way in, on its own line before the ways (no pop-up, per NN/g) -->
-      <button type="button" class="detail__tour" @click="startTour()">
+      <button type="button" class="detail__tour" :class="{ 'detail__tour--fresh': state.tourFresh }" @click="startTour()">
         <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5.5v9l7-4.5z" /></svg>
         {{ tourLabel.text }}<span v-if="tourLabel.more" class="visually-hidden">{{ tourLabel.more }}</span>
       </button>
@@ -754,6 +754,60 @@ ul + .detail__verb {
   width: 0.8rem;
   height: 0.8rem;
   fill: var(--accent);
+}
+
+/* Until the tour's first opened on this browser: bigger, filled, and a gentle hop every
+   few seconds, so a first-time reader finds it. Still where it was, so it's easy to pass */
+.detail__tour--fresh {
+  gap: 0.45rem;
+  min-height: 42px;
+  padding: 0 1.1rem 0 0.9rem;
+  border-color: var(--fill);
+  background: var(--fill);
+  color: var(--on-fill, #fff);
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  animation: detail-tour-hop 3.2s ease-in-out 1s infinite;
+}
+
+.detail__tour--fresh:hover {
+  background: var(--fill);
+  filter: brightness(1.08);
+  animation-play-state: paused;
+}
+
+.detail__tour--fresh:focus-visible {
+  animation-play-state: paused;
+}
+
+.detail__tour--fresh svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  fill: currentColor;
+}
+
+@keyframes detail-tour-hop {
+  0%,
+  24%,
+  100% {
+    transform: translateY(0);
+  }
+  8% {
+    transform: translateY(-5px);
+  }
+  14% {
+    transform: translateY(0);
+  }
+  19% {
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .detail__tour--fresh {
+    animation: none;
+  }
 }
 
 /* A key that's also a button ("Press ?"): drawn as a key, like Esc and R */

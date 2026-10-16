@@ -210,7 +210,7 @@ Rate a tension with one of these, and leave the call to him:
   1. labels and tooltips on every control;
   2. "Ways to explore" in the start panel (pointers in the empty state);
   3. the Controls guide (?), the reference;
-  4. the tour (`src/tour/steps.ts`, `TourCard.vue`): optional, 7 steps, each ringing one control with a "Try it". Launched only from the start panel's link and the Controls guide's "Take the tour", never on its own. Esc or × closes it; it resumes where it stopped.
+  4. the tour (`src/tour/steps.ts`, `TourCard.vue`): optional, 7 steps, each ringing one control with a "Try it". Launched only from the start panel's button and the Controls guide's "Take the tour", never on its own; until it's first opened in a browser, the start panel's button is filled and gives a gentle hop (Michael's change, 15 Oct, over the earlier link-only choice). Each step dims the page around its control and asks the reader to use the real control, moving on when they do. Esc or × closes it; it resumes where it stopped.
 - **"Beta"** follows the site title as a small pill (15 Oct).
 - **Ways to explore point at their controls** (15 Oct): each way (Click, Search, Guides, Filter, List view and Graph view, Roll the dice, and "Press ?") is a link-style button. Hovering it, or focusing it from the keyboard, rings its control in the accent (`.is-hinted` in style.css, `state.hint`); "Click" rings a well-connected winery or person in view instead. Pressing it does what the control does and clears the ring.
 - **Zoom floats on phones and tablets** (≤1024px, 15 Oct): +, − and Fit stack upright at the graph's bottom-right above About, as in a map, leaving the toolbar room for Reset and the dice. The dice no longer hides at 360px.

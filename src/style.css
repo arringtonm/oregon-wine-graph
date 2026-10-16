@@ -24,6 +24,8 @@
   --node-person: #b07a0b;
   --node-neutral: #8a8079;
   --shadow: 0 6px 20px rgba(40, 10, 20, 0.14);
+  /* The tour's dimming around the control a step names */
+  --tour-dim: rgb(20 12 15 / 0.5);
   /* Panels floating over the graph: translucent, with the graph blurred behind them */
   --frost: color-mix(in srgb, var(--surface-raised) 60%, transparent);
   --frost-blur: blur(14px) saturate(1.15);
@@ -66,6 +68,7 @@
     --node-person: #f0c45a;
     --node-neutral: #a8a2b8;
     --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    --tour-dim: rgb(0 0 0 / 0.7);
   }
 }
 
@@ -92,6 +95,7 @@
   --node-person: #f0c45a;
   --node-neutral: #a8a2b8;
   --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --tour-dim: rgb(0 0 0 / 0.7);
 }
 
 *,
