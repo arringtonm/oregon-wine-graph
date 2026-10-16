@@ -54,6 +54,8 @@ const {
   historyEntries,
   isDefaultView,
   randomNodeId,
+  startTour,
+  dismissTourNudge,
 } = useGraph()
 
 // The graph corner's count, in readers' words: "1,235 people and places · 1,909 connections"
@@ -1088,6 +1090,18 @@ watch(
       @fit="fitAnimated"
     />
     <TourCard :node-rect="nodeRect" />
+    <!-- Phones and tablets, first visit: the start panel (and its tour button) only shows once
+         a record is open, so the tour is offered here, over the graph, until it's taken or set
+         aside -->
+    <div v-if="compact && state.tourFresh && state.tour === null && !state.selectedId" class="graph-canvas__tour-nudge">
+      <button type="button" class="graph-canvas__tour-start" @click="startTour()">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5.5v9l7-4.5z" /></svg>
+        New here? Take the tour
+      </button>
+      <button type="button" class="graph-canvas__tour-dismiss" aria-label="No thanks, hide the tour invitation" @click="dismissTourNudge()">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
     <div v-if="!compact" class="graph-canvas__side">
       <ControlsGuide v-show="!state.listView" />
     </div>
@@ -1131,6 +1145,79 @@ watch(
   z-index: 1;
   right: calc(var(--inset-right, 0px) + 12px);
   bottom: 12px;
+}
+
+/* The first-visit tour invitation on phones and tablets: a filled pill over the graph,
+   centred above the count, that gives a gentle hop now and then (still under reduced motion) */
+.graph-canvas__tour-nudge {
+  position: absolute;
+  z-index: 3;
+  bottom: 56px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  border-radius: 999px;
+  background: var(--fill);
+  box-shadow: var(--shadow);
+  color: var(--on-fill);
+  transform: translateX(-50%);
+  animation: graph-canvas-hop 3.2s ease-in-out 1.5s infinite;
+}
+
+.graph-canvas__tour-start,
+.graph-canvas__tour-dismiss {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.graph-canvas__tour-start {
+  gap: 0.45rem;
+  padding: 0 0.4rem 0 1.1rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.graph-canvas__tour-start svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  fill: currentColor;
+}
+
+.graph-canvas__tour-dismiss {
+  justify-content: center;
+  width: 44px;
+  padding: 0;
+  font-size: 1.3rem;
+  opacity: 0.8;
+}
+
+@keyframes graph-canvas-hop {
+  0%,
+  24%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  8% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+  14% {
+    transform: translateX(-50%) translateY(0);
+  }
+  19% {
+    transform: translateX(-50%) translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .graph-canvas__tour-nudge {
+    animation: none;
+  }
 }
 
 /* Pointed out by the tour: the whole zoom group, ringed */

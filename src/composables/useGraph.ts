@@ -182,6 +182,13 @@ function showFilters(open?: boolean) {
   else if (!open || state.filtersCollapsed) document.getElementById('sidebar-toggle')?.click()
 }
 
+// Phones and tablets: the first-visit nudge towards the tour, set aside with its ×. Opening
+// the tour does the same. Either way it's remembered, so it shows once
+function dismissTourNudge() {
+  state.tourFresh = false
+  rememberTour()
+}
+
 function finishTour() {
   state.tourProgress = { step: 0, done: true }
   rememberTour()
@@ -915,6 +922,7 @@ export function useGraph() {
     pickNode,
     randomNodeId,
     startTour,
+    dismissTourNudge,
     showFilters,
     tourStep,
     closeTour,

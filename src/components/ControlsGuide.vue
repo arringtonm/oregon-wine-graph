@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { PopoverContent, PopoverRoot, PopoverTrigger } from 'reka-ui'
+import { PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'reka-ui'
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useGraph } from '../composables/useGraph'
+import PanelBackdrop from './PanelBackdrop.vue'
 import { deviceName, modifier, touchOnly } from '../services/device'
 
 // How to move around the graph, for the device in hand: touch gestures on a phone or
@@ -14,6 +15,13 @@ interface Section {
 }
 
 const open = ref(false)
+// Phones and tablets: the page dims behind the guide, its ? button lit (PanelBackdrop)
+const smallQuery = window.matchMedia('(max-width: 1024px)')
+const small = ref(smallQuery.matches)
+const onSmall = () => (small.value = smallQuery.matches)
+onMounted(() => smallQuery.addEventListener('change', onSmall))
+onBeforeUnmount(() => smallQuery.removeEventListener('change', onSmall))
+const toggle = ref<HTMLElement | null>(null)
 // Opened from the start panel's "Press ?"
 const { state, startTour } = useGraph()
 
@@ -156,6 +164,7 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
            data-tip: a Reka tooltip on the popover's own trigger would fight it for the button) -->
       <PopoverTrigger as-child>
         <button
+          ref="toggle"
           type="button"
           class="guide__toggle"
           :class="{ 'is-hinted': state.hint === 'controls' }"
@@ -163,36 +172,46 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
           <span aria-hidden="true">?</span>
         </button>
       </PopoverTrigger>
-      <PopoverContent
-        class="guide__panel"
-        align="end"
-        :side-offset="4"
-        :collision-padding="12"
-        aria-labelledby="controls-guide-heading"
-      >
-        <header class="guide__header">
-          <h2 id="controls-guide-heading">{{ touchOnly ? 'Touch controls' : 'Controls' }}</h2>
-          <span class="guide__platform">{{ deviceName }}</span>
-          <button type="button" class="guide__tour" @click="takeTour">Take the tour</button>
-        </header>
-        <div class="guide__body">
-          <section v-for="section in sections" :key="section.title" :aria-labelledby="`guide-${section.title}`">
-            <h3 :id="`guide-${section.title}`">{{ section.title }}</h3>
-            <dl>
-              <div v-for="row in section.rows" :key="row.action" class="guide__row">
-                <dt>{{ row.action }}</dt>
-                <dd>
-                  <template v-for="(way, index) in row.ways" :key="way">
-                    <span v-if="index > 0" class="visually-hidden">or</span>
-                    <kbd>{{ way }}</kbd>
-                  </template>
-                </dd>
-              </div>
-            </dl>
-          </section>
-        </div>
-      </PopoverContent>
+      <!-- At the top of the page, so it sits above the backdrop -->
+      <PopoverPortal>
+        <!-- With the backdrop (phones and tablets), it closes the guide: a press outside mustn't
+             close it first, or the rest of the tap would land on the graph underneath -->
+        <PopoverContent
+          class="guide__panel"
+          @pointer-down-outside="(event: Event) => small && event.preventDefault()"
+          align="end"
+          :side-offset="4"
+          :collision-padding="12"
+          aria-labelledby="controls-guide-heading"
+        >
+          <header class="guide__header">
+            <h2 id="controls-guide-heading">{{ touchOnly ? 'Touch controls' : 'Controls' }}</h2>
+            <span class="guide__platform">{{ deviceName }}</span>
+            <button type="button" class="guide__tour" @click="takeTour">Take the tour</button>
+            <button type="button" class="guide__close" aria-label="Close the controls" @click="open = false">
+              <span aria-hidden="true">×</span>
+            </button>
+          </header>
+          <div class="guide__body">
+            <section v-for="section in sections" :key="section.title" :aria-labelledby="`guide-${section.title}`">
+              <h3 :id="`guide-${section.title}`">{{ section.title }}</h3>
+              <dl>
+                <div v-for="row in section.rows" :key="row.action" class="guide__row">
+                  <dt>{{ row.action }}</dt>
+                  <dd>
+                    <template v-for="(way, index) in row.ways" :key="way">
+                      <span v-if="index > 0" class="visually-hidden">or</span>
+                      <kbd>{{ way }}</kbd>
+                    </template>
+                  </dd>
+                </div>
+              </dl>
+            </section>
+          </div>
+        </PopoverContent>
+      </PopoverPortal>
     </PopoverRoot>
+    <PanelBackdrop v-if="open && small && state.tour === null" :trigger="toggle" @close="open = false" />
   </div>
 </template>
 
@@ -267,8 +286,32 @@ kbd {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
+.guide__close {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin: -0.4rem -0.6rem -0.4rem 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.guide__close:hover {
+  background: var(--wash);
+  color: var(--text-primary);
+}
+
 .guide__header {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;

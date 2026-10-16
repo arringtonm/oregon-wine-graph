@@ -1,15 +1,23 @@
 <script setup lang="ts">
 import { PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'reka-ui'
-import { ref, watch } from 'vue'
+import { onBeforeUnmount, ref, watch } from 'vue'
 import { useGraph } from '../composables/useGraph'
 import { VIEWS } from '../graph/views'
 import Chevron from './Chevron.vue'
+import PanelBackdrop from './PanelBackdrop.vue'
 
 // The toolbar's Guides menu: curated views of the graph (graph/views.ts), each setting
 // several filters at once. Questions are asked from the search box. Choosing a view closes
 // the menu
 const { state, applyView, activeView } = useGraph()
 const open = ref(false)
+// Phones: the page dims behind the menu, its button lit (PanelBackdrop)
+const phoneQuery = window.matchMedia('(max-width: 600px)')
+const phone = ref(phoneQuery.matches)
+const onPhone = () => (phone.value = phoneQuery.matches)
+phoneQuery.addEventListener('change', onPhone)
+onBeforeUnmount(() => phoneQuery.removeEventListener('change', onPhone))
+const trigger = ref<{ $el: HTMLElement } | null>(null)
 // Opened from the start panel's "Guides"
 watch(
   () => state.guidesRequest,
@@ -34,7 +42,7 @@ function choose(id: string) {
 
 <template>
   <PopoverRoot v-model:open="open">
-    <PopoverTrigger class="guides-toggle" :class="{ 'is-hinted': state.hint === 'guides' }">
+    <PopoverTrigger ref="trigger" class="guides-toggle" :class="{ 'is-hinted': state.hint === 'guides' }">
       <!-- A signpost -->
       <svg viewBox="0 0 20 20" aria-hidden="true">
         <path d="M10 2.5v15M6.5 17.5h7" />
@@ -43,7 +51,15 @@ function choose(id: string) {
       <span>Guides<span v-if="activeView" class="guides-toggle__active">: {{ activeView.title }}</span></span><Chevron />
     </PopoverTrigger>
     <PopoverPortal>
-      <PopoverContent class="guides-panel" align="start" :side-offset="6" :collision-padding="12">
+      <!-- With the backdrop (phones), it closes the menu: a press outside mustn't close it first,
+           or the rest of the tap would land on the graph underneath -->
+      <PopoverContent
+        class="guides-panel"
+        align="start"
+        :side-offset="6"
+        :collision-padding="12"
+        @pointer-down-outside="(event: Event) => phone && event.preventDefault()"
+      >
         <section aria-labelledby="guides-views-heading">
           <h2 id="guides-views-heading" class="guides-panel__heading">Guided views</h2>
           <ul class="guides-panel__views">
@@ -67,6 +83,7 @@ function choose(id: string) {
       </PopoverContent>
     </PopoverPortal>
   </PopoverRoot>
+  <PanelBackdrop v-if="open && phone && state.tour === null" :trigger="trigger?.$el" @close="open = false" />
 </template>
 
 <style scoped>

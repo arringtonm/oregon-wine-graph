@@ -410,9 +410,9 @@ const canFlag = flagsAvailable()
           a person or place on the graph to open it.
         </li>
         <li>
-          <strong>Move around</strong>
+          <strong>Move around</strong>{{ ' ' }}
           <template v-if="touchOnly">by dragging, and pinch to zoom. Tap</template>
-          <template v-else>by dragging or scrolling with two fingers, and pinch or <kbd>{{ modifier }}</kbd> + scroll to zoom.  </template>
+          <template v-else>by dragging or scrolling with two fingers, and pinch or <kbd>{{ modifier }}</kbd> + scroll to zoom. Press</template>{{ ' ' }}
           <button
             type="button"
             class="detail__ways-key"
