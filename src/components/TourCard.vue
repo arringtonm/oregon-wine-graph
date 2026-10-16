@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { PopoverAnchor, PopoverContent, PopoverPortal, PopoverRoot } from 'reka-ui'
 import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import { useGraph } from '../composables/useGraph'
 import { TOUR_STEPS } from '../tour/steps'
 
-// The tour's card: docked at the foot of the screen, where it stays from step to step, while
-// the spotlight shows the control each step names. Non-modal, so the reader can try things
-// with it open; Esc or × closes it, remembering the step for later
+// The tour's card: centred on the screen, where it stays from step to step, while the
+// spotlight shows the control each step names (the ringed node is picked clear of it,
+// GraphCanvas.vue). Non-modal, so the reader can try things with it open; Esc or × closes
+// it, remembering the step for later
 const props = defineProps<{
   // Where a node sits on screen, for the step that rings one
   nodeRect: (id: string) => DOMRect | null
@@ -19,11 +19,6 @@ const step = computed(() => (state.tour === null ? null : TOUR_STEPS[state.tour]
 const parts = (line: string) =>
   line.split(/(\[[^\]]+\])/).filter(Boolean).map((text) => (text.startsWith('[') ? { key: text.slice(1, -1) } : { text }))
 const last = computed(() => state.tour === TOUR_STEPS.length - 1)
-
-// Where the card sits: centred at the foot of the screen
-const foot = {
-  getBoundingClientRect: () => new DOMRect(window.innerWidth / 2, window.innerHeight - 12, 0, 0),
-}
 
 // The step's elements: every one of its selectors that's showing (laid out, and on screen:
 // the collapsed filters sit just off its left edge), so a button and the panel it opens
@@ -134,6 +129,13 @@ function onPointer(event: PointerEvent) {
   if (current.target.some((selector) => target?.closest(selector))) tried.value = true
 }
 function onKey(event: KeyboardEvent) {
+  // Esc closes the tour, and only the tour: an open record stays open (App.vue's Esc skips a
+  // handled key)
+  if (event.key === 'Escape' && state.tour !== null) {
+    event.preventDefault()
+    closeTour()
+    return
+  }
   const keys = step.value?.tryIt?.keys
   const typing = (event.target as Element | null)?.closest('input, textarea, select, [contenteditable="true"]')
   if (keys?.includes(event.key) && !typing && !event.metaKey && !event.ctrlKey && !event.altKey) tried.value = true
@@ -191,21 +193,8 @@ onBeforeUnmount(() => {
       </div>
     </Transition>
   </Teleport>
-  <PopoverRoot :open="step !== null" @update:open="(open) => !open && closeTour()">
-    <PopoverAnchor :reference="foot" />
-    <PopoverPortal>
-      <PopoverContent
-        v-if="step"
-        class="tour"
-        side="top"
-        align="center"
-        :side-offset="0"
-        :collision-padding="12"
-        role="dialog"
-        aria-labelledby="tour-title"
-        @interact-outside.prevent
-        @open-auto-focus.prevent
-      >
+  <Teleport to="body">
+      <div v-if="step" class="tour" role="dialog" aria-labelledby="tour-title">
         <div class="tour__top">
           <span class="tour__count">{{ (state.tour ?? 0) + 1 }} of {{ TOUR_STEPS.length }}</span>
           <button type="button" class="tour__close" aria-label="Close the tour" @click="closeTour">
@@ -244,9 +233,8 @@ onBeforeUnmount(() => {
             <button v-else type="button" class="tour__step tour__step--next" @click="finish">Done</button>
           </span>
         </div>
-      </PopoverContent>
-    </PopoverPortal>
-  </PopoverRoot>
+      </div>
+  </Teleport>
 </template>
 
 <style>
@@ -418,9 +406,16 @@ onBeforeUnmount(() => {
 }
 
 /* Teleported to the page body */
+/* Centred on the screen, over the dimming */
 .tour {
+  position: fixed;
   z-index: 46;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: min(28rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
   padding: 0.75rem 1rem 0.9rem;
   border: 1px solid var(--accent);
   border-radius: var(--radius);

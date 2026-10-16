@@ -825,10 +825,19 @@ watch(
     state.hintNodeId = null
     if (!cy || state.listView) return
     const view = cy.extent()
+    // With the tour open, clear of its card, centred on the screen (TourCard.vue: up to
+    // 28rem wide), with room for the ring
+    const stage = container.value?.getBoundingClientRect()
+    const clear = (node: cytoscape.NodeSingular) => {
+      if (state.tour === null || !stage) return true
+      const { x, y } = node.renderedPosition()
+      const halfWidth = Math.min(448, window.innerWidth - 32) / 2 + 40
+      return Math.abs(stage.left + x - window.innerWidth / 2) > halfWidth || Math.abs(stage.top + y - window.innerHeight / 2) > 190
+    }
     const inView = cy.nodes().filter((node: cytoscape.NodeSingular) => {
       const { x, y } = node.position()
       const type = node.data('type')
-      return (type === 'winery' || type === 'person') && x > view.x1 && x < view.x2 && y > view.y1 && y < view.y2
+      return (type === 'winery' || type === 'person') && x > view.x1 && x < view.x2 && y > view.y1 && y < view.y2 && clear(node)
     })
     const best = inView.sort((a: cytoscape.NodeSingular, b: cytoscape.NodeSingular) => (degree.value.get(b.id()) ?? 0) - (degree.value.get(a.id()) ?? 0)).slice(0, 10)
     if (best.length === 0) return
@@ -934,12 +943,18 @@ watch(
       <ControlsGuide v-if="compact" v-show="!state.listView" />
       <div class="graph-canvas__group">
         <Tip label="Back to the previous selection">
-          <button type="button" aria-label="Back" :disabled="!canGoBack" @click="goBack">
+          <button type="button" aria-label="Back" :class="{ 'is-hinted': state.hint === 'zoom' }" :disabled="!canGoBack" @click="goBack">
             <svg class="graph-canvas__step" viewBox="0 0 20 20" aria-hidden="true"><path d="M12 5 7 10l5 5" /></svg>
           </button>
         </Tip>
         <Tip label="Forward to the next selection">
-          <button type="button" aria-label="Forward" :disabled="!canGoForward" @click="goForward">
+          <button
+            type="button"
+            aria-label="Forward"
+            :class="{ 'is-hinted': state.hint === 'zoom' }"
+            :disabled="!canGoForward"
+            @click="goForward"
+          >
             <svg class="graph-canvas__step" viewBox="0 0 20 20" aria-hidden="true"><path d="m8 5 5 5-5 5" /></svg>
           </button>
         </Tip>
@@ -951,6 +966,7 @@ watch(
               id="history-toggle"
               type="button"
               class="graph-canvas__history-toggle"
+              :class="{ 'is-hinted': state.hint === 'zoom' }"
               aria-label="History"
               data-tip="History"
               :disabled="historyEntries.length === 0"
@@ -995,7 +1011,7 @@ watch(
           class="graph-canvas__reset"
           type="button"
           aria-describedby="reset-description"
-          :class="{ 'is-hinted': state.hint === 'reset' }"
+          :class="{ 'is-hinted': state.hint === 'reset' || state.hint === 'zoom' }"
           :aria-disabled="atStart || undefined"
           @click="atStart || reset()"
         >

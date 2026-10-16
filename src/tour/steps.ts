@@ -73,8 +73,16 @@ export const TOUR_STEPS: TourStep[] = [
       'Back, Forward and History retrace your steps; [Esc] closes a record, and Reset starts over.',
     ],
     hint: 'zoom',
-    target: ['.graph-canvas__zoom', '.graph-canvas__zoom-float'],
-    tryIt: { text: 'Try it: zoom in or out, or press Fit.', keys: ['+', '=', '-'] },
+    // Zoom and Fit, and Back, Forward, History and Reset beside the dice
+    target: [
+      '.graph-canvas__zoom',
+      '.graph-canvas__zoom-float',
+      '.graph-canvas__toolbar button[aria-label="Back"]',
+      '.graph-canvas__toolbar button[aria-label="Forward"]',
+      '#history-toggle',
+      '.graph-canvas__reset',
+    ],
+    tryIt: { text: 'Try it: zoom in or out, press Fit, or step Back.', keys: ['+', '=', '-'] },
   },
   {
     title: 'Roll the dice',

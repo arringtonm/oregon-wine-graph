@@ -276,6 +276,7 @@ const state = reactive({
   fitRequest: 0,
 })
 
+// 'zoom' is the tour's "Getting around": zoom and Fit, with Back, Forward, History and Reset
 export type Hint = 'node' | 'search' | 'guides' | 'filters' | 'graph' | 'list' | 'random' | 'reset' | 'controls' | 'zoom'
 
 const APP_TITLE = 'Oregon Wine Graph'
