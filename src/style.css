@@ -235,3 +235,14 @@ summary {
     scroll-behavior: auto !important;
   }
 }
+
+/* A control pointed out from the start panel's "Ways to explore" (state.hint): a ring in the
+   accent outside it, and the hover's wash, so it can be found at a glance */
+.is-hinted {
+  position: relative;
+  z-index: 2;
+  background: var(--wash) !important;
+  color: var(--text-primary);
+  box-shadow: 0 0 0 2px var(--accent);
+  transition: box-shadow 0.15s ease;
+}

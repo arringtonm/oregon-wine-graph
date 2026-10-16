@@ -206,6 +206,13 @@ Rate a tension with one of these, and leave the call to him:
   - no type line under the name.
 - **Start panel:** "Ways to explore", then Recently viewed (saved in the browser). The random button there went (15 Oct): it vanished once a record opened. The toolbar's dice is the one random control; its tooltip opens with a cellar phrase (`RANDOM_INVITES`), new after each roll, then "(Select random person or place)".
 - **Reset** sits in the history group, between the History menu and the dice, not with zoom and Fit: it changes the filters and selection, not the framing (15 Oct). It shows at every width, and rests (dimmed) at the start.
+- **Help comes in layers** (15 Oct; NN/g: help readers pull up beats tutorials pushed at them). New guidance goes in the right layer:
+  1. labels and tooltips on every control;
+  2. "Ways to explore" in the start panel (pointers in the empty state);
+  3. the Controls guide (?), the reference;
+  4. the tour (`src/tour/steps.ts`, `TourCard.vue`): optional, 7 steps, each ringing one control with a "Try it". Launched only from the start panel's link and the Controls guide's "Take the tour", never on its own. Esc or × closes it; it resumes where it stopped.
+- **"Beta"** follows the site title as a small pill (15 Oct).
+- **Ways to explore point at their controls** (15 Oct): each way (Click, Search, Guides, Filter, List view and Graph view, Roll the dice, and "Press ?") is a link-style button. Hovering it, or focusing it from the keyboard, rings its control in the accent (`.is-hinted` in style.css, `state.hint`); "Click" rings a well-connected winery or person in view instead. Pressing it does what the control does and clears the ring.
 - **Zoom floats on phones and tablets** (≤1024px, 15 Oct): +, − and Fit stack upright at the graph's bottom-right above About, as in a map, leaving the toolbar room for Reset and the dice. The dice no longer hides at 360px.
 - **Guides:** the toolbar's Ask became Guides, holding curated views (graph/views.ts); the name is Michael's choice over "Explore" and "Smart" (15 Oct).
 - **Search and Ask are one box** (15 Oct, Michael's choice): an "Ask: …" row joins the results, first when the text reads as a question or nothing matches, otherwise last; its answer opens under the box.

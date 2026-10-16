@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { PopoverContent, PopoverRoot, PopoverTrigger } from 'reka-ui'
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { useGraph } from '../composables/useGraph'
 
 // How to move around the graph, for the device in hand: touch gestures on a phone or
 // tablet, mouse and trackpad on a computer, with ⌘ or Ctrl to match the system. The ? key
@@ -12,6 +13,20 @@ interface Section {
 }
 
 const open = ref(false)
+// Opened from the start panel's "Press ?"
+const { state, startTour } = useGraph()
+
+function takeTour() {
+  open.value = false
+  startTour()
+}
+watch(
+  () => state.controlsRequest,
+  () => {
+    if (state.tour === null) state.hint = null
+    open.value = true
+  },
+)
 
 const touchOnly = window.matchMedia('(pointer: coarse)').matches && !window.matchMedia('(any-pointer: fine)').matches
 const platform =
@@ -134,7 +149,11 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
       <!-- Just "?", its shortcut; named "Controls", which its tooltip shows (style.css's
            data-tip: a Reka tooltip on the popover's own trigger would fight it for the button) -->
       <PopoverTrigger as-child>
-        <button type="button" class="guide__toggle" aria-label="Controls" aria-keyshortcuts="?" data-tip="Controls" data-tip-align="end">
+        <button
+          type="button"
+          class="guide__toggle"
+          :class="{ 'is-hinted': state.hint === 'controls' }"
+          aria-label="Controls" aria-keyshortcuts="?" data-tip="Controls" data-tip-align="end">
           <span aria-hidden="true">?</span>
         </button>
       </PopoverTrigger>
@@ -148,6 +167,7 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
         <header class="guide__header">
           <h2 id="controls-guide-heading">{{ touchOnly ? 'Touch controls' : 'Controls' }}</h2>
           <span class="guide__platform">{{ touchOnly ? 'Phone or tablet' : mac ? 'Mac' : 'Windows or Linux' }}</span>
+          <button type="button" class="guide__tour" @click="takeTour">Take the tour</button>
         </header>
         <div class="guide__body">
           <section v-for="section in sections" :key="section.title" :aria-labelledby="`guide-${section.title}`">
@@ -247,6 +267,21 @@ kbd {
   gap: 1rem;
   padding: 0.875rem 1.125rem;
   border-bottom: 1px solid var(--border);
+}
+
+.guide__tour {
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--link);
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.guide__tour:hover {
+  text-decoration: underline;
 }
 
 .guide__header h2 {

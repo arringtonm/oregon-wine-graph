@@ -3,6 +3,7 @@ import { loadGraph } from '../data'
 import { cardParts, connectionLabel, formatYears, HIDDEN_TYPES, SINGULAR_TYPE } from '../graph/format'
 import { foldText } from '../graph/textMatch'
 import { focusRecords, viewById, VIEWS, type GuideView } from '../graph/views'
+import { TOUR_STEPS } from '../tour/steps'
 import { describe, GUIDES_PATH, guidePath, guideUrl, recordUrl, SITE, SITE_DESCRIPTION } from '../seo/recordPage'
 // Re-exported for the components that have always imported them from here
 export { edgeLabel, formatYears, HIDDEN_TYPES, nodeYears, SINGULAR_TYPE } from '../graph/format'
@@ -96,6 +97,76 @@ export interface AdminFlag extends Flag {
 }
 
 const COLLAPSED_KEY = 'oregon-wine-graph:filters-collapsed'
+const TOUR_KEY = 'oregon-wine-graph:tour'
+
+interface TourProgress {
+  step: number
+  done: boolean
+}
+
+function readTourProgress(): TourProgress {
+  try {
+    const stored: unknown = JSON.parse(localStorage.getItem(TOUR_KEY) ?? 'null')
+    if (stored && typeof stored === 'object' && 'step' in stored && typeof stored.step === 'number') {
+      return { step: Math.max(0, Math.min(stored.step, TOUR_STEPS.length - 1)), done: 'done' in stored && stored.done === true }
+    }
+  } catch {
+    // Nothing remembered
+  }
+  return { step: 0, done: false }
+}
+
+function rememberTour() {
+  try {
+    localStorage.setItem(TOUR_KEY, JSON.stringify(state.tourProgress))
+  } catch {
+    // Kept for this visit only where storage is unavailable
+  }
+}
+
+// The tour: open at a step (by default where the reader left it, or the start once done),
+// step through, close (remembering the step) or finish (remembering it's done). While it's
+// open, its step's control is the one ringed
+function startTour(from?: number) {
+  const step = from ?? (state.tourProgress.done ? 0 : state.tourProgress.step)
+  showTourStep(step)
+}
+
+function showTourStep(step: number) {
+  const index = Math.max(0, Math.min(step, TOUR_STEPS.length - 1))
+  state.tour = index
+  state.tourProgress = { ...state.tourProgress, step: index }
+  state.hint = TOUR_STEPS[index].hint
+  rememberTour()
+}
+
+function tourStep(delta: number) {
+  if (state.tour === null) return
+  const next = state.tour + delta
+  if (next >= TOUR_STEPS.length) finishTour()
+  else showTourStep(next)
+}
+
+function closeTour() {
+  state.tour = null
+  state.hint = null
+}
+
+// Shows or hides the filters, as the toolbar's button does: the sidebar on wide screens,
+// the drawer on smaller ones. With `open`, only shows them
+function showFilters(open?: boolean) {
+  state.hint = state.tour === null ? null : state.hint
+  const compact = window.matchMedia('(max-width: 1024px)').matches
+  if (compact) state.filtersOpen = open ?? !state.filtersOpen
+  else if (!open || state.filtersCollapsed) document.getElementById('sidebar-toggle')?.click()
+}
+
+function finishTour() {
+  state.tourProgress = { step: 0, done: true }
+  rememberTour()
+  closeTour()
+}
+
 const RECENT_KEY = 'oregon-wine-graph:recent'
 // Records viewed in this browser, newest first; the empty panel lists a few of them
 const RECENT_LIMIT = 8
@@ -175,7 +246,26 @@ const state = reactive({
   resetRequest: 0,
   // Bumped when a guided view is applied, asking the graph for a fresh layout
   viewRequest: 0,
+  // Bumped to ask the graph to roll the dice, as the start panel's "Roll the dice" does
+  randomRequest: 0,
+  // Bumped to open the Guides menu or the Controls guide, from the start panel
+  guidesRequest: 0,
+  controlsRequest: 0,
+  // The control a line of the start panel's "Ways to explore" points to, while that line is
+  // hovered or focused: the control is highlighted, showing where it lives
+  hint: null as Hint | null,
+  // For "Click a person or place": the well-connected winery or person ringed on the graph
+  // while it's hovered, which pressing it opens
+  hintNodeId: null as string | null,
+  // The tour (src/tour/steps.ts): the step showing, or null when it's closed
+  tour: null as number | null,
+  // Where the reader left it, remembered in this browser: a step to resume, or done
+  tourProgress: readTourProgress(),
+  // Bumped to ask the graph to fit everything in view, as its Fit button does
+  fitRequest: 0,
 })
+
+export type Hint = 'node' | 'search' | 'guides' | 'filters' | 'graph' | 'list' | 'random' | 'reset' | 'controls' | 'zoom'
 
 const APP_TITLE = 'Oregon Wine Graph'
 
@@ -790,6 +880,11 @@ export function useGraph() {
     select,
     pickNode,
     randomNodeId,
+    startTour,
+    showFilters,
+    tourStep,
+    closeTour,
+    finishTour,
     applyView,
     activeView,
     loadFlags,

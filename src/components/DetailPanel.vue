@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, ref, watch } from 'vue'
-import { nodeYears, reviewing, SINGULAR_TYPE, useGraph, type Connection } from '../composables/useGraph'
+import { TOUR_STEPS } from '../tour/steps'
+import { nodeYears, reviewing, SINGULAR_TYPE, useGraph, type Connection, type Hint } from '../composables/useGraph'
 import { EDGE_CATEGORY_LABELS, type GraphNode } from '../data/schema'
 import AddConnection from './AddConnection.vue'
 import NodeGlyph from './NodeGlyph.vue'
@@ -17,6 +18,9 @@ const {
   selectedNode,
   connectionsOf,
   select,
+  isDefaultView,
+  startTour,
+  showFilters,
   unverified,
   setVerified,
   approveCard,
@@ -29,6 +33,50 @@ const {
   openFlags,
   selectNextFlagged,
 } = useGraph()
+
+// The start panel's ways to explore point at their controls: hovering or focusing one
+// highlights its control, and pressing it does what the control does
+// Keyboard focus counts, but not the focus a click leaves behind, which would keep the
+// control lit after the click; any click clears it, as the control takes over
+// While the tour is open, its step owns the ring
+function pointsTo(hint: Hint) {
+  const free = () => state.tour === null
+  const off = () => free() && state.hint === hint && (state.hint = null)
+  return {
+    onMouseenter: () => free() && (state.hint = hint),
+    onMouseleave: off,
+    onFocus: (event: FocusEvent) => free() && (event.target as HTMLElement).matches(':focus-visible') && (state.hint = hint),
+    onBlur: off,
+    onClick: () => free() && (state.hint = null),
+  }
+}
+
+// The tour link: where the reader left off, if anywhere
+const tourLabel = computed(() => {
+  const { step, done } = state.tourProgress
+  if (done) return { text: 'Take the tour again', more: '' }
+  if (step > 0) return { text: 'Resume the tour', more: ` at step ${step + 1} of ${TOUR_STEPS.length}` }
+  return { text: 'Take the tour · 1 min', more: '' }
+})
+
+// "Click": opens the person or winery ringed on the graph, or, with none (the list view),
+// one at random
+function openShown() {
+  if (state.hintNodeId) select(state.hintNodeId, { focusDetails: true })
+  else state.randomRequest++
+  state.hintNodeId = null
+}
+
+// "Reset": as the toolbar's Reset does, when there's anything to reset
+function resetAll() {
+  if (!isDefaultView.value || state.selectedId) state.resetRequest++
+}
+
+function goSearch() {
+  state.hint = null
+  document.getElementById('search')?.focus()
+}
+
 
 
 // The empty panel's "Recently viewed": the last few records viewed in this browser, kept
@@ -324,21 +372,69 @@ const canFlag = flagsAvailable()
         The people, wineries and vineyards of Oregon wine: who founded what, who made the wine, where
         the fruit came from and how its people are related.
       </p>
+      <!-- The tour's way in, on its own line before the ways (no pop-up, per NN/g) -->
+      <button type="button" class="detail__tour" @click="startTour()">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5.5v9l7-4.5z" /></svg>
+        {{ tourLabel.text }}<span v-if="tourLabel.more" class="visually-hidden">{{ tourLabel.more }}</span>
+      </button>
       <h3>Ways to explore</h3>
+      <!-- Each way names its control as a button: hovering or focusing it highlights the
+           control (state.hint), pressing it does what the control does -->
       <ul class="detail__ways">
-        <li><strong>Click</strong> a person or place on the graph to open it.</li>
         <li>
-          <strong>Search</strong> for a name you know, like Eyrie or David Lett, or ask a question, such as
-          “Who founded Adelsheim Vineyard?”
+          <button type="button" class="detail__ways-action" v-bind="pointsTo('node')" @click="openShown">Click</button>
+          a person or place on the graph to open it.
         </li>
-        <li><strong>Guides</strong> offers curated views, like Southern Oregon or Sparkling.</li>
-        <li><strong>Filter</strong> by people, wineries, kinds of connection or AVA.</li>
-        <li><strong>List view</strong> shows everything by name, for reading rather than roaming.</li>
-        <li><strong>Roll the dice</strong> in the toolbar, or press R, for a random person or place.</li>
+        <li>
+          <strong>Move around</strong> by dragging, or scrolling with two fingers, and pinch to zoom. Press
+          <button
+            type="button"
+            class="detail__ways-key"
+            aria-label="? (Controls)"
+            v-bind="pointsTo('controls')"
+            @click="state.controlsRequest++"
+          >
+            ?
+          </button>
+          for every control.
+        </li>
+        <li>
+          <button type="button" class="detail__ways-action" v-bind="pointsTo('search')" @click="goSearch">Search</button>
+          for a name you know, like Eyrie or David Lett, or ask a question, such as “Who founded Adelsheim
+          Vineyard?”
+        </li>
+        <li>
+          <button type="button" class="detail__ways-action" v-bind="pointsTo('guides')" @click="state.guidesRequest++">
+            Guides
+          </button>
+          offers curated views, like Southern Oregon or Sparkling.
+        </li>
+        <li>
+          <button type="button" class="detail__ways-action" v-bind="pointsTo('filters')" @click="showFilters()">Filter</button>
+          by people, wineries, kinds of connection or AVA.
+        </li>
+        <li>
+          <button type="button" class="detail__ways-action" v-bind="pointsTo('list')" @click="state.listView = true">
+            List view
+          </button>
+          shows everything by name, for reading rather than roaming;
+          <button type="button" class="detail__ways-action" v-bind="pointsTo('graph')" @click="state.listView = false">
+            Graph view
+          </button>
+          brings back the web of connections.
+        </li>
+        <li>
+          <button type="button" class="detail__ways-action" v-bind="pointsTo('random')" @click="state.randomRequest++">
+            Roll the dice
+          </button>
+          in the toolbar, or press <kbd>R</kbd>, for a random person or place.
+        </li>
+        <li>
+          Press <kbd>Esc</kbd> to close a record, or
+          <button type="button" class="detail__ways-action" v-bind="pointsTo('reset')" @click="resetAll">Reset</button>
+          to clear the filters and start over.
+        </li>
       </ul>
-      <p class="detail__facts">
-        Scroll with two fingers to move around and pinch to zoom. Press ? for all the controls.
-      </p>
       <!-- The last few records viewed, at the foot of the panel -->
       <section v-if="recent.length" class="detail__recent">
         <h3>Recently viewed</h3>
@@ -604,6 +700,9 @@ ul + .detail__verb {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  /* Right under its heading, which has its own space below: this takes back the panel's
+     12px gap between blocks */
+  margin-top: -12px;
   padding-left: 1.1rem;
   list-style: disc;
 }
@@ -614,6 +713,75 @@ ul + .detail__verb {
 
 .detail__ways strong {
   font-weight: 600;
+}
+
+/* "Roll the dice": bold like the other ways, and underlined as something to press */
+.detail__ways-action {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+/* The tour's way in: an outlined button on its own line, under the introduction */
+.detail__tour {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 34px;
+  padding: 0 0.8rem 0 0.65rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.detail__tour:hover {
+  background: var(--wash);
+}
+
+.detail__tour svg {
+  width: 0.8rem;
+  height: 0.8rem;
+  fill: var(--accent);
+}
+
+/* A key that's also a button ("Press ?"): drawn as a key, like Esc and R */
+.detail__ways-key {
+  padding: 0 0.3em;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 0.875em;
+  cursor: pointer;
+}
+
+.detail__ways-key:hover {
+  background: var(--wash);
+}
+
+.detail__ways kbd {
+  padding: 0 0.3em;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  font: inherit;
+  font-size: 0.875em;
+}
+
+.detail__ways-action:hover {
+  text-decoration-color: currentColor;
 }
 
 /* Recently viewed sits at the foot of the empty panel */

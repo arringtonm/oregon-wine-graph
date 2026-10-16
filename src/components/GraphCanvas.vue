@@ -35,6 +35,7 @@ cytoscape.use(fcose)
 // Questions need a server holding the decision model's key: the dev server, or a deployed
 // endpoint set in VITE_ASK_URL. Without either, the build leaves the component out
 import GuidesPopover from './GuidesPopover.vue'
+import TourCard from './TourCard.vue'
 
 const {
   state,
@@ -255,6 +256,11 @@ function buildStyle(): StylesheetJson {
       },
     },
     { selector: '.dimmed', style: { opacity: 0.15 } },
+    // Pointed out from the start panel's "Click a person or place": a wider, stronger disc
+    {
+      selector: 'node.hinted',
+      style: { 'underlay-color': token('--accent'), 'underlay-opacity': 0.55, 'underlay-padding': 14, 'underlay-shape': 'ellipse' },
+    },
     // A soft disc behind the selected node's silhouette
     {
       selector: 'node.selected',
@@ -797,6 +803,50 @@ watch([visibleNodes, visibleEdges], syncElements)
 watch(isDark, () => nextTick(applyTheme))
 // The filter drawer's Reset, on smaller screens
 watch(() => state.resetRequest, reset)
+// The tour's "Fit the graph"
+watch(() => state.fitRequest, () => fitAnimated())
+
+// Where a node sits on the page, for the tour's card
+function nodeRect(id: string): DOMRect | null {
+  const node = cy?.getElementById(id)
+  if (!node || node.empty() || !container.value) return null
+  const box = node.renderedBoundingBox()
+  const stage = container.value.getBoundingClientRect()
+  return new DOMRect(stage.left + box.x1, stage.top + box.y1, box.w, box.h)
+}
+
+// The start panel's "Click a person or place": while hovered, ring a well-connected winery
+// or person already in view (no panning), one of the ten best connected, so it varies
+watch(
+  () => state.hint,
+  (hint) => {
+    cy?.nodes('.hinted').removeClass('hinted')
+    if (hint !== 'node') return
+    state.hintNodeId = null
+    if (!cy || state.listView) return
+    const view = cy.extent()
+    const inView = cy.nodes().filter((node: cytoscape.NodeSingular) => {
+      const { x, y } = node.position()
+      const type = node.data('type')
+      return (type === 'winery' || type === 'person') && x > view.x1 && x < view.x2 && y > view.y1 && y < view.y2
+    })
+    const best = inView.sort((a: cytoscape.NodeSingular, b: cytoscape.NodeSingular) => (degree.value.get(b.id()) ?? 0) - (degree.value.get(a.id()) ?? 0)).slice(0, 10)
+    if (best.length === 0) return
+    const node = best[Math.floor(Math.random() * best.length)]
+    node.addClass('hinted')
+    state.hintNodeId = node.id()
+  },
+)
+// The start panel's "Roll the dice": the panel gives way to the record, so focus moves to
+// the record's name, as a pick from search does
+watch(
+  () => state.randomRequest,
+  async () => {
+    if (state.tour === null) state.hint = null
+    await goRandom()
+    if (state.selectedId) state.focusDetailsRequest++
+  },
+)
 // A guided view, from the Guides menu: its filters are set; lay it out afresh and frame it
 watch(
   () => state.viewRequest,
@@ -850,6 +900,7 @@ watch(
           id="sidebar-toggle"
           type="button"
           class="graph-canvas__sidebar-toggle"
+          :class="{ 'is-hinted': state.hint === 'filters' }"
           aria-label="Filters"
           aria-controls="filters"
           :aria-expanded="!state.filtersCollapsed"
@@ -867,6 +918,7 @@ watch(
         id="filters-toggle"
         type="button"
         class="graph-canvas__filters"
+        :class="{ 'is-hinted': state.hint === 'filters' }"
         aria-controls="filters"
         :aria-expanded="state.filtersOpen"
         @click="state.filtersOpen = !state.filtersOpen"
@@ -943,13 +995,21 @@ watch(
           class="graph-canvas__reset"
           type="button"
           aria-describedby="reset-description"
+          :class="{ 'is-hinted': state.hint === 'reset' }"
           :aria-disabled="atStart || undefined"
           @click="atStart || reset()"
         >
           Reset
         </button>
         <Tip :label="`${invite} (Select random person or place)`">
-          <button type="button" class="graph-canvas__random" aria-label="Random person or place" aria-keyshortcuts="R" @click="goRandom">
+          <button
+            type="button"
+            class="graph-canvas__random"
+            :class="{ 'is-hinted graph-canvas__random--hint': state.hint === 'random' }"
+            aria-label="Random person or place"
+            aria-keyshortcuts="R"
+            @click="goRandom"
+          >
             <svg viewBox="0 0 20 20" aria-hidden="true">
               <rect x="3" y="3" width="14" height="14" rx="3.2" />
               <circle cx="7" cy="7" r="1.25" />
@@ -971,7 +1031,7 @@ watch(
       >
         <!-- Icons, named "Graph view" and "List view", which their tooltips show (data-tip, as
              a Reka tooltip would fight the switch for its buttons) -->
-        <ToggleGroupItem value="graph" aria-label="Graph view" data-tip="Graph view">
+        <ToggleGroupItem value="graph" aria-label="Graph view" data-tip="Graph view" :class="{ 'is-hinted': state.hint === 'graph' }">
           <svg class="graph-canvas__view-icon" viewBox="0 0 20 20" aria-hidden="true">
             <path d="M7.1 5.8l5.8-.9M6 8.2l2.9 4.7M14.1 7.2l-3 5.7" />
             <circle cx="5" cy="6.2" r="2.1" />
@@ -979,7 +1039,7 @@ watch(
             <circle cx="10" cy="15" r="2.1" />
           </svg>
         </ToggleGroupItem>
-        <ToggleGroupItem value="list" aria-label="List view" data-tip="List view">
+        <ToggleGroupItem value="list" aria-label="List view" data-tip="List view" :class="{ 'is-hinted': state.hint === 'list' }">
           <svg class="graph-canvas__view-icon" viewBox="0 0 20 20" aria-hidden="true">
             <path d="M8 5h9M8 10h9M8 15h9" />
             <circle class="graph-canvas__view-dot" cx="4" cy="5" r="1.2" />
@@ -988,7 +1048,14 @@ watch(
           </svg>
         </ToggleGroupItem>
       </ToggleGroupRoot>
-      <ZoomControls v-if="!phone" v-show="!state.listView" class="graph-canvas__zoom" @zoom="zoomBy" @fit="fitAnimated" />
+      <ZoomControls
+        v-if="!phone"
+        v-show="!state.listView"
+        class="graph-canvas__zoom"
+        :class="{ 'graph-canvas__zoom--hinted': state.hint === 'zoom' }"
+        @zoom="zoomBy"
+        @fit="fitAnimated"
+      />
       <span id="reset-description" class="visually-hidden">Clear filters and selection, and lay the graph out again</span>
     </div>
     <!-- Phones and tablets: zoom on the graph's corner, above About, after the toolbar in tab order -->
@@ -997,9 +1064,11 @@ watch(
       v-show="!state.listView"
       vertical
       class="graph-canvas__zoom-float"
+      :class="{ 'graph-canvas__zoom--hinted': state.hint === 'zoom' }"
       @zoom="zoomBy"
       @fit="fitAnimated"
     />
+    <TourCard :node-rect="nodeRect" />
     <div v-if="!compact" class="graph-canvas__side">
       <ControlsGuide v-show="!state.listView" />
     </div>
@@ -1043,6 +1112,14 @@ watch(
   z-index: 1;
   right: calc(var(--inset-right, 0px) + 12px);
   bottom: 12px;
+}
+
+/* Pointed out by the tour: the whole zoom group, ringed */
+.graph-canvas__zoom--hinted {
+  position: relative;
+  z-index: 2;
+  border-radius: var(--radius);
+  box-shadow: 0 0 0 2px var(--accent);
 }
 
 /* Phones and tablets: zoom stacked above About (44px and a gap) */
@@ -1270,6 +1347,30 @@ watch(
 .graph-canvas__toolbar .graph-canvas__random {
   display: inline-grid;
   place-items: center;
+}
+
+/* Pointed out from the start panel (style.css's .is-hinted), the dice gives a little shake */
+.graph-canvas__random--hint svg {
+  animation: dice-shake 0.6s ease-in-out 2;
+}
+
+@keyframes dice-shake {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-14deg);
+  }
+  75% {
+    transform: rotate(14deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .graph-canvas__random--hint svg {
+    animation: none;
+  }
 }
 
 .graph-canvas__random svg {

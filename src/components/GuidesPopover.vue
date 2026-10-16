@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'reka-ui'
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { useGraph } from '../composables/useGraph'
 import { VIEWS } from '../graph/views'
 import Chevron from './Chevron.vue'
@@ -8,8 +8,16 @@ import Chevron from './Chevron.vue'
 // The toolbar's Guides menu: curated views of the graph (graph/views.ts), each setting
 // several filters at once. Questions are asked from the search box. Choosing a view closes
 // the menu
-const { applyView, activeView } = useGraph()
+const { state, applyView, activeView } = useGraph()
 const open = ref(false)
+// Opened from the start panel's "Guides"
+watch(
+  () => state.guidesRequest,
+  () => {
+    if (state.tour === null) state.hint = null
+    open.value = true
+  },
+)
 
 function choose(id: string) {
   applyView(id)
@@ -19,7 +27,7 @@ function choose(id: string) {
 
 <template>
   <PopoverRoot v-model:open="open">
-    <PopoverTrigger class="guides-toggle">
+    <PopoverTrigger class="guides-toggle" :class="{ 'is-hinted': state.hint === 'guides' }">
       <!-- A signpost -->
       <svg viewBox="0 0 20 20" aria-hidden="true">
         <path d="M10 2.5v15M6.5 17.5h7" />

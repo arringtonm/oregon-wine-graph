@@ -67,6 +67,8 @@ onBeforeUnmount(() => {
         <h1>
           <SiteMark />
           Oregon Wine Graph
+          <!-- Still taking shape: records are being added and checked -->
+          <span class="app__beta">Beta</span>
         </h1>
         <p>The people, wineries and vineyards of Oregon wine, and how they connect</p>
         <div class="app__header-end">
@@ -159,6 +161,20 @@ onBeforeUnmount(() => {
   font-weight: 650;
   font-optical-sizing: auto;
   letter-spacing: -0.005em;
+}
+
+/* "Beta" after the title: a small pill in the interface's sans, not the title's serif */
+.app__beta {
+  padding: 0.1rem 0.45rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  font-family: 'Nunito Variable', system-ui, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .app__header p {

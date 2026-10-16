@@ -25,7 +25,7 @@ import NodeGlyph from './NodeGlyph.vue'
 // picks one. Reka handles the keys and the ARIA; matching is ours (ignore-filter).
 // Where the question service is set up, the same box asks questions: an "Ask" row joins the
 // results (first when the text reads as a question), and its answer opens under the box
-const { search, announce, pickNode, askJev } = useGraph()
+const { state, search, announce, pickNode, askJev } = useGraph()
 const canAsk = Boolean(askUrl)
 const ASK = '\u0000ask'
 
@@ -124,6 +124,7 @@ function onEscape(event: KeyboardEvent) {
           id="search"
           v-model="query"
           class="search__input"
+          :class="{ 'is-hinted': state.hint === 'search' }"
           :placeholder="canAsk ? 'Search or ask' : 'Search'"
           :aria-label="canAsk ? 'Search people and places, or ask a question' : 'Search people and places'"
           autocomplete="off"
@@ -193,8 +194,9 @@ function onEscape(event: KeyboardEvent) {
 
 .search__icon {
   position: absolute;
-  /* Above the input, whose frosted backdrop makes it its own layer */
-  z-index: 1;
+  /* Above the input, whose frosted backdrop makes it its own layer, also when it's
+     highlighted from the start panel (style.css's .is-hinted raises it to 2) */
+  z-index: 3;
   left: 0.6rem;
   width: 1rem;
   height: 1rem;
