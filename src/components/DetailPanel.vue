@@ -183,6 +183,31 @@ function blocksOf(connections: Connection[]): ConnectionBlock[] {
   }
   return [...(single.length ? [{ connections: single }] : []), ...headed]
 }
+// One line per person or place in a section: someone connected twice there ("co-founder,
+// from 2013" and "co-owner, present") reads as one row, the details joined. Admin mode keeps
+// a row per connection, as each has its own review tools
+interface Row extends Connection {
+  about: string
+  notes: string[]
+}
+function rowsOf(block: ConnectionBlock): Row[] {
+  const groups = new Map<string, Connection[]>()
+  for (const connection of block.connections) {
+    const key = reviewing.value ? connection.edge.id : connection.other.id
+    groups.set(key, [...(groups.get(key) ?? []), connection])
+  }
+  // In time order within a row: founded (2013), then co-owner (present)
+  const start = (connection: Connection) => connection.edge.startYear ?? Number.MAX_SAFE_INTEGER
+  return [...groups.values()].map((list) => {
+    const ordered = [...list].sort((a, b) => start(a) - start(b))
+    return {
+      ...ordered[0],
+      about: ordered.map((c) => aboutConnection(block, c.verb, c.detail, c.years)).filter(Boolean).join('; '),
+      notes: ordered.map((c) => c.edge.note).filter((note): note is string => Boolean(note)),
+    }
+  })
+}
+
 const unverifiedOnCard = computed(
   () =>
     (selectedNode.value && !selectedNode.value.verified ? 1 : 0) +
@@ -276,7 +301,7 @@ const canFlag = flagsAvailable()
         <template v-for="block in blocksOf(group.connections)" :key="block.heading ?? ''">
           <h4 v-if="block.heading" class="detail__verb">{{ block.heading }}</h4>
           <ul>
-            <li v-for="{ edge, other, label, verb, detail, years } in block.connections" :key="edge.id">
+            <li v-for="{ edge, other, label, about, notes } in rowsOf(block)" :key="edge.id">
               <!-- The name and what follows it read as one line of text, wrapping as a sentence does -->
               <span class="detail__entry">
                 <NodePreview :node="other">
@@ -286,9 +311,7 @@ const canFlag = flagsAvailable()
                     <NodeGlyph :type="other.type" />{{ other.name }}
                   </button>
                 </NodePreview>
-                <span v-if="aboutConnection(block, verb, detail, years)" class="detail__role">
-                  ({{ aboutConnection(block, verb, detail, years) }})
-                </span>
+                <span v-if="about" class="detail__role">({{ about }})</span>
               </span>
               <!-- Viewers find each connection's sources in the verification note at the foot -->
               <span v-if="reviewing" class="detail__refs">
@@ -312,7 +335,7 @@ const canFlag = flagsAvailable()
               >
                 {{ edge.verified ? 'Undo' : 'Approve' }}
               </button>
-              <span v-if="edge.note" class="detail__note">{{ edge.note }}</span>
+              <span v-for="note in notes" :key="note" class="detail__note">{{ note }}</span>
               <FlagNotes v-if="reviewing" kind="edge" :id="edge.id" />
               <ReviewTools v-if="reviewing" :key="edge.id" kind="edge" :record="edge" :label="`${label} ${other.name}`" />
             </li>

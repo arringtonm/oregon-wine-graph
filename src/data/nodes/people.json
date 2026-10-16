@@ -15781,5 +15781,34 @@
     ],
     "verified": true,
     "verifiedBy": "jev"
+  },
+  {
+    "id": "john-peacock",
+    "name": "John Peacock",
+    "summary": "Co-owner and winemaker of Ocelli Cellars, the Dundee label he started with his wife, Sirpa, in 2013. A Portland State graduate who worked in analytics and wine production software before making Ocelli his full-time work in 2023.",
+    "sources": [
+      {
+        "title": "Oral history interview with John Peacock, 2026 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/john-peacock/"
+      },
+      {
+        "title": "About (Ocelli Cellars)",
+        "url": "https://www.ocellicellars.com/about"
+      },
+      {
+        "title": "Oral History Interview with John Peacock (YouTube)",
+        "url": "https://www.youtube.com/watch?v=Wfx6jmredXU"
+      }
+    ],
+    "verified": true,
+    "type": "person",
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/interviews/john-peacock/",
+        "title": "John Peacock",
+        "date": "2026-07-08"
+      }
+    ],
+    "verifiedBy": "jev"
   }
 ]

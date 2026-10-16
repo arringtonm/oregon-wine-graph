@@ -115,7 +115,7 @@ function structuredData(node: GraphNode): object {
 // (founded, from 1971)". Connections to hidden records are left out, as on the card
 function connectionGroups(graph: Graph, node: GraphNode) {
   const byId = new Map(graph.nodes.map((other) => [other.id, other]))
-  const groups = new Map<EdgeCategory, { other: GraphNode; about: string }[]>()
+  const groups = new Map<EdgeCategory, { other: GraphNode; parts: { about: string; start: number }[] }[]>()
   for (const edge of graph.edges) {
     const outgoing = edge.source === node.id
     if (!outgoing && edge.target !== node.id) continue
@@ -124,11 +124,24 @@ function connectionGroups(graph: Graph, node: GraphNode) {
     const { verb, detail } = cardParts(edge, outgoing)
     const about = [[verb, detail].filter(Boolean).join(': '), formatYears(edge)].filter(Boolean).join(', ')
     const category = EDGE_RULES[edge.type].category
-    groups.set(category, [...(groups.get(category) ?? []), { other, about }])
+    const list = groups.get(category) ?? []
+    // Someone connected twice in one section is one entry, the details joined in time order,
+    // as on the card
+    const same = list.find((entry) => entry.other.id === other.id)
+    const part = { about, start: edge.startYear ?? Number.MAX_SAFE_INTEGER }
+    if (same) same.parts.push(part)
+    else groups.set(category, [...list, { other, parts: [part] }])
   }
   return EDGE_CATEGORIES.filter((category) => groups.has(category)).map((category) => ({
     label: EDGE_CATEGORY_LABELS[category],
-    connections: groups.get(category)!,
+    connections: groups.get(category)!.map(({ other, parts }) => ({
+      other,
+      about: [...parts]
+        .sort((a, b) => a.start - b.start)
+        .map((part) => part.about)
+        .filter(Boolean)
+        .join('; '),
+    })),
   }))
 }
 

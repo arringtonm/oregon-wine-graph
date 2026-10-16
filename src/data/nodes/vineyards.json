@@ -2465,5 +2465,81 @@
     "verified": false,
     "type": "vineyard",
     "planted": 1999
+  },
+  {
+    "id": "upland-vineyard",
+    "name": "Upland Vineyard",
+    "summary": "Washington vineyard planted on an anticline of old river cobbles, and a source of Grenache for Ocelli Cellars since its first vintage.",
+    "outsideOregon": true,
+    "place": "Washington",
+    "sources": [
+      {
+        "title": "2022 Upland Vineyard Grenache info sheet (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/s/Ocelli-Info-Sheet-2022-Upland-Vineyard-Grenache.pdf"
+      },
+      {
+        "title": "Single Vineyard Grenache (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/thewines/single-vineyard-grenache"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard"
+  },
+  {
+    "id": "french-creek-vineyard",
+    "name": "French Creek Vineyard",
+    "summary": "South-facing Yakima Valley vineyard on windblown loess over basalt, better known for Chardonnay, that grows Grenache for Ocelli Cellars.",
+    "outsideOregon": true,
+    "place": "Yakima Valley, Washington",
+    "sources": [
+      {
+        "title": "2022 French Creek Vineyard Grenache info sheet (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/s/Ocelli-Info-Sheet-2022-French-Creek-Vineyard-Grenache.pdf"
+      },
+      {
+        "title": "Single Vineyard Grenache (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/thewines/single-vineyard-grenache"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard"
+  },
+  {
+    "id": "heron-bluff-vineyard",
+    "name": "Heron Bluff Vineyard",
+    "summary": "Vineyard just west of Benton City, Washington, below basalt cliffs, that grows Grenache for Ocelli Cellars.",
+    "outsideOregon": true,
+    "place": "Benton City, Washington",
+    "sources": [
+      {
+        "title": "2022 Heron Bluff Vineyard Grenache info sheet (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/s/Ocelli-Info-Sheet-2022-Heron-Bluff-Vineyard-Grenache.pdf"
+      },
+      {
+        "title": "Single Vineyard Grenache (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/thewines/single-vineyard-grenache"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard"
+  },
+  {
+    "id": "art-den-hoed-vineyard",
+    "name": "Art Den Hoed Vineyard",
+    "summary": "Yakima Valley vineyard about 15 miles east of Sunnyside, Washington, that grew Grenache for Ocelli Cellars in 2014 to 2016.",
+    "outsideOregon": true,
+    "place": "Yakima Valley, Washington",
+    "sources": [
+      {
+        "title": "2016 Art Den Hoed Vineyard Grenache info sheet (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/s/Ocelli-Info-Sheet-2016-Art-Den-Hoed-Vineyard-Grenache.pdf"
+      },
+      {
+        "title": "Single Vineyard Grenache (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/thewines/single-vineyard-grenache"
+      }
+    ],
+    "verified": false,
+    "type": "vineyard"
   }
 ]

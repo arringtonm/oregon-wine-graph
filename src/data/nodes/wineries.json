@@ -9935,7 +9935,7 @@
   {
     "id": "ocelli-cellars",
     "name": "Ocelli Cellars",
-    "summary": "Dundee label started in 2013 by Sirpa Peacock and her husband; its tasting room opened in 2026.",
+    "summary": "Dundee winery started in 2013 by Sirpa and John Peacock that makes only Grenache, from vineyards across Washington and Oregon.",
     "place": "Dundee, Oregon",
     "sources": [
       {
@@ -9945,6 +9945,14 @@
       {
         "title": "Ocelli Cellars collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/ocelli-cellars-collection/"
+      },
+      {
+        "title": "Ocelli Cellars",
+        "url": "https://www.ocellicellars.com/"
+      },
+      {
+        "title": "Single Vineyard Grenache (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/thewines/single-vineyard-grenache"
       }
     ],
     "verified": true,

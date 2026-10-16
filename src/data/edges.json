@@ -36196,5 +36196,164 @@
     ],
     "verified": true,
     "verifiedBy": "jev"
+  },
+  {
+    "id": "john-peacock--owns--ocelli-cellars",
+    "source": "john-peacock",
+    "target": "ocelli-cellars",
+    "type": "owns",
+    "role": "co-owner with Sirpa Peacock",
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "About (Ocelli Cellars)",
+        "url": "https://www.ocellicellars.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "john-peacock--winemaker--ocelli-cellars",
+    "source": "john-peacock",
+    "target": "ocelli-cellars",
+    "type": "winemaker",
+    "startYear": 2019,
+    "ongoing": true,
+    "sources": [
+      {
+        "title": "About (Ocelli Cellars)",
+        "url": "https://www.ocellicellars.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "john-peacock--founded--ocelli-cellars",
+    "source": "john-peacock",
+    "target": "ocelli-cellars",
+    "type": "founded",
+    "role": "co-founder with Sirpa Peacock",
+    "startYear": 2013,
+    "sources": [
+      {
+        "title": "Oral history interview with John Peacock, 2026 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/john-peacock/"
+      },
+      {
+        "title": "About (Ocelli Cellars)",
+        "url": "https://www.ocellicellars.com/about"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "john-peacock--family--sirpa-peacock",
+    "source": "john-peacock",
+    "target": "sirpa-peacock",
+    "type": "family",
+    "role": "spouse",
+    "sources": [
+      {
+        "title": "About (Ocelli Cellars)",
+        "url": "https://www.ocellicellars.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "john-peacock--worked-at--ayoub-wines",
+    "source": "john-peacock",
+    "target": "ayoub-wines",
+    "type": "worked_at",
+    "role": "harvest help",
+    "startYear": 2010,
+    "sources": [
+      {
+        "title": "About (Ocelli Cellars)",
+        "url": "https://www.ocellicellars.com/about"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "ocelli-cellars--sources-from--upland-vineyard",
+    "source": "ocelli-cellars",
+    "target": "upland-vineyard",
+    "type": "sources_from",
+    "role": "Grenache",
+    "startYear": 2012,
+    "sources": [
+      {
+        "title": "2022 Upland Vineyard Grenache info sheet (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/s/Ocelli-Info-Sheet-2022-Upland-Vineyard-Grenache.pdf"
+      },
+      {
+        "title": "Single Vineyard Grenache (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/thewines/single-vineyard-grenache"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ocelli-cellars--sources-from--french-creek-vineyard",
+    "source": "ocelli-cellars",
+    "target": "french-creek-vineyard",
+    "type": "sources_from",
+    "role": "Grenache",
+    "startYear": 2019,
+    "sources": [
+      {
+        "title": "2022 French Creek Vineyard Grenache info sheet (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/s/Ocelli-Info-Sheet-2022-French-Creek-Vineyard-Grenache.pdf"
+      },
+      {
+        "title": "Single Vineyard Grenache (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/thewines/single-vineyard-grenache"
+      }
+    ],
+    "verified": true,
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "ocelli-cellars--sources-from--heron-bluff-vineyard",
+    "source": "ocelli-cellars",
+    "target": "heron-bluff-vineyard",
+    "type": "sources_from",
+    "role": "Grenache",
+    "startYear": 2022,
+    "sources": [
+      {
+        "title": "2022 Heron Bluff Vineyard Grenache info sheet (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/s/Ocelli-Info-Sheet-2022-Heron-Bluff-Vineyard-Grenache.pdf"
+      },
+      {
+        "title": "Single Vineyard Grenache (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/thewines/single-vineyard-grenache"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "ocelli-cellars--sources-from--art-den-hoed-vineyard",
+    "source": "ocelli-cellars",
+    "target": "art-den-hoed-vineyard",
+    "type": "sources_from",
+    "role": "Grenache",
+    "startYear": 2014,
+    "endYear": 2016,
+    "sources": [
+      {
+        "title": "2016 Art Den Hoed Vineyard Grenache info sheet (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/s/Ocelli-Info-Sheet-2016-Art-Den-Hoed-Vineyard-Grenache.pdf"
+      },
+      {
+        "title": "Single Vineyard Grenache (Ocelli Cellars)",
+        "url": "https://ocellicellars.com/thewines/single-vineyard-grenache"
+      }
+    ],
+    "verified": false
   }
 ]
