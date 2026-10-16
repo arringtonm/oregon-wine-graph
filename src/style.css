@@ -250,3 +250,13 @@ summary {
   box-shadow: 0 0 0 2px var(--accent);
   transition: box-shadow 0.15s ease;
 }
+
+/* Touch screens: text boxes at 16px or more, or iPhone Safari zooms the page in when one is
+   tapped (and the tour's card, among others, slides off the edge) */
+@media (pointer: coarse) {
+  input,
+  select,
+  textarea {
+    font-size: max(16px, 1em) !important;
+  }
+}

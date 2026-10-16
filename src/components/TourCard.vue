@@ -37,10 +37,14 @@ const last = computed(() => state.tour === TOUR_STEPS.length - 1)
 // The step's elements: every one of its selectors that's showing (laid out, and on screen:
 // the collapsed filters sit just off its left edge), so a button and the panel it opens
 // are lit together
+// Showing means laid out, on screen, and not covered by something else (a phone's record
+// sheet over the zoom buttons): what's at its middle is it, or the tour's own card
 function showing(element: HTMLElement): boolean {
   if (element.offsetParent === null) return false
   const rect = element.getBoundingClientRect()
-  return rect.width > 0 && rect.right > 0 && rect.left < window.innerWidth
+  if (!(rect.width > 0 && rect.right > 0 && rect.left < window.innerWidth)) return false
+  const top = document.elementFromPoint(rect.left + rect.width / 2, rect.top + rect.height / 2)
+  return !top || element.contains(top) || top.contains(element) || top.closest('.tour') !== null
 }
 function targetElements(): HTMLElement[] {
   return (step.value?.target ?? []).map((selector) => [...document.querySelectorAll<HTMLElement>(selector)].find(showing)).filter((element) => element !== undefined)

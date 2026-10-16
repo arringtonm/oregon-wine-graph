@@ -831,6 +831,14 @@ watch(
     // With the tour open, clear of its card, centred on the screen (TourCard.vue: up to
     // 28rem wide), with room for the ring
     const stage = container.value?.getBoundingClientRect()
+    // Where nodes can be seen: below the toolbar (the graph runs under it on smaller screens),
+    // clear of the corners' controls, and clear of any open panel
+    const area = container.value ? visibleArea() : null
+    const seen = (node: cytoscape.NodeSingular) => {
+      if (!area) return true
+      const { x, y } = node.renderedPosition()
+      return x > area.left + 30 && x < area.left + area.width - 70 && y > area.top + 30 && y < area.top + area.height - 90
+    }
     const clear = (node: cytoscape.NodeSingular) => {
       if (state.tour === null || !stage) return true
       const { x, y } = node.renderedPosition()
@@ -840,7 +848,7 @@ watch(
     const inView = cy.nodes().filter((node: cytoscape.NodeSingular) => {
       const { x, y } = node.position()
       const type = node.data('type')
-      return (type === 'winery' || type === 'person') && x > view.x1 && x < view.x2 && y > view.y1 && y < view.y2 && clear(node)
+      return (type === 'winery' || type === 'person') && x > view.x1 && x < view.x2 && y > view.y1 && y < view.y2 && seen(node) && clear(node)
     })
     const best = inView.sort((a: cytoscape.NodeSingular, b: cytoscape.NodeSingular) => (degree.value.get(b.id()) ?? 0) - (degree.value.get(a.id()) ?? 0)).slice(0, 10)
     if (best.length === 0) return
@@ -1082,7 +1090,7 @@ watch(
     <!-- Phones and tablets: zoom on the graph's corner, above About, after the toolbar in tab order -->
     <ZoomControls
       v-if="phone"
-      v-show="!state.listView"
+      v-show="!state.listView && !state.selectedId"
       vertical
       class="graph-canvas__zoom-float"
       :class="{ 'graph-canvas__zoom--hinted': state.hint === 'zoom' }"

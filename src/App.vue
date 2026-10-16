@@ -94,7 +94,12 @@ onBeforeUnmount(() => {
   position: relative;
   display: grid;
   grid-template-rows: minmax(0, 1fr);
-  height: 100dvh;
+  /* The screen with the browser's bars showing (svh), not the full screen (dvh): Safari on
+     iOS 26 floats its address bar over the page, and dvh counted the space behind it, so the
+     foot of the panel scrolled under the bar. The page never scrolls, so the bars never
+     hide and svh is always the room there is. vh for browsers without svh */
+  height: 100vh;
+  height: 100svh;
 }
 
 /* Out of the grid, so the header and graph keep its two rows */
