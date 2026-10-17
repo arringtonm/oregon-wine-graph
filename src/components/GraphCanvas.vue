@@ -145,6 +145,9 @@ function chooseFromHistory(index: number) {
 const tooltip = reactive({ show: false, x: 0, y: 0, title: '', detail: '' })
 let cy: Core | undefined
 let layout: cytoscape.Layouts | undefined
+// Dev server only: the first load found no usable saved layout, so the fresh one it runs is
+// saved. Reset, guides and filters never save, so the shipped layout changes only on purpose
+let saveWhenLaidOut = false
 // Matches the breakpoint where the detail panel becomes a bottom sheet
 const compactQuery = window.matchMedia('(max-width: 1024px)')
 // Where the zoom buttons go: the toolbar when wide, a column down the right edge when compact
@@ -519,7 +522,10 @@ function layoutNow(randomize: boolean) {
   } as cytoscape.LayoutOptions)
   layout.one('layoutstop', () => {
     separateNodes()
-    if (randomize) saveLayout()
+    if (saveWhenLaidOut) {
+      saveWhenLaidOut = false
+      saveLayout()
+    }
     fitOpening()
     centerOnSelection()
     arranging.value = false
@@ -571,7 +577,8 @@ function rememberPositions() {
   plainNodes().forEach((node: cytoscape.NodeSingular) => void known.set(node.id(), { ...node.position() }))
 }
 
-// Dev server only: save the default view's fresh layout so it ships with the data
+// Dev server only: save the default view's fresh layout so it ships with the data. Only the
+// first load without a usable saved layout calls this (npm run layout:reset, then reload)
 function saveLayout() {
   if (!cy || !import.meta.env.DEV || !isDefaultView.value || state.categories.geography) return
   const positions = new Map(plainNodes().map((node: cytoscape.NodeSingular) => [node.id(), node.position()] as [string, Point]))
@@ -655,14 +662,12 @@ function syncElements() {
     const usable = !state.categories.geography && coverage(savedLayout, ids) >= 0.9
     if (usable && placeNodes(ids)) {
       // Nodes added since the layout was saved may collide with their neighbours
-      if (ids.some((id) => !(id in savedLayout.positions))) {
-        separateNodes()
-        saveLayout()
-      }
+      if (ids.some((id) => !(id in savedLayout.positions))) separateNodes()
       rememberPositions()
       fitOpening()
       centerOnSelection()
     } else {
+      saveWhenLaidOut = true
       runLayout(true)
     }
   } else if (regrouped) {

@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import { loadGraph } from './index'
 import { checkGraph, graphSchema, type Graph } from './schema'
+import savedLayout from './layout.json'
+import { HIDDEN_TYPES } from '../graph/format'
+import { coverage, type SavedLayout } from '../graph/placement'
 
 const source = { title: 'Example', url: 'https://example.com' }
 
@@ -28,6 +31,15 @@ describe('graph data files', () => {
     const graph = await loadGraph()
     expect(graph.nodes.length).toBeGreaterThan(0)
     expect(graph.edges.length).toBeGreaterThan(0)
+  })
+
+  // Below 90% the app lays the whole graph out on every visitor's first load, about two
+  // seconds frozen. Failing here first leaves room to refresh it on purpose:
+  // npm run layout:reset, reload the dev server, review and commit layout.json
+  it('come with a saved layout that covers the opening view', async () => {
+    const graph = await loadGraph()
+    const opening = graph.nodes.filter((node) => node.type !== 'ava' && !HIDDEN_TYPES.has(node.type)).map((node) => node.id)
+    expect(coverage(savedLayout as unknown as SavedLayout, opening)).toBeGreaterThanOrEqual(0.95)
   })
 })
 

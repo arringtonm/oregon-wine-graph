@@ -90,7 +90,7 @@ The sidebar's "Ask a question" box (dev server only) answers questions about the
 
 ## Saved layout and performance
 
-The graph opens with a saved arrangement (`src/data/layout.json`), so it appears without laying the graph out in the browser. The dev server saves it whenever the default view gets a fresh layout: on the first load without one, or on Reset. Commit it alongside data changes. Nodes added since the last save are placed beside their connections. To start over, run `npm run layout:reset` and reload.
+The graph opens with a saved arrangement (`src/data/layout.json`), so it appears without laying the graph out in the browser. Nodes added since the last save are placed beside their connections as the page loads, so new data doesn't need a new layout. The file changes only on purpose: run `npm run layout:reset` and reload the dev server, which lays the graph out afresh and saves it; review the new opening view and commit it. Reset, guides and filters never save. A test in `src/data/data.test.ts` fails once the layout covers less than 95% of the opening view; that is the time to refresh it, before the app's 90% threshold falls back to laying the graph out in every reader's browser.
 
 Filter changes never re-run the force layout: hidden nodes are removed and returning ones go back to their remembered positions. Labels are measured in Nunito, so the layout waits for the font to load. `.claude/skills/graph-layout/SKILL.md` records the visualization practices, the measurements behind them, and a console harness for measuring layout changes.
 
