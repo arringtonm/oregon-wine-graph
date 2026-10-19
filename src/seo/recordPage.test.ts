@@ -31,7 +31,7 @@ describe('a record’s page', () => {
 
   it('links each connection to that record’s own page', () => {
     const { body } = recordPage(graph, node('david-lett'))
-    expect(body).toContain('<a href="/the-eyrie-vineyards">The Eyrie Vineyards</a> (founded, from 1966)')
+    expect(body).toContain('<a href="/the-eyrie-vineyards">The Eyrie Vineyards</a> (founded, from 1965 or 1966)')
     expect(body).toContain('<h2>Family &amp; mentorship</h2>')
   })
 

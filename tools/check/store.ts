@@ -31,6 +31,7 @@ export function compact(checks: SourceCheck[]): SourceCheck[] {
   return checks.map((check) => ({
     ...check,
     ...(check.levels ? { levels: check.levels.map(round) as SourceCheck['levels'] } : {}),
+    ...(check.relationship ? { relationship: check.relationship.map(round) as SourceCheck['relationship'] } : {}),
     ...(check.details
       ? { details: Object.fromEntries(Object.entries(check.details).map(([id, value]) => [id, round(value)])) }
       : {}),

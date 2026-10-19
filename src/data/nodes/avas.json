@@ -21,8 +21,13 @@
     "aka": [
       "Red Hills of Dundee"
     ],
-    "summary": "Sub-appellation lying entirely within the Willamette Valley AVA, home to many of Oregon's earliest Pinot noir plantings. The Oregon Wine Board dates it to 2004; most other sources say 2005.",
+    "summary": "Sub-appellation lying entirely within the Willamette Valley AVA, home to many of Oregon's earliest Pinot noir plantings.",
     "established": 2005,
+    "alsoDated": {
+      "established": [
+        2004
+      ]
+    },
     "sources": [
       {
         "title": "About the Dundee Hills AVA (Oregon Wine Board)",
@@ -33,7 +38,8 @@
         "url": "https://www.govinfo.gov/content/pkg/FR-2004-11-30/pdf/04-26330.pdf"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "southern-oregon",
@@ -105,6 +111,10 @@
       {
         "title": "McMinnville AVA (Wikipedia)",
         "url": "https://en.wikipedia.org/wiki/McMinnville_AVA"
+      },
+      {
+        "title": "Establishment of the McMinnville Viticultural Area (Federal Register)",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2005-01-18/html/05-912.htm"
       }
     ],
     "verified": false
@@ -134,6 +144,18 @@
       {
         "title": "Walla Walla Valley AVA (Wikipedia)",
         "url": "https://en.wikipedia.org/wiki/Walla_Walla_Valley_AVA"
+      },
+      {
+        "title": "Walla Walla Valley AVA (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/regions/walla-walla-valley/"
+      },
+      {
+        "title": "27 CFR 9.91 - Walla Walla Valley (Legal Information Institute)",
+        "url": "https://www.law.cornell.edu/cfr/text/27/9.91"
+      },
+      {
+        "title": "Cantwell, Murray Introduce Senate Resolution Marking 30th Anniversary of Walla Walla Valley Wine Region (Senator Maria Cantwell)",
+        "url": "https://www.cantwell.senate.gov/news/press-releases/cantwell-murray-introduce-senate-resolution-marking-30th-anniversary-of-walla-walla-valley-wine-region"
       }
     ],
     "verified": false
@@ -169,6 +191,10 @@
       {
         "title": "Eola-Amity Hills AVA (Wikipedia)",
         "url": "https://en.wikipedia.org/wiki/Eola-Amity_Hills_AVA"
+      },
+      {
+        "title": "Establishment of the Eola-Amity Hills Viticultural Area (Federal Register)",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2006-07-17/html/E6-11077.htm"
       }
     ],
     "verified": false
@@ -186,6 +212,10 @@
       {
         "title": "Yamhill-Carlton AVA (Wikipedia)",
         "url": "https://en.wikipedia.org/wiki/Yamhill-Carlton_AVA"
+      },
+      {
+        "title": "Yamhill-Carlton Viticultural Area (Federal Register)",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2010-11-03/html/2010-27739.htm"
       }
     ],
     "verified": false
@@ -238,7 +268,7 @@
     "id": "tualatin-hills",
     "type": "ava",
     "name": "Tualatin Hills AVA",
-    "summary": "Appellation in the northernmost part of the Willamette Valley AVA, approved in 2020. Its oldest vineyards include David Hill, the former Charles Coury property.",
+    "summary": "Appellation in the northernmost part of the Willamette Valley AVA, approved in 2020. Its vineyards include David Hill, the former Charles Coury Vineyards near Forest Grove.",
     "established": 2020,
     "sources": [
       {
@@ -250,7 +280,8 @@
         "url": "https://www.princeofpinot.com/article/2390"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "columbia-gorge",
@@ -262,6 +293,10 @@
       {
         "title": "Columbia Gorge AVA (Wikipedia)",
         "url": "https://en.wikipedia.org/wiki/Columbia_Gorge_AVA"
+      },
+      {
+        "title": "Columbia Gorge Viticultural Area (2002R-03P) (Federal Register)",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2004-05-10/html/04-10513.htm"
       }
     ],
     "verified": false
@@ -276,6 +311,14 @@
       {
         "title": "Columbia Valley AVA (Wikipedia)",
         "url": "https://en.wikipedia.org/wiki/Columbia_Valley_AVA"
+      },
+      {
+        "title": "27 CFR 9.74 - Columbia Valley (Legal Information Institute)",
+        "url": "https://www.law.cornell.edu/cfr/text/27/9.74"
+      },
+      {
+        "title": "American Viticultural Areas (AVAs) of Washington (HistoryLink)",
+        "url": "https://historylink.org/File/20500"
       }
     ],
     "verified": false
@@ -312,6 +355,10 @@
       {
         "title": "AVA Unto Its Own: Wayne Hitchings (Oregon Wine Press)",
         "url": "https://www.oregonwinepress.com/ava-unto-its-own-wayne-hitchings"
+      },
+      {
+        "title": "Establishment of the Red Hill Douglas County, OR Viticultural Area (Federal Register)",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2005-10-14/html/05-20551.htm"
       }
     ],
     "verified": false

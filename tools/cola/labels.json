@@ -1,0 +1,2642 @@
+{
+ "05094001000057": {
+  "winery": "belle-pente",
+  "priority": 1,
+  "confidence": 0.87,
+  "readBy": "jev",
+  "vineyard": "belle-pente-estate-vineyard",
+  "vintage": 2002,
+  "vintageConfidence": 1
+ },
+ "05096001000102": {
+  "winery": "belle-pente",
+  "priority": 1,
+  "confidence": 0.93,
+  "readBy": "jev",
+  "vineyard": "belle-pente-estate-vineyard",
+  "vintage": 2003,
+  "vintageConfidence": 1
+ },
+ "05097001000055": {
+  "winery": "belle-pente",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "rivenwood-vineyard",
+  "vintage": 2003,
+  "vintageConfidence": 1
+ },
+ "05270001000106": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2004,
+  "vintageConfidence": 1,
+  "newVineyard": "Justice Vineyard",
+  "nameReadBy": "claude"
+ },
+ "05278001000098": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "seven-springs-vineyard",
+  "vintage": 2003,
+  "vintageConfidence": 1
+ },
+ "05314001000122": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.36,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2004,
+  "vintageConfidence": 1
+ },
+ "05314001000123": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.4,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2004,
+  "vintageConfidence": 1
+ },
+ "05318001000130": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "seven-springs-vineyard",
+  "vintage": 2004,
+  "vintageConfidence": 1
+ },
+ "05321001000100": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.44,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2004,
+  "vintageConfidence": 1
+ },
+ "06233001000060": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vintage": 2005,
+  "vintageConfidence": 1,
+  "newVineyard": "Ribbon Springs Vineyard",
+  "nameReadBy": "claude"
+ },
+ "06298001000110": {
+  "winery": "belle-pente",
+  "priority": 1,
+  "confidence": 0.76,
+  "readBy": "jev",
+  "vineyard": "belle-pente-estate-vineyard",
+  "vintage": 2004,
+  "vintageConfidence": 1
+ },
+ "07061001000099": {
+  "winery": "belle-pente",
+  "priority": 2,
+  "confidence": 0.78,
+  "readBy": "jev",
+  "vineyard": "belle-pente-estate-vineyard",
+  "vintage": 2004,
+  "vintageConfidence": 1
+ },
+ "07248001000277": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2006,
+  "vintageConfidence": 1,
+  "newVineyard": "Calkins Lane Vineyard",
+  "nameReadBy": "claude"
+ },
+ "07248001000282": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2006,
+  "vintageConfidence": 1,
+  "newVineyard": "Bryan Creek Vineyard",
+  "nameReadBy": "claude"
+ },
+ "07248001000285": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2006,
+  "vintageConfidence": 1,
+  "newVineyard": "Ribbon Springs Vineyard",
+  "nameReadBy": "claude"
+ },
+ "07249001000040": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 0.59,
+  "readBy": "jev",
+  "needsName": "Quarter Mile Lane Qml",
+  "vintage": 2006,
+  "vintageConfidence": 1
+ },
+ "07249001000048": {
+  "winery": "adelsheim-vineyard",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "temperance-hill-vineyard",
+  "vintage": 2006,
+  "vintageConfidence": 1
+ },
+ "07249001000055": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 0.53,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2006,
+  "vintageConfidence": 1
+ },
+ "07249001000076": {
+  "winery": "adelsheim-vineyard",
+  "priority": 1,
+  "confidence": 0.82,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2006,
+  "vintageConfidence": 1
+ },
+ "07334001000191": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2006,
+  "vintageConfidence": 1,
+  "newVineyard": "Jessie James Vineyard",
+  "nameReadBy": "claude"
+ },
+ "07334001000196": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.31,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2006,
+  "vintageConfidence": 1
+ },
+ "07337001000197": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.17,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2006,
+  "vintageConfidence": 1
+ },
+ "08200001000006": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.39,
+  "readBy": "jev",
+  "needsName": "Flat",
+  "vintage": 2007,
+  "vintageConfidence": 1
+ },
+ "08200001000007": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vintage": 2007,
+  "vintageConfidence": 1,
+  "newVineyard": "Justice Vineyard",
+  "nameReadBy": "claude"
+ },
+ "08200001000008": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.2,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2007,
+  "vintageConfidence": 1
+ },
+ "08241001000161": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2007,
+  "vintageConfidence": 1,
+  "newVineyard": "Anna-Louise Vineyard",
+  "nameReadBy": "claude"
+ },
+ "08241001000163": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2007,
+  "vintageConfidence": 1,
+  "newVineyard": "Winderlea Vineyard",
+  "nameReadBy": "claude"
+ },
+ "08241001000166": {
+  "winery": "adelsheim-vineyard",
+  "priority": 1,
+  "confidence": 0.87,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2007,
+  "vintageConfidence": 1
+ },
+ "08347001000165": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.95,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": null,
+  "vintageConfidence": 0.89
+ },
+ "09282001000146": {
+  "winery": "beaux-freres",
+  "priority": 2,
+  "confidence": 0.49,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2008,
+  "vintageConfidence": 1
+ },
+ "09316001000393": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.41,
+  "readBy": "jev",
+  "needsName": "West",
+  "vintage": 2008,
+  "vintageConfidence": 1
+ },
+ "09316001000394": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "carter-vineyard",
+  "vintage": 2008,
+  "vintageConfidence": 1
+ },
+ "09337001000351": {
+  "winery": "king-estate",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "roserock-vineyard",
+  "vintage": 2008,
+  "vintageConfidence": 1
+ },
+ "10202001000192": {
+  "winery": "adelsheim-vineyard",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2008,
+  "vintageConfidence": 1
+ },
+ "10250001000037": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "carter-vineyard",
+  "vintage": 2009,
+  "vintageConfidence": 1
+ },
+ "10271001000510": {
+  "winery": "beaux-freres",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2009,
+  "vintageConfidence": 0.98,
+  "newVineyard": "Amalie Robert Estate Vineyard",
+  "nameReadBy": "claude"
+ },
+ "10301001000121": {
+  "winery": "belle-pente",
+  "priority": 1,
+  "confidence": 0.73,
+  "readBy": "jev",
+  "vineyard": "belle-pente-estate-vineyard",
+  "vintage": 2008,
+  "vintageConfidence": 1
+ },
+ "11034001000523": {
+  "winery": "beaux-freres",
+  "priority": 2,
+  "confidence": 0.51,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2009,
+  "vintageConfidence": 1
+ },
+ "11034001000532": {
+  "winery": "beaux-freres",
+  "priority": 2,
+  "confidence": 0.27,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2009,
+  "vintageConfidence": 1
+ },
+ "11061001000516": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.43,
+  "readBy": "jev",
+  "needsName": "Oak",
+  "vintage": 2010,
+  "vintageConfidence": 1
+ },
+ "11098001000181": {
+  "winery": "adelsheim-vineyard",
+  "priority": 1,
+  "confidence": 0.34,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2009,
+  "vintageConfidence": 1
+ },
+ "12075001000417": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.59,
+  "readBy": "jev",
+  "needsName": "Oak",
+  "vintage": 2011,
+  "vintageConfidence": 1
+ },
+ "12205001000694": {
+  "winery": "walter-scott-wines",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "holstein-vineyard",
+  "vintage": 2010,
+  "vintageConfidence": 1
+ },
+ "12268001000500": {
+  "winery": "the-eyrie-vineyards",
+  "priority": 2,
+  "confidence": 0.15,
+  "readBy": "jev",
+  "needsName": "South Sbrbrand Sbrneck Sbrback",
+  "vintage": 2007,
+  "vintageConfidence": 0.71
+ },
+ "12277001000386": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vintage": 2011,
+  "vintageConfidence": 1,
+  "newVineyard": "Illahe Vineyard",
+  "nameReadBy": "claude"
+ },
+ "12278001000250": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "carter-vineyard",
+  "vintage": 2011,
+  "vintageConfidence": 1
+ },
+ "13014001000326": {
+  "winery": "the-eyrie-vineyards",
+  "priority": 2,
+  "confidence": 0.37,
+  "readBy": "jev",
+  "needsName": "South Nsbsgw Nsbbrand Nsbneck Nsbback",
+  "vintage": null,
+  "vintageConfidence": 0.99
+ },
+ "13134001000111": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.56,
+  "readBy": "jev",
+  "needsName": "Illahe Gv",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "13248001000094": {
+  "winery": "king-estate",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "roserock-vineyard",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "13248001000108": {
+  "winery": "king-estate",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hyland-vineyard",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "13271001000042": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.44,
+  "readBy": "jev",
+  "needsName": "Oak",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "13319001000388": {
+  "winery": "walter-scott-wines",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "temperance-hill-vineyard",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "13319001000397": {
+  "winery": "walter-scott-wines",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "freedom-hill-vineyard",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "13337001000402": {
+  "winery": "beaux-freres",
+  "priority": 2,
+  "confidence": 0.35,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "13337001000410": {
+  "winery": "beaux-freres",
+  "priority": 2,
+  "confidence": 0.48,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "13338001000376": {
+  "winery": "beaux-freres",
+  "priority": 2,
+  "confidence": 0.87,
+  "readBy": "jev",
+  "needsName": "Upper Terrace Ut",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "13338001000389": {
+  "winery": "beaux-freres",
+  "priority": 2,
+  "confidence": 0.89,
+  "readBy": "jev",
+  "needsName": "Upper Terrace Ut",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "14029001000343": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2010,
+  "vintageConfidence": 1
+ },
+ "14031001000146": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2010,
+  "vintageConfidence": 1
+ },
+ "14045001000444": {
+  "winery": "beaux-freres",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hyland-vineyard",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "14045001000446": {
+  "winery": "beaux-freres",
+  "priority": 1,
+  "confidence": 0.48,
+  "readBy": "jev",
+  "vineyard": "zena-crown-vineyard",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "14059001000532": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2013,
+  "vintageConfidence": 1,
+  "newVineyard": "Illahe Vineyard",
+  "nameReadBy": "claude"
+ },
+ "14157001000336": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2012,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "14196001000406": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.87,
+  "readBy": "jev",
+  "needsName": "Vitae Springs Vsvpn",
+  "vintage": 2013,
+  "vintageConfidence": 1
+ },
+ "14283001000009": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vintage": 2013,
+  "vintageConfidence": 1,
+  "newVineyard": "Illahe Vineyard",
+  "nameReadBy": "claude"
+ },
+ "14338001000282": {
+  "winery": "walter-scott-wines",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "x-novo-vineyard",
+  "vintage": 2013,
+  "vintageConfidence": 1
+ },
+ "15005001000439": {
+  "winery": "beaux-freres",
+  "priority": 2,
+  "confidence": 0.59,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2013,
+  "vintageConfidence": 1
+ },
+ "15006001000169": {
+  "winery": "beaux-freres",
+  "priority": 1,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vineyard": "hyland-vineyard",
+  "vintage": 2013,
+  "vintageConfidence": 1
+ },
+ "15006001000172": {
+  "winery": "beaux-freres",
+  "priority": 1,
+  "confidence": 0.67,
+  "readBy": "jev",
+  "vineyard": "zena-crown-vineyard",
+  "vintage": 2013,
+  "vintageConfidence": 1
+ },
+ "15006001000196": {
+  "winery": "beaux-freres",
+  "priority": 1,
+  "confidence": 0.8,
+  "readBy": "jev",
+  "vineyard": "guadalupe-vineyard",
+  "vintage": 2013,
+  "vintageConfidence": 1
+ },
+ "15006001000243": {
+  "winery": "beaux-freres",
+  "priority": 2,
+  "confidence": 0.35,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2013,
+  "vintageConfidence": 1
+ },
+ "15015001000110": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2013,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "15126001000450": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2013,
+  "vintageConfidence": 1,
+  "newVineyard": "Kennel Vineyard",
+  "nameReadBy": "claude"
+ },
+ "15140001000070": {
+  "winery": "day-wines",
+  "priority": 2,
+  "confidence": 0.87,
+  "readBy": "jev",
+  "needsName": "Crowley Station Cs Css",
+  "vintage": 2014,
+  "vintageConfidence": 0.63
+ },
+ "15140001000082": {
+  "winery": "day-wines",
+  "priority": 2,
+  "confidence": 0.36,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 0.67
+ },
+ "15140001000085": {
+  "winery": "day-wines",
+  "priority": 2,
+  "confidence": 0.39,
+  "readBy": "jev",
+  "needsName": "Johan Pn",
+  "vintage": 2014,
+  "vintageConfidence": 0.69
+ },
+ "15146001000097": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.88,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15146001000099": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.84,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15146001000102": {
+  "winery": "patricia-green-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "durant-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15146001000105": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.82,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15146001000107": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.89,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15146001000111": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.83,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15146001000113": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.81,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15146001000116": {
+  "winery": "patricia-green-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "freedom-hill-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15146001000118": {
+  "winery": "patricia-green-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "freedom-hill-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15146001000123": {
+  "winery": "patricia-green-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "freedom-hill-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15146001000129": {
+  "winery": "patricia-green-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "freedom-hill-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15146001000133": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.87,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15146001000151": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.84,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15146001000157": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.89,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15146001000166": {
+  "winery": "patricia-green-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "durant-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15160001000392": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2012,
+  "vintageConfidence": 1,
+  "newVineyard": "Nicholas Vineyard",
+  "nameReadBy": "claude"
+ },
+ "15170001000209": {
+  "winery": "day-wines",
+  "priority": 2,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vintage": 2014,
+  "vintageConfidence": 0.68,
+  "newVineyard": "Johan Vineyard",
+  "nameReadBy": "claude"
+ },
+ "15216001000298": {
+  "winery": "patricia-green-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "freedom-hill-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15229001000367": {
+  "winery": "adelsheim-vineyard",
+  "priority": 1,
+  "confidence": 0.62,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15229001000369": {
+  "winery": "adelsheim-vineyard",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "temperance-hill-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15229001000375": {
+  "winery": "adelsheim-vineyard",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15281001000476": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2014,
+  "vintageConfidence": 1,
+  "newVineyard": "Bradshaw Vineyard",
+  "nameReadBy": "claude"
+ },
+ "16014001000154": {
+  "winery": "patricia-green-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "oak-grove-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "16030001000005": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.57,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "16039001000538": {
+  "winery": "patricia-green-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "durant-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "16039001000540": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.82,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "16054001000122": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.97,
+  "readBy": "jev",
+  "vintage": 2014,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "16055001000140": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vintage": 2014,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "16063001000445": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.77,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "16068001000478": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 0.77,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "16075001000005": {
+  "winery": "walter-scott-wines",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "seven-springs-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "16091001000666": {
+  "winery": "king-estate",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "quail-run-vineyards",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "16139001000518": {
+  "winery": "patricia-green-cellars",
+  "priority": 1,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vineyard": "weber-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "16186001000076": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.77,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "16186001000078": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.96,
+  "readBy": "jev",
+  "vintage": 2015,
+  "vintageConfidence": 1,
+  "newVineyard": "Medici Vineyard",
+  "nameReadBy": "claude"
+ },
+ "16343001000543": {
+  "winery": "king-estate",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hyland-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "16343001000552": {
+  "winery": "king-estate",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "freedom-hill-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "17017001000369": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vintage": 2015,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "17017001000374": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2015,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "17130001000056": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2014,
+  "vintageConfidence": 1,
+  "newVineyard": "Lone Star Vineyard",
+  "nameReadBy": "claude"
+ },
+ "17179001000267": {
+  "winery": "adelsheim-vineyard",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2016,
+  "vintageConfidence": 1
+ },
+ "17184001000338": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 0.94,
+  "readBy": "jev",
+  "vineyard": "shea-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "17228001000167": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.94,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": null,
+  "vintageConfidence": 0.99
+ },
+ "17272001000004": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.57,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2016,
+  "vintageConfidence": 1
+ },
+ "17297001000086": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.48,
+  "readBy": "jev",
+  "needsName": "Flat",
+  "vintage": 2016,
+  "vintageConfidence": 1
+ },
+ "17297001000097": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.44,
+  "readBy": "jev",
+  "needsName": "Southeast",
+  "vintage": 2016,
+  "vintageConfidence": 1
+ },
+ "17298001001094": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2016,
+  "vintageConfidence": 1,
+  "newVineyard": "Justice Vineyard",
+  "nameReadBy": "claude"
+ },
+ "17342001000686": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.68,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2016,
+  "vintageConfidence": 1
+ },
+ "17342001000694": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.84,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2016,
+  "vintageConfidence": 1
+ },
+ "17345001000443": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.95,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "17345001000455": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.97,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "17345001000497": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2014,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "18045001000832": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 0.94,
+  "readBy": "jev",
+  "vintage": 2016,
+  "vintageConfidence": 1,
+  "newVineyard": "King Estate Vineyard",
+  "nameReadBy": "claude"
+ },
+ "18129001000824": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vintage": 2016,
+  "vintageConfidence": 1,
+  "newVineyard": "Lone Star Vineyard",
+  "nameReadBy": "claude"
+ },
+ "18141001000100": {
+  "winery": "day-wines",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "momtazi-vineyard",
+  "vintage": 2016,
+  "vintageConfidence": 0.68
+ },
+ "18166001000529": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2017,
+  "vintageConfidence": 0.69
+ },
+ "18284001000759": {
+  "winery": "audeant",
+  "priority": 1,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vineyard": "nysa-vineyard",
+  "vintage": 2016,
+  "vintageConfidence": 1
+ },
+ "18319001000869": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2018,
+  "vintageConfidence": 0.66
+ },
+ "18356001000037": {
+  "winery": "audeant",
+  "priority": 1,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vineyard": "nysa-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19010001000054": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.48,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19010001000058": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.33,
+  "readBy": "jev",
+  "needsName": "Lone Star Pn",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19017001000129": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.97,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "19023001000374": {
+  "winery": "king-estate",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "temperance-hill-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19024001000332": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.88,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19032001000904": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19100001000850": {
+  "winery": "king-estate",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "freedom-hill-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19100001001023": {
+  "winery": "king-estate",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "temperance-hill-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19101001000792": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 0.69,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19101001000880": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 0.53,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19113001001129": {
+  "winery": "king-estate",
+  "priority": 1,
+  "confidence": 0.95,
+  "readBy": "jev",
+  "vineyard": "quail-run-vineyards",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19137001000878": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "abbott-claim-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19137001000885": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "canary-hill-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19137001000890": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "carter-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19137001000894": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "freedom-hill-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19137001000897": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "guadalupe-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19137001000912": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "shea-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19155001000815": {
+  "winery": "day-wines",
+  "priority": 2,
+  "confidence": 0.83,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2017,
+  "vintageConfidence": 0.6
+ },
+ "19162001000921": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 0.94,
+  "readBy": "jev",
+  "vineyard": "abbott-claim-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19162001000941": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "canary-hill-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19162001000945": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 0.9,
+  "readBy": "jev",
+  "vineyard": "carter-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19162001000947": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "freedom-hill-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19162001000949": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 0.89,
+  "readBy": "jev",
+  "vineyard": "guadalupe-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19162001000973": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 0.89,
+  "readBy": "jev",
+  "vineyard": "shea-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19162001001022": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "freedom-hill-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19178001001045": {
+  "winery": "beaux-freres",
+  "priority": 1,
+  "confidence": 0.97,
+  "readBy": "jev",
+  "vineyard": "abbott-claim-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19192001000524": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.94,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": null,
+  "vintageConfidence": 1
+ },
+ "19354001000283": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2018,
+  "vintageConfidence": 1,
+  "newVineyard": "Giving Tree Vineyard",
+  "nameReadBy": "claude"
+ },
+ "19354001000383": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.77,
+  "readBy": "jev",
+  "needsName": "Spirit",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19354001000388": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.83,
+  "readBy": "jev",
+  "needsName": "Spirit",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "20015001000976": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 0.95,
+  "readBy": "jev",
+  "vintage": 2018,
+  "vintageConfidence": 1,
+  "newVineyard": "King Estate Vineyard",
+  "nameReadBy": "claude"
+ },
+ "20027001000568": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vintage": 2018,
+  "vintageConfidence": 1,
+  "newVineyard": "Bryan Creek Vineyard",
+  "nameReadBy": "claude"
+ },
+ "20041001000382": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.89,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2016,
+  "vintageConfidence": 1
+ },
+ "20058001000726": {
+  "winery": "beaux-freres",
+  "priority": 1,
+  "confidence": 0.96,
+  "readBy": "jev",
+  "vineyard": "abbott-claim-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "20058001000761": {
+  "winery": "beaux-freres",
+  "priority": 1,
+  "confidence": 0.97,
+  "readBy": "jev",
+  "vineyard": "guadalupe-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "20058001000804": {
+  "winery": "beaux-freres",
+  "priority": 1,
+  "confidence": 0.52,
+  "readBy": "jev",
+  "vineyard": "zena-crown-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "20129001000677": {
+  "winery": "belle-pente",
+  "priority": 2,
+  "confidence": 0.88,
+  "readBy": "jev",
+  "vineyard": "belle-pente-estate-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "20132001000769": {
+  "winery": "the-eyrie-vineyards",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vineyard": "the-eyrie-vineyard",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "20147001000241": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2018,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "20147001000247": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vineyard": "quail-run-vineyards",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "20237001000724": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.57,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "20237001000733": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.65,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "20237001000744": {
+  "winery": "patricia-green-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "durant-vineyard",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "20237001000758": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.89,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "20237001000760": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.54,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "20239001000291": {
+  "winery": "patricia-green-cellars",
+  "priority": 1,
+  "confidence": 0.89,
+  "readBy": "jev",
+  "vineyard": "ridgecrest-vineyards",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "20288001000295": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "21011001000684": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "21074001000969": {
+  "winery": "belle-pente",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "belle-pente-estate-vineyard",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "21116001001085": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "21258001000785": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.76,
+  "readBy": "jev",
+  "needsName": "Bjornson Bhbjornson",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "21258001000803": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.41,
+  "readBy": "jev",
+  "needsName": "Filament Bhfilament Pn",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "22014001000318": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 0.77,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "22034001000511": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.85,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "22034001000517": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "22091001000352": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "abbott-claim-vineyard",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "22091001000402": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "canary-hill-vineyard",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "22091001000435": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "freedom-hill-vineyard",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "22091001000445": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "guadalupe-vineyard",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "22091001000486": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "shea-vineyard",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "22179001001013": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hope-well-vineyard",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "22179001001049": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hope-well-vineyard",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "22179001001056": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2021,
+  "vintageConfidence": 1,
+  "newVineyard": "Lewman Vineyard",
+  "nameReadBy": "claude"
+ },
+ "22179001001081": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vintage": 2021,
+  "vintageConfidence": 1,
+  "vineyard": null,
+  "nameReadBy": "claude"
+ },
+ "22203001000127": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "22241001000431": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "22241001000437": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "22300001000674": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2021,
+  "vintageConfidence": 1,
+  "newVineyard": "Lone Star Vineyard",
+  "nameReadBy": "claude"
+ },
+ "22300001000678": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2021,
+  "vintageConfidence": 1,
+  "newVineyard": "Giving Tree Vineyard",
+  "nameReadBy": "claude"
+ },
+ "22336001000224": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.76,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "22336001000238": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "22350001000497": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "22350001000516": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "22363001000448": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hope-well-vineyard",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "23038001000956": {
+  "winery": "day-wines",
+  "priority": 2,
+  "confidence": 0.96,
+  "readBy": "jev",
+  "vintage": 2021,
+  "vintageConfidence": 1,
+  "newVineyard": "Johan Vineyard",
+  "nameReadBy": "claude"
+ },
+ "23041001000217": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.59,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "23041001000220": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.54,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "23045001000223": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.8,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "23045001000228": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.94,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "23045001000233": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.6,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "23053001001014": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.68,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "23062001000779": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.91,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "23087001000148": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vintage": 2019,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "23089001000834": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.81,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "23108001000674": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 1,
+  "confidence": 0.72,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "23110001001007": {
+  "winery": "belle-pente",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "murto-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "23125001000394": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vintage": 2018,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "23128001000123": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "23174001000833": {
+  "winery": "belle-pente",
+  "priority": 2,
+  "confidence": 0.79,
+  "readBy": "jev",
+  "vineyard": "belle-pente-estate-vineyard",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "23179001000460": {
+  "winery": "ken-wright-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "carter-vineyard",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "23223001000620": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.77,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "23240001000906": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.61,
+  "readBy": "jev",
+  "needsName": "Flat",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "23240001000907": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2022,
+  "vintageConfidence": 1,
+  "newVineyard": "Justice Vineyard",
+  "nameReadBy": "claude"
+ },
+ "23240001000908": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2022,
+  "vintageConfidence": 1,
+  "newVineyard": "Lewman Vineyard",
+  "nameReadBy": "claude"
+ },
+ "23240001000909": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.57,
+  "readBy": "jev",
+  "needsName": "Southeast",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "23240001000911": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.44,
+  "readBy": "jev",
+  "needsName": "West",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "23332001000273": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2022,
+  "vintageConfidence": 1,
+  "newVineyard": "Lone Star Vineyard",
+  "nameReadBy": "claude"
+ },
+ "23339001000658": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2022,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "24030001000683": {
+  "winery": "king-estate",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "seven-hills-vineyard",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "24033001000409": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.71,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "24033001000412": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.91,
+  "readBy": "jev",
+  "vintage": 2022,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "24033001000417": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "24051001000608": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.96,
+  "readBy": "jev",
+  "vintage": 2022,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "24060001000572": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 0.9,
+  "readBy": "jev",
+  "vintage": 2022,
+  "vintageConfidence": 1,
+  "newVineyard": "King Estate Vineyard",
+  "nameReadBy": "claude"
+ },
+ "24088001000260": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2022,
+  "vintageConfidence": 1,
+  "newVineyard": "Giving Tree Vineyard",
+  "nameReadBy": "claude"
+ },
+ "24088001000262": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2022,
+  "vintageConfidence": 1,
+  "newVineyard": "Giving Tree Vineyard",
+  "nameReadBy": "claude"
+ },
+ "24088001000265": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.94,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "24088001000266": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.95,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "24115001000250": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.95,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "24123001000656": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vintage": 2020,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "24152001000654": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.85,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2020,
+  "vintageConfidence": 1
+ },
+ "24157001000361": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2020,
+  "vintageConfidence": 1
+ },
+ "24157001000370": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2023,
+  "vintageConfidence": 1
+ },
+ "24198001000644": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.81,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2024,
+  "vintageConfidence": 1
+ },
+ "24298001000399": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.94,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "24298001000402": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.57,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2023,
+  "vintageConfidence": 1
+ },
+ "24298001000409": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.59,
+  "readBy": "jev",
+  "needsName": "Spirit Ttbshill",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "24317001000081": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.91,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "24317001000084": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vintage": 2021,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "24318001000136": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.95,
+  "readBy": "jev",
+  "vintage": 2023,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "24318001000161": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.47,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2023,
+  "vintageConfidence": 1
+ },
+ "25014001000943": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.97,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2024,
+  "vintageConfidence": 1
+ },
+ "25021001000847": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 0.86,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2023,
+  "vintageConfidence": 1
+ },
+ "25021001000851": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 0.45,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2023,
+  "vintageConfidence": 1
+ },
+ "25027001000345": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 0.88,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "25076001000074": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vintage": 2022,
+  "vintageConfidence": 1,
+  "newVineyard": "Weinbau Vineyard",
+  "nameReadBy": "claude",
+  "vineyardOutsideOregon": true
+ },
+ "25162001000128": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.97,
+  "readBy": "jev",
+  "vintage": null,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "25171001000047": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.59,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2023,
+  "vintageConfidence": 1
+ },
+ "25290001000036": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vintage": null,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "26007001000049": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.95,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2024,
+  "vintageConfidence": 1
+ },
+ "26007001000051": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.97,
+  "readBy": "jev",
+  "vintage": 2024,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "26007001000054": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.79,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2024,
+  "vintageConfidence": 1
+ },
+ "26012001000123": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.6,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2024,
+  "vintageConfidence": 1
+ },
+ "26012001000126": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 1,
+  "readBy": "jev",
+  "vintage": 2024,
+  "vintageConfidence": 1,
+  "newVineyard": "Lone Star Vineyard",
+  "nameReadBy": "claude"
+ },
+ "26016001000143": {
+  "winery": "bethel-heights-vineyard",
+  "priority": 2,
+  "confidence": 0.96,
+  "readBy": "jev",
+  "vintage": 2024,
+  "vintageConfidence": 1,
+  "newVineyard": "Jessie Vineyard",
+  "nameReadBy": "claude"
+ },
+ "26041001000010": {
+  "winery": "king-estate",
+  "priority": 2,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vintage": 2018,
+  "vintageConfidence": 1,
+  "newVineyard": "King Estate Vineyard",
+  "nameReadBy": "claude"
+ },
+ "26052001000149": {
+  "winery": "patricia-green-cellars",
+  "priority": 2,
+  "confidence": 0.76,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2025,
+  "vintageConfidence": 1
+ },
+ "26082001000181": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.31,
+  "readBy": "jev",
+  "needsName": "Minam Lodge",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "26117001000378": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vintage": 2022,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "26117001000381": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.85,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "26117001000449": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.88,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "26177001000636": {
+  "winery": "day-wines",
+  "priority": 1,
+  "confidence": 0.36,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2024,
+  "vintageConfidence": 1
+ },
+ "26194001000748": {
+  "winery": "adelsheim-vineyard",
+  "priority": 2,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2025,
+  "vintageConfidence": 1
+ },
+ "26259001000137": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vintage": 2025,
+  "vintageConfidence": 1,
+  "newVineyard": "Lone Star Vineyard",
+  "nameReadBy": "claude"
+ },
+ "26259001000141": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.99,
+  "readBy": "jev",
+  "vintage": 2025,
+  "vintageConfidence": 1,
+  "newVineyard": "Lone Star Vineyard",
+  "nameReadBy": "claude"
+ },
+ "26260001000611": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vintage": 2025,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "26260001000613": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.57,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2025,
+  "vintageConfidence": 1
+ },
+ "26260001000617": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vintage": 2025,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ },
+ "26261001000307": {
+  "winery": "argyle-winery",
+  "priority": 1,
+  "confidence": 0.94,
+  "readBy": "jev",
+  "vineyard": "knudsen-vineyards",
+  "vintage": 2025,
+  "vintageConfidence": 1
+ },
+ "26261001000312": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.89,
+  "readBy": "jev",
+  "needsName": "Lonestar Lone Star",
+  "vintage": 2025,
+  "vintageConfidence": 1
+ },
+ "26261001000318": {
+  "winery": "argyle-winery",
+  "priority": 2,
+  "confidence": 0.91,
+  "readBy": "jev",
+  "vintage": 2025,
+  "vintageConfidence": 1,
+  "newVineyard": "Spirit Hill Vineyard",
+  "nameReadBy": "claude"
+ }
+}

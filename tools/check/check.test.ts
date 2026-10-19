@@ -1,8 +1,12 @@
+import { mkdtempSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
+import sharp from 'sharp'
 import { describe, expect, it } from 'vitest'
 import { loadGraph } from '../../src/data'
 import type { Answer, DecisionModel } from '../jev/model'
 import { checkRecord } from './checkRecord'
-import { claimsFingerprint, claimsFor } from './claims'
+import { claimsFingerprint, claimsFor, splitSentences } from './claims'
 import { decide, type SourceCheck } from './decide'
 import { htmlToText, methodTrailHtml, type CachedSource } from './fetchSources'
 import { extractPassages, nameVariants } from './passages'
@@ -12,6 +16,13 @@ const edge = (id: string) => ({ kind: 'edge' as const, record: graph.edges.find(
 const node = (id: string) => ({ kind: 'node' as const, record: graph.nodes.find((candidate) => candidate.id === id)! })
 
 describe('claimsFor', () => {
+  it('offers every relationship the two ends could have', () => {
+    const claims = claimsFor(edge('david-lett--founded--the-eyrie-vineyards'), graph)
+    expect(claims.relationships?.own).toBe('founded')
+    expect(claims.relationships?.options.founded).toBe('David Lett founded The Eyrie Vineyards.')
+    expect(claims.relationships?.options.worked_at).toBe('David Lett worked at The Eyrie Vineyards.')
+  })
+
   it('states a connection and each dated detail separately', () => {
     const claims = claimsFor(edge('jason-lett--winemaker--the-eyrie-vineyards'), graph)
     expect(claims.main).toBe('Jason Lett winemaker at The Eyrie Vineyards.')
@@ -26,10 +37,35 @@ describe('claimsFor', () => {
     expect(claimsFor(edge('david-lett--family--diana-lett'), graph).main).toBe('David Lett is the spouse of Diana Lett.')
   })
 
-  it('checks a node on its summary and its dates', () => {
-    const claims = claimsFor(node('david-lett'), graph)
-    expect(claims.main).toMatch(/^About David Lett: /)
-    expect(claims.details).toEqual({ born: 'David Lett was born in 1939.', died: 'David Lett died in 2008.' })
+  it('checks a node on each sentence of its summary and its dates', () => {
+    const record = { ...node('david-lett').record, summary: 'Founded The Eyrie Vineyards. Planted Pinot noir in 1965.' }
+    const claims = claimsFor({ kind: 'node', record }, graph)
+    expect(claims.main).toBe('About David Lett: Founded The Eyrie Vineyards.')
+    expect(claims.details).toEqual({
+      born: 'David Lett was born in 1939.',
+      died: 'David Lett died in 2008.',
+      sentence2: 'About David Lett: Planted Pinot noir in 1965.',
+    })
+  })
+
+  it('makes each year the sources give its own claim, any of which satisfies the detail', () => {
+    const record = { ...edge('david-lett--founded--the-eyrie-vineyards').record, startYear: 1966, alsoDated: { startYear: [1965] } }
+    const claims = claimsFor({ kind: 'edge', record }, graph)
+    expect(claims.details).toMatchObject({
+      startYear: 'David Lett founded The Eyrie Vineyards, starting in 1966.',
+      'startYear@1965': 'David Lett founded The Eyrie Vineyards, starting in 1965.',
+    })
+    const only1965 = { url: 'https://example.com', status: 'read' as const, levels: [0, 0, 0, 1] as SourceCheck['levels'], details: { startYear: 0.1, 'startYear@1965': 0.95 } }
+    expect(decide([only1965], Object.keys(claims.details), 0.9)).toMatchObject({ verdict: 'supported', failing: [] })
+    expect(decide([{ ...only1965, details: { startYear: 0.1, 'startYear@1965': 0.2 } }], Object.keys(claims.details), 0.9).failing).toEqual(['startYear'])
+  })
+
+  it('splits sentences without breaking at abbreviations or initials', () => {
+    expect(splitSentences('Bought by Ste. Michelle in 2006.')).toEqual(['Bought by Ste. Michelle in 2006.'])
+    expect(splitSentences('Made by J. Christopher near Mt. Hood. Sold in 2006.')).toEqual([
+      'Made by J. Christopher near Mt. Hood.',
+      'Sold in 2006.',
+    ])
   })
 
   it('changes fingerprint when what the record asserts changes', () => {
@@ -99,17 +135,45 @@ describe('decide', () => {
     expect(decide([{ url: 'https://example.com', status: 'unreadable' }], [], 0.8).verdict).toBe('unchecked')
     expect(decide([], [], 0.8).verdict).toBe('unchecked')
   })
+
+  it('does not count a source that describes a different relationship between the two', () => {
+    const founded = (relationship: [number, number]): SourceCheck => ({ ...read([0, 0, 0, 1]), relationship })
+    expect(decide([founded([0.8, 0.2])], [], 0.9).verdict).toBe('supported')
+    // "worked at" read as "founded": the page describes a different relationship
+    expect(decide([founded([0.1, 0.9])], [], 0.9).verdict).toBe('unsupported')
+    // Two that both hold (founder and owner) split the answer; close enough still counts
+    expect(decide([founded([0.45, 0.55])], [], 0.9).verdict).toBe('supported')
+  })
+
+  it('lets a combined reading support details but never the main claim or the shown source', () => {
+    const combined: SourceCheck = { url: 'combined', status: 'read', medium: 'combined', details: { startYear: 0.95 } }
+    expect(decide([read([0, 0, 0, 1], { startYear: 0.2 }), combined], ['startYear'], 0.9)).toMatchObject({
+      verdict: 'supported',
+      bestSource: 'https://example.com',
+    })
+    expect(decide([combined], ['startYear'], 0.9).verdict).toBe('unchecked')
+  })
+
+  it('holds a record supported only by label images to the image bar, and says so', () => {
+    const image = (support: number): SourceCheck => ({ ...read([0, 1 - support, 0, support]), url: 'https://ttbonline.gov/a', medium: 'image' })
+    expect(decide([image(0.92)], [], 0.9, 0.95).verdict).toBe('unsupported')
+    expect(decide([image(0.97)], [], 0.9, 0.95)).toMatchObject({ verdict: 'supported', byImage: true })
+    // A text source that clears its own bar is preferred, and the record isn't marked as image-only
+    const decision = decide([image(0.97), read([0, 0.05, 0, 0.95])], [], 0.9, 0.95)
+    expect(decision).toMatchObject({ verdict: 'supported', bestSource: 'https://example.com' })
+    expect(decision.byImage).toBeUndefined()
+  })
 })
 
 describe('checkRecord', () => {
   const item = edge('david-lett--founded--the-eyrie-vineyards')
   const urls = item.record.sources.map((source) => source.url!)
   const source = (status: CachedSource['status'], text = ''): CachedSource => ({ url: urls[0], status, fetchedAt: '', text })
-  let asked: { state: string; ids: string[] }[] = []
+  let asked: { state: string | Record<string, string>; ids: string[]; assets: string[] }[] = []
   const model: DecisionModel = {
     name: 'jev',
-    async ask(state, questions) {
-      asked.push({ state, ids: Object.keys(questions) })
+    async ask(state, questions, assets) {
+      asked.push({ state, ids: Object.keys(questions), assets: Object.keys(assets ?? {}) })
       const answers: Record<string, Answer> = {}
       for (const [id, question] of Object.entries(questions)) {
         answers[id] =
@@ -124,8 +188,67 @@ describe('checkRecord', () => {
   it('asks about the main claim and each detail, and records the scores', async () => {
     asked = []
     const checks = await checkRecord(item, graph, model, () => source('ok', 'David Lett founded The Eyrie Vineyards in 1966.'))
-    expect(asked[0].ids).toEqual(['main', 'detail_startYear'])
+    expect(asked[0].ids).toEqual(['main', 'detail_startYear', 'detail_startYear@1965', 'relationship'])
     expect(checks[0]).toMatchObject({ status: 'read', levels: [0, 0, 0.1, 0.9], details: { startYear: 0.85 } })
+  })
+
+  it('records whether each source states this relationship or only another', async () => {
+    const chooser: DecisionModel = {
+      name: 'jev',
+      async ask(_state, questions) {
+        const answers: Record<string, Answer> = {}
+        for (const [id, question] of Object.entries(questions)) {
+          if (question.type === 'choice') {
+            expect(question.criteria.other).toContain('David Lett worked at The Eyrie Vineyards')
+            answers[id] = { type: 'choice', choice: 'other', confidence: 0.8, probabilities: { own: 0.15, other: 0.8, none: 0.05 } }
+          } else if (question.type === 'score') {
+            answers[id] = { type: 'score', score: 3, confidence: 1, probabilities: { '3': 1 } }
+          } else answers[id] = { type: 'noul', noul: 0.95 }
+        }
+        return answers
+      },
+    }
+    const checks = await checkRecord(item, graph, chooser, () => source('ok', 'David Lett worked at The Eyrie Vineyards.'))
+    expect(checks[0].relationship).toEqual([0.15, 0.8])
+  })
+
+  it('sends a label approval’s images with its text, even though the text names only one party', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'labels-'))
+    const label = join(dir, 'label.png')
+    await sharp({ create: { width: 300, height: 300, channels: 3, background: '#ffffff' } }).png().toFile(label)
+    asked = []
+    const approval = { ...source('ok', 'Brand name: THE EYRIE VINEYARDS.'), images: [label] }
+    const checks = await checkRecord(item, graph, model, () => approval)
+    expect(asked[0].assets).toEqual(['label-image-1'])
+    expect(asked[0].state).toMatchObject({ text: 'Brand name: THE EYRIE VINEYARDS.', labels: 'label-image-1' })
+    expect(checks[0]).toMatchObject({ status: 'read', medium: 'image' })
+  })
+
+  it('reads all the sources together for a detail no single source supports', async () => {
+    asked = []
+    const second = 'https://example.com/eyrie-history'
+    const twoSources = { ...item, record: { ...item.record, sources: [...item.record.sources, { title: 'History', url: second }] } }
+    const pages: Record<string, CachedSource> = {
+      [urls[0]]: { url: urls[0], status: 'ok', fetchedAt: '', text: 'David Lett founded The Eyrie Vineyards.' },
+      [second]: { url: second, status: 'ok', fetchedAt: '', text: 'The Eyrie Vineyards began in 1966, David Lett recalled.' },
+    }
+    const weak: DecisionModel = {
+      name: 'jev',
+      async ask(state, questions) {
+        asked.push({ state, ids: Object.keys(questions), assets: [] })
+        const answers: Record<string, Answer> = {}
+        for (const [id, question] of Object.entries(questions)) {
+          answers[id] =
+            question.type === 'score'
+              ? { type: 'score', score: 3, confidence: 0.9, probabilities: { '3': 1 } }
+              : { type: 'noul', noul: typeof state === 'string' && state.includes('[Source 2]') ? 0.95 : 0.3 }
+        }
+        return answers
+      },
+    }
+    const checks = await checkRecord(twoSources, graph, weak, (url) => pages[url] ?? null)
+    expect(checks.at(-1)).toMatchObject({ url: 'combined', medium: 'combined', details: { startYear: 0.95 } })
+    expect(asked.at(-1)!.ids).toEqual(['detail_startYear', 'detail_startYear@1965'])
   })
 
   it('does not ask the model about a page that names neither party or could not be read', async () => {

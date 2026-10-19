@@ -100,7 +100,7 @@ export function readGraph(dataDir: string): Graph {
   })
 }
 
-const NODE_FILES: Record<NodeType, string> = {
+export const NODE_FILES: Record<NodeType, string> = {
   person: 'people.json',
   winery: 'wineries.json',
   vineyard: 'vineyards.json',

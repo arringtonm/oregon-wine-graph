@@ -1,5 +1,5 @@
 import { roleTitle } from '../data/roleTitles'
-import { EDGE_RULES, type GraphEdge, type GraphNode, type NodeType } from '../data/schema'
+import { EDGE_RULES, type GraphEdge, type GraphNode, type NodeType, type YearField } from '../data/schema'
 
 // How records and connections read, as words: shared by the app (composables/useGraph.ts)
 // and the pages made at build time for search engines (seo/recordPage.ts). No browser
@@ -19,39 +19,55 @@ export const SINGULAR_TYPE: Record<NodeType, string> = {
   event: 'event',
 }
 
+// A year as the sources give it: "1966", or "1965 or 1966" when they disagree (alsoDated)
+export function datedText(record: GraphNode | GraphEdge, field: YearField): string {
+  const year = (record as Partial<Record<YearField, number>>)[field]
+  if (year === undefined) return ''
+  const years = [...new Set([year, ...(record.alsoDated?.[field] ?? [])])].sort((a, b) => a - b)
+  return years.length === 1 ? `${year}` : `${years.slice(0, -1).join(', ')} or ${years[years.length - 1]}`
+}
+
+// Whether the sources disagree on any of the record's years
+export function hasDisputedYears(record: GraphNode | GraphEdge): boolean {
+  return Object.values(record.alsoDated ?? {}).some((years) => years.length > 0)
+}
+
 export function formatYears(edge: GraphEdge): string {
   const { startYear, endYear, ongoing } = edge
+  const start = datedText(edge, 'startYear')
+  const end = datedText(edge, 'endYear')
   if (startYear !== undefined && endYear !== undefined) {
-    return startYear === endYear ? `${startYear}` : `${startYear}–${endYear}`
+    return startYear === endYear && start === end ? start : `${start}–${end}`
   }
-  if (startYear !== undefined) return ongoing ? `${startYear}–present` : `from ${startYear}`
-  if (endYear !== undefined) return `until ${endYear}`
+  if (startYear !== undefined) return ongoing ? `${start}–present` : `from ${start}`
+  if (endYear !== undefined) return `until ${end}`
   return ongoing ? 'present' : ''
 }
 
 export function nodeYears(node: GraphNode): string {
+  const year = (field: YearField) => datedText(node, field)
   switch (node.type) {
     case 'person':
-      if (node.born !== undefined && node.died !== undefined) return `${node.born}–${node.died}`
-      if (node.born !== undefined) return `Born ${node.born}`
-      return node.died !== undefined ? `Died ${node.died}` : ''
+      if (node.born !== undefined && node.died !== undefined) return `${year('born')}–${year('died')}`
+      if (node.born !== undefined) return `Born ${year('born')}`
+      return node.died !== undefined ? `Died ${year('died')}` : ''
     case 'winery':
       return [
-        node.founded !== undefined ? `Founded ${node.founded}` : '',
-        node.closed !== undefined ? `closed ${node.closed}` : '',
+        node.founded !== undefined ? `Founded ${year('founded')}` : '',
+        node.closed !== undefined ? `closed ${year('closed')}` : '',
       ]
         .filter(Boolean)
         .join(', ')
     case 'vineyard':
-      return node.planted !== undefined ? `Planted ${node.planted}` : ''
+      return node.planted !== undefined ? `Planted ${year('planted')}` : ''
     case 'ava':
-      return node.established !== undefined ? `Established ${node.established}` : ''
+      return node.established !== undefined ? `Established ${year('established')}` : ''
     case 'organization':
-      return node.founded !== undefined ? `Founded ${node.founded}` : ''
+      return node.founded !== undefined ? `Founded ${year('founded')}` : ''
     case 'event':
       return [
-        node.firstHeld !== undefined ? `First held ${node.firstHeld}` : '',
-        node.lastHeld !== undefined ? `last held ${node.lastHeld}` : '',
+        node.firstHeld !== undefined ? `First held ${year('firstHeld')}` : '',
+        node.lastHeld !== undefined ? `last held ${year('lastHeld')}` : '',
       ]
         .filter(Boolean)
         .join(', ')

@@ -41,6 +41,17 @@ describe('graph data files', () => {
     const opening = graph.nodes.filter((node) => node.type !== 'ava' && !HIDDEN_TYPES.has(node.type)).map((node) => node.id)
     expect(coverage(savedLayout as unknown as SavedLayout, opening)).toBeGreaterThanOrEqual(0.95)
   })
+
+  // A label approval shows a wine was planned, not sold. npm run cola:caveats keeps this true.
+  it('say so when a connection rests only on federal label approvals', async () => {
+    const graph = await loadGraph()
+    const caveat = /Evidence goes only as far as (a )?federal label approvals? \(TTB, [^)]+\); no other source confirms the wine was released\./
+    const labelOnly = (sources: { url?: string }[]) => sources.every((source) => source.url?.startsWith('https://ttbonline.gov/'))
+    const wrong = graph.edges
+      .filter((edge) => labelOnly(edge.sources) !== caveat.test(edge.note ?? ''))
+      .map((edge) => edge.id)
+    expect(wrong).toEqual([])
+  })
 })
 
 describe('checkGraph', () => {

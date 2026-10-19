@@ -1,0 +1,42 @@
+{
+ "node:erath-winery": {
+  "date": "2026-10-19",
+  "finding": "The cited sources already state everything: first commercial wine in 1972 (Linfield note, NBC/AP, Northwest Wine Report), Knudsen Erath 1975 to 1988 and the 2006 Ste. Michelle Wine Estates purchase (Northwest Wine Report, Linfield, NBC/AP). The sentence3 failure looks like a sentence-splitting artifact at 'Ste.'; no published source gives 1972 as a 'founding' year as such (sources tie 1972 to the first commercial wine, 1969 to planting, 1976 to the winery building), so no change is proposed. The winery's own history page (erath.com/winery/storyoferath) now redirects to a winemaking page without dates."
+ },
+ "node:evening-land-vineyards": {
+  "date": "2026-10-19",
+  "finding": "The Prince of Pinot already states the 2005 start by Mark Tarlov, the 2007 45-year Seven Springs lease, Lafon as consulting winemaker, and Parr and Moorman taking over operations in 2014. Wine with Seth gives no founding year (only a 2007 debut vintage) and says the Parr-Moorman collaboration ended in September 2025, which I could not confirm elsewhere; Wine Spectator (2009) says Tarlov 'bought' Seven Springs in 2007, while its 2010 piece says leases with options to buy. No second source for the 2005 founding was found, so nothing is proposed."
+ },
+ "node:roco-winery": {
+  "date": "2026-10-19",
+  "finding": "Nothing new found. The cited Wine Spectator piece (2013) already supports 2003: it says Roco crushed its first vintage in 2003 and that the couple started it ten years earlier. The M. Touton conflict is its 1987 date for Rollin Soles's purchase of a Chehalem Mountains property, not a ROCO founding date. Touton otherwise agrees on Wits' End in 2001, the first vintage in 2003 and the winery in 2009."
+ },
+ "node:wynne-peterson-nedry": {
+  "date": "2026-10-19",
+  "finding": "The cited sources already hold the facts: Great Northwest Wine (?p=64802) says she took over as head winemaker in 2012 and remained in that role after the 2018 Stoller purchase, and ?p=71922 says she and her father moved into the Carlton Winemakers Studio in fall 2018 to keep making RR Wines. No source says her tenure ended with the sale itself, so the proposed wording drops 'until the 2018 sale'."
+ },
+ "node:burton-bittman-wines": {
+  "date": "2026-10-19",
+  "finding": "No new source found. The winery's homepage, already cited, says 'Making Wine: Since 2010' and 'Growing Grapes: Since 1987', which is the basis for the 2010 founding; a Vinoshipper listing that reportedly dates the first Pinot noir to 2010 blocks reading (403), and the WVWA listing has no description."
+ },
+ "node:russell-gladhart": {
+  "date": "2026-10-19",
+  "finding": "The two cited pages split the facts: 1000 Friends of Oregon names his parents and calls him a second-generation winemaker, and Portland Monthly says he took the reins in 2015 from Delphine. No new source needed; the summary is split so each sentence rests on one page."
+ },
+ "node:failla": {
+  "date": "2026-10-19",
+  "finding": "The cited Vineyards (Failla Oregon) page says Patton Valley holds Failla's winery, tasting room and first Oregon estate vineyard; no page that names Patton Valley also says Gaston (the Visit page gives only the Gaston street address), so the reworded sentence leaves Gaston to the place field. The 2018 Oregon Wine Press piece describes an earlier tasting room at 5657 Zena Rd. NW, Salem, which explains its partial contradiction score."
+ },
+ "node:tendril-wine-cellars": {
+  "date": "2026-10-19",
+  "finding": "Tendril's own About page says it launched in 2010 with one bottling from the 2008 vintage and that Rynders started Tony Rynders Consulting in June 2008; Prince of Pinot calls it a new label in 2008, likely counting from the first vintage. The winery's own date is the stronger one, so 2008 is kept as an alternative."
+ },
+ "node:danny-klieman": {
+  "date": "2026-10-19",
+  "finding": "Both Lonesome Rock pages are readable with a browser user agent (the About URL is the 'Story' page). The Story page says Danny joined Heritage Wine Cellars in Chicago, and the People page calls him co-founder, with experience in importing and distribution. Neither page uses the word 'wife', though the Story page describes the couple raising three children together. No new outside source found."
+ },
+ "node:travis-todd": {
+  "date": "2026-10-19",
+  "finding": "The de la boue About page states the Yellowstone Club wine-buyer job, a 2014 Pinot Camp trip followed by a harvest, the 2017 move to Oregon, and a rise from cellar hand to head winemaker 'at one of the largest wineries in Oregon' within five years, but it names neither Wine by Joe nor Integrated Beverage Group. Only a Wine Berserkers forum post (not citable) ties him to IBG, and the OWHA summary gives neither. If the names can't be kept on Weinnotes alone, a supported sentence would be: 'A former wine buyer at the Yellowstone Club in Montana, he moved to Oregon in 2017 and within five years went from cellar hand to head winemaker at one of the state's largest wineries.'"
+ }
+}

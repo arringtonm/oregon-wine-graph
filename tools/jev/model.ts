@@ -14,21 +14,38 @@ export type Answer =
   | { type: 'score'; score: number; confidence: number; probabilities: Record<string, number> }
   | { type: 'noul'; noul: number }
 
+// An image sent with a request, keyed by a reference that the state or a question mentions.
+// Jev's image support is an early-stage feature, so answers about images are trusted less.
+export interface ImageAsset {
+  type: 'image'
+  format: 'png' | 'jpg' | 'jpeg'
+  data_base64: string
+}
+
 export interface DecisionModel {
   name: 'jev' | 'stub'
-  ask(state: string, questions: Record<string, Question>): Promise<Record<string, Answer>>
+  ask(
+    state: string | Record<string, string>,
+    questions: Record<string, Question>,
+    assets?: Record<string, ImageAsset>,
+  ): Promise<Record<string, Answer>>
 }
 
 export function jevModel(apiKey: string): DecisionModel {
   return {
     name: 'jev',
-    async ask(state, questions) {
+    async ask(state, questions, assets) {
+      const images = assets && Object.keys(assets).length > 0
       // Retry rate limits and server errors a few times, backing off
       for (let attempt = 0; ; attempt++) {
         const response = await fetch('https://api.typesafe.ai/v1/systemone', {
           method: 'POST',
-          headers: { authorization: `Bearer ${apiKey}`, 'content-type': 'application/json' },
-          body: JSON.stringify({ model: 'jev-latest', state, questions }),
+          headers: {
+            authorization: `Bearer ${apiKey}`,
+            'content-type': 'application/json',
+            ...(images ? { 'TypeSafe-Danger-Zone-Images': 'true' } : {}),
+          },
+          body: JSON.stringify({ model: 'jev-latest', state, questions, ...(images ? { assets } : {}) }),
         })
         if (response.ok) return ((await response.json()) as { answers: Record<string, Answer> }).answers
         if (attempt >= 4 || (response.status !== 429 && response.status < 500)) {
@@ -88,7 +105,9 @@ export function stubModel(): DecisionModel {
 
   return {
     name: 'stub',
-    async ask(state, questions) {
+    async ask(input, questions) {
+      // Images are ignored: the stand-in only reads text
+      const state = typeof input === 'string' ? input : Object.values(input).join('\n')
       const sentence = (state.match(/^Sentence: (.*)$/m)?.[1] ?? state).toLowerCase()
       const years = [...sentence.matchAll(/\b(1[789]\d\d|20\d\d)\b/g)].map((match) => match[1])
       const type = TYPE_KEYWORDS.find(([, pattern]) => pattern.test(sentence))?.[0]

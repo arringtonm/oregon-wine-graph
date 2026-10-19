@@ -2,6 +2,9 @@
 // are copied, one fact in each copy is broken, and the copies are run against the same
 // sources. Every broken copy that still comes back "supported" is a false approval.
 // Run with: npm run check:calibrate [-- --sample 400]
+// With --images, only records supported by a label approval's images are broken (including
+// by swapping in another vineyard the same winery buys from), and they are checked against
+// those approvals alone: this sets IMAGE_THRESHOLD in decide.ts.
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { loadEnv } from 'vite'
@@ -9,13 +12,14 @@ import { allowedEdgeTypes, EDGE_RULES, type Graph, type GraphEdge, type GraphNod
 import { jevModel } from '../jev/model'
 import { readGraph } from '../reviewPlugin'
 import { checkRecord } from './checkRecord'
-import { claimsFor, recordKey, type CheckedRecord } from './claims'
-import { decide, type SourceCheck } from './decide'
+import { claimsFor, recordKey, splitSentences, type CheckedRecord } from './claims'
+import { APPLY_THRESHOLD, decide, type SourceCheck } from './decide'
 import { readCached } from './fetchSources'
 import { pool } from './pool'
 import { readChecks } from './store'
 
-const THRESHOLDS = [0.5, 0.6, 0.7, 0.8, 0.9, 0.95]
+const IMAGES = process.argv.includes('--images')
+const THRESHOLDS = IMAGES ? [0.8, 0.9, 0.95, 0.97, 0.99] : [0.5, 0.6, 0.7, 0.8, 0.9, 0.95]
 const YEAR_FIELDS = ['born', 'died', 'founded', 'closed', 'planted', 'established', 'firstHeld', 'lastHeld'] as const
 
 // Small seeded generator, so a calibration run can be repeated exactly
@@ -29,6 +33,13 @@ function randomSource(seed: number) {
 }
 
 type Corruption = { kind: string; item: CheckedRecord }
+
+const IMPLIES: Partial<Record<GraphEdge['type'], GraphEdge['type'][]>> = {
+  founded: ['worked_at', 'owns'],
+  winemaker: ['worked_at'],
+  owns: ['sources_from', 'founded'],
+  acquired: ['owns'],
+}
 
 // Every way this record can be broken while staying a well-formed record
 function corruptions(item: CheckedRecord, graph: Graph, random: () => number): Corruption[] {
@@ -45,6 +56,14 @@ function corruptions(item: CheckedRecord, graph: Graph, random: () => number): C
     }
     const others = graph.nodes.filter((other) => other.type === node.type && other.id !== node.id)
     out.push({ kind: 'node summary', item: { kind: 'node', record: { ...node, summary: pick(others).summary } as GraphNode } })
+    // Subtler: one sentence of the summary swapped for a sentence about another record
+    const sentences = splitSentences(node.summary)
+    const foreign = splitSentences(pick(others).summary)
+    if (sentences.length > 1 && foreign.length > 0) {
+      const at = Math.floor(random() * sentences.length)
+      sentences[at] = pick(foreign)
+      out.push({ kind: 'node sentence', item: { kind: 'node', record: { ...node, summary: sentences.join(' ') } as GraphNode } })
+    }
     return out
   }
 
@@ -62,9 +81,23 @@ function corruptions(item: CheckedRecord, graph: Graph, random: () => number): C
   )
   const strangers = graph.nodes.filter((node) => node.type === target.type && node.id !== source.id && !linked.has(node.id))
   if (strangers.length > 0) make('edge other party', { target: pick(strangers).id })
+  // The hardest case for a label: another vineyard the same winery is known to use
+  if (IMAGES && target.type === 'vineyard') {
+    const siblings = graph.nodes.filter((node) => node.type === 'vineyard' && node.id !== target.id && linked.has(node.id))
+    if (siblings.length > 0) make('edge sibling vineyard', { target: pick(siblings).id })
+  }
 
+  // A swapped relationship only tests anything if it is false. Leave out relationships the
+  // two already have, and those that follow from them: whoever founded or makes the wine at a
+  // winery works there, a founder usually owns it, and a vineyard's owner uses its fruit
+  const between = new Set(
+    graph.edges
+      .filter((other) => (other.source === edge.source && other.target === edge.target) || (other.source === edge.target && other.target === edge.source))
+      .map((other) => other.type),
+  )
+  const implied = new Set<string>([...between].flatMap((type) => IMPLIES[type] ?? []))
   const otherTypes = allowedEdgeTypes(source.type, target.type).filter(
-    (type) => EDGE_RULES[type].category !== EDGE_RULES[edge.type].category,
+    (type) => EDGE_RULES[type].category !== EDGE_RULES[edge.type].category && !between.has(type) && !implied.has(type),
   )
   if (otherTypes.length > 0) make('edge relationship', { type: pick(otherTypes), role: undefined })
 
@@ -86,12 +119,15 @@ async function main() {
     ...graph.nodes.map((record) => ({ kind: 'node' as const, record })),
     ...graph.edges.map((record) => ({ kind: 'edge' as const, record })),
   ]
+  // In image mode the threshold swept is the image bar
   const verdictOf = (item: CheckedRecord, checks: SourceCheck[], threshold: number) =>
-    decide(checks, Object.keys(claimsFor(item, graph).details), threshold).verdict
+    decide(checks, Object.keys(claimsFor(item, graph).details), threshold, IMAGES ? threshold : undefined).verdict
+  const imageBacked = (item: CheckedRecord) => store[recordKey(item)]?.sources.some((source) => source.medium === 'image')
 
   // Break only records the loosest threshold approves, so each copy differs from a passing record by one fact
   const passing = all.filter((item) => {
     const stored = store[recordKey(item)]
+    if (IMAGES && !imageBacked(item)) return false
     return stored && verdictOf(item, stored.sources, THRESHOLDS[0]) === 'supported'
   })
   // Spread the sample over the kinds of corruption instead of letting the commonest dominate
@@ -107,7 +143,14 @@ async function main() {
 
   const results: { kind: string; key: string; checks: SourceCheck[]; item: CheckedRecord }[] = []
   await pool(sample, 8, async (corruption) => {
-    const checks = await checkRecord(corruption.item, graph, model, readCached)
+    // In image mode, judge each copy on its label approvals alone
+    const item = IMAGES
+      ? ({
+          ...corruption.item,
+          record: { ...corruption.item.record, sources: corruption.item.record.sources.filter((source) => readCached(source.url ?? '')?.images) },
+        } as CheckedRecord)
+      : corruption.item
+    const checks = await checkRecord(item, graph, model, readCached)
     results.push({ kind: corruption.kind, key: recordKey(corruption.item), checks, item: corruption.item })
   })
 
@@ -129,7 +172,7 @@ async function main() {
 
   console.log('\nReal records approved, by threshold:')
   row('', THRESHOLDS.map(String))
-  const checked = all.filter((item) => store[recordKey(item)])
+  const checked = all.filter((item) => store[recordKey(item)] && (!IMAGES || imageBacked(item)))
   const groups: [string, CheckedRecord[]][] = [
     ['all records', checked],
     ['nodes', checked.filter((item) => item.kind === 'node')],
@@ -142,6 +185,28 @@ async function main() {
       THRESHOLDS.map((threshold) =>
         percent(group.filter((item) => verdictOf(item, store[recordKey(item)].sources, threshold) === 'supported').length, group.length),
       ),
+    )
+  }
+
+  // How strictly to require that a source describes the record's own relationship
+  const FITS = [0, 0.3, 0.5, 0.7, 0.9]
+  const fitVerdict = (item: CheckedRecord, checks: SourceCheck[], fit: number) =>
+    decide(checks, Object.keys(claimsFor(item, graph).details), APPLY_THRESHOLD, undefined, fit).verdict
+  console.log(`\nAt ${APPLY_THRESHOLD}, by relationship fit required (0 = not checked):`)
+  row('', FITS.map(String))
+  for (const kind of [...kinds, 'ALL']) {
+    const subset = results.filter((result) => kind === 'ALL' || result.kind === kind)
+    row(
+      `${kind} (${subset.length})`,
+      FITS.map((fit) => percent(subset.filter((result) => fitVerdict(result.item, result.checks, fit) === 'supported').length, subset.length)),
+    )
+  }
+  const connections = checked.filter((item) => item.kind === 'edge')
+  const handVerified = connections.filter((item) => item.record.verified && item.record.verifiedBy !== 'jev')
+  for (const [label, group] of [['real connections', connections], ['connections verified by hand', handVerified]] as const) {
+    row(
+      `${label} (${group.length})`,
+      FITS.map((fit) => percent(group.filter((item) => fitVerdict(item, store[recordKey(item)].sources, fit) === 'supported').length, group.length)),
     )
   }
 

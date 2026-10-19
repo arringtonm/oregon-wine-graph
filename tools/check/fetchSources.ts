@@ -1,11 +1,12 @@
 // Stage 1 of the record check: download every page the data cites, once, as plain text.
 // Pages are cached under .cache/sources (git-ignored); only scores derived from them
-// are ever committed. Run with: npm run check:fetch
+// are ever committed. Run with: npm run check:fetch [-- --failed]
 import { createHash } from 'node:crypto'
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { readGraph } from '../reviewPlugin'
+import { htmlToText } from './html'
 
 export type FetchStatus = 'ok' | 'blocked' | 'not-found' | 'empty' | 'not-text' | 'error'
 
@@ -15,6 +16,8 @@ export interface CachedSource {
   fetchedAt: string
   detail?: string
   text: string
+  // Local image files that are part of the source, such as a label approval's labels
+  images?: string[]
 }
 
 export const CACHE_DIR = resolve('.cache/sources')
@@ -31,41 +34,7 @@ export function readCached(url: string): CachedSource | null {
   return existsSync(file) ? (JSON.parse(readFileSync(file, 'utf8')) as CachedSource) : null
 }
 
-const ENTITIES: Record<string, string> = {
-  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ',
-  rsquo: '’', lsquo: '‘', rdquo: '”', ldquo: '“', ndash: '–', mdash: '—', hellip: '…',
-  szlig: 'ß', aelig: 'æ', AElig: 'Æ', oslash: 'ø', Oslash: 'Ø', ccedil: 'ç', Ccedil: 'Ç',
-}
-// Accented letters arrive as a base letter plus a mark name: &eacute; &ntilde; &ouml; ...
-const MARKS: Record<string, string> = { acute: '\u0301', grave: '\u0300', circ: '\u0302', uml: '\u0308', tilde: '\u0303', ring: '\u030a' }
-
-export function decodeEntities(text: string): string {
-  return text
-    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
-    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16)))
-    .replace(/&([a-z]+);/gi, (match, name: string) => {
-      if (ENTITIES[name] ?? ENTITIES[name.toLowerCase()]) return ENTITIES[name] ?? ENTITIES[name.toLowerCase()]
-      const accent = name.match(/^([a-z])(acute|grave|circ|uml|tilde|ring)$/i)
-      return accent ? (accent[1] + MARKS[accent[2].toLowerCase()]).normalize('NFC') : match
-    })
-}
-
-function stripMarkup(html: string): string {
-  return html
-    .replace(/<(script|style|noscript|svg|head)\b[\s\S]*?<\/\1>/gi, ' ')
-    .replace(/<!--[\s\S]*?-->/g, ' ')
-    .replace(/<\/?(p|div|br|li|tr|h[1-6]|section|article|blockquote|td)\b[^>]*>/gi, '\n')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/[ \t ​‌]+/g, ' ')
-    .replace(/\s*\n\s*/g, '\n')
-    .trim()
-}
-
-export function htmlToText(html: string): string {
-  return decodeEntities(stripMarkup(html))
-    .replace(/[ \t\u00a0]+/g, ' ')
-    .trim()
-}
+export { decodeEntities, htmlToText } from './html'
 
 // Kit (ConvertKit) newsletter posts render client-side; the article is in embedded JSON
 function kitPostHtml(page: string): string | null {
@@ -113,39 +82,114 @@ export function methodTrailHtml(page: string): string | null {
 }
 
 async function fetchSource(url: string): Promise<CachedSource> {
-  const result = (status: FetchStatus, text = '', detail?: string): CachedSource => ({
-    url,
-    status,
-    fetchedAt: new Date().toISOString(),
-    ...(detail ? { detail } : {}),
-    text,
-  })
-  if (NOT_TEXT_HOSTS.test(new URL(url).hostname)) return result('not-text')
-  try {
-    const response = await fetch(url, {
-      headers: {
-        'user-agent': 'Mozilla/5.0 (compatible; oregon-wine-graph source check)',
-        accept: 'text/html,application/xhtml+xml,text/plain',
-      },
-      redirect: 'follow',
-      signal: AbortSignal.timeout(30_000),
-    })
-    if (response.status === 404 || response.status === 410) return result('not-found', '', `HTTP ${response.status}`)
-    if (!response.ok) return result('blocked', '', `HTTP ${response.status}`)
-    const type = response.headers.get('content-type') ?? ''
-    if (!/text|html|xml|json/.test(type)) return result('not-text', '', type)
-    const page = await response.text()
-    const { hostname, pathname } = new URL(url)
-    const html = hostname.endsWith('kit.com')
-      ? (kitPostHtml(page) ?? page)
-      : hostname.endsWith('methodoregon.com') && pathname.startsWith('/trail')
-        ? (methodTrailHtml(page) ?? page)
-        : page
-    const text = htmlToText(html)
-    return text.length < MIN_TEXT_LENGTH ? result('empty', text) : result('ok', text)
-  } catch (error) {
-    return result('error', '', error instanceof Error ? error.message : String(error))
+  // Label approvals: the form's text plus the label images, through the registry's own
+  // slower, session-keeping client
+  if (/(^|\.)ttbonline\.gov$/.test(new URL(url).hostname)) {
+    const { fetchColaSource } = await import('../cola/source')
+    return fetchColaSource(url)
   }
+  // The OpenML wine reviews dataset: only the four fields used from each Oregon review
+  if (url === 'https://www.openml.org/d/42074') {
+    const { openmlSourceText } = await import('../openml/dataset')
+    return { url, status: 'ok', fetchedAt: new Date().toISOString(), text: await openmlSourceText() }
+  }
+  const direct = await fetchDirect(url)
+  if (!['blocked', 'empty', 'not-found', 'error'].includes(direct.status)) return direct
+  // A page that is blocked, gone or empty today may be readable as the Internet Archive kept it
+  const archived = await fetchArchived(url)
+  return archived ?? direct
+}
+
+const cachedSource = (url: string, status: FetchStatus, text = '', detail?: string): CachedSource => ({
+  url,
+  status,
+  fetchedAt: new Date().toISOString(),
+  ...(detail ? { detail } : {}),
+  text,
+})
+
+// Turns a fetched response into text: PDFs through unpdf, pages through the site extractors
+async function responseText(url: string, response: Response): Promise<{ text: string } | { notText: string }> {
+  const type = response.headers.get('content-type') ?? ''
+  if (/pdf/.test(type) || (/octet-stream/.test(type) && /\.pdf($|\?)/i.test(url))) {
+    const { extractText, getDocumentProxy } = await import('unpdf')
+    const pdf = await getDocumentProxy(new Uint8Array(await response.arrayBuffer()))
+    const { text } = await extractText(pdf, { mergePages: true })
+    return { text: (Array.isArray(text) ? text.join('\n') : text).replace(/[ \t]+/g, ' ').trim() }
+  }
+  if (!/text|html|xml|json/.test(type)) return { notText: type }
+  const page = await response.text()
+  const { hostname, pathname } = new URL(url)
+  const html = hostname.endsWith('kit.com')
+    ? (kitPostHtml(page) ?? page)
+    : hostname.endsWith('methodoregon.com') && pathname.startsWith('/trail')
+      ? (methodTrailHtml(page) ?? page)
+      : page
+  return { text: htmlToText(html) }
+}
+
+const request = (url: string) =>
+  fetch(url, {
+    headers: {
+      'user-agent': 'Mozilla/5.0 (compatible; oregon-wine-graph source check)',
+      accept: 'text/html,application/xhtml+xml,text/plain,application/pdf',
+    },
+    redirect: 'follow',
+    signal: AbortSignal.timeout(30_000),
+  })
+
+async function fetchDirect(url: string): Promise<CachedSource> {
+  if (NOT_TEXT_HOSTS.test(new URL(url).hostname)) return cachedSource(url, 'not-text')
+  try {
+    const response = await request(url)
+    if (response.status === 404 || response.status === 410) return cachedSource(url, 'not-found', '', `HTTP ${response.status}`)
+    if (!response.ok) return cachedSource(url, 'blocked', '', `HTTP ${response.status}`)
+    const result = await responseText(url, response)
+    if ('notText' in result) return cachedSource(url, 'not-text', '', result.notText)
+    return result.text.length < MIN_TEXT_LENGTH ? cachedSource(url, 'empty', result.text) : cachedSource(url, 'ok', result.text)
+  } catch (error) {
+    return cachedSource(url, 'error', '', error instanceof Error ? error.message : String(error))
+  }
+}
+
+// The Internet Archive is asked one request at a time, a second apart, whichever sites ask
+let archiveTurn: Promise<unknown> = Promise.resolve()
+function archiveRequest(url: string): Promise<Response> {
+  const turn = archiveTurn.then(async () => {
+    const response = await request(url)
+    await new Promise((done) => setTimeout(done, 1000))
+    return response
+  })
+  archiveTurn = turn.catch(() => undefined)
+  return turn
+}
+
+// The newest Wayback Machine copy of a page, read the same way as the live page
+export async function fetchArchived(url: string): Promise<CachedSource | null> {
+  try {
+    const lookup = await archiveRequest(`https://archive.org/wayback/available?url=${encodeURIComponent(url)}`)
+    if (!lookup.ok) return null
+    const closest = ((await lookup.json()) as { archived_snapshots?: { closest?: { available: boolean; timestamp: string } } })
+      .archived_snapshots?.closest
+    if (!closest?.available) return null
+    // id_ asks for the page as archived, without the Wayback Machine's toolbar
+    const response = await archiveRequest(`https://web.archive.org/web/${closest.timestamp}id_/${url}`)
+    if (!response.ok) return null
+    const result = await responseText(url, response)
+    if ('notText' in result || result.text.length < MIN_TEXT_LENGTH) return null
+    const date = `${closest.timestamp.slice(0, 4)}-${closest.timestamp.slice(4, 6)}-${closest.timestamp.slice(6, 8)}`
+    return cachedSource(url, 'ok', result.text, `archived copy, ${date}`)
+  } catch {
+    return null
+  }
+}
+
+// Fetches one page into the cache, for tools that add sources outside a full check:fetch run
+export async function fetchAndCache(url: string): Promise<CachedSource> {
+  mkdirSync(CACHE_DIR, { recursive: true })
+  const source = await fetchSource(url)
+  writeFileSync(cachePath(url), JSON.stringify(source))
+  return source
 }
 
 export function citedUrls(): string[] {
@@ -160,7 +204,9 @@ export function citedUrls(): string[] {
 async function main() {
   const refetch = process.argv.includes('--refetch')
   mkdirSync(CACHE_DIR, { recursive: true })
-  const pending = citedUrls().filter((url) => refetch || !readCached(url))
+  // --failed tries again every page that could not be read last time
+  const failed = process.argv.includes('--failed')
+  const pending = citedUrls().filter((url) => refetch || !readCached(url) || (failed && readCached(url)!.status !== 'ok'))
   console.log(`${citedUrls().length} cited pages, ${pending.length} to fetch`)
 
   // One request a second per site; sites in parallel

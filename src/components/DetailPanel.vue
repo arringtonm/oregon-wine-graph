@@ -12,6 +12,8 @@ import FlagButton from './FlagButton.vue'
 import FlagNotes from './FlagNotes.vue'
 import VerificationSummary from './VerificationSummary.vue'
 import { factsOf } from '../services/facts'
+import { hasDisputedYears } from '../graph/format'
+import DisputedYears from './DisputedYears.vue'
 import { flagsAvailable } from '../services/flags'
 
 const {
@@ -189,6 +191,8 @@ function blocksOf(connections: Connection[]): ConnectionBlock[] {
 interface Row extends Connection {
   about: string
   notes: string[]
+  // Connections in the row whose sources disagree on a year, as they read ("David Lett (founded by, from 1965 or 1966)")
+  disputed: string[]
 }
 function rowsOf(block: ConnectionBlock): Row[] {
   const groups = new Map<string, Connection[]>()
@@ -204,6 +208,9 @@ function rowsOf(block: ConnectionBlock): Row[] {
       ...ordered[0],
       about: ordered.map((c) => aboutConnection(block, c.verb, c.detail, c.years)).filter(Boolean).join('; '),
       notes: ordered.map((c) => c.edge.note).filter((note): note is string => Boolean(note)),
+      disputed: ordered
+        .filter((c) => hasDisputedYears(c.edge))
+        .map((c) => `${c.other.name} (${aboutConnection(block, c.verb, c.detail, c.years) || c.years})`),
     }
   })
 }
@@ -273,7 +280,9 @@ const canFlag = flagsAvailable()
       </div>
       <header>
         <p v-if="selectedNode.aka" class="detail__aka">Also known as {{ selectedNode.aka.join(', ') }}</p>
-        <p v-if="facts" class="detail__facts">{{ facts }}</p>
+        <p v-if="facts" class="detail__facts">
+          {{ facts }}<DisputedYears v-if="hasDisputedYears(selectedNode)" :facts="[nodeYears(selectedNode)]" />
+        </p>
         <p v-if="avaNames.length" class="detail__facts">
           {{ selectedNode.type === 'winery' ? 'Wine from' : 'In' }}: {{ avaNames.join(', ') }}
         </p>
@@ -301,7 +310,7 @@ const canFlag = flagsAvailable()
         <template v-for="block in blocksOf(group.connections)" :key="block.heading ?? ''">
           <h4 v-if="block.heading" class="detail__verb">{{ block.heading }}</h4>
           <ul>
-            <li v-for="{ edge, other, label, about, notes } in rowsOf(block)" :key="edge.id">
+            <li v-for="{ edge, other, label, about, notes, disputed } in rowsOf(block)" :key="edge.id">
               <!-- The name and what follows it read as one line of text, wrapping as a sentence does -->
               <span class="detail__entry">
                 <NodePreview :node="other">
@@ -311,7 +320,12 @@ const canFlag = flagsAvailable()
                     <NodeGlyph :type="other.type" />{{ other.name }}
                   </button>
                 </NodePreview>
-                <span v-if="about" class="detail__role">({{ about }})</span>
+                <!-- The "i" stays on the line with the closing bracket rather than wrapping alone -->
+                <span v-if="about" class="detail__role"
+                  >({{ about
+                  }}<span v-if="disputed.length" class="detail__nowrap">)<DisputedYears :facts="disputed" /></span
+                  ><template v-else>)</template></span
+                >
               </span>
               <!-- Viewers find each connection's sources in the verification note at the foot -->
               <span v-if="reviewing" class="detail__refs">
@@ -663,6 +677,10 @@ ul + .detail__verb {
   margin-left: 0.3em;
   color: var(--text-secondary);
   font-size: 0.875rem;
+}
+
+.detail__nowrap {
+  white-space: nowrap;
 }
 
 .detail__aka,

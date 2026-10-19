@@ -105,7 +105,7 @@
     "id": "jason-lett",
     "type": "person",
     "name": "Jason Lett",
-    "summary": "Son of David and Diana Lett. Took over as winemaker and vineyard manager at The Eyrie Vineyards in 2005 and is now its president.",
+    "summary": "Son of David and Diana Lett. He took over as winemaker and vineyard manager at The Eyrie Vineyards in 2005. He is now the winery's president and winemaker.",
     "sources": [
       {
         "title": "The Eyrie Vineyards (Wikipedia)",
@@ -126,9 +126,17 @@
       {
         "title": "Oral history interview with Jason Lett, 2007 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/jason-lett/"
+      },
+      {
+        "title": "The Eyrie Vineyards collection (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/the-eyrie-vineyards-collection/"
+      },
+      {
+        "title": "David and Diana Lett Interview (Linfield University DigitalCommons)",
+        "url": "https://digitalcommons.linfield.edu/owha_opc_interviews/6"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/david-and-jason-lett/",
@@ -147,7 +155,8 @@
         "date": "2007-10-05",
         "minutes": 11
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "earl-jones",
@@ -156,7 +165,7 @@
     "aka": [
       "H. Earl Jones"
     ],
-    "summary": "Co-founder with Hilda Jones of Abacela in the Umpqua Valley, where they planted Oregon's first Tempranillo in 1995. He co-petitioned for the Southern Oregon AVA and served on the Oregon Wine Board from 2003 to 2009.",
+    "summary": "Co-founder with Hilda Jones of Abacela in the Umpqua Valley, where they planted Oregon's first Tempranillo in 1995. He co-petitioned for the Southern Oregon AVA. He served on the Oregon Wine Board from 2003 to 2009.",
     "place": "Roseburg, OR",
     "sources": [
       {
@@ -174,6 +183,10 @@
       {
         "title": "Oral history interview with Earl Jones, 2013 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/earl-jones/"
+      },
+      {
+        "title": "New Appellation Sought for Southern Oregon (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/new-appellation-sought-for-southern-oregon-21768"
       }
     ],
     "verified": false,
@@ -200,6 +213,10 @@
       {
         "title": "Past Oregon Wine Board Directors (Oregon Wine Board)",
         "url": "https://industry.oregonwine.org/past-oregon-wine-board-directors/"
+      },
+      {
+        "title": "Oregon Wine Industry Awards Its Highest Honors to Industry Leaders (Oregon Wine Board)",
+        "url": "https://industry.oregonwine.org/press-releases/oregon-wine-industry-awards-highest-honors-industry-leaders/"
       }
     ],
     "verified": false
@@ -211,7 +228,7 @@
     "aka": [
       "Greg Jones"
     ],
-    "summary": "Research climatologist specializing in the climatology of viticulture and son of Abacela founder Earl Jones. He co-petitioned for the Southern Oregon AVA, held posts at Southern Oregon University and Linfield, and became Abacela's CEO in 2021.",
+    "summary": "Viticultural climatologist and son of Abacela founders Earl and Hilda Jones. He co-petitioned for the Southern Oregon AVA. He held research and teaching posts at Southern Oregon University and Linfield, and became Abacela's CEO in 2021.",
     "place": "Roseburg, OR",
     "sources": [
       {
@@ -229,9 +246,13 @@
       {
         "title": "Oral history interview with Greg Jones, 2013 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/gregory-jones/"
+      },
+      {
+        "title": "World-Renowned Viticulturist and Educator, Dr. Greg Jones, Becomes CEO at Abacela, His Family Winery in Oregon (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2021/07/26/greg-jones-becomes-ceo-at-abacela/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/gregory-jones/",
@@ -239,7 +260,8 @@
         "date": "2013-09-11",
         "minutes": 41
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "ed-king-jr",
@@ -260,6 +282,10 @@
       {
         "title": "King Estate Winery (Wikipedia)",
         "url": "https://en.wikipedia.org/wiki/King_Estate_Winery"
+      },
+      {
+        "title": "King Estate Mourns Loss (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/ed-king"
       }
     ],
     "verified": false
@@ -386,6 +412,10 @@
       {
         "title": "Oral history interview with Philippe Girardet, 2013 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/philippe-girardet/"
+      },
+      {
+        "title": "Local wine pioneer Philippe Girardet dies at 96 (The News-Review)",
+        "url": "https://nrtoday.com/business/local-wine-pioneer-philippe-girardet-dies-at-96/article_30090116-4c59-43d5-8c8d-445e1916730b.html"
       }
     ],
     "verified": false,
@@ -594,6 +624,10 @@
       {
         "title": "Oral history interview with Ken Wright, 2007 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/ken-wright/"
+      },
+      {
+        "title": "Ken Evenstad, Co-Founder of Oregon's Domaine Serene Winery, Dies at 77 (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/ken-evenstad-cofounder-of-oregons-domaine-serene-winery-dies"
       }
     ],
     "verified": false,
@@ -619,6 +653,10 @@
       {
         "title": "The Birth and Building of Beaux Frères (Wine Spectator)",
         "url": "https://top100.winespectator.com/2020/article/the-birth-and-building-of-beaux-freres/"
+      },
+      {
+        "title": "Beaux Frères (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/148/index.html"
       }
     ],
     "verified": false
@@ -676,7 +714,7 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/ted-casteel/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/ted-casteel/",
@@ -684,7 +722,8 @@
         "date": "2014-11-20",
         "minutes": 33
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "terry-casteel",
@@ -710,7 +749,7 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/terry-casteel/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/terry-casteel-1/",
@@ -723,7 +762,8 @@
         "date": "2007-09-16",
         "minutes": 85
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "paul-gerrie",
@@ -738,6 +778,10 @@
       {
         "title": "Our People (Cristom Vineyards)",
         "url": "https://cristomvineyards.com/our-people"
+      },
+      {
+        "title": "Cristom Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/142/"
       }
     ],
     "verified": false
@@ -872,6 +916,10 @@
       {
         "title": "Oral history interview with Harry Peterson-Nedry (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/harry-peterson-nedry/"
+      },
+      {
+        "title": "Harry Peterson-Nedry (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/last-call-harry-peterson-nedry"
       }
     ],
     "verified": false,
@@ -955,6 +1003,14 @@
       {
         "title": "Oral history interview with Lynn Penner-Ash (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/lynn-penner-ash/"
+      },
+      {
+        "title": "Penner-Ash (Jackson Family Wines)",
+        "url": "https://www.jacksonfamilywines.com/wineries/penner-ash"
+      },
+      {
+        "title": "Lynn Penner-Ash on Starting Penner-Ash Wine Cellars at Rex Hill (Northwest Wine Report)",
+        "url": "https://northwestwinereport.com/2022/10/an-interview-with-lynn-penner-ash-co_0285627257.html"
       }
     ],
     "verified": false,
@@ -991,7 +1047,7 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/larry-stone/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/larry-stone/",
@@ -999,7 +1055,8 @@
         "date": "2019-08-08",
         "minutes": 115
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "dominique-lafon",
@@ -1042,6 +1099,10 @@
       {
         "title": "Oral history interview with Josh BergströM, 2018 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/josh-bergstrom/"
+      },
+      {
+        "title": "Joshua Bergstrom (Académie Internationale du Vin)",
+        "url": "https://academievin.org/en/membre/joshua-bergstrom/"
       }
     ],
     "verified": false,
@@ -1336,6 +1397,10 @@
       {
         "title": "Vineyards Established 1965-1971 (The PinotFile / Prince of Pinot)",
         "url": "https://www.princeofpinot.com/article/2390"
+      },
+      {
+        "title": "Papa Pinot's Legacy Pervades 2009 IPNC (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/726/"
       }
     ],
     "verified": false
@@ -1440,6 +1505,10 @@
       {
         "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
         "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      },
+      {
+        "title": "Knudsen Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/1859/"
       }
     ],
     "verified": false
@@ -1813,6 +1882,14 @@
       {
         "title": "Oral history interview with Susan Sokol Blosser, 2010 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/susan-sokol-blosser/"
+      },
+      {
+        "title": "Bill Blosser (Sokol Blosser Winery)",
+        "url": "https://sokolblosser.com/our-team/bill-blosser"
+      },
+      {
+        "title": "Alex and Alison Sokol Blosser on the Evolution of the Family Winery (VinePair)",
+        "url": "https://vinepair.com/articles/alex-alison-sokol-blosser-winery/"
       }
     ],
     "verified": false,
@@ -1913,6 +1990,10 @@
       {
         "title": "Oral history interview with Alex Sokol Blosser, 2018 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/alex-sokol-blosser/"
+      },
+      {
+        "title": "Sokol Blosser Announces Two New Appointments: Alex Sokol Blosser Named President and Robin Howell to Lead Winemaking (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2023/03/02/sokol-blosser-announces-two-new-appointments/"
       }
     ],
     "verified": false,
@@ -1938,6 +2019,10 @@
       {
         "title": "Oral history interview with Alison Sokol Blosser, 2018 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/alison-sokol-blosser/"
+      },
+      {
+        "title": "Sokol Blosser Announces Two New Appointments: Alex Sokol Blosser Named President and Robin Howell to Lead Winemaking (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2023/03/02/sokol-blosser-announces-two-new-appointments/"
       }
     ],
     "verified": false,
@@ -1954,7 +2039,7 @@
     "id": "myron-redford",
     "type": "person",
     "name": "Myron Redford",
-    "summary": "Bought a small vineyard in Amity in 1974 and founded Amity Vineyards, making the wines until 2008. Helped organize the Steamboat Pinot Noir Conference and the first International Pinot Noir Celebration.",
+    "summary": "Bought a small vineyard in Amity in 1974 and founded Amity Vineyards, making the wines until 2008. Helped organize the first International Pinot Noir Celebration. He also played an active role in organizing the Steamboat Pinot Noir Conference.",
     "place": "Amity, OR",
     "sources": [
       {
@@ -2142,7 +2227,7 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/adam-campbell/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/adam-and-pat-campbell/",
@@ -2158,7 +2243,8 @@
         "title": "Adam Campbell",
         "minutes": 28
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "jim-maresh",
@@ -2256,6 +2342,10 @@
       {
         "title": "Oral history interview with Mark Vlossak, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/mark-vlossak/"
+      },
+      {
+        "title": "Mark Vlossak Interview (Linfield University DigitalCommons)",
+        "url": "https://digitalcommons.linfield.edu/owha_willamette_interviews/98"
       }
     ],
     "verified": false,
@@ -2314,14 +2404,15 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/bill-julia-wayne/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/bill-julia-wayne/",
         "title": "Bill & Julia Wayne",
         "date": "2023-07-13"
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "gary-andrus",
@@ -2554,6 +2645,10 @@
       {
         "title": "Brooks Wine: The People of Brooks",
         "url": "https://brookswine.com/About-Us"
+      },
+      {
+        "title": "Brooks Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/966/index.html"
       }
     ],
     "verified": false
@@ -2672,6 +2767,10 @@
       {
         "title": "Oral history interview with Laurent Montalieu, 2017 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/laurent-montalieu/"
+      },
+      {
+        "title": "Soléna Estate (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/889/index.html"
       }
     ],
     "verified": false,
@@ -2780,7 +2879,8 @@
         "url": "https://sotervineyards.com/founders"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "ted-gerber",
@@ -3840,7 +3940,7 @@
     "id": "ken-pahlow",
     "type": "person",
     "name": "Ken Pahlow",
-    "summary": "Co-founder of Walter Scott Wines. He worked for 14 years in sales and production at St. Innocent, joined the Patricia Green Cellars harvest team in 2009 and handled Northwest sales for Evening Land Vineyards.",
+    "summary": "Co-founder of Walter Scott Wines. He worked in sales and production at St. Innocent, handled Northwest sales for Evening Land Vineyards and joined the Patricia Green Cellars harvest team in 2009. He spent 14 years at St. Innocent before joining Evening Land in 2010 to manage sales.",
     "sources": [
       {
         "title": "Walter Scott Wines (Prince of Pinot)",
@@ -3855,7 +3955,7 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/ken-pahlow-and-erica-landon/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/ken-pahlow-and-erica-landon/",
@@ -3863,7 +3963,8 @@
         "date": "2019-08-06",
         "minutes": 80
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "erica-landon",
@@ -3882,6 +3983,10 @@
       {
         "title": "Oral history interview with Ken Pahlow & Erica Landon, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/ken-pahlow-and-erica-landon/"
+      },
+      {
+        "title": "People (Walter Scott Wines)",
+        "url": "https://www.walterscottwines.com/people"
       }
     ],
     "verified": false,
@@ -4046,6 +4151,10 @@
       {
         "title": "About (Arterberry Maresh)",
         "url": "https://www.arterberrymaresh.com/about"
+      },
+      {
+        "title": "Oregon wine industry honors viticultural pioneers (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/2015/03/04/oregon-wine-maresh/"
       }
     ],
     "verified": false
@@ -4054,7 +4163,7 @@
     "id": "brian-marcy",
     "type": "person",
     "name": "Brian Marcy",
-    "summary": "Winemaker at Big Table Farm. He worked in Napa wine for ten years, at Neyers, Turley and Marcassin, before moving to Oregon in 2006.",
+    "summary": "Winemaker at Big Table Farm. He moved to Napa Valley in 1996 and worked at Neyers, Turley and Marcassin before moving to Oregon in 2006.",
     "sources": [
       {
         "title": "Raising Big Table Farm: photos from a 2012 visit (Wakawaka Wine Reviews)",
@@ -4069,14 +4178,15 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/clare-carver-and-brian-marcy/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/clare-carver-and-brian-marcy/",
         "title": "Clare Carver & Brian Marcy",
         "date": "2019-05-28"
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "clare-carver",
@@ -4126,7 +4236,8 @@
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-LnUXjUjN"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "mikey-etzel",
@@ -4257,6 +4368,10 @@
       {
         "title": "Oral history interview with Cody Wright, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/cody-wright/"
+      },
+      {
+        "title": "Purple Hands (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1502/index.html"
       }
     ],
     "verified": false,
@@ -4597,6 +4712,10 @@
       {
         "title": "Matzinger Davies Wine Co (Prince of Pinot)",
         "url": "http://www.princeofpinot.com/winery/1712/"
+      },
+      {
+        "title": "Oregon's Archery Summit Winery Brings in New Team (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/oregons-archery-summit-winery-brings-in-new-team-50054"
       }
     ],
     "verified": false
@@ -4820,7 +4939,8 @@
         "url": "https://en.wikipedia.org/wiki/History_of_Oregon_wine"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "peter-britt",
@@ -5089,13 +5209,14 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/david-heatherbell/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/david-heatherbell/",
         "title": "David Heatherbell"
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "porter-lombard",
@@ -5381,6 +5502,14 @@
       {
         "title": "Oral history interview with Thomas Savre, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/thomas-savre/"
+      },
+      {
+        "title": "Lingua Franca (Eola-Amity Hills AVA)",
+        "url": "https://eolaamityhills.com/winery/lingua-franca/"
+      },
+      {
+        "title": "All Wines (Lingua Franca)",
+        "url": "https://www.linguafranca.wine/wine/"
       }
     ],
     "verified": false,
@@ -5569,7 +5698,7 @@
     "id": "andrew-beckham",
     "type": "person",
     "name": "Andrew Beckham",
-    "summary": "Ceramics artist and winemaker who co-founded Beckham Estate Vineyard and produces clay amphorae for winemaking; he taught pottery until 2021.",
+    "summary": "Ceramics artist and winemaker who, with Annedria Beckham, built Beckham Estate Vineyard and began making its wines in 2009. Through Novum Ceramics he makes terra cotta amphorae for winemaking and brewing. He taught pottery until 2021.",
     "sources": [
       {
         "title": "Weinnotes newsletter, 13 May 2023",
@@ -5590,9 +5719,13 @@
       {
         "title": "Oral history interview with Andrew Beckham, 2015 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/andrew-beckham/"
+      },
+      {
+        "title": "Novum Ceramics (Beckham Estate Vineyard)",
+        "url": "https://www.beckhamestatevineyard.com/novum-ceramics"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/andrew-and-annedria-beckham/",
@@ -5606,7 +5739,8 @@
         "date": "2015-03-24",
         "minutes": 22
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "annedria-beckham",
@@ -5805,6 +5939,14 @@
       {
         "title": "Oral history interview with Steve & Karen Lutz, 2016 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/steve-and-karen-lutz/"
+      },
+      {
+        "title": "Lutz of Lenné Sells Iconic Vineyard Estate (The Grapevine Magazine)",
+        "url": "https://thegrapevinemagazine.net/lutz-of-lenne-sells-iconic-vineyard-estate/"
+      },
+      {
+        "title": "Lutz of Lenné Sells Iconic Vineyard Estate (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2022/12/05/lutz-of-lenne-sells-iconic-vineyard-estate"
       }
     ],
     "verified": false,
@@ -5872,14 +6014,15 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/jon-foster/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/jon-foster/",
         "title": "Jon Foster",
         "date": "2023-07-26"
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "dru-allen",
@@ -6143,6 +6286,10 @@
       {
         "title": "Oral history interview with Tiquette Bramlett, 2021 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/tiquette-bramlett/"
+      },
+      {
+        "title": "Tiquette Bramlett Joins Chosen Family Wines Team (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2023/05/22/tiquette-bramlett-joins-chosen-family-wines-team/"
       }
     ],
     "verified": false,
@@ -6217,7 +6364,7 @@
     "id": "scott-baldwin",
     "type": "person",
     "name": "Scott Baldwin",
-    "summary": "Co-founder and owner of De Ponte Cellars, former owner of Lonesome Rock Ranch, and a founder of the Vinovate custom crush facility.",
+    "summary": "Co-founder, with Rae Baldwin, and owner of De Ponte Cellars. He formerly owned Lonesome Rock Ranch. He is one of the founders of the Vinovate custom crush facility.",
     "sources": [
       {
         "title": "Weinnotes newsletter, 7 October 2023",
@@ -6232,7 +6379,8 @@
         "url": "https://vinovatewineservices.com/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "rae-baldwin",
@@ -6404,6 +6552,14 @@
       {
         "title": "Oral history interview with Kate Payne Brown, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/kate-payne-brown/"
+      },
+      {
+        "title": "Acclaimed Winemaker Kate Payne Brown Named Head Winemaker for Oregon's Argyle Winery (Argyle Winery)",
+        "url": "https://argylewinery.com/blog/argyle-news/acclaimed-winemaker-kate-payne-brown-named-head-winemaker-for-oregons-argyle-winery/"
+      },
+      {
+        "title": "Acclaimed Winemaker Kate Payne Brown Named Head Winemaker for Oregon's Argyle Winery (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2025/03/04/acclaimed-winemaker-kate-payne-brown-named-head-winemaker-for-oregons-argyle-winery/"
       }
     ],
     "verified": false,
@@ -6547,6 +6703,14 @@
       {
         "title": "Oral history interview with Bruno Corneaux, 2018 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/bruno-corneaux/"
+      },
+      {
+        "title": "Bruno Corneaux (Domaine Divio)",
+        "url": "https://domainedivio.com/about/bruno-corneaux/"
+      },
+      {
+        "title": "Our Philosophy (Domaine Divio)",
+        "url": "https://domainedivio.com/about/our-philosophy/"
       }
     ],
     "verified": false,
@@ -6745,6 +6909,18 @@
       {
         "title": "Oral history interview with Andrew Davis, 2018 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/andrew-davis/"
+      },
+      {
+        "title": "Bubbling to the Top (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/bubbling-to-the-top"
+      },
+      {
+        "title": "Lytle-Barnett (Eola-Amity Hills AVA)",
+        "url": "https://eolaamityhills.com/portfolio/lytle-barnett/"
+      },
+      {
+        "title": "Method Oregon Announces Board Leadership Transition (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/08/24/method-oregon-announces-board-leadership-transition/"
       }
     ],
     "verified": false,
@@ -6852,6 +7028,14 @@
       {
         "title": "Oral history interview with John Grochau, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/john-grochau/"
+      },
+      {
+        "title": "Grochau Cellars: John Grochau (eolaamityhills.com)",
+        "url": "https://eolaamityhills.com/winemakers/john-grochau/"
+      },
+      {
+        "title": "Red Electric Wines Announces New Fall Releases Ahead of Holiday Season (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2023/10/18/red-electric-wines-announces-new-fall-releases-ahead-of-holiday-season"
       }
     ],
     "verified": false,
@@ -7143,7 +7327,7 @@
     "id": "craig-williams",
     "type": "person",
     "name": "Craig Williams",
-    "summary": "Winemaker at Joseph Phelps Vineyards in Napa from the 1970s to the mid-2000s, where he shaped the Insignia blend and developed the Freestone vineyard; in 2010 he and his family planted X Novo in the Eola-Amity Hills, later adding X Omni.",
+    "summary": "Winemaker at Joseph Phelps Vineyards in Napa from the 1970s until 2008, overseeing its Insignia blend. In 1999 he helped develop vineyards and a winery for Phelps on the Sonoma Coast. In 2010 he and his wife, Robin, began planting X Novo in the Eola-Amity Hills. He also planted a second vineyard there, X Omni.",
     "sources": [
       {
         "title": "Weinnotes newsletter, 5 July 2025",
@@ -7152,9 +7336,22 @@
       {
         "title": "X Novo",
         "url": "http://www.xnovo.com/"
+      },
+      {
+        "title": "Williams Resigns from Phelps After 32 Vintages (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/williams-resigns-from-phelps-after-32-vintages-15554"
+      },
+      {
+        "title": "Vineyard: X Novo (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/vineyard/1663/index.html"
+      },
+      {
+        "title": "Thoughts (X Novo)",
+        "url": "https://xnovo.com/thoughts/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "robin-williams",
@@ -7577,6 +7774,14 @@
       {
         "title": "Oral history interview with Kelly Kidneigh, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/kelly-kidneigh/"
+      },
+      {
+        "title": "Our Team (Dukes Family Vineyards)",
+        "url": "https://dukesfamilyvineyards.com/about/our-team"
+      },
+      {
+        "title": "A Passion for Pinot—and Each Other (Gulfshore Life)",
+        "url": "https://gulfshorelife.com/food-drink/wine/passion-pinot-and/"
       }
     ],
     "verified": false,
@@ -7769,7 +7974,7 @@
     "id": "maria-stuart",
     "type": "person",
     "name": "Maria Stuart",
-    "summary": "Co-founder of R. Stuart & Co., where she ran marketing, hospitality and public relations, and a former director of the International Pinot Noir Celebration. She wrote the Pinot Mom blog and died in October 2021.",
+    "summary": "Co-founder of R. Stuart & Co., where she ran marketing, hospitality and public relations, and a former executive director of the International Pinot Noir Celebration. She wrote the blog The Life and Times of a Pinot Mom and died in October 2021.",
     "aka": [
       "Pinotmom"
     ],
@@ -7787,9 +7992,13 @@
       {
         "title": "Oral history interview with Maria & Rob Stuart, 2018 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/maria-and-rob-stuart/"
+      },
+      {
+        "title": "In Memoriam: Maria Stuart (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/in-memoriam-maria-stuart"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/maria-and-rob-stuart/",
@@ -7797,13 +8006,14 @@
         "date": "2018-05-30",
         "minutes": 90
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "chris-hermann",
     "type": "person",
     "name": "Chris Hermann",
-    "summary": "Corvallis-raised wine lawyer who started 00 Wines with his father Richard and built it into a Chardonnay and Pinot noir label with his wife Kathryn.",
+    "summary": "Wine-industry lawyer who grew up in the Willamette Valley and started 00 Wines in 2015 with his wife Kathryn and his father Richard, making Chardonnay and Pinot noir.",
     "aka": [
       "Chris Herman"
     ],
@@ -7819,16 +8029,21 @@
       {
         "title": "Oral history interview with Chris Hermann, 2021 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/chris-hermann/"
+      },
+      {
+        "title": "About Us (00 Wines)",
+        "url": "https://www.00wines.com/about-us"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/chris-hermann/",
         "title": "Chris Hermann",
         "date": "2021-07-16"
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "kathryn-hermann",
@@ -8011,12 +8226,24 @@
     "id": "robert-brittan",
     "type": "person",
     "name": "Robert Brittan",
-    "summary": "UC Davis graduate who was the first winemaker at Far Niente and spent 16 years at Stags' Leap Winery before buying land in the McMinnville foothills in 2004 for Brittan Vineyards. He also makes or consults on wine for several Willamette Valley labels.",
+    "summary": "UC Davis graduate who was the first winemaker at Far Niente and spent 16 years at Stags' Leap Winery before buying 128 acres in the McMinnville AVA in 2004 for Brittan Vineyards. He also makes wine for other Willamette Valley labels, among them Winderlea and Blakeslee.",
     "place": "McMinnville, OR",
     "sources": [
       {
         "title": "Weinnotes newsletter, 4 December 2021",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-26"
+      },
+      {
+        "title": "Brittan Vineyards (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/724/index.html"
+      },
+      {
+        "title": "Valuable Imports (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/robert-ellen-brittan-oregon"
+      },
+      {
+        "title": "Brittan Vineyards (Vintus)",
+        "url": "https://vintus.com/producers/brittan-vineyards/"
       }
     ],
     "verified": false
@@ -8093,7 +8320,7 @@
     "id": "michael-lundeen",
     "type": "person",
     "name": "Michael Lundeen",
-    "summary": "University of Oregon journalism graduate who began in the cellar at WillaKenzie and Domaine Serene, worked a 2005 harvest in Piedmont and studied at Chemeketa before launching Lundeen Wines. An early Oregon sparkling producer.",
+    "summary": "University of Oregon journalism graduate who began in the cellar at WillaKenzie and Domaine Serene, worked a 2005 harvest in Piedmont and studied at Chemeketa before launching Lundeen Wines. Known for traditional-method sparkling wines, whose production has grown since the 2011 vintage.",
     "place": "McMinnville, OR",
     "sources": [
       {
@@ -8107,16 +8334,25 @@
       {
         "title": "Oral history interview with Michael Lundeen, 2022 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/michael-lundeen/"
+      },
+      {
+        "title": "Well Done, Lundeen (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/lundeen-wines"
+      },
+      {
+        "title": "Winemaker (Lundeen Wines)",
+        "url": "https://www.lundeenwines.com/winemaker"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/michael-lundeen/",
         "title": "Michael Lundeen",
         "date": "2022-05-12"
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "piper-underbrink",
@@ -8435,7 +8671,7 @@
     "id": "teal-walker",
     "type": "person",
     "name": "Teal Walker",
-    "summary": "Proprietor of Audeant, the Willamette Valley label she created with winemaker Andrew Riechers after a tasting at Antica Terra.",
+    "summary": "Proprietor of Audeant, the Willamette Valley label she created with winemaker Andrew Riechers. The partnership began after a tasting at Antica Terra.",
     "sources": [
       {
         "title": "Weinnotes newsletter, 23 April 2022",
@@ -8452,9 +8688,14 @@
       {
         "title": "Weinnotes newsletter, 12 June 2021",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-1"
+      },
+      {
+        "title": "Long path of Andrew Riechers leads to early acclaim for Audeant Wines (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/2022/04/12/long-path-of-andrew-riechers-leads-to-early-acclaim-for-audeant-wines/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "andrew-riechers",
@@ -8506,6 +8747,14 @@
       {
         "title": "Oral history interview with Chris Mazepink, 2021 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/chris-mazepink/"
+      },
+      {
+        "title": "Archery Summit Winery Introduces New General Manager & Winemaker Christopher Mazepink (Crimson Wine Group)",
+        "url": "https://crimsonwinegroup.investorroom.com/2013-03-21-Archery-Summit-Winery-Introduces-New-General-Manager-Winemaker-Christopher-Mazepink"
+      },
+      {
+        "title": "Ebony Wines (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1710/index.html"
       }
     ],
     "verified": false,
@@ -8686,6 +8935,14 @@
       {
         "title": "Oral history interview with Kevin Johnson & Beth Klingner, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/kevin-johnson-and-beth-klingner/"
+      },
+      {
+        "title": "The God of the Harvest and Wine (1859 Oregon's Magazine)",
+        "url": "https://1859oregonmagazine.com/live/food-drink/dion-vineyards/"
+      },
+      {
+        "title": "DION Vineyard (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1927/index.html"
       }
     ],
     "verified": false,
@@ -8726,7 +8983,7 @@
     "id": "joel-myers",
     "type": "person",
     "name": "Joel Myers",
-    "summary": "Grower who helped plant the Letts' vineyard as a boy, became vineyard and cellar manager at Eyrie after 1979, studied with Swiss researcher Werner Koblet and founded the Vinetenders vineyard management company in 1984. Co-owner of Siltstone Wines.",
+    "summary": "Grower who helped plant the Letts' vineyard as a boy, became vineyard and cellar manager at Eyrie after 1979, studied with Swiss researcher Werner Koblet and founded the Vinetenders vineyard management company in 1984. His family, the Myers, established Siltstone Wines in 2000.",
     "place": "Dayton, OR",
     "sources": [
       {
@@ -8744,9 +9001,17 @@
       {
         "title": "Oral history interview with Joel Myers, 2015 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/joel-myers/"
+      },
+      {
+        "title": "History (Siltstone Wines)",
+        "url": "http://www.siltstonewines.com/history"
+      },
+      {
+        "title": "Our Story (Siltstone Wines)",
+        "url": "http://www.siltstonewines.com/our-story"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/charley-coury-and-joel-myers/",
@@ -8759,13 +9024,14 @@
         "date": "2015-02-19",
         "minutes": 48
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "louise-myers",
     "type": "person",
     "name": "Louise Myers",
-    "summary": "Teacher and artist from a local farm family who worked at Eyrie, married Joel Myers in 1981 and runs Siltstone Wines with him.",
+    "summary": "Teacher and artist from a local farm family who worked for the Letts at Eyrie, married Joel Myers in 1981 and carries on the family's winegrowing at Siltstone Wines with him.",
     "aka": [
       "Louise Bernards"
     ],
@@ -8778,9 +9044,14 @@
       {
         "title": "Siltstone Wines",
         "url": "http://www.siltstonewines.com/"
+      },
+      {
+        "title": "History (Siltstone Wines)",
+        "url": "http://www.siltstonewines.com/history"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "joel-sokoloff",
@@ -8881,14 +9152,15 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/james-frey/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/james-frey/",
         "title": "James Frey",
         "date": "2020-02-24"
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "vince-vidrine",
@@ -8903,6 +9175,10 @@
       {
         "title": "Weinnotes newsletter, 14 August 2021",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-10"
+      },
+      {
+        "title": "Rogue Grapevine: A tale of two winemakers (Ashland News)",
+        "url": "https://ashland.news/rogue-grapevine-a-tale-of-two-winemakers/"
       }
     ],
     "verified": false
@@ -9275,7 +9551,8 @@
         "url": "https://www.duskygoose.com/about"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "linda-carter",
@@ -9355,7 +9632,7 @@
     "aka": [
       "Corby Soles"
     ],
-    "summary": "Co-owner and business manager of ROCO Winery with her husband Rollin Soles. She was previously married to Ken Wright and is the mother of Purple Hands winemaker Cody Wright.",
+    "summary": "Co-owner and business manager of ROCO Winery with her husband Rollin Soles. She is the mother of Purple Hands owner and winemaker Cody Wright, whose father is Ken Wright.",
     "sources": [
       {
         "title": "Weinnotes newsletter, 1 April 2023",
@@ -9368,9 +9645,17 @@
       {
         "title": "Oral history interview with Rollin & Corby Soles, 2018 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/rollin-and-corby-soles/"
+      },
+      {
+        "title": "Purple Hands Winery (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1502/index.html"
+      },
+      {
+        "title": "Wright Again (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/purple-hands-cody-wright"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/rollin-and-corby-soles/",
@@ -9378,7 +9663,8 @@
         "date": "2018-08-08",
         "minutes": 112
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "erin-percheron",
@@ -9636,6 +9922,10 @@
       {
         "title": "Weinnotes newsletter, 13 February 2021",
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-27"
+      },
+      {
+        "title": "Abbott Claim, New Yamhill-Carlton Winery, Now Open to Guests (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/?p=46365"
       }
     ],
     "verified": false
@@ -9655,7 +9945,8 @@
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-25"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "lou-renton",
@@ -9753,6 +10044,18 @@
       {
         "title": "Oral history interview with David Nemarnik & Tom Fitzpatrick, 2016 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/david-nemarnik-and-tom-fitzpatrick/"
+      },
+      {
+        "title": "Alloro Vineyard (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/1856/"
+      },
+      {
+        "title": "Tom Fitzpatrick (Élevée Winegrowers)",
+        "url": "https://www.eleveewines.com/Terroir/People/Tom-Fitzpatrick"
+      },
+      {
+        "title": "David Nemarnik and Tom Fitzpatrick Interview 01 (Linfield University DigitalCommons)",
+        "url": "https://digitalcommons.linfield.edu/owha_willamette_ohphotos/253"
       }
     ],
     "verified": false,
@@ -9851,6 +10154,14 @@
       {
         "title": "Oral history interview with Tracy Kendall, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/tracy-kendall/"
+      },
+      {
+        "title": "Folly of Man, a Bold New Voice in Oregon Wine, Debuts Inaugural 2023 Vintage (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2025/04/03/folly-of-man-a-bold-new-voice-in-oregon-wine-debuts-inaugural-2023-vintage/"
+      },
+      {
+        "title": "L'Angolo Estate Founder Chase Renton Nominated for 2026 Wine Enthusiast Wine Star Award for Innovator of The Year (Wine Industry Advisor)",
+        "url": "https://wineindustryadvisor.com/2026/09/10/langolo-estate-founder-chase-renton-nominated-for-2026-wine-enthusiast-wine-star-award-for-innovator-of-the-year/"
       }
     ],
     "verified": false,
@@ -9919,6 +10230,10 @@
       {
         "title": "Oral history interview with Rachel Rose, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/rachel-rose/"
+      },
+      {
+        "title": "Bryn Mawr Vineyards (The Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/2016/"
       }
     ],
     "verified": false,
@@ -10994,7 +11309,7 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/alyssa-vera/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "type": "person",
     "interviews": [
       {
@@ -11002,7 +11317,8 @@
         "title": "Alyssa Vera",
         "date": "2023-07-18"
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "amira-makansi",
@@ -12235,6 +12551,10 @@
       {
         "title": "Oral history interview with Chris Luby, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/chris-luby/"
+      },
+      {
+        "title": "Cherry Hill Winery (Natalie MacLean)",
+        "url": "https://www.nataliemaclean.com/wineries/info/cherry-hill-winery/7504"
       }
     ],
     "verified": false,
@@ -12981,6 +13301,10 @@
       {
         "title": "Oral history interview with Mike & Merry Fix, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/mike-merry-fix/"
+      },
+      {
+        "title": "Getting My Fix (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/getting-my-fix"
       }
     ],
     "verified": false,
@@ -15078,6 +15402,14 @@
       {
         "title": "Oral history interview with Taylor Rebora, 2024 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/taylor-rebora/"
+      },
+      {
+        "title": "About (Rebora Wines)",
+        "url": "https://www.reborawines.com/about"
+      },
+      {
+        "title": "Rebora Wines",
+        "url": "https://www.reborawines.com/"
       }
     ],
     "verified": false,
@@ -15418,6 +15750,10 @@
       {
         "title": "Soléna Estate collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/solena-estate-collection/"
+      },
+      {
+        "title": "The Story (Soléna Estate)",
+        "url": "https://www.solenaestate.com/ourstory"
       }
     ],
     "verified": false,
@@ -15718,7 +16054,7 @@
   {
     "id": "sanjeev-lahoti",
     "name": "Sanjeev Lahoti",
-    "summary": "Co-founder of Saffron Fields with his wife, Angela Summers. The couple bought a Yamhill-Carlton grass seed farm and planted its vineyard in 2007.",
+    "summary": "Co-founder of Saffron Fields with his wife, Angela Summers. The couple found a grass seed farm near Yamhill and planted their first Pinot noir there in 2007.",
     "sources": [
       {
         "title": "The Saffron Story and The Owner (Saffron Fields)",
@@ -15727,6 +16063,14 @@
       {
         "title": "Oral history interview with Sanjeev Lahoti and Angela Summers, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/sanjeev-lahoti-and-angela-summers/"
+      },
+      {
+        "title": "Saffron Fields Vineyard (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2074/index.html"
+      },
+      {
+        "title": "Saffron Fields Vineyard 2011 Pinot Noir, Yamhill-Carlton (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/2015/01/16/saffron-fields-vineyard-2011-pinot-noir-yamhill-carlton-55/"
       }
     ],
     "verified": false,

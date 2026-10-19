@@ -1,5 +1,7 @@
 // Stage 2 of the record check: judge every record against the pages it cites and store
-// the raw scores. Run with: npm run check [-- --limit 50] [--host weinnotes] [--force]
+// the raw scores. Run with: npm run check [-- --limit 50] [--host weinnotes] [--force] [--drafts]
+// --drafts limits the run to unverified records (with --force, rechecks them all); --kind
+// node|edge limits it to one kind.
 import { resolve } from 'node:path'
 import { loadEnv } from 'vite'
 import { jevModel } from '../jev/model'
@@ -27,6 +29,8 @@ async function main() {
   const force = process.argv.includes('--force')
   const host = option('host')
   const limit = Number(option('limit') ?? Infinity)
+  const drafts = process.argv.includes('--drafts')
+  const kind = option('kind')
 
   const all: CheckedRecord[] = [
     ...graph.nodes.map((record) => ({ kind: 'node' as const, record })),
@@ -34,6 +38,8 @@ async function main() {
   ]
   const pending = all
     .filter((item) => !host || item.record.sources.some((source) => source.url?.includes(host)))
+    .filter((item) => !drafts || !item.record.verified)
+    .filter((item) => !kind || item.kind === kind)
     .filter(
       (item) =>
         force ||

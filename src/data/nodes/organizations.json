@@ -44,6 +44,14 @@
       {
         "title": "Oregon Wine Board Collection: historical note (Linfield University Archives)",
         "url": "https://linfield-atom.libraryhost.com/index.php/oregon-wine-board-collection"
+      },
+      {
+        "title": "Chapter 797 Oregon Laws 2003 (Oregon State Legislature)",
+        "url": "https://www.oregonlegislature.gov/bills_laws/lawsstatutes/2003orLaw0797ses.html"
+      },
+      {
+        "title": "Oregon Wine Board (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Oregon_Wine_Board"
       }
     ],
     "verified": false
@@ -74,7 +82,8 @@
         "url": "https://www.willamettewines.com/about-us/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "willamette-valley-wineries-association",
@@ -92,6 +101,10 @@
       {
         "title": "About Us (Willamette Valley Wineries Association)",
         "url": "https://www.willamettewines.com/about-us/"
+      },
+      {
+        "title": "Thanks for Thanksgiving (Oregon Wine Press)",
+        "url": "https://www.oregonwinepress.com/thanks-thanks"
       }
     ],
     "verified": false
@@ -144,7 +157,8 @@
         "url": "https://www.ipnc.org/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "constellation-brands",
@@ -546,6 +560,14 @@
       {
         "title": "Clone Wars: Selecting the Right Pinot (SevenFifty Daily)",
         "url": "https://daily.sevenfifty.com/clone-wars-selecting-the-right-pinot/"
+      },
+      {
+        "title": "ORVI Award (Classic Wines Auction)",
+        "url": "https://www.classicwinesauction.com/orviaward"
+      },
+      {
+        "title": "Véronique Boss-Drouhin, oenologist (Maison Joseph Drouhin)",
+        "url": "https://www.drouhin.com/media/rich-editor/veroniquedrouhinang-6479f9b3e1ea4.pdf"
       }
     ],
     "verified": false
@@ -586,8 +608,14 @@
       "OWRI"
     ],
     "kind": "other",
-    "summary": "Research and extension partnership between Oregon State University and the Oregon wine industry, started with about $2 million raised by the industry. OSU sources date its founding to 2008 or 2009.",
+    "summary": "Research and extension partnership between Oregon State University and the Oregon wine industry, started with about $2 million raised by the industry.",
     "place": "Corvallis, OR",
+    "founded": 2008,
+    "alsoDated": {
+      "founded": [
+        2009
+      ]
+    },
     "sources": [
       {
         "title": "Oregon Wine Research Institute (Oregon's Agricultural Progress, OSU, summer 2014)",
@@ -859,17 +887,22 @@
       "Fresno State",
       "Cal State Fresno"
     ],
-    "summary": "California university with a wine program, attended by several Oregon winemakers.",
+    "summary": "California university in the San Joaquin Valley with a viticulture and enology program. Andrew Belzer, who went on to King Estate, chose it for his studies.",
     "outsideOregon": true,
     "sources": [
       {
         "title": "Oral history interview with Andrew Belzer, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/andrew-belzer/"
+      },
+      {
+        "title": "Chair's Welcome (Fresno State Department of Viticulture and Enology)",
+        "url": "https://jcast.fresnostate.edu/ve/about-us/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "type": "organization",
-    "kind": "school"
+    "kind": "school",
+    "verifiedBy": "jev"
   },
   {
     "id": "artisan-barrels",
@@ -881,9 +914,10 @@
         "url": "https://oregonwinehistoryarchive.org/regions/oregon-wine-industry-businesses/artisan-barrels-collection/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "type": "organization",
-    "kind": "company"
+    "kind": "company",
+    "verifiedBy": "jev"
   },
   {
     "id": "atlas-vineyard-management",
@@ -908,6 +942,14 @@
       {
         "title": "Oral history interview with Bryan Wilson, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/bryan-wilson/"
+      },
+      {
+        "title": "Oral history interview with Phil Taratko (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/phil-taratko/"
+      },
+      {
+        "title": "Oral history interview with Ian Shapen & Leyla Ersan, 2026 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/ian-shapen-leyla-ersan/"
       }
     ],
     "verified": false,

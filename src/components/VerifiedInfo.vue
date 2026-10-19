@@ -54,8 +54,9 @@ const README = 'https://github.com/arringtonm/oregon-wine-graph#how-we-know-the-
           <li>
             <strong>Checked automatically.</strong> A model reads each cited page and judges whether it supports
             the connection, each year and the role, approving only when everything is supported with at least 90%
-            confidence. When we planted a wrong fact in about 400 verified records, 1.2% still passed.
-            Unreadable pages never count for or against a record.
+            confidence. When we planted a wrong fact in 400 verified records, 1.0% still passed.
+            Unreadable pages never count for or against a record. For federal label approvals it also reads the
+            label images, an early-stage method noted on each record it verifies.
           </li>
         </ul>
         <p class="methodology__counts">

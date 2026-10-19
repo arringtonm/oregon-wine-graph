@@ -1,0 +1,687 @@
+[
+ {
+  "date": "2026-10-19",
+  "key": "node:day-wines",
+  "field": "summary",
+  "from": "Willamette Valley label owned by Brianne Day, whose first vineyard-designate Pinot noir came in 2012. It is based at Day Camp, her cooperative winemaking facility in Dundee, and buys fruit from growers around the state.",
+  "to": "Willamette Valley label owned by Brianne Day, whose first vineyard-designate Pinot noir came in 2012. It is made at Day Camp, the cooperative winery and tasting room she founded in Dundee, from grapes bought from growers in the Willamette and Applegate valleys.",
+  "sources": [
+   "https://www.oregonwinepress.com/happy-campers-day-camp"
+  ],
+  "finding": "Oregon Wine Press (April 2017) calls Day Camp a cooperative winery and tasting room in Dundee founded by Brianne Day, where Day Wines and 10 other producers have made wine since the 2015 harvest, with Day's grapes coming from grower-owned vineyards in the Willamette and Applegate Valley AVAs. The proposed summary replaces 'around the state' with those two regions."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:ayoub-wines",
+  "field": "summary",
+  "from": "Willamette Valley winery founded by Mo Ayoub.",
+  "to": "Dundee Hills winery founded by Mo Ayoub, who made its first wines in 2004.",
+  "sources": [
+   "https://digitalcommons.linfield.edu/owha_willamette_ohphotos/339",
+   "https://www.princeofpinot.com/winery/961/index.html"
+  ],
+  "finding": "The Linfield archive photo record says Mo Ayoub founded Ayoub Wines in Dundee, with first wines in 2004, and sourced extra Willamette Valley fruit from 2009; The Prince of Pinot names him as owner and places the vineyard (planted 2001) in the Dundee Hills."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:shea-wine-cellars",
+  "field": "alsoDated",
+  "from": null,
+  "to": {
+   "founded": [
+    1996
+   ]
+  },
+  "sources": [
+   "https://www.princeofpinot.com/article/912/"
+  ],
+  "finding": "Sources disagree on the year: Great Northwest Wine says the Sheas created the winery in 1999, while a 2010 PinotFile article says they have had their own label since 1996 (a retailer page, northwest-wine.com, also gives 1996 as founding and first vintage). Skurnik gives no founding year and says 20% of the fruit goes to the winery, which fits the summary; the proposal records 1996 as an alternative date and takes the year out of the summary sentence."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:shea-wine-cellars",
+  "field": "summary",
+  "from": "Winery created by Dick and Deirdre Shea in 1999 to make wine from their Shea Vineyard in the Yamhill-Carlton AVA. It takes roughly a fifth to a quarter of the vineyard's fruit; the rest is sold to other wineries.",
+  "to": "Winery created by Dick and Deirdre Shea to make wine from their Shea Vineyard in the Yamhill-Carlton AVA. It takes roughly a fifth to a quarter of the vineyard's fruit; the rest is sold to other wineries.",
+  "sources": [
+   "https://www.princeofpinot.com/article/912/"
+  ],
+  "finding": "Sources disagree on the year: Great Northwest Wine says the Sheas created the winery in 1999, while a 2010 PinotFile article says they have had their own label since 1996 (a retailer page, northwest-wine.com, also gives 1996 as founding and first vintage). Skurnik gives no founding year and says 20% of the fruit goes to the winery, which fits the summary; the proposal records 1996 as an alternative date and takes the year out of the summary sentence."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:illahe-vineyards",
+  "field": "summary",
+  "from": "Winery and vineyard where Brad Ford grows and makes wine; Gabriel Jagle also worked there.",
+  "to": "Family winery and vineyard where Brad Ford, who followed his father Lowell into the vineyard in 2004, is winemaker and vineyard manager.",
+  "sources": [
+   "https://www.illahevineyards.com/our-team"
+  ],
+  "finding": "Illahe's team page lists Brad Ford as president, owner, winemaker and vineyard manager, and says he followed his dad into the vineyard in 2004. It names Gabriel Jagle only as someone Brad worked with at Scenic Valley Farms, not as Illahe staff, so the claim that Jagle worked at Illahe looks wrong; any Jagle–Illahe connection should be checked, and it is dropped from the proposed summary."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:love-and-squalor",
+  "field": "summary",
+  "from": "Label made by Matt Berson at Portland Wine Company, his urban winery in Southeast Portland, since 2006. It works only with Willamette Valley fruit from growers such as Temperance Hill Vineyard.",
+  "to": "Label Matt Berson started in 2006 and has made since 2019 at Portland Wine Company, the urban winery he and Angie Reat run in Southeast Portland. It works only with Willamette Valley fruit from growers such as Temperance Hill Vineyard.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2086/index.html",
+   "https://traveloregon.com/things-to-do/eat-drink/wine-wineries/portland-wine-company-home-of-love-squalor-wine/"
+  ],
+  "finding": "The Prince of Pinot says Love & Squalor was founded in 2006, and the winery's homepage says it has made the wine since 2006, all from the Willamette; Temperance Hill is listed on its Vineyards page and in Prince of Pinot reviews. Travel Oregon says Berson and Reat opened Portland Wine Company in 2019, so the current wording wrongly suggests the label was made there from 2006."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:jason-lett",
+  "field": "summary",
+  "from": "Son of David and Diana Lett. Took over as winemaker and vineyard manager at The Eyrie Vineyards in 2005 and is now its president.",
+  "to": "Son of David and Diana Lett. He took over as winemaker and vineyard manager at The Eyrie Vineyards in 2005. He is now the winery's president and winemaker.",
+  "sources": [
+   "https://oregonwinehistoryarchive.org/regions/willamette-valley/the-eyrie-vineyards-collection/",
+   "https://digitalcommons.linfield.edu/owha_opc_interviews/6"
+  ],
+  "finding": "The Oregon Wine History Archive and Linfield pages say Jason Lett took on the positions of winemaker and vineyard manager in 2005; Wikipedia (already cited) says he is now president and winemaker. The summary is split so each sentence rests on one page."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:eieio-and-company",
+  "field": "summary",
+  "from": "One-person Willamette Valley winery owned and run by winemaker Jay McDonald, making small lots of Pinot noir and Chardonnay from purchased fruit.",
+  "to": "Small winery just west of Carlton owned and run by winemaker Jay McDonald, making Pinot noir, Chardonnay and rosé. It began in 1998 as a négociant label and draws its fruit from several vineyards.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1945/index.html",
+   "https://yamhillcarlton.org/member/eieio/"
+  ],
+  "finding": "The Yamhill-Carlton association page names McDonald as owner and winemaker and lists Pinot noir, Chardonnay and rosé; The Prince of Pinot says EIEIO began in 1998 as a négociant operation with multiple vineyard sources. No public page says it is a one-person winery (a 2019 Kitchn profile, unreadable here, reportedly mentions three assistants), so that phrase rests on Weinnotes alone and is dropped."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:tualatin-hills",
+  "field": "summary",
+  "from": "Appellation in the northernmost part of the Willamette Valley AVA, approved in 2020. Its oldest vineyards include David Hill, the former Charles Coury property.",
+  "to": "Appellation in the northernmost part of the Willamette Valley AVA, approved in 2020. Its vineyards include David Hill, the former Charles Coury Vineyards near Forest Grove.",
+  "sources": [],
+  "finding": "Prince of Pinot article 2390 (already cited) says Charles Coury Vineyards near Forest Grove became David Hill Vineyards & Winery in 1992 and places it in the Tualatin Hills AVA; Wikipedia calls David Hill one of Oregon's oldest vineyards, but neither page states both halves of the old sentence, so it is split down to what the Prince of Pinot page says."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:michael-lundeen",
+  "field": "summary",
+  "from": "University of Oregon journalism graduate who began in the cellar at WillaKenzie and Domaine Serene, worked a 2005 harvest in Piedmont and studied at Chemeketa before launching Lundeen Wines. An early Oregon sparkling producer.",
+  "to": "University of Oregon journalism graduate who began in the cellar at WillaKenzie and Domaine Serene, worked a 2005 harvest in Piedmont and studied at Chemeketa before launching Lundeen Wines. Known for traditional-method sparkling wines, whose production has grown since the 2011 vintage.",
+  "sources": [
+   "https://www.oregonwinepress.com/lundeen-wines",
+   "https://www.lundeenwines.com/winemaker"
+  ],
+  "finding": "Oregon Wine Press (2015) states the University of Oregon journalism study, WillaKenzie, Domaine Serene (from 2003), the 2005 season at Castello di Verduno in Piedmont and the Chemeketa classes. No source calls him an early Oregon sparkling producer, so that sentence is reworded to the winery's Winemaker page, which describes his Méthode Champenoise wines and growth in sparkling production since the 2011 vintage."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:westrey-wine-company",
+  "field": "summary",
+  "from": "Winery founded in 1993 by Amy Wesselman and David Autrey, its name a blend of their surnames. It began with purchased fruit and now also farms the 22-acre Oracle Vineyard in the Dundee Hills, next to Abbey Ridge.",
+  "to": "Winery founded in 1993 by Amy Wesselman and David Autrey, its name a blend of their surnames. It began with purchased fruit and now also farms 22 acres at its Oracle Vineyard in the Dundee Hills, next to Abbey Ridge.",
+  "sources": [
+   "https://www.princeofpinot.com/article/104/index.html"
+  ],
+  "finding": "The cited Prince of Pinot winery page states every fact: founded in 1993, the name blending WESselman and AuTREY, no vineyards at first, and 22 planted acres at Oracle in the Dundee Hills next to Abbey Ridge (on a 50-acre parcel, which is why '22-acre vineyard' is reworded). The PinotFile article repeats the founding, the name and the purchased fruit."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:approachment",
+  "field": "summary",
+  "from": "Small Willamette Valley label started by the married winemakers Jess and Paden West, known for Chardonnay, Gamay and traditional-method sparkling; it operates out of Benza Vineyard.",
+  "to": "Small Willamette Valley label run by the married winemakers Jess and Paden West, which operates out of Benza Vineyard. Its wines include an Oregon Chardonnay and a Gamay from Cynthian Vineyard. Its first traditional-method sparkling wine, a Pinot Meunier, was released in 2026.",
+  "sources": [
+   "https://owenbargreen.com/blog/2025/4/16/approachment",
+   "https://wineindustryadvisor.com/2026/07/17/approachment-wine-company-debuts-inaugural-sparkling-wine-during-method-oregon-celebration/"
+  ],
+  "finding": "The Duo page states the married partners, the limited production and that Approachment operates out of Benza; Owen Bargreen reviews its 2023 Oregon Chardonnay and Cynthian Vineyard Gamay; Wine Industry Advisor (July 2026) announces its first traditional-method sparkling wine, a 100% Pinot Meunier. No single page says it is 'known for' all three, so the sentence is split by source."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:fresno-state",
+  "field": "summary",
+  "from": "California university with a wine program, attended by several Oregon winemakers.",
+  "to": "California university in the San Joaquin Valley with a viticulture and enology program. Andrew Belzer, who went on to King Estate, chose it for his studies.",
+  "sources": [
+   "https://jcast.fresnostate.edu/ve/about-us/"
+  ],
+  "finding": "The department's welcome page describes Fresno State's viticulture and enology program in the San Joaquin Valley. No single page says 'several Oregon winemakers' attended, so that claim is narrowed to the Belzer oral history, which says he explains why he chose Fresno State and how he ended up at King Estate."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:myron-redford",
+  "field": "summary",
+  "from": "Bought a small vineyard in Amity in 1974 and founded Amity Vineyards, making the wines until 2008. Helped organize the Steamboat Pinot Noir Conference and the first International Pinot Noir Celebration.",
+  "to": "Bought a small vineyard in Amity in 1974 and founded Amity Vineyards, making the wines until 2008. Helped organize the first International Pinot Noir Celebration. He also played an active role in organizing the Steamboat Pinot Noir Conference.",
+  "sources": [],
+  "finding": "Both facts are in sources already cited, but on different pages. The Prince of Pinot Amity Vineyards page says he was one of the organizers of the first IPNC, and The Legacy of Steamboat says he played an active role in organizing Steamboat, so the sentence is split in two. The Amity page redirects to http://www.princeofpinot.com/winery/467/, which may explain the low scores."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:walnut-ridge-vineyard",
+  "field": "summary",
+  "from": "Estate winery west of Junction City in the Lower Long Tom AVA, owned by Aaron and Alisha Young, with vines dating from 1996 and Andrew Smith as winemaker.",
+  "to": "Estate winery west of Junction City in the Lower Long Tom AVA, owned by Aaron and Alisha Young, with vines planted from 1996. Andrew Smith is its winemaker.",
+  "sources": [
+   "https://www.cellar503.com/wines/walnut-ridge-pinot-gris/",
+   "https://cawineclub.com/pages/winemaker/walnut-ridge-vineyard"
+  ],
+  "finding": "Cellar 503's Pinot Gris page says the Youngs own it, 10 miles west of Junction City in the Lower Long Tom AVA, planted 1996-2016; Cava Wine Club says Andrew Smith is the winemaker, so the winemaker goes in a sentence of its own. The winery's site gives its address as 94739 Turnbow Ln, Junction City, OR 97448, not the record's 97439 Turnbow Ln, 97405, and Owen Bargreen credits one wine (La Petite Fete) to Jerry Sass and Drew Voit."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:walnut-city-wineworks",
+  "field": "founded",
+  "from": null,
+  "to": 1999,
+  "sources": [
+   "https://nataliemaclean.com/wineries/info/walnut-city-wineworks/7829"
+  ],
+  "finding": "Natalie MacLean's listing gives the McMinnville address and says John Gilpin, John Davidson and Zac Spence started it in 1999 in the old Willamette Valley Walnut Co. building; the OWHA page says only that Drew White talks about his role there, with no title or years. The summary was a single thin sentence; the proposal adds published facts and keeps Drew White."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:walnut-city-wineworks",
+  "field": "summary",
+  "from": "McMinnville winery where Drew White works.",
+  "to": "McMinnville winery started in 1999 by John Gilpin, John Davidson and winemaker Zac Spence in the old Willamette Valley Walnut Co. building. Drew White works there.",
+  "sources": [
+   "https://nataliemaclean.com/wineries/info/walnut-city-wineworks/7829"
+  ],
+  "finding": "Natalie MacLean's listing gives the McMinnville address and says John Gilpin, John Davidson and Zac Spence started it in 1999 in the old Willamette Valley Walnut Co. building; the OWHA page says only that Drew White talks about his role there, with no title or years. The summary was a single thin sentence; the proposal adds published facts and keeps Drew White."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:greg-jones",
+  "field": "summary",
+  "from": "Research climatologist specializing in the climatology of viticulture and son of Abacela founder Earl Jones. He co-petitioned for the Southern Oregon AVA, held posts at Southern Oregon University and Linfield, and became Abacela's CEO in 2021.",
+  "to": "Viticultural climatologist and son of Abacela founders Earl and Hilda Jones. He co-petitioned for the Southern Oregon AVA. He held research and teaching posts at Southern Oregon University and Linfield, and became Abacela's CEO in 2021.",
+  "sources": [
+   "https://wineindustryadvisor.com/2021/07/26/greg-jones-becomes-ceo-at-abacela/"
+  ],
+  "finding": "The July 2021 Wine Industry Advisor release calls him a viticultural climatologist and the son of Earl and Hilda Jones, names his posts at Southern Oregon University and Linfield, and announces him as Abacela's CEO. The cited Southern Oregon AVA Wikipedia page credits him and H. Earl Jones as petitioners. The proposal splits the failing sentence so each sentence rests on one page, and drops the wording copied from Wikipedia's opening line."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:craig-williams",
+  "field": "summary",
+  "from": "Winemaker at Joseph Phelps Vineyards in Napa from the 1970s to the mid-2000s, where he shaped the Insignia blend and developed the Freestone vineyard; in 2010 he and his family planted X Novo in the Eola-Amity Hills, later adding X Omni.",
+  "to": "Winemaker at Joseph Phelps Vineyards in Napa from the 1970s until 2008, overseeing its Insignia blend. In 1999 he helped develop vineyards and a winery for Phelps on the Sonoma Coast. In 2010 he and his wife, Robin, began planting X Novo in the Eola-Amity Hills. He also planted a second vineyard there, X Omni.",
+  "sources": [
+   "https://www.winespectator.com/articles/williams-resigns-from-phelps-after-32-vintages-15554",
+   "https://www.princeofpinot.com/vineyard/1663/index.html",
+   "https://xnovo.com/thoughts/"
+  ],
+  "finding": "Wine Spectator (2008) says he had been a Phelps winemaker since the 1970s, oversaw Insignia, and resigned in May 2008. Prince of Pinot says Craig and Robin Williams began planting X Novo in 2010, and Williams's own X Novo blog says he helped develop Phelps's Sonoma Coast vineyards and winery in 1999 and planted X Novo and X Omni in the Eola-Amity Hills. No public page names Freestone as his project (only the Weinnotes newsletter), so the proposal says 'Sonoma Coast' instead, and gives 2008 for 'mid-2000s'."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:carter-vineyard",
+  "field": "summary",
+  "from": "Eola-Amity Hills vineyard about ten miles west of Salem, planted in 1983 by Jack and Kathleen Carter. Long farmed by Ken Wright Cellars, it is now owned by Ken and Karen Wright.",
+  "to": "Eola-Amity Hills vineyard about ten miles west of Salem, planted in 1983 by Jack and Kathleen Carter. Ken Wright Cellars managed it for the Carters. Ken Wright bought it from them in 2015. It is now owned by Ken and Karen Wright.",
+  "sources": [
+   "https://greatnorthwestwine.com/?p=56971",
+   "https://www.princeofpinot.com/winery/125/index.html"
+  ],
+  "finding": "Great Northwest Wine (January 2017) says Wright bought the vineyard from Jack and Kathleen Carter in 2015, and the already-cited Great Northwest Wine review says Ken and Karen Wright own it. A Prince of Pinot note on the 2007 Ken Wright Carter Pinot says Ken Wright Cellars managed the vineyard, though the 2008 note names Mark Gould as manager. The Prince of Pinot vineyard page also gives a 1982 Pommard planting (Bethel Heights entry), so planted could carry alsoDated 1982."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:murto-vineyard",
+  "field": "summary",
+  "from": "Dundee Hills vineyard from which Authentique makes a single-vineyard Pinot noir.",
+  "to": "Dundee Hills vineyard owned and farmed by Mike and Robin Murto, planted in 1978. Authentique makes a single-vineyard Pinot noir from it.",
+  "sources": [
+   "https://princeofpinot.com/vineyard/415/index.html",
+   "https://decanter.com/wine-reviews/usa/oregon/authentique-wine-cellars-murto-vineyard-pinot-noir-77850"
+  ],
+  "finding": "Prince of Pinot lists Murto in the Dundee Hills, owned and farmed by Mike and Robin Murto, and planted in 1978 (one blend's notes mention a block planted 1988-2005). Decanter reviews Authentique Wine Cellars' Murto Vineyard Pinot Noir from the Dundee Hills."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:murto-vineyard",
+  "field": "planted",
+  "from": null,
+  "to": 1978,
+  "sources": [
+   "https://princeofpinot.com/vineyard/415/index.html",
+   "https://decanter.com/wine-reviews/usa/oregon/authentique-wine-cellars-murto-vineyard-pinot-noir-77850"
+  ],
+  "finding": "Prince of Pinot lists Murto in the Dundee Hills, owned and farmed by Mike and Robin Murto, and planted in 1978 (one blend's notes mention a block planted 1988-2005). Decanter reviews Authentique Wine Cellars' Murto Vineyard Pinot Noir from the Dundee Hills."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:domaine-roy-fils",
+  "field": "summary",
+  "from": "Willamette Valley winery founded in 2012 by Jared Etzel and Marc-André Roy, sons of Beaux Frères partners. They sold it to Marchesi Frescobaldi in 2023.",
+  "to": "Willamette Valley winery founded in 2012 by Jared Etzel and Marc-André Roy, sons of Beaux Frères partners. Marchesi Frescobaldi bought it in 2023, with Roy keeping a minority stake.",
+  "sources": [
+   "https://www.winespectator.com/articles/marchesi-de-frescobaldi-acquires-oregons-domaine-roy-fils"
+  ],
+  "finding": "Wine Spectator's July 24, 2023 report confirms the 2012 founding by Roy and Etzel, whose fathers were Beaux Frères partners, and a deal that closed July 20. It adds that Roy kept a minority stake and Etzel stayed on as winemaker. The Rodeo Hills article also says the pair founded the winery in 2012 and sold it to Frescobaldi in 2023, so the flagged conflict probably comes from 'they sold it' when Roy kept a stake; the proposal reflects that."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:cramoisi-vineyard",
+  "field": "summary",
+  "from": "Small family estate on Worden Hill Road in the Dundee Hills, planted from 2012 and run by a husband-and-wife team. Drew Voit was making its wines in 2020-21.",
+  "to": "Small family estate on Worden Hill Road in the Dundee Hills, planted from 2012 and run by a husband-and-wife team. Drew Voit served as its winemaker.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2949/index.html"
+  ],
+  "finding": "Prince of Pinot's winery page says winemaker Drew Voit came on board, but gives no years; only the Weinnotes newsletter dates his work to 2020-21. A 2022 Sophisticated Living article calls co-owner Ryan McKay the winemaker, so Voit's role may have ended."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:flaneur-wines",
+  "field": "summary",
+  "from": "Carlton winery where Anthony Sereni and Grant Coulter work.",
+  "to": "Carlton winery founded by Marty Doerschlag, with its tasting room in an old grain elevator in downtown Carlton. Grant Coulter was its winemaker and vineyard manager. Anthony Sereni, who joined as assistant winemaker in February 2022, was named director of winemaking in June 2024.",
+  "sources": [
+   "https://www.oregonwine.org/wineries/flaneur/",
+   "https://www.oregonwinepress.com/on-flaneur-time",
+   "https://wineindustryadvisor.com/?p=79231"
+  ],
+  "finding": "Oregon Wine Press (2017) names Grant Coulter as Flâneur's winemaker and vineyard manager. A June 2024 release names Anthony Sereni director of winemaking, and the Oregon Wine Board listing gives founder Marty Doerschlag and the downtown Carlton grain-elevator tasting room. No source says Coulter still works there."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:haakon-lenai",
+  "field": "summary",
+  "from": "Dundee Hills estate winery founded by Cody and Marque Wright of Purple Hands, named for their children. It makes about 500 cases a year of organically and biodynamically farmed estate Pinot noir and Chardonnay, sold mainly at its Red Hills Road tasting room.",
+  "to": "Dundee Hills estate winery founded by Cody and Marque Wright. The couple also founded Purple Hands. It is named for their children. It makes about 500 cases a year of estate Pinot noir and Chardonnay from vines farmed organically and biodynamically, sold mainly through its Dundee tasting room.",
+  "sources": [
+   "https://owenbargreen.com/blog/2024/6/10/purple-hands"
+  ],
+  "finding": "The winery's home page names Cody and Marque Wright as founders and its Story page gives the naming, the roughly 500 cases and the farming. Owen Bargreen says Cody and Marque Wright founded Purple Hands, which acquired the 35-acre Dundee Hills site in 2019 (the Story page says 2018). The Red Hills Road address comes from the Visit page and is already in the address field."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:fennwood-vineyard",
+  "field": "summary",
+  "from": "Yamhill-Carlton vineyard that supplies Chardonnay to Celestial Hill and is one of Dusky Goose's vineyard sources.",
+  "to": "Yamhill-Carlton vineyard that supplies Chardonnay to Celestial Hill. A Hampton Lumber subsidiary bought it in 2018 and kept supplying its winery customers, among them Dusky Goose.",
+  "sources": [
+   "https://www.hamptonlumber.com/hampton-purchases-fennwood-vineyard-in-yamhill-carlton/"
+  ],
+  "finding": "Hampton Lumber's release calls Fennwood one of Yamhill-Carlton's premier vineyards. It says the vineyard will keep supplying its current winery customers, including Dusky Goose, after the purchase closed on July 31, 2018. The seller, Birch Creek Associates, is affiliated with Dusky Goose. No published page links Fennwood Chardonnay to Celestial Hill; only Weinnotes does, so the first sentence rests on Weinnotes facts."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:authentique",
+  "field": "summary",
+  "from": "Willamette Valley label made by winemaker Nicholas Keeler.",
+  "to": "Willamette Valley label made by winemaker Nicholas Keeler from his family's Keeler Estate vineyard in the Eola-Amity Hills.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2605/",
+   "https://oregonwinehistoryarchive.org/interviews/nicholas-keeler/"
+  ],
+  "finding": "The Prince of Pinot says Authentique wines are made by winemaker Nicholas J. Keeler from his family's Keeler Estate vineyard in the Eola-Amity Hills AVA. The conflict probably comes from the OWHA collection, which also interviews Alisa Le as an Authentique winemaker. The site may want her linked to the label too."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:johan-vineyards",
+  "field": "summary",
+  "from": "Van Duzer Corridor estate bought in October 2021 by the same ownership group as Cowhorn, which calls it a sister property.",
+  "to": "Biodynamic estate in Rickreall, in the Van Duzer Corridor. In October 2021 founder Dag Johan Sundby sold it to Katherine \"Mini\" Banks, putting it under the same ownership group as Cowhorn. Cowhorn calls it a sister property.",
+  "sources": [
+   "https://bevnewsonline.com/cowhorn-vineyard-owner-acquires-johan-vineyards/",
+   "https://thefizz.substack.com/p/the-fizz-66-johan-vineyards-winemaker"
+  ],
+  "finding": "A BevNews story dated 26 October 2021 reports that Dag Johan Sundby sold Johan to Mini Banks, owner of Cowhorn, putting the two biodynamic vineyards under one ownership group. The Fizz places Johan in Rickreall in the Van Duzer Corridor AVA and says Mini Byers (her married name) bought it in 2021. Neither page uses the phrase 'sister property', and the current Cowhorn homepage doesn't show it either, so that sentence may stay unsupported."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:chris-james-cellars",
+  "field": "summary",
+  "from": "Family winery founded by Chris and Beth, who bought land on the western edge of the Yamhill-Carlton AVA in 2011 and planted Old Wagon Road Vineyard from 2013. It made its first wines in 2015, from estate fruit and Columbia Valley grapes, and also runs a tasting room in McMinnville.",
+  "to": "Family winery founded by Chris and Beth, who bought land on the western edge of the Yamhill-Carlton AVA in 2011 and planted Old Wagon Road Vineyard from 2013. It made its first wines from the estate's 2015 harvest, began making reds from eastern Oregon and Washington in 2017, and also runs a tasting room in McMinnville.",
+  "sources": [],
+  "finding": "The cited About page says the first wines were made in 2015 from the first estate harvest, that the winery started making 'big reds' from the Eastern Oregon and Washington region in 2017, and gives the McMinnville tasting room's address; it never says 'Columbia Valley', which appears only in the shop menu. The proposed second sentence follows the About page's wording of the facts."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:brian-marcy",
+  "field": "summary",
+  "from": "Winemaker at Big Table Farm. He worked in Napa wine for ten years, at Neyers, Turley and Marcassin, before moving to Oregon in 2006.",
+  "to": "Winemaker at Big Table Farm. He moved to Napa Valley in 1996 and worked at Neyers, Turley and Marcassin before moving to Oregon in 2006.",
+  "sources": [],
+  "finding": "Wakawaka Wine Reviews states the 1996 move to Napa, the Neyers, Turley and Marcassin jobs, and the 2006 move to Oregon. Big Table Farm's home page (marked absent but readable with curl) says they moved from Napa in 2006, where Brian had worked in wine for ten years. The reworded sentence is stated in full by the Wakawaka page alone and keeps the ten-year span implicitly (1996 to 2006)."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:maria-stuart",
+  "field": "summary",
+  "from": "Co-founder of R. Stuart & Co., where she ran marketing, hospitality and public relations, and a former director of the International Pinot Noir Celebration. She wrote the Pinot Mom blog and died in October 2021.",
+  "to": "Co-founder of R. Stuart & Co., where she ran marketing, hospitality and public relations, and a former executive director of the International Pinot Noir Celebration. She wrote the blog The Life and Times of a Pinot Mom and died in October 2021.",
+  "sources": [
+   "https://www.oregonwinepress.com/in-memoriam-maria-stuart"
+  ],
+  "finding": "The Oregon Wine Press memorial (1 November 2021) gives her death on 13 October 2021, names her blog 'The Life and Times of a Pinot Mom', and says she sat on the IPNC board from 2012 to 2017 and later became its executive director. The R. Stuart About page returns a bot-check (HTTP 202) and could not be read."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:robert-brittan",
+  "field": "summary",
+  "from": "UC Davis graduate who was the first winemaker at Far Niente and spent 16 years at Stags' Leap Winery before buying land in the McMinnville foothills in 2004 for Brittan Vineyards. He also makes or consults on wine for several Willamette Valley labels.",
+  "to": "UC Davis graduate who was the first winemaker at Far Niente and spent 16 years at Stags' Leap Winery before buying 128 acres in the McMinnville AVA in 2004 for Brittan Vineyards. He also makes wine for other Willamette Valley labels, among them Winderlea and Blakeslee.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/724/index.html",
+   "https://www.oregonwinepress.com/robert-ellen-brittan-oregon",
+   "https://vintus.com/producers/brittan-vineyards/"
+  ],
+  "finding": "The Prince of Pinot states the UC Davis degree, the first winemaker job at Far Niente, 16 years at Stags' Leap, the 2004 purchase of 128 acres, and that he is also winemaker for Winderlea, Blakeslee, Lazy River and Ayoub. Vintus places the 2004 estate in the McMinnville AVA. Oregon Wine Press (2015) gives about 17 years at Stags' Leap and lists the labels he oversees. No source says 'foothills', so the proposed wording replaces it."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:the-eyrie-vineyard",
+  "field": "alsoDated",
+  "from": null,
+  "to": {
+   "planted": [
+    1966
+   ]
+  },
+  "sources": [
+   "https://www.princeofpinot.com/article/2390/index.html"
+  ],
+  "finding": "The cited press notes quote reviews saying The Eyrie's vines were planted in 1965 and 1968, and that the 'original vines planted in 1965', but one quoted note says Lett planted in a nursery near Corvallis 'and then again at Eyrie in 1966'. The Prince of Pinot likewise says the February 1965 plantings were in Corvallis and moved to the Dundee Hills in 1966, so 1965 is kept with 1966 as an alternative date. The press notes and Wikipedia both count five estate vineyards."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:quail-run-vineyards",
+  "field": "planted",
+  "from": 1989,
+  "to": null,
+  "sources": [],
+  "finding": "No source I found gives a planting year. Willamette Valley Vineyards says the Moores have cultivated vines at Quail Run since 1989, which supports the summary's 'farmed since 1989' but not a planting date. A Southern Oregon Business interview with Traute Moore and the Travel Southern Oregon listing give no year either. Clearing 'planted' is proposed; the summary can stay."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:aegrina-vineyard",
+  "field": "summary",
+  "from": "Vineyard on a southwest-facing slope near McMinnville, in the McMinnville AVA, farmed since 2007. It supplies La Biblioteca and North Valley Vineyards.",
+  "to": "Vineyard on a southwest-facing slope near McMinnville, in the McMinnville AVA, farmed since 2007. It is one of La Biblioteca's estate vineyards. It is also one of the two estate vineyards of North Valley Vineyards.",
+  "sources": [],
+  "finding": "The cited pages already state the fact but not in one place: La Biblioteca's vineyards page lists Aegrina as a La Biblioteca estate vineyard, and North Valley's about page calls it one of the brand's two estate vineyards. The proposed summary splits the supply sentence into two, one for each page."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:north-valley-vineyard",
+  "field": "summary",
+  "from": "Ten-acre Yamhill-Carlton vineyard planted in 2007, an estate vineyard for both La Biblioteca and North Valley Vineyards.",
+  "to": "Ten-acre vineyard on a southeast-facing slope in the Yamhill-Carlton AVA, planted in 2007 and one of La Biblioteca's estate vineyards. It is also an estate vineyard of North Valley Vineyards, next to Shea, Penner-Ash and Beaux Freres.",
+  "sources": [],
+  "finding": "La Biblioteca's vineyards page gives 'North Valley Estate Vineyard' as 10 acres, Yamhill-Carlton AVA, planted 2007, on a southeast-facing slope, and calls it an estate vineyard. North Valley's about page says the vineyard is in Yamhill-Carlton next to Shea, Penner-Ash and Beaux Freres and is one of the brand's two estate vineyards. The proposed summary gives each page's facts their own sentence."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:claygate-estate-vineyard",
+  "field": "summary",
+  "from": "Small Ribbon Ridge estate making Pinot noir, rosé and Chardonnay from its own vineyard, with a first vintage in 2011. The name is the Clagett family's original spelling, recorded in the Domesday census of 1086.",
+  "to": "Small Ribbon Ridge estate making Pinot noir, rosé and Chardonnay from its own vineyard, with a first vintage in 2011. The name is the original spelling of the Clagett family name, which the winery traces to 1086 and to the Norman survey it calls the Dooms Day Census.",
+  "sources": [],
+  "finding": "Claygate's about page says Claygate is the original family name, now Clagett, dating to 1086 and first recorded by the Normans in what it calls the Dooms Day Census. The word 'Domesday' and the claim that the 1086 survey recorded this spelling may be why the check failed it, so the proposed sentence follows the page's own wording."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:silvan-ridge",
+  "field": "summary",
+  "from": "Winery near Eugene where Andrew Wenzl and Jonathan Oberlander each worked.",
+  "to": "Winery about 12 miles from downtown Eugene. Jonathan Oberlander joined it as assistant winemaker in 2003 and was promoted to head its winemaking team in 2005. Andrew Wenzl did cellar work there after starting at King Estate.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2376/index.html",
+   "https://www.spreaker.com/episode/j-scott-cellars-jonathan-oberlander--42244605"
+  ],
+  "finding": "Prince of Pinot places Silvan Ridge 12 miles from downtown Eugene and lists Oberlander as director of winemaking. The podcast page gives his 2003 start as assistant winemaker and his 2005 promotion. Wenzl's OWHA interview page says he did cellar work at King Estate and then at Silvan Ridge Hinman Vineyard."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:durant-vineyards",
+  "field": "summary",
+  "from": "The Durant family's winery in the Dundee Hills, where the family has farmed since 1973. It makes Pinot noir, Chardonnay, Sauvignon blanc and traditional-method sparkling wine from its estate vineyards, and olive oil from its own mill.",
+  "to": "The Durant family's winery in the Dundee Hills, where the family has farmed since 1973. Its estate wines include Pinot noir, Chardonnay and Sauvignon blanc, and it makes extra virgin olive oil at its own Durant Olive Mill. It has also made a traditional-method Brut from the Dundee Hills.",
+  "sources": [
+   "https://www.oregonwinepress.com/cellar-selects-december-2021"
+  ],
+  "finding": "Durant's homepage covers the Pinot noir, Chardonnay, Sauvignon blanc and the Durant Olive Mill but not sparkling wine. Oregon Wine Press's December 2021 Cellar Selects lists a Durant Vineyards 2018 Méthode Traditionnelle Brut, Dundee Hills. The cited Method Oregon trail page loads no text, so it can't support anything."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:five-fourteen-vineyards",
+  "field": "summary",
+  "from": "Estate winery northwest of Eugene owned by Tom and Marie Kokkeler, who first bought the property to farm and sell grapes; its first vineyard block dates from 1998. The name marks the couple's first date, May 14, and Drew Voit makes the wines.",
+  "to": "Estate winery northwest of Eugene owned by Tom and Marie Kokkeler, who first bought the property to farm and sell grapes; its first vineyard block dates from 1998. The name comes from May 14, the day of the couple's first date. Drew Voit makes the wines.",
+  "sources": [],
+  "finding": "The cited pages already state both facts, but on different pages: the winery homepage explains that May 14 was the Kokkelers' first date, and Prince of Pinot names Drew Voit as winemaker. The proposed summary puts each fact in its own sentence. The cited Visit page and the Willamette Valley Wineries Association listing were absent."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:teal-walker",
+  "field": "summary",
+  "from": "Proprietor of Audeant, the Willamette Valley label she created with winemaker Andrew Riechers after a tasting at Antica Terra.",
+  "to": "Proprietor of Audeant, the Willamette Valley label she created with winemaker Andrew Riechers. The partnership began after a tasting at Antica Terra.",
+  "sources": [
+   "https://greatnorthwestwine.com/2022/04/12/long-path-of-andrew-riechers-leads-to-early-acclaim-for-audeant-wines/"
+  ],
+  "finding": "Great Northwest Wine (2022) tells how Walker's 2015 tasting at Antica Terra, hosted by assistant winemaker Andrew Riechers, led them to start a brand together; Audeant's About page names her as proprietor and co-founder with Riechers in 2016. The summary is split so the Antica Terra detail is checked on its own."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:sokol-blosser-estate-vineyard",
+  "field": "summary",
+  "from": "The Sokol Blosser family's certified-organic estate in the Dundee Hills. Land was bought in 1970 and the first Pinot noir block went into the Old Vineyard in 1971-72.",
+  "to": "The Sokol Blosser family's certified-organic estate in the Dundee Hills. The family bought the land, a former prune orchard, in 1970. Cuttings set out in a nursery row in 1971 were moved to the Old Vineyard in 1972.",
+  "sources": [],
+  "finding": "Both cited pages already state the facts: The PinotFile says the land was bought in 1970 and the first two-acre Pinot Noir block went in in 1972, and Sokol Blosser's own timeline says the 1971 nursery cuttings were moved to the Old Vineyard in 1972. The '1971-72' sentence is split into two plainer ones. (The PinotFile dates Alex Sokol Blosser's start as head winemaker to 2014, but other sources say 2013.)"
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:bramble-hill-vineyard",
+  "field": "summary",
+  "from": "Pinot Noir vineyard on Ribbon Ridge near Newberg, not open to visitors, whose fruit goes into a vineyard-designated Penner-Ash Pinot Noir.",
+  "to": "Pinot Noir vineyard on Ribbon Ridge near Newberg, not open to visitors. Its fruit goes into a vineyard-designated Penner-Ash Pinot Noir.",
+  "sources": [
+   "https://delectable.com/wine/penner-ash/bramble-hill-vineyard-pinot-noir/2014"
+  ],
+  "finding": "The Ribbon Ridge directory gives Pinot Noir, a Newberg address and 'Vineyard Not Open to the Public', and Scout Magazine names Bramble Hill on Ribbon Ridge as a Penner-Ash source. The only page found that names the vineyard-designated bottling is Delectable's wine listing ('Penner-Ash Bramble Hill Vineyard Pinot Noir', Ribbon Ridge), which is a weak source; Penner-Ash's own site no longer mentions it."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:andante-vineyard",
+  "field": "summary",
+  "from": "Van Duzer Corridor estate near Dallas, Oregon, with a new tasting room beside a wildlife refuge; it grows Aligoté alongside Pinot noir, Chardonnay and Sauvignon blanc.",
+  "to": "Van Duzer Corridor estate near Dallas, Oregon, beside a wildlife refuge, with a new tasting room. It grows Aligoté alongside Pinot noir, Chardonnay and Sauvignon blanc.",
+  "sources": [
+   "https://andantevineyard.com/wines",
+   "https://andantevineyard.com/our-story"
+  ],
+  "finding": "Andante's Estate Wines page puts its 15-acre vineyard in the Van Duzer Corridor AVA, planted to Pinot noir, Chardonnay, Sauvignon blanc, Aligoté and Gamay noir. Its Our Story page mentions the neighbouring wildlife refuge, and the homepage gives the Dallas address. Only the Weinnotes newsletter supports the 'new tasting room'."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:niew-vineyards",
+  "field": "summary",
+  "from": "Small allocation-only Willamette Valley label whose wine is made by Seth Morgen Long.",
+  "to": "Small Willamette Valley Chardonnay label of Tai-Ran Niew. The wine is made in Seth Morgen Long's cellar, with Long as his mentor.",
+  "sources": [
+   "https://leonandsonwine.com/blogs/news/welcoming-niew-vineyards",
+   "https://hedonism.co.uk/products/niew-vineyards-chardonnay-2023"
+  ],
+  "finding": "The record looks wrong: Hedonism calls Tai-Ran Niew the winemaker, and Leon & Son says the wine is made using Seth Morgen Long's cellar space and with his mentorship. Only the Weinnotes newsletter, passing on a sommelier's remark, calls Long the winemaker. 'Allocation-only' is dropped because Weinnotes says only that the 2021 vintage was already allocated."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:capitello-wines",
+  "field": "summary",
+  "from": "Eugene winery started in 2003 by winemaker Ray Walsh, who began his career in New Zealand. It makes still wines and traditional-method sparkling wine given long ageing on the lees.",
+  "to": "Eugene winery started in 2003 by winemaker Ray Walsh, who began his career in New Zealand. Its range includes small-lot Pinot noir and Pinot gris alongside sparkling wines. Its sparkling wines are made by the traditional method and given extended time on the lees.",
+  "sources": [
+   "https://eugenemagazine.com/?p=20693"
+  ],
+  "finding": "The cited Method Oregon trail page does say Capitello makes traditional-method sparkling wine with extended tirage on the lees, but that text sits in the page's embedded JSON data, which is probably why it scored low. The winery's own page lists Pinot noir, Pinot gris and sparkling wines, so the proposal splits the sentence by source. Eugene Magazine adds that the Brut is made the way Champagne is. Note that Method Oregon also says 'more than three decades', which doesn't match the 2003 founding."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:the-south-face-winery",
+  "field": "summary",
+  "from": "Estate Pinot Noir winery on a south-facing hilltop at the southern tip of Ribbon Ridge near Newberg, owned by Barry Mong and Joanne Salerno; its first wines were from 2018.",
+  "to": "Winery on a true south-facing hilltop at the narrow south end of Ribbon Ridge. Its Newberg estate vineyard grows Pinot Noir. Barry Mong and Joanne Salerno own it, and its first wines were from 2018.",
+  "sources": [],
+  "finding": "Every fact is in the cited pages, but no single page holds them all. The Place page has the south-facing hilltop at the ridge's south end, the Ribbon Ridge listing has the estate Pinot Noir and the Newberg address, and the People page names Mong and Salerno and the 2018 first wines. The proposal gives each sentence one source page."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:earl-jones",
+  "field": "summary",
+  "from": "Co-founder with Hilda Jones of Abacela in the Umpqua Valley, where they planted Oregon's first Tempranillo in 1995. He co-petitioned for the Southern Oregon AVA and served on the Oregon Wine Board from 2003 to 2009.",
+  "to": "Co-founder with Hilda Jones of Abacela in the Umpqua Valley, where they planted Oregon's first Tempranillo in 1995. He co-petitioned for the Southern Oregon AVA. He served on the Oregon Wine Board from 2003 to 2009.",
+  "sources": [
+   "https://www.winespectator.com/articles/new-appellation-sought-for-southern-oregon-21768"
+  ],
+  "finding": "The two failing facts come from different pages. Wikipedia's Southern Oregon AVA article says H. Earl Jones and Dr. Gregory Jones submitted the petition in 2002, and Wine Spectator confirms he filed it. The Oregon Wine Board's past-directors page lists 'Earl Jones (2003-2009)'. The proposal splits the sentence in two."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:scott-baldwin",
+  "field": "summary",
+  "from": "Co-founder and owner of De Ponte Cellars, former owner of Lonesome Rock Ranch, and a founder of the Vinovate custom crush facility.",
+  "to": "Co-founder, with Rae Baldwin, and owner of De Ponte Cellars. He formerly owned Lonesome Rock Ranch. He is one of the founders of the Vinovate custom crush facility.",
+  "sources": [],
+  "finding": "Each fact is in a cited page, just not all in one. Prince of Pinot says Scott and Rae Baldwin started De Ponte in 2001 and are its owners. Weinnotes (7 October 2023) says the Lonesome Rock property used to be the Baldwins' and was put up for sale in 2020. Vinovate's site names Scott Baldwin among the facility's founders. The proposal gives each fact its own sentence."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:joel-myers",
+  "field": "summary",
+  "from": "Grower who helped plant the Letts' vineyard as a boy, became vineyard and cellar manager at Eyrie after 1979, studied with Swiss researcher Werner Koblet and founded the Vinetenders vineyard management company in 1984. Co-owner of Siltstone Wines.",
+  "to": "Grower who helped plant the Letts' vineyard as a boy, became vineyard and cellar manager at Eyrie after 1979, studied with Swiss researcher Werner Koblet and founded the Vinetenders vineyard management company in 1984. His family, the Myers, established Siltstone Wines in 2000.",
+  "sources": [
+   "http://www.siltstonewines.com/history",
+   "http://www.siltstonewines.com/our-story"
+  ],
+  "finding": "No page uses the words 'co-owner'. Siltstone's Our Story page says the Myers family established it in 2000, and its History page says the Myers made the first Siltstone vintage in 2000 and that Joel carries on with Louise and Kathryn. The History page also backs the main claim: the Letts, Eyrie, Koblet, and Vinetenders in 1984."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:corby-stonebraker-soles",
+  "field": "summary",
+  "from": "Co-owner and business manager of ROCO Winery with her husband Rollin Soles. She was previously married to Ken Wright and is the mother of Purple Hands winemaker Cody Wright.",
+  "to": "Co-owner and business manager of ROCO Winery with her husband Rollin Soles. She is the mother of Purple Hands owner and winemaker Cody Wright, whose father is Ken Wright.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1502/index.html",
+   "https://www.oregonwinepress.com/purple-hands-cody-wright"
+  ],
+  "finding": "Prince of Pinot names Corby Stonebraker-Soles as the mother of Purple Hands owner-winemaker Cody Wright and Ken Wright as his father, and Oregon Wine Press also calls her Cody's mother. Neither page says outright that she was married to Ken Wright, so the proposed sentence drops 'previously married' and keeps what the pages state."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:sanjeev-lahoti",
+  "field": "summary",
+  "from": "Co-founder of Saffron Fields with his wife, Angela Summers. The couple bought a Yamhill-Carlton grass seed farm and planted its vineyard in 2007.",
+  "to": "Co-founder of Saffron Fields with his wife, Angela Summers. The couple found a grass seed farm near Yamhill and planted their first Pinot noir there in 2007.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2074/index.html",
+   "https://greatnorthwestwine.com/2015/01/16/saffron-fields-vineyard-2011-pinot-noir-yamhill-carlton-55/"
+  ],
+  "finding": "Prince of Pinot says the couple found a grass seed farm on Laughlin Road in Yamhill and planted their first 12 acres of Pinot noir in 2007, and Great Northwest Wine says the farm became a vineyard in 2007. I found no readable page giving the 2020 death year: the OWHA pages don't mention it, Saffron Fields' site is captcha-blocked, and search ran out, so I left died as is rather than clearing it."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:jl-kiff-vineyard",
+  "field": "summary",
+  "from": "Husband-and-wife estate outside McMinnville run by Joel and Laurie Kiff, who began planting in 2005 and made their first wine in 2010.",
+  "to": "Husband-and-wife estate outside McMinnville run by Joel and Laurie Kiff, who made their first wine in 2010.",
+  "sources": [],
+  "finding": "The winery's site returns an empty page to every fetch, and Weinnotes gives the McMinnville location, the couple and the 2010 first vintage but no planting year. The proposed summary drops the unsourced 2005 planting date. Keep it instead if the winery site can be read and states it; search ran out before I could look further."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:roots-wine-co",
+  "field": "summary",
+  "from": "Family winery near Yamhill in the Yamhill-Carlton AVA, owned by Chris and Hilary Berg with Chris as winemaker. It started in 2002 alongside the Roots Estate Vineyard and also makes single-vineyard wines from neighbouring growers.",
+  "to": "Family winery near Yamhill in the Yamhill-Carlton AVA, owned by Chris and Hilary Berg with Chris as winemaker. Its Roots Estate Vineyard was planted in 1999 and 2000, and it also works with nearby vineyards such as Saffron Fields and Fairsing.",
+  "sources": [],
+  "finding": "The Vines page dates the Roots Estate Vineyard to 1999 and 2000, before the winery's 2002 start, so 'started in 2002 alongside the estate vineyard' is inaccurate. The page names neighbouring sources, Saffron Fields on the same hillside and Fairsing in view, but never says 'single-vineyard', so the proposed sentence avoids that term. The 2002 founding is still supported by roots.wine and the Yamhill-Carlton listing."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:ken-pahlow",
+  "field": "summary",
+  "from": "Co-founder of Walter Scott Wines. He worked for 14 years in sales and production at St. Innocent, joined the Patricia Green Cellars harvest team in 2009 and handled Northwest sales for Evening Land Vineyards.",
+  "to": "Co-founder of Walter Scott Wines. He worked in sales and production at St. Innocent, handled Northwest sales for Evening Land Vineyards and joined the Patricia Green Cellars harvest team in 2009. He spent 14 years at St. Innocent before joining Evening Land in 2010 to manage sales.",
+  "sources": [],
+  "finding": "Sentence 2 joined facts from two pages. Prince of Pinot gives sales and production at St. Innocent, Northwest sales for Evening Land and the 2009 Patricia Green harvest; Wine & Spirits gives the 14 years at St. Innocent and the 2010 move to Evening Land. The proposed split lets each sentence rest on one page."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:chris-hermann",
+  "field": "summary",
+  "from": "Corvallis-raised wine lawyer who started 00 Wines with his father Richard and built it into a Chardonnay and Pinot noir label with his wife Kathryn.",
+  "to": "Wine-industry lawyer who grew up in the Willamette Valley and started 00 Wines in 2015 with his wife Kathryn and his father Richard, making Chardonnay and Pinot noir.",
+  "sources": [
+   "https://www.00wines.com/about-us"
+  ],
+  "finding": "The cited https://www.00wines.com/about now returns 404, and the current page is /about-us. It says Chris and Kathryn founded 00 Wines in 2015 with Chris's father, Dr. Richard Hermann, and that Chris grew up in the Willamette Valley, spent over 35 years as a wine-industry lawyer and works with Chardonnay and Pinot Noir. No readable page mentions Corvallis, so the proposal says Willamette Valley instead; the OWHA page names him only as a lawyer."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:louise-myers",
+  "field": "summary",
+  "from": "Teacher and artist from a local farm family who worked at Eyrie, married Joel Myers in 1981 and runs Siltstone Wines with him.",
+  "to": "Teacher and artist from a local farm family who worked for the Letts at Eyrie, married Joel Myers in 1981 and carries on the family's winegrowing at Siltstone Wines with him.",
+  "sources": [
+   "http://www.siltstonewines.com/history"
+  ],
+  "finding": "Siltstone's History page describes Louise Bernards as a teacher and artist from a local farm family who was working for the Letts (Joel's job was in the Letts' vineyard at Eyrie). It says they married in 1981 and that Joel carries on the tradition with his wife Louise; the record's 'runs Siltstone Wines' is reworded to match."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:charles-coury-vineyards",
+  "field": "alsoDated",
+  "from": null,
+  "to": {
+   "founded": [
+    1966
+   ]
+  },
+  "sources": [],
+  "finding": "The cited Prince of Pinot article says the Courys bought the Forest Grove property in October 1965, established Charles Coury Vineyards in 1966 when the rooted vines were moved there, and ran it until money trouble forced a sale in 1978. It also says the Stoyanovs renamed it in 1992, not after 1992. The David Hill Legacy page dates the estate's planting and name to 1965, so the founding year is either 1965 or 1966."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:charles-coury-vineyards",
+  "field": "summary",
+  "from": "Vineyard, nursery and winery run by Charles and Shirley Coury near Forest Grove from 1965 until financial strain forced a sale in 1978. The property was renamed David Hill Vineyards & Winery after 1992.",
+  "to": "Vineyard, nursery and winery run by Charles and Shirley Coury near Forest Grove from 1965 until financial strain forced a sale in 1978. Milan and Jean Stoyanov bought the property in 1992 and renamed it David Hill Vineyards & Winery.",
+  "sources": [],
+  "finding": "The cited Prince of Pinot article says the Courys bought the Forest Grove property in October 1965, established Charles Coury Vineyards in 1966 when the rooted vines were moved there, and ran it until money trouble forced a sale in 1978. It also says the Stoyanovs renamed it in 1992, not after 1992. The David Hill Legacy page dates the estate's planting and name to 1965, so the founding year is either 1965 or 1966."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:brigadoon-wine-co",
+  "field": "summary",
+  "from": "Shown family winery near Junction City in the Lower Long Tom AVA, northwest of Eugene. Chris Shown farms the family's organically farmed Brigadoon Vineyards and his son Matt Shown is winemaker.",
+  "to": "Shown family winery near Junction City in the Lower Long Tom AVA, northwest of Eugene. Chris Shown, his wife Sheree and their son Matt own the organically farmed Brigadoon Vineyards, and Matt is the winemaker.",
+  "sources": [
+   "https://www.eugenecascadescoast.org/press-releases/post/brigadoon-wine-company-introduces-reusable-bottles-through-revino/",
+   "http://www.princeofpinot.com/winery/1732/"
+  ],
+  "finding": "The May 2025 press release (Junction City dateline) says Chris Shown, his wife Sheree and son Matt own and run Brigadoon Vineyards and the winery, that the 15-acre vineyard is farmed organically, that Matt is winemaker, and that the winery is in the Lower Long Tom AVA; Prince of Pinot places the farm just northwest of Eugene. The reworded second sentence matches the press release; the About page separately calls Chris proprietor and vineyard manager."
+ },
+ {
+  "date": "2026-10-19",
+  "key": "node:andrew-beckham",
+  "field": "summary",
+  "from": "Ceramics artist and winemaker who co-founded Beckham Estate Vineyard and produces clay amphorae for winemaking; he taught pottery until 2021.",
+  "to": "Ceramics artist and winemaker who, with Annedria Beckham, built Beckham Estate Vineyard and began making its wines in 2009. Through Novum Ceramics he makes terra cotta amphorae for winemaking and brewing. He taught pottery until 2021.",
+  "sources": [
+   "https://www.beckhamestatevineyard.com/novum-ceramics"
+  ],
+  "finding": "The Beckham About page calls him a ceramics artist of over 25 years, credits the estate to Andrew and Annedria and says he began producing their wines in 2009; the Novum Ceramics page says his company makes terra cotta amphorae for winemaking and brewing. No citable page dates the end of his teaching: only Weinnotes gives 2021, and the About page still says he teaches high school ceramics, so that sentence keeps the existing fact."
+ }
+]

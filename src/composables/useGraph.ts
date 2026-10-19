@@ -577,7 +577,12 @@ const regionCore = computed(() => {
       ties.set(other, (ties.get(other) ?? 0) + 1)
     }
   }
-  for (const [id, count] of ties) if (count >= 2) core.add(id)
+  // Someone tied to two members (a winemaker at two of its wineries) belongs to the region; a
+  // winery or vineyard belongs only by its own AVAs, however many members buy from it
+  for (const [id, count] of ties) {
+    const type = nodeById.value.get(id)?.type
+    if (count >= 2 && type !== 'winery' && type !== 'vineyard') core.add(id)
+  }
   return core
 })
 

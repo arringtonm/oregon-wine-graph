@@ -3,6 +3,14 @@ import { z } from 'zod'
 const slug = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be a kebab-case slug')
 const year = z.number().int().min(1700).max(2100)
 
+// Fields holding a year. Where sources give different years for one, the record keeps one in
+// the field and the others in `alsoDated`, and it reads "1965 or 1966"
+export const YEAR_FIELDS = [
+  'born', 'died', 'founded', 'closed', 'planted', 'established', 'firstHeld', 'lastHeld', 'startYear', 'endYear',
+] as const
+export type YearField = (typeof YEAR_FIELDS)[number]
+const alsoDated = z.partialRecord(z.enum(YEAR_FIELDS), z.array(year).min(1)).optional()
+
 const sourceSchema = z.strictObject({
   title: z.string().min(1),
   // Absent for sources with no public address, such as an emailed newsletter issue
@@ -26,6 +34,7 @@ const baseNode = {
   sources: z.array(sourceSchema).min(1),
   verified: z.boolean(),
   verifiedBy,
+  alsoDated,
 }
 
 // Where to find a winery or vineyard today. `address` is the address the business gives
@@ -288,6 +297,7 @@ export const edgeSchema = z.strictObject({
   sources: z.array(sourceSchema).min(1),
   verified: z.boolean(),
   verifiedBy,
+  alsoDated,
 })
 
 export const graphSchema = z.strictObject({
@@ -305,9 +315,18 @@ export function checkGraph({ nodes, edges }: Graph): string[] {
   const problems: string[] = []
   const byId = new Map<string, GraphNode>()
 
+  // Each other year must belong to a year the record gives, and differ from it
+  const checkAlsoDated = (label: string, record: Record<string, unknown> & { alsoDated?: Partial<Record<YearField, number[]>> }) => {
+    for (const [field, years] of Object.entries(record.alsoDated ?? {})) {
+      if (typeof record[field] !== 'number') problems.push(`${label}: alsoDated.${field} without a ${field}`)
+      else if (years.includes(record[field] as number)) problems.push(`${label}: alsoDated.${field} repeats ${record[field]}`)
+    }
+  }
+
   for (const node of nodes) {
     if (byId.has(node.id)) problems.push(`duplicate node id "${node.id}"`)
     byId.set(node.id, node)
+    checkAlsoDated(`node "${node.id}"`, node)
   }
 
   const edgeIds = new Set<string>()
@@ -334,6 +353,7 @@ export function checkGraph({ nodes, edges }: Graph): string[] {
     if (edge.ongoing && edge.endYear !== undefined) {
       problems.push(`edge "${edge.id}": ongoing edges cannot have an endYear`)
     }
+    checkAlsoDated(`edge "${edge.id}"`, edge)
   }
 
   return problems

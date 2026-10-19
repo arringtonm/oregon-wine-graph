@@ -19,8 +19,10 @@ Write one file, `{ "nodes": [...], "edges": [...], "notes": ["..."] }`, to the p
 - State only what the source says. An empty optional year is fine; a guessed year is not. Do not fill gaps from memory or general knowledge.
 - Do not turn hedged or second-hand statements ("I think", "reportedly") into records.
 - Set `"verified": false` on everything. Never set `verifiedBy`.
-- Years are integers. `ongoing: true` only when the source says the relationship still holds, and never with `endYear`.
+- Years are integers. Where sources give different years for the same fact, put the year the better sources give in the field and the others in `alsoDated` (`"alsoDated": { "founded": [1965] }`); don't pick one silently. `ongoing: true` only when the source says the relationship still holds, and never with `endYear`.
 - Summaries: one or two factual sentences in your own words. Never copy sentences or distinctive phrasing from a source.
+- A federal label approval (ttbonline.gov) shows that a wine was planned, not that it was sold. Cite the approval's detail page (`viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=…`), never the applicant's phone number or the filer's name; the caveat note is added by `npm run cola:caveats`, not by hand.
+- From the OpenML WineEnthusiast dataset (42074), use only a review's winery, designation, region and variety: never the review text, score or price.
 
 ## Modelling
 

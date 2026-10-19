@@ -34,6 +34,8 @@ Conventions:
 - Entities based outside Oregon carry `outsideOregon: true`.
 - Addresses and coordinates are visitor information (often a tasting room), never evidence of where grapes grow.
 - Every record needs a source. A source normally has a URL; one without (an emailed newsletter issue, say) is cited by title and date. Private newsletters contribute facts only, never their text.
+- A connection cited only by federal label approvals carries a note that the evidence goes no further than an approved label; `npm run cola:caveats` maintains it (see "Federal label approvals" below).
+- Where sources disagree on a year, the field holds one and `alsoDated` the others; never pick one silently or record the disagreement only in a note.
 - `verified` stays `false` until a person or the record check confirms the record against its sources. Verified records carry `verifiedBy`: `person`, `jev` or `boundary`.
 - People, wineries and vineyards may carry `interviews`: oral history interviews from the Oregon Wine History Archive.
 - An edge's `role` is free text and stays as written. On a record's card, the role of a founded, owns, worked at, winemaker, consulted, member of or mentored edge stands in for the verb ("Mark Wisnovsky (co-owner, from 2005)"). Roles of four words or more, and short ones that don't read as titles ("winemaking"), show a short title from `role-titles.json` instead ("operates the winery with family" becomes "operator"). The full role still shows in the verification note, flags and admin mode. New long roles need a title, and `npm test` lists any missing: run `npm run roles:titles`, which has Jev pick from each type's vocabulary (`src/data/roleTitles.ts`) into `tools/roles/proposals.json`, then review the picks and add them to `role-titles.json`.
@@ -58,7 +60,7 @@ npm run check:apply      # mark the supported ones verified, as verified by Jev
 
 `npm run check` breaks each record into claims (the relationship, each year, the role), cuts each cited page down to the passages naming the parties, and has [Jev](https://typesafe.ai), a decision model, score every claim. Raw scores go to `src/data/checks.json`, so the threshold can change without asking again. A record is supported when some source states or implies it and every detail holds; otherwise it is partly supported, unsupported, contradicted, or unreadable. Records first checked before their source was fetched are re-checked automatically once it is cached.
 
-`npm run check:calibrate` measures the risk: it breaks one fact in each of about 400 passing records and counts how many still pass. At the threshold in use (0.9) that was 1.2%, all from swapping in a neighbouring relationship such as "founded" for "helped organize". `npm run check:apply -- --undo` unverifies everything Jev verified.
+`npm run check:calibrate` measures the risk: it breaks one fact in each of about 400 passing records and counts how many still pass. At the threshold in use (0.9) that was 1.0% on 18 October 2026. Relationship swaps are drawn only from relationships that would be false (not one the two already have or one that follows from it, such as a founder working at their winery). For connections the check also asks whether each source states this relationship or only a different one between the two, and discounts a source that describes only another (`RELATIONSHIP_FIT` in `decide.ts`); without that, 12% of false swaps passed. `-- --images` calibrates the bar for records supported only by label images. `npm run check:apply -- --undo` unverifies everything Jev verified.
 
 In review mode each record shows Jev's verdict and an Evidence disclosure with the passages it read. A connection can be edited (role, years), which re-checks it, or removed.
 
@@ -190,6 +192,44 @@ npm run owha:link    # add those interviews to the nodes, with the archive page 
 ```
 
 Pages about people and places not yet in the graph are ranked with `npm run discover:triage -- owha-unmatched` and extracted by research agents.
+
+### Verifying drafts by research
+
+Drafts the check can't verify are worked through in order of what verifying them does for readers: a draft node hides every connection it is part of when "Verified records only" is on, so nodes hiding the most verified connections come first.
+
+```sh
+npm run verify:queue                       # rank drafts, with why each fails -> .cache/verify/queue.json
+# research agents follow tools/verify/BRIEF.md, ten records each, writing .cache/verify/round-N/output-*.json
+npm run verify:apply -- .cache/verify/round-N/output-*.json
+npm run check && npm run check:apply && npm run cola:caveats
+```
+
+`verify:apply` always keeps new sources. A proposed correction (a year, role, summary, note or `alsoDated`) is written only when Jev, reading the record's sources including the new ones, supports the corrected record at 0.9 with no source contradicting it; each one is logged in `tools/verify/corrections.json`. Records research found nothing more for go to `tools/verify/dead-ends.json`, and later queues skip them.
+
+Where sources give different years, the record keeps one in the year field and the others in `alsoDated` (`"alsoDated": { "founded": [1965] }`); cards read "1965 or 1966" with an ⓘ, and the check accepts a source giving any of them. `npm run check:fetch -- --failed` retries unreadable pages, falling back to the Internet Archive's newest copy, and PDFs are read as text.
+
+### Federal label approvals (TTB COLA)
+
+Every US bottler files each label with the Alcohol and Tobacco Tax and Trade Bureau before selling the wine. The [Public COLA Registry](https://ttbonline.gov/colasonline/publicSearchColasBasic.do) is public domain but has no API or bulk download, and publishes no rate limits. `tools/cola/registry.ts` therefore makes one request every two seconds over one connection, backs off on errors, stops after three failures in a row, and caches everything under `.cache/cola/`, so any stage can be stopped and resumed.
+
+```sh
+npm run cola:search    # brand searches for each winery; accepted permits and approvals -> tools/cola/wineries.json
+npm run cola:details   # each approval's printable form (fields and label file names)
+npm run cola:read      # Jev reads which vineyard the labels name -> tools/cola/labels.json
+npm run cola:build     # research file: AVAs from the forms, vineyards from the labels
+npm run discover:merge -- .cache/cola/research.json
+npm run cola:caveats   # after each merge and each check:apply
+```
+
+- **Matching.** A winery's approvals are those under an Oregon permit whose brand is the winery's own name (or an also-known-as name). Brands that only contain the name, such as collaborations bottled by another winery or misspellings, are listed under `related` in `wineries.json` for a person to look over. Approvals from before electronic filing (8 or 9 digit ids) have no form or images and are skipped.
+- **Reading labels.** The vineyard is usually named only in the label artwork. `cola:read` reads labels in priority order (file names that name a known vineyard, then ones with a vineyard word, then ones with some other distinctive word) and only each wine's newest and oldest approval. Jev chooses among likely vineyards, "a vineyard not listed" and "no vineyard"; it can't write text, so a vineyard with no record is left as `needsName` until a person reads the label and sets `newVineyard` in `labels.json`. Readings under 0.9 are kept but not used.
+- **Checking.** `check:fetch` caches a cited approval as its form text plus its label images, and `npm run check` sends the images to Jev with the text. Image reading is an early-stage Jev feature, so records supported only by images are held to `IMAGE_THRESHOLD` in `tools/check/decide.ts`, calibrated with `npm run check:calibrate -- --images` (0.9 on 18 October 2026: no false approvals among 38 corrupted label claims, a small sample), and their note says they were checked this way.
+- **Caveats.** An approval shows a wine was planned, not sold. `cola:caveats` notes this on every connection cited only by approvals, notes when a verification rested on label images alone, and removes either note when it stops being true; a data test enforces the first.
+- **Citations** link to the approval's detail page, which opens without a session. Never store the applicant's phone number or the filer's name.
+
+### WineEnthusiast reviews (OpenML 42074)
+
+`npm run openml:reviews` downloads the [dataset](https://www.openml.org/d/42074) (about 150,000 reviews scraped in June 2017, CC BY-NC-SA 4.0) and keeps four fields of each Oregon review: winery, designation, region and variety. The reviewers' writing, scores and prices are never read. Its research file links wineries to AVAs and to vineyards already in the graph; vineyards with no record go into its notes as leads, and wineries with no record into `.cache/openml/unmatched-wineries.json`. Records cite the dataset page, and the record check reads the same four fields.
 
 ### Adding records from a source
 

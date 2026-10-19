@@ -54,7 +54,7 @@ describe('random node', () => {
       const id = randomNodeId()!
       const node = visibleNodes.value.find((shown) => shown.id === id)!
       if (node.type === 'winery' || node.type === 'vineyard') {
-        expect(avasOf(id).some((ava) => rogue.has(ava))).toBe(true)
+        expect(avasOf(id).some((ava) => rogue.has(ava)), id).toBe(true)
       }
       // Tualatin Vineyards is shown only through Willamette Valley Vineyards' Rogue holdings
       expect(id).not.toBe('tualatin-vineyards')

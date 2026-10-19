@@ -23,7 +23,8 @@
         "url": "https://timatkin.com/celebrating-25-years-of-the-ipnc/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "steamboat-pinot-noir-conference",
@@ -70,6 +71,14 @@
       {
         "title": "Q and A: David Adelsheim (Oregon Wine Press)",
         "url": "https://www.oregonwinepress.com/q-and-a-david-adelsheim"
+      },
+      {
+        "title": "Oregon Pinot Camp Accepting Applications Through Sept. 29 (Oregon Wine Industry)",
+        "url": "https://industry.oregonwine.org/news-and-media/oregon-pinot-camp-accepting-applications-through-sept-29/"
+      },
+      {
+        "title": "Liquid Assets: Dorsey goes to camp (Austin Chronicle)",
+        "url": "https://www.austinchronicle.com/food/liquid-assets-11719746/"
       }
     ],
     "verified": false
@@ -116,6 +125,10 @@
       {
         "title": "Winemaking, Viticulture & Notoriety (Prince of Pinot)",
         "url": "https://www.princeofpinot.com/article/1642/index.html"
+      },
+      {
+        "title": "David Lett (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/David_Lett"
       }
     ],
     "verified": false
@@ -179,6 +192,14 @@
       {
         "title": "Hector Macpherson Jr. (Wikipedia)",
         "url": "https://en.wikipedia.org/wiki/Hector_Macpherson_Jr."
+      },
+      {
+        "title": "Land Use in the 1995 Oregon Legislature (Oregon History Project, Oregon Historical Society)",
+        "url": "https://www.oregonhistoryproject.org/articles/historical-records/land-use-in-the-1995-oregon-legislature/"
+      },
+      {
+        "title": "Land Use Planning Maps: David Adelsheim Collection (Linfield University)",
+        "url": "https://digitalcommons.linfield.edu/land_use_maps/"
       }
     ],
     "verified": false
@@ -225,6 +246,10 @@
       {
         "title": "Oregon Wine History (Oregon Wine Board)",
         "url": "https://www.oregonwine.org/?p=184"
+      },
+      {
+        "title": "How Low Can They Go? Oregon Wineries Tackle Carbon Reduction (Wine Spectator)",
+        "url": "https://www.winespectator.com/webfeature/show/id/42571"
       }
     ],
     "verified": false
@@ -265,6 +290,10 @@
       {
         "title": "Weinnotes newsletter, 1 May 2021",
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-8"
+      },
+      {
+        "title": "Oregon wineries launch 'One Barrel Challenge' for more accessible, inclusive industry (KTVZ)",
+        "url": "https://ktvz.com/community/community-billboard/2021/04/13/oregon-wineries-launch-one-barrel-challenge-for-more-accessible-inclusive-industry/"
       }
     ],
     "verified": false

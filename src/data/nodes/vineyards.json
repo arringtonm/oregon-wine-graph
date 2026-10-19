@@ -10,10 +10,19 @@
     "summary": "The Lett family's founding vineyard in the Dundee Hills and the first of Eyrie's five estate sites, with plantings dated to 1965 and 1968.",
     "planted": 1965,
     "place": "Dundee, OR",
+    "alsoDated": {
+      "planted": [
+        1966
+      ]
+    },
     "sources": [
       {
         "title": "The Eyrie Vineyards: press notes",
         "url": "https://eyrievineyards.com/inform.shtml"
+      },
+      {
+        "title": "Vineyards Established 1965-1971 (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2390/index.html"
       }
     ],
     "verified": false
@@ -163,6 +172,14 @@
       {
         "title": "Maresh family feature (Great Northwest Wine)",
         "url": "https://greatnorthwestwine.com/?p=29531"
+      },
+      {
+        "title": "Maresh Red Barn (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1719/index.html"
+      },
+      {
+        "title": "Maresh Vineyard (¡Salud! Oregon Pinot Noir Auction)",
+        "url": "https://saludauction.org/?p=7151"
       }
     ],
     "verified": false
@@ -212,6 +229,14 @@
       {
         "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
         "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      },
+      {
+        "title": "Erath Pinot Noir Clone 95: A Promising Oregon Suitcase Selection (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/2033/"
+      },
+      {
+        "title": "Pinot Noir \"Clone 95\": Dick Erath Revives an Old Treasure (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/1488/"
       }
     ],
     "verified": false
@@ -231,6 +256,14 @@
       {
         "title": "Dick Erath, Willamette Valley pioneer, passes away at 87 (Northwest Wine Report)",
         "url": "https://www.northwestwinereport.com/2023/03/dick-erath-willamette-valley-pioneer-passes-away-at-87.html"
+      },
+      {
+        "title": "Exclusive: Silver Oak Owners Buy Oregon Vineyard from Dick Erath (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/silver-oak-owners-buy-oregon-vineyard"
+      },
+      {
+        "title": "Prince Hill Vineyards (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/2384/index.html"
       }
     ],
     "verified": false
@@ -242,7 +275,7 @@
     "aka": [
       "Old Vineyard"
     ],
-    "summary": "The Sokol Blosser family's certified-organic estate in the Dundee Hills. Land was bought in 1970 and the first Pinot noir block went into the Old Vineyard in 1971-72.",
+    "summary": "The Sokol Blosser family's certified-organic estate in the Dundee Hills. The family bought the land, a former prune orchard, in 1970. Cuttings set out in a nursery row in 1971 were moved to the Old Vineyard in 1972.",
     "place": "Dayton, OR",
     "sources": [
       {
@@ -254,7 +287,8 @@
         "url": "https://sokolblosser.com/about/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "temperance-hill-vineyard",
@@ -297,6 +331,10 @@
       {
         "title": "Freedom Hill Vineyard collection, 2018 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/freedom-hill-vineyard-collection/"
+      },
+      {
+        "title": "This is how you Start a Vineyard (Post Alley)",
+        "url": "https://www.postalley.org/2024/10/06/this-is-how-you-start-a-vineyard/"
       }
     ],
     "verified": false,
@@ -353,14 +391,15 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/abbey-ridge-vineyard-collection/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/abbey-ridge-vineyard-collection/",
         "title": "Abbey Ridge Vineyard collection",
         "date": "2023-07-13"
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "durant-vineyard",
@@ -384,6 +423,10 @@
       {
         "title": "Durant Vineyards collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/durant-vineyards-collection/"
+      },
+      {
+        "title": "Dundee Hills grape grower pioneers Oregon olive oil (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/2015/03/19/oregon-olive-mill-podcast/"
       }
     ],
     "verified": false,
@@ -431,7 +474,7 @@
     "id": "carter-vineyard",
     "type": "vineyard",
     "name": "Carter Vineyard",
-    "summary": "Eola-Amity Hills vineyard about ten miles west of Salem, planted in 1983 by Jack and Kathleen Carter. Long farmed by Ken Wright Cellars, it is now owned by Ken and Karen Wright.",
+    "summary": "Eola-Amity Hills vineyard about ten miles west of Salem, planted in 1983 by Jack and Kathleen Carter. Ken Wright Cellars managed it for the Carters. Ken Wright bought it from them in 2015. It is now owned by Ken and Karen Wright.",
     "planted": 1983,
     "sources": [
       {
@@ -441,9 +484,18 @@
       {
         "title": "Vineyard: Carter (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/vineyard/180/index.html"
+      },
+      {
+        "title": "Panther Creek Cellars 2014 Carter Vineyard Pinot Noir, Eola-Amity Hills, $65 (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=56971"
+      },
+      {
+        "title": "Ken Wright Cellars (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/125/index.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "canary-hill-vineyard",
@@ -515,7 +567,8 @@
         "url": "https://www.princeofpinot.com/winery/722/index.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "elton-vineyard",
@@ -566,14 +619,14 @@
         "url": "https://www.oregonwinepress.com/resonance-est-arrive"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "quail-run-vineyards",
     "type": "vineyard",
     "name": "Quail Run Vineyards",
     "summary": "Rogue Valley vineyards farmed by the Moore family since 1989, known for warm-climate reds such as Cabernet Sauvignon, Merlot and Syrah. The fruit goes into Willamette Valley Vineyards' Griffin Creek label, and growers Don and Traute Moore also ran South Stage Cellars in Jacksonville.",
-    "planted": 1989,
     "sources": [
       {
         "title": "2021 Griffin Creek Syrah (Willamette Valley Vineyards)",
@@ -584,7 +637,8 @@
         "url": "https://www.portraitmagazine.com/wines-of-the-rogue-valley"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "le-puits-sec-vineyard",
@@ -695,7 +749,8 @@
         "url": "https://www.winespectator.com/articles/crimson-wine-group-buys-seven-hills-vineyard"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "vista-hills-vineyard",
@@ -712,7 +767,8 @@
         "url": "https://www.oregonwinepress.com/coppola-debut"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "watermill-estate-vineyard",
@@ -950,6 +1006,22 @@
       {
         "title": "Lonesome Rock",
         "url": "https://lonesomerock.com"
+      },
+      {
+        "title": "Story (Lonesome Rock)",
+        "url": "https://lonesomerock.com/story"
+      },
+      {
+        "title": "Vineyard (Lonesome Rock)",
+        "url": "https://lonesomerock.com/willamette-valley-vineyard"
+      },
+      {
+        "title": "Corollary (Owen Bargreen)",
+        "url": "https://owenbargreen.com/blog/2026/4/12/corollary"
+      },
+      {
+        "title": "De Ponte Cellars (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/1533/index.html"
       }
     ],
     "verified": false
@@ -1046,6 +1118,10 @@
       {
         "title": "Weinnotes newsletter, 3 August 2024",
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-9"
+      },
+      {
+        "title": "Media Kit 2026 (Ghost Hill Cellars)",
+        "url": "https://www.ghosthillcellars.com/wp-content/uploads/2026/06/Ghost-Hill-Cellars-Media-Kit-2026.pdf"
       }
     ],
     "verified": false
@@ -1148,6 +1224,14 @@
       {
         "title": "Weinnotes newsletter, 25 September 2021",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-16"
+      },
+      {
+        "title": "Meredith Mitchell Vineyard (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/vineyard/188/index.html"
+      },
+      {
+        "title": "Élevée Winegrowers, Meredith Mitchell Vineyard Pinot Noir 2021 (Decanter)",
+        "url": "https://decanter.com/wine-reviews/usa/oregon/elevee-winegrowers-meredith-mitchell-vineyard-pinot-noir-86656"
       }
     ],
     "verified": false
@@ -1165,6 +1249,14 @@
       {
         "title": "Vineyards (Harper Voit)",
         "url": "https://www.harpervoit.com/vineyards"
+      },
+      {
+        "title": "Newsletters (Big Table Farm)",
+        "url": "https://www.bigtablefarm.com/newsletters"
+      },
+      {
+        "title": "Press and Reviews (Big Table Farm)",
+        "url": "https://www.bigtablefarm.com/press-and-reviews"
       }
     ],
     "verified": false
@@ -1242,6 +1334,14 @@
       {
         "title": "Weinnotes newsletter, 29 January 2022",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-32"
+      },
+      {
+        "title": "Bunker Hill (The PinotFile / Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/vineyard/1818/"
+      },
+      {
+        "title": "Exclusive: Constellation Buys Oregon's Lingua Franca (Wine Spectator)",
+        "url": "https://www.winespectator.com/articles/constellation-buys-oregon-s-lingua-franca"
       }
     ],
     "verified": false
@@ -1328,6 +1428,14 @@
       {
         "title": "Weinnotes newsletter, 2 July 2022",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-54"
+      },
+      {
+        "title": "Panther Creek Cellars 2014 Lazy River Vineyard Pinot Noir, Yamhill-Carlton (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=55012"
+      },
+      {
+        "title": "Vineyard: Lazy River (Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/vineyard/740/"
       }
     ],
     "verified": false
@@ -1410,7 +1518,7 @@
     "id": "fennwood-vineyard",
     "type": "vineyard",
     "name": "Fennwood Vineyard",
-    "summary": "Yamhill-Carlton vineyard that supplies Chardonnay to Celestial Hill and is one of Dusky Goose's vineyard sources.",
+    "summary": "Yamhill-Carlton vineyard that supplies Chardonnay to Celestial Hill. A Hampton Lumber subsidiary bought it in 2018 and kept supplying its winery customers, among them Dusky Goose.",
     "sources": [
       {
         "title": "Weinnotes newsletter, 22 October 2022",
@@ -1423,9 +1531,14 @@
       {
         "title": "About (Dusky Goose)",
         "url": "https://www.duskygoose.com/about"
+      },
+      {
+        "title": "Hampton Purchases Fennwood Vineyard in Yamhill-Carlton (Hampton Lumber)",
+        "url": "https://www.hamptonlumber.com/hampton-purchases-fennwood-vineyard-in-yamhill-carlton/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "orchard-house-vineyard",
@@ -1466,7 +1579,8 @@
     "id": "murto-vineyard",
     "type": "vineyard",
     "name": "Murto Vineyard",
-    "summary": "Dundee Hills vineyard from which Authentique makes a single-vineyard Pinot noir.",
+    "summary": "Dundee Hills vineyard owned and farmed by Mike and Robin Murto, planted in 1978. Authentique makes a single-vineyard Pinot noir from it.",
+    "planted": 1978,
     "sources": [
       {
         "title": "Weinnotes newsletter, 4 February 2023",
@@ -1475,15 +1589,24 @@
       {
         "title": "Murto Vineyard collection (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/murto-vineyard-collection/"
+      },
+      {
+        "title": "Vineyard: Murto (The Prince of Pinot)",
+        "url": "https://princeofpinot.com/vineyard/415/index.html"
+      },
+      {
+        "title": "Authentique Wine Cellars, Murto Vineyard Pinot Noir, Dundee Hills, Willamette Valley, Oregon, USA 2019 (Decanter)",
+        "url": "https://decanter.com/wine-reviews/usa/oregon/authentique-wine-cellars-murto-vineyard-pinot-noir-77850"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/murto-vineyard-collection/",
         "title": "Murto Vineyard collection"
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "clos-gallia-vineyard",
@@ -1986,7 +2109,7 @@
   {
     "id": "bramble-hill-vineyard",
     "name": "Bramble Hill Vineyard",
-    "summary": "Pinot Noir vineyard on Ribbon Ridge near Newberg, not open to visitors, whose fruit goes into a vineyard-designated Penner-Ash Pinot Noir.",
+    "summary": "Pinot Noir vineyard on Ribbon Ridge near Newberg, not open to visitors. Its fruit goes into a vineyard-designated Penner-Ash Pinot Noir.",
     "place": "Newberg, OR",
     "sources": [
       {
@@ -1996,10 +2119,15 @@
       {
         "title": "Women of the Willamette Valley: Pioneering the Future (Scout Magazine)",
         "url": "https://scoutmagazine.ca/2019/10/01/women-of-the-willamette-valley-pioneering-the-future/"
+      },
+      {
+        "title": "2014 Penner-Ash Bramble Hill Vineyard Pinot Noir (Delectable)",
+        "url": "https://delectable.com/wine/penner-ash/bramble-hill-vineyard-pinot-noir/2014"
       }
     ],
-    "verified": false,
-    "type": "vineyard"
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
   },
   {
     "id": "halliday-hill-vineyard",
@@ -2310,7 +2438,7 @@
   {
     "id": "aegrina-vineyard",
     "name": "Aegrina Vineyard",
-    "summary": "Vineyard on a southwest-facing slope near McMinnville, in the McMinnville AVA, farmed since 2007. It supplies La Biblioteca and North Valley Vineyards.",
+    "summary": "Vineyard on a southwest-facing slope near McMinnville, in the McMinnville AVA, farmed since 2007. It is one of La Biblioteca's estate vineyards. It is also one of the two estate vineyards of North Valley Vineyards.",
     "sources": [
       {
         "title": "Our Vineyards (La Biblioteca Wine)",
@@ -2325,14 +2453,15 @@
         "url": "https://wineindustryadvisor.com/2021/05/05/soter-vineyards-announces-sale-of-north-valley-brand"
       }
     ],
-    "verified": false,
+    "verified": true,
     "type": "vineyard",
-    "planted": 2007
+    "planted": 2007,
+    "verifiedBy": "jev"
   },
   {
     "id": "north-valley-vineyard",
     "name": "North Valley Vineyard",
-    "summary": "Ten-acre Yamhill-Carlton vineyard planted in 2007, an estate vineyard for both La Biblioteca and North Valley Vineyards.",
+    "summary": "Ten-acre vineyard on a southeast-facing slope in the Yamhill-Carlton AVA, planted in 2007 and one of La Biblioteca's estate vineyards. It is also an estate vineyard of North Valley Vineyards, next to Shea, Penner-Ash and Beaux Freres.",
     "sources": [
       {
         "title": "Our Vineyards (La Biblioteca Wine)",
@@ -2347,9 +2476,10 @@
         "url": "https://wineindustryadvisor.com/2021/05/05/soter-vineyards-announces-sale-of-north-valley-brand"
       }
     ],
-    "verified": false,
+    "verified": true,
     "type": "vineyard",
-    "planted": 2007
+    "planted": 2007,
+    "verifiedBy": "jev"
   },
   {
     "id": "lachini-estate-vineyard",
@@ -2380,9 +2510,10 @@
         "url": "https://www.monksgate.com/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "type": "vineyard",
-    "planted": 2000
+    "planted": 2000,
+    "verifiedBy": "jev"
   },
   {
     "id": "tidalstar-vineyard",
@@ -2482,8 +2613,9 @@
         "url": "https://ocellicellars.com/thewines/single-vineyard-grenache"
       }
     ],
-    "verified": false,
-    "type": "vineyard"
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
   },
   {
     "id": "french-creek-vineyard",
@@ -2520,8 +2652,9 @@
         "url": "https://ocellicellars.com/thewines/single-vineyard-grenache"
       }
     ],
-    "verified": false,
-    "type": "vineyard"
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
   },
   {
     "id": "art-den-hoed-vineyard",
@@ -2541,5 +2674,364 @@
     ],
     "verified": false,
     "type": "vineyard"
+  },
+  {
+    "id": "kennel-vineyard",
+    "name": "Kennel Vineyard",
+    "summary": "Vineyard named on federally approved labels for King Estate Winery wines.",
+    "sources": [
+      {
+        "title": "King Estate Winery Kennel Vineyard Pinot noir 2013, label approved 1 Jun 2015 (TTB COLA 15126001000450)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=15126001000450"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "bradshaw-vineyard",
+    "name": "Bradshaw Vineyard",
+    "summary": "Vineyard named on federally approved labels for King Estate Winery wines.",
+    "sources": [
+      {
+        "title": "King Estate Winery Bradshaw Vineyard Pinot noir 2014, label approved 21 Oct 2015 (TTB COLA 15281001000476)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=15281001000476"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "king-estate-vineyard",
+    "name": "King Estate Vineyard",
+    "summary": "Vineyard named on federally approved labels for King Estate Winery wines.",
+    "sources": [
+      {
+        "title": "King Estate Winery King Estate Vineyard Pinot noir 2018, label approved 13 Feb 2026 (TTB COLA 26041001000010)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26041001000010"
+      },
+      {
+        "title": "King Estate Winery King Estate Vineyard Pinot noir 2018, label approved 22 Jan 2020 (TTB COLA 20015001000976)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=20015001000976"
+      },
+      {
+        "title": "King Estate Winery King Estate Vineyard Pinot noir 2016, label approved 28 Feb 2018 (TTB COLA 18045001000832)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18045001000832"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "amalie-robert-estate-vineyard",
+    "name": "Amalie Robert Estate Vineyard",
+    "summary": "Vineyard named on federally approved labels for Beaux Frères wines.",
+    "sources": [
+      {
+        "title": "Beaux Frères Amalie Robert Estate Vineyard 2009, label approved 12 Oct 2010 (TTB COLA 10271001000510)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=10271001000510"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "justice-vineyard",
+    "name": "Justice Vineyard",
+    "summary": "Vineyard named on federally approved labels for Bethel Heights Vineyard wines.",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard Justice Vineyard Pinot noir 2022, label approved 29 Aug 2023 (TTB COLA 23240001000907)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=23240001000907"
+      },
+      {
+        "title": "Bethel Heights Vineyard Justice Vineyard Pinot noir 2007, label approved 23 Jul 2008 (TTB COLA 08200001000007)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=08200001000007"
+      },
+      {
+        "title": "Bethel Heights Vineyard Justice Vineyard Pinot noir 2004, label approved 22 Oct 2005 (TTB COLA 05270001000106)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=05270001000106"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "jessie-james-vineyard",
+    "name": "Jessie James Vineyard",
+    "summary": "Vineyard named on federally approved labels for Bethel Heights Vineyard wines.",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard Jessie James Vineyard 2006, label approved 3 Dec 2007 (TTB COLA 07334001000191)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=07334001000191"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "illahe-vineyard",
+    "name": "Illahe Vineyard",
+    "summary": "Vineyard named on federally approved labels for Bethel Heights Vineyard wines.",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard Illahe Vineyard Pinot noir and Gruner veltliner 2013, label approved 23 Oct 2014 (TTB COLA 14283001000009)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=14283001000009"
+      },
+      {
+        "title": "Bethel Heights Vineyard Illahe Vineyard Pinot noir and Gruner veltliner 2013, label approved 24 Mar 2014 (TTB COLA 14059001000532)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=14059001000532"
+      },
+      {
+        "title": "Bethel Heights Vineyard Illahe Vineyard Pinot noir and Gruner veltliner 2011, label approved 11 Oct 2012 (TTB COLA 12277001000386)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=12277001000386"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "lewman-vineyard",
+    "name": "Lewman Vineyard",
+    "summary": "Vineyard named on federally approved labels for Bethel Heights Vineyard wines.",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard Lewman Vineyard Pinot noir 2022, label approved 29 Aug 2023 (TTB COLA 23240001000908)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=23240001000908"
+      },
+      {
+        "title": "Bethel Heights Vineyard Lewman Vineyard Pinot noir 2021, label approved 5 Jul 2022 (TTB COLA 22179001001056)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=22179001001056"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "jessie-vineyard",
+    "name": "Jessie Vineyard",
+    "summary": "Vineyard named on federally approved labels for Bethel Heights Vineyard wines.",
+    "sources": [
+      {
+        "title": "Bethel Heights Vineyard Jessie Vineyard Pinot noir 2024, label approved 21 Jan 2026 (TTB COLA 26016001000143)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26016001000143"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "spirit-hill-vineyard",
+    "name": "Spirit Hill Vineyard",
+    "summary": "Vineyard named on federally approved labels for Argyle Winery wines.",
+    "sources": [
+      {
+        "title": "Argyle Winery Spirit Hill Vineyard Pinot noir, Chardonnay, Pinot meunier and N 2025, label approved 22 Sep 2026 (TTB COLA 26260001000611)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26260001000611"
+      },
+      {
+        "title": "Argyle Winery Spirit Hill Vineyard Pinot noir, Chardonnay, Pinot meunier and N 2022, label approved 6 Feb 2024 (TTB COLA 24033001000412)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=24033001000412"
+      },
+      {
+        "title": "Argyle Winery Spirit Hill Vineyard Pinot noir, Chardonnay, Pinot meunier and N 2012, label approved 7 Jul 2014 (TTB COLA 14157001000336)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=14157001000336"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "lone-star-vineyard",
+    "name": "Lone Star Vineyard",
+    "summary": "Vineyard named on federally approved labels for Argyle Winery wines.",
+    "sources": [
+      {
+        "title": "Argyle Winery Lone Star Vineyard Pinot noir and Chardonnay 2025, label approved 18 Sep 2026 (TTB COLA 26259001000137)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26259001000137"
+      },
+      {
+        "title": "Argyle Winery Lone Star Vineyard Pinot noir and Chardonnay 2022, label approved 28 Nov 2023 (TTB COLA 23332001000273)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=23332001000273"
+      },
+      {
+        "title": "Argyle Winery Lone Star Vineyard Pinot noir and Chardonnay 2014, label approved 12 May 2017 (TTB COLA 17130001000056)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=17130001000056"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "giving-tree-vineyard",
+    "name": "Giving Tree Vineyard",
+    "summary": "Vineyard named on federally approved labels for Argyle Winery wines.",
+    "sources": [
+      {
+        "title": "Argyle Winery Giving Tree Vineyard Pinot noir and Chardonnay 2022, label approved 3 Apr 2024 (TTB COLA 24088001000260)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=24088001000260"
+      },
+      {
+        "title": "Argyle Winery Giving Tree Vineyard Pinot noir and Chardonnay 2021, label approved 31 Oct 2022 (TTB COLA 22300001000678)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=22300001000678"
+      },
+      {
+        "title": "Argyle Winery Giving Tree Vineyard Pinot noir and Chardonnay 2018, label approved 26 Dec 2019 (TTB COLA 19354001000283)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=19354001000283"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "weinbau-vineyard",
+    "name": "Weinbau Vineyard",
+    "summary": "Vineyard named on federally approved labels for Argyle Winery wines.",
+    "outsideOregon": true,
+    "sources": [
+      {
+        "title": "Argyle Winery Weinbau Vineyard Merlot 2022, label approved 25 Mar 2025 (TTB COLA 25076001000074)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=25076001000074"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "ribbon-springs-vineyard",
+    "name": "Ribbon Springs Vineyard",
+    "summary": "Vineyard named on federally approved labels for Adelsheim Vineyard wines.",
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard Ribbon Springs Vineyard 2006, label approved 14 Sep 2007 (TTB COLA 07248001000285)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=07248001000285"
+      },
+      {
+        "title": "Adelsheim Vineyard Ribbon Springs Vineyard 2005, label approved 3 Sep 2006 (TTB COLA 06233001000060)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=06233001000060"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "calkins-lane-vineyard",
+    "name": "Calkins Lane Vineyard",
+    "summary": "Vineyard named on federally approved labels for Adelsheim Vineyard wines.",
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard Calkins Lane Vineyard 2006, label approved 13 Sep 2007 (TTB COLA 07248001000277)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=07248001000277"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "bryan-creek-vineyard",
+    "name": "Bryan Creek Vineyard",
+    "summary": "Vineyard named on federally approved labels for Adelsheim Vineyard wines.",
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard Bryan Creek Vineyard Pinot noir 2018, label approved 30 Jan 2020 (TTB COLA 20027001000568)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=20027001000568"
+      },
+      {
+        "title": "Adelsheim Vineyard Bryan Creek Vineyard Pinot noir 2006, label approved 13 Sep 2007 (TTB COLA 07248001000282)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=07248001000282"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "anna-louise-vineyard",
+    "name": "Anna-Louise Vineyard",
+    "summary": "Vineyard named on federally approved labels for Adelsheim Vineyard wines.",
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard Anna-Louise Vineyard 2007, label approved 2 Sep 2008 (TTB COLA 08241001000161)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=08241001000161"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "winderlea-vineyard",
+    "name": "Winderlea Vineyard",
+    "summary": "Vineyard named on federally approved labels for Adelsheim Vineyard wines.",
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard Winderlea Vineyard 2007, label approved 2 Sep 2008 (TTB COLA 08241001000163)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=08241001000163"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "nicholas-vineyard",
+    "name": "Nicholas Vineyard",
+    "summary": "Vineyard named on federally approved labels for Adelsheim Vineyard wines.",
+    "sources": [
+      {
+        "title": "Adelsheim Vineyard Nicholas Vineyard Pinot noir 2012, label approved 26 Jun 2015 (TTB COLA 15160001000392)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=15160001000392"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "medici-vineyard",
+    "name": "Medici Vineyard",
+    "summary": "Vineyard named on federally approved labels for Patricia Green Cellars wines.",
+    "sources": [
+      {
+        "title": "Patricia Green Cellars Medici Vineyard Pinot noir 2015, label approved 25 Jul 2016 (TTB COLA 16186001000078)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=16186001000078"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "johan-vineyard",
+    "name": "Johan Vineyard",
+    "summary": "Vineyard named on federally approved labels for Day Wines wines.",
+    "sources": [
+      {
+        "title": "Day Wines Johan Vineyard Pinot noir 2021, label approved 13 Feb 2023 (TTB COLA 23038001000956)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=23038001000956"
+      },
+      {
+        "title": "Day Wines Johan Vineyard Pinot noir 2014, label approved 16 Jul 2015 (TTB COLA 15170001000209)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=15170001000209"
+      }
+    ],
+    "verified": true,
+    "type": "vineyard",
+    "verifiedBy": "jev"
   }
 ]
