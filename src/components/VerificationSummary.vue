@@ -49,10 +49,24 @@ function click() {
   }
 }
 
+// Whether the note being closed was pinned open, so focus may need to come back
+let closingPinned = false
+
 function dismiss(value: boolean) {
   if (value) return
+  closingPinned = pinned.value
   open.value = false
   pinned.value = false
+}
+
+// The button is an anchor, not a Reka trigger, so Reka can't return focus to it. When a
+// pinned note closes with focus inside it or lost (Escape), focus goes back to the button;
+// a click elsewhere, or a note shown by hovering, leaves focus where it is
+function returnFocus(event: Event) {
+  event.preventDefault()
+  const active = document.activeElement
+  if (closingPinned && (!active || active === document.body || active.closest('.verification-note'))) button.value?.focus()
+  closingPinned = false
 }
 
 // Clicks on the button itself are handled by click(), not treated as clicking outside
@@ -71,7 +85,7 @@ onBeforeUnmount(() => clearTimeout(timer))
         type="button"
         class="verification"
         :class="{ 'verification--none': verifiedCount === 0 }"
-        :aria-label="`Verification: ${verifiedCount} of ${facts.length} facts verified`"
+        :aria-label="`${summary}: how each fact was checked`"
         :aria-expanded="open"
         aria-haspopup="dialog"
         :data-state="open ? 'open' : 'closed'"
@@ -95,7 +109,7 @@ onBeforeUnmount(() => clearTimeout(timer))
         :collision-padding="12"
         :aria-label="`How we checked ${name}`"
         @open-auto-focus="!pinned && $event.preventDefault()"
-        @close-auto-focus="!pinned && $event.preventDefault()"
+        @close-auto-focus="returnFocus"
         @interact-outside="insideButton"
         @pointerenter="hover(true, $event)"
         @pointerleave="hover(false, $event)"

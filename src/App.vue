@@ -265,4 +265,19 @@ onBeforeUnmount(() => {
     display: none;
   }
 }
+
+/* Narrow phones: the title, Beta and the theme glasses overflowed 360px by 8px, cutting off
+   the dark glass, and 320px (WCAG reflow) by 48px. Tighter spacing and a slightly smaller
+   title keep everything on one line */
+@media (max-width: 400px) {
+  .app__header {
+    gap: 0.5rem;
+    padding: 0 0.75rem;
+  }
+
+  .app__header h1 {
+    gap: 0.4rem;
+    font-size: 1.125rem;
+  }
+}
 </style>

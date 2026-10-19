@@ -58,7 +58,7 @@ Fix severity 3–4 findings that don't conflict with a recorded decision. Report
 
 1. **Visibility of system status.**
    - Selection is shown on the graph and in the panel.
-   - The busy overlay appears for Reset and Random.
+   - The busy overlay appears for Random, guides and the first AVA regions view. Reset restores the saved arrangement at once (since 17 Oct).
    - Verification counts are visible.
    - Flag sending shows progress and a thank-you.
    - The address follows the selection.
@@ -130,7 +130,7 @@ From [Icon Usability](https://www.nngroup.com/articles/icon-usability/):
   - root 14px (`font-size: 87.5%`);
   - Fraunces Variable for the header title (1.3125rem, 650) and record names in the detail panel (1.4rem, 650);
   - Nunito Variable for everything else.
-- **Sizes in use:** 0.75, 0.8125, 0.875, 0.9375, 1, 1.0625, 1.3, 1.3125 and 1.4rem: nine sizes, against NN/g's three levels. Consolidating them is an open item.
+- **Sizes in use:** 0.6875 (Beta pill), 0.75, 0.8125, 0.875, 0.9375, 1, 1.05, 1.0625, 1.125 (title at 400px and narrower), 1.3, 1.3125 and 1.4rem: twelve sizes, against NN/g's three levels. Consolidating them is an open item.
 - **Section headings:** 0.875rem, 600 weight, uppercase, letter-spaced, secondary colour, with 26px above. Verb subheadings: 0.9375rem, 600, sentence case.
 - **Colour** (`src/style.css`):
   - a burgundy accent and fill;
@@ -160,7 +160,7 @@ From [Icon Usability](https://www.nngroup.com/articles/icon-usability/):
   | Two glasses (Chardonnay, red) | theme switch, header | – | Tip each | "Light mode", "Dark mode", in a group named "Theme" |
   | i | About (graph corner) | – | data-tip | "About the site" |
   | i | beside "Verified records only" | – | – | "How records are verified" |
-  | Check circle | verification bar | "15 of 18 verified" | – | full sentence |
+  | Check circle | verification bar | "15 of 18 verified" | – | "15 of 18 verified: how each fact was checked" (starts with the visible text, WCAG 2.5.3) |
   | Flag | foot of a record | "Flag" | – | "Flag a fact for review" |
   | × | closes | – | – | "Close", "Close details" |
   | Node silhouettes | graph, panel, lists | names beside them | – | decorative |
@@ -190,7 +190,7 @@ From [Icon Usability](https://www.nngroup.com/articles/icon-usability/):
   | <430px | Fit hidden |
   | <380px | Random and History's chevron hidden |
 
-  The site must work down to 360px.
+  The site must work down to 360px, and reflow without sideways scrolling at 320px (WCAG 1.4.10). At 400px and narrower the header tightens and the title drops to 1.125rem; at 340px and narrower the theme glasses narrow to 28px.
 
 ## Decisions Michael has made (rate tensions; don't reverse)
 

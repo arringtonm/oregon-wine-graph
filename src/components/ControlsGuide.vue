@@ -184,15 +184,18 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
           :collision-padding="12"
           aria-labelledby="controls-guide-heading"
         >
-          <header class="guide__header">
+          <!-- A div, not <header>: outside a sectioning element a header is the page's banner,
+               and the page already has one -->
+          <div class="guide__header">
             <h2 id="controls-guide-heading">{{ touchOnly ? 'Touch controls' : 'Controls' }}</h2>
             <span class="guide__platform">{{ deviceName }}</span>
             <button type="button" class="guide__tour" @click="takeTour">Take the tour</button>
             <button type="button" class="guide__close" aria-label="Close the controls" @click="open = false">
               <span aria-hidden="true">×</span>
             </button>
-          </header>
-          <div class="guide__body">
+          </div>
+          <!-- Focusable so keyboard readers can scroll it (WCAG 2.1.1) -->
+          <div class="guide__body" tabindex="0" role="region" aria-label="Controls list">
             <section v-for="section in sections" :key="section.title" :aria-labelledby="`guide-${section.title}`">
               <h3 :id="`guide-${section.title}`">{{ section.title }}</h3>
               <dl>
@@ -346,6 +349,8 @@ kbd {
 
 .guide__body {
   overflow-y: auto;
+  /* Its focus ring sits inside, where the panel's edge can't clip it */
+  outline-offset: -2px;
   padding: 0.25rem 1.125rem 1rem;
 }
 

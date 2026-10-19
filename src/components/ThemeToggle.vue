@@ -97,6 +97,13 @@ const choices: { theme: Theme; label: string; wine: string }[] = [
   stroke-linejoin: round;
 }
 
+/* The narrowest phones (320px, WCAG reflow): a little narrower, so the header fits */
+@media (max-width: 340px) {
+  .theme-switch__option {
+    width: 28px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .theme-switch::before,
   .theme-switch__option {

@@ -35,7 +35,7 @@ describe('the card’s verification', () => {
   it('counts the verified facts', () => {
     const wrapper = mount(VerificationSummary, { props: { facts, name: 'X' } })
     expect(wrapper.text()).toContain('1 of 2 verified')
-    expect(wrapper.get('button').attributes('aria-label')).toBe('Verification: 1 of 2 facts verified')
+    expect(wrapper.get('button').attributes('aria-label')).toBe('1 of 2 verified: how each fact was checked')
   })
 
   it('says so when nothing is verified yet', () => {

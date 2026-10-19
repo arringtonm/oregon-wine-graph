@@ -148,6 +148,9 @@ let layout: cytoscape.Layouts | undefined
 // Dev server only: the first load found no usable saved layout, so the fresh one it runs is
 // saved. Reset, guides and filters never save, so the shipped layout changes only on purpose
 let saveWhenLaidOut = false
+// Dev server only, opened as /?tidy-layout: keep the saved layout, place nodes added since,
+// untangle every overlap and save the result, so readers' browsers needn't do it on load
+const tidyLayout = import.meta.env.DEV && new URLSearchParams(location.search).has('tidy-layout')
 // Matches the breakpoint where the detail panel becomes a bottom sheet
 const compactQuery = window.matchMedia('(max-width: 1024px)')
 // Where the zoom buttons go: the toolbar when wide, a column down the right edge when compact
@@ -452,13 +455,21 @@ function onWheel(event: WheelEvent) {
   }
 }
 
-// Back to the starting view: default filters, nothing selected, fresh layout
+// Back to the starting view: default filters, nothing selected, and the opening arrangement
+// that ships with the site. Laying the graph out afresh instead froze the page for about 1.5s
+// (6s on a phone) and left readers in an unfamiliar arrangement
 async function reset() {
   opening = true
   resetFilters()
   select(null)
   await nextTick()
-  runLayout(true)
+  if (!cy) return
+  const ids = plainNodes().map((node) => node.id())
+  if (state.categories.geography || coverage(savedLayout, ids) < 0.9) return runLayout(true)
+  // Nodes added since the layout was saved keep the places they were given at load
+  for (const [id, [x, y]] of Object.entries(savedLayout.positions)) knownPositions.flat.set(id, { x, y })
+  placeNodes(ids)
+  fitOpening()
 }
 
 // A full layout blocks the page for a second or two. The overlay is painted first (two
@@ -533,12 +544,17 @@ function layoutNow(randomize: boolean) {
   layout.run()
 }
 
+// How far around newly placed nodes separateNodes looks for collisions, in graph units
+const NEIGHBOURHOOD = 400
+
 // The force layout spaces nodes out on average but leaves some nodes and labels on top of
-// each other; nudge those apart, moving well-connected nodes least
-function separateNodes() {
+// each other; nudge those apart, moving well-connected nodes least. Given `around`, only the
+// neighbourhood of those nodes is untangled, the rest of it held nearly still: for a handful
+// of newly placed nodes, a pass over the whole graph took 0.4s (1.6s on a phone)
+function separateNodes(around?: string[]) {
   if (!cy) return
   const nodes = cy.nodes().filter((node) => node.isChildless())
-  const boxes = nodes.map((node: cytoscape.NodeSingular) => {
+  let boxes = nodes.map((node: cytoscape.NodeSingular) => {
     const box = node.boundingBox({ includeLabels: true })
     return {
       id: node.id(),
@@ -549,6 +565,15 @@ function separateNodes() {
       weight: 1 + node.degree(false),
     }
   })
+  if (around) {
+    const movers = new Set(around)
+    const placed = boxes.filter((box) => movers.has(box.id))
+    const near = (a: (typeof boxes)[number], b: (typeof boxes)[number]) =>
+      Math.abs(a.x - b.x) < NEIGHBOURHOOD + (a.width + b.width) / 2 && Math.abs(a.y - b.y) < NEIGHBOURHOOD + (a.height + b.height) / 2
+    boxes = boxes
+      .filter((box) => movers.has(box.id) || placed.some((mover) => near(mover, box)))
+      .map((box) => (movers.has(box.id) ? box : { ...box, weight: box.weight * 100 }))
+  }
   const { moves } = removeOverlaps(boxes)
   cy.batch(() => {
     for (const [id, { dx, dy }] of moves) {
@@ -662,7 +687,11 @@ function syncElements() {
     const usable = !state.categories.geography && coverage(savedLayout, ids) >= 0.9
     if (usable && placeNodes(ids)) {
       // Nodes added since the layout was saved may collide with their neighbours
-      if (ids.some((id) => !(id in savedLayout.positions))) separateNodes()
+      const unsaved = ids.filter((id) => !(id in savedLayout.positions))
+      if (tidyLayout) {
+        separateNodes()
+        saveLayout()
+      } else if (unsaved.length > 0) separateNodes(unsaved)
       rememberPositions()
       fitOpening()
       centerOnSelection()
@@ -675,8 +704,10 @@ function syncElements() {
     if (placeNodes(plainNodes().map((node) => node.id()), 0)) fit()
     else runLayout(true)
   } else if (added.length > 0) {
-    if (placeNodes(plain(added))) separateNodes()
-    else runLayout(true)
+    // Nodes coming back return to places already untangled; only new ones may collide
+    const fresh = plain(added).filter((id) => !positionsNow().has(id))
+    if (!placeNodes(plain(added))) runLayout(true)
+    else if (fresh.length > 0) separateNodes(fresh)
   } else if (resized) {
     // Nodes that grew may now overlap their neighbours
     separateNodes()
@@ -1090,7 +1121,7 @@ watch(
         @zoom="zoomBy"
         @fit="fitAnimated"
       />
-      <span id="reset-description" class="visually-hidden">Clear filters and selection, and lay the graph out again</span>
+      <span id="reset-description" class="visually-hidden">Clear filters and selection, and return the graph to its opening arrangement</span>
     </div>
     <!-- Phones and tablets: zoom on the graph's corner, above About, after the toolbar in tab order -->
     <ZoomControls
