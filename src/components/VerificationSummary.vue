@@ -2,6 +2,7 @@
 import { PopoverAnchor, PopoverArrow, PopoverContent, PopoverPortal, PopoverRoot } from 'reka-ui'
 import { computed, onBeforeUnmount, ref } from 'vue'
 import verifiedSources from '../data/verified-sources.json'
+import { caveatsOf } from '../graph/caveats'
 import type { Fact } from '../services/facts'
 
 // The foot of a record's card: how many of its facts are verified. Its note lists every fact
@@ -20,8 +21,15 @@ function supportingIndex(fact: Fact): number | undefined {
   return (verifiedSources as Record<string, number>)[`${fact.kind}:${fact.record.id}`]
 }
 
+// A connection resting only on federal label approvals, or verified from label images, says so
+// here rather than beside the connection on the card
+const caveats = (fact: Fact) => caveatsOf('note' in fact.record ? fact.record.note : undefined)
+
 function howChecked(fact: Fact): string {
   if (!fact.record.verified) return 'Not yet verified'
+  if (fact.record.verifiedBy === 'jev' && caveats(fact).byImage) {
+    return 'Verified by Oregon Wine Graph Bot from the label images, an early-stage method'
+  }
   if (fact.record.verifiedBy === 'jev') return 'Verified by Oregon Wine Graph Bot'
   if (fact.record.verifiedBy === 'boundary') return 'Verified against official AVA boundary maps'
   return 'Reviewed by Oregon Wine Graph'
@@ -126,6 +134,9 @@ onBeforeUnmount(() => clearTimeout(timer))
                 {{ fact.label }}<template v-if="fact.years"> ({{ fact.years }})</template>
               </p>
               <p class="verification-note__how">{{ howChecked(fact) }}</p>
+              <p v-if="caveats(fact).labelOnly" class="verification-note__how">
+                Label approvals only: no other source confirms the wine was released
+              </p>
               <p class="verification-note__sources">
                 <span v-for="(source, index) in fact.record.sources" :key="source.title" class="verification-note__source">
                   <a v-if="source.url" :href="source.url" target="_blank" rel="noopener">

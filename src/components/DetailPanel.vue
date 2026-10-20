@@ -14,7 +14,7 @@ import VerificationSummary from './VerificationSummary.vue'
 import { factsOf } from '../services/facts'
 import { hasDisputedYears } from '../graph/format'
 import DisputedYears from './DisputedYears.vue'
-import { shareCaveats } from '../graph/caveats'
+import { withoutCaveats } from '../graph/caveats'
 import { flagsAvailable } from '../services/flags'
 
 const {
@@ -208,20 +208,13 @@ function rowsOf(block: ConnectionBlock): Row[] {
     return {
       ...ordered[0],
       about: ordered.map((c) => aboutConnection(block, c.verb, c.detail, c.years)).filter(Boolean).join('; '),
-      notes: ordered.map((c) => c.edge.note).filter((note): note is string => Boolean(note)),
+      // Caveats about label approvals are left to the verification note at the foot
+      notes: ordered.map((c) => withoutCaveats(c.edge.note)).filter((note): note is string => Boolean(note)),
       disputed: ordered
         .filter((c) => hasDisputedYears(c.edge))
         .map((c) => `${c.other.name} (${aboutConnection(block, c.verb, c.detail, c.years) || c.years})`),
     }
   })
-}
-
-// Each block's rows, with a caveat that several of them share said once beneath the list
-function listedBlocks(connections: Connection[]) {
-  return blocksOf(connections).map((block) => ({
-    heading: block.heading,
-    ...shareCaveats(rowsOf(block).map((row) => ({ ...row, name: row.other.name }))),
-  }))
 }
 
 const unverifiedOnCard = computed(
@@ -316,10 +309,10 @@ const canFlag = flagsAvailable()
 
       <section v-for="group in groups" :key="group.category">
         <h3>{{ EDGE_CATEGORY_LABELS[group.category] }}</h3>
-        <template v-for="block in listedBlocks(group.connections)" :key="block.heading ?? ''">
+        <template v-for="block in blocksOf(group.connections)" :key="block.heading ?? ''">
           <h4 v-if="block.heading" class="detail__verb">{{ block.heading }}</h4>
           <ul>
-            <li v-for="{ edge, other, label, about, notes, disputed } in block.rows" :key="edge.id">
+            <li v-for="{ edge, other, label, about, notes, disputed } in rowsOf(block)" :key="edge.id">
               <!-- The name and what follows it read as one line of text, wrapping as a sentence does -->
               <span class="detail__entry">
                 <NodePreview :node="other">
@@ -363,7 +356,6 @@ const canFlag = flagsAvailable()
               <ReviewTools v-if="reviewing" :key="edge.id" kind="edge" :record="edge" :label="`${label} ${other.name}`" />
             </li>
           </ul>
-          <p v-for="caveat in block.caveats" :key="caveat" class="detail__caveat">{{ caveat }}</p>
         </template>
       </section>
       <p v-if="groups.length === 0" class="detail__facts">No connections recorded yet.</p>
@@ -705,12 +697,6 @@ ul + .detail__verb {
 
 .detail__note {
   flex-basis: 100%;
-  color: var(--text-secondary);
-  font-size: 0.875rem;
-}
-
-.detail__caveat {
-  margin: 4px 0 0;
   color: var(--text-secondary);
   font-size: 0.875rem;
 }

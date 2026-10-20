@@ -62,12 +62,6 @@ const edgeId = (source: string, type: GraphEdge['type'], target: string) => `${s
 const existingEdge = (graph: Graph, source: string, target: string, types: GraphEdge['type'][]) =>
   graph.edges.find((edge) => edge.source === source && edge.target === target && types.includes(edge.type))
 
-const yearsNote = (years: number[]) => {
-  const sorted = [...new Set(years)].sort()
-  if (sorted.length === 0) return undefined
-  return `Vintage${sorted.length > 1 ? 's' : ''} on approved labels: ${sorted.join(', ')}.`
-}
-
 interface Approval {
   form: ColaForm
   reading?: LabelReading
@@ -154,7 +148,8 @@ export function buildResearch(
         varieties.length > 1 ? `${varieties.slice(0, -1).join(', ')} and ${varieties[varieties.length - 1]}` : (varieties[0] ?? '')
       const wine = `${vineyardName} ${named}`.trim()
       const vintage = (approval: Approval) => approval.form.vintage ?? approval.reading?.vintage
-      const sources = pickApprovals(list).map((approval) => colaSource(approval.form, winery.name, wine, vintage(approval)))
+      const picked = pickApprovals(list)
+      const sources = picked.map((approval) => colaSource(approval.form, winery.name, wine, vintage(approval)))
       const created = nodes.get(vineyard.id)
       if (created) {
         for (const source of sources) if (!created.sources.some((have) => have.url === source.url)) created.sources.push(source)
@@ -176,15 +171,15 @@ export function buildResearch(
       const existing = existingEdge(graph, wineryId, vineyard.id, ['owns', 'sources_from'])
       // A vineyard carrying the winery's own name ("King Estate Vineyard") is its estate
       const estate = !existing && nameKey(vineyard.name) === nameKey(winery.name)
-      const years = list
-        .map((approval) => vintage(approval))
-        .filter((year): year is number => typeof year === 'number')
+      // Only the vintages of the approvals cited, so each one can be checked
+      const vintages = [...new Set(picked.map(vintage).filter((year): year is number => typeof year === 'number'))].sort()
       edges.push({
         id: existing?.id ?? edgeId(wineryId, estate ? 'owns' : 'sources_from', vineyard.id),
         source: wineryId,
         target: vineyard.id,
         type: existing?.type ?? (estate ? 'owns' : 'sources_from'),
-        ...(existing ? {} : { role: estate ? 'estate vineyard' : wine, ...(yearsNote(years) ? { note: yearsNote(years) } : {}) }),
+        // The wine's name is in each source's title; the card shows the vintages as its years
+        ...(existing ? {} : { ...(estate ? { role: 'estate vineyard' } : {}), ...(vintages.length ? { vintages } : {}) }),
         sources,
         verified: false,
       })

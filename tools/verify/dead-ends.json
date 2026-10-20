@@ -38,5 +38,21 @@
  "node:travis-todd": {
   "date": "2026-10-19",
   "finding": "The de la boue About page states the Yellowstone Club wine-buyer job, a 2014 Pinot Camp trip followed by a harvest, the 2017 move to Oregon, and a rise from cellar hand to head winemaker 'at one of the largest wineries in Oregon' within five years, but it names neither Wine by Joe nor Integrated Beverage Group. Only a Wine Berserkers forum post (not citable) ties him to IBG, and the OWHA summary gives neither. If the names can't be kept on Weinnotes alone, a supported sentence would be: 'A former wine buyer at the Yellowstone Club in Montana, he moved to Oregon in 2017 and within five years went from cellar hand to head winemaker at one of the state's largest wineries.'"
+ },
+ "node:anna-louise-vineyard": {
+  "date": "2026-10-20",
+  "finding": "No published source found for an Anna-Louise Vineyard, at Adelsheim or anywhere in Oregon; Adelsheim's vineyards page doesn't list it, and searches only turn up Cristom's Louise Vineyard, a different site."
+ },
+ "node:jessie-vineyard": {
+  "date": "2026-10-20",
+  "finding": "I found no published source for a 'Jessie Vineyard' bottled by Bethel Heights; only the 2024 label approval names it. It may be the same site as Jessie James Vineyard (node:jessie-james-vineyard) under a shorter name, but no source says so, so I proposed nothing."
+ },
+ "node:ribbon-springs-vineyard": {
+  "date": "2026-10-20",
+  "finding": "Retry without the sentence or year the check could not support."
+ },
+ "node:medici-vineyard": {
+  "date": "2026-10-20",
+  "finding": "Shorter retry; planting year left out (1976 or earlier)."
  }
 }

@@ -91,6 +91,8 @@ export function claimsFor(item: CheckedRecord, graph: Graph): Claims {
   if (edge.role && edge.type !== 'family') details.role = `${subject}, specifically as: ${edge.role}.`
   if (edge.startYear !== undefined) Object.assign(details, yearClaims(edge, 'startYear', (y) => `${subject}, starting in ${y}.`))
   if (edge.endYear !== undefined) Object.assign(details, yearClaims(edge, 'endYear', (y) => `${subject}, and this ended in ${y}.`))
+  // Each vintage is its own claim, which the approval for that wine supports
+  for (const y of edge.vintages ?? []) details[`vintage${y}`] = `${subject}, for a wine of the ${y} vintage.`
   const types = allowedEdgeTypes(source.type, target.type)
   const relationships =
     types.length > 1

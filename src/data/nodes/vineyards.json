@@ -2678,11 +2678,15 @@
   {
     "id": "kennel-vineyard",
     "name": "Kennel Vineyard",
-    "summary": "Vineyard named on federally approved labels for King Estate Winery wines.",
+    "summary": "A 28-acre Willamette Valley vineyard set midway between Corvallis and Monmouth, established in 2007 and farmed by Jeremy Kennel, whose family has worked the land for five generations. King Estate Winery bottles Pinot noir from it.",
     "sources": [
       {
         "title": "King Estate Winery Kennel Vineyard Pinot noir 2013, label approved 1 Jun 2015 (TTB COLA 15126001000450)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=15126001000450"
+      },
+      {
+        "title": "2016 King Estate Kennel Pinot Noir (King Estate Winery)",
+        "url": "https://kingestate.com/products/2016-king-estate-kennel-pinot-noir/"
       }
     ],
     "verified": true,
@@ -2692,11 +2696,15 @@
   {
     "id": "bradshaw-vineyard",
     "name": "Bradshaw Vineyard",
-    "summary": "Vineyard named on federally approved labels for King Estate Winery wines.",
+    "summary": "Jim and Maria Bradshaw's vineyard near Junction City, in the southern Willamette Valley, is a growing partner of King Estate Winery, which bottles a Bradshaw Pinot noir.",
     "sources": [
       {
         "title": "King Estate Winery Bradshaw Vineyard Pinot noir 2014, label approved 21 Oct 2015 (TTB COLA 15281001000476)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=15281001000476"
+      },
+      {
+        "title": "Spotlight On: Bradshaw Vineyard (King Estate Winery)",
+        "url": "https://kingestate.com/spotlight-on-bradshaw-vineyard/"
       }
     ],
     "verified": true,
@@ -2706,7 +2714,7 @@
   {
     "id": "king-estate-vineyard",
     "name": "King Estate Vineyard",
-    "summary": "Vineyard named on federally approved labels for King Estate Winery wines.",
+    "summary": "King Estate Winery's own vineyard surrounds the winery near Lorane, Oregon, on an estate Ed King founded in 1991 that has grown to 1,033 acres. Long certified organic, the estate adopted the Biodynamic standard in 2016, and the winery calls it North America's largest certified Biodynamic vineyard.",
     "sources": [
       {
         "title": "King Estate Winery King Estate Vineyard Pinot noir 2018, label approved 13 Feb 2026 (TTB COLA 26041001000010)",
@@ -2719,6 +2727,10 @@
       {
         "title": "King Estate Winery King Estate Vineyard Pinot noir 2016, label approved 28 Feb 2018 (TTB COLA 18045001000832)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18045001000832"
+      },
+      {
+        "title": "On Turning 30 (King Estate Winery)",
+        "url": "https://kingestate.com/?p=3865"
       }
     ],
     "verified": true,
@@ -2728,11 +2740,19 @@
   {
     "id": "amalie-robert-estate-vineyard",
     "name": "Amalie Robert Estate Vineyard",
-    "summary": "Vineyard named on federally approved labels for Beaux Frères wines.",
+    "summary": "Dena Drews and Ernie Pink's estate vineyard just outside Dallas, at the western edge of the Willamette Valley, bordering Freedom Hill Vineyard. Beaux Frères has bottled wine from it.",
     "sources": [
       {
         "title": "Beaux Frères Amalie Robert Estate Vineyard 2009, label approved 12 Oct 2010 (TTB COLA 10271001000510)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=10271001000510"
+      },
+      {
+        "title": "Amalie Robert Estate (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/article/1860/index.html"
+      },
+      {
+        "title": "About (Amalie Robert Estate)",
+        "url": "https://amalierobert.substack.com/about"
       }
     ],
     "verified": true,
@@ -2742,7 +2762,8 @@
   {
     "id": "justice-vineyard",
     "name": "Justice Vineyard",
-    "summary": "Vineyard named on federally approved labels for Bethel Heights Vineyard wines.",
+    "summary": "An estate vineyard of Bethel Heights Vineyard in the Eola-Amity Hills, on land just south of the winery's original vineyard that Bethel Heights acquired and began planting in 1999. Bethel Heights bottles a Justice Vineyard Pinot noir and also sells some of the fruit to other wineries.",
+    "planted": 1999,
     "sources": [
       {
         "title": "Bethel Heights Vineyard Justice Vineyard Pinot noir 2022, label approved 29 Aug 2023 (TTB COLA 23240001000907)",
@@ -2755,6 +2776,14 @@
       {
         "title": "Bethel Heights Vineyard Justice Vineyard Pinot noir 2004, label approved 22 Oct 2005 (TTB COLA 05270001000106)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=05270001000106"
+      },
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      },
+      {
+        "title": "Bethel Heights Vineyard - Eola-Amity Hills AVA (Eola-Amity Hills Winegrowers Association)",
+        "url": "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
       }
     ],
     "verified": true,
@@ -2764,11 +2793,23 @@
   {
     "id": "jessie-james-vineyard",
     "name": "Jessie James Vineyard",
-    "summary": "Vineyard named on federally approved labels for Bethel Heights Vineyard wines.",
+    "summary": "A small vineyard on Walnut Hill near Amity, in the Eola-Amity Hills, whose fruit Bethel Heights Vineyard buys.",
     "sources": [
       {
         "title": "Bethel Heights Vineyard Jessie James Vineyard 2006, label approved 3 Dec 2007 (TTB COLA 07334001000191)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=07334001000191"
+      },
+      {
+        "title": "Bethel Heights Vineyard (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard"
+      },
+      {
+        "title": "2006 Bethel Heights Jesse James Vineyard Eola-Amity Hills Pinot Noir (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/tastingnote/1722/index.html"
+      },
+      {
+        "title": "Oregon wine country part 7: Bethel Heights (Wine Anorak)",
+        "url": "https://www.wineanorak.com/Oregon/Oregon7_BethelHeights.htm"
       }
     ],
     "verified": true,
@@ -2778,7 +2819,8 @@
   {
     "id": "illahe-vineyard",
     "name": "Illahe Vineyard",
-    "summary": "Vineyard named on federally approved labels for Bethel Heights Vineyard wines.",
+    "summary": "Lowell Ford's vineyard near Dallas, in the Coast Range foothills of the Willamette Valley, planted in 2000 on land that had been pasture. It grows Pinot noir and several white varieties, and Bethel Heights Vineyard has bottled Pinot noir and Grüner veltliner from it.",
+    "planted": 2000,
     "sources": [
       {
         "title": "Bethel Heights Vineyard Illahe Vineyard Pinot noir and Gruner veltliner 2013, label approved 23 Oct 2014 (TTB COLA 14283001000009)",
@@ -2791,6 +2833,14 @@
       {
         "title": "Bethel Heights Vineyard Illahe Vineyard Pinot noir and Gruner veltliner 2011, label approved 11 Oct 2012 (TTB COLA 12277001000386)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=12277001000386"
+      },
+      {
+        "title": "Illahe Vineyards & Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/1237/index.html"
+      },
+      {
+        "title": "Bethel Heights Iliahe Vineyards Willamette Valley Pinot Noir (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/tastingnote/7952/"
       }
     ],
     "verified": true,
@@ -2800,7 +2850,7 @@
   {
     "id": "lewman-vineyard",
     "name": "Lewman Vineyard",
-    "summary": "Vineyard named on federally approved labels for Bethel Heights Vineyard wines.",
+    "summary": "A vineyard dating from 2002 that Bethel Heights Vineyard bought in 2020 and added to its estate in the Eola-Amity Hills. Bethel Heights bottles a Lewman Vineyard Pinot noir.",
     "sources": [
       {
         "title": "Bethel Heights Vineyard Lewman Vineyard Pinot noir 2022, label approved 29 Aug 2023 (TTB COLA 23240001000908)",
@@ -2809,6 +2859,10 @@
       {
         "title": "Bethel Heights Vineyard Lewman Vineyard Pinot noir 2021, label approved 5 Jul 2022 (TTB COLA 22179001001056)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=22179001001056"
+      },
+      {
+        "title": "Bethel Heights Vineyard - Eola-Amity Hills AVA (Eola-Amity Hills Winegrowers Association)",
+        "url": "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
       }
     ],
     "verified": true,
@@ -2832,7 +2886,7 @@
   {
     "id": "spirit-hill-vineyard",
     "name": "Spirit Hill Vineyard",
-    "summary": "Vineyard named on federally approved labels for Argyle Winery wines.",
+    "summary": "Argyle Winery's vineyard at the top of the Eola-Amity Hills, bought in 2008, with about 137 acres of Pinot noir, Chardonnay and Pinot meunier on red Jory soil at 700 to 800 feet. It takes its name from an old pioneer cemetery in one corner of the property.",
     "sources": [
       {
         "title": "Argyle Winery Spirit Hill Vineyard Pinot noir, Chardonnay, Pinot meunier and N 2025, label approved 22 Sep 2026 (TTB COLA 26260001000611)",
@@ -2845,6 +2899,10 @@
       {
         "title": "Argyle Winery Spirit Hill Vineyard Pinot noir, Chardonnay, Pinot meunier and N 2012, label approved 7 Jul 2014 (TTB COLA 14157001000336)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=14157001000336"
+      },
+      {
+        "title": "Viticulture (Argyle Winery)",
+        "url": "https://argylewinery.com/about/viticulture/"
       }
     ],
     "verified": true,
@@ -2854,7 +2912,7 @@
   {
     "id": "lone-star-vineyard",
     "name": "Lone Star Vineyard",
-    "summary": "Vineyard named on federally approved labels for Argyle Winery wines.",
+    "summary": "Argyle Winery's estate vineyard in the Eola-Amity Hills, with 113 planted acres at 200 to 400 feet on Jory, Nekia, Ritner and Woodburn soils.",
     "sources": [
       {
         "title": "Argyle Winery Lone Star Vineyard Pinot noir and Chardonnay 2025, label approved 18 Sep 2026 (TTB COLA 26259001000137)",
@@ -2867,6 +2925,10 @@
       {
         "title": "Argyle Winery Lone Star Vineyard Pinot noir and Chardonnay 2014, label approved 12 May 2017 (TTB COLA 17130001000056)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=17130001000056"
+      },
+      {
+        "title": "Viticulture (Argyle Winery)",
+        "url": "https://argylewinery.com/about/viticulture/"
       }
     ],
     "verified": true,
@@ -2876,7 +2938,8 @@
   {
     "id": "giving-tree-vineyard",
     "name": "Giving Tree Vineyard",
-    "summary": "Vineyard named on federally approved labels for Argyle Winery wines.",
+    "summary": "A vineyard in Polk County in the Willamette Valley AVA, in the Coast Range foothills about three miles from Freedom Hill Vineyard, that Argyle Winery developed with Atlas Vineyard Management starting in 2015. Argyle planted Pinot noir and Chardonnay there in 2015 and added more of both, plus Gamay noir, in 2019.",
+    "planted": 2015,
     "sources": [
       {
         "title": "Argyle Winery Giving Tree Vineyard Pinot noir and Chardonnay 2022, label approved 3 Apr 2024 (TTB COLA 24088001000260)",
@@ -2889,6 +2952,10 @@
       {
         "title": "Argyle Winery Giving Tree Vineyard Pinot noir and Chardonnay 2018, label approved 26 Dec 2019 (TTB COLA 19354001000283)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=19354001000283"
+      },
+      {
+        "title": "Viticulture (Argyle Winery)",
+        "url": "https://argylewinery.com/about/viticulture/"
       }
     ],
     "verified": true,
@@ -2898,12 +2965,25 @@
   {
     "id": "weinbau-vineyard",
     "name": "Weinbau Vineyard",
-    "summary": "Vineyard named on federally approved labels for Argyle Winery wines.",
+    "summary": "A vineyard on the Wahluke Slope in Washington's Columbia Valley, planted in 1981 and later owned by Sagemoor.",
     "outsideOregon": true,
+    "planted": 1981,
     "sources": [
       {
         "title": "Argyle Winery Weinbau Vineyard Merlot 2022, label approved 25 Mar 2025 (TTB COLA 25076001000074)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=25076001000074"
+      },
+      {
+        "title": "Sagemoor Group (Long Shadows)",
+        "url": "https://longshadows.com/vineyards/sagemoor-group"
+      },
+      {
+        "title": "Sagemoor in Pasco plants Washington's first large-scale commercial vineyard in 1972 (HistoryLink)",
+        "url": "https://www.historylink.org/file/21222"
+      },
+      {
+        "title": "2022 Argyle Weinbau Vineyard Merlot (Argyle Winery)",
+        "url": "https://argylewinery.com/product/2022-argyle-weinbau-merlot/"
       }
     ],
     "verified": true,
@@ -2922,6 +3002,10 @@
       {
         "title": "Adelsheim Vineyard Ribbon Springs Vineyard 2005, label approved 3 Sep 2006 (TTB COLA 06233001000060)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=06233001000060"
+      },
+      {
+        "title": "Vineyards (Adelsheim Vineyard)",
+        "url": "https://www.adelsheim.com/vineyards/"
       }
     ],
     "verified": true,
@@ -2931,11 +3015,16 @@
   {
     "id": "calkins-lane-vineyard",
     "name": "Calkins Lane Vineyard",
-    "summary": "Vineyard named on federally approved labels for Adelsheim Vineyard wines.",
+    "summary": "Adelsheim Vineyard's estate vineyard on NE Calkins Lane outside Newberg, in the Chehalem Mountains AVA, where the winery itself stands. First planted in 1990, its south-facing slope grows Pinot noir and Chardonnay along with a block of Syrah.",
+    "planted": 1990,
     "sources": [
       {
         "title": "Adelsheim Vineyard Calkins Lane Vineyard 2006, label approved 13 Sep 2007 (TTB COLA 07248001000277)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=07248001000277"
+      },
+      {
+        "title": "Vineyards (Adelsheim Vineyard)",
+        "url": "https://adelsheim.com/place/estate-vineyards"
       }
     ],
     "verified": true,
@@ -2945,7 +3034,8 @@
   {
     "id": "bryan-creek-vineyard",
     "name": "Bryan Creek Vineyard",
-    "summary": "Vineyard named on federally approved labels for Adelsheim Vineyard wines.",
+    "summary": "A Chehalem Mountains vineyard near Bald Peak Road that Adelsheim Vineyard first planted in 1989 on land owned by its neighbors Jess and Joy Howell, and bought from the family in 2014. It grows Pinot noir, Chardonnay and Pinot blanc on volcanic soil at 680 to 860 feet.",
+    "planted": 1989,
     "sources": [
       {
         "title": "Adelsheim Vineyard Bryan Creek Vineyard Pinot noir 2018, label approved 30 Jan 2020 (TTB COLA 20027001000568)",
@@ -2954,6 +3044,14 @@
       {
         "title": "Adelsheim Vineyard Bryan Creek Vineyard Pinot noir 2006, label approved 13 Sep 2007 (TTB COLA 07248001000282)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=07248001000282"
+      },
+      {
+        "title": "Vineyards (Adelsheim Vineyard)",
+        "url": "https://adelsheim.com/the-chehalem-mountains"
+      },
+      {
+        "title": "Adelsheim Vineyard secures Chehalem Mountains vineyard (Great Northwest Wine)",
+        "url": "https://greatnorthwestwine.com/?p=18127"
       }
     ],
     "verified": true,
@@ -2977,11 +3075,20 @@
   {
     "id": "winderlea-vineyard",
     "name": "Winderlea Vineyard",
-    "summary": "Vineyard named on federally approved labels for Adelsheim Vineyard wines.",
+    "summary": "A Dundee Hills vineyard first planted in 1974. Bill Sweat and Donna Morris renamed it Winderlea and farm it biodynamically, growing mostly Pinot noir with some Chardonnay.",
+    "planted": 1974,
     "sources": [
       {
         "title": "Adelsheim Vineyard Winderlea Vineyard 2007, label approved 2 Sep 2008 (TTB COLA 08241001000163)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=08241001000163"
+      },
+      {
+        "title": "Vineyards (Winderlea Vineyard)",
+        "url": "https://winderlea.com/vineyards"
+      },
+      {
+        "title": "Winderlea Vineyard & Winery (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/winery/631/index.html"
       }
     ],
     "verified": true,
@@ -2991,11 +3098,20 @@
   {
     "id": "nicholas-vineyard",
     "name": "Nicholas Vineyard",
-    "summary": "Vineyard named on federally approved labels for Adelsheim Vineyard wines.",
+    "summary": "A Chehalem Mountains vineyard first planted in 2001 by Nick and Sheila Nicholas on Laurelwood soil over basalt.",
+    "planted": 2001,
     "sources": [
       {
         "title": "Adelsheim Vineyard Nicholas Vineyard Pinot noir 2012, label approved 26 Jun 2015 (TTB COLA 15160001000392)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=15160001000392"
+      },
+      {
+        "title": "Adelsheim Nicholas Vineyard Chehalem Mountains Pinot Noir (The Prince of Pinot)",
+        "url": "https://www.princeofpinot.com/tastingnote/6649/"
+      },
+      {
+        "title": "Vineyards (Adelsheim Vineyard)",
+        "url": "https://adelsheim.com/the-chehalem-mountains"
       }
     ],
     "verified": true,
@@ -3010,6 +3126,14 @@
       {
         "title": "Patricia Green Cellars Medici Vineyard Pinot noir 2015, label approved 25 Jul 2016 (TTB COLA 16186001000078)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=16186001000078"
+      },
+      {
+        "title": "Hal Medici Interview (Oregon Wine History Archive)",
+        "url": "https://digitalcommons.linfield.edu/owha_willamette_interviews/92"
+      },
+      {
+        "title": "Medici Vineyards (The Prince of Pinot)",
+        "url": "http://www.princeofpinot.com/winery/1804/"
       }
     ],
     "verified": true,
@@ -3019,7 +3143,7 @@
   {
     "id": "johan-vineyard",
     "name": "Johan Vineyard",
-    "summary": "Vineyard named on federally approved labels for Day Wines wines.",
+    "summary": "A Biodynamic vineyard at Rickreall, in the Van Duzer Corridor AVA, founded by Dag Sundby in 2005. Mini Banks of Cowhorn Vineyard bought it in 2021.",
     "sources": [
       {
         "title": "Day Wines Johan Vineyard Pinot noir 2021, label approved 13 Feb 2023 (TTB COLA 23038001000956)",
@@ -3028,6 +3152,14 @@
       {
         "title": "Day Wines Johan Vineyard Pinot noir 2014, label approved 16 Jul 2015 (TTB COLA 15170001000209)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=15170001000209"
+      },
+      {
+        "title": "Johan Vineyards (Oregon Wine Board)",
+        "url": "https://www.oregonwine.org/wineries/johan-vineyards/"
+      },
+      {
+        "title": "Cowhorn Vineyard Owner Acquires Johan Vineyards (Kane's Beverage News Daily)",
+        "url": "https://bevnewsonline.com/cowhorn-vineyard-owner-acquires-johan-vineyards/"
       }
     ],
     "verified": true,

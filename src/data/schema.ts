@@ -293,6 +293,9 @@ export const edgeSchema = z.strictObject({
   endYear: year.optional(),
   // True when the relationship still holds; absent endYear alone means "unknown"
   ongoing: z.boolean().optional(),
+  // Separate years rather than a span: the vintages of a vineyard's wines on a winery's
+  // approved labels, each shown by a cited approval. Read as "2006, 2018" or "2005–2007"
+  vintages: z.array(year).min(1).optional(),
   note: z.string().min(1).optional(),
   sources: z.array(sourceSchema).min(1),
   verified: z.boolean(),

@@ -683,5 +683,264 @@
    "https://www.beckhamestatevineyard.com/novum-ceramics"
   ],
   "finding": "The Beckham About page calls him a ceramics artist of over 25 years, credits the estate to Andrew and Annedria and says he began producing their wines in 2009; the Novum Ceramics page says his company makes terra cotta amphorae for winemaking and brewing. No citable page dates the end of his teaching: only Weinnotes gives 2021, and the About page still says he teaches high school ceramics, so that sentence keeps the existing fact."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:kennel-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for King Estate Winery wines.",
+  "to": "A 28-acre Willamette Valley vineyard set midway between Corvallis and Monmouth, established in 2007 and farmed by Jeremy Kennel, whose family has worked the land for five generations. King Estate Winery bottles Pinot noir from it.",
+  "sources": [
+   "https://kingestate.com/products/2016-king-estate-kennel-pinot-noir/"
+  ],
+  "finding": "King Estate's product page for its 2016 Kennel Pinot Noir has vineyard notes giving the location, the 2007 establishment, the 28 acres and the Kennel family as growers. The live page blocks automated readers, so it was read from its Wayback Machine copy. 'Established' isn't necessarily the planting year, so no planted year is proposed."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:illahe-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for Bethel Heights Vineyard wines.",
+  "to": "Lowell Ford's vineyard near Dallas, in the Coast Range foothills of the Willamette Valley, planted in 2000 on land that had been pasture. It grows Pinot noir and several white varieties, and Bethel Heights Vineyard has bottled Pinot noir and Grüner veltliner from it.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1237/index.html",
+   "https://www.princeofpinot.com/tastingnote/7952/"
+  ],
+  "finding": "The Prince of Pinot winery profile says Lowell Ford planted the Illahe property near Dallas in 2000, on former pasture, with Pinot noir and white varieties. Its tasting note for Bethel Heights' Illahe Pinot noir places the vineyard in the Coast Range foothills. Another source gives 2001 as the planting year, but it now redirects to an unrelated spam site, so it couldn't be read or cited."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:illahe-vineyard",
+  "field": "planted",
+  "from": null,
+  "to": 2000,
+  "sources": [
+   "https://www.princeofpinot.com/winery/1237/index.html",
+   "https://www.princeofpinot.com/tastingnote/7952/"
+  ],
+  "finding": "The Prince of Pinot winery profile says Lowell Ford planted the Illahe property near Dallas in 2000, on former pasture, with Pinot noir and white varieties. Its tasting note for Bethel Heights' Illahe Pinot noir places the vineyard in the Coast Range foothills. Another source gives 2001 as the planting year, but it now redirects to an unrelated spam site, so it couldn't be read or cited."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:spirit-hill-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for Argyle Winery wines.",
+  "to": "Argyle Winery's vineyard at the top of the Eola-Amity Hills, bought in 2008, with about 137 acres of Pinot noir, Chardonnay and Pinot meunier on red Jory soil at 700 to 800 feet. It takes its name from an old pioneer cemetery in one corner of the property.",
+  "sources": [
+   "https://argylewinery.com/about/viticulture/"
+  ],
+  "finding": "Argyle's viticulture page gives the 2008 purchase, the acreage, varieties, soil and elevation, and the cemetery behind the name. 2008 is the purchase year, not a stated planting year, so no planted year is proposed."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:bryan-creek-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for Adelsheim Vineyard wines.",
+  "to": "A Chehalem Mountains vineyard near Bald Peak Road that Adelsheim Vineyard first planted in 1989 on land owned by its neighbors Jess and Joy Howell, and bought from the family in 2014. It grows Pinot noir, Chardonnay and Pinot blanc on volcanic soil at 680 to 860 feet.",
+  "sources": [
+   "https://adelsheim.com/the-chehalem-mountains",
+   "https://greatnorthwestwine.com/?p=18127"
+  ],
+  "finding": "Adelsheim's vineyards page gives the 1989 first planting, the Chehalem Mountains AVA, volcanic soil, elevation and varieties. The 2014 Great Northwest Wine article covers the Howell ownership and Adelsheim's purchase. The article as read named the Yamhill-Carlton AVA, which conflicts with Adelsheim's own page, so the summary follows Adelsheim on the AVA."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:bryan-creek-vineyard",
+  "field": "planted",
+  "from": null,
+  "to": 1989,
+  "sources": [
+   "https://adelsheim.com/the-chehalem-mountains",
+   "https://greatnorthwestwine.com/?p=18127"
+  ],
+  "finding": "Adelsheim's vineyards page gives the 1989 first planting, the Chehalem Mountains AVA, volcanic soil, elevation and varieties. The 2014 Great Northwest Wine article covers the Howell ownership and Adelsheim's purchase. The article as read named the Yamhill-Carlton AVA, which conflicts with Adelsheim's own page, so the summary follows Adelsheim on the AVA."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:justice-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for Bethel Heights Vineyard wines.",
+  "to": "An estate vineyard of Bethel Heights Vineyard in the Eola-Amity Hills, on land just south of the winery's original vineyard that Bethel Heights acquired and began planting in 1999. Bethel Heights bottles a Justice Vineyard Pinot noir and also sells some of the fruit to other wineries.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard",
+   "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
+  ],
+  "finding": "Wikipedia says Bethel Heights acquired the land south of its main vineyard in 1999 and began planting about 20 acres there, some fruit sold to other wineries; the Eola-Amity Hills association page calls Justice adjacent and established in 1999."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:justice-vineyard",
+  "field": "planted",
+  "from": null,
+  "to": 1999,
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bethel_Heights_Vineyard",
+   "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
+  ],
+  "finding": "Wikipedia says Bethel Heights acquired the land south of its main vineyard in 1999 and began planting about 20 acres there, some fruit sold to other wineries; the Eola-Amity Hills association page calls Justice adjacent and established in 1999."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:lewman-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for Bethel Heights Vineyard wines.",
+  "to": "A vineyard dating from 2002 that Bethel Heights Vineyard bought in 2020 and added to its estate in the Eola-Amity Hills. Bethel Heights bottles a Lewman Vineyard Pinot noir.",
+  "sources": [
+   "https://eolaamityhills.com/winery/bethel-heights-vineyard/"
+  ],
+  "finding": "The Eola-Amity Hills association's Bethel Heights page says the estate now includes Lewman Vineyard, established in 2002 and purchased in 2020. Search snippets of reviews (K&L, not readable) say neighbor Dennis Lewman planted it in 1992, so no planting year is proposed; the year may conflict."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:king-estate-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for King Estate Winery wines.",
+  "to": "King Estate Winery's own vineyard surrounds the winery near Lorane, Oregon, on an estate Ed King founded in 1991 that has grown to 1,033 acres. Long certified organic, the estate adopted the Biodynamic standard in 2016, and the winery calls it North America's largest certified Biodynamic vineyard.",
+  "sources": [
+   "https://kingestate.com/?p=3865"
+  ],
+  "finding": "King Estate's own 30th-anniversary history gives the Lorane location, the 1991 founding by Ed King, the 1,033-acre estate, and its organic and Biodynamic (2016) status. It gives no planting year or AVA, so I proposed neither."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:giving-tree-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for Argyle Winery wines.",
+  "to": "A vineyard in Polk County in the Willamette Valley AVA, in the Coast Range foothills about three miles from Freedom Hill Vineyard, that Argyle Winery developed with Atlas Vineyard Management starting in 2015. Argyle planted Pinot noir and Chardonnay there in 2015 and added more of both, plus Gamay noir, in 2019.",
+  "sources": [
+   "https://argylewinery.com/about/viticulture/"
+  ],
+  "finding": "Argyle's viticulture page describes Giving Tree's location, the 2015 partnership with Atlas Vineyard Management, and the 2015 and 2019 plantings. It gives both 138 acres and a 210-acre property, so I left acreage out."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:giving-tree-vineyard",
+  "field": "planted",
+  "from": null,
+  "to": 2015,
+  "sources": [
+   "https://argylewinery.com/about/viticulture/"
+  ],
+  "finding": "Argyle's viticulture page describes Giving Tree's location, the 2015 partnership with Atlas Vineyard Management, and the 2015 and 2019 plantings. It gives both 138 acres and a 210-acre property, so I left acreage out."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:calkins-lane-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for Adelsheim Vineyard wines.",
+  "to": "Adelsheim Vineyard's estate vineyard on NE Calkins Lane outside Newberg, in the Chehalem Mountains AVA, where the winery itself stands. First planted in 1990, its south-facing slope grows Pinot noir and Chardonnay along with a block of Syrah.",
+  "sources": [
+   "https://adelsheim.com/place/estate-vineyards"
+  ],
+  "finding": "Adelsheim's vineyards page gives the Chehalem Mountains AVA, the 1990 first planting, the varieties, and the winery on the site. Other sources disagree on when the land was bought (1988 or 1989) and on its size, so I left both out."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:calkins-lane-vineyard",
+  "field": "planted",
+  "from": null,
+  "to": 1990,
+  "sources": [
+   "https://adelsheim.com/place/estate-vineyards"
+  ],
+  "finding": "Adelsheim's vineyards page gives the Chehalem Mountains AVA, the 1990 first planting, the varieties, and the winery on the site. Other sources disagree on when the land was bought (1988 or 1989) and on its size, so I left both out."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:amalie-robert-estate-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for Beaux Frères wines.",
+  "to": "Dena Drews and Ernie Pink's estate vineyard just outside Dallas, at the western edge of the Willamette Valley, bordering Freedom Hill Vineyard. Beaux Frères has bottled wine from it.",
+  "sources": [],
+  "finding": "Retry without the sentence or year the check could not support."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:nicholas-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for Adelsheim Vineyard wines.",
+  "to": "A Chehalem Mountains vineyard first planted in 2001 by Nick and Sheila Nicholas on Laurelwood soil over basalt.",
+  "sources": [],
+  "finding": "Retry without the sentence or year the check could not support."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:nicholas-vineyard",
+  "field": "planted",
+  "from": null,
+  "to": 2001,
+  "sources": [],
+  "finding": "Retry without the sentence or year the check could not support."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:bradshaw-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for King Estate Winery wines.",
+  "to": "Jim and Maria Bradshaw's vineyard near Junction City, in the southern Willamette Valley, is a growing partner of King Estate Winery, which bottles a Bradshaw Pinot noir.",
+  "sources": [],
+  "finding": "Retry without the sentence or year the check could not support."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:lone-star-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for Argyle Winery wines.",
+  "to": "Argyle Winery's estate vineyard in the Eola-Amity Hills, with 113 planted acres at 200 to 400 feet on Jory, Nekia, Ritner and Woodburn soils.",
+  "sources": [],
+  "finding": "Retry without the sentence or year the check could not support."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:winderlea-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for Adelsheim Vineyard wines.",
+  "to": "A Dundee Hills vineyard first planted in 1974. Bill Sweat and Donna Morris renamed it Winderlea and farm it biodynamically, growing mostly Pinot noir with some Chardonnay.",
+  "sources": [],
+  "finding": "Shorter retry."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:winderlea-vineyard",
+  "field": "planted",
+  "from": null,
+  "to": 1974,
+  "sources": [],
+  "finding": "Shorter retry."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:johan-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for Day Wines wines.",
+  "to": "A Biodynamic vineyard at Rickreall, in the Van Duzer Corridor AVA, founded by Dag Sundby in 2005. Mini Banks of Cowhorn Vineyard bought it in 2021.",
+  "sources": [],
+  "finding": "Shorter retry."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:jessie-james-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for Bethel Heights Vineyard wines.",
+  "to": "A small vineyard on Walnut Hill near Amity, in the Eola-Amity Hills, whose fruit Bethel Heights Vineyard buys.",
+  "sources": [],
+  "finding": "Shorter retry."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:weinbau-vineyard",
+  "field": "summary",
+  "from": "Vineyard named on federally approved labels for Argyle Winery wines.",
+  "to": "A vineyard on the Wahluke Slope in Washington's Columbia Valley, planted in 1981 and later owned by Sagemoor.",
+  "sources": [],
+  "finding": "Shorter retry."
+ },
+ {
+  "date": "2026-10-20",
+  "key": "node:weinbau-vineyard",
+  "field": "planted",
+  "from": null,
+  "to": 1981,
+  "sources": [],
+  "finding": "Shorter retry."
  }
 ]

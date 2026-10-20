@@ -32,8 +32,23 @@ export function hasDisputedYears(record: GraphNode | GraphEdge): boolean {
   return Object.values(record.alsoDated ?? {}).some((years) => years.length > 0)
 }
 
+// Separate years as briefly as they read: "2006", "2005–2007", "2006, 2018"; when the runs
+// would make a long list, the first and last: "2005–2019"
+export function yearList(years: number[]): string {
+  const sorted = [...new Set(years)].sort((a, b) => a - b)
+  const runs: [number, number][] = []
+  for (const year of sorted) {
+    const last = runs[runs.length - 1]
+    if (last && year === last[1] + 1) last[1] = year
+    else runs.push([year, year])
+  }
+  if (runs.length > 3) return `${sorted[0]}–${sorted[sorted.length - 1]}`
+  return runs.map(([first, last]) => (first === last ? `${first}` : `${first}–${last}`)).join(', ')
+}
+
 export function formatYears(edge: GraphEdge): string {
   const { startYear, endYear, ongoing } = edge
+  if (startYear === undefined && endYear === undefined && edge.vintages) return yearList(edge.vintages)
   const start = datedText(edge, 'startYear')
   const end = datedText(edge, 'endYear')
   if (startYear !== undefined && endYear !== undefined) {

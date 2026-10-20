@@ -154,11 +154,11 @@ describe('cola:build', () => {
 
   it('creates a vineyard a label names, and the connection to it', () => {
     expect(research.nodes.map((node) => node.id)).toEqual(['stardance-vineyard'])
-    expect(edge('audeant', 'stardance-vineyard')).toMatchObject({
-      type: 'sources_from',
-      role: 'Stardance Vineyard Pinot noir',
-      note: 'Vintage on approved labels: 2023.',
-    })
+    const connection = edge('audeant', 'stardance-vineyard')
+    expect(connection).toMatchObject({ type: 'sources_from', vintages: [2023] })
+    // The wine's name is in the source title, not repeated as a role
+    expect(connection?.role).toBeUndefined()
+    expect(connection?.sources[0].title).toContain('Stardance Vineyard Pinot noir 2023')
   })
 
   it('ignores readings below the threshold', () => {
@@ -220,16 +220,18 @@ describe('cola:new-wineries', () => {
   })
 
   it('creates a winery only with an AVA to cite, and never one already recorded', () => {
+    // As before Melrose was added from these approvals
+    const before = { ...graph, nodes: graph.nodes.filter((node) => node.id !== 'melrose') }
     const reviews = [{ winery: 'Melrose', designation: '', region: 'Umpqua Valley', variety: 'Pinot Noir' }]
     const forms = [form({ ttbId: '21001001000001', brand: 'MELROSE', applicant: 'Melrose LLC 885 MELROSE RD Roseburg OR 97471', appellation: 'UMPQUA VALLEY' })]
-    const records = newWineryRecords(graph, 'Melrose', reviews, forms)!
+    const records = newWineryRecords(before, 'Melrose', reviews, forms)!
     expect(records.node).toMatchObject({ id: 'melrose', type: 'winery', place: 'Roseburg, OR', summary: 'Roseburg winery making Pinot noir.' })
     expect(records.edges).toHaveLength(1)
     expect(records.edges[0]).toMatchObject({ target: 'umpqua-valley', type: 'draws_from' })
     expect(records.edges[0].sources).toHaveLength(2)
-    expect(newWineryRecords(graph, 'Melrose', [], [form({ appellation: 'OREGON' })])).toBeNull()
+    expect(newWineryRecords(before, 'Melrose', [], [form({ appellation: 'OREGON' })])).toBeNull()
     const mcminnville = form({ applicant: 'X LLC 1 MAIN ST MCMINNVILLE OR 97128', appellation: 'UMPQUA VALLEY' })
-    expect(newWineryRecords(graph, 'Melrose', [], [mcminnville])!.node.place).toBe('McMinnville, OR')
+    expect(newWineryRecords(before, 'Melrose', [], [mcminnville])!.node.place).toBe('McMinnville, OR')
     expect(newWineryRecords(graph, 'Audeant', reviews, forms)).toBeNull()
   })
 })

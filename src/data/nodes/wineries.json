@@ -12932,5 +12932,2827 @@
       "lng": -123.0623
     },
     "verifiedBy": "jev"
+  },
+  {
+    "id": "david-hill",
+    "name": "David Hill",
+    "summary": "Forest Grove winery making Gewürztraminer, Pinot noir and Chardonnay.",
+    "place": "Forest Grove, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "David Hill N/a, label approved 21 May 2025 (TTB COLA 25129001000566)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=25129001000566"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "melrose",
+    "name": "Melrose",
+    "summary": "Roseburg winery making Baco noir, Pinot gris and Pinot noir.",
+    "place": "Roseburg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Melrose Pinot gris, label approved 10 Aug 2026 (TTB COLA 26209001000645)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26209001000645"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "folin-cellars",
+    "name": "Folin Cellars",
+    "summary": "Gold Hill winery making Tempranillo, Syrah and Grenache.",
+    "place": "Gold Hill, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Folin Cellars Tempranillo, label approved 21 Feb 2017 (TTB COLA 17034001000372)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=17034001000372"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "carabella",
+    "name": "Carabella",
+    "summary": "Dayton winery making Pinot noir, Pinot gris and Chardonnay.",
+    "place": "Dayton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Carabella Pinot gris, label approved 5 Apr 2019 (TTB COLA 19081001001162)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=19081001001162"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "vista-hills",
+    "name": "Vista Hills",
+    "summary": "McMinnville winery making Pinot gris, Pinot noir and Rosé.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Vista Hills Pinot noir, label approved 10 May 2018 (TTB COLA 18115001001040)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18115001001040"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "anam-cara",
+    "name": "Anam Cara",
+    "summary": "Dundee winery making Pinot noir, Chardonnay and Riesling.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Anam Cara Chardonnay, label approved 27 Jul 2022 (TTB COLA 22207001000672)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=22207001000672"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "spindrift-cellars",
+    "name": "Spindrift Cellars",
+    "summary": "Philomath winery making Pinot noir, Chardonnay and Pinot blanc.",
+    "place": "Philomath, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Spindrift Cellars Cabernet franc, label approved 11 Mar 2019 (TTB COLA 19056001001167)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=19056001001167"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "cathedral-ridge",
+    "name": "Cathedral Ridge",
+    "summary": "Hood River winery making Zinfandel, Chardonnay and Red blend.",
+    "place": "Hood River, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Cathedral Ridge Grenache, label approved 7 Jan 2025 (TTB COLA 24344001000243)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=24344001000243"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "airlie",
+    "name": "Airlie",
+    "summary": "Monmouth winery making Chardonnay, Gewürztraminer and Pinot noir.",
+    "place": "Monmouth, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Airlie Pinot noir, label approved 17 Jun 2026 (TTB COLA 26163001000376)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26163001000376"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "seven-of-hearts",
+    "name": "Seven of Hearts",
+    "summary": "Dundee winery making Viognier-roussanne, Roussanne and Pinot noir.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Seven of Hearts Cabernet sauvignon, label approved 17 Feb 2022 (TTB COLA 22042001000410)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=22042001000410"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "oak-knoll",
+    "name": "Oak Knoll",
+    "summary": "Hillsboro winery making Pinot noir, Müller-thurgau and Chardonnay.",
+    "place": "Hillsboro, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Oak Knoll Pinot gris, label approved 2 Jun 2022 (TTB COLA 22151001000638)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=22151001000638"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "tero-estates",
+    "name": "Tero Estates",
+    "summary": "Milton-Freewater winery making Bordeaux-style red blend, Cabernet sauvignon and Cabernet franc.",
+    "place": "Milton-Freewater, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Tero Estates 2007, label approved 10 Oct 2010 (TTB COLA 10270001000285)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=10270001000285"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "coelho",
+    "name": "Coelho",
+    "summary": "Amity winery making Red blend, Pinot noir and Pinot gris.",
+    "place": "Amity, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Coelho N/a, label approved 28 May 2026 (TTB COLA 26142001000787)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26142001000787"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "agate-ridge",
+    "name": "Agate Ridge",
+    "summary": "Eagle Point winery making Pinot gris, Cabernet sauvignon and Viognier.",
+    "place": "Eagle Point, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Agate Ridge Cabernet franc 2012, label approved 1 Aug 2016 (TTB COLA 16194001000539)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=16194001000539"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "a-to-z",
+    "name": "A to Z",
+    "summary": "Newberg winery making Riesling, Rosé and Pinot noir.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "A to Z Pinot noir 2015, label approved 23 Jul 2016 (TTB COLA 16175001000238)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=16175001000238"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "griffin-creek",
+    "name": "Griffin Creek",
+    "summary": "Turner winery making Malbec, Syrah and Cabernet sauvignon.",
+    "place": "Turner, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Griffin Creek 2007, label approved 29 Apr 2011 (TTB COLA 11083001000223)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=11083001000223"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "iris-vineyards",
+    "name": "Iris Vineyards",
+    "summary": "Dundee winery making Pinot gris, Pinot noir and Chardonnay.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Iris Vineyards Pinot gris, label approved 24 Apr 2026 (TTB COLA 26112001000532)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26112001000532"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "patton-valley",
+    "name": "Patton Valley",
+    "summary": "Dundee winery making Pinot noir and Rosé.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Patton Valley Pinot noir, label approved 14 Jul 2026 (TTB COLA 26187001000567)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26187001000567"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "scott-paul",
+    "name": "Scott Paul",
+    "summary": "Dundee winery making Pinot noir and Chardonnay.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Scott Paul Pinot noir, label approved 15 Jul 2025 (TTB COLA 25191001000780)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=25191001000780"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "cliff-creek",
+    "name": "Cliff Creek",
+    "summary": "Jacksonville winery making Syrah, Cabernet sauvignon and Merlot.",
+    "place": "Jacksonville, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Cliff Creek N/a, label approved 2 Sep 2025 (TTB COLA 25244001000025)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=25244001000025"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "ledger-david",
+    "name": "Ledger David",
+    "summary": "Medford winery making Sangiovese, Syrah and Tempranillo.",
+    "place": "Medford, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Ledger David N/a, label approved 6 Mar 2018 (TTB COLA 18051001001010)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18051001001010"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "siduri",
+    "name": "Siduri",
+    "summary": "McMinnville winery making Pinot noir and Chardonnay.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Siduri Pinot noir, label approved 2 Jul 2026 (TTB COLA 26176001000668)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26176001000668"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "season",
+    "name": "Season",
+    "summary": "Roseburg winery making Malbec, Marsanne-roussanne and Viognier.",
+    "place": "Roseburg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Season Grüner veltliner, label approved 1 Aug 2024 (TTB COLA 24205001000439)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=24205001000439"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "kudos",
+    "name": "Kudos",
+    "summary": "Dundee winery making Pinot gris, Pinot noir and Riesling.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Kudos Pinot noir, label approved 6 Feb 2026 (TTB COLA 26028001000474)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26028001000474"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "blakeslee",
+    "name": "Blakeslee",
+    "summary": "Rickreall winery making Pinot noir, Chardonnay and Riesling.",
+    "place": "Rickreall, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Blakeslee Chardonnay, label approved 11 Aug 2026 (TTB COLA 26216001000535)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26216001000535"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "dancin",
+    "name": "DanCin",
+    "summary": "Medford winery making Chardonnay, Pinot noir and Syrah.",
+    "place": "Medford, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "DanCin Barbera, label approved 2 Jul 2026 (TTB COLA 26177001000491)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26177001000491"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "firesteed",
+    "name": "Firesteed",
+    "summary": "Dundee winery making Pinot gris, Pinot noir and Riesling.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Firesteed Pinot noir, label approved 22 Dec 2025 (TTB COLA 25352001000624)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=25352001000624"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "deer-creek",
+    "name": "Deer Creek",
+    "summary": "Jacksonville winery making Pinot noir, Pinot gris and White blend.",
+    "place": "Jacksonville, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Deer Creek Chardonnay, label approved 10 Aug 2026 (TTB COLA 26219001000632)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26219001000632"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "longplay",
+    "name": "Longplay",
+    "summary": "Newberg winery making Pinot noir, Chardonnay and N/a.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Longplay N/a, label approved 28 Apr 2026 (TTB COLA 26105001000855)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26105001000855"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "ancient-cellars",
+    "name": "Ancient Cellars",
+    "summary": "Dundee winery making Pinot gris, Pinot noir and Cabernet sauvignon.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Ancient Cellars Chardonnay, label approved 10 Sep 2018 (TTB COLA 18243001000410)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18243001000410"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "zimri-cellars",
+    "name": "Zimri Cellars",
+    "summary": "Newberg winery making Pinot gris, Pinot noir and Chardonnay.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Zimri Cellars Riesling, label approved 6 Mar 2024 (TTB COLA 24064001000529)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=24064001000529"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "merrill-cellars",
+    "name": "Merrill Cellars",
+    "summary": "Medford winery making Syrah, Viognier and Rhône-style red blend.",
+    "place": "Medford, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Merrill Cellars N/a, label approved 30 Apr 2018 (TTB COLA 18107001001147)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18107001001147"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "springhouse-cellar",
+    "name": "Springhouse Cellar",
+    "summary": "Hood River winery making Viognier, Merlot and Sauvignon blanc.",
+    "place": "Hood River, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Springhouse Cellar Sauvignon blanc 2015, label approved 4 Sep 2016 (TTB COLA 16235001000330)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=16235001000330"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "daedalus",
+    "name": "Daedalus",
+    "summary": "Turner winery making Pinot gris, Syrah and Pinot noir.",
+    "place": "Turner, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Daedalus Pinot noir, label approved 3 Dec 2025 (TTB COLA 25328001000723)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=25328001000723"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "witness-tree",
+    "name": "Witness Tree",
+    "summary": "Oregon winery making Pinot noir, Chardonnay and Pinot blanc.",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "thistle",
+    "name": "Thistle",
+    "summary": "McMinnville winery making Chardonnay, Pinot noir and Pinot blanc.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Thistle Chardonnay, label approved 18 Oct 2021 (TTB COLA 21287001000455)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=21287001000455"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "spangler",
+    "name": "Spangler",
+    "summary": "Roseburg winery making Petite sirah, Cabernet sauvignon and Pinot noir.",
+    "place": "Roseburg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Spangler Teroldego, label approved 29 Jul 2025 (TTB COLA 25207001000024)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=25207001000024"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "grizzly-peak",
+    "name": "Grizzly Peak",
+    "summary": "Medford winery making Syrah, Tempranillo and Rosé.",
+    "place": "Medford, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Grizzly Peak Grenache, label approved 17 Mar 2026 (TTB COLA 26070001000603)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26070001000603"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "aberrant-cellars",
+    "name": "Aberrant Cellars",
+    "summary": "Tualatin winery making Pinot noir, Cabernet franc and Chardonnay.",
+    "place": "Tualatin, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Aberrant Cellars Cabernet franc, label approved 16 Apr 2018 (TTB COLA 18080001000325)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18080001000325"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "mahonia",
+    "name": "Mahonia",
+    "summary": "Portland winery making Chardonnay, Pinot gris and Rosé.",
+    "place": "Portland, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Mahonia Pinot noir, label approved 2 Jul 2020 (TTB COLA 20182001000891)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=20182001000891"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "a-blooming-hill-vineyard",
+    "name": "A Blooming Hill Vineyard",
+    "summary": "Dundee winery making Pinot noir and Pinot gris.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "A Blooming Hill Vineyard Pinot noir 2014, label approved 10 Aug 2015 (TTB COLA 15198001000265)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=15198001000265"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "territorial",
+    "name": "Territorial",
+    "summary": "Eugene winery making Riesling, Pinot noir and Chardonnay.",
+    "place": "Eugene, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Territorial Pinot noir, label approved 17 Dec 2025 (TTB COLA 25346001000631)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=25346001000631"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "lujon",
+    "name": "Lujon",
+    "summary": "Carlton winery making Riesling, Pinot gris and Cabernet sauvignon.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Lujon Sangiovese, label approved 13 Sep 2024 (TTB COLA 24250001000443)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=24250001000443"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "abiqua-wind",
+    "name": "Abiqua Wind",
+    "summary": "Scotts Mills winery making Pinot gris, Muscat and Pinot noir.",
+    "place": "Scotts Mills, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Abiqua Wind N/a, label approved 4 Sep 2019 (TTB COLA 19232001000663)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=19232001000663"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "jezebel",
+    "name": "Jezebel",
+    "summary": "Eugene winery making White blend, Syrah and Pinot noir.",
+    "place": "Eugene, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Jezebel N/a, label approved 26 Jun 2018 (TTB COLA 18163001000780)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18163001000780"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "cubanisimo-vineyards",
+    "name": "Cubanisimo Vineyards",
+    "summary": "McMinnville winery making Pinot noir, Rosé and Pinot gris.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Cubanisimo Vineyards Pinot gris 2013, label approved 4 Jun 2014 (TTB COLA 14129001000388)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=14129001000388"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "artisanal-wine-cellars",
+    "name": "Artisanal Wine Cellars",
+    "summary": "Newberg winery making Pinot noir and Gewürztraminer.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Artisanal Wine Cellars Pinot noir, label approved 17 Oct 2024 (TTB COLA 24270001000889)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=24270001000889"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "macindoe",
+    "name": "Macindoe",
+    "summary": "Dundee winery making Roussanne, Pinot noir and Melon.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Macindoe Pinot noir, label approved 24 Mar 2020 (TTB COLA 20079001000403)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=20079001000403"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "ross-andrew",
+    "name": "Ross Andrew",
+    "summary": "Dundee winery making Pinot noir, Pinot gris and White blend.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Ross Andrew Pinot noir 2012, label approved 16 Apr 2014 (TTB COLA 14083001000466)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=14083001000466"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "pheasant-valley-winery",
+    "name": "Pheasant Valley Winery",
+    "summary": "Hood River winery making Primitivo, Cabernet sauvignon and Syrah.",
+    "place": "Hood River, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Pheasant Valley Winery Pinot noir 2012, label approved 20 Sep 2013 (TTB COLA 13220001000187)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=13220001000187"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "luminous-hills",
+    "name": "Luminous Hills",
+    "summary": "Dundee winery making Pinot noir.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Luminous Hills Pinot noir, label approved 11 Jul 2022 (TTB COLA 22187001000902)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=22187001000902"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "wyeast-vineyards",
+    "name": "Wy'East Vineyards",
+    "summary": "Newberg winery making Pinot noir and Pinot gris.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Wy'East Vineyards 2006, label approved 1 Nov 2007 (TTB COLA 07304001000078)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=07304001000078"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "arcane-cellars",
+    "name": "Arcane Cellars",
+    "summary": "Salem winery making Riesling, Pinot gris and Pinot blanc.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Arcane Cellars N/a, label approved 6 Apr 2018 (TTB COLA 18081001000345)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18081001000345"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "lavelle",
+    "name": "LaVelle",
+    "summary": "Elmira winery making Riesling, Pinot noir and Pinot gris.",
+    "place": "Elmira, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "LaVelle Pinot gris, label approved 4 Mar 2026 (TTB COLA 26057001000289)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26057001000289"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "emerson",
+    "name": "Emerson",
+    "summary": "Monmouth winery making Pinot gris, Viognier and Chardonnay.",
+    "place": "Monmouth, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Emerson Albariño, label approved 2 Jun 2021 (TTB COLA 21148001000747)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=21148001000747"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "aubichon-cellars",
+    "name": "Aubichon Cellars",
+    "summary": "Newberg winery making Chardonnay, Pinot noir and Syrah.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Aubichon Cellars Syrah, label approved 26 Jun 2019 (TTB COLA 19153001000098)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=19153001000098"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "hawks-view",
+    "name": "Hawks View",
+    "summary": "Sherwood winery making Pinot gris, Pinot noir and Chardonnay.",
+    "place": "Sherwood, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Hawks View Chardonnay, label approved 11 Feb 2026 (TTB COLA 26036001000536)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26036001000536"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "obsidian",
+    "name": "Obsidian",
+    "summary": "Dallas winery making Tempranillo, Syrah and Red blend.",
+    "place": "Dallas, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Obsidian Pinot noir, label approved 18 Mar 2018 (TTB COLA 18061001000823)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18061001000823"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "swick",
+    "name": "Swick",
+    "summary": "Newberg winery making Pinot noir, Cabernet sauvignon and N/a.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Swick Pinot noir, label approved 8 Sep 2026 (TTB COLA 26246001000590)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26246001000590"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "upper-five",
+    "name": "Upper Five",
+    "summary": "Amity winery making Grenache, Sauvignon blanc and Tempranillo.",
+    "place": "Amity, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Upper Five Grenache, label approved 29 Jul 2026 (TTB COLA 26204001000207)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26204001000207"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "quintet",
+    "name": "Quintet",
+    "summary": "Carlton winery making Pinot noir and Chardonnay.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Quintet Pinot noir, label approved 23 Mar 2020 (TTB COLA 20071001000330)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=20071001000330"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "marshall-davis",
+    "name": "Marshall Davis",
+    "summary": "Gaston winery making Pinot noir, Cabernet sauvignon and N/a.",
+    "place": "Gaston, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Marshall Davis N/a, label approved 26 Apr 2023 (TTB COLA 23115001000284)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=23115001000284"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "zenith",
+    "name": "Zenith",
+    "summary": "Dayton winery making Pinot noir, Auxerrois and N/a.",
+    "place": "Dayton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Zenith N/a, label approved 17 Sep 2026 (TTB COLA 26257001000454)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26257001000454"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "pyrenees",
+    "name": "Pyrenees",
+    "summary": "Elkton winery making Pinot gris, Sémillon and Riesling.",
+    "place": "Elkton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Pyrenees Cabernet franc 2011, label approved 26 Sep 2012 (TTB COLA 12262001000398)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=12262001000398"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "cottonwood-winery-of-oregon",
+    "name": "Cottonwood Winery of Oregon",
+    "summary": "Cottage Grove winery making Pinot noir, Müller-thurgau and Chardonnay.",
+    "place": "Cottage Grove, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Cottonwood Winery of Oregon Syrah 2012, label approved 24 Jul 2015 (TTB COLA 15164001000080)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=15164001000080"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "kings-ridge",
+    "name": "Kings Ridge",
+    "summary": "Tualatin winery making Pinot noir, Riesling and Pinot gris.",
+    "place": "Tualatin, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Kings Ridge Chardonnay, label approved 28 Feb 2024 (TTB COLA 24045001001106)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=24045001001106"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "tyee",
+    "name": "Tyee",
+    "summary": "Corvallis winery making Pinot noir, Pinot gris and Chardonnay.",
+    "place": "Corvallis, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Tyee 2007, label approved 13 Mar 2008 (TTB COLA 08069001000002)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=08069001000002"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "libra",
+    "name": "Libra",
+    "summary": "Carlton winery making Pinot noir.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Libra Pinot noir, label approved 19 Aug 2024 (TTB COLA 24225001000459)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=24225001000459"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "alchemist",
+    "name": "Alchemist",
+    "summary": "Tualatin winery making Pinot noir and Chardonnay.",
+    "place": "Tualatin, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Alchemist Pinot noir, label approved 24 Feb 2026 (TTB COLA 26047001000415)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26047001000415"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "cardwell-hill",
+    "name": "Cardwell Hill",
+    "summary": "Philomath winery making Pinot gris and Pinot noir.",
+    "place": "Philomath, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Cardwell Hill Pinot noir, label approved 20 Jul 2026 (TTB COLA 26189001000380)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26189001000380"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "kason",
+    "name": "Kason",
+    "summary": "Forest Grove winery making Pinot noir.",
+    "place": "Forest Grove, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Kason 2008, label approved 6 May 2011 (TTB COLA 11096001000189)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=11096001000189"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "highland-springs",
+    "name": "Highland Springs",
+    "summary": "Oregon winery making Pinot gris, Pinot noir and Cabernet sauvignon.",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "hamacher",
+    "name": "Hamacher",
+    "summary": "Beaverton winery making Pinot noir and Chardonnay.",
+    "place": "Beaverton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Hamacher Pinot noir, label approved 14 Oct 2018 (TTB COLA 18279001000013)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18279001000013"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "spangler-vineyards",
+    "name": "Spangler Vineyards",
+    "summary": "Roseburg winery making Cabernet franc, Viognier and Pinot noir.",
+    "place": "Roseburg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Spangler Vineyards Teroldego, label approved 29 Jul 2025 (TTB COLA 25207001000024)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=25207001000024"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "tyee-wine-cellars",
+    "name": "Tyee Wine Cellars",
+    "summary": "Corvallis winery making Chardonnay, Pinot gris and Pinot noir.",
+    "place": "Corvallis, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Tyee Wine Cellars 2007, label approved 13 Mar 2008 (TTB COLA 08069001000002)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=08069001000002"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "evergreen",
+    "name": "Evergreen",
+    "summary": "McMinnville winery making Riesling, Pinot noir and Pinot gris.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Evergreen N/a 2007, label approved 19 Aug 2011 (TTB COLA 11199001000413)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=11199001000413"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "bomb",
+    "name": "Bomb",
+    "summary": "Gaston winery making Pinot noir and Cabernet sauvignon.",
+    "place": "Gaston, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Bomb Cabernet sauvignon 2013, label approved 29 Jan 2015 (TTB COLA 15019001000245)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=15019001000245"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "la-crema",
+    "name": "La Crema",
+    "summary": "McMinnville winery making Pinot noir and Chardonnay.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "La Crema Pinot noir, label approved 10 Oct 2024 (TTB COLA 24282001000823)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=24282001000823"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "carlton-cellars",
+    "name": "Carlton Cellars",
+    "summary": "Carlton winery making Pinot noir.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Carlton Cellars Pinot noir, label approved 26 Jul 2024 (TTB COLA 24200001000867)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=24200001000867"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "treos",
+    "name": "Treos",
+    "summary": "Eastgate Cir Corvallis winery making Muscat, White blend and Sangiovese.",
+    "place": "Eastgate Cir Corvallis, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Treos Sangiovese, label approved 27 Jan 2020 (TTB COLA 20020001000252)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=20020001000252"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "corvallis-cellars",
+    "name": "Corvallis Cellars",
+    "summary": "Dundee winery making Pinot gris and Pinot noir.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Corvallis Cellars Pinot noir, label approved 17 Sep 2020 (TTB COLA 20259001000456)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=20259001000456"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "megan-anne",
+    "name": "Megan Anne",
+    "summary": "Carlton winery making Pinot noir and Chardonnay.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Megan Anne Chardonnay, label approved 26 Mar 2021 (TTB COLA 21083001000856)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=21083001000856"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "dragonfly-creek",
+    "name": "Dragonfly Creek",
+    "summary": "Rickreall winery making Chardonnay and Pinot noir.",
+    "place": "Rickreall, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Dragonfly Creek Pinot noir, label approved 5 Sep 2019 (TTB COLA 19240001000555)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=19240001000555"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "archer",
+    "name": "Archer",
+    "summary": "Newberg winery making Pinot gris and Pinot noir.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Archer Pinot noir, label approved 12 Jan 2023 (TTB COLA 23012001000464)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=23012001000464"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "terrapin-cellars",
+    "name": "Terrapin Cellars",
+    "summary": "Oregon winery making Pinot noir and Pinot gris.",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "rocky-point",
+    "name": "Rocky Point",
+    "summary": "Carlton winery making Pinot noir, Sauvignon blanc and Grenache.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Rocky Point Sauvignon blanc 2015, label approved 6 Aug 2016 (TTB COLA 16194001000314)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=16194001000314"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "hawkins-cellars",
+    "name": "Hawkins Cellars",
+    "summary": "Dayton winery making Pinot noir, Pinot gris and Mouvedre grenache syrah.",
+    "place": "Dayton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Hawkins Cellars Pinot noir, label approved 17 Feb 2017 (TTB COLA 17034001000376)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=17034001000376"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "kandarian",
+    "name": "Kandarian",
+    "summary": "Eugene winery making Sauvignon blanc and Muscat.",
+    "place": "Eugene, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Kandarian Muscat 2012, label approved 7 Mar 2013 (TTB COLA 13045001000182)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=13045001000182"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "anindor",
+    "name": "Anindor",
+    "summary": "Elkton winery making Pinot gris, Pinot noir and Rose of pinot noir.",
+    "place": "Elkton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Anindor Pinot gris, label approved 24 Feb 2021 (TTB COLA 21054001000672)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=21054001000672"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "nuthatch-cellars",
+    "name": "Nuthatch Cellars",
+    "summary": "Corvallis winery making Malbec, Syrah and N/a.",
+    "place": "Corvallis, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Nuthatch Cellars N/a 2011, label approved 25 Jan 2013 (TTB COLA 13009001000064)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=13009001000064"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "plowbuster",
+    "name": "Plowbuster",
+    "summary": "Tualatin winery making Pinot noir, Chardonnay and N/a.",
+    "place": "Tualatin, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Plowbuster Chardonnay, label approved 26 Mar 2020 (TTB COLA 20083001000892)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=20083001000892"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "wildaire",
+    "name": "WildAire",
+    "summary": "Carlton winery making Pinot noir.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "WildAire Pinot noir, label approved 9 Jun 2020 (TTB COLA 20160001000596)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=20160001000596"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "routestock-cellars",
+    "name": "RouteStock Cellars",
+    "summary": "Dundee winery making Pinot noir.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "RouteStock Cellars Pinot noir, label approved 2 Nov 2016 (TTB COLA 16302001000214)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=16302001000214"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "genius-loci",
+    "name": "Genius Loci",
+    "summary": "McMinnville winery making Pinot noir, Syrah and N/a.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Genius Loci N/a 2012, label approved 13 May 2016 (TTB COLA 16103001000279)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=16103001000279"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "cultive-cellars",
+    "name": "Cultivé Cellars",
+    "summary": "Dundee winery making Cabernet sauvignon and Pinot noir.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Cultivé Cellars 2008, label approved 6 May 2010 (TTB COLA 10117001000276)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=10117001000276"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "jovino",
+    "name": "Jovino",
+    "summary": "Dundee winery making Pinot noir and Pinot gris.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Jovino Pinot noir, label approved 22 Apr 2026 (TTB COLA 26110001000203)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26110001000203"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "william-augustus",
+    "name": "William Augustus",
+    "summary": "Medford winery making Viognier-marsanne, Cabernet franc and Voignier.",
+    "place": "Medford, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "William Augustus Voignier 2011, label approved 11 May 2013 (TTB COLA 13098001000248)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=13098001000248"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "mark-ryan",
+    "name": "Mark Ryan",
+    "summary": "Dundee winery making Pinot noir.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Mark Ryan Pinot noir 2012, label approved 9 Sep 2013 (TTB COLA 13211001000468)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=13211001000468"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "madrone-mountain",
+    "name": "Madrone Mountain",
+    "summary": "Medford winery making Red blend and White blend.",
+    "place": "Medford, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Madrone Mountain 2010, label approved 10 Jun 2011 (TTB COLA 11152001000361)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=11152001000361"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "high-hook",
+    "name": "High Hook",
+    "summary": "McMinnville winery making Pinot blanc and Pinot noir.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "High Hook 2008, label approved 18 Sep 2009 (TTB COLA 09233001000293)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=09233001000293"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "blackcap",
+    "name": "BlackCap",
+    "summary": "McMinnville winery making Chardonnay, Pinot noir and Pinot meunier (7%) and pinot noir (93%).",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "BlackCap Pinot noir 2010, label approved 30 Jul 2013 (TTB COLA 13157001000542)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=13157001000542"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "francis-tannahill",
+    "name": "Francis Tannahill",
+    "summary": "Newberg winery making Pinot noir, Syrah and Cabernet sauvignon.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Francis Tannahill Pinot noir, label approved 8 Nov 2022 (TTB COLA 22311001000201)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=22311001000201"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "evergreen-vineyards",
+    "name": "Evergreen Vineyards",
+    "summary": "McMinnville winery making Pinot gris, Riesling and N/a.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Evergreen Vineyards N/a 2007, label approved 19 Aug 2011 (TTB COLA 11199001000413)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=11199001000413"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "brella",
+    "name": "Brella",
+    "summary": "Dundee winery making Pinot noir and Pinot gris.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Brella Pinot gris 2015, label approved 30 Nov 2015 (TTB COLA 15310001000362)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=15310001000362"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "tyrus-evan",
+    "name": "Tyrus Evan",
+    "summary": "Carlton winery making Syrah, Cabernet sauvignon and Pinot gris.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Tyrus Evan Cabernet sauvignon, label approved 8 Feb 2024 (TTB COLA 24038001000405)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=24038001000405"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "portlandia",
+    "name": "Portlandia",
+    "summary": "Dundee winery making Pinot gris and Pinot noir.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Portlandia Pinot noir, label approved 16 Nov 2022 (TTB COLA 22318001000758)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=22318001000758"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "verve",
+    "name": "Verve",
+    "summary": "Philomath winery making Pinot noir.",
+    "place": "Philomath, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Verve 2008, label approved 6 Apr 2009 (TTB COLA 09086001000067)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=09086001000067"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "westland",
+    "name": "Westland",
+    "summary": "Dayton winery making Pinot noir.",
+    "place": "Dayton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Westland 2008, label approved 19 May 2010 (TTB COLA 10130001000398)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=10130001000398"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "cloudline",
+    "name": "Cloudline",
+    "summary": "Dundee winery making Pinot noir, Pinot gris and N/a.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Cloudline Pinot noir, label approved 20 Oct 2020 (TTB COLA 20289001000912)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=20289001000912"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "kathken-vineyards",
+    "name": "Kathken Vineyards",
+    "summary": "Oregon winery making Pinot noir and Pinot gris.",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "jacob-williams",
+    "name": "Jacob Williams",
+    "summary": "D Hood River winery making Syrah and Cabernet sauvignon.",
+    "place": "D Hood River, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Jacob Williams, label approved 20 Aug 2010 (TTB COLA 10221001000284)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=10221001000284"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "elkhorn-ridge",
+    "name": "Elkhorn Ridge",
+    "summary": "Salem winery making Pinot noir, Pinot grigio and Pinot blanc.",
+    "place": "Salem, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Elkhorn Ridge Pinot noir, label approved 26 Mar 2025 (TTB COLA 25076001001006)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=25076001001006"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "eight-bells",
+    "name": "Eight Bells",
+    "summary": "Yamhill winery making White blend and Pinot gris.",
+    "place": "Yamhill, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Eight Bells 2007, label approved 29 Oct 2009 (TTB COLA 09299001000239)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=09299001000239"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "redgate",
+    "name": "Redgate",
+    "summary": "Independence winery making Pinot noir, Pinot gris and Chardonnay.",
+    "place": "Independence, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Redgate Pinot noir, label approved 6 Apr 2023 (TTB COLA 23089001000602)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=23089001000602"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "velocity",
+    "name": "Velocity",
+    "summary": "Medford winery making Red blend.",
+    "place": "Medford, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Velocity 2008, label approved 18 Jun 2010 (TTB COLA 10160001000214)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=10160001000214"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "andrew-rich",
+    "name": "Andrew Rich",
+    "summary": "Carlton winery making Pinot noir and N/a.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Andrew Rich Pinot noir, label approved 28 Apr 2021 (TTB COLA 21114001000067)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=21114001000067"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "domaine-meriwether",
+    "name": "Domaine Meriwether",
+    "summary": "Philomath winery making Sparkling blend.",
+    "place": "Philomath, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Domaine Meriwether 2006, label approved 18 Nov 2008 (TTB COLA 08321001000027)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=08321001000027"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "carden",
+    "name": "Carden",
+    "summary": "Gaston winery making Pinot noir and Cabernet sauvignon.",
+    "place": "Gaston, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Carden Pinot noir 2013, label approved 17 Feb 2016 (TTB COLA 16028001000661)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=16028001000661"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "provincial-vineyards",
+    "name": "Provincial Vineyards",
+    "summary": "Main Sheridan winery making Pinot noir.",
+    "place": "Main Sheridan, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Provincial Vineyards Pinot noir, label approved 23 Aug 2017 (TTB COLA 17215001000905)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=17215001000905"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "angel-vine",
+    "name": "Angel Vine",
+    "summary": "Portland winery making Pinot noir, N/a and Zinfandel.",
+    "place": "Portland, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Angel Vine N/a, label approved 28 Jan 2019 (TTB COLA 18352001000325)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18352001000325"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "primarius",
+    "name": "Primarius",
+    "summary": "Dundee winery making Pinot noir.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Primarius Pinot noir, label approved 25 Mar 2024 (TTB COLA 24077001000084)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=24077001000084"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "laelaps",
+    "name": "Laelaps",
+    "summary": "Bldg F Portland winery making Pinot noir, Riesling and Cabernet sauvignon.",
+    "place": "Bldg F Portland, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Laelaps Riesling, label approved 26 May 2021 (TTB COLA 21145001000002)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=21145001000002"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "monte-ferro",
+    "name": "Monte Ferro",
+    "summary": "Medford winery making Pinot noir, Syrah and Pinot gris.",
+    "place": "Medford, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Monte Ferro Syrah, label approved 27 Jun 2024 (TTB COLA 24169001000326)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=24169001000326"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "noble-estate",
+    "name": "Noble Estate",
+    "summary": "Rickreall winery making Chardonnay, N/a and Pinot gris.",
+    "place": "Rickreall, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Noble Estate N/a, label approved 19 May 2021 (TTB COLA 21137001000677)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=21137001000677"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "cummins-road",
+    "name": "Cummins Road",
+    "summary": "Dundee winery making Pinot noir.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Cummins Road Pinot noir 2015, label approved 18 Aug 2016 (TTB COLA 16209001000194)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=16209001000194"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "oregon-trails",
+    "name": "Oregon Trails",
+    "summary": "Dundee winery making Pinot noir.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Oregon Trails Pinot noir, label approved 18 Jul 2023 (TTB COLA 23193001001028)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=23193001001028"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "trathen-hall",
+    "name": "Trathen Hall",
+    "summary": "Newberg winery making Pinot noir.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Trathen Hall Pinot noir, label approved 19 Oct 2022 (TTB COLA 22256001000578)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=22256001000578"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "heart-catcher",
+    "name": "Heart Catcher",
+    "summary": "Hood River winery making Zinfandel and Zinfindel.",
+    "place": "Hood River, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Heart Catcher Zinfindel 2013, label approved 29 Jan 2015 (TTB COLA 15015001000495)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=15015001000495"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "2hawk",
+    "name": "2Hawk",
+    "summary": "Medford winery making Viognier, Syrah and Malbec.",
+    "place": "Medford, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "2Hawk Syrah, label approved 10 Jan 2022 (TTB COLA 22010001000349)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=22010001000349"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "castillo-de-feliciana",
+    "name": "Castillo De Feliciana",
+    "summary": "Milton Freewater winery making Tempranillo, Albariño and Cabernet sauvignon.",
+    "place": "Milton Freewater, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Castillo De Feliciana Albariño, label approved 7 Feb 2025 (TTB COLA 25031001000430)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=25031001000430"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "merriman",
+    "name": "Merriman",
+    "summary": "Carlton winery making Pinot noir and Chenin blanc.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Merriman Pinot noir 2011, label approved 12 Jul 2012 (TTB COLA 12172001000616)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=12172001000616"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "william-hatcher",
+    "name": "William Hatcher",
+    "summary": "Newberg winery making Pinot noir and N/a.",
+    "place": "Newberg, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "William Hatcher Pinot noir 2014, label approved 29 Oct 2015 (TTB COLA 15287001000469)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=15287001000469"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "expression-44",
+    "name": "Expression 44°",
+    "summary": "McMinnville winery making Pinot noir.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Expression 44° Pinot noir 2012, label approved 6 Aug 2013 (TTB COLA 13173001000103)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=13173001000103"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "citation",
+    "name": "Citation",
+    "summary": "Rickreall winery making Chardonnay and Pinot noir.",
+    "place": "Rickreall, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Citation Pinot noir, label approved 7 Apr 2018 (TTB COLA 18082001000932)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18082001000932"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "quest-cellars",
+    "name": "Quest Cellars",
+    "summary": "Dundee winery making Pinot noir and Pinot gris.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Quest Cellars Pinot gris 2012, label approved 11 Apr 2013 (TTB COLA 13070001000206)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=13070001000206"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "j-daan",
+    "name": "J. Daan",
+    "summary": "Carlton winery making Pinot noir, Cabernet franc 57% and N/a.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "J. Daan Cabernet franc 57% 2009, label approved 25 Jul 2012 (TTB COLA 12192001000290)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=12192001000290"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "cornerstone",
+    "name": "Cornerstone",
+    "summary": "Gaston winery making Pinot noir.",
+    "place": "Gaston, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Cornerstone Pinot noir, label approved 26 May 2017 (TTB COLA 17144001000203)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=17144001000203"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "willful",
+    "name": "Willful",
+    "summary": "Portland winery making Pinot noir and Muscat.",
+    "place": "Portland, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Willful Pinot noir, label approved 20 Aug 2026 (TTB COLA 26230001000445)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26230001000445"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "hood-crest",
+    "name": "Hood Crest",
+    "summary": "Hood River winery making Red blend, Barbera and Tempranillo.",
+    "place": "Hood River, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Hood Crest Barbera, label approved 17 Jul 2020 (TTB COLA 20197001000476)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=20197001000476"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "stella-fino",
+    "name": "Stella Fino",
+    "summary": "Oregon winery making Sangiovese.",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "open-book",
+    "name": "Open Book",
+    "summary": "Sheridan winery making Pinot noir.",
+    "place": "Sheridan, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Open Book 2010, label approved 3 Jun 2011 (TTB COLA 11124001000044)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=11124001000044"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "jigsaw",
+    "name": "Jigsaw",
+    "summary": "Dundee winery making Pinot noir.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Jigsaw Pinot noir, label approved 13 Aug 2021 (TTB COLA 21223001000493)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=21223001000493"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "stone-wolf",
+    "name": "Stone Wolf",
+    "summary": "McMinnville winery making Pinot noir.",
+    "place": "McMinnville, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Stone Wolf 2009, label approved 30 Mar 2011 (TTB COLA 11059001000255)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=11059001000255"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "ellanelle",
+    "name": "Ellanelle",
+    "summary": "Milton Freewater winery making Cabernet sauvignon.",
+    "place": "Milton Freewater, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Ellanelle Cabernet sauvignon 2011, label approved 27 Aug 2012 (TTB COLA 12227001000372)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=12227001000372"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "domaine-loubejac",
+    "name": "Domaine Loubejac",
+    "summary": "Dundee winery making Pinot noir and N/a.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Domaine Loubejac Pinot noir, label approved 20 Jun 2023 (TTB COLA 23164001000620)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=23164001000620"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "seven-bridges",
+    "name": "Seven Bridges",
+    "summary": "Portland winery making Merlot, Cabernet sauvignon and N/a.",
+    "place": "Portland, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Seven Bridges Cabernet sauvignon, label approved 18 May 2026 (TTB COLA 26134001000690)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26134001000690"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "vinstrata",
+    "name": "VinStrata",
+    "summary": "Yamhill winery making Pinot noir.",
+    "place": "Yamhill, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "VinStrata Pinot noir 2011, label approved 21 Nov 2012 (TTB COLA 12303001000345)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=12303001000345"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "rascal",
+    "name": "Rascal",
+    "summary": "Dundee winery making Riesling and Pinot noir.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Rascal Pinot noir, label approved 28 Jan 2026 (TTB COLA 26015001000386)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26015001000386"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "springhill-cellars",
+    "name": "Springhill Cellars",
+    "summary": "Oregon winery making Pinot noir.",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "la-dolce-vita",
+    "name": "La Dolce Vita",
+    "summary": "Forest Grove winery making Pinot noir.",
+    "place": "Forest Grove, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "La Dolce Vita 2006, label approved 2 Jun 2011 (TTB COLA 11119001000213)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=11119001000213"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "echo-ridge",
+    "name": "Echo Ridge",
+    "summary": "Echo winery making Cabernet franc, Muscat canelli and Cabernet sauvignon.",
+    "place": "Echo, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Echo Ridge Muscat canelli, label approved 3 Sep 2026 (TTB COLA 26238001000674)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26238001000674"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "edwin-dyer",
+    "name": "Edwin Dyer",
+    "summary": "F Portland winery making Pinot noir, Mourvedre and Syrah.",
+    "place": "F Portland, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Edwin Dyer Mourvedre 2012, label approved 11 Aug 2013 (TTB COLA 13177001000487)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=13177001000487"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "samuel-robert",
+    "name": "Samuel Robert",
+    "summary": "Dundee winery making Pinot noir.",
+    "place": "Dundee, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Samuel Robert Pinot noir, label approved 8 Sep 2026 (TTB COLA 26246001000569)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26246001000569"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "swiftwater-cellars",
+    "name": "Swiftwater Cellars",
+    "summary": "Carlton winery making Pinot noir, Cabernet sauvignon and Chardonnay.",
+    "place": "Carlton, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Swiftwater Cellars Pinot noir, label approved 12 Aug 2022 (TTB COLA 22222001000866)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=22222001000866"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "maccallum",
+    "name": "MacCallum",
+    "summary": "Oregon winery making Pinot noir.",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
+  },
+  {
+    "id": "bishop-creek-cellars",
+    "name": "Bishop Creek Cellars",
+    "summary": "Gaston winery making Pinot noir.",
+    "place": "Gaston, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Bishop Creek Cellars 2009, label approved 3 Feb 2011 (TTB COLA 11011001000152)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=11011001000152"
+      }
+    ],
+    "verified": false,
+    "type": "winery"
+  },
+  {
+    "id": "hellfire",
+    "name": "Hellfire",
+    "summary": "Hood River winery making White blend.",
+    "place": "Hood River, OR",
+    "sources": [
+      {
+        "title": "WineEnthusiast reviews, scraped June 2017 (OpenML dataset 42074)",
+        "url": "https://www.openml.org/d/42074"
+      },
+      {
+        "title": "Hellfire 2008, label approved 25 Mar 2009 (TTB COLA 09079001000384)",
+        "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=09079001000384"
+      }
+    ],
+    "verified": true,
+    "type": "winery",
+    "verifiedBy": "jev"
   }
 ]

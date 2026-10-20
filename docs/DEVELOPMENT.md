@@ -36,6 +36,7 @@ Conventions:
 - Every record needs a source. A source normally has a URL; one without (an emailed newsletter issue, say) is cited by title and date. Private newsletters contribute facts only, never their text.
 - A connection cited only by federal label approvals carries a note that the evidence goes no further than an approved label; `npm run cola:caveats` maintains it (see "Federal label approvals" below).
 - Where sources disagree on a year, the field holds one and `alsoDated` the others; never pick one silently or record the disagreement only in a note.
+- A connection known only from separate years, such as the vintages on a winery's approved labels for a vineyard's wine, lists them in `vintages` rather than a span; each year is checked against the cited approvals, and cards read them as "2006, 2018" or "2005–2007".
 - `verified` stays `false` until a person or the record check confirms the record against its sources. Verified records carry `verifiedBy`: `person`, `jev` or `boundary`.
 - People, wineries and vineyards may carry `interviews`: oral history interviews from the Oregon Wine History Archive.
 - An edge's `role` is free text and stays as written. On a record's card, the role of a founded, owns, worked at, winemaker, consulted, member of or mentored edge stands in for the verb ("Mark Wisnovsky (co-owner, from 2005)"). Roles of four words or more, and short ones that don't read as titles ("winemaking"), show a short title from `role-titles.json` instead ("operates the winery with family" becomes "operator"). The full role still shows in the verification note, flags and admin mode. New long roles need a title, and `npm test` lists any missing: run `npm run roles:titles`, which has Jev pick from each type's vocabulary (`src/data/roleTitles.ts`) into `tools/roles/proposals.json`, then review the picks and add them to `role-titles.json`.
@@ -179,7 +180,6 @@ Admin mode on the dev server lists flags from the published site alongside local
 
 Reading flags by hand: `npx wrangler d1 execute oregon-wine-flags --remote --command "SELECT * FROM flags WHERE resolved_at IS NULL ORDER BY created_at DESC"`, or the D1 console in the dashboard.
 
-## Sources and research tools
 ### The daily flag job
 
 `.github/workflows/flags-daily.yml` runs `npm run flags:daily` (`tools/flags/daily.ts`) each morning at 15:00 UTC, and on demand from the Actions tab. For each open flag it hasn't seen, it:
@@ -199,6 +199,7 @@ Setup, once:
 
 To try the job locally: `npm run db:migrate:local`, add a flag to the local copy, then `FLAGS_DB_LOCAL=1 npm run flags:daily -- --dry-run`. Add `--propose` to use your own Claude Code sign-in for proposals. The dry run checks and reports, but writes nothing.
 
+## Sources and research tools
 
 ### Oregon Wine History Archive
 
@@ -243,7 +244,7 @@ npm run cola:caveats   # after each merge and each check:apply
 - **Matching.** A winery's approvals are those under an Oregon permit whose brand is the winery's own name (or an also-known-as name). Brands that only contain the name, such as collaborations bottled by another winery or misspellings, are listed under `related` in `wineries.json` for a person to look over. Approvals from before electronic filing (8 or 9 digit ids) have no form or images and are skipped.
 - **Reading labels.** The vineyard is usually named only in the label artwork. `cola:read` reads labels in priority order (file names that name a known vineyard, then ones with a vineyard word, then ones with some other distinctive word) and only each wine's newest and oldest approval. Jev chooses among likely vineyards, "a vineyard not listed" and "no vineyard"; it can't write text, so a vineyard with no record is left as `needsName` until a person reads the label and sets `newVineyard` in `labels.json`. Readings under 0.9 are kept but not used.
 - **Checking.** `check:fetch` caches a cited approval as its form text plus its label images, and `npm run check` sends the images to Jev with the text. Image reading is an early-stage Jev feature, so records supported only by images are held to `IMAGE_THRESHOLD` in `tools/check/decide.ts`, calibrated with `npm run check:calibrate -- --images` (0.9 on 18 October 2026: no false approvals among 38 corrupted label claims, a small sample), and their note says they were checked this way.
-- **Caveats.** An approval shows a wine was planned, not sold. `cola:caveats` notes this on every connection cited only by approvals, notes when a verification rested on label images alone, and removes either note when it stops being true; a data test enforces the first.
+- **Caveats.** An approval shows a wine was planned, not sold. `cola:caveats` notes this on every connection cited only by approvals, notes when a verification rested on label images alone, and removes either note when it stops being true; a data test enforces the first. Cards don't show these notes beside the connection: the verification note at the foot of the card says them instead (`src/graph/caveats.ts`).
 - **Citations** link to the approval's detail page, which opens without a session. Never store the applicant's phone number or the filer's name.
 
 ### WineEnthusiast reviews (OpenML 42074)
