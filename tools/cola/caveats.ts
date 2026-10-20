@@ -7,6 +7,7 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { Graph, GraphEdge, Source } from '../../src/data/schema'
+import { IMAGE_ONLY, LABEL_ONLY } from '../../src/graph/caveats'
 import { claimsFor } from '../check/claims'
 import { APPLY_THRESHOLD, decide } from '../check/decide'
 import { readChecks, type CheckStore } from '../check/store'
@@ -14,8 +15,6 @@ import { formatRecords, readGraph } from '../reviewPlugin'
 
 export const isColaSource = (source: Source) => !!source.url && /^https:\/\/(www\.)?ttbonline\.gov\//.test(source.url)
 
-const LABEL_ONLY = /\s*Evidence goes only as far as (?:a )?federal label approvals? \(TTB, [\d–]+\); no other source confirms the wine was released\./
-const IMAGE_ONLY = /\s*Checked automatically against the label images?, an early-stage method with lower confidence\./
 
 // The years of the approvals a connection cites, from their titles ("label approved 22 Aug 2025")
 function approvalYears(sources: Source[]): string {

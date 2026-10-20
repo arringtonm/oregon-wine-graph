@@ -223,7 +223,8 @@ async function main() {
         if (source.status !== 'ok' && source.status !== 'not-text') {
           console.log(`  ${source.status.padEnd(9)} ${url} ${source.detail ?? ''}`)
         }
-        await new Promise((done) => setTimeout(done, 1000))
+        // The COLA registry client keeps its own, slower pace, and most approvals come from its cache
+        if (!url.includes('ttbonline.gov')) await new Promise((done) => setTimeout(done, 1000))
       }
     }),
   )
