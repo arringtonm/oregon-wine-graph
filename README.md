@@ -78,6 +78,8 @@ The main sources, by how many records cite them:
 
 Found something wrong or missing? [Open an issue](https://github.com/arringtonm/oregon-wine-graph/issues) with the record and, ideally, a source. The most useful sources are published and specific: an interview, a winery's own history page, a news story or book naming the people and the years. Corrections that come with a source are checked and applied like any other record.
 
+You can also flag a fact from its record card. Each morning new flags are checked again against the record's sources and any source you suggested. A suggested source that supports the record is added. A correction is made only when the check supports it, and is logged with the others. Everything else goes to a person.
+
 ## Running it yourself
 
 ```sh
@@ -86,13 +88,6 @@ npm run dev
 ```
 
 Then open the address it prints. The [developer guide](docs/DEVELOPMENT.md) covers the data format, the review tools, the automated source check and the research tools.
-
-## TODO
-
-- **Act on reader flags automatically, with a daily recap.** Flags are stored in D1 and nothing tells anyone they arrived. Add a Cloudflare Cron Trigger that runs once a day over the day's open flags:
-  - **Investigate each flag** with Jev, or a low-cost Anthropic model where text must be read or written. Re-check the flagged fact against its cited sources and any source the reader gave, using the same check as `npm run check`, and note whether the flag holds.
-  - **Act only within the existing rules:** add a reader's source when it supports the record, and apply a correction only when the check confirms it, logged in `tools/verify/corrections.json`.
-  - **Recap once a day:** one short message covering what was flagged, what the investigation found and what changed. The rest stays open for review in admin mode. Send it by email (Cloudflare Email Routing) only when something needs a person.
 
 ## Credits
 

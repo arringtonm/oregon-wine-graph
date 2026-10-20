@@ -34,6 +34,7 @@
     "audit:duplicates": "tsx tools/check/duplicates.ts",
     "layout:reset": "node -e \"require('fs').writeFileSync('src/data/layout.json', JSON.stringify({version: 1, positions: {}}, null, 1) + '\\\\n')\"",
     "db:migrate:local": "wrangler d1 migrations apply oregon-wine-flags --local",
+    "flags:daily": "tsx tools/flags/daily.ts",
     "worker:dev": "npm run build && wrangler dev --port 8788"
   },
   "dependencies": {

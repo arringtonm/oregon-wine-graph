@@ -22,10 +22,17 @@ interface Row {
   app_version: string
   created_at: string
   resolved_at: string | null
+  // Added by migrations/0002_flag_findings.sql
+  investigated_at?: string | null
+  finding?: string | null
+  pr_url?: string | null
 }
 
-async function query(sql: string): Promise<Row[]> {
-  const { stdout } = await run('npx', ['wrangler', 'd1', 'execute', DATABASE, '--remote', '--json', '--command', sql], {
+// Runs one statement on the published site's database, throwing if wrangler can't reach it
+export async function query(sql: string): Promise<Row[]> {
+  // FLAGS_DB_LOCAL=1 uses wrangler's local copy instead, for trying the daily job out
+  const where = process.env.FLAGS_DB_LOCAL ? '--local' : '--remote'
+  const { stdout } = await run('npx', ['wrangler', 'd1', 'execute', DATABASE, where, '--json', '--command', sql], {
     timeout: 30_000,
   })
   const [result] = JSON.parse(stdout) as { results: Row[]; success: boolean }[]
@@ -47,6 +54,9 @@ export function toStoredFlag(row: Row): StoredFlag {
     appVersion: row.app_version,
     createdAt: row.created_at,
     ...(row.resolved_at ? { resolvedAt: row.resolved_at } : {}),
+    ...(row.investigated_at ? { investigatedAt: row.investigated_at } : {}),
+    ...(row.finding ? { finding: row.finding } : {}),
+    ...(row.pr_url ? { prUrl: row.pr_url } : {}),
   }
 }
 
@@ -64,6 +74,9 @@ export async function readRemoteFlags(): Promise<StoredFlag[]> {
     return []
   }
 }
+
+// A value for a SQL statement passed to wrangler on the command line, which takes no parameters
+export const sqlText = (value: string | null | undefined) => (value == null ? 'NULL' : `'${value.replace(/'/g, "''")}'`)
 
 export async function resolveRemoteFlag(id: string): Promise<void> {
   if (!UUID.test(id)) throw new Error('Unknown flag')

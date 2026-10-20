@@ -180,6 +180,25 @@ Admin mode on the dev server lists flags from the published site alongside local
 Reading flags by hand: `npx wrangler d1 execute oregon-wine-flags --remote --command "SELECT * FROM flags WHERE resolved_at IS NULL ORDER BY created_at DESC"`, or the D1 console in the dashboard.
 
 ## Sources and research tools
+### The daily flag job
+
+`.github/workflows/flags-daily.yml` runs `npm run flags:daily` (`tools/flags/daily.ts`) each morning at 15:00 UTC, and on demand from the Actions tab. For each open flag it hasn't seen, it:
+
+- re-checks the record against its cited sources, and against the reader's source if they gave one, with the same check as `npm run check`, and notes whether the flag holds;
+- adds the reader's source when that source supports the record by itself;
+- for an "incorrect" or "out of date" flag, or one a source contradicts, has Claude Haiku propose a correction from the note and the reader's page. Haiku runs through Claude Code on the owner's Claude plan, with no tools, so a page can shape only its reply. A year the sources already disagree on is left to a person. The correction is written only when verify:apply's `judge` supports it, and is logged in `tools/verify/corrections.json`;
+- stores what it found in the flag's row (`investigated_at`, `finding`; `migrations/0002_flag_findings.sql`), shown under the flag in admin mode.
+
+The workflow then posts one recap. When data changed, it is the description of a pull request on a `flags/<date>` branch, and its flags are resolved on the next run after the pull request is merged. When only a person can act, it is an issue. Both are assigned to the repository owner, so GitHub sends the email. Quiet days post nothing. The repository is public, so the recap says that a flag has a note but never what the note says.
+
+Setup, once:
+
+- Apply the migration: `npx wrangler d1 migrations apply oregon-wine-flags --remote`.
+- Add repository secrets: `JEV_API_KEY`; `CLOUDFLARE_API_TOKEN` (a token with D1 edit) and `CLOUDFLARE_ACCOUNT_ID`; and optionally `CLAUDE_CODE_OAUTH_TOKEN`, the long-lived token `claude setup-token` prints, which bills the owner's Claude plan rather than API credit. Without it, corrections aren't proposed.
+- Allow pull requests from Actions: Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests".
+
+To try the job locally: `npm run db:migrate:local`, add a flag to the local copy, then `FLAGS_DB_LOCAL=1 npm run flags:daily -- --dry-run`. Add `--propose` to use your own Claude Code sign-in for proposals. The dry run checks and reports, but writes nothing.
+
 
 ### Oregon Wine History Archive
 

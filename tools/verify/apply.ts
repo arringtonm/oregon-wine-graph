@@ -137,7 +137,7 @@ function claimSupported(checks: SourceCheck[], id: string): boolean {
 }
 
 // Writes one record back to its data file, keeping the order of fields and records
-function writeRecord(dataDir: string, kind: 'node' | 'edge', record: GraphNode | GraphEdge) {
+export function writeRecord(dataDir: string, kind: 'node' | 'edge', record: GraphNode | GraphEdge) {
   const file = kind === 'edge' ? join(dataDir, 'edges.json') : join(dataDir, 'nodes', NODE_FILES[(record as GraphNode).type])
   const records = JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown>[]
   const index = records.findIndex((candidate) => candidate.id === record.id)

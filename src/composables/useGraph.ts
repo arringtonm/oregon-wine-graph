@@ -94,6 +94,9 @@ export interface AdminFlag extends Flag {
   id: string
   source: 'local' | 'remote'
   resolvedAt?: string
+  // What the daily flag job found, and the pull request that acted on it
+  finding?: string
+  prUrl?: string
 }
 
 const COLLAPSED_KEY = 'oregon-wine-graph:filters-collapsed'

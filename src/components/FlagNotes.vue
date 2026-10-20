@@ -20,6 +20,10 @@ const date = (iso: string) => new Date(iso).toLocaleDateString('en-US', { month:
       <a v-if="flag.sourceUrl" :href="flag.sourceUrl" target="_blank" rel="noopener">
         Suggested source<span class="visually-hidden"> (opens in a new tab)</span>
       </a>
+      <span v-if="flag.finding" class="flag-notes__note">Checked: {{ flag.finding }}</span>
+      <a v-if="flag.prUrl" :href="flag.prUrl" target="_blank" rel="noopener">
+        Pull request<span class="visually-hidden"> (opens in a new tab)</span>
+      </a>
       <button type="button" @click="resolveFlag(flag.id)">Resolve</button>
     </li>
   </ul>

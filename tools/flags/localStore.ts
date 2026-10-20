@@ -11,6 +11,11 @@ export interface StoredFlag extends Flag {
   // Sent on this dev server, or on the published site (remoteStore.ts)
   source: 'local' | 'remote'
   resolvedAt?: string
+  // From the daily flag job (daily.ts): when it looked, what it found, and the pull request
+  // that acted on the flag, if any
+  investigatedAt?: string
+  finding?: string
+  prUrl?: string
 }
 
 const FILE = resolve('.cache/flags.json')

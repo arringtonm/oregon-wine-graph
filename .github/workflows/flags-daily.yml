@@ -1,0 +1,60 @@
+# The daily flag job (tools/flags/daily.ts): re-checks each new reader flag against its
+# sources, makes the changes the check supports, and posts one recap, as a pull request when
+# something changed or an issue when only a person can act. Quiet days post nothing.
+# Repository secrets: JEV_API_KEY, CLOUDFLARE_API_TOKEN (D1 edit), CLOUDFLARE_ACCOUNT_ID, and
+# optionally CLAUDE_CODE_OAUTH_TOKEN (from `claude setup-token`, to propose corrections).
+# Settings → Actions → General must allow GitHub Actions to create pull requests.
+name: Daily flag recap
+
+on:
+  schedule:
+    - cron: '0 15 * * *' # 8am Pacific (7am in winter)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency: flags-daily
+
+jobs:
+  flags:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Install Claude Code, which proposes corrections
+        if: env.CLAUDE_CODE_OAUTH_TOKEN != ''
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Investigate new flags
+        run: npm run -s flags:daily
+      - name: Verify what the check now supports
+        run: npm run -s check:apply && npm run -s cola:caveats
+      - name: Post the recap
+        run: |
+          [ -s .cache/flags/recap.md ] || exit 0
+          title="Reader flags, $(date -u +%F)"
+          if [ -n "$(git status --porcelain -- src/data tools/verify/corrections.json)" ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git switch -c "flags/$(date -u +%F)"
+            git add src/data tools/verify/corrections.json
+            git commit -q -m "$title"
+            git push -q origin HEAD
+            url=$(gh pr create --title "$title" --body-file .cache/flags/recap.md --assignee '${{ github.repository_owner }}')
+            npm run -s flags:daily -- --record-pr "$url"
+          else
+            gh issue create --title "$title" --body-file .cache/flags/recap.md --assignee '${{ github.repository_owner }}'
+          fi
