@@ -9,7 +9,7 @@ import { checkRecord } from './checkRecord'
 import { claimsFingerprint, claimsFor, splitSentences } from './claims'
 import { decide, type SourceCheck } from './decide'
 import { htmlToText, methodTrailHtml, type CachedSource } from './fetchSources'
-import { extractPassages, nameVariants } from './passages'
+import { catalogueLines, extractPassages, nameVariants } from './passages'
 
 const graph = await loadGraph()
 const edge = (id: string) => ({ kind: 'edge' as const, record: graph.edges.find((candidate) => candidate.id === id)! })
@@ -282,5 +282,23 @@ describe('methodTrailHtml', () => {
       'Method Oregon Trail\nKramer Vineyards (Willamette Valley). 26830 NW Olson Rd, Gaston, OR 97119. https://www.kramervineyards.com. Sparkling.',
     )
     expect(methodTrailHtml('<p>no map here</p>')).toBeNull()
+  })
+})
+
+describe('list-style sources', () => {
+  it("reads only the record's own entries, not a neighbour naming the same AVA", () => {
+    const text = [
+      'WineEnthusiast reviews of Oregon wines, by winery.',
+      'Hood Crest: regions Columbia Gorge (OR). Its varieties Pinot Noir.',
+      'Springhouse Cellar: regions Columbia Valley (OR); Columbia Gorge (OR). Its varieties Viognier.',
+      'Phelps Creek: regions Columbia Gorge (OR). Its varieties Chardonnay.',
+    ].join('\n')
+    const both = catalogueLines(text, [['Springhouse Cellar'], ['Columbia Gorge AVA']])
+    expect(both.text.split('\n')).toEqual([expect.stringContaining('by winery'), expect.stringContaining('Springhouse Cellar')])
+    expect(both.mentioned).toEqual([true, true])
+    const first = catalogueLines(text, [['Springhouse Cellar'], ['Ribbon Ridge AVA']])
+    expect(first.text).toContain('Springhouse Cellar:')
+    expect(first.text).not.toContain('Phelps')
+    expect(first.mentioned).toEqual([true, false])
   })
 })

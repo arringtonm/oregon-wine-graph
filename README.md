@@ -24,14 +24,14 @@ As of 20 October 2026:
 | | Records |
 |---|---|
 | People | 629 |
-| Wineries | 593 |
+| Wineries | 592 |
 | Vineyards | 147 |
 | Organizations | 49 |
 | AVAs | 20 |
 | Events | 12 |
-| **Connections** | **4,092** |
+| **Connections** | **4,105** |
 
-Of these 5,542 records, **4,190 (76%) are verified** against their sources, as described below. 729 people and places link to oral history interviews.
+Of these 5,554 records, **4,373 (79%) are verified** against their sources, as described below. 729 people and places link to oral history interviews.
 
 Coverage is strongest for the northern Willamette Valley, where Oregon's modern wine industry began and where most published history concentrates. Southern Oregon, the Columbia Gorge and Walla Walla are thinner. Interview summaries have been read; full interview transcripts have not yet, so some careers are less detailed than the record allows.
 
@@ -47,7 +47,7 @@ A record is either **verified** or an **unverified draft**. Drafts are shown, be
 2. **Checked against its sources automatically.** A decision model reads the text of each cited page and judges whether it supports the record: the relationship itself, each year, and the role; for a person or place, each sentence of its summary. A record is approved only when a source supports its central claim, and every detail is supported, each with a confidence of at least 0.9. A detail may rest on facts spread across several of the record's sources, which the model then reads together; a record is never shown as verified by that combined reading alone. For a connection, the model must also find that the source states this relationship rather than only a different one between the same two, so a page saying someone founded a winery doesn't pass for their working there. To measure how often this goes wrong, we deliberately corrupted one fact in each of 400 records that had passed (a year changed, a sentence, party or relationship swapped for one that is false) and checked them again: 1.0% still passed at 0.9. Sources the model can't read directly, such as pages behind bot protection, are read from the Internet Archive's copy where there is one, and otherwise never count for or against a record. For a federal label approval, the model also looks at the label images, since a label usually names its vineyard only in the artwork. Reading images is an early-stage feature of the model: in a test on deliberately wrong label claims, including another vineyard the same winery buys from, none passed, but the sample was small, so a record supported only by label images says so in its verification note, beside its sources.
 3. **Confirmed by AVA boundaries.** A vineyard's AVA can be confirmed by testing its location against the official AVA boundary maps. This is available but not yet in use, as no vineyard has mapped coordinates yet.
 
-Today 4,002 records are verified by the automated check and 188 by a person; the remaining 1,352 are drafts. The site's "Verified records only" filter has an ⓘ that shows the current counts.
+Today 4,185 records are verified by the automated check and 188 by a person; the remaining 1,181 are drafts. The site's "Verified records only" filter has an ⓘ that shows the current counts.
 
 ### Rules we follow
 

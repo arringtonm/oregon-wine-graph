@@ -4,7 +4,8 @@ import type { DecisionModel, ImageAsset, Question } from '../jev/model'
 import { claimsFor, type CheckedRecord } from './claims'
 import { APPLY_THRESHOLD, type SourceCheck } from './decide'
 import type { CachedSource } from './fetchSources'
-import { extractPassages } from './passages'
+import { OPENML_URL } from '../openml/dataset'
+import { catalogueLines, extractPassages } from './passages'
 
 const LEVELS = [
   'The text contradicts the statement.',
@@ -41,7 +42,7 @@ export async function checkRecord(
     }
     // A label names its vineyard in the image, not the text, so image sources are read whole
     const images = cached.images?.slice(0, MAX_IMAGES) ?? []
-    const passages = extractPassages(cached.text, claims.parties)
+    const passages = (source.url === OPENML_URL ? catalogueLines : extractPassages)(cached.text, claims.parties)
     if (images.length === 0 && !passages.mentioned.some(Boolean)) {
       checks.push({ url: source.url, status: 'absent' })
       continue

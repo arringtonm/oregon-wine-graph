@@ -13,7 +13,7 @@ import { nameKey } from '../check/duplicates'
 import { slugify } from '../jev/parseConnection'
 import { OPENML_SOURCE, readOregonFacts, type ReviewFacts } from '../openml/dataset'
 import { readGraph } from '../reviewPlugin'
-import { avaFor, colaSource, noVariety } from './build'
+import { avaFor, colaSource, variety } from './build'
 import { CACHE_DIR, hasForm, Registry, type ColaForm } from './registry'
 import { approvalsFor, readWineries, searchNames, writeWineries } from './search'
 
@@ -40,13 +40,35 @@ export function placeFromApplicant(applicant: string): string | undefined {
   return `${name}, OR`
 }
 
-const varietyName = (name: string) => (name ? name[0].toUpperCase() + name.slice(1).toLowerCase() : '')
+// "the Willamette Valley", "the Dundee Hills", but "Ribbon Ridge", "Yamhill-Carlton"
+const withArticle = (ava: string) => (/ (Valley|Hills|Mountains|Gorge|District|Corridor|Coast)$/.test(ava) ? `the ${ava}` : ava)
 
-export function summaryFor(place: string | undefined, varieties: string[]): string {
-  const where = place ? `${place.replace(/, OR$/, '')} winery` : 'Oregon winery'
-  const top = varieties.slice(0, 3).map(varietyName)
-  const list = top.length > 1 ? `${top.slice(0, -1).join(', ')} and ${top[top.length - 1]}` : top[0]
-  return list ? `${where} making ${list}.` : `${where}.`
+// A summary that says only what one of the cited approvals does: the grape and AVA its label
+// names, the pair the winery's approvals name most often. One pair, as a list of every grape
+// and AVA reads as contradicted by each approval that names only some of them. The permit
+// holder's city is left out, as it is often a custom-crush facility rather than the winery.
+// That the summary rests on approvals is said in its verification note instead. `home` is
+// where the winery is; empty for one known to be based outside Oregon, whose Oregon label
+// permit would read as contradicting any other state named here.
+export function labelSummary(forms: ColaForm[], avaName: (appellation: string) => string | undefined, home = 'Oregon'): string {
+  const tally = new Map<string, { grape: string; ava?: string; count: number }>()
+  for (const form of forms) {
+    const grape = variety(form.varietals)
+    const ava = avaName(form.appellation)
+    if (!grape && !ava) continue
+    const key = `${grape}|${ava ?? ''}`
+    const entry = tally.get(key) ?? { grape, ava, count: 0 }
+    // A pair naming both counts for more than one naming only a grape or an AVA
+    entry.count += grape && ava ? 2 : 1
+    tally.set(key, entry)
+  }
+  const best = [...tally.values()].sort((a, b) => b.count - a.count)[0]
+  const subject = home ? `${home} winery` : 'Winery'
+  if (!best) return `${subject}.`
+  // "Red blend" is a style, not a grape: "making a red blend"
+  const what = ` making ${!best.grape ? 'wine' : / blend$/i.test(best.grape) ? `a ${best.grape.toLowerCase()}` : best.grape}`
+  const where = best.ava ? ` from ${withArticle(best.ava)}` : ''
+  return `${subject}${what}${where}.`
 }
 
 type Node = GraphNode & { verified: false }
@@ -63,20 +85,10 @@ export function newWineryRecords(
   const sameName = graph.nodes.filter((node) => nameKey(node.name) === nameKey(name) || node.id === id)
   if (sameName.some((node) => node.type === 'winery')) return null
   if (sameName.length > 0) notes.push(`${name}: shares a name with ${sameName.map((node) => node.id).join(', ')}`)
-  const newest = forms[0]
-  // Spelled as the graph already spells it ("McMinnville, OR"), when it does
-  const parsed = newest ? placeFromApplicant(newest.applicant) : undefined
-  const known = graph.nodes.find((node) => node.place?.toLowerCase() === parsed?.toLowerCase())?.place
-  const place = known ?? parsed
-  const varieties = [
-    ...new Set(
-      [...reviews.map((row) => row.variety), ...forms.map((form) => form.varietals.split(',')[0].trim())]
-        .filter((name) => name && !noVariety(name))
-        .map(varietyName),
-    ),
-  ]
+  const place = forms[0] ? placeFromApplicant(forms[0].applicant) : undefined
+  if (place) notes.push(`${name}: permit address in ${place}, which may be a custom-crush facility`)
   const colaSources = (list: ColaForm[]): Source[] =>
-    list.map((form) => colaSource(form, name, noVariety(form.varietals) ? '' : varietyName(form.varietals.split(',')[0].trim()), form.vintage))
+    list.map((form) => colaSource(form, name, variety(form.varietals), form.vintage))
 
   const edges = new Map<string, Edge>()
   const cite = (avaId: string, sources: Source[]) => {
@@ -104,9 +116,8 @@ export function newWineryRecords(
     id,
     type: 'winery',
     name,
-    summary: summaryFor(place, varieties),
-    ...(place ? { place } : {}),
-    sources: [OPENML_SOURCE, ...(newest ? colaSources([newest]) : [])],
+    summary: labelSummary(forms, (appellation) => avaFor(graph, appellation)?.name.replace(/ AVA$/, '')),
+    sources: [OPENML_SOURCE, ...colaSources(forms)],
     verified: false,
   } as Node
   return { node, edges: [...edges.values()], notes }
@@ -151,7 +162,7 @@ async function main() {
     research.edges.push(...records.edges)
     research.notes.push(...records.notes)
     wineries[records.node.id] = found
-    console.log(`  ${records.node.id}: ${found.ttbIds.length} approvals; ${records.node.place ?? 'no place'}; ${records.edges.length} AVAs`)
+    console.log(`  ${records.node.id}: ${found.ttbIds.length} approvals; ${records.edges.length} AVAs`)
   }
   writeWineries(wineries)
   research.notes.push(...skipped)

@@ -266,7 +266,8 @@
         "url": "https://www.princeofpinot.com/winery/2384/index.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "sokol-blosser-estate-vineyard",

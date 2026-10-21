@@ -54,7 +54,8 @@
         "url": "https://en.wikipedia.org/wiki/Oregon_Wine_Board"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "oregon-winegrowers-association",

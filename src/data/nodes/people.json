@@ -219,7 +219,8 @@
         "url": "https://industry.oregonwine.org/press-releases/oregon-wine-industry-awards-highest-honors-industry-leaders/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "greg-jones",
@@ -418,7 +419,7 @@
         "url": "https://nrtoday.com/business/local-wine-pioneer-philippe-girardet-dies-at-96/article_30090116-4c59-43d5-8c8d-445e1916730b.html"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/philippe-girardet/",
@@ -426,7 +427,8 @@
         "date": "2013-06-03",
         "minutes": 58
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "christophe-baron",
@@ -878,14 +880,15 @@
         "url": "https://oregonwinehistoryarchive.org/interviews/brian-croser/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/brian-croser/",
         "title": "Brian Croser",
         "date": "2024-10-15"
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "harry-peterson-nedry",
@@ -1403,7 +1406,8 @@
         "url": "https://www.princeofpinot.com/article/726/"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "dick-erath",
@@ -2651,7 +2655,8 @@
         "url": "https://www.princeofpinot.com/winery/966/index.html"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "moe-momtazi",
@@ -5512,7 +5517,7 @@
         "url": "https://www.linguafranca.wine/wine/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/thomas-savre/",
@@ -5520,7 +5525,8 @@
         "date": "2019-08-09",
         "minutes": 55
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "jarod-sleet",
@@ -5949,7 +5955,7 @@
         "url": "https://wineindustryadvisor.com/2022/12/05/lutz-of-lenne-sells-iconic-vineyard-estate"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/steve-and-karen-lutz/",
@@ -5957,7 +5963,8 @@
         "date": "2016-06-24",
         "minutes": 60
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "dave-jachter",
@@ -6292,7 +6299,7 @@
         "url": "https://wineindustryadvisor.com/2023/05/22/tiquette-bramlett-joins-chosen-family-wines-team/"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/tiquette-bramlett-2/",
@@ -6304,7 +6311,8 @@
         "title": "Tiquette Bramlett",
         "date": "2021-03-09"
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "danny-klieman",
@@ -10058,7 +10066,7 @@
         "url": "https://digitalcommons.linfield.edu/owha_willamette_ohphotos/253"
       }
     ],
-    "verified": false,
+    "verified": true,
     "interviews": [
       {
         "url": "https://oregonwinehistoryarchive.org/interviews/david-nemarnik-and-tom-fitzpatrick/",
@@ -10066,7 +10074,8 @@
         "date": "2016-07-21",
         "minutes": 63
       }
-    ]
+    ],
+    "verifiedBy": "jev"
   },
   {
     "id": "sid-heinze",

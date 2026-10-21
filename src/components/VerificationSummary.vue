@@ -2,7 +2,7 @@
 import { PopoverAnchor, PopoverArrow, PopoverContent, PopoverPortal, PopoverRoot } from 'reka-ui'
 import { computed, onBeforeUnmount, ref } from 'vue'
 import verifiedSources from '../data/verified-sources.json'
-import { caveatsOf } from '../graph/caveats'
+import { caveatsOf, labelOnlySources } from '../graph/caveats'
 import type { Fact } from '../services/facts'
 
 // The foot of a record's card: how many of its facts are verified. Its note lists every fact
@@ -136,6 +136,9 @@ onBeforeUnmount(() => clearTimeout(timer))
               <p class="verification-note__how">{{ howChecked(fact) }}</p>
               <p v-if="caveats(fact).labelOnly" class="verification-note__how">
                 Label approvals only: no other source confirms the wine was released
+              </p>
+              <p v-else-if="fact.kind === 'node' && labelOnlySources(fact.record.sources)" class="verification-note__how">
+                Described only from federal label approvals and wine reviews: the grape and AVA are those they name
               </p>
               <p class="verification-note__sources">
                 <span v-for="(source, index) in fact.record.sources" :key="source.title" class="verification-note__source">

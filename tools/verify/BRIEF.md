@@ -50,3 +50,14 @@ Write a JSON array to the output path you're given, with one entry per input rec
 ```
 
 `finding` is one or two plain sentences: what you found, or why you found nothing ("No published source mentions this role; only the winery's Instagram, which can't be cited."). Leave out `addSources` and `changes` when you have nothing. Report the number of records with new sources, with proposed changes, and with nothing found.
+
+## New wineries (records added from label approvals)
+
+Some batches are wineries added from federal label approvals, whose summary is a placeholder ("Forest Grove winery making Pinot noir."). For these, write a real summary:
+
+- **Confirm it's the right winery first.** Several share a name with a winery in California, Washington or elsewhere. Each input entry lists the Oregon winery's label years, AVAs and vineyards; the page you cite must be about that business.
+- **Style:** one or two sentences in our own words, like the summaries of Abacela, King Estate or Valley View Winery: where it is (town or area), who founded it and when, and what it's known for (its estate, its grapes, its winemaker). Only facts a page you cite states.
+- **`place`:** the town of the winery or its tasting room, from its own site or press, as `"Town, OR"`. Never the city on a label permit, which is often a custom-crush facility. Leave it out if you can't confirm it.
+- **Closed wineries** say so ("…, which closed in 2019."), and get `closed` when a source gives the year. An archived copy of its site (web.archive.org) is a fine source.
+- **Year fields:** set `founded` when a source states it.
+- **Nothing found:** say so in `finding` and propose no changes. The record then gets a plain summary drawn from its label approvals.

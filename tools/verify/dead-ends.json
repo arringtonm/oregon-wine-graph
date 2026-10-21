@@ -54,5 +54,165 @@
  "node:medici-vineyard": {
   "date": "2026-10-20",
   "finding": "Shorter retry; planting year left out (1976 or earlier)."
+ },
+ "node:pheasant-valley-winery": {
+  "date": "2026-10-21",
+  "finding": "Nothing found. The winery's old domain now hosts an unrelated casino page, the Wayback Machine was unreachable, and the only other hits were a bare Frommer's listing and unnamed Hood River real-estate ads."
+ },
+ "node:obsidian": {
+  "date": "2026-10-21",
+  "finding": "No published page links an Obsidian winery or label to Dallas or Rickreall, Oregon; searches find only Obsidian Wine Co. of Lake County, California, a different business. No changes proposed."
+ },
+ "node:libra": {
+  "date": "2026-10-21",
+  "finding": "Only a Natalie MacLean review calls Libra a small Carlton winery, and a trademark record shows LIBRA owned by Carlton Organic Wine Company, LLC. No page gives its founders, founding, vineyards (the labels' Momtazi Vineyard isn't linked to it anywhere) or anything beyond the placeholder, so no change is proposed."
+ },
+ "node:highland-springs": {
+  "date": "2026-10-21",
+  "finding": "No Oregon winery called Highland Springs turned up in searches (only Hyland Estates and unrelated 'Highland' or 'Springs' names), and the entry has no label approvals or permit cities to match against. Nothing proposed."
+ },
+ "node:corvallis-cellars": {
+  "date": "2026-10-21",
+  "finding": "Only retailer and app listings (Total Wine, Vivino, Delectable) mention the brand, with no winery site or press; nothing confirms who makes it or where."
+ },
+ "node:dragonfly-creek": {
+  "date": "2026-10-21",
+  "finding": "Only Vivino and Delectable listings name a Willamette Valley Dragonfly Creek; no winery site or press was found to confirm the business or its Rickreall location."
+ },
+ "node:kandarian": {
+  "date": "2026-10-21",
+  "finding": "Only directory listings (Yellow Pages, AARP, Vivino) mention Kandarian Wine Cellars, placing it at Veneta; no winery site or press describes it, so nothing citable was found."
+ },
+ "node:routestock-cellars": {
+  "date": "2026-10-21",
+  "finding": "RouteStock is a Wilson Daniels brand whose own pages describe only Napa Valley and Sonoma Coast wines; a Route 99W Pinot noir is listed by retailers, but no readable page confirms an Oregon bottling or who made it in Dundee."
+ },
+ "node:cultive-cellars": {
+  "date": "2026-10-21",
+  "finding": "No page about a Cultivé Cellars was found; the only near match is Cultavin Cellars, a bottler name on Trader Joe's labels, which can't be tied to this record."
+ },
+ "node:william-augustus": {
+  "date": "2026-10-21",
+  "finding": "No winery site, press or directory mentions a William Augustus winery in Medford or the Rogue Valley."
+ },
+ "node:evergreen-vineyards": {
+  "date": "2026-10-21",
+  "finding": "No winery site or press describes an Evergreen Vineyards label from McMinnville; only an anonymous forum comment links a vineyard to the Evergreen aviation museum, which can't be cited."
+ },
+ "node:brella": {
+  "date": "2026-10-21",
+  "finding": "Only retailer and review listings for Brella Pinot noir were found; none names the producer or where it is made."
+ },
+ "node:westland": {
+  "date": "2026-10-21",
+  "finding": "No winery or label named Westland was found; Methven Family Vineyards sits on Westland Lane in Dayton, but nothing ties the name to it."
+ },
+ "node:elkhorn-ridge": {
+  "date": "2026-10-21",
+  "finding": "The Elkhorn Ridge Vineyards site is now a parked domain and can't be read; The Prince of Pinot lists Elkhorn Ridge only as a vineyard sourced by R. Stuart & Co., so nothing citable describes the winery."
+ },
+ "node:eight-bells": {
+  "date": "2026-10-21",
+  "finding": "The only Eight Bells found is a Seattle winery founded with a 2009 first vintage that buys some Oregon fruit; nothing ties it to the 2009 Yamhill permit, so it can't be confirmed as this business."
+ },
+ "node:laelaps": {
+  "date": "2026-10-21",
+  "finding": "Only a Vivino listing (Dundee Hills, with Nemaniki Vineyard Pinot noir and Rocks District Cabernet sauvignon) and a trademark record turned up; no winery site or press names its owners, town or history."
+ },
+ "node:heart-catcher": {
+  "date": "2026-10-21",
+  "finding": "Only a 2007 trademark filing for HEART CATCHER wine by Gorge Wine Company, LLC turned up; no page ties it to a Hood River winery or describes the business."
+ },
+ "node:stella-fino": {
+  "date": "2026-10-21",
+  "finding": "Only a Vivino listing turned up; no winery site or press describes Stella Fino or its owners."
+ },
+ "node:open-book": {
+  "date": "2026-10-21",
+  "finding": "Only a forum tasting note on a 2006 Open Book Wines Pinot noir turned up, saying the label names Scott Huffman as winemaker; its old domain was a parked page. Nothing ties it to Sheridan or describes the business, so no change is proposed."
+ },
+ "node:ellanelle": {
+  "date": "2026-10-21",
+  "finding": "No winery site, press or directory page about Ellanelle turned up; ellanelle.com is a placeholder page, and the session's search budget ran out before further searches."
+ },
+ "node:vinstrata": {
+  "date": "2026-10-21",
+  "finding": "No page about a Vinstrata winery turned up; vinstrata.com is now an unrelated software site, and the session's search budget ran out before further searches."
+ },
+ "node:la-dolce-vita": {
+  "date": "2026-10-21",
+  "finding": "No winery site or press about a La Dolce Vita winery in Forest Grove turned up; the likely domains are parked, and the session's search budget ran out before further searches."
+ },
+ "node:edwin-dyer": {
+  "date": "2026-10-21",
+  "finding": "No winery site, press or directory page about Edwin Dyer turned up, and the session's search budget ran out before further searches."
+ },
+ "node:hellfire": {
+  "date": "2026-10-21",
+  "finding": "No winery site or press about a Hellfire winery in Hood River turned up, and the session's search budget ran out before further searches."
+ },
+ "node:seven-of-hearts": {
+  "date": "2026-10-21",
+  "finding": "The label approval (a Columbia Valley Cabernet sauvignon filed by 12th & Maple in Dundee) contradicted 'Pinot noir, Chardonnay and rosé from vineyards across the Willamette Valley'. The Prince of Pinot says 'Willamette Valley and neighboring regions', and Armstrong and Durant aren't on the page, so I removed them."
+ },
+ "node:dancin": {
+  "date": "2026-10-21",
+  "finding": "A 2026 Barbera label approval contradicted 'it grows Pinot noir and Chardonnay', so the text now describes the vineyard plantings the Prince of Pinot gives, not the wines. 1859 Magazine states the 2017 award. Place stays Medford, which is on the winery's own permit."
+ },
+ "node:merrill-cellars": {
+  "date": "2026-10-21",
+  "finding": "The Bulletin says Merrill makes his wines in Medford and Eugene and sources Pinot noir from Eugene, which contradicted the Rogue and Applegate emphasis. Each sentence now follows one page: The Bulletin, then the Oregon Wine Board listing."
+ },
+ "node:witness-tree": {
+  "date": "2026-10-21",
+  "finding": "The text Jev reads gives no year for either sale (Wine Spectator says 'earlier this year', and Wine Industry Advisor gives only '19 April'), so both years are out. The first sentence follows Wine Spectator and the second Wine Industry Advisor."
+ },
+ "node:jezebel": {
+  "date": "2026-10-21",
+  "finding": "The Prince of Pinot page says a tasting room opened in 2015 at Urban Crush in Southeast Portland, where Walden makes her wines, after the older Dundee room. Eugene, on the label approval, is a permit address. I moved place to Portland and dropped Dundee from the text."
+ },
+ "node:ross-andrew": {
+  "date": "2026-10-21",
+  "finding": "Wine Spectator and The Prince of Pinot describe the winery and its Oregon Pinot noir."
+ },
+ "node:hawks-view": {
+  "date": "2026-10-21",
+  "finding": "The Prince of Pinot dates the winery to 2007 and Winetraveler to 2003, so founded stays 2007 with 2003 in alsoDated, and the year is out of the text."
+ },
+ "node:bomb": {
+  "date": "2026-10-21",
+  "finding": "The Carden Cellars page doesn't name Bomb, so the owners and winemaker are out. I cleared closed because 'discontinued as of 2015' scored only 0.72 as a closing year; the text keeps it."
+ },
+ "node:genius-loci": {
+  "date": "2026-10-21",
+  "finding": "The label approval (a white wine, filed by Walnut City Wineworks) contradicted calling it a Pinot noir label. The summary now says mostly Pinot noir and names Walnut City Wineworks, where Prince of Pinot says he makes his own wines."
+ },
+ "node:madrone-mountain": {
+  "date": "2026-10-21",
+  "finding": "The Medford label approval (Pallet Wine Company, a custom-crush site) contradicted the Jacksonville and Central Point towns, so both are out of the text. Only the Roadtrippers listing describes the winery."
+ },
+ "node:jacob-williams": {
+  "date": "2026-10-21",
+  "finding": "Jev reads only the first 2,160 characters of the Tasting Room profile, because the remaining mentions merge into one window larger than its limit, so the 2007 founding and the sons' names were never seen. The summary now uses only that opening. The winery is in Wishram, Washington; its only Oregon link is a 2010 Hood River permit."
+ },
+ "node:angel-vine": {
+  "date": "2026-10-21",
+  "finding": "Northwest Wine Report (2010) describes the owners and wines."
+ },
+ "node:monte-ferro": {
+  "date": "2026-10-21",
+  "finding": "The 2024 label approval (a Rogue Valley Syrah filed in Medford by Naumes Crush & Fermentation) contradicted a first sentence that named Lake Oswego and Washington Syrah. The first sentence now uses the winery's About page, and the town and winemaker move to the second, from Prince of Pinot."
+ },
+ "node:merriman": {
+  "date": "2026-10-21",
+  "finding": "The Prince of Pinot and Cellar 503 describe the label and its wines."
+ },
+ "node:expression-44": {
+  "date": "2026-10-21",
+  "finding": "No change. Every source writes \"Expression 44\" (or \"44º\"), never \"Expression 44°\", so Jev counts both cited pages as absent. Only retail sales listings (Woot) use the degree sign. The fix is renaming the record to \"Expression 44\", not rewording the summary. The producer is Expression Wines (Richard Sowalsky and William Hill), whose wines are made at the Silverado Trail Wine Studio in California, so this is a California producer's Oregon bottling."
+ },
+ "node:rascal": {
+  "date": "2026-10-21",
+  "finding": "The Prince of Pinot and Oregon Business describe Rascal as Stone Wolf's Pinot noir brand."
  }
 }

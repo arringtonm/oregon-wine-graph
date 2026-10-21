@@ -158,7 +158,8 @@
         "url": "https://www.cantwell.senate.gov/news/press-releases/cantwell-murray-introduce-senate-resolution-marking-30th-anniversary-of-walla-walla-valley-wine-region"
       }
     ],
-    "verified": false
+    "verified": true,
+    "verifiedBy": "jev"
   },
   {
     "id": "rocks-district-of-milton-freewater",

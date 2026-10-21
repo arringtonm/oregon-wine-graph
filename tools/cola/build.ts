@@ -41,10 +41,48 @@ export function pickApprovals<T extends { form: ColaForm }>(approvals: T[]): T[]
 // A form with no grape named says "N/A" (or "NONE") in the varietal box
 export const noVariety = (varietals: string) => /^\s*(n\/?a|none|not applicable)?\s*$/i.test(varietals)
 
-// "PINOT NOIR, CHARDONNAY" style varietals, as the graph writes them: "Pinot noir"
-const variety = (varietals: string) => {
-  const first = noVariety(varietals) ? '' : (varietals.split(/[,;/&]| and /i)[0]?.trim() ?? '')
-  return first ? first[0].toUpperCase() + first.slice(1).toLowerCase() : ''
+// "PINOT NOIR, CHARDONNAY" or "47% SANGIOVESE" style varietals, as the graph writes the first
+// grape: "Pinot noir", "Sangiovese"
+export const variety = (varietals: string) => {
+  const first = noVariety(varietals)
+    ? ''
+    : (varietals.split(/[,;/&]| and /i)[0] ?? '').replace(/\(?\s*\d+(\.\d+)?\s*%\s*\)?/g, '').replace(/\s+/g, ' ').trim()
+  return first ? canonicalGrape(first[0].toUpperCase() + first.slice(1).toLowerCase()) : ''
+}
+
+// Grapes as the graph spells them, for correcting a form's typing ("Riesliing", "Voignier")
+const GRAPES = [
+  'Pinot noir', 'Chardonnay', 'Pinot gris', 'Pinot grigio', 'Riesling', 'Syrah', 'Cabernet sauvignon', 'Merlot', 'Tempranillo',
+  'Pinot blanc', 'Viognier', 'Cabernet franc', 'Sauvignon blanc', 'Malbec', 'Gewürztraminer', 'Grenache', 'Sangiovese',
+  'Gamay noir', 'Zinfandel', 'Mourvèdre', 'Grüner veltliner', 'Petite sirah', 'Müller-Thurgau', 'Petit verdot', 'Barbera',
+  'Nebbiolo', 'Albariño', 'Pinot meunier', 'Muscat', 'Muscat canelli', 'Primitivo', 'Dolcetto', 'Maréchal Foch', 'Baco noir',
+  'Auxerrois', 'Melon de Bourgogne', 'Chenin blanc', 'Roussanne', 'Marsanne', 'Carmenère', 'Touriga nacional', 'Lemberger',
+  'Counoise', 'Cinsault', 'Verdejo', 'Grenache blanc', 'Sémillon', 'Tannat', 'Graciano', 'Montepulciano',
+]
+const plain = (text: string) => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+
+function editDistance(a: string, b: string): number {
+  const row = Array.from({ length: b.length + 1 }, (_, index) => index)
+  for (let i = 1; i <= a.length; i++) {
+    let diagonal = row[0]
+    row[0] = i
+    for (let j = 1; j <= b.length; j++) {
+      const above = row[j]
+      row[j] = Math.min(row[j] + 1, row[j - 1] + 1, diagonal + (a[i - 1] === b[j - 1] ? 0 : 1))
+      diagonal = above
+    }
+  }
+  return row[b.length]
+}
+
+// The listed spelling of a grape, when the name is it or a near miss of it; otherwise as given
+export function canonicalGrape(name: string): string {
+  const key = plain(name)
+  const exact = GRAPES.find((grape) => plain(grape) === key)
+  if (exact) return exact
+  if (key.length < 6) return name
+  const near = GRAPES.map((grape) => ({ grape, distance: editDistance(key, plain(grape)) })).sort((a, b) => a.distance - b.distance)[0]
+  return near.distance <= 2 ? near.grape : name
 }
 
 // Labels and reviews spell AVAs loosely: "Yamhill-Carlton District", "Columbia Valley (OR)"

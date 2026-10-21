@@ -942,5 +942,2263 @@
   "to": 1981,
   "sources": [],
   "finding": "Shorter retry."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:david-hill",
+  "field": "summary",
+  "from": "Forest Grove winery making Gewürztraminer, Pinot noir and Chardonnay.",
+  "to": "Forest Grove estate in the Tualatin Hills whose oldest vines were planted by Charles Coury in 1965, when the property was Charles Coury Vineyards. Milan and Jean Stoyanov restored the 1883 farmhouse, renamed the estate David Hill and released its first wines from the 2000 vintage; its flagship Black Jack Pinot noir comes from a single block of Coury's 1965 vines.",
+  "sources": [
+   "https://davidhillwinery.com/legacy.html"
+  ],
+  "finding": "The winery's legacy page gives the Coury plantings of 1965, the Stoyanovs' purchase and renaming, the first David Hill vintage (2000) and the Black Jack block; it gives no single founding year for the David Hill winery, so founded is left unset."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:melrose",
+  "field": "summary",
+  "from": "Roseburg winery making Baco noir, Pinot gris and Pinot noir.",
+  "to": "Family estate on the South Umpqua River near Roseburg, where Wayne and Deedy Parker, former San Joaquin Valley grape growers, planted an 82-acre vineyard in 1996. The first wines were made in 2000, with a century-old barn as the tasting room, and the estate grows a dozen varieties including Baco noir, Pinot gris and Pinot noir.",
+  "sources": [
+   "https://www.melrosevineyards.com/about",
+   "https://www.umpquavalleywineries.org/wineries/melrose-vineyards/"
+  ],
+  "finding": "The winery's about page gives the Parkers' 1996 arrival and planting and the 2000 first wines; the Umpqua Valley Winegrowers page gives the Roseburg address, the barn tasting room and the wine list. Neither page uses the word founded, so founded is left unset."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:folin-cellars",
+  "field": "summary",
+  "from": "Gold Hill winery making Tempranillo, Syrah and Grenache.",
+  "to": "Family-run Rogue Valley winery near Gold Hill, north of Medford, making only estate-grown warm-climate varieties such as Tempranillo, Syrah, Grenache, Viognier and Petite sirah from about 25 acres of vines tended by Rob Folin and his family. It also ran a tasting room in Carlton.",
+  "sources": [
+   "https://www.southernoregon.org/cities/folin-cellars-estate-winery-and-tasting-room/",
+   "https://greatnorthwestwine.com/?p=43308"
+  ],
+  "finding": "Travel Southern Oregon gives the Gold Hill address and the estate-only warm-climate focus; Great Northwest Wine (2016) names Rob Folin and family, the 25 planted acres and the Carlton tasting room. The winery's domain now redirects elsewhere, which hints it closed, but no page I could read says so, and no founding year was found."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:vista-hills",
+  "field": "summary",
+  "from": "McMinnville winery making Pinot gris, Pinot noir and Rosé.",
+  "to": "Dundee Hills winery near Dayton started in 1995 by John and Nancy McClintock, whose first crush in 2000 came from 1.5 acres of Pinot gris and whose Treehouse tasting room overlooked the valley. The Coppola family bought the 42-acre estate in 2018, and there was no 2018 Vista Hills wine.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1378/index.html",
+   "https://www.kval.com/news/local/francis-ford-coppola-acquires-oregon-winery"
+  ],
+  "finding": "Prince of Pinot gives the 1995 start, the McClintock and McDaniel owners, the Dayton address, the 2000 first crush and the Treehouse tasting room; the AP story on KVAL reports the 2018 sale of the 42-acre estate to the Family Coppola and that there would be no 2018 Vista Hills wine."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:vista-hills",
+  "field": "place",
+  "from": "McMinnville, OR",
+  "to": "Dayton, OR",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1378/index.html",
+   "https://www.kval.com/news/local/francis-ford-coppola-acquires-oregon-winery"
+  ],
+  "finding": "Prince of Pinot gives the 1995 start, the McClintock and McDaniel owners, the Dayton address, the 2000 first crush and the Treehouse tasting room; the AP story on KVAL reports the 2018 sale of the 42-acre estate to the Family Coppola and that there would be no 2018 Vista Hills wine."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:vista-hills",
+  "field": "founded",
+  "from": null,
+  "to": 1995,
+  "sources": [
+   "https://www.princeofpinot.com/winery/1378/index.html",
+   "https://www.kval.com/news/local/francis-ford-coppola-acquires-oregon-winery"
+  ],
+  "finding": "Prince of Pinot gives the 1995 start, the McClintock and McDaniel owners, the Dayton address, the 2000 first crush and the Treehouse tasting room; the AP story on KVAL reports the 2018 sale of the 42-acre estate to the Family Coppola and that there would be no 2018 Vista Hills wine."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:anam-cara",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir, Chardonnay and Riesling.",
+  "to": "Newberg winery of Nick and Sheila Nicholas, who planted their Nicholas Vineyard in the Chehalem Mountains above Newberg in 2001 and made their first vintage in 2003; the name is Celtic for \"friend of my soul.\" It opened a Main Street tasting room in 2008 and closed it in 2023 as the owners retired, continuing to make wine and pour by appointment at the vineyard.",
+  "sources": [
+   "https://newsberg.org/2023/11/20/anam-cara-cellars-closes-retail-tasting-room/",
+   "http://www.princeofpinot.com/article/686/"
+  ],
+  "finding": "Newsberg (November 2023) gives the 2001 planting, 2003 first vintage, the 2008 Newberg tasting room and its closing; Prince of Pinot gives the Chehalem Mountains vineyard and the name's meaning. No page states a founding year as such, so founded is left unset."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:anam-cara",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": "Newberg, OR",
+  "sources": [
+   "https://newsberg.org/2023/11/20/anam-cara-cellars-closes-retail-tasting-room/",
+   "http://www.princeofpinot.com/article/686/"
+  ],
+  "finding": "Newsberg (November 2023) gives the 2001 planting, 2003 first vintage, the 2008 Newberg tasting room and its closing; Prince of Pinot gives the Chehalem Mountains vineyard and the name's meaning. No page states a founding year as such, so founded is left unset."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:airlie",
+  "field": "summary",
+  "from": "Monmouth winery making Chardonnay, Gewürztraminer and Pinot noir.",
+  "to": "Winery on Dunn Forest Road near Monmouth, at the western edge of the Willamette Valley, founded in 1986 on a former Christmas tree farm first planted in 1983. Mary Olson bought it in 1997, and Elizabeth Clark has made its wines, from about 30 estate acres, since 2005.",
+  "sources": [
+   "https://www.airliewinery.com/about",
+   "https://www.oregonwinepress.com/enjoying-the-ride-airlie"
+  ],
+  "finding": "The winery's about page gives the 1983 planting, the 1986 founding, Olson's 1997 purchase, the 30 acres and Clark's arrival in 2005; Oregon Wine Press (2016) gives the Monmouth address and confirms the purchase and winemaker."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:airlie",
+  "field": "founded",
+  "from": null,
+  "to": 1986,
+  "sources": [
+   "https://www.airliewinery.com/about",
+   "https://www.oregonwinepress.com/enjoying-the-ride-airlie"
+  ],
+  "finding": "The winery's about page gives the 1983 planting, the 1986 founding, Olson's 1997 purchase, the 30 acres and Clark's arrival in 2005; Oregon Wine Press (2016) gives the Monmouth address and confirms the purchase and winemaker."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:coelho",
+  "field": "summary",
+  "from": "Amity winery making Red blend, Pinot noir and Pinot gris.",
+  "to": "Family winery of Dave and Deolinda Coelho in a renovated 1930s hardware store in downtown Amity, where the tasting room has been since the 2004 vintage. Its estate vineyards near Amity yield single-vineyard Pinot noir, and the family's Portuguese heritage shows in Port-style and Douro-style wines.",
+  "sources": [
+   "http://www.princeofpinot.com/winery/1379/",
+   "https://solutions.oregonstate.edu/partners/coelho-winery"
+  ],
+  "finding": "Prince of Pinot and an Oregon State University page describe the Amity winery and its vineyards; neither gives a founding year, so none is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:griffin-creek",
+  "field": "summary",
+  "from": "Turner winery making Malbec, Syrah and Cabernet sauvignon.",
+  "to": "Rogue Valley label of Willamette Valley Vineyards, made from grapes grown by the Moore family at Quail Run Vineyards, which they have farmed since 1989. Willamette Valley Vineyards has worked with the Moores since 1996.",
+  "sources": [
+   "https://www.wvv.com/product/2024-Griffin-Creek-Viognier"
+  ],
+  "finding": "Willamette Valley Vineyards' product page describes Griffin Creek as its Rogue Valley label from Quail Run Vineyards, matching the Turner permit city (Willamette Valley Vineyards' home). It is a brand rather than a separate winery, so no place or founding year is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:griffin-creek",
+  "field": "place",
+  "from": "Turner, OR",
+  "to": null,
+  "sources": [
+   "https://www.wvv.com/product/2024-Griffin-Creek-Viognier"
+  ],
+  "finding": "Willamette Valley Vineyards' product page describes Griffin Creek as its Rogue Valley label from Quail Run Vineyards, matching the Turner permit city (Willamette Valley Vineyards' home). It is a brand rather than a separate winery, so no place or founding year is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:iris-vineyards",
+  "field": "summary",
+  "from": "Dundee winery making Pinot gris, Pinot noir and Chardonnay.",
+  "to": "Winery of native Oregonians Richard Boyles and Pamela Frye on their 870-acre estate south of Eugene, where Chalice Vineyard was planted in 1996; the first Iris vintage was 2001 and the estate winery opened with the 2008 vintage. Aaron Liberman makes its Pinot noir, Pinot gris and Chardonnay, with a tasting room in Cottage Grove.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1861/index.html"
+  ],
+  "finding": "Prince of Pinot gives the owners, Chalice Vineyard, first vintage and Cottage Grove tasting room; matches the Cottage Grove permit. No founding year is stated, so none is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:iris-vineyards",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": "Cottage Grove, OR",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1861/index.html"
+  ],
+  "finding": "Prince of Pinot gives the owners, Chalice Vineyard, first vintage and Cottage Grove tasting room; matches the Cottage Grove permit. No founding year is stated, so none is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:patton-valley",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir and Rosé.",
+  "to": "Gaston winery in the northern Willamette Valley, founded in 1995 by Monte Pitt and Dave Chen. Its 24 acres of sustainably farmed estate vines go into Pinot noir and a rosé.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1238/index.html"
+  ],
+  "finding": "Prince of Pinot gives the founders, 1995 and the Gaston estate; matches the Patton Valley Vineyard labels and Gaston permit."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:patton-valley",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": "Gaston, OR",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1238/index.html"
+  ],
+  "finding": "Prince of Pinot gives the founders, 1995 and the Gaston estate; matches the Patton Valley Vineyard labels and Gaston permit."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:patton-valley",
+  "field": "founded",
+  "from": null,
+  "to": 1995,
+  "sources": [
+   "https://www.princeofpinot.com/winery/1238/index.html"
+  ],
+  "finding": "Prince of Pinot gives the founders, 1995 and the Gaston estate; matches the Patton Valley Vineyard labels and Gaston permit."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:scott-paul",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir and Chardonnay.",
+  "to": "Carlton winery founded in 1999 by Scott and Martha Wright, who sold their interest in 2014 to their partner Cameron Healy. Its estate site is Azana Vineyard in the Chehalem Mountains, and it also makes the Wildstock Pinot noir.",
+  "sources": [
+   "https://greatnorthwestwine.com/?p=26550"
+  ],
+  "finding": "Great Northwest Wine (December 2014) gives the 1999 founding in Carlton, the sale to Healy and Azana Vineyard; matches the Carlton permit and Chehalem Mountains labels."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:scott-paul",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": "Carlton, OR",
+  "sources": [
+   "https://greatnorthwestwine.com/?p=26550"
+  ],
+  "finding": "Great Northwest Wine (December 2014) gives the 1999 founding in Carlton, the sale to Healy and Azana Vineyard; matches the Carlton permit and Chehalem Mountains labels."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:scott-paul",
+  "field": "founded",
+  "from": null,
+  "to": 1999,
+  "sources": [
+   "https://greatnorthwestwine.com/?p=26550"
+  ],
+  "finding": "Great Northwest Wine (December 2014) gives the 1999 founding in Carlton, the sale to Healy and Azana Vineyard; matches the Carlton permit and Chehalem Mountains labels."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:cliff-creek",
+  "field": "summary",
+  "from": "Jacksonville winery making Syrah, Cabernet sauvignon and Merlot.",
+  "to": "Garvin family winery at Sams Valley Vineyard just northeast of Gold Hill, which Vern Garvin started planting in 2000 on land bought in the early 1990s; about 70 acres, mostly Syrah and Cabernet sauvignon, are in vines. The family has made wine since 2003 and also pours in Newberg.",
+  "sources": [
+   "https://www.cliffcreek.com/about/garvin-family",
+   "https://www.cliffcreek.com/about/vineyard",
+   "https://1859oregonmagazine.com/guidebook/cliff-creek-cellars/"
+  ],
+  "finding": "The winery's own family and vineyard pages and 1859 Oregon's Magazine describe the Gold Hill estate; the Jacksonville and Medford permits are nearby. No founding year is given, so none is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:cliff-creek",
+  "field": "place",
+  "from": "Jacksonville, OR",
+  "to": "Gold Hill, OR",
+  "sources": [
+   "https://www.cliffcreek.com/about/garvin-family",
+   "https://www.cliffcreek.com/about/vineyard",
+   "https://1859oregonmagazine.com/guidebook/cliff-creek-cellars/"
+  ],
+  "finding": "The winery's own family and vineyard pages and 1859 Oregon's Magazine describe the Gold Hill estate; the Jacksonville and Medford permits are nearby. No founding year is given, so none is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:siduri",
+  "field": "summary",
+  "from": "McMinnville winery making Pinot noir and Chardonnay.",
+  "to": "Sonoma County Pinot noir producer that Adam Lee and Dianna Novy founded in 1994 and named for the Babylonian goddess of wine; under winemaker Matt Revelette it makes single-vineyard and appellation wines from sites reaching north to Oregon's Willamette Valley.",
+  "sources": [
+   "https://siduri.com/story",
+   "https://lifford.com/pages/siduri"
+  ],
+  "finding": "Siduri is a California winery, not an Oregon one; its Oregon label approvals are its Willamette Valley bottlings. Its own story page and Lifford confirm the founders, the 1994 founding and its Willamette Valley wines; no page names an Oregon town, so no place is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:siduri",
+  "field": "founded",
+  "from": null,
+  "to": 1994,
+  "sources": [
+   "https://siduri.com/story",
+   "https://lifford.com/pages/siduri"
+  ],
+  "finding": "Siduri is a California winery, not an Oregon one; its Oregon label approvals are its Willamette Valley bottlings. Its own story page and Lifford confirm the founders, the 1994 founding and its Willamette Valley wines; no page names an Oregon town, so no place is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:siduri",
+  "field": "place",
+  "from": "McMinnville, OR",
+  "to": null,
+  "sources": [
+   "https://siduri.com/story",
+   "https://lifford.com/pages/siduri"
+  ],
+  "finding": "Siduri is a California winery, not an Oregon one; its Oregon label approvals are its Willamette Valley bottlings. Its own story page and Lifford confirm the founders, the 1994 founding and its Willamette Valley wines; no page names an Oregon town, so no place is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:season",
+  "field": "summary",
+  "from": "Roseburg winery making Malbec, Marsanne-roussanne and Viognier.",
+  "to": "Roseburg winery started in 2012 by Scott and Jennifer Henry IV, veterans of the Oregon wine industry, who make red and white wines from grapes grown in the Umpqua, Rogue and Applegate valleys.",
+  "sources": [
+   "https://www.southernoregon.org/cities/season-cellars/"
+  ],
+  "finding": "Travel Southern Oregon gives the founders, the 2012 start, the Melrose Road address in Roseburg and the valleys its fruit comes from. The winery's own site did not load."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:season",
+  "field": "founded",
+  "from": null,
+  "to": 2012,
+  "sources": [
+   "https://www.southernoregon.org/cities/season-cellars/"
+  ],
+  "finding": "Travel Southern Oregon gives the founders, the 2012 start, the Melrose Road address in Roseburg and the valleys its fruit comes from. The winery's own site did not load."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:blakeslee",
+  "field": "summary",
+  "from": "Rickreall winery making Pinot noir, Chardonnay and Riesling.",
+  "to": "Sherwood estate in the Chehalem Mountains that Bill and Sheila Blakeslee bought in 2005; once Quail Hill Vineyard, its dry-farmed Pinot noir has gone into estate wines since 2006, and its tasting room opened in 2013.",
+  "sources": [
+   "https://blakesleevineyard.com/about-us/",
+   "http://www.princeofpinot.com/winery/1718/"
+  ],
+  "finding": "The winery's About page and The Prince of Pinot give the 2005 purchase, the former Quail Hill name, the 2006 first vintage, the 2013 tasting room and the Sherwood address. No founding year is stated as such, so `founded` is left unset."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:blakeslee",
+  "field": "place",
+  "from": "Rickreall, OR",
+  "to": "Sherwood, OR",
+  "sources": [
+   "https://blakesleevineyard.com/about-us/",
+   "http://www.princeofpinot.com/winery/1718/"
+  ],
+  "finding": "The winery's About page and The Prince of Pinot give the 2005 purchase, the former Quail Hill name, the 2006 first vintage, the 2013 tasting room and the Sherwood address. No founding year is stated as such, so `founded` is left unset."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:deer-creek",
+  "field": "summary",
+  "from": "Jacksonville winery making Pinot noir, Pinot gris and White blend.",
+  "to": "Winery at Selma in the Illinois Valley corner of the Rogue Valley, founded in 1988 and revived in 2010 by John and Katherine Bryan; Herb Quady and Brian Gruber make its Pinot noir, Chardonnay and Pinot gris at their custom-crush winery in Medford.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2757/index.html"
+  ],
+  "finding": "The Prince of Pinot gives Selma, the 1988 founding, the Bryans' 2010 revival and the Medford custom-crush winemakers, which explains the Medford permit city. It is not in Jacksonville."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:deer-creek",
+  "field": "place",
+  "from": "Jacksonville, OR",
+  "to": "Selma, OR",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2757/index.html"
+  ],
+  "finding": "The Prince of Pinot gives Selma, the 1988 founding, the Bryans' 2010 revival and the Medford custom-crush winemakers, which explains the Medford permit city. It is not in Jacksonville."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:deer-creek",
+  "field": "founded",
+  "from": null,
+  "to": 1988,
+  "sources": [
+   "https://www.princeofpinot.com/winery/2757/index.html"
+  ],
+  "finding": "The Prince of Pinot gives Selma, the 1988 founding, the Bryans' 2010 revival and the Medford custom-crush winemakers, which explains the Medford permit city. It is not in Jacksonville."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:springhouse-cellar",
+  "field": "summary",
+  "from": "Hood River winery making Viognier, Merlot and Sauvignon blanc.",
+  "to": "Downtown Hood River winery that made vineyard-designated Northwest wines in its cellar and served them on tap in a tasting room upstairs, selling them to go in refillable bottles.",
+  "sources": [
+   "https://www.hood-gorge.com/articles/springhouse-cellar"
+  ],
+  "finding": "A 2016 regional tourism article describes the winery and its tap-and-refill model; no source found gives its founders, founding year or whether it is still open (its archived site could not be reached)."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:daedalus",
+  "field": "summary",
+  "from": "Turner winery making Pinot gris, Syrah and Pinot noir.",
+  "to": "Family winery founded in 2000 by Aron Hess and Pam Walden, who began with four barrels of Phelps Creek Vineyard Pinot noir and went on to focus on Dundee Hills Pinot noir, made at the 12th & Maple custom-crush winery in Dundee where Hess was head winemaker. After the couple split, Walden took over the label in 2010.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/720/index.html",
+   "https://www.princeofpinot.com/article/647/index.html"
+  ],
+  "finding": "The Prince of Pinot gives the founding, the Dundee tasting room and production, and the 2010 change of hands. Recent labels under a Turner permit match Willamette Valley Vineyards' later Daedalus label (first featuring Joe Dobbes), but its pages returned 404 and so are not cited; the record may be merging the two."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:daedalus",
+  "field": "place",
+  "from": "Turner, OR",
+  "to": "Dundee, OR",
+  "sources": [
+   "https://www.princeofpinot.com/winery/720/index.html",
+   "https://www.princeofpinot.com/article/647/index.html"
+  ],
+  "finding": "The Prince of Pinot gives the founding, the Dundee tasting room and production, and the 2010 change of hands. Recent labels under a Turner permit match Willamette Valley Vineyards' later Daedalus label (first featuring Joe Dobbes), but its pages returned 404 and so are not cited; the record may be merging the two."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:daedalus",
+  "field": "founded",
+  "from": null,
+  "to": 2000,
+  "sources": [
+   "https://www.princeofpinot.com/winery/720/index.html",
+   "https://www.princeofpinot.com/article/647/index.html"
+  ],
+  "finding": "The Prince of Pinot gives the founding, the Dundee tasting room and production, and the 2010 change of hands. Recent labels under a Turner permit match Willamette Valley Vineyards' later Daedalus label (first featuring Joe Dobbes), but its pages returned 404 and so are not cited; the record may be merging the two."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:thistle",
+  "field": "summary",
+  "from": "McMinnville winery making Chardonnay, Pinot noir and Pinot blanc.",
+  "to": "Small Dundee Hills estate of Jon and Laura Jennison, who moved there in 1996 and released their first wines from the 2003 vintage: mostly Pinot noir, plus Chardonnay, Pinot gris and Pinot blanc, from an organically farmed vineyard.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/996/index.html"
+  ],
+  "finding": "The Prince of Pinot profile matches the Dundee Hills Chardonnay label but gives no town, so no place is proposed; the current McMinnville place comes from the label permit. Its website no longer resolves, and the single 2021 approval makes the match less certain."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:thistle",
+  "field": "place",
+  "from": "McMinnville, OR",
+  "to": null,
+  "sources": [
+   "https://www.princeofpinot.com/winery/996/index.html"
+  ],
+  "finding": "The Prince of Pinot profile matches the Dundee Hills Chardonnay label but gives no town, so no place is proposed; the current McMinnville place comes from the label permit. Its website no longer resolves, and the single 2021 approval makes the match less certain."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:spangler",
+  "field": "summary",
+  "from": "Roseburg winery making Petite sirah, Cabernet sauvignon and Pinot noir.",
+  "to": "Roseburg winery of Pat Spangler, a former Chicago futures trader who in 2004 bought La Garza Cellars, a winery begun in 1973 as Jonicole. It focuses on Bordeaux and Rhône varieties and was Wine Press Northwest's 2018 Oregon Winery of the Year.",
+  "sources": [
+   "https://www.umpquavalleywineries.org/2018-oregon-winery-of-the-year-spangler-vineyards/"
+  ],
+  "finding": "The Wine Press Northwest article, reposted by the Umpqua Valley Winegrowers, gives the 2004 purchase, the winery's earlier names and the 2018 award. No founding year is set, since the winery predates Spangler's ownership."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:grizzly-peak",
+  "field": "summary",
+  "from": "Medford winery making Syrah, Tempranillo and Rosé.",
+  "to": "Ashland winery founded in 2006 by Al and Virginia Silbowitz, whose tasting room opened in 2008. Since 2011 its estate wines have been made at Pallet Wine Company in Medford by Linda Donovan.",
+  "sources": [
+   "https://grizzlypeakwinery.com/about/",
+   "https://en.wikipedia.org/wiki/Grizzly_Peak_Winery"
+  ],
+  "finding": "The winery's about page gives the founders, Ashland address and Pallet Wine production; Wikipedia gives the 2006 founding and 2008 tasting room. The Medford permit city is Pallet Wine Company."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:grizzly-peak",
+  "field": "place",
+  "from": "Medford, OR",
+  "to": "Ashland, OR",
+  "sources": [
+   "https://grizzlypeakwinery.com/about/",
+   "https://en.wikipedia.org/wiki/Grizzly_Peak_Winery"
+  ],
+  "finding": "The winery's about page gives the founders, Ashland address and Pallet Wine production; Wikipedia gives the 2006 founding and 2008 tasting room. The Medford permit city is Pallet Wine Company."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:grizzly-peak",
+  "field": "founded",
+  "from": null,
+  "to": 2006,
+  "sources": [
+   "https://grizzlypeakwinery.com/about/",
+   "https://en.wikipedia.org/wiki/Grizzly_Peak_Winery"
+  ],
+  "finding": "The winery's about page gives the founders, Ashland address and Pallet Wine production; Wikipedia gives the 2006 founding and 2008 tasting room. The Medford permit city is Pallet Wine Company."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:aberrant-cellars",
+  "field": "summary",
+  "from": "Tualatin winery making Pinot noir, Cabernet franc and Chardonnay.",
+  "to": "Willamette Valley label started in 2009 by proprietor and winemaker Eric Eide, a former Denver bartender who had worked for wine distributors, whose first wines included the Pinot noir Confero.",
+  "sources": [
+   "https://5280.com/sips-aberrant-cellars/",
+   "https://aberrantcellars.com"
+  ],
+  "finding": "5280 (2011) gives the 2009 start and the wines; the winery's site names Eide as proprietor and winemaker. Neither gives a town, so no place is proposed (Tualatin is the label permit city)."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:aberrant-cellars",
+  "field": "founded",
+  "from": null,
+  "to": 2009,
+  "sources": [
+   "https://5280.com/sips-aberrant-cellars/",
+   "https://aberrantcellars.com"
+  ],
+  "finding": "5280 (2011) gives the 2009 start and the wines; the winery's site names Eide as proprietor and winemaker. Neither gives a town, so no place is proposed (Tualatin is the label permit city)."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:aberrant-cellars",
+  "field": "place",
+  "from": "Tualatin, OR",
+  "to": null,
+  "sources": [
+   "https://5280.com/sips-aberrant-cellars/",
+   "https://aberrantcellars.com"
+  ],
+  "finding": "5280 (2011) gives the 2009 start and the wines; the winery's site names Eide as proprietor and winemaker. Neither gives a town, so no place is proposed (Tualatin is the label permit city)."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:a-blooming-hill-vineyard",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir and Pinot gris.",
+  "to": "Family winery near Cornelius in the Chehalem Mountains, run by Jim and Holly Witte, with Jim as winemaker and vineyard manager. Its 10 acres grow Pinot noir, Pinot gris, Chardonnay and Riesling, and it released its first Pinot noir in 2008.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2191/",
+   "https://industry.oregonwine.org/?p=16927"
+  ],
+  "finding": "The Prince of Pinot page and the Oregon Wine Board listing place the winery in Cornelius in the Chehalem Mountains AVA, matching the labels; Dundee is only the permit city. The two pages disagree on when the vineyard was planted (2000 vs 2006), so no year field is proposed."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:a-blooming-hill-vineyard",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": "Cornelius, OR",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2191/",
+   "https://industry.oregonwine.org/?p=16927"
+  ],
+  "finding": "The Prince of Pinot page and the Oregon Wine Board listing place the winery in Cornelius in the Chehalem Mountains AVA, matching the labels; Dundee is only the permit city. The two pages disagree on when the vineyard was planted (2000 vs 2006), so no year field is proposed."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:abiqua-wind",
+  "field": "summary",
+  "from": "Scotts Mills winery making Pinot gris, Muscat and Pinot noir.",
+  "to": "Family vineyard and winery in the Cascade foothills at Scotts Mills, owned by Pete and Marcia Buffington. Its vineyard dates from 1978 and is ungrafted and dry farmed, more than half of it Pinot gris from vines that came from David Lett; the winery was bonded in 2010.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2762/"
+  ],
+  "finding": "The Prince of Pinot page gives the Scotts Mills location, owners, 1978 vineyard and 2010 bonding. The labels go back to 2005, before the bonding, so founded is left unset."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:cubanisimo-vineyards",
+  "field": "summary",
+  "from": "McMinnville winery making Pinot noir, Rosé and Pinot gris.",
+  "to": "Estate in the Eola Hills near Salem owned by Havana-born neurosurgeon Mauricio Collada Jr., who bought the 21-acre property in 1991 and planted Pommard Pinot noir there in 2003. Its wines, mostly Pinot noir, were made in McMinnville.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/883/",
+   "https://oregonwinehistoryarchive.org/regions/willamette-valley/cubanisimo-vineyards/"
+  ],
+  "finding": "The Prince of Pinot gives the owner, the 1991 purchase, 2003 planting and McMinnville production, matching the McMinnville permit; the Oregon Wine History Archive interview with Collada was recorded at the vineyard in Salem. No founding year for the winery is stated outright."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:cubanisimo-vineyards",
+  "field": "place",
+  "from": "McMinnville, OR",
+  "to": "Salem, OR",
+  "sources": [
+   "https://www.princeofpinot.com/winery/883/",
+   "https://oregonwinehistoryarchive.org/regions/willamette-valley/cubanisimo-vineyards/"
+  ],
+  "finding": "The Prince of Pinot gives the owner, the 1991 purchase, 2003 planting and McMinnville production, matching the McMinnville permit; the Oregon Wine History Archive interview with Collada was recorded at the vineyard in Salem. No founding year for the winery is stated outright."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:artisanal-wine-cellars",
+  "field": "summary",
+  "from": "Newberg winery making Pinot noir and Gewürztraminer.",
+  "to": "Newberg winery started in 2005 by Tom and Patricia Feller, with a tasting room downtown. It made Pinot noir from the Adams and Jubilee vineyards in the Chehalem Mountains.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/715/"
+  ],
+  "finding": "The Prince of Pinot page gives the Fellers, the 2005 start, the downtown Newberg tasting room and the Chehalem Mountains vineyards, matching the labels."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:artisanal-wine-cellars",
+  "field": "founded",
+  "from": null,
+  "to": 2005,
+  "sources": [
+   "https://www.princeofpinot.com/winery/715/"
+  ],
+  "finding": "The Prince of Pinot page gives the Fellers, the 2005 start, the downtown Newberg tasting room and the Chehalem Mountains vineyards, matching the labels."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:macindoe",
+  "field": "summary",
+  "from": "Dundee winery making Roussanne, Pinot noir and Melon.",
+  "to": "Family winery that began with a Melon de Bourgogne, made to go with the Macindoes' steamed Dungeness crab dinners. It later added Pinot noir from the Willamette Valley and Yamhill-Carlton, a Roussanne and a Viognier dessert wine.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1985/"
+  ],
+  "finding": "The Prince of Pinot page describes Macindoe Family Cellars and its Willamette Valley and Yamhill-Carlton Pinot noir, matching the labels. It gives no town, founders' names or year, and the winery's site could not be reached."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:macindoe",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": null,
+  "sources": [
+   "https://www.princeofpinot.com/winery/1985/"
+  ],
+  "finding": "The Prince of Pinot page describes Macindoe Family Cellars and its Willamette Valley and Yamhill-Carlton Pinot noir, matching the labels. It gives no town, founders' names or year, and the winery's site could not be reached."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:luminous-hills",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir.",
+  "to": "Byron and Dana Dooley's estate Pinot noir label, grown on the 12-acre, dry-farmed hilltop vineyard they found in 2004 in the southwest corner of the Yamhill-Carlton District. Its first vintage was 2008, and it is poured at the Carlton tasting room of their Seven of Hearts label.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1469/index.html"
+  ],
+  "finding": "The Prince of Pinot names the Dooleys, the Yamhill-Carlton vineyard (matching the label AVA), the 2008 first vintage and the Seven of Hearts tasting room in Carlton; Dundee is only the label permit city."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:luminous-hills",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": "Carlton, OR",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1469/index.html"
+  ],
+  "finding": "The Prince of Pinot names the Dooleys, the Yamhill-Carlton vineyard (matching the label AVA), the 2008 first vintage and the Seven of Hearts tasting room in Carlton; Dundee is only the label permit city."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:arcane-cellars",
+  "field": "summary",
+  "from": "Salem winery making Riesling, Pinot gris and Pinot blanc.",
+  "to": "Salem winery on the Willamette River, owned by Jason and Jeffrey Leal Silva, with Jason making the wines from 12 acres of estate vines and other Willamette Valley fruit, including a reserve Pinot noir from the Dundee Hills.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1027/index.html"
+  ],
+  "finding": "The Prince of Pinot gives the owners, winemaker, Salem tasting room and the Dundee Hills reserve, matching the label's Salem permit and Dundee Hills AVA. No founding year found."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:swick",
+  "field": "summary",
+  "from": "Newberg winery making Pinot noir and Cabernet sauvignon.",
+  "to": "Newberg label of Oregon native Joe Swick, who made his first commercial wines in 2013 at the Medici Winery after harvests at Owen Roe, Penner-Ash, Domaine Serene and Felton Road. His early Pinot noirs came from the Columbia Gorge, Yamhill-Carlton and Cancilla Vineyard.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2552/"
+  ],
+  "finding": "The Prince of Pinot gives the 2013 first vintage, Newberg base and Columbia Gorge and Yamhill-Carlton Pinot noirs, matching the label's Newberg permit, 2015 first approval and AVAs. It states no founding year as such."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:upper-five",
+  "field": "summary",
+  "from": "Amity winery making Grenache, Sauvignon blanc and Tempranillo.",
+  "to": "Rogue Valley vineyard and winery near Talent, planted in 2003 on part of an old pear orchard, growing Tempranillo, Syrah, Sauvignon blanc and Grenache. It was certified Biodynamic in 2018.",
+  "sources": [
+   "https://www.oregonwine.org/?p=14343"
+  ],
+  "finding": "The Oregon Wine Board listing gives the Talent address, 2003 planting, grapes and 2018 Biodynamic certification, matching the Rogue Valley label AVA; Amity and Medford are permit cities. No founding year for the winery is given."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:upper-five",
+  "field": "place",
+  "from": "Amity, OR",
+  "to": "Talent, OR",
+  "sources": [
+   "https://www.oregonwine.org/?p=14343"
+  ],
+  "finding": "The Oregon Wine Board listing gives the Talent address, 2003 planting, grapes and 2018 Biodynamic certification, matching the Rogue Valley label AVA; Amity and Medford are permit cities. No founding year for the winery is given."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:marshall-davis",
+  "field": "summary",
+  "from": "Gaston winery making Pinot noir and Cabernet sauvignon.",
+  "to": "Small winery founded in 2011 by Sean Davis, Ryan Marshall and Matt Marshall, with a tasting room in downtown Carlton. Winemaker Sean Davis makes Pinot noir and Chardonnay from its Yamhill-Carlton estate vineyard, and Syrah and Cabernet sauvignon from Walla Walla Valley fruit.",
+  "sources": [
+   "https://marshalldaviswine.com/",
+   "https://yamhillcarlton.org/?p=4241"
+  ],
+  "finding": "The winery's site and the Yamhill-Carlton AVA listing give the 2011 founding, the founders, the Carlton tasting room and the Walla Walla sourcing, which match the labels' AVAs. The tasting room is in Carlton, not Gaston."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:marshall-davis",
+  "field": "place",
+  "from": "Gaston, OR",
+  "to": "Carlton, OR",
+  "sources": [
+   "https://marshalldaviswine.com/",
+   "https://yamhillcarlton.org/?p=4241"
+  ],
+  "finding": "The winery's site and the Yamhill-Carlton AVA listing give the 2011 founding, the founders, the Carlton tasting room and the Walla Walla sourcing, which match the labels' AVAs. The tasting room is in Carlton, not Gaston."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:marshall-davis",
+  "field": "founded",
+  "from": null,
+  "to": 2011,
+  "sources": [
+   "https://marshalldaviswine.com/",
+   "https://yamhillcarlton.org/?p=4241"
+  ],
+  "finding": "The winery's site and the Yamhill-Carlton AVA listing give the 2011 founding, the founders, the Carlton tasting room and the Walla Walla sourcing, which match the labels' AVAs. The tasting room is in Carlton, not Gaston."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:zenith",
+  "field": "summary",
+  "from": "Dayton winery making Pinot noir and Auxerrois.",
+  "to": "Eola-Amity Hills vineyard and winery near Salem, once O'Connor Vineyards, which Tim and Kari Ramey bought in 2002. Its roughly 83 acres supply Pinot noir and Chardonnay to more than a dozen wineries, and the winery the Rameys built on the property with St. Innocent's Mark Vlossak in 2006 made Zenith's own wines until the partnership ended in 2018.",
+  "sources": [
+   "https://www.winespectator.com/articles/oregon-pinot-innocent-zenith-part-ways",
+   "http://www.princeofpinot.com/winery/1470/",
+   "https://www.zenithvineyard.com/"
+  ],
+  "finding": "Wine Spectator and The Prince of Pinot give the 2002 purchase from Pat O'Connor, the acreage and the St. Innocent partnership; the winery's site gives the Zena Road, Salem address. No page gives a founding year for the Zenith winery itself, so none is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:zenith",
+  "field": "place",
+  "from": "Dayton, OR",
+  "to": "Salem, OR",
+  "sources": [
+   "https://www.winespectator.com/articles/oregon-pinot-innocent-zenith-part-ways",
+   "http://www.princeofpinot.com/winery/1470/",
+   "https://www.zenithvineyard.com/"
+  ],
+  "finding": "Wine Spectator and The Prince of Pinot give the 2002 purchase from Pat O'Connor, the acreage and the St. Innocent partnership; the winery's site gives the Zena Road, Salem address. No page gives a founding year for the Zenith winery itself, so none is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:pyrenees",
+  "field": "summary",
+  "from": "Elkton winery making Pinot gris, Sémillon and Riesling.",
+  "to": "Family-owned Umpqua Valley winery with a 30-acre vineyard on Old Highway 99 in Myrtle Creek, founded by a former government affairs executive from Washington, DC.",
+  "sources": [
+   "https://traveloregon.com/things-to-do/culture-history/historic-sites-oregon-trail/take-a-ride-back-in-time-in-myrtle-creek/"
+  ],
+  "finding": "Travel Oregon describes Pyrenees Vineyard & Cellars in Myrtle Creek in the Umpqua Valley, matching the labels' Umpqua Valley AVA (Elkton is the permit city). Other pages naming the proprietor, Robert Stryk, are print-sale or travel listings, and Sip Magazine's review could not be opened, so they are not cited."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:pyrenees",
+  "field": "place",
+  "from": "Elkton, OR",
+  "to": "Myrtle Creek, OR",
+  "sources": [
+   "https://traveloregon.com/things-to-do/culture-history/historic-sites-oregon-trail/take-a-ride-back-in-time-in-myrtle-creek/"
+  ],
+  "finding": "Travel Oregon describes Pyrenees Vineyard & Cellars in Myrtle Creek in the Umpqua Valley, matching the labels' Umpqua Valley AVA (Elkton is the permit city). Other pages naming the proprietor, Robert Stryk, are print-sale or travel listings, and Sip Magazine's review could not be opened, so they are not cited."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:cottonwood-winery-of-oregon",
+  "field": "summary",
+  "from": "Cottage Grove winery making Pinot noir, Müller-thurgau and Chardonnay.",
+  "to": "Father-and-son winery of Phil and Aaron Lieberman, named for the cottonwood trees on its 2-acre Cottonwood Meadows estate vineyard below the Eola Hills. It makes small lots of Pinot noir and Syrah, partly from other Northwest vineyards, and has a tasting room in Amity.",
+  "sources": [
+   "http://www.princeofpinot.com/winery/2603/"
+  ],
+  "finding": "The Prince of Pinot gives the owners, estate and Amity tasting room. A Vivino listing seen in search results shows a Cottonwood Winery Winter's Hill Vineyard Pinot noir, matching the labels' vineyard, but it wasn't opened and isn't cited. No page ties the winery to Cottage Grove, the permit city, and none gives a founding year."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:cottonwood-winery-of-oregon",
+  "field": "place",
+  "from": "Cottage Grove, OR",
+  "to": "Amity, OR",
+  "sources": [
+   "http://www.princeofpinot.com/winery/2603/"
+  ],
+  "finding": "The Prince of Pinot gives the owners, estate and Amity tasting room. A Vivino listing seen in search results shows a Cottonwood Winery Winter's Hill Vineyard Pinot noir, matching the labels' vineyard, but it wasn't opened and isn't cited. No page ties the winery to Cottage Grove, the permit city, and none gives a founding year."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:kings-ridge",
+  "field": "summary",
+  "from": "Tualatin winery making Pinot noir, Riesling and Pinot gris.",
+  "to": "Willamette Valley Pinot noir label first developed at Rex Hill, which Ryan Harms bought in 2005 and on which he started Union Wine Company. It is made at Union's winery in Tualatin, with its Pinot noir drawn mainly from Union's Crowe Hill estate vineyard in the Van Duzer Corridor.",
+  "sources": [
+   "https://www.skurnik.com/producer/kings-ridge/",
+   "http://www.princeofpinot.com/winery/777/"
+  ],
+  "finding": "Skurnik's producer page gives the Rex Hill origin, the 2005 purchase, the Tualatin winery and the Crowe Hill vineyard; The Prince of Pinot confirms that Union Wine Company owns it. This is a brand, not a separate winery, and no founding year is given, so none is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:tyee",
+  "field": "summary",
+  "from": "Corvallis winery making Pinot noir, Pinot gris and Chardonnay.",
+  "to": "Estate winery on the Buchanan family's century farm near Corvallis, started in 1985 with Oregon State enologist Barney Watson and Nola Mosier, where grapes were first planted in 1974. The Buchanans have been its sole owners since 2005, and their daughter Merilee Buchanan Benson became winemaker in 2006.",
+  "sources": [
+   "http://www.princeofpinot.com/winery/997/"
+  ],
+  "finding": "The Prince of Pinot gives the 1985 founding, the 1974 planting and the ownership history of this Corvallis winery. This looks like the same business as node:tyee-wine-cellars (batch 08, same 2008 Corvallis label), so the two records may be duplicates."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:tyee",
+  "field": "founded",
+  "from": null,
+  "to": 1985,
+  "sources": [
+   "http://www.princeofpinot.com/winery/997/"
+  ],
+  "finding": "The Prince of Pinot gives the 1985 founding, the 1974 planting and the ownership history of this Corvallis winery. This looks like the same business as node:tyee-wine-cellars (batch 08, same 2008 Corvallis label), so the two records may be duplicates."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:alchemist",
+  "field": "summary",
+  "from": "Tualatin winery making Pinot noir and Chardonnay.",
+  "to": "Higher-tier label of Union Wine Company, which winemaker Ryan Harms and vineyardist George Hillberry opened in a Tualatin warehouse in 2010, making Willamette Valley Pinot noir and Chardonnay. Its 2008 Pinot noir came from La Colina Vineyard in the Dundee Hills.",
+  "sources": [
+   "http://www.princeofpinot.com/winery/1415/"
+  ],
+  "finding": "The Prince of Pinot describes Alchemist Cellars as Union Wine Company's upper tier, made in Tualatin, with Dundee Hills fruit, matching the labels. No founding year is given for the label itself."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:cardwell-hill",
+  "field": "summary",
+  "from": "Philomath winery making Pinot gris and Pinot noir.",
+  "to": "Estate winery near Philomath, west of Corvallis, started by Dan and Nancy Chapel on an abandoned vineyard they bought in 2000. Its 38 acres are mostly Pinot noir, including the Monet Vineyard planted in 1984, and its 2006 Pinot noir made Wine Spectator's Top 100 in 2008.",
+  "sources": [
+   "http://www.princeofpinot.com/article/176/",
+   "https://magazine.viterbi.usc.edu/spring-2018/alumni/second-act/",
+   "https://www.cardwellhillwine.com/"
+  ],
+  "finding": "The Prince of Pinot, USC Viterbi Magazine and the winery's site give the Chapels, the 2000 purchase, the vineyards, the Philomath address and the 2008 Top 100 listing. The 2000 date is the land purchase, not a stated founding year, so founded is not set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:kason",
+  "field": "summary",
+  "from": "Forest Grove winery making Pinot noir.",
+  "to": "Small family winery near Yamhill whose vineyards in the Yamhill-Carlton, Chehalem Mountains and Dundee Hills AVAs grow Pinot noir, Pinot gris and Chardonnay. It sells most of its grapes to other wineries and bottles a few hundred cases a year under its own label.",
+  "sources": [
+   "http://www.princeofpinot.com/winery/1725/",
+   "https://www.oregonwine.org/?p=13156"
+  ],
+  "finding": "Prince of Pinot and the Oregon Wine Board list Kason Vineyards at 7200 NW Bony Rd, Yamhill, making Willamette Valley Pinot noir; no page names the founders or a founding year. The labels' Forest Grove permit is not mentioned anywhere and is likely a production facility; the match rests on the unusual name and the Willamette Valley Pinot noir."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:kason",
+  "field": "place",
+  "from": "Forest Grove, OR",
+  "to": "Yamhill, OR",
+  "sources": [
+   "http://www.princeofpinot.com/winery/1725/",
+   "https://www.oregonwine.org/?p=13156"
+  ],
+  "finding": "Prince of Pinot and the Oregon Wine Board list Kason Vineyards at 7200 NW Bony Rd, Yamhill, making Willamette Valley Pinot noir; no page names the founders or a founding year. The labels' Forest Grove permit is not mentioned anywhere and is likely a production facility; the match rests on the unusual name and the Willamette Valley Pinot noir."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:spangler-vineyards",
+  "field": "summary",
+  "from": "Roseburg winery making Cabernet franc, Viognier and Pinot noir.",
+  "to": "Roseburg winery that former Chicago commodities trader Pat Spangler bought in 2004. It was formerly La Garza Cellars, which began in 1973 as Jonicole Winery. Known for Bordeaux varieties, Syrah, Viognier and Petite Sirah, it was named Oregon Winery of the Year in 2018.",
+  "sources": [
+   "https://www.umpquavalleywineries.org/2018-oregon-winery-of-the-year-spangler-vineyards/"
+  ],
+  "finding": "A Wine Press Northwest profile, republished by the Umpqua Valley Winegrowers, says Spangler bought La Garza Cellars (founded 1973 as Jonicole Winery) in 2004 and was named 2018 Oregon Winery of the Year. 'founded' is set to the 2004 purchase, when the winery took the Spangler name; the reviewer may prefer to leave it blank."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:spangler-vineyards",
+  "field": "founded",
+  "from": null,
+  "to": 2004,
+  "sources": [
+   "https://www.umpquavalleywineries.org/2018-oregon-winery-of-the-year-spangler-vineyards/"
+  ],
+  "finding": "A Wine Press Northwest profile, republished by the Umpqua Valley Winegrowers, says Spangler bought La Garza Cellars (founded 1973 as Jonicole Winery) in 2004 and was named 2018 Oregon Winery of the Year. 'founded' is set to the 2004 purchase, when the winery took the Spangler name; the reviewer may prefer to leave it blank."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:tyee-wine-cellars",
+  "field": "summary",
+  "from": "Corvallis winery making Chardonnay, Pinot gris and Pinot noir.",
+  "to": "Family winery on the Buchanan Family Century Farm near Corvallis, where the family first planted wine grapes in 1974 and started the winery in 1985. Winemaker and vineyard manager Merrilee Buchanan Benson makes estate Pinot noir, Pinot gris, Chardonnay and Gewürztraminer.",
+  "sources": [
+   "https://www.oregonwine.org/wineries/tyee-wine-cellars/"
+  ],
+  "finding": "The Oregon Wine Board listing gives the Greenberry Rd, Corvallis address, the 1974 planting, the 1985 founding and the winemaker. Batch 07's node:tyee (Corvallis, 2008 label) looks like the same business and may be a duplicate record."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:tyee-wine-cellars",
+  "field": "founded",
+  "from": null,
+  "to": 1985,
+  "sources": [
+   "https://www.oregonwine.org/wineries/tyee-wine-cellars/"
+  ],
+  "finding": "The Oregon Wine Board listing gives the Greenberry Rd, Corvallis address, the 1974 planting, the 1985 founding and the winemaker. Batch 07's node:tyee (Corvallis, 2008 label) looks like the same business and may be a duplicate record."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:evergreen",
+  "field": "summary",
+  "from": "McMinnville winery making Riesling, Pinot noir and Pinot gris.",
+  "to": "The wine arm of Evergreen Agricultural Enterprises, which farmed more than 7,000 acres in the Willamette Valley, including 240 acres of vineyards. Among them is the Spruce Goose Vineyard in front of the Evergreen Aviation and Space Museum. It made Pinot noir under the Evergreen Vineyards, Spruce Goose and HK-1 labels and sold grapes to other wineries.",
+  "sources": [
+   "http://www.princeofpinot.com/winery/973/"
+  ],
+  "finding": "Prince of Pinot describes Evergreen Vineyards (evergreenvineyards.com), owned by Evergreen Agricultural Enterprises, and its labels. The page names no town or founding year, so place and founded are left unset; the McMinnville permit is consistent with the museum's location."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:evergreen",
+  "field": "place",
+  "from": "McMinnville, OR",
+  "to": null,
+  "sources": [
+   "http://www.princeofpinot.com/winery/973/"
+  ],
+  "finding": "Prince of Pinot describes Evergreen Vineyards (evergreenvineyards.com), owned by Evergreen Agricultural Enterprises, and its labels. The page names no town or founding year, so place and founded are left unset; the McMinnville permit is consistent with the museum's location."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:la-crema",
+  "field": "summary",
+  "from": "McMinnville winery making Pinot noir and Chardonnay.",
+  "to": "Russian River Valley, California, winery whose first Willamette Valley Pinot noir came from the 2012 vintage, using fruit from 10 vineyards in sub-AVAs including McMinnville, Eola-Amity Hills and Dundee Hills.",
+  "sources": [
+   "https://www.lacrema.com/introducing-la-crema-willamette-valley-pinot-noir/"
+  ],
+  "finding": "La Crema's own page describes its Willamette Valley Pinot noir and gives a Windsor, California address. No page I read places an Oregon winery or tasting room in McMinnville, so place is left unset."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:la-crema",
+  "field": "place",
+  "from": "McMinnville, OR",
+  "to": null,
+  "sources": [
+   "https://www.lacrema.com/introducing-la-crema-willamette-valley-pinot-noir/"
+  ],
+  "finding": "La Crema's own page describes its Willamette Valley Pinot noir and gives a Windsor, California address. No page I read places an Oregon winery or tasting room in McMinnville, so place is left unset."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:megan-anne",
+  "field": "summary",
+  "from": "Carlton winery making Pinot noir and Chardonnay.",
+  "to": "Willamette Valley Pinot noir and Chardonnay label begun in 2014 by Mark and Megan McNeilly of Washington's Mark Ryan Winery, with Isabelle Meunier, formerly of Evening Land, as consulting winemaker. It works from the Carlton Winemakers Studio, using fruit from sites such as Nysa, Lachini and Kindred vineyards.",
+  "sources": [
+   "https://www.oregonwinepress.com/meet-megan-anne"
+  ],
+  "finding": "Oregon Wine Press (2016) says the project was conceived in 2014, names the McNeillys, Meunier and the vineyards (including Nysa, which matches the labels), and says Mark works out of the Carlton Winemakers Studio, where the wines are sold."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:megan-anne",
+  "field": "founded",
+  "from": null,
+  "to": 2014,
+  "sources": [
+   "https://www.oregonwinepress.com/meet-megan-anne"
+  ],
+  "finding": "Oregon Wine Press (2016) says the project was conceived in 2014, names the McNeillys, Meunier and the vineyards (including Nysa, which matches the labels), and says Mark works out of the Carlton Winemakers Studio, where the wines are sold."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:terrapin-cellars",
+  "field": "summary",
+  "from": "Oregon winery making Pinot noir and Pinot gris.",
+  "to": "Willamette Valley winery started in 2000 by Rob Clarke and Brenda Kidder, who also run a vineyard management company and draw all their grapes from the vineyards they manage. They make Pinot noir, Pinot gris and a Tempranillo port.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1787/index.html"
+  ],
+  "finding": "The Prince of Pinot says Clarke and Kidder began making wine in 2000 (first Pinot noir 2001) from vineyards they manage. The winery's own site would not load, so no town is set. The page gives when they began making wine, not a founding date, so no founded year is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:anindor",
+  "field": "summary",
+  "from": "Elkton winery making Pinot gris, Pinot noir and Rose of pinot noir.",
+  "to": "Estate winery on Vintage Drive at Elkton, in the Umpqua Valley's Elkton Oregon AVA. Its vineyard includes Pinot noir planted in 1983 and 1999, and John Bradley has been its winemaker.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2596/index.html",
+   "https://www.nataliemaclean.com/wineries/info/anindor-vineyards/7435"
+  ],
+  "finding": "The Prince of Pinot gives the Elkton AVA location, the 1983 and 1999 plantings and John Bradley as winemaker; Natalie MacLean gives the Elkton address. The winery's site and archive would not load, so the Pace family's 2005 purchase seen in search snippets is left out."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:nuthatch-cellars",
+  "field": "summary",
+  "from": "Corvallis winery making Malbec and Syrah.",
+  "to": "Small Corvallis winery owned by John Bacon, its winemaker, and Jane Smith, focused on big red wines from vineyard sites across the Pacific Northwest.",
+  "sources": [
+   "https://www.nataliemaclean.com/wineries/info/nuthatch-cellars/7687"
+  ],
+  "finding": "Only a Natalie MacLean directory page describes it (Corvallis address, owners, red wines from Northwest vineyards), which fits the labels' Corvallis permit and Washington and Southern Oregon AVAs; no founding year found. The Corvallis address comes only from that directory, so no place is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:nuthatch-cellars",
+  "field": "place",
+  "from": "Corvallis, OR",
+  "to": null,
+  "sources": [
+   "https://www.nataliemaclean.com/wineries/info/nuthatch-cellars/7687"
+  ],
+  "finding": "Only a Natalie MacLean directory page describes it (Corvallis address, owners, red wines from Northwest vineyards), which fits the labels' Corvallis permit and Washington and Southern Oregon AVAs; no founding year found. The Corvallis address comes only from that directory, so no place is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:plowbuster",
+  "field": "summary",
+  "from": "Tualatin winery making Pinot noir and Chardonnay.",
+  "to": "Value-priced second label of Carabella, Mike Hallock's vineyard on the southeast side of Parrett Mountain in the Chehalem Mountains AVA, making Pinot noir and Chardonnay. Its name comes from the dry farming Hallock and his team use.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1296/index.html"
+  ],
+  "finding": "The Prince of Pinot describes Plowbuster as Carabella's second label, made by Mike Hallock from Carabella fruit (matching the Chehalem Mountains labels); it gives no founding year or tasting-room town."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:plowbuster",
+  "field": "place",
+  "from": "Tualatin, OR",
+  "to": null,
+  "sources": [
+   "https://www.princeofpinot.com/winery/1296/index.html"
+  ],
+  "finding": "The Prince of Pinot describes Plowbuster as Carabella's second label, made by Mike Hallock from Carabella fruit (matching the Chehalem Mountains labels); it gives no founding year or tasting-room town."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:wildaire",
+  "field": "summary",
+  "from": "Carlton winery making Pinot noir.",
+  "to": "Winery founded in 2005 by Matt and Jean Driscoll, who makes the wines at Illahe Vineyards near Dallas and pours them in Carlton. It is known for single-vineyard and Reserve Pinot noirs from sites such as Shea and Zenith, along with Chardonnay, Riesling, Tempranillo and Syrah.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1315/index.html",
+   "https://yamhillcarlton.org/wineries/wildaire"
+  ],
+  "finding": "The Prince of Pinot gives the 2005 founding, the Driscolls, winemaking at Illahe (matching the Dallas permit) and the Carlton tasting room; the Yamhill-Carlton AVA page lists tastings at the Carlton Winemakers Studio. The winery's own site now redirects to an unrelated gambling site, so it is not cited."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:wildaire",
+  "field": "founded",
+  "from": null,
+  "to": 2005,
+  "sources": [
+   "https://www.princeofpinot.com/winery/1315/index.html",
+   "https://yamhillcarlton.org/wineries/wildaire"
+  ],
+  "finding": "The Prince of Pinot gives the 2005 founding, the Driscolls, winemaking at Illahe (matching the Dallas permit) and the Carlton tasting room; the Yamhill-Carlton AVA page lists tastings at the Carlton Winemakers Studio. The winery's own site now redirects to an unrelated gambling site, so it is not cited."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:jovino",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir and Pinot gris.",
+  "to": "Value Pinot noir label made for restaurants, launched in 2003 by Dundee winemaker Joe Dobbes alongside his Wine by Joe brand. It is made at the Dobbes winery in Dundee.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/644/index.html"
+  ],
+  "finding": "The Prince of Pinot says Dobbes launched Jovino and Wine by Joe in 2003, describes Jovino as a restaurant-directed value Pinot noir, and places the winery and tasting room in Dundee (the labels' permit city)."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:jovino",
+  "field": "founded",
+  "from": null,
+  "to": 2003,
+  "sources": [
+   "https://www.princeofpinot.com/winery/644/index.html"
+  ],
+  "finding": "The Prince of Pinot says Dobbes launched Jovino and Wine by Joe in 2003, describes Jovino as a restaurant-directed value Pinot noir, and places the winery and tasting room in Dundee (the labels' permit city)."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:mark-ryan",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir.",
+  "to": "Woodinville, Washington, winery founded in 1999 by Mark Ryan McNeilly, which since 2006 has made a Pinot noir from Lachini Vineyard in Oregon's Chehalem Mountains. McNeilly and his wife Megan also own the Oregon label Megan Anne Cellars.",
+  "sources": [
+   "https://owenbargreen.com/blog/2018/6/14/interview-with-mark-ryan-mcneilly-owner-of-mark-ryan-winery"
+  ],
+  "finding": "This is a Washington winery whose Oregon Pinot noir carried the 2013 Dundee permit; the interview gives the 1999 founding, Woodinville base and the Lachini Pinot noir from 2006. No Oregon place is set; it may not belong in the graph as an Oregon winery."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:mark-ryan",
+  "field": "founded",
+  "from": null,
+  "to": 1999,
+  "sources": [
+   "https://owenbargreen.com/blog/2018/6/14/interview-with-mark-ryan-mcneilly-owner-of-mark-ryan-winery"
+  ],
+  "finding": "This is a Washington winery whose Oregon Pinot noir carried the 2013 Dundee permit; the interview gives the 1999 founding, Woodinville base and the Lachini Pinot noir from 2006. No Oregon place is set; it may not belong in the graph as an Oregon winery."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:mark-ryan",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": null,
+  "sources": [
+   "https://owenbargreen.com/blog/2018/6/14/interview-with-mark-ryan-mcneilly-owner-of-mark-ryan-winery"
+  ],
+  "finding": "This is a Washington winery whose Oregon Pinot noir carried the 2013 Dundee permit; the interview gives the 1999 founding, Woodinville base and the Lachini Pinot noir from 2006. No Oregon place is set; it may not belong in the graph as an Oregon winery."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:francis-tannahill",
+  "field": "summary",
+  "from": "Newberg winery making Pinot noir, Syrah and Cabernet sauvignon.",
+  "to": "Small label founded in 2001 by Cheryl Francis and Sam Tannahill, who went on to co-found A to Z Wineworks and buy REX HILL. Its one Pinot noir, The Hermit, comes from Pearl, their 5-acre Biodynamic estate vineyard in the Dundee Hills.",
+  "sources": [
+   "https://www.francistannahill.com"
+  ],
+  "finding": "The winery's site gives the 2001 founding, the founders, A to Z and REX HILL (REX HILL fits the Newberg permit) and the Pearl vineyard. Its only address is a Dundee post office box, so no place is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:francis-tannahill",
+  "field": "founded",
+  "from": null,
+  "to": 2001,
+  "sources": [
+   "https://www.francistannahill.com"
+  ],
+  "finding": "The winery's site gives the 2001 founding, the founders, A to Z and REX HILL (REX HILL fits the Newberg permit) and the Pearl vineyard. Its only address is a Dundee post office box, so no place is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:francis-tannahill",
+  "field": "place",
+  "from": "Newberg, OR",
+  "to": null,
+  "sources": [
+   "https://www.francistannahill.com"
+  ],
+  "finding": "The winery's site gives the 2001 founding, the founders, A to Z and REX HILL (REX HILL fits the Newberg permit) and the Pearl vineyard. Its only address is a Dundee post office box, so no place is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:cloudline",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir and Pinot gris.",
+  "to": "Affordable Willamette Valley Pinot noir label created more than 20 years ago by the Drouhin family of Beaune at the request of their American distributor, Dreyfus, Ashby. It is made by Domaine Drouhin Oregon with Véronique Boss-Drouhin as winemaker.",
+  "sources": [
+   "https://dreyfusashby.com/product/cloudline-cellars-pinot-noir/"
+  ],
+  "finding": "The distributor's page describes the label's origin and Domaine Drouhin Oregon as maker; it gives no launch year or town, so neither is set. Consider linking it to Domaine Drouhin Oregon."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:cloudline",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": null,
+  "sources": [
+   "https://dreyfusashby.com/product/cloudline-cellars-pinot-noir/"
+  ],
+  "finding": "The distributor's page describes the label's origin and Domaine Drouhin Oregon as maker; it gives no launch year or town, so neither is set. Consider linking it to Domaine Drouhin Oregon."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:kathken-vineyards",
+  "field": "summary",
+  "from": "Oregon winery making Pinot noir and Pinot gris.",
+  "to": "Eola Hills vineyard and winery about 7 miles west of Salem, bought in 1995 by Ken and Kathy Slusser, who sold grapes for seven years before releasing their own Pinot gris in 2000 and Pinot noir in 2001. It grows mostly Pommard and Wädenswil Pinot noir.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2770/index.html"
+  ],
+  "finding": "The Prince of Pinot gives the 1995 purchase, first releases in 2000 and 2001, plantings and location west of Salem; it doesn't state a founding year, so none is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:kathken-vineyards",
+  "field": "place",
+  "from": null,
+  "to": "Salem, OR",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2770/index.html"
+  ],
+  "finding": "The Prince of Pinot gives the 1995 purchase, first releases in 2000 and 2001, plantings and location west of Salem; it doesn't state a founding year, so none is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:redgate",
+  "field": "summary",
+  "from": "Independence winery making Pinot noir, Pinot gris and Chardonnay.",
+  "to": "Small estate winery about five minutes south of Independence, developed by Steve and Charlene Dunn, with 3 acres of Pinot noir and Pinot gris planted in 2006 and its own tasting room. The property and the Redgate brand were listed for sale in 2024.",
+  "sources": [
+   "https://industry.oregonwine.org/?p=40015"
+  ],
+  "finding": "The Oregon Wine Board industry listing (2024) gives the location south of Independence, the Dunns, the 2006 planting and the sale; the winery's own site now redirects to an unrelated page. No founding year found."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:velocity",
+  "field": "summary",
+  "from": "Medford winery making Red blend.",
+  "to": "Personal label of Rogue Valley winemaker Gus Janeway, begun in 2002 at RoxyAnn Winery in Medford, where he directed winemaking until 2008. Its flagship, Velocity, is an unconventional Malbec-based blend, poured in RoxyAnn's historic Hillcrest Orchard barn.",
+  "sources": [
+   "https://www.southernoregon.org/cities/ashland/eat-drink/wine-wineries/velocity-wine-cellars/",
+   "https://www.nataliemaclean.com/wineries/info/velocity-wine-cellars/7820"
+  ],
+  "finding": "Travel Southern Oregon places the tasting at RoxyAnn's barn in Medford and describes the Malbec blend; Natalie MacLean says Janeway began the Velocity label in 2002 at RoxyAnn. Both match the Medford permit and red blend labels."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:velocity",
+  "field": "founded",
+  "from": null,
+  "to": 2002,
+  "sources": [
+   "https://www.southernoregon.org/cities/ashland/eat-drink/wine-wineries/velocity-wine-cellars/",
+   "https://www.nataliemaclean.com/wineries/info/velocity-wine-cellars/7820"
+  ],
+  "finding": "Travel Southern Oregon places the tasting at RoxyAnn's barn in Medford and describes the Malbec blend; Natalie MacLean says Janeway began the Velocity label in 2002 at RoxyAnn. Both match the Medford permit and red blend labels."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:carden",
+  "field": "summary",
+  "from": "Gaston winery making Pinot noir and Cabernet sauvignon.",
+  "to": "Small winery started by James Carney and Susan Weeden, with Tony Rynders, formerly of Domaine Serene, as winemaker. Its wines include a Willamette Valley Pinot noir.",
+  "sources": [
+   "https://princeofpinot.com/winery/2085/index.html"
+  ],
+  "finding": "The Prince of Pinot names the owners and winemaker and reviews the 2012 Willamette Valley Pinot noir; No page gives a founding year or town, and a blog suggests it stopped after 2013, which is too uncertain to state."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:carden",
+  "field": "place",
+  "from": "Gaston, OR",
+  "to": null,
+  "sources": [
+   "https://princeofpinot.com/winery/2085/index.html"
+  ],
+  "finding": "The Prince of Pinot names the owners and winemaker and reviews the 2012 Willamette Valley Pinot noir; No page gives a founding year or town, and a blog suggests it stopped after 2013, which is too uncertain to state."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:provincial-vineyards",
+  "field": "summary",
+  "from": "Main Sheridan winery making Pinot noir.",
+  "to": "Family-owned vineyard whose Pinot noir, Pinot gris and rosé are made under contract by a North Willamette Valley winemaker. It has poured at its Hillsboro site and at a tasting room on Main Street in Forest Grove.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2101/index.html"
+  ],
+  "finding": "The Prince of Pinot gives the family vineyard, custom-crush winemaking and the Hillsboro and Forest Grove tasting rooms (the labels' Forest Grove permit matches). With two tasting-room towns and no founding year, neither is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:provincial-vineyards",
+  "field": "place",
+  "from": "Main Sheridan, OR",
+  "to": null,
+  "sources": [
+   "https://www.princeofpinot.com/winery/2101/index.html"
+  ],
+  "finding": "The Prince of Pinot gives the family vineyard, custom-crush winemaking and the Hillsboro and Forest Grove tasting rooms (the labels' Forest Grove permit matches). With two tasting-room towns and no founding year, neither is set."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:noble-estate",
+  "field": "summary",
+  "from": "Rickreall winery making Chardonnay and Pinot gris.",
+  "to": "Family-owned estate in the hills outside Eugene, begun when owner and winemaker Mark Jurasevich planted Pinot noir in 1999; it later added tasting rooms in west Eugene and on the Newport bayfront.",
+  "sources": [
+   "https://web.archive.org/web/20201205174946/https://nobleestatewinery.com/about/",
+   "https://sipmagazine.com/noble-estate-vineyard-winery/"
+  ],
+  "finding": "The winery's archived story page dates its start to the 1999 Pinot noir planting, names Mark Jurasevich, and lists the Eugene vineyard, Eugene urban and Newport tasting rooms; SIP confirms the location and 1999 planting. Its labels' Eugene permits match."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:noble-estate",
+  "field": "place",
+  "from": "Rickreall, OR",
+  "to": "Eugene, OR",
+  "sources": [
+   "https://web.archive.org/web/20201205174946/https://nobleestatewinery.com/about/",
+   "https://sipmagazine.com/noble-estate-vineyard-winery/"
+  ],
+  "finding": "The winery's archived story page dates its start to the 1999 Pinot noir planting, names Mark Jurasevich, and lists the Eugene vineyard, Eugene urban and Newport tasting rooms; SIP confirms the location and 1999 planting. Its labels' Eugene permits match."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:noble-estate",
+  "field": "founded",
+  "from": null,
+  "to": 1999,
+  "sources": [
+   "https://web.archive.org/web/20201205174946/https://nobleestatewinery.com/about/",
+   "https://sipmagazine.com/noble-estate-vineyard-winery/"
+  ],
+  "finding": "The winery's archived story page dates its start to the 1999 Pinot noir planting, names Mark Jurasevich, and lists the Eugene vineyard, Eugene urban and Newport tasting rooms; SIP confirms the location and 1999 planting. Its labels' Eugene permits match."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:cummins-road",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir.",
+  "to": "Second-label Pinot noir of Merriman Wines, the small Yamhill-Carlton producer that Mike Merriman and Aaron Berlin launched with the 2006 vintage.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1222/index.html"
+  ],
+  "finding": "Prince of Pinot lists Cummins Road Pinot noir as Merriman Wines' second label; this fits the Yamhill-Carlton AVA and Carlton permit on its labels. No source gives the winery's town, so place is left out."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:cummins-road",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": null,
+  "sources": [
+   "https://www.princeofpinot.com/winery/1222/index.html"
+  ],
+  "finding": "Prince of Pinot lists Cummins Road Pinot noir as Merriman Wines' second label; this fits the Yamhill-Carlton AVA and Carlton permit on its labels. No source gives the winery's town, so place is left out."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:oregon-trails",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir.",
+  "to": "Willamette Valley Pinot noir brand developed by AWDirect, a wine company that handles the sourcing of grapes through to label design.",
+  "sources": [
+   "https://foodandwineaesthetics.com/2018/03/06/wine-review-oregon-trails-wine-company-pinot-noir-willamette-valley-2016/"
+  ],
+  "finding": "A 2018 review describes Oregon Trails Wine Company as an AWDirect brand making Willamette Valley Pinot noir. The match is by name, grape and AVA only; the review's 2016 vintage predates the 2023 approvals in the label block, so the checker may want to treat it cautiously."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:oregon-trails",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": null,
+  "sources": [
+   "https://foodandwineaesthetics.com/2018/03/06/wine-review-oregon-trails-wine-company-pinot-noir-willamette-valley-2016/"
+  ],
+  "finding": "A 2018 review describes Oregon Trails Wine Company as an AWDirect brand making Willamette Valley Pinot noir. The match is by name, grape and AVA only; the review's 2016 vintage predates the 2023 approvals in the label block, so the checker may want to treat it cautiously."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:william-hatcher",
+  "field": "summary",
+  "from": "Newberg winery making Pinot noir.",
+  "to": "Willamette Valley Pinot noir label of Bill Hatcher, longtime general manager of Domaine Drouhin Oregon, and his wife Deb, whose first wines came in 2002, the same year as their négociant partnership A to Z Wineworks.",
+  "sources": [
+   "https://www.winespectator.com/articles/a-wine-family-dinner-2148"
+  ],
+  "finding": "Wine Spectator says Bill Hatcher left Domaine Drouhin in 2001 to start his own company with Deb and that Hatcher and A to Z made their first wines in 2002; retail listings name the wine William Hatcher Pinot Noir Willamette Valley. The Newberg permit fits A to Z, but no source names the label's town."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:william-hatcher",
+  "field": "place",
+  "from": "Newberg, OR",
+  "to": null,
+  "sources": [
+   "https://www.winespectator.com/articles/a-wine-family-dinner-2148"
+  ],
+  "finding": "Wine Spectator says Bill Hatcher left Domaine Drouhin in 2001 to start his own company with Deb and that Hatcher and A to Z made their first wines in 2002; retail listings name the wine William Hatcher Pinot Noir Willamette Valley. The Newberg permit fits A to Z, but no source names the label's town."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:citation",
+  "field": "summary",
+  "from": "Rickreall winery making Chardonnay and Pinot noir.",
+  "to": "High-end Pinot noir that Firesteed founder Howard Rossbach started in 2000, named after the racehorse Citation and aged about ten years in bottle before release; he kept the brand when he sold Firesteed's Rickreall winery.",
+  "sources": [
+   "https://vnews.com/?p=152520",
+   "https://gulfshorelife.com/food-drink/wine/willamette-valley-s-new-darling/",
+   "https://www.princeofpinot.com/winery/1946/index.html"
+  ],
+  "finding": "Valley News gives the 2000 start, the racehorse name, the decade of aging and Rossbach keeping Citation after selling Firesteed; Prince of Pinot lists Citation Pinot noirs under Firesteed in Rickreall, matching the permit city."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:citation",
+  "field": "founded",
+  "from": null,
+  "to": 2000,
+  "sources": [
+   "https://vnews.com/?p=152520",
+   "https://gulfshorelife.com/food-drink/wine/willamette-valley-s-new-darling/",
+   "https://www.princeofpinot.com/winery/1946/index.html"
+  ],
+  "finding": "Valley News gives the 2000 start, the racehorse name, the decade of aging and Rossbach keeping Citation after selling Firesteed; Prince of Pinot lists Citation Pinot noirs under Firesteed in Rickreall, matching the permit city."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:citation",
+  "field": "place",
+  "from": "Rickreall, OR",
+  "to": null,
+  "sources": [
+   "https://vnews.com/?p=152520",
+   "https://gulfshorelife.com/food-drink/wine/willamette-valley-s-new-darling/",
+   "https://www.princeofpinot.com/winery/1946/index.html"
+  ],
+  "finding": "Valley News gives the 2000 start, the racehorse name, the decade of aging and Rossbach keeping Citation after selling Firesteed; Prince of Pinot lists Citation Pinot noirs under Firesteed in Rickreall, matching the permit city."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:quest-cellars",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir and Pinot gris.",
+  "to": "Small label launched in 2010 by a Sonoma County-raised winemaker who moved to Oregon's Eola Hills in 2006; its first release was a 2008 Willamette Valley Pinot noir.",
+  "sources": [
+   "https://www.nataliemaclean.com/wineries/info/quest-cellars/7725"
+  ],
+  "finding": "The winery's profile on Natalie MacLean gives the 2010 launch, the winemaker's background and the 2008 first release, with a Dundee address that matches the permit; it does not name the winemaker. The Dundee address appears to be a production facility, so place is left out."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:quest-cellars",
+  "field": "founded",
+  "from": null,
+  "to": 2010,
+  "sources": [
+   "https://www.nataliemaclean.com/wineries/info/quest-cellars/7725"
+  ],
+  "finding": "The winery's profile on Natalie MacLean gives the 2010 launch, the winemaker's background and the 2008 first release, with a Dundee address that matches the permit; it does not name the winemaker. The Dundee address appears to be a production facility, so place is left out."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:quest-cellars",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": null,
+  "sources": [
+   "https://www.nataliemaclean.com/wineries/info/quest-cellars/7725"
+  ],
+  "finding": "The winery's profile on Natalie MacLean gives the 2010 launch, the winemaker's background and the 2008 first release, with a Dundee address that matches the permit; it does not name the winemaker. The Dundee address appears to be a production facility, so place is left out."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:j-daan",
+  "field": "summary",
+  "from": "Carlton winery making Pinot noir and Cabernet franc 57%.",
+  "to": "Small family winery near Carlton founded in 2003 by Justin and Megan Van Zanten, who started with 100 cases of Willamette Valley Pinot noir and later added Pinot gris and Rhône varieties.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1859/index.html",
+   "https://nataliemaclean.com/wineries/info/j-daan-wine-cellars/7614"
+  ],
+  "finding": "Prince of Pinot gives the founders, 2003 and the first 100 cases; the Natalie MacLean profile gives the Carlton address and the added varieties."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:j-daan",
+  "field": "founded",
+  "from": null,
+  "to": 2003,
+  "sources": [
+   "https://www.princeofpinot.com/winery/1859/index.html",
+   "https://nataliemaclean.com/wineries/info/j-daan-wine-cellars/7614"
+  ],
+  "finding": "Prince of Pinot gives the founders, 2003 and the first 100 cases; the Natalie MacLean profile gives the Carlton address and the added varieties."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:willful",
+  "field": "summary",
+  "from": "Portland winery making Pinot noir and Muscat.",
+  "to": "Label formed in 2012 by winemaker Pam Walden to replace Daedalus Cellars, starting with Pinot noir from her seven-acre Dundee Hills estate; since 2015 she has made the wine and poured it at Urban Crush in Southeast Portland.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/2017/index.html",
+   "https://www.oregonwinepress.com/willfull-wine"
+  ],
+  "finding": "Prince of Pinot gives the 2012 formation, Walden as owner and winemaker, and the 2015 Urban Crush tasting room in Portland; Oregon Wine Press covers the Dundee Hills estate and the 2011 inaugural Pinot noir."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:willful",
+  "field": "founded",
+  "from": null,
+  "to": 2012,
+  "sources": [
+   "https://www.princeofpinot.com/winery/2017/index.html",
+   "https://www.oregonwinepress.com/willfull-wine"
+  ],
+  "finding": "Prince of Pinot gives the 2012 formation, Walden as owner and winemaker, and the 2015 Urban Crush tasting room in Portland; Oregon Wine Press covers the Dundee Hills estate and the 2011 inaugural Pinot noir."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:hood-crest",
+  "field": "summary",
+  "from": "Hood River winery making Red blend, Barbera and Tempranillo.",
+  "to": "Family winery in Hood River owned by Patrik and Tess Barr, who also play in a blues band; Tess makes the wine, which centers on big reds from the Columbia Gorge and Columbia Valley.",
+  "sources": [
+   "https://www.columbiagorgenews.com/gorge-life/hood-crest-goes-from-whim-to-solid-rock-n-wood-winery/article_f791f66b-64d6-5624-8d2f-933e2ef13562.html",
+   "https://www.princeofpinot.com/winery/2834/index.html"
+  ],
+  "finding": "Columbia Gorge News profiles the Barrs and the Hood River winery, with Tess as winemaker; Prince of Pinot gives the focus on big red varieties. Neither gives an exact founding year."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:domaine-loubejac",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir.",
+  "to": "Willamette Valley estate of winemaker Laurent Montalieu, part of his NW Wine Company and named for the French town where he spent childhood summers; its vineyard grows Pinot noir, Chardonnay, Pinot blanc and Riesling.",
+  "sources": [
+   "https://domaineloubejac.com/the-domaine/"
+  ],
+  "finding": "The winery's site names Montalieu as owner and winemaker, describes the vineyard and its varieties, and marks it as a NW Wine Company brand, which fits the Dundee permit. It gives no town or founding year."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:domaine-loubejac",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": null,
+  "sources": [
+   "https://domaineloubejac.com/the-domaine/"
+  ],
+  "finding": "The winery's site names Montalieu as owner and winemaker, describes the vineyard and its varieties, and marks it as a NW Wine Company brand, which fits the Dundee permit. It gives no town or founding year."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:seven-bridges",
+  "field": "summary",
+  "from": "Portland winery making Merlot and Cabernet sauvignon.",
+  "to": "Portland winery of Bob Switzer and Jim Straus, making rich red wines from own-rooted Pacific Northwest grapes since 2008, with a combined tasting room and production space on North Harding Avenue.",
+  "sources": [
+   "https://sevenbridgeswinery.com/"
+  ],
+  "finding": "The winery's home page gives the owners, the 2008 start, the own-rooted Northwest fruit and the Portland tasting room, matching its Portland permit and Columbia and Walla Walla Valley labels."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:seven-bridges",
+  "field": "founded",
+  "from": null,
+  "to": 2008,
+  "sources": [
+   "https://sevenbridgeswinery.com/"
+  ],
+  "finding": "The winery's home page gives the owners, the 2008 start, the own-rooted Northwest fruit and the Portland tasting room, matching its Portland permit and Columbia and Walla Walla Valley labels."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:springhill-cellars",
+  "field": "summary",
+  "from": "Oregon winery making Pinot noir.",
+  "to": "Small family winery near Albany founded in 1988 by Mike and Karen McLain and Karen's father, Merv Anthony, making Pinot noir and Pinot gris mostly from its estate vineyard; Mike McLain also founded a vineyard real estate brokerage.",
+  "sources": [
+   "https://web.archive.org/web/20160109162443/http://www.springhillcellars.com/"
+  ],
+  "finding": "The winery's archived home page gives the founders, 1988, the Albany address and the estate and McLain vineyards."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:springhill-cellars",
+  "field": "place",
+  "from": null,
+  "to": "Albany, OR",
+  "sources": [
+   "https://web.archive.org/web/20160109162443/http://www.springhillcellars.com/"
+  ],
+  "finding": "The winery's archived home page gives the founders, 1988, the Albany address and the estate and McLain vineyards."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:springhill-cellars",
+  "field": "founded",
+  "from": null,
+  "to": 1988,
+  "sources": [
+   "https://web.archive.org/web/20160109162443/http://www.springhillcellars.com/"
+  ],
+  "finding": "The winery's archived home page gives the founders, 1988, the Albany address and the estate and McLain vineyards."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:echo-ridge",
+  "field": "summary",
+  "from": "Echo winery making Cabernet franc, Muscat canelli and Cabernet sauvignon.",
+  "to": "Family winery in the town of Echo run by Jay and Kim Bales and their daughter Berlyn, who bought a vineyard there in 2010; it pours in a renovated grain elevator beside a winery in an old warehouse.",
+  "sources": [
+   "https://echoridgecellars.com/about/",
+   "https://echoridgecellars.com/"
+  ],
+  "finding": "The winery's about and home pages give the Bales family, the 2010 estate purchase and the Echo buildings. No founding year is stated as such."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:samuel-robert",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir.",
+  "to": "Amity-based label making Willamette Valley Pinot noir from select vineyards, aged mainly in French oak.",
+  "sources": [
+   "https://www.samuelrobertwinery.com/philosophy"
+  ],
+  "finding": "The winery's own site describes its Willamette Valley Pinot noir and gives an Amity address, matching its Amity permit. It names no founder or founding year."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:samuel-robert",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": "Amity, OR",
+  "sources": [
+   "https://www.samuelrobertwinery.com/philosophy"
+  ],
+  "finding": "The winery's own site describes its Willamette Valley Pinot noir and gives an Amity address, matching its Amity permit. It names no founder or founding year."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:maccallum",
+  "field": "summary",
+  "from": "Oregon winery making Pinot noir.",
+  "to": "Two-person family winery in Carlton making tiny, minimally handled lots from Pacific Northwest vineyards, including Willamette Valley Pinot noir, begun after one of the couple left a career to study winemaking at UC Davis.",
+  "sources": [
+   "https://web.archive.org/web/20150106191449/http://maccallumwines.com/about/",
+   "https://web.archive.org/web/20150106191449/http://maccallumwines.com:80/"
+  ],
+  "finding": "The archived site gives the Carlton location, the family operation and its wines, including Willamette Valley Pinot noir. It gives no founding year."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:maccallum",
+  "field": "place",
+  "from": null,
+  "to": "Carlton, OR",
+  "sources": [
+   "https://web.archive.org/web/20150106191449/http://maccallumwines.com/about/",
+   "https://web.archive.org/web/20150106191449/http://maccallumwines.com:80/"
+  ],
+  "finding": "The archived site gives the Carlton location, the family operation and its wines, including Willamette Valley Pinot noir. It gives no founding year."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:carabella",
+  "field": "summary",
+  "from": "Dayton winery making Pinot noir, Pinot gris and Chardonnay.",
+  "to": "Chehalem Mountains estate on the southeast side of Parrett Mountain, owned by Cara and Mike Hallock; planting began in 1996, and Mike Hallock, a geologist who is also the winemaker, made its first vintage in 1998. Its Pinot noir, Pinot gris and Chardonnay come from the estate vineyard.",
+  "sources": [],
+  "finding": "The Prince of Pinot winery page states the owners, site, 1996 planting, 1998 first vintage and estate grapes in one passage. I dropped the Dundee custom-crush detail, which was dated to 2010 and failed as a detail."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:spindrift-cellars",
+  "field": "summary",
+  "from": "Philomath winery making Pinot noir, Chardonnay and Pinot blanc.",
+  "to": "Small family winery in Philomath in the southern Willamette Valley, run by Matt and Tabitha Compton; Matt, a former Benton-Lane vineyard manager, also runs the vineyard management company West Vine Farms and sources much of Spindrift's fruit from vineyards it farms. Matt Compton also makes Pinot noir under a second label, Compton Family Wines.",
+  "sources": [],
+  "finding": "The main sentence already passed. The grape list in the second sentence wasn't supported, so I replaced it with the Compton Family Wines label, which the Prince of Pinot article states. The article gives both 2003 and 2006 as starting years, so founded stays unset."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:cathedral-ridge",
+  "field": "summary",
+  "from": "Hood River winery making Zinfandel, Chardonnay and Red blend.",
+  "to": "Hood River winery on a ridge above the Columbia Gorge, founded in 1985 as Flerchinger Vineyards, the town's second winery, and bought in 2003 by Robb Bell. Bell brought in winemaker Michael Sebastiani, and Wine Press Northwest named it its 2007 Oregon Winery of the Year.",
+  "sources": [],
+  "finding": "The old wording tied the 2007 award to Sebastiani, which the Prince of Pinot page doesn't do. The two facts are now stated separately."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:oak-knoll",
+  "field": "summary",
+  "from": "Hillsboro winery making Pinot noir, Müller-thurgau and Chardonnay.",
+  "to": "Hillsboro winery founded in 1970 by Marjorie and Ron Vuylsteke, one of the earliest wineries in the Willamette Valley.",
+  "sources": [],
+  "finding": "The Wikipedia body falls outside the passages Jev reads, because navigation mentions fill the 7000-character cap. Only the Oregon Wine History Archive page is usable, so I cut the summary to what it says. The winery's own site has no history page."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:tero-estates",
+  "field": "summary",
+  "from": "Milton-Freewater winery making Bordeaux-style red blend, Cabernet sauvignon and Cabernet franc.",
+  "to": "Milton-Freewater winery in the Walla Walla Valley, founded in 2007 by Mike Tembreull and Doug Roskelley after they bought Windrow Vineyard; it specializes in Cabernet franc, Cabernet sauvignon and Malbec. Windrow was part of the original Seven Hills Vineyard, planted in 1981, and Roskelley makes small lots of estate Bordeaux varieties and blends.",
+  "sources": [],
+  "finding": "I rebuilt the first sentence from the Oregon Wine History Archive page alone, and the second from the Oregon Wine Board listing alone."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:agate-ridge",
+  "field": "summary",
+  "from": "Eagle Point winery making Pinot gris, Cabernet sauvignon and Viognier.",
+  "to": "Kinderman family winery near Eagle Point in the Rogue Valley, established in 2001 on an old 126-acre farm; the first 20 acres of vines went in in 2002 and the winery was finished in 2005. Kim Kinderman, who started the business with her father, has since put it up for sale.",
+  "sources": [],
+  "finding": "The KOBI story says the winery is for sale but gives no year, so I dropped 2016."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:a-to-z",
+  "field": "summary",
+  "from": "Newberg winery making Riesling, Rosé and Pinot noir.",
+  "to": "Oregon winery operating since 2002, largely as a négociant, whose partners include Bill and Deb Hatcher and the winemakers Sam Tannahill and Cheryl Francis; it sources fruit from across the state. Its purchase of Rex Hill, with that winery and 100 acres of vineyards, made it Oregon's largest winery, at about 100,000 cases.",
+  "sources": [],
+  "finding": "The Wine Spectator story names the partners and gives the Rex Hill purchase, but its visible text gives no year for the sale and doesn't place A to Z in Newberg. I dropped 2006 and Newberg from the text and kept place."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:ledger-david",
+  "field": "summary",
+  "from": "Medford winery making Sangiovese, Syrah and Tempranillo.",
+  "to": "Rogue Valley winery owned by David Traul and Lena Varner, whose estate wines come from their Varner-Traul Vineyard in Talent, first planted in 2006. Its wines debuted with the 2009 vintage, and Kiley Evans became its first full-time winemaker.",
+  "sources": [],
+  "finding": "No cited page says the winery is named after their son, so I removed that. Great Northwest Wine states the vineyard, the 2006 planting, the 2009 debut and Evans' hiring."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:kudos",
+  "field": "summary",
+  "from": "Dundee winery making Pinot gris, Pinot noir and Riesling.",
+  "to": "Line of modestly priced Willamette Valley wines, Pinot noir among them, made at NW Wine Co. by winemaker Laurent Montalieu. Besides its Willamette Valley Pinot noir it has offered reserve and single-vineyard Pinot noirs.",
+  "sources": [],
+  "finding": "No source names Danielle Andrus-Montalieu. The Prince of Pinot places NW Wine Co. in both McMinnville and Dundee, and the label approval says Dundee, so I removed the town from the text."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:firesteed",
+  "field": "summary",
+  "from": "Dundee winery making Pinot gris, Pinot noir and Riesling.",
+  "to": "Oregon brand that Howard Rossbach started in 1992 to make an affordable Pinot noir, adding a Pinot gris in 1999; in 2002 he bought the Flynn winery and vineyards in Rickreall. He later sold the brand and its inventory to Vintage Wine Estates, and the winery and its vineyard to Pacific Rim Winemakers.",
+  "sources": [],
+  "finding": "The Valley News (2019, 'three years ago') puts the sale in 2016, not 2017, and Oregon Wine Press gives no year. I dropped the year and the Duck Pond claim, which the Duck Pond page doesn't support."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:longplay",
+  "field": "summary",
+  "from": "Newberg winery making Pinot noir and Chardonnay.",
+  "to": "Newberg winery started by Todd Hansen, who bought a Chehalem Mountains vineyard in 2005 and named it Lia's Vineyard after his daughter; its wines highlight that vineyard. Its Newberg winery and tasting room opened in 2021, and in 2023 Hansen sold the vineyard to Cooper Mountain, keeping fruit from his favorite blocks.",
+  "sources": [],
+  "finding": "Every fact comes from the winery's People page. I split it into two sentences to lift the first-sentence score above 0.9."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:ancient-cellars",
+  "field": "summary",
+  "from": "Dundee winery making Pinot gris, Pinot noir and Cabernet sauvignon.",
+  "to": "Boutique winery established in 2007 by two brothers, specializing in single-vineyard wines from the Willamette and Rogue valleys, with a tasting room in Newberg.",
+  "sources": [],
+  "finding": "The Prince of Pinot puts the tasting room at 718 E. First Street, Newberg. The Dundee address in the Oregon Wine Board listing and the label approval is 12th & Maple, a custom-crush facility, so I moved place to Newberg."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:ancient-cellars",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": "Newberg, OR",
+  "sources": [],
+  "finding": "The Prince of Pinot puts the tasting room at 718 E. First Street, Newberg. The Dundee address in the Oregon Wine Board listing and the label approval is 12th & Maple, a custom-crush facility, so I moved place to Newberg."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:mahonia",
+  "field": "summary",
+  "from": "Portland winery making Chardonnay, Pinot gris and Rosé.",
+  "to": "Salem vineyard whose fruit has been a favorite of top winemakers for more than 30 years; it also sells estate Pinot noir, Chardonnay, Pinot gris and rosé under its own name. Evesham Wood, Haden Fig and Daedalus Cellars have made wines from its grapes.",
+  "sources": [],
+  "finding": "The vineyard's homepage gives the Salem address, the 30 years and the estate wine list. The Prince of Pinot vineyard page names the wineries that buy its fruit. I dropped South Salem Hills, which the Prince ties to an Eola-Amity Hills label."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:territorial",
+  "field": "summary",
+  "from": "Eugene winery making Riesling, Pinot noir and Chardonnay.",
+  "to": "Urban winery in a former coffee warehouse in Eugene's Whiteaker neighborhood, making wines from Coast Range vineyards including Equinox, Bellpine and Toad Hall, with John Jarboe as winemaker. Its wine room pours Willamette Valley varietals grown on vineyards it owns or manages in Lane County.",
+  "sources": [],
+  "finding": "The first sentence follows the Prince of Pinot page and the second the Oregon Wine Board listing."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:lujon",
+  "field": "summary",
+  "from": "Carlton winery making Riesling, Pinot gris and Cabernet sauvignon.",
+  "to": "Label conceived in 2005 by father and son Lewis and John Derthick, a longtime winemaker, who make small lots of handcrafted wine from vineyards they seek out. Though based in the Willamette Valley, it makes Walla Walla Cabernet sauvignon from the Birch Creek and Spofford Station vineyards.",
+  "sources": [],
+  "finding": "The Natalie MacLean page doesn't say Willamette Valley, so that moved to the second sentence, which the Waitsburg Times supports. Place stays unset; the label permit is in Carlton."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:wyeast-vineyards",
+  "field": "summary",
+  "from": "Newberg winery making Pinot noir and Pinot gris.",
+  "to": "Small family-run Columbia Gorge winery growing about 30 acres of Pinot noir, Chardonnay and Pinot gris and making about 3,000 cases a year. Dick and Christie Reed and their children have run it since 1996, with a tasting room on Hood River's Fruit Loop.",
+  "sources": [],
+  "finding": "I rebuilt the first sentence from the Oregon Wine Board listing alone. The cited label approval (2007, filed by Medici Vineyards in Newberg) may be a different brand, since Jev found it doesn't name this winery."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:lavelle",
+  "field": "summary",
+  "from": "Elmira winery making Riesling, Pinot noir and Pinot gris.",
+  "to": "Elmira winery west of Eugene, founded in 1994 when Doug LaVelle took over Lee Smith's bonded Forgeron Vineyards, which it calls the oldest winery in the southern Willamette Valley. Matthew LaVelle, Doug's son, took over as winemaker in 2008, making Willamette Valley Pinot noir, Pinot gris and Riesling along with Columbia Valley wines.",
+  "sources": [],
+  "finding": "The first sentence already passed. I reworded the second to match the Prince of Pinot page."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:aubichon-cellars",
+  "field": "summary",
+  "from": "Newberg winery making Chardonnay, Pinot noir and Syrah.",
+  "to": "Lower-priced second label of Le Cadeau Vineyard, which owner Tom Mortimer and winemaker Jim Sanders began with the 2007 vintage. Its wines are poured at the Le Cadeau tasting room in Dundee.",
+  "sources": [],
+  "finding": "Great Northwest Wine says Mortimer's own planting forms the base of the flagship, which contradicted 'purchased fruit', so I dropped the fruit claim. The 2007 first vintage stays in the text, but founded is cleared because no page states a founding year (Jev scored it 0.77)."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:quintet",
+  "field": "summary",
+  "from": "Carlton winery making Pinot noir and Chardonnay.",
+  "to": "Carlton winery making single-vineyard Pinot noir and Chardonnay at the Carlton Winemakers Studio, where its tasting room is. It began with a 2012 Pinot noir and was one of the eleven founding wineries of the Ribbon Ridge Winegrowers Association.",
+  "sources": [],
+  "finding": "The Prince of Pinot says all its wines are from Ribbon Ridge fruit, which contradicted 'Ribbon Ridge and Yamhill-Carlton AVAs', so I dropped the AVAs from the text."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:hamacher",
+  "field": "summary",
+  "from": "Beaverton winery making Pinot noir and Chardonnay.",
+  "to": "Willamette Valley winery founded in 1995 by UC Davis-trained winemaker Eric Hamacher, who buys from growers across the valley and co-founded the Carlton Winemakers Studio in 2002. In fall 2015 he moved production to the Ponzi Historic Estate, where his wines are poured in an on-site tasting room.",
+  "sources": [],
+  "finding": "No page mentions Chardonnay, so it's out. Beaverton is out of the text because the listing gives it only in the address; place is kept."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:carlton-cellars",
+  "field": "summary",
+  "from": "Carlton winery making Pinot noir.",
+  "to": "Yamhill-Carlton winery and estate vineyard of husband and wife Dave Grooters and Robin Russell; Grooters grows the grapes and makes the wine from their Russell-Grooters vineyard on Savannah Ridge. Its first vines were planted in 2003, and the winery was built in 2007.",
+  "sources": [],
+  "finding": "Cellar 503 (planted 2003, winery built 2007) contradicted a first sentence that opened with the 2001 founding. The year now sits only in the founded field (Prince of Pinot: launched in 2001), the first sentence is Prince of Pinot's own facts, and the 2003 and 2007 dates come from Cellar 503."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:carlton-cellars",
+  "field": "founded",
+  "from": null,
+  "to": 2001,
+  "sources": [],
+  "finding": "Cellar 503 (planted 2003, winery built 2007) contradicted a first sentence that opened with the 2001 founding. The year now sits only in the founded field (Prince of Pinot: launched in 2001), the first sentence is Prince of Pinot's own facts, and the 2003 and 2007 dates come from Cellar 503."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:treos",
+  "field": "summary",
+  "from": "Eastgate Cir Corvallis winery making Muscat, White blend and Sangiovese.",
+  "to": "Tiny Monmouth winery whose vines were planted in 2007 by three couples, the source of its name. It released its first wines, from the 2011 vintage, in 2012 and makes Pinot noir, Albariño, Dry Muscat and a Port-style wine infused with roasted hazelnuts.",
+  "sources": [],
+  "finding": "The first sentence now follows Great Northwest Wine, which calls it a tiny Monmouth winery planted in 2007 by a trio of couples (hence Treos). Prince of Pinot gives the 2012 release of the 2011 vintage and the wines. The Corvallis permit is a cider house's custom-crush address."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:treos",
+  "field": "place",
+  "from": "Eastgate Cir Corvallis, OR",
+  "to": "Monmouth, OR",
+  "sources": [],
+  "finding": "The first sentence now follows Great Northwest Wine, which calls it a tiny Monmouth winery planted in 2007 by a trio of couples (hence Treos). Prince of Pinot gives the 2012 release of the 2011 vintage and the wines. The Corvallis permit is a cider house's custom-crush address."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:archer",
+  "field": "summary",
+  "from": "Newberg winery making Pinot gris and Pinot noir.",
+  "to": "Estate on Parrett Mountain near Newberg, in the Chehalem Mountains AVA, founded in 1989 by Don and Grace Archer. Its estate Pinot noir and Pinot gris grow in Jory and Laurelwood soils, and a group of Oregon business leaders now owns it.",
+  "sources": [],
+  "finding": "The second sentence (6.5 acres, Jivanjee owner-winemakers) was only partly supported. It now uses the winery's About page alone: the soils, the grapes and the current owners."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:archer",
+  "field": "founded",
+  "from": null,
+  "to": 1989,
+  "sources": [],
+  "finding": "The second sentence (6.5 acres, Jivanjee owner-winemakers) was only partly supported. It now uses the winery's About page alone: the soils, the grapes and the current owners."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:rocky-point",
+  "field": "summary",
+  "from": "Carlton winery making Pinot noir, Sauvignon blanc and Grenache.",
+  "to": "Carlton winery founded by Amy Lee that makes single-vineyard Pinot noir, Sauvignon blanc and Grenache from Oregon and Washington vineyards. Lee started the label in 2009, naming it for the Rocky Point on Priest Lake where her family homesteaded, and its vineyards have included Le Cadeau and La Colina.",
+  "sources": [],
+  "finding": "Prince of Pinot names Drew Voit as winemaker, which contradicted calling Amy Lee the winemaker in the first sentence. The first sentence now follows the winery's site (founder Amy Lee, crafted in Carlton, its grapes), and Prince of Pinot supplies the 2009 start, the name and the vineyards."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:rocky-point",
+  "field": "founded",
+  "from": null,
+  "to": 2009,
+  "sources": [],
+  "finding": "Prince of Pinot names Drew Voit as winemaker, which contradicted calling Amy Lee the winemaker in the first sentence. The first sentence now follows the winery's site (founder Amy Lee, crafted in Carlton, its grapes), and Prince of Pinot supplies the 2009 start, the name and the vineyards."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:hawkins-cellars",
+  "field": "summary",
+  "from": "Dayton winery making Pinot noir, Pinot gris and Mouvedre grenache syrah.",
+  "to": "Winery of Thane Hawkins, who left a career in visual effects, began making wine in his garage and became assistant winemaker at Methven Family Vineyards in 2007. It makes Eola-Amity Hills Pinot noir alongside Rhône and Bordeaux-style reds, with tasting rooms in Dundee and in Underwood, Washington.",
+  "sources": [],
+  "finding": "Sip Magazine is blocked, so the summary now uses only Prince of Pinot's wording of the facts: visual effects rather than animator, and Methven in 2007 rather than after the 2007 harvest."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:hawkins-cellars",
+  "field": "place",
+  "from": "Dayton, OR",
+  "to": "Dundee, OR",
+  "sources": [],
+  "finding": "Sip Magazine is blocked, so the summary now uses only Prince of Pinot's wording of the facts: visual effects rather than animator, and Methven in 2007 rather than after the 2007 harvest."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:high-hook",
+  "field": "summary",
+  "from": "McMinnville winery making Pinot blanc and Pinot noir.",
+  "to": "Willamette Valley wine brand launched in 2008 by three wine-business veterans and lifelong fishermen, Mark Seymour, John Heus and Stephen Cary, making Pinot blanc, Pinot noir and a Pinot noir rosé. It began as Fish Hook Vineyards but took the name High Hook because Constellation Brands held the Fish Hook trademark, and its grapes come from a single vineyard in the McMinnville AVA.",
+  "sources": [],
+  "finding": "No single source supported the first sentence. It now uses only Trout Unlimited (2008, the three founders, the three wines), and the second sentence uses Prince of Pinot (the Fish Hook trademark, the McMinnville AVA vineyard)."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:high-hook",
+  "field": "founded",
+  "from": null,
+  "to": 2008,
+  "sources": [],
+  "finding": "No single source supported the first sentence. It now uses only Trout Unlimited (2008, the three founders, the three wines), and the second sentence uses Prince of Pinot (the Fish Hook trademark, the McMinnville AVA vineyard)."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:high-hook",
+  "field": "place",
+  "from": "McMinnville, OR",
+  "to": null,
+  "sources": [],
+  "finding": "No single source supported the first sentence. It now uses only Trout Unlimited (2008, the three founders, the three wines), and the second sentence uses Prince of Pinot (the Fish Hook trademark, the McMinnville AVA vineyard)."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:blackcap",
+  "field": "summary",
+  "from": "McMinnville winery making Chardonnay, Pinot noir and Pinot meunier (7%) and pinot noir (93%).",
+  "to": "Label of Jason Lett, David Lett's son and winemaker at The Eyrie Vineyards, for Pinot noir and Chardonnay from Willamette Valley vineyards, sold through Eyrie. Its 2008 Pinot noir came from Eyrie's younger vines and from fruit bought from other Willamette Valley vineyards.",
+  "sources": [
+   "https://www.princeofpinot.com/winery/1581/index.html"
+  ],
+  "finding": "The cited tasting note spells it \"Black Cap\", so Jev found no mention of BlackCap. Prince of Pinot's winery page, which I opened, writes \"2008 BlackCap Pinot Noir\" and says Jason Lett makes the wines under his own label and sells them through Eyrie. This is an Eyrie-related label, so consider merging it with The Eyrie Vineyards or linking it there."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:blackcap",
+  "field": "place",
+  "from": "McMinnville, OR",
+  "to": null,
+  "sources": [
+   "https://www.princeofpinot.com/winery/1581/index.html"
+  ],
+  "finding": "The cited tasting note spells it \"Black Cap\", so Jev found no mention of BlackCap. Prince of Pinot's winery page, which I opened, writes \"2008 BlackCap Pinot Noir\" and says Jason Lett makes the wines under his own label and sells them through Eyrie. This is an Eyrie-related label, so consider merging it with The Eyrie Vineyards or linking it there."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:tyrus-evan",
+  "field": "summary",
+  "from": "Carlton winery making Syrah, Cabernet sauvignon and Pinot gris.",
+  "to": "Second label of Ken Wright Cellars, named for Ken Wright's sons, whose original home was the restored railroad depot in Carlton that later became the Ken Wright Cellars tasting room. The depot is Carlton's restored 1923 railroad station.",
+  "sources": [
+   "https://www.oregonwinepress.com/persons-of-year-2012"
+  ],
+  "finding": "Prince of Pinot spells it \"Tyrus Evans\", so Jev found no mention. Oregon Wine Press, which I opened, says the restored depot first housed Tyrus Evan wines, the Wrights' second label named for Ken's sons, and Sunset dates the station to 1923. This is a Ken Wright Cellars label: consider merging it with that winery."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:portlandia",
+  "field": "summary",
+  "from": "Dundee winery making Pinot gris and Pinot noir.",
+  "to": "Dundee winery founded by Damian Davis to make value-priced Willamette Valley Pinot noir and Pinot gris; Davis earlier founded Rainier Wine and its Mad Housewife label. Its single-vineyard Pinot noir comes from Momtazi Vineyard in the McMinnville AVA.",
+  "sources": [],
+  "finding": "Owen Bargreen contradicted the summary. It spells the name Damien and dates the founding to 2008, while the Wine Hooligans release says 2013. The first sentence keeps only what the release states, founded is 2013 from the release, and 2008 goes in alsoDated."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:portlandia",
+  "field": "founded",
+  "from": null,
+  "to": 2013,
+  "sources": [],
+  "finding": "Owen Bargreen contradicted the summary. It spells the name Damien and dates the founding to 2008, while the Wine Hooligans release says 2013. The first sentence keeps only what the release states, founded is 2013 from the release, and 2008 goes in alsoDated."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:portlandia",
+  "field": "alsoDated",
+  "from": null,
+  "to": {
+   "founded": [
+    2008
+   ]
+  },
+  "sources": [],
+  "finding": "Owen Bargreen contradicted the summary. It spells the name Damien and dates the founding to 2008, while the Wine Hooligans release says 2013. The first sentence keeps only what the release states, founded is 2013 from the release, and 2008 goes in alsoDated."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:verve",
+  "field": "summary",
+  "from": "Philomath winery making Pinot noir.",
+  "to": "Label of Aubin Cellars, founded in 2001 by French-born barrel importer Jérôme Aubin, making Pinot noir from both California and Oregon. Its Oregon bottlings were made by Ray Walsh, formerly of King Estate.",
+  "sources": [],
+  "finding": "The second sentence's vineyard detail was only half supported, since Prince of Pinot names Stoller and Momtazi only as planned 2007 sources. It is dropped, and Ray Walsh stays."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:verve",
+  "field": "founded",
+  "from": null,
+  "to": 2001,
+  "sources": [],
+  "finding": "The second sentence's vineyard detail was only half supported, since Prince of Pinot names Stoller and Momtazi only as planned 2007 sources. It is dropped, and Ray Walsh stays."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:verve",
+  "field": "place",
+  "from": "Philomath, OR",
+  "to": null,
+  "sources": [],
+  "finding": "The second sentence's vineyard detail was only half supported, since Prince of Pinot names Stoller and Momtazi only as planned 2007 sources. It is dropped, and Ray Walsh stays."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:andrew-rich",
+  "field": "summary",
+  "from": "Carlton winery making Pinot noir.",
+  "to": "Winery of Andrew Rich, who came to the Northwest from California's Bonny Doon in 1995 to make Rhône wines and turned to Pinot noir as well. His wines are made and poured at the Carlton Winemakers Studio in Carlton.",
+  "sources": [],
+  "finding": "The second sentence packed in too many details. It now states only what Prince of Pinot says outright: the wines are produced and tasted at the Carlton Winemakers Studio."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:domaine-meriwether",
+  "field": "summary",
+  "from": "Philomath winery making Sparkling blend.",
+  "to": "Sparkling wine house at Veneta, outside Eugene, started in the 1990s by Seattle internist and wine merchant Jack Bagdade, whose first harvest in 1998 was made with Champagne winemaker Jean-Louis Denois. In 2005 Bagdade went back to medicine and Ed \"Buzz\" Kawders took over running the winery.",
+  "sources": [],
+  "finding": "Prince of Pinot spells the winemaker \"Welsh\", which undercut the \"Raymond Walsh\" detail. The winemaker is dropped, and the 2005 handover stays."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:domaine-meriwether",
+  "field": "place",
+  "from": "Philomath, OR",
+  "to": "Veneta, OR",
+  "sources": [],
+  "finding": "Prince of Pinot spells the winemaker \"Welsh\", which undercut the \"Raymond Walsh\" detail. The winemaker is dropped, and the 2005 handover stays."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:primarius",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir.",
+  "to": "Oregon label of Precept Wine, made by its 12th & Maple Wine Co. in Dundee, one of the state's largest producers. Winemaker Sarah Cabot makes its value-priced Pinot noir, including a reserve bottling, from estate vineyards such as Waldo Hills and Battle Creek.",
+  "sources": [],
+  "finding": "The old first sentence joined facts from two Great Northwest Wine pages. It now uses the 2013 article alone (Primarius is a 12th & Maple label in Dundee), and the 2020 review gives Sarah Cabot and the vineyards."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:trathen-hall",
+  "field": "summary",
+  "from": "Newberg winery making Pinot noir.",
+  "to": "Husband-and-wife winery of Blair Trathen and Arabella Hall, founded in 2009, which makes mostly single-vineyard Pinot noir, plus Chardonnay, Riesling and Sauvignon blanc, from organic and biodynamic Willamette Valley vineyards. Trathen, a New Zealander, and Hall both worked at Archery Summit and Beaux Frères before starting it.",
+  "sources": [],
+  "finding": "The old first sentence mixed the site's facts with Hyland Vineyard and Trathen's New Zealand origin. It now uses the winery's homepage alone, and the backgrounds come from Prince of Pinot. The Newberg permit is L'Angolo Estate, a custom-crush site."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:trathen-hall",
+  "field": "founded",
+  "from": null,
+  "to": 2009,
+  "sources": [],
+  "finding": "The old first sentence mixed the site's facts with Hyland Vineyard and Trathen's New Zealand origin. It now uses the winery's homepage alone, and the backgrounds come from Prince of Pinot. The Newberg permit is L'Angolo Estate, a custom-crush site."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:trathen-hall",
+  "field": "place",
+  "from": "Newberg, OR",
+  "to": null,
+  "sources": [],
+  "finding": "The old first sentence mixed the site's facts with Hyland Vineyard and Trathen's New Zealand origin. It now uses the winery's homepage alone, and the backgrounds come from Prince of Pinot. The Newberg permit is L'Angolo Estate, a custom-crush site."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:2hawk",
+  "field": "summary",
+  "from": "Medford winery making Viognier, Syrah and Malbec.",
+  "to": "Medford vineyard and winery founded by Rick and Nisha Jackson and bought in the spring of 2014 by Ross and Jennifer Allen, who renamed it 2Hawk Vineyard & Winery to put the vineyard first. The Allens farm about 15 acres of vines there, and Linda Donovan of Pallet Wine Company made the 2014 vintage.",
+  "sources": [],
+  "finding": "Oregon Wine Press gives the new name as 2Hawk Vineyard & Winery, which contradicted \"now goes by Padigan\". Travel Southern Oregon lists Padigan as \"formerly 2Hawks\", but Jev counts that page as absent because of the plural, so Padigan stays out of the summary."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:castillo-de-feliciana",
+  "field": "summary",
+  "from": "Milton Freewater winery making Tempranillo, Albariño and Cabernet sauvignon.",
+  "to": "Family winery in Milton-Freewater owned by Sam and Deborah Castillo, who bought the property, then a wheat field, in 2007; their son Chris is its winemaker, and its wines include Tempranillo and Graciano. It focuses on Tempranillo, Albariño and Spanish-style blends.",
+  "sources": [],
+  "finding": "The Spanish focus in the old first sentence came from the Oregon Wine Board, not the East Oregonian. The first sentence now uses the East Oregonian alone, and the Spanish focus moves to the second, from the Oregon Wine Board."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:castillo-de-feliciana",
+  "field": "place",
+  "from": "Milton Freewater, OR",
+  "to": "Milton-Freewater, OR",
+  "sources": [],
+  "finding": "The Spanish focus in the old first sentence came from the Oregon Wine Board, not the East Oregonian. The first sentence now uses the East Oregonian alone, and the Spanish focus moves to the second, from the Oregon Wine Board."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:castillo-de-feliciana",
+  "field": "founded",
+  "from": null,
+  "to": 2007,
+  "sources": [],
+  "finding": "The Spanish focus in the old first sentence came from the Oregon Wine Board, not the East Oregonian. The first sentence now uses the East Oregonian alone, and the Spanish focus moves to the second, from the Oregon Wine Board."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:cornerstone",
+  "field": "summary",
+  "from": "Gaston winery making Pinot noir.",
+  "to": "Willamette Valley Pinot noir that Napa's Craig Camp has had Oregon winemaker Tony Rynders make for Cornerstone Cellars since the 2008 vintage, produced and bottled just outside Gaston.",
+  "sources": [],
+  "finding": "The label approval (filed by Tour de Force Wine Company in Gaston) contradicted the summary at the threshold. The summary now keeps only Prince of Pinot's statements, and the unsupported Stepping Stone detail is dropped. Cornerstone Cellars is a Napa (Yountville) winery."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:cornerstone",
+  "field": "place",
+  "from": "Gaston, OR",
+  "to": null,
+  "sources": [],
+  "finding": "The label approval (filed by Tour de Force Wine Company in Gaston) contradicted the summary at the threshold. The summary now keeps only Prince of Pinot's statements, and the unsupported Stepping Stone detail is dropped. Cornerstone Cellars is a Napa (Yountville) winery."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:jigsaw",
+  "field": "summary",
+  "from": "Dundee winery making Pinot noir.",
+  "to": "Pinot noir produced and bottled by Ransom Wine Company in Sheridan from seven vineyards, mostly in the Eola-Amity Hills. Ransom, a winery that is also a distillery known for gin, sells it as a second label for about $20.",
+  "sources": [],
+  "finding": "The old first sentence joined Wine Folly and Prince of Pinot. It now uses the Prince of Pinot tasting note alone, and the second-label and gin facts come from Wine Folly. The 2021 approval, filed by The Great Oregon Wine Co. in Dundee, still names Ransom Wine Co. on the label. This is a Ransom label: consider merging it with Ransom."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:jigsaw",
+  "field": "place",
+  "from": "Dundee, OR",
+  "to": "Sheridan, OR",
+  "sources": [],
+  "finding": "The old first sentence joined Wine Folly and Prince of Pinot. It now uses the Prince of Pinot tasting note alone, and the second-label and gin facts come from Wine Folly. The 2021 approval, filed by The Great Oregon Wine Co. in Dundee, still names Ransom Wine Co. on the label. This is a Ransom label: consider merging it with Ransom."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:stone-wolf",
+  "field": "summary",
+  "from": "McMinnville winery making Pinot noir.",
+  "to": "Winery in the coastal hills west of McMinnville whose property Linda and Art Lindsay acquired in 1996, making wine since 1998, with a 40-acre estate vineyard that rises to 1,100 feet. Its low-priced Rascal Pinot noir was the top-selling Oregon Pinot noir in Oregon in 2013, and Denver's Integrated Beverage Group later bought the winery.",
+  "sources": [],
+  "finding": "The old first sentence also carried Rascal and the acquisition, which no single source states together. The first sentence now uses Prince of Pinot alone, and Oregon Business supplies the Rascal ranking and the sale."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:swiftwater-cellars",
+  "field": "summary",
+  "from": "Carlton winery making Pinot noir, Cabernet sauvignon and Chardonnay.",
+  "to": "Winery of the Watts family, whose farming business began in 1977, beside the entrance to the old Roslyn No. 9 coal mine in Washington's Cle Elum-Roslyn area. It sources its grapes from Washington and Oregon AVAs.",
+  "sources": [],
+  "finding": "The Carlton label approval (Tour de Force, a custom-crush site) contradicted the Oregon Pinot noir in the first sentence. The first sentence now uses the Our Story page, and the second uses the opening of the vineyards page that Jev sees. This is a Washington winery and likely doesn't belong as an Oregon winery."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:swiftwater-cellars",
+  "field": "place",
+  "from": "Carlton, OR",
+  "to": null,
+  "sources": [],
+  "finding": "The Carlton label approval (Tour de Force, a custom-crush site) contradicted the Oregon Pinot noir in the first sentence. The first sentence now uses the Our Story page, and the second uses the opening of the vineyards page that Jev sees. This is a Washington winery and likely doesn't belong as an Oregon winery."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:bishop-creek-cellars",
+  "field": "summary",
+  "from": "Gaston winery making Pinot noir.",
+  "to": "Wine label of Bishop Creek Farms, whose 15-acre vineyard on a south-facing spur of the Coast Range foothills in the Yamhill-Carlton AVA grows mostly own-rooted, unirrigated Pinot noir.",
+  "sources": [],
+  "finding": "The Gaston label approval (Urban Wineworks / Bishop Creek Farms) contradicted the Portland pouring room, so the town is out of the text and kept only in place. The 1988 planting appears only on the archived homepage, which doesn't name the winery, so it is dropped."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:bishop-creek-cellars",
+  "field": "place",
+  "from": "Gaston, OR",
+  "to": "Portland, OR",
+  "sources": [],
+  "finding": "The Gaston label approval (Urban Wineworks / Bishop Creek Farms) contradicted the Portland pouring room, so the town is out of the text and kept only in place. The 1988 planting appears only on the archived homepage, which doesn't name the winery, so it is dropped."
+ },
+ {
+  "date": "2026-10-21",
+  "key": "node:zimri-cellars",
+  "field": "summary",
+  "from": "Oregon winery making Pinot gris from the Willamette Valley.",
+  "to": "Family winery of winemaker Jay Bull, who made wine for others for years before releasing Willamette Valley wines under his own label.",
+  "sources": [],
+  "finding": "The winery's site and The Prince of Pinot describe Bull's career and label."
  }
 ]

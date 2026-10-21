@@ -73,3 +73,14 @@ export function extractPassages(text: string, parties: string[][]): Passages {
   kept.sort((a, b) => a.start - b.start)
   return { mentioned, text: kept.map((window) => text.slice(window.start, window.end).trim()).join('\n[...]\n') }
 }
+
+// A source that is a list with one entry per line (the WineEnthusiast reviews, by winery):
+// its heading and the entries about the record, never a neighbouring entry that happens to
+// name the same AVA or grape: the entries naming every party, or failing that the first party
+export function catalogueLines(text: string, parties: string[][]): Passages {
+  const [heading, ...lines] = text.split('\n')
+  const mentioned = parties.map((party) => lines.some((line) => mentions(line, party).length > 0))
+  const all = lines.filter((line) => parties.every((party) => mentions(line, party).length > 0))
+  const kept = all.length > 0 ? all : lines.filter((line) => mentions(line, parties[0]).length > 0)
+  return { mentioned, text: [heading, ...kept].join('\n') }
+}

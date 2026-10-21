@@ -20,9 +20,9 @@ import { formatRecords, NODE_FILES, readGraph } from '../reviewPlugin'
 export const CORRECTIONS_FILE = resolve('tools/verify/corrections.json')
 export const DEAD_ENDS_FILE = resolve('tools/verify/dead-ends.json')
 
-// Fields research may change. Ids, types and endpoints never change here: that is a new record
+// Fields research may change (`place` is not a checked claim, so it goes with the summary). Ids, types and endpoints never change here: that is a new record
 const EDGE_FIELDS = ['role', 'startYear', 'endYear', 'ongoing', 'note', 'alsoDated'] as const
-const NODE_FIELDS = ['summary', 'born', 'died', 'founded', 'closed', 'planted', 'established', 'firstHeld', 'lastHeld', 'alsoDated'] as const
+const NODE_FIELDS = ['summary', 'place', 'born', 'died', 'founded', 'closed', 'planted', 'established', 'firstHeld', 'lastHeld', 'alsoDated'] as const
 
 export interface ResearchResult {
   key: string

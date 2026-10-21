@@ -2,6 +2,16 @@
 // label approvals. They are about the evidence, not the connection, so a record card leaves
 // them out of the connection's note and its verification note says them instead.
 
+import type { Source } from '../data/schema'
+
+export const isColaSource = (source: Source) => !!source.url && /^https:\/\/(www\.)?ttbonline\.gov\//.test(source.url)
+const isOpenMl = (source: Source) => source.url === 'https://www.openml.org/d/42074'
+
+// A place described only from federal label approvals and the review dataset that named the
+// winery: its verification note says so, so its summary doesn't have to
+export const labelOnlySources = (sources: Source[]) =>
+  sources.some(isColaSource) && sources.every((source) => isColaSource(source) || isOpenMl(source))
+
 // "Evidence goes only as far as federal label approvals (TTB, 2014–2024); no other source ..."
 export const LABEL_ONLY =
   /\s*Evidence goes only as far as (?:a )?federal label approvals? \(TTB, [^)]+\); no other source confirms the wine was released\./

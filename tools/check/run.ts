@@ -44,6 +44,12 @@ async function main() {
       (item) =>
         force ||
         store[recordKey(item)]?.fingerprint !== claimsFingerprint(claimsFor(item, graph)) ||
+        // A draft citing a source added since it was checked, or no longer citing one it was checked against
+        (!item.record.verified &&
+          (item.record.sources.some((source) => source.url && !store[recordKey(item)]!.sources.some((have) => have.url === source.url)) ||
+            store[recordKey(item)]!.sources.some(
+              (have) => have.medium !== 'combined' && !item.record.sources.some((source) => source.url === have.url),
+            ))) ||
         // Checked before a source was fetched: check again now that it can be read
         store[recordKey(item)]!.sources.some(
           (source) => source.status === 'unreadable' && source.url && readCached(source.url)?.status === 'ok',
