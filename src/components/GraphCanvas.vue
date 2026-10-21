@@ -593,7 +593,7 @@ let sizing = 0
 // on screen (14px for the best-connected down to 11px), or its own size when zoomed in past
 // that, so names stay readable however far out the view is
 const SCREEN_FONT = new Map([
-  [22, 14],
+  [22, 15],
   [18, 13],
   [13, 12],
   [11, 11],
@@ -631,6 +631,14 @@ function drawnRadius(node: cytoscape.NodeSingular) {
   return node.hasClass('selected') ? Math.max(radius, 16) : radius
 }
 
+// A record is named only once it is drawn at least this big on screen (its selection and
+// neighbours always are). Zoomed out, that is the best-connected tiers alone, about 20 names
+// at the opening view; zooming in brings in the next tiers. Naming every record that fit
+// (about 170 at the opening view) crowded the graph and flattened its hierarchy
+const NAMED_SIZE = 10
+// Room kept around each name, in screen pixels
+const NAME_ROOM = 7
+
 function placeLabels() {
   if (!cy || cy.destroyed()) return
   const zoom = cy.zoom()
@@ -638,6 +646,8 @@ function placeLabels() {
   const screenSize = new Map<string, number>()
   plainNodes().forEach((node: cytoscape.NodeSingular) => {
     if (node.hasClass('dimmed')) return
+    const chosenOne = node.hasClass('selected') || node.hasClass('neighbor')
+    if (!chosenOne && 2 * drawnRadius(node) < NAMED_SIZE) return
     const own = node.data('fontSize') * zoom
     const size = Math.max(own, node.hasClass('selected') ? 14 : (SCREEN_FONT.get(node.data('fontSize')) ?? 11))
     screenSize.set(node.id(), size)
@@ -662,7 +672,7 @@ function placeLabels() {
   const icons = plainNodes()
     .filter((node: cytoscape.NodeSingular) => !node.hasClass('dimmed') && drawnRadius(node) >= 6)
     .map((node: cytoscape.NodeSingular) => ({ ...node.renderedPosition(), radius: drawnRadius(node) }))
-  const chosen = chooseLabels(boxes, openArea(), icons)
+  const chosen = chooseLabels(boxes, openArea(), icons, NAME_ROOM)
   cy.batch(() => {
     plainNodes().forEach((node: cytoscape.NodeSingular) => {
       const side = chosen.get(node.id())
