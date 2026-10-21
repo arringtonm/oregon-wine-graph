@@ -5,6 +5,8 @@ import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } 
 import { edgeLabel, formatYears, nodeYears, rememberCollapsed, useGraph } from '../composables/useGraph'
 import { EDGE_RULES, NODE_TYPES } from '../data/schema'
 import savedLayoutFile from '../data/layout.json'
+import { arrangeIslands, communities, LOOSE } from '../graph/clusters'
+import { frame } from '../graph/framing'
 import { iconDataUri } from '../graph/icons'
 import { sizeTiers } from '../graph/nodeSize'
 import { coverage, placeNear, toSaved, type Point, type SavedLayout } from '../graph/placement'
@@ -44,6 +46,7 @@ const {
   nodeById,
   visibleNodes,
   visibleEdges,
+  filteredCount,
   select,
   resetFilters,
   canGoBack,
@@ -53,16 +56,21 @@ const {
   goToHistory,
   historyEntries,
   isDefaultView,
+  isDefaultArrangement,
+  defaultCommunities,
   randomNodeId,
   startTour,
   dismissTourNudge,
 } = useGraph()
 
-// The graph corner's count, in readers' words: "1,235 people and places · 1,909 connections"
+// The graph corner's count, in readers' words: "841 of 1,417 people and places · 1,806
+// connections" while the connected core leaves some out, otherwise "1,417 people and places · …"
 const shownCount = computed(() => {
   const records = visibleNodes.value.length
   const links = visibleEdges.value.length
-  return `${records.toLocaleString('en-US')} ${records === 1 ? 'person or place' : 'people and places'} · ${links.toLocaleString('en-US')} ${links === 1 ? 'connection' : 'connections'}`
+  const of = filteredCount.value > records ? ` of ${filteredCount.value.toLocaleString('en-US')}` : ''
+  const noun = records === 1 && !of ? 'person or place' : 'people and places'
+  return `${records.toLocaleString('en-US')}${of} ${noun} · ${links.toLocaleString('en-US')} ${links === 1 ? 'connection' : 'connections'}`
 })
 
 // Rolls to a random node not yet visited, after a short pause behind the busy overlay (as
@@ -151,6 +159,10 @@ let saveWhenLaidOut = false
 // Dev server only, opened as /?tidy-layout: keep the saved layout, place nodes added since,
 // untangle every overlap and save the result, so readers' browsers needn't do it on load
 const tidyLayout = import.meta.env.DEV && new URLSearchParams(location.search).has('tidy-layout')
+// The saved arrangement places every record the default filters let through, not only the
+// connected core, so Show all and a selection's neighbours have places of their own. When
+// the dev server is about to make or tidy it, show everything for that load
+if (import.meta.env.DEV && (tidyLayout || Object.keys(savedLayout.positions).length === 0)) state.showAll = true
 // Matches the breakpoint where the detail panel becomes a bottom sheet
 const compactQuery = window.matchMedia('(max-width: 1024px)')
 // Where the zoom buttons go: the toolbar when wide, a column down the right edge when compact
@@ -263,7 +275,12 @@ function buildStyle(): StylesheetJson {
         color: token('--text-secondary'),
       },
     },
-    { selector: '.dimmed', style: { opacity: 0.15 } },
+    // Lines between islands (see markBetween), until a selection or hover highlights them
+    { selector: 'edge.between', style: { 'line-opacity': 0.15 } },
+    // Away from a selection, the rest of the graph all but disappears
+    { selector: 'node.dimmed', style: { opacity: 0.08 } },
+    { selector: 'edge.dimmed', style: { opacity: 0.05 } },
+    { selector: 'node.selected, node.neighbor, node.landmark', style: { 'min-zoomed-font-size': 0 } },
     // Pointed out from the start panel's "Click a person or place": a wider, stronger disc
     {
       selector: 'node.hinted',
@@ -272,13 +289,13 @@ function buildStyle(): StylesheetJson {
     // A soft disc behind the selected node's silhouette
     {
       selector: 'node.selected',
-      style: { 'underlay-color': token('--accent'), 'underlay-opacity': 0.35, 'underlay-padding': 8, 'underlay-shape': 'ellipse' },
+      style: { 'underlay-color': token('--accent'), 'underlay-opacity': 0.5, 'underlay-padding': 12, 'underlay-shape': 'ellipse' },
     },
     {
       selector: 'edge.highlighted, edge.hovered',
       style: {
         label: 'data(label)',
-        width: 2.5,
+        width: 3.5,
         'line-opacity': 1,
         'line-color': ink,
         'target-arrow-color': ink,
@@ -495,9 +512,10 @@ async function runLayout(randomize: boolean) {
   layoutNow(randomize)
 }
 
-function layoutNow(randomize: boolean) {
-  if (!cy) return
-  layout = cy.layout({
+// The force layout's options, shared by the AVA regions arrangement and each island of the
+// clustered one
+function fcoseOptions(randomize: boolean) {
+  return {
     name: 'fcose',
     // 'proof' quality blocked the page for nearly three seconds on the full graph
     quality: 'default',
@@ -530,18 +548,194 @@ function layoutNow(randomize: boolean) {
     gravityRangeCompound: 0.3,
     nestingFactor: 0.05,
     padding: 40,
-  } as cytoscape.LayoutOptions)
-  layout.one('layoutstop', () => {
-    separateNodes()
-    if (saveWhenLaidOut) {
-      saveWhenLaidOut = false
-      saveLayout()
-    }
-    fitOpening()
-    centerOnSelection()
-    arranging.value = false
-  })
+  }
+}
+
+function layoutNow(randomize: boolean) {
+  if (!cy) return
+  // Without AVA regions, the graph is drawn as islands of communities
+  if (!state.categories.geography) {
+    const started = performance.now()
+    layoutClusters()
+    if (import.meta.env.DEV) console.info(`[layout] clustered in ${Math.round(performance.now() - started)}ms`)
+    afterLayout()
+    return
+  }
+  layout = cy.layout(fcoseOptions(randomize) as cytoscape.LayoutOptions)
+  layout.one('layoutstop', afterLayout)
   layout.run()
+}
+
+function afterLayout() {
+  markBetween()
+  separateNodes()
+  if (saveWhenLaidOut) {
+    saveWhenLaidOut = false
+    saveLayout()
+  }
+  rememberPositions()
+  fitOpening()
+  centerOnSelection()
+  arranging.value = false
+}
+
+// Room between islands, in graph units. Measured on the core (841 records): with 160, and
+// circles round each island's corners, the map spread to 17,000 units and the opening zoom
+// hit its minimum; with 300 and area-sized circles, about 8,500
+const ISLAND_GAP = 300
+
+// Inside an island, records sit closer than the whole-graph layout put them: its spacing,
+// tuned for 1,400 records at once, left islands of 60 about 2,000 units across
+const ISLAND_OPTIONS = {
+  nodeRepulsion: (node: cytoscape.NodeSingular) => 40000 * Math.max(1, node.width() / 22),
+  idealEdgeLength: (edge: cytoscape.EdgeSingular) =>
+    30 + 50 * Math.sqrt(Math.max(1, Math.min(edge.source().degree(false), edge.target().degree(false)))),
+  nodeSeparation: 60,
+  gravity: 0.25,
+  gravityRange: 1,
+}
+
+// Each record's island: the default graph's communities in the default arrangement, so the
+// shipped layout and the faint lines between islands agree; otherwise (a guide, say) the
+// communities of what is showing
+let islandOf = new Map<string, number>()
+function islandsFor(ids: string[]): Map<string, number> {
+  if (isDefaultArrangement.value && ids.every((id) => defaultCommunities.value.has(id))) return defaultCommunities.value
+  return communities(
+    ids,
+    cy!.edges().map((edge) => ({ source: edge.source().id(), target: edge.target().id() })),
+  )
+}
+
+// Lines between islands are faint until a selection highlights them, so each island reads
+// as a group rather than being buried under the long lines crossing the map
+function markBetween() {
+  if (!cy) return
+  cy.batch(() => {
+    cy!.edges().forEach((edge: cytoscape.EdgeSingular) => {
+      const a = islandOf.get(edge.source().id())
+      const b = islandOf.get(edge.target().id())
+      edge.toggleClass('between', !state.categories.geography && a !== undefined && b !== undefined && a !== b)
+    })
+  })
+  markLandmarks()
+}
+
+// Each island's best-connected record is its landmark: its name stays readable at any zoom,
+// like a place name on a map, so the zoomed-out overview says what each island is
+const LANDMARK_FONT = 13
+function markLandmarks() {
+  if (!cy) return
+  const best = new Map<number, cytoscape.NodeSingular>()
+  if (!state.categories.geography) {
+    plainNodes().forEach((node: cytoscape.NodeSingular) => {
+      const island = islandOf.get(node.id())
+      if (island === undefined || island === LOOSE) return
+      const current = best.get(island)
+      if (!current || node.data('z') > current.data('z')) best.set(island, node)
+    })
+  }
+  const landmarks = new Set([...best.values()].map((node) => node.id()))
+  cy.batch(() => {
+    cy!.nodes('.landmark').forEach((node: cytoscape.NodeSingular) => {
+      if (!landmarks.has(node.id())) node.removeClass('landmark')
+    })
+    for (const node of best.values()) node.addClass('landmark')
+  })
+  sizeLandmarks()
+}
+
+// Pending resize of the fixed-size names, after a zoom
+let sizing = 0
+
+// Names that must stay readable at any zoom: the selected record (14px on screen), its
+// connections (11px) and each island's landmark (13px). Each is drawn at that size whenever
+// its own would be smaller, scaled against the zoom
+const SCREEN_FONT: [string, number][] = [
+  ['selected', 14],
+  ['landmark', LANDMARK_FONT],
+  ['neighbor', 11],
+]
+const SCALED = 'font-size text-outline-width text-max-width'
+function sizeLandmarks() {
+  if (!cy || cy.destroyed()) return
+  const zoom = cy.zoom()
+  cy.batch(() => {
+    cy!.nodes('.scaled').forEach((node: cytoscape.NodeSingular) => {
+      if (!SCREEN_FONT.some(([name]) => node.hasClass(name))) node.removeClass('scaled').removeStyle(SCALED)
+    })
+    cy!.nodes('.selected, .landmark, .neighbor').forEach((node: cytoscape.NodeSingular) => {
+      const screen = SCREEN_FONT.find(([name]) => node.hasClass(name))![1]
+      if (node.data('fontSize') * zoom >= screen) node.removeClass('scaled').removeStyle(SCALED)
+      else node.addClass('scaled').style({ 'font-size': screen / zoom, 'text-outline-width': 2 / zoom, 'text-max-width': `${140 / zoom}px` })
+    })
+    // The selection's lines stay at least 2.5px wide on screen, and their labels are left out
+    // when they would be too small to read
+    cy!.edges('.scaled').not('.highlighted').removeClass('scaled').removeStyle('width')
+    if (zoom < 1) cy!.edges('.highlighted').addClass('scaled').style({ width: Math.max(3.5, 2.5 / zoom) })
+    else cy!.edges('.highlighted').removeClass('scaled').removeStyle('width')
+    // The selected record stays at least 32px across on screen
+    cy!.nodes('.sized').not('.selected').removeClass('sized').removeStyle('width height')
+    cy!.nodes('.selected').forEach((node: cytoscape.NodeSingular) => {
+      if (node.data('size') * zoom >= 32) node.removeClass('sized').removeStyle('width height')
+      else node.addClass('sized').style({ width: 32 / zoom, height: 32 / zoom })
+    })
+  })
+}
+
+// The clustered layout (graph/clusters.ts): each community is laid out on its own, so its
+// best-connected records sit at its centre, not at the centre of the whole map; then the
+// islands are packed as circles of their size, drawn together as strongly as their
+// communities are linked
+function layoutClusters() {
+  if (!cy) return
+  const nodes = plainNodes()
+  islandOf = islandsFor(nodes.map((node) => node.id()))
+  const found = islandOf
+  const islands = new Map<number, cytoscape.NodeCollection>()
+  nodes.forEach((node: cytoscape.NodeSingular) => {
+    const community = found.get(node.id())!
+    islands.set(community, (islands.get(community) ?? cy!.collection()).union(node))
+  })
+  // 1. Each island on its own. Small groups linked to nothing else are packed tight in a
+  // grid (fcose's tiling) instead of spread like a community
+  const radius = new Map<number, number>()
+  const centre = new Map<number, Point>()
+  for (const [community, members] of islands) {
+    const eles = members.union(members.edgesWith(members))
+    const options = { ...fcoseOptions(true), ...ISLAND_OPTIONS, animate: false, fit: false, tile: community === LOOSE }
+    if (members.length > 1) eles.layout(options as cytoscape.LayoutOptions).run()
+    const box = members.boundingBox({ includeLabels: true })
+    centre.set(community, { x: box.x1 + box.w / 2, y: box.y1 + box.h / 2 })
+    // The radius of a circle about the box's area: the corners of neighbouring islands may
+    // meet across the gap, and the overlap pass then parts any records that touch
+    radius.set(community, (Math.sqrt(box.w * box.h) / 2) * 1.1)
+  }
+  // 2. The islands, as circles of their size, drawn together by the links between them
+  const between = new Map<string, number>()
+  cy.edges().forEach((edge: cytoscape.EdgeSingular) => {
+    const a = found.get(edge.source().id())!
+    const b = found.get(edge.target().id())!
+    if (a === b) return
+    const key = a < b ? `${a}-${b}` : `${b}-${a}`
+    between.set(key, (between.get(key) ?? 0) + 1)
+  })
+  const places = arrangeIslands(
+    [...radius].map(([id, r]) => ({ id, radius: r })),
+    between,
+    ISLAND_GAP,
+  )
+  // 3. Each island moved to its place
+  cy.batch(() => {
+    for (const [community, members] of islands) {
+      const target = places.get(community)!
+      const from = centre.get(community)!
+      members.forEach((node: cytoscape.NodeSingular) => {
+        const at = node.position()
+        node.position({ x: at.x - from.x + target.x, y: at.y - from.y + target.y })
+      })
+    }
+  })
 }
 
 // How far around newly placed nodes separateNodes looks for collisions, in graph units
@@ -605,7 +799,7 @@ function rememberPositions() {
 // Dev server only: save the default view's fresh layout so it ships with the data. Only the
 // first load without a usable saved layout calls this (npm run layout:reset, then reload)
 function saveLayout() {
-  if (!cy || !import.meta.env.DEV || !isDefaultView.value || state.categories.geography) return
+  if (!cy || !import.meta.env.DEV || !isDefaultArrangement.value || !state.showAll || state.categories.geography) return
   const positions = new Map(plainNodes().map((node: cytoscape.NodeSingular) => [node.id(), node.position()] as [string, Point]))
   fetch('/__layout', {
     method: 'POST',
@@ -712,16 +906,22 @@ function syncElements() {
     // Nodes that grew may now overlap their neighbours
     separateNodes()
   }
+  // Loaded from the saved layout: its islands are the default graph's communities
+  if (islandOf.size === 0) islandOf = islandsFor(plainNodes().map((node) => node.id()))
+  markBetween()
   applySelection()
 }
 
 function applySelection() {
   if (!cy) return
-  cy.elements().removeClass('dimmed selected highlighted')
+  cy.elements().removeClass('dimmed selected highlighted neighbor')
   const selected = state.selectedId ? cy.getElementById(state.selectedId) : cy.collection()
-  if (selected.empty()) return
+  if (selected.empty()) return sizeLandmarks()
   selected.addClass('selected')
   selected.connectedEdges().addClass('highlighted')
+  // Every record it connects to keeps its name, at any zoom
+  selected.neighborhood('node').addClass('neighbor')
+  sizeLandmarks()
   // A selected AVA region keeps its member vineyards, nested regions, and what those
   // connect to in view, as well as its own connections
   const focus = selected.union(selected.descendants())
@@ -738,31 +938,21 @@ function centerOnSelection() {
     cy.animate({ fit: { eles: selected, padding: 60 } }, { duration: motion(300) })
     return
   }
+  // The record and everything it connects to, framed in the part of the graph not covered by
+  // the sidebars, the toolbar or (on smaller screens) the detail sheet
+  let area = visibleArea()
   if (compactQuery.matches) {
-    // Aim between the toolbar and the detail sheet, which covers the lower part of the graph
-    const area = visibleArea()
     const canvasTop = container.value!.getBoundingClientRect().top
     const sheet = document.getElementById('details')?.getBoundingClientRect()
     // Before the sheet first opens, assume its full height (45% of the screen)
     const bottom = sheet && sheet.height > 0 ? sheet.top - canvasTop : cy.height() * 0.55
-    const rendered = selected.renderedPosition()
-    cy.animate(
-      { panBy: { x: area.left + area.width / 2 - rendered.x, y: (area.top + bottom) / 2 - rendered.y } },
-      { duration: motion(300) },
-    )
-    return
+    area = { ...area, height: Math.max(1, bottom - area.top) }
   }
-  // Brought into view only if it is hidden, behind a sidebar or off screen
-  const area = visibleArea()
-  const rendered = selected.renderedPosition()
-  const inside =
-    rendered.x >= area.left && rendered.x <= area.left + area.width && rendered.y >= area.top && rendered.y <= area.top + area.height
-  if (!inside) {
-    cy.animate(
-      { panBy: { x: area.left + area.width / 2 - rendered.x, y: area.top + area.height / 2 - rendered.y } },
-      { duration: motion(300) },
-    )
-  }
+  // Labels left out: theirs are drawn at a fixed size on screen, so in graph units they grow
+  // as the view zooms out
+  const box = selected.closedNeighborhood().nodes().boundingBox({ includeLabels: false })
+  const { zoom, pan } = frame(box, selected.position(), area)
+  cy.animate({ zoom, pan }, { duration: motion(350), easing: 'ease-in-out-cubic' })
 }
 
 function applyTheme() {
@@ -800,6 +990,10 @@ onMounted(() => {
   })
   cy.on('mouseout', 'node', () => (tooltip.show = false))
   cy.on('viewport', () => (tooltip.show = false))
+  cy.on('zoom', () => {
+    cancelAnimationFrame(sizing)
+    sizing = requestAnimationFrame(sizeLandmarks)
+  })
   cy.on('mouseover', 'edge', (event) => event.target.addClass('hovered'))
   cy.on('mouseout', 'edge', (event) => event.target.removeClass('hovered'))
 
@@ -833,6 +1027,7 @@ onBeforeUnmount(() => {
   phoneQuery.removeEventListener('change', onCompactChange)
   toolbarObserver?.disconnect()
   document.removeEventListener('keydown', onKey)
+  cancelAnimationFrame(sizing)
   cy?.destroy()
 })
 
@@ -914,7 +1109,10 @@ watch(
 )
 watch(
   () => state.selectedId,
-  () => {
+  async () => {
+    // Outside the connected core, a selection brings its neighbours in: wait for them to be
+    // placed, so the framing includes them
+    await nextTick()
     applySelection()
     centerOnSelection()
   },

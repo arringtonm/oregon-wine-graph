@@ -453,7 +453,8 @@ const canFlag = flagsAvailable()
         </li>
         <li>
           <button type="button" class="detail__ways-action" v-bind="pointsTo('filters')" @click="showFilters()">Filter</button>
-          by people, wineries, kinds of connection or AVA.
+          by people, wineries, kinds of connection or AVA. The graph starts with the best-connected people and places;
+          “Show all records” adds the rest.
         </li>
         <li>
           <button type="button" class="detail__ways-action" v-bind="pointsTo('list')" @click="state.listView = true">

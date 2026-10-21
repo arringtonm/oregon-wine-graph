@@ -64,7 +64,7 @@ export const TOUR_STEPS: TourStep[] = [
   {
     title: 'Filters',
     body: [
-      'Show or hide different kinds of record, like people, wineries and vineyards, and categories of connection.',
+      'Show or hide different kinds of record, like people, wineries and vineyards, and categories of connection. The graph starts with the best-connected people and places; Show all records adds the rest.',
       'You can also narrow to AVAs, to Oregon only (some important contributors from outside Oregon are included in the data), or to records checked against their sources.',
     ],
     hint: 'filters',

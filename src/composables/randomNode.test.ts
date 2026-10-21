@@ -82,3 +82,29 @@ describe('guided views', () => {
     resetFilters()
   })
 })
+
+describe('the connected core', () => {
+  it('opens on the core, shows everything with Show all, and brings a selected leaf in', () => {
+    resetFilters()
+    select(null)
+    const core = visibleNodes.value.length
+    state.showAll = true
+    const all = visibleNodes.value.length
+    expect(core).toBeLessThan(all * 0.75)
+    state.showAll = false
+    const leaf = useGraph().search('Brella')[0]
+    expect(leaf).toBeDefined()
+    expect(visibleNodes.value.some((node) => node.id === leaf.id)).toBe(false)
+    select(leaf.id)
+    expect(visibleNodes.value.some((node) => node.id === leaf.id)).toBe(true)
+    select(null)
+    resetFilters()
+  })
+
+  it('is not taken in a guide', () => {
+    applyView('family-and-mentors')
+    expect(state.showAll).toBe(true)
+    expect(activeView.value?.id).toBe('family-and-mentors')
+    resetFilters()
+  })
+})

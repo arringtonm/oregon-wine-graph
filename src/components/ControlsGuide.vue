@@ -70,6 +70,7 @@ const sections = computed<Section[]>(() =>
           title: 'Read a record',
           rows: [
             { action: 'Open a person or place', ways: ['Tap node', 'Tap a name'] },
+            { action: 'Show everyone, not just the best-connected', ways: ['Show all records, in Filters'] },
             { action: 'See how its facts were checked', ways: ['Verified, at its foot'] },
             { action: 'Report a mistake', ways: ['Flag, at its foot'] },
             { action: 'Close it', ways: ['Tap empty area', '× in panel'] },
@@ -115,6 +116,7 @@ const sections = computed<Section[]>(() =>
           title: 'Read a record',
           rows: [
             { action: 'Open a person or place', ways: ['Click node', 'Click a name'] },
+            { action: 'Show everyone, not just the best-connected', ways: ['Show all records, in Filters'] },
             { action: 'Read a connection', ways: ['Hover line'] },
             { action: 'Preview a linked record', ways: ['Hover its name'] },
             { action: 'See how its facts were checked', ways: ['Verified, at its foot'] },

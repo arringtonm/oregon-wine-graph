@@ -1,5 +1,7 @@
 import { computed, reactive, watch } from 'vue'
 import { loadGraph } from '../data'
+import { communities } from '../graph/clusters'
+import { coreWithSelection, twoCore } from '../graph/core'
 import { cardParts, connectionLabel, formatYears, HIDDEN_TYPES, SINGULAR_TYPE } from '../graph/format'
 import { foldText } from '../graph/textMatch'
 import { focusRecords, viewById, VIEWS, type GuideView } from '../graph/views'
@@ -81,6 +83,8 @@ function defaultFilters() {
     } as Record<EdgeCategory, boolean>,
     oregonOnly: false,
     verifiedOnly: false,
+    // Off: the graph shows its connected core (graph/core.ts), not every record
+    showAll: false,
     // AVA node ids to narrow the graph to; empty for all
     avas: [] as string[],
     // A guided view's focus (graph/views.ts), by the view's id: only the records its rule
@@ -319,8 +323,9 @@ export const reviewing = computed(() => import.meta.env.DEV && state.adminMode)
 
 const avas = computed(() => nodes.value.filter((node) => node.type === 'ava'))
 
-// Whether the filters are as the app starts: the view whose layout is saved and shipped
-const isDefaultView = computed(() => {
+// Whether the filters are those of the arrangement saved and shipped (layout.json), which
+// places every record the default filters let through, whether or not "Show all" is on
+const isDefaultArrangement = computed(() => {
   const defaults = defaultFilters()
   return (
     Object.entries(defaults.nodeTypes).every(([type, on]) => state.nodeTypes[type as ToggleableNodeType] === on) &&
@@ -331,6 +336,9 @@ const isDefaultView = computed(() => {
     state.focus === null
   )
 })
+
+// Whether the filters are as the app starts
+const isDefaultView = computed(() => isDefaultArrangement.value && !state.showAll)
 
 // Connection count per node, ignoring geography so AVA membership does not inflate it
 const degree = computed(() => {
@@ -402,7 +410,8 @@ const focus = computed(() => {
   return rule && state.graph ? { rule, ...focusRecords(state.graph, rule) } : null
 })
 
-const visibleNodes = computed(() =>
+// What the filters let through, before the connected core is taken
+const filteredNodes = computed(() =>
   nodes.value.filter((node) => {
     if (HIDDEN_TYPES.has(node.type)) return false
     if (node.type === 'ava' ? !state.categories.geography : !state.nodeTypes[node.type]) return false
@@ -414,8 +423,8 @@ const visibleNodes = computed(() =>
   }),
 )
 
-const visibleEdges = computed(() => {
-  const shown = new Set(visibleNodes.value.map((node) => node.id))
+const filteredEdges = computed(() => {
+  const shown = new Set(filteredNodes.value.map((node) => node.id))
   return edges.value.filter(
     (edge) =>
       state.categories[EDGE_RULES[edge.type].category] &&
@@ -424,6 +433,49 @@ const visibleEdges = computed(() => {
       shown.has(edge.target),
   )
 })
+
+// Every record and connection the default filters let through: the graph the saved
+// arrangement, its islands and the connected core are worked out on
+const defaultGraph = computed(() => {
+  const defaults = defaultFilters()
+  const ids = nodes.value
+    .filter((node) => !HIDDEN_TYPES.has(node.type) && node.type !== 'ava' && defaults.nodeTypes[node.type as ToggleableNodeType])
+    .map((node) => node.id)
+  const shown = new Set(ids)
+  const links = edges.value.filter(
+    (edge) => defaults.categories[EDGE_RULES[edge.type].category] && shown.has(edge.source) && shown.has(edge.target),
+  )
+  return { ids, links }
+})
+
+// The connected core of the default graph: a fixed set, so that narrowing the filters (to
+// organizations only, say) hides records by the filters' own rules rather than shrinking
+// the core to nothing
+const defaultCore = computed(() => twoCore(defaultGraph.value.ids, defaultGraph.value.links))
+
+// The default graph's communities, the islands of the saved arrangement (graph/clusters.ts)
+const defaultCommunities = computed(() => communities(defaultGraph.value.ids, defaultGraph.value.links))
+
+// Taken unless "Show all records" is on. Guides and AVA filters narrow the graph themselves,
+// and the core would hide the very pairs they pick; AVA regions show vineyards by where they
+// are, which their connections don't count. So it isn't taken for any of them
+const coreApplies = computed(() => !state.showAll && !state.focus && state.avas.length === 0 && !state.categories.geography)
+const core = computed(() => (coreApplies.value ? defaultCore.value : null))
+
+const visibleNodes = computed(() => {
+  if (!core.value) return filteredNodes.value
+  const shown = coreWithSelection(core.value, filteredEdges.value, state.selectedId)
+  return filteredNodes.value.filter((node) => shown.has(node.id))
+})
+
+const visibleEdges = computed(() => {
+  if (!core.value) return filteredEdges.value
+  const shown = new Set(visibleNodes.value.map((node) => node.id))
+  return filteredEdges.value.filter((edge) => shown.has(edge.source) && shown.has(edge.target))
+})
+
+// How many records the filters let through, for "840 of 1,417" and the Show all switch
+const filteredCount = computed(() => filteredNodes.value.length)
 
 // The most specific AVA each vineyard or AVA sits in, from "located in" and "within"
 // connections. Used to draw AVA regions around their members. Wineries are left out: a
@@ -500,11 +552,12 @@ function connectionsOf(id: string): { category: EdgeCategory; connections: Conne
   }))
 }
 
-// Matches visible nodes, and AVAs even when the AVA layer is off
+// Matches what the filters let through, including records outside the connected core
+// (selecting one brings it in), and AVAs even when the AVA layer is off
 function search(query: string): GraphNode[] {
   const needle = foldText(query.trim())
   if (!needle) return []
-  const shown = new Set(visibleNodes.value.map((node) => node.id))
+  const shown = new Set(filteredNodes.value.map((node) => node.id))
   return nodes.value
     .filter((node) => shown.has(node.id) || node.type === 'ava')
     .filter((node) =>
@@ -840,6 +893,8 @@ function applyView(id: string) {
 
 function viewFilters(view: GuideView) {
   const filters = defaultFilters()
+  // A guide shows everything its rule picks
+  filters.showAll = true
   Object.assign(filters.nodeTypes, view.nodeTypes)
   Object.assign(filters.categories, view.categories)
   filters.avas = [...(view.avas ?? [])]
@@ -857,6 +912,7 @@ const activeView = computed(() =>
       Object.entries(filters.categories).every(([category, on]) => state.categories[category as EdgeCategory] === on) &&
       state.oregonOnly === filters.oregonOnly &&
       state.verifiedOnly === filters.verifiedOnly &&
+      state.showAll === filters.showAll &&
       state.focus === filters.focus &&
       [...state.avas].sort().join() === [...filters.avas].sort().join()
     )
@@ -923,6 +979,8 @@ export function useGraph() {
     nodeById,
     visibleNodes,
     visibleEdges,
+    filteredCount,
+    coreApplies,
     selectedNode,
     connectionsOf,
     search,
@@ -962,6 +1020,8 @@ export function useGraph() {
     avaParent,
     avasOf,
     isDefaultView,
+    isDefaultArrangement,
+    defaultCommunities,
     nearby,
     loadEvidence,
     removeEdge,

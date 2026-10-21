@@ -5,9 +5,15 @@ description: Use when changing how the Oregon Wine Graph network is drawn or lai
 
 # Graph layout and styling
 
-The graph is a node-link diagram of about 1,150 nodes and 1,950 connections, drawn by Cytoscape with the fcose force-directed layout. Degree is heavily skewed: the median node has 2 connections, the 90th percentile 7, the biggest hubs 20–27. About 900 nodes form one connected cluster; the rest sit in some 75 small detached groups.
+The graph is a node-link diagram of about 1,450 records and 4,100 connections (October 2026), drawn by Cytoscape. The default filters let through 1,417 people and places and 2,212 connections; it **opens on their connected core**, 841 records and 1,806 connections. Degree is heavily skewed: the median node has 2 connections, the biggest hubs 20–30.
 
 ## Practices this graph follows
+
+- **Open on the connected core** (`src/graph/core.ts`, `useGraph.ts`). The core is the default graph's 2-core: records with fewer than two connections are dropped, repeatedly. It keeps 59% of the records and 82% of the connections. It is a fixed set, worked out once on the default graph, so narrowing the filters hides records by the filters' own rules rather than shrinking the core. A selected record and all its neighbours are always added; search finds every record the filters allow. "Show all records" in Filters turns it off, and Guides, AVA filters and AVA regions never take it. The count reads "841 of 1,417 people and places".
+- **Islands, not one mass** (`src/graph/clusters.ts`, `layoutClusters()` in `GraphCanvas.vue`). Without AVA regions, a fresh layout finds communities (Louvain, seeded, through graphology), folds communities under 5 records into their best-linked neighbour, and gathers detached groups into one loose island. Each island gets its own fcose run (tighter spacing than the whole-graph options: `ISLAND_OPTIONS`; the loose island tiles), so each community's hubs sit at its centre rather than every hub at the centre of the map. The islands are then packed as circles of their area plus a 300-unit gap, drawn together by the links between them (`arrangeIslands`).
+- **Lines between islands are faint at rest** (`edge.between`, line opacity 0.15): about a quarter of the connections run between communities, and at full strength those long lines buried the islands. A selection or hover draws them at full strength.
+- **Landmarks.** Each island's best-connected record keeps its name at 13px on screen at any zoom, like a place name on a map, so the zoomed-out overview says what each island is.
+- **Selection frames the neighbourhood** (`centerOnSelection()`, `src/graph/framing.ts`). Every route (canvas, search, a details-panel link, the address, the list, the dice) animates to fit the record and all its connections in the visible area, zooming out as far as needed (to the graph's minimum zoom). The selected record's name (14px), its neighbours' (11px), its lines (at least 2.5px) and the record itself (at least 32px) keep a fixed size on screen, so they read however far out the framing goes; the rest of the graph fades to 0.08 (lines 0.05).
 
 - **Size in five tiers, ranked among the nodes showing** (`src/graph/nodeSize.ts`). Largest (top 1%, 136px), large (next 4%, 80px), medium (15%, 44px), small (30%, 28px), smallest (50%, 18px), with labels 22 down to 9px. Tiers are recomputed for whatever the filters leave, so each view's best-connected nodes are its largest; ranking uses connection counts from the full data so a node's standing doesn't flicker. Nodes with the same count take the tier at the middle of their ranks, and the best-connected group is always largest. On the full graph that is 10 / 48 / 140 / 301 / 639 nodes. Discrete tiers read more clearly than a continuous scale: the eye compares five sizes, not a thousand. Michael set the largest size by eye: 164px was too far, 136px about right.
 - **Visual hierarchy over placement.** Hubs are drawn on top (`z-index` by degree), get larger labels, and keep them when zoomed out, while minor labels drop below `min-zoomed-font-size`. Edges are thin and slightly transparent until a node is selected or a line hovered; with this many lines, full-strength edges bury the nodes.
@@ -22,7 +28,7 @@ The graph is a node-link diagram of about 1,150 nodes and 1,950 connections, dra
 ## Performance (October 2026, about 1,150 nodes and 1,770 lines)
 
 - **Never re-run fcose for a filter change.** It froze the page for 1.4–2.2s per toggle. Removed nodes are just removed; returning nodes go back to their remembered positions (kept per arrangement, plain and AVA regions, in `knownPositions` in `GraphCanvas.vue`); never-placed nodes go beside their neighbours (`src/graph/placement.ts`), then the overlap pass runs. Toggles now take 30–160ms. A full layout runs only with no saved layout, on Reset, the first time regions are shown, or when over 10% of the showing nodes have never been placed.
-- **Saved layout.** `src/data/layout.json` holds the default view's positions, one node per line. The dev server writes it, through `/__layout`, only when the first load finds no usable saved layout; Reset, guides and filters never save. New nodes are placed beside their connections at load. To refresh it on purpose, `npm run layout:reset` and reload (a new arrangement), or open `/?tidy-layout` (same arrangement: new nodes placed, every overlap nudged apart); review and commit it. At load and when filters bring nodes back, `separateNodes(around)` untangles only the neighbourhood of never-placed nodes: a whole-graph pass cost 0.4s (1.6s on a phone) on every load. Reset restores the saved arrangement instead of a fresh fcose run (1.5s, about 6s on a phone). `src/data/data.test.ts` fails when it covers under 95% of the opening view (the app falls back to a full layout below 90%). Load went from about 2s frozen to no layout at all.
+- **Saved layout.** `src/data/layout.json` holds the default arrangement's positions for every record the default filters let through (not only the core, so Show all and a selection's neighbours have places of their own; the dev server shows all records on the load that makes or tidies it), one node per line. The dev server writes it, through `/__layout`, only when the first load finds no usable saved layout; Reset, guides and filters never save. New nodes are placed beside their connections at load. To refresh it on purpose, `npm run layout:reset` and reload (a new arrangement), or open `/?tidy-layout` (same arrangement: new nodes placed, every overlap nudged apart); review and commit it. At load and when filters bring nodes back, `separateNodes(around)` untangles only the neighbourhood of never-placed nodes: a whole-graph pass cost 0.4s (1.6s on a phone) on every load. Reset restores the saved arrangement instead of a fresh fcose run (1.5s, about 6s on a phone). `src/data/data.test.ts` fails when it covers under 95% of the opening view (the app falls back to a full layout below 90%). Load went from about 2s frozen to no layout at all.
 - **Removing a region box takes its children with it** in Cytoscape. Move children out (`children().move({ parent: null })`) before removing a parent, or they come back as new elements and lose their places.
 - **Labels are measured in Nunito, so wait for the font.** `GraphCanvas.vue` awaits `document.fonts.load` for Nunito before its first sync; measured in a fallback font, labels collide once Nunito arrives. Changing the typeface means `npm run layout:reset` and a reload, so the saved layout matches the new label widths.
 - **Fit after mount needs `cy.resize()` first:** without a layout's delay, Cytoscape's cached container size is stale and the view lands far off the graph.
@@ -31,6 +37,22 @@ The graph is a node-link diagram of about 1,150 nodes and 1,950 connections, dra
 - **Measuring in a background tab:** `requestAnimationFrame` doesn't run and timers are throttled, so time interactions synchronously with a few awaited microtasks, and frame cost with `cy.renderer().renderTo(ctx, zoom, pan, 2)` into an offscreen canvas. Take a screenshot first, or the renderer may not have computed styles and report 0ms.
 
 ## What was tried and rejected (October 2026)
+
+### Clustered layout, measured on the core (841 records), 21 October
+
+| Variant | Extent (graph units) | Overlapping labels | Layout time |
+|---|---|---|---|
+| Whole-graph fcose (before) | about 6,700 by 5,400 for all 1,417 | about 15 | 1.5–2.1s |
+| Islands, whole-graph options, circles round each island's corners, gap 160 | 17,000 by 16,000 | 0 | 0.6s |
+| Islands, tighter island options, area circles, gap 300 (chosen) | about 8,300 by 7,900 | 0–3 before the overlap pass | 0.1–0.6s |
+
+Degree–centre correlation went from −0.34 to −0.15: hubs are central in their island, not in the map. A first attempt arranged the islands with a headless fcose run of one node per island; it stacked many islands on the same spot, hence the plain circle packing in `arrangeIslands`.
+
+### WebGL renderer, 21 October
+
+Cytoscape 3.34's `renderer: { name: 'canvas', webgl: true }` was slower here (37 frames a second during a zoom against 78 with the canvas renderer, worst frame 34ms against 26ms) and ignored `min-zoomed-font-size`, drawing faint names over the whole map. Rejected.
+
+### Earlier (October 2026)
 
 Measured on the full graph, two runs each:
 

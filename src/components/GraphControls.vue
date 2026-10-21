@@ -9,10 +9,15 @@ import Chevron from './Chevron.vue'
 import VerifiedInfo from './VerifiedInfo.vue'
 import NodeGlyph from './NodeGlyph.vue'
 
-const { state, avas, activeView, resetFilters, isDefaultView } = useGraph()
+const { state, avas, activeView, resetFilters, isDefaultView, visibleNodes, filteredCount } = useGraph()
 
 // Reset has nothing to do at the start: default filters, nothing selected
 const atStart = computed(() => isDefaultView.value && !state.selectedId)
+
+// The graph opens on its connected core; this many more records come in with Show all.
+// Guides, AVA filters and AVA regions show everything, so the switch only shows without them
+const coreApplies = computed(() => !state.focus && state.avas.length === 0 && !state.categories.geography)
+const moreRecords = computed(() => (state.showAll ? 0 : Math.max(0, filteredCount.value - visibleNodes.value.length)))
 
 // A guided view's focus, while one is set: shown above the filters, removable
 const focusLabel = computed(() => viewById(state.focus)?.focus?.label)
@@ -122,6 +127,15 @@ function onDrawerKey(event: KeyboardEvent) {
         {{ NODE_TYPE_LABELS[type] }}
         <template #icon><NodeGlyph :type="type" /></template>
       </Check>
+      <template v-if="coreApplies">
+        <Check v-model="state.showAll" describedby="show-all-hint">
+          Show all records<span v-if="moreRecords" class="controls__count"> (+{{ moreRecords.toLocaleString('en-US') }})</span>
+        </Check>
+        <p id="show-all-hint" class="controls__hint">
+          Otherwise the graph shows the people and places with two or more connections. Selecting one shows all of its
+          connections.
+        </p>
+      </template>
     </fieldset>
 
     <fieldset>
@@ -357,6 +371,10 @@ legend {
 
 .controls__with-info > :first-child {
   flex: 1;
+}
+
+.controls__count {
+  color: var(--text-secondary);
 }
 
 .controls__hint {
