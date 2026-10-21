@@ -960,6 +960,7 @@ export function useGraph() {
     nodeById,
     visibleNodes,
     visibleEdges,
+    filteredNodes,
     filteredCount,
     coreApplies,
     selectedNode,

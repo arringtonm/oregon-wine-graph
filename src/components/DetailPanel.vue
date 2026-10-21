@@ -146,6 +146,16 @@ watch(
   },
 )
 
+// Each record opens at its top, not wherever the last one was scrolled to
+watch(
+  () => selectedNode.value?.id,
+  async (id) => {
+    if (!id) return
+    await nextTick()
+    panel.value?.scrollTo({ top: 0 })
+  },
+)
+
 // Selections made from a list, a link or search move keyboard focus to the node's heading,
 // so a screen reader reads the new details from the top
 const heading = ref<HTMLHeadingElement>()

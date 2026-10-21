@@ -71,7 +71,9 @@ async function ask(question: string, override?: AskOverride) {
   try {
     answer.value = await askJev(question, override)
   } catch (failure) {
-    askError.value = failure instanceof Error ? failure.message : String(failure)
+    // The service's own failure ("HTTP 404", a server error page) means nothing to readers
+    console.warn('Ask failed', failure)
+    askError.value = 'Couldn’t answer that just now. Try again in a moment, or search for a name instead.'
     answer.value = null
   } finally {
     asking.value = false

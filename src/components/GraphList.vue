@@ -5,16 +5,17 @@ import { NODE_TYPES, NODE_TYPE_LABELS, type GraphNode, type NodeType } from '../
 import { matchesQuery } from '../graph/textMatch'
 import NodeGlyph from './NodeGlyph.vue'
 
-// The nodes the graph currently shows, as a list a keyboard or screen reader can work
-// through. Choosing one selects it and moves focus to its details.
-const { state, visibleNodes, degree, select, announce } = useGraph()
+// The nodes the filters let through, as a list a keyboard or screen reader can work
+// through. Choosing one selects it and moves focus to its details. Unlike the graph, the
+// list isn't crowded by records with one connection or none, so it keeps them all
+const { state, filteredNodes, degree, select, announce } = useGraph()
 
 
 // Narrows the list as you type: every word must appear in the name, other names, place
 // or summary, ignoring case and accents
 const filter = ref('')
 const matching = computed(() =>
-  visibleNodes.value.filter((node) => matchesQuery(filter.value, [node.name, ...(node.aka ?? []), node.place, node.summary])),
+  filteredNodes.value.filter((node) => matchesQuery(filter.value, [node.name, ...(node.aka ?? []), node.place, node.summary])),
 )
 
 // The order within each group: by name, or the best connected first (ties by name).
@@ -155,7 +156,7 @@ function detail(node: GraphNode): string {
         placeholder="Name, place or anything in a summary"
         aria-describedby="graph-list-count"
       />
-      <span id="graph-list-count" class="graph-list__total">{{ matching.length }} of {{ visibleNodes.length }}</span>
+      <span id="graph-list-count" class="graph-list__total">{{ matching.length }} of {{ filteredNodes.length }}</span>
       </div>
       <!-- Phones: two menus in one row; the jump menu also shows the group being read -->
       <div v-if="groups.length && phone" class="graph-list__menus">

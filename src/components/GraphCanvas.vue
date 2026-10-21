@@ -57,6 +57,7 @@ const {
   historyEntries,
   isDefaultView,
   isDefaultArrangement,
+  activeView,
   randomNodeId,
   startTour,
   dismissTourNudge,
@@ -424,19 +425,26 @@ function fit(closer = 1) {
   cy.resize()
   const area = visibleArea()
   const padding = 40
-  const box = cy.elements().boundingBox()
+  // The records alone: names are drawn at a fixed size on screen, so zoomed out (as on a
+  // phone) they span far more of the graph than their records and pull the centre aside
+  const box = cy.nodes().boundingBox({ includeLabels: false })
   if (box.w === 0 || box.h === 0) return
-  const zoom = Math.max(
-    cy.minZoom(),
-    Math.min(1.25, cy.maxZoom(), (closer * (area.width - 2 * padding)) / box.w, (closer * (area.height - 2 * padding)) / box.h),
-  )
-  // Centre the graph in the visible area, not the whole canvas
+  const fitted = Math.min(1.25, cy.maxZoom(), (closer * (area.width - 2 * padding)) / box.w, (closer * (area.height - 2 * padding)) / box.h)
+  const zoom = Math.max(cy.minZoom(), fitted)
+  // Centre the graph in the visible area, not the whole canvas. When it can't all fit even
+  // at the furthest zoom (on a phone), centre on where its records are, not on the middle of
+  // its outline, which a few outlying records can pull far from the crowd
+  let centre = { x: box.x1 + box.w / 2, y: box.y1 + box.h / 2 }
+  if (fitted < cy.minZoom()) {
+    const nodes = cy.nodes()
+    centre = {
+      x: nodes.reduce((sum, node) => sum + node.position('x'), 0) / nodes.length,
+      y: nodes.reduce((sum, node) => sum + node.position('y'), 0) / nodes.length,
+    }
+  }
   cy.viewport({
     zoom,
-    pan: {
-      x: area.left + area.width / 2 - (box.x1 + box.w / 2) * zoom,
-      y: area.top + area.height / 2 - (box.y1 + box.h / 2) * zoom,
-    },
+    pan: { x: area.left + area.width / 2 - centre.x * zoom, y: area.top + area.height / 2 - centre.y * zoom },
   })
 }
 
@@ -572,6 +580,14 @@ function fcoseOptions(randomize: boolean) {
 
 function layoutNow(randomize: boolean) {
   if (!cy) return
+  // Names and the selection as they are in the graph, not as sized for the screen: the
+  // layout counts names as part of each record, and names sized for a phone's far zoom
+  // (about 190 units tall) spread a guide's records across the whole map
+  cy.batch(() => {
+    cy!.nodes().removeStyle(PLACED)
+    cy!.nodes('.sized').removeClass('sized').removeStyle('width height')
+  })
+  placedAs.clear()
   layout = cy.layout(fcoseOptions(randomize) as cytoscape.LayoutOptions)
   layout.one('layoutstop', afterLayout)
   layout.run()
@@ -865,7 +881,9 @@ function syncElements() {
 
   if (firstRender) {
     const ids = plainNodes().map((node) => node.id())
-    const usable = !state.categories.geography && coverage(savedLayout, ids) >= 0.9
+    // A guide opened from its address is laid out afresh, as when chosen from the menu: in the
+    // saved arrangement its records sit scattered across the whole map
+    const usable = isDefaultArrangement.value && !state.categories.geography && coverage(savedLayout, ids) >= 0.9
     if (usable && placeNodes(ids)) {
       // Nodes added since the layout was saved may collide with their neighbours
       const unsaved = ids.filter((id) => !(id in savedLayout.positions))
@@ -1122,8 +1140,9 @@ watch(
       </span>
     </div>
     <!-- What the filters leave showing, in the graph's corner; the list view has its own count -->
+    <!-- On phones the Guides button has no room for the guide showing, so it leads the count -->
     <p v-show="!state.listView" class="graph-canvas__count" role="status">
-      {{ shownCount }}
+      <span v-if="activeView" class="graph-canvas__guide">{{ activeView.title }} · </span>{{ shownCount }}
     </p>
     <!-- Who made the site, in the graph's bottom-right corner -->
     <div class="graph-canvas__about">
@@ -1359,6 +1378,23 @@ watch(
   color: var(--text-secondary);
   font-size: 0.8125rem;
   pointer-events: none;
+}
+
+.graph-canvas__guide {
+  display: none;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .graph-canvas__guide {
+    display: inline;
+  }
+
+  /* Clear of About, beside it */
+  .graph-canvas__count {
+    max-width: calc(100% - var(--inset-left, 0px) - 80px);
+  }
 }
 
 /* Bottom right of the visible graph; under the detail sheet on smaller screens, like the
