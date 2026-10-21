@@ -6,7 +6,7 @@ An explorable map of the people, wineries and vineyards behind Oregon wine, and 
 
 ## What you can explore
 
-- **The graph.** Every person, winery, vineyard, AVA, organization and event is a node; every relationship between them is a line. Better-connected nodes are drawn larger, and the graph is arranged as islands of closely linked people and places, each named by its best-connected record. It opens on the best-connected records; "Show all records" in Filters adds the rest. Select one to zoom to it and everything it connects to, and to see its story, its connections and the sources for each.
+- **The graph.** Every person, winery, vineyard, AVA, organization and event is a node; every relationship between them is a line. Better-connected nodes are drawn larger, and names are placed as on a map: the best-connected first, as many as fit without overlapping, more as you zoom in. It opens on the best-connected records; "Show all records" in Filters adds the rest. Select one to zoom to it and everything it connects to, and to see its story, its connections and the sources for each.
 - **Search and filters.** Find anyone by name, show or hide kinds of people and places or kinds of relationship, narrow to particular AVAs, or show only records that have been verified.
 - **AVA regions.** Switch on "AVA regions" to see vineyards grouped inside the American Viticultural Areas they sit in.
 - **List view.** The same people and places as a searchable list, readable by keyboard and screen reader.

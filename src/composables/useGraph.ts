@@ -1,6 +1,5 @@
 import { computed, reactive, watch } from 'vue'
 import { loadGraph } from '../data'
-import { communities } from '../graph/clusters'
 import { coreWithSelection, twoCore } from '../graph/core'
 import { cardParts, connectionLabel, formatYears, HIDDEN_TYPES, SINGULAR_TYPE } from '../graph/format'
 import { foldText } from '../graph/textMatch'
@@ -434,8 +433,8 @@ const filteredEdges = computed(() => {
   )
 })
 
-// Every record and connection the default filters let through: the graph the saved
-// arrangement, its islands and the connected core are worked out on
+// Every record and connection the default filters let through: the graph the connected
+// core is worked out on
 const defaultGraph = computed(() => {
   const defaults = defaultFilters()
   const ids = nodes.value
@@ -452,9 +451,6 @@ const defaultGraph = computed(() => {
 // organizations only, say) hides records by the filters' own rules rather than shrinking
 // the core to nothing
 const defaultCore = computed(() => twoCore(defaultGraph.value.ids, defaultGraph.value.links))
-
-// The default graph's communities, the islands of the saved arrangement (graph/clusters.ts)
-const defaultCommunities = computed(() => communities(defaultGraph.value.ids, defaultGraph.value.links))
 
 // Taken unless "Show all records" is on. Guides and AVA filters narrow the graph themselves,
 // and the core would hide the very pairs they pick; AVA regions show vineyards by where they
@@ -1021,7 +1017,6 @@ export function useGraph() {
     avasOf,
     isDefaultView,
     isDefaultArrangement,
-    defaultCommunities,
     nearby,
     loadEvidence,
     removeEdge,
