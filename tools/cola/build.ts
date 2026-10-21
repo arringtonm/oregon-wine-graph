@@ -38,9 +38,12 @@ export function pickApprovals<T extends { form: ColaForm }>(approvals: T[]): T[]
   return [sorted[0], sorted[Math.floor(sorted.length / 2)], sorted[sorted.length - 1]]
 }
 
+// A form with no grape named says "N/A" (or "NONE") in the varietal box
+export const noVariety = (varietals: string) => /^\s*(n\/?a|none|not applicable)?\s*$/i.test(varietals)
+
 // "PINOT NOIR, CHARDONNAY" style varietals, as the graph writes them: "Pinot noir"
 const variety = (varietals: string) => {
-  const first = varietals.split(/[,;/&]| and /i)[0]?.trim() ?? ''
+  const first = noVariety(varietals) ? '' : (varietals.split(/[,;/&]| and /i)[0]?.trim() ?? '')
   return first ? first[0].toUpperCase() + first.slice(1).toLowerCase() : ''
 }
 

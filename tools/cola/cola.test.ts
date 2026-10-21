@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { loadGraph } from '../../src/data'
 import type { GraphEdge } from '../../src/data/schema'
-import { buildResearch, colaSource } from './build'
+import { buildResearch, colaSource, noVariety } from './build'
 import { IMAGE_NOTE, labelOnlyNote, withCaveats } from './caveats'
 import { hintsFor, priority, vineyardKey } from './hints'
 import { newWineryRecords, placeFromApplicant, summaryFor } from './newWineries'
@@ -217,6 +217,8 @@ describe('cola:new-wineries', () => {
   it('summarises where the winery is and what it makes', () => {
     expect(summaryFor('Roseburg, OR', ['Pinot Noir', 'TEMPRANILLO'])).toBe('Roseburg winery making Pinot noir and Tempranillo.')
     expect(summaryFor(undefined, [])).toBe('Oregon winery.')
+    expect(['N/A', 'NONE', ' ', ''].every(noVariety)).toBe(true)
+    expect(noVariety('PINOT NOIR')).toBe(false)
   })
 
   it('creates a winery only with an AVA to cite, and never one already recorded', () => {

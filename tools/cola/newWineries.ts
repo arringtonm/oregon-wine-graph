@@ -13,7 +13,7 @@ import { nameKey } from '../check/duplicates'
 import { slugify } from '../jev/parseConnection'
 import { OPENML_SOURCE, readOregonFacts, type ReviewFacts } from '../openml/dataset'
 import { readGraph } from '../reviewPlugin'
-import { avaFor, colaSource } from './build'
+import { avaFor, colaSource, noVariety } from './build'
 import { CACHE_DIR, hasForm, Registry, type ColaForm } from './registry'
 import { approvalsFor, readWineries, searchNames, writeWineries } from './search'
 
@@ -71,12 +71,12 @@ export function newWineryRecords(
   const varieties = [
     ...new Set(
       [...reviews.map((row) => row.variety), ...forms.map((form) => form.varietals.split(',')[0].trim())]
-        .filter(Boolean)
+        .filter((name) => name && !noVariety(name))
         .map(varietyName),
     ),
   ]
   const colaSources = (list: ColaForm[]): Source[] =>
-    list.map((form) => colaSource(form, name, varietyName(form.varietals.split(',')[0].trim()), form.vintage))
+    list.map((form) => colaSource(form, name, noVariety(form.varietals) ? '' : varietyName(form.varietals.split(',')[0].trim()), form.vintage))
 
   const edges = new Map<string, Edge>()
   const cite = (avaId: string, sources: Source[]) => {

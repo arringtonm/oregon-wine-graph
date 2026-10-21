@@ -12944,7 +12944,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "David Hill N/a, label approved 21 May 2025 (TTB COLA 25129001000566)",
+        "title": "David Hill, label approved 21 May 2025 (TTB COLA 25129001000566)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=25129001000566"
       }
     ],
@@ -13161,7 +13161,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Coelho N/a, label approved 28 May 2026 (TTB COLA 26142001000787)",
+        "title": "Coelho, label approved 28 May 2026 (TTB COLA 26142001000787)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26142001000787"
       }
     ],
@@ -13287,7 +13287,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Cliff Creek N/a, label approved 2 Sep 2025 (TTB COLA 25244001000025)",
+        "title": "Cliff Creek, label approved 2 Sep 2025 (TTB COLA 25244001000025)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=25244001000025"
       }
     ],
@@ -13305,7 +13305,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Ledger David N/a, label approved 6 Mar 2018 (TTB COLA 18051001001010)",
+        "title": "Ledger David, label approved 6 Mar 2018 (TTB COLA 18051001001010)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18051001001010"
       }
     ],
@@ -13441,7 +13441,7 @@
   {
     "id": "longplay",
     "name": "Longplay",
-    "summary": "Newberg winery making Pinot noir, Chardonnay and N/a.",
+    "summary": "Newberg winery making Pinot noir and Chardonnay.",
     "place": "Newberg, OR",
     "sources": [
       {
@@ -13449,7 +13449,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Longplay N/a, label approved 28 Apr 2026 (TTB COLA 26105001000855)",
+        "title": "Longplay, label approved 28 Apr 2026 (TTB COLA 26105001000855)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26105001000855"
       }
     ],
@@ -13503,7 +13503,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Merrill Cellars N/a, label approved 30 Apr 2018 (TTB COLA 18107001001147)",
+        "title": "Merrill Cellars, label approved 30 Apr 2018 (TTB COLA 18107001001147)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18107001001147"
       }
     ],
@@ -13715,7 +13715,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Abiqua Wind N/a, label approved 4 Sep 2019 (TTB COLA 19232001000663)",
+        "title": "Abiqua Wind, label approved 4 Sep 2019 (TTB COLA 19232001000663)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=19232001000663"
       }
     ],
@@ -13733,7 +13733,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Jezebel N/a, label approved 26 Jun 2018 (TTB COLA 18163001000780)",
+        "title": "Jezebel, label approved 26 Jun 2018 (TTB COLA 18163001000780)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18163001000780"
       }
     ],
@@ -13878,7 +13878,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Arcane Cellars N/a, label approved 6 Apr 2018 (TTB COLA 18081001000345)",
+        "title": "Arcane Cellars, label approved 6 Apr 2018 (TTB COLA 18081001000345)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18081001000345"
       }
     ],
@@ -13978,7 +13978,7 @@
   {
     "id": "swick",
     "name": "Swick",
-    "summary": "Newberg winery making Pinot noir, Cabernet sauvignon and N/a.",
+    "summary": "Newberg winery making Pinot noir and Cabernet sauvignon.",
     "place": "Newberg, OR",
     "sources": [
       {
@@ -14032,7 +14032,7 @@
   {
     "id": "marshall-davis",
     "name": "Marshall Davis",
-    "summary": "Gaston winery making Pinot noir, Cabernet sauvignon and N/a.",
+    "summary": "Gaston winery making Pinot noir and Cabernet sauvignon.",
     "place": "Gaston, OR",
     "sources": [
       {
@@ -14040,7 +14040,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Marshall Davis N/a, label approved 26 Apr 2023 (TTB COLA 23115001000284)",
+        "title": "Marshall Davis, label approved 26 Apr 2023 (TTB COLA 23115001000284)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=23115001000284"
       }
     ],
@@ -14050,7 +14050,7 @@
   {
     "id": "zenith",
     "name": "Zenith",
-    "summary": "Dayton winery making Pinot noir, Auxerrois and N/a.",
+    "summary": "Dayton winery making Pinot noir and Auxerrois.",
     "place": "Dayton, OR",
     "sources": [
       {
@@ -14058,7 +14058,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Zenith N/a, label approved 17 Sep 2026 (TTB COLA 26257001000454)",
+        "title": "Zenith, label approved 17 Sep 2026 (TTB COLA 26257001000454)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=26257001000454"
       }
     ],
@@ -14289,7 +14289,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Evergreen N/a 2007, label approved 19 Aug 2011 (TTB COLA 11199001000413)",
+        "title": "Evergreen 2007, label approved 19 Aug 2011 (TTB COLA 11199001000413)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=11199001000413"
       }
     ],
@@ -14530,7 +14530,7 @@
   {
     "id": "nuthatch-cellars",
     "name": "Nuthatch Cellars",
-    "summary": "Corvallis winery making Malbec, Syrah and N/a.",
+    "summary": "Corvallis winery making Malbec and Syrah.",
     "place": "Corvallis, OR",
     "sources": [
       {
@@ -14538,7 +14538,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Nuthatch Cellars N/a 2011, label approved 25 Jan 2013 (TTB COLA 13009001000064)",
+        "title": "Nuthatch Cellars 2011, label approved 25 Jan 2013 (TTB COLA 13009001000064)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=13009001000064"
       }
     ],
@@ -14548,7 +14548,7 @@
   {
     "id": "plowbuster",
     "name": "Plowbuster",
-    "summary": "Tualatin winery making Pinot noir, Chardonnay and N/a.",
+    "summary": "Tualatin winery making Pinot noir and Chardonnay.",
     "place": "Tualatin, OR",
     "sources": [
       {
@@ -14604,7 +14604,7 @@
   {
     "id": "genius-loci",
     "name": "Genius Loci",
-    "summary": "McMinnville winery making Pinot noir, Syrah and N/a.",
+    "summary": "McMinnville winery making Pinot noir and Syrah.",
     "place": "McMinnville, OR",
     "sources": [
       {
@@ -14612,7 +14612,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Genius Loci N/a 2012, label approved 13 May 2016 (TTB COLA 16103001000279)",
+        "title": "Genius Loci 2012, label approved 13 May 2016 (TTB COLA 16103001000279)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=16103001000279"
       }
     ],
@@ -14768,7 +14768,7 @@
   {
     "id": "evergreen-vineyards",
     "name": "Evergreen Vineyards",
-    "summary": "McMinnville winery making Pinot gris, Riesling and N/a.",
+    "summary": "McMinnville winery making Pinot gris and Riesling.",
     "place": "McMinnville, OR",
     "sources": [
       {
@@ -14776,7 +14776,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Evergreen Vineyards N/a 2007, label approved 19 Aug 2011 (TTB COLA 11199001000413)",
+        "title": "Evergreen Vineyards 2007, label approved 19 Aug 2011 (TTB COLA 11199001000413)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=11199001000413"
       }
     ],
@@ -14876,7 +14876,7 @@
   {
     "id": "cloudline",
     "name": "Cloudline",
-    "summary": "Dundee winery making Pinot noir, Pinot gris and N/a.",
+    "summary": "Dundee winery making Pinot noir and Pinot gris.",
     "place": "Dundee, OR",
     "sources": [
       {
@@ -14999,7 +14999,7 @@
   {
     "id": "andrew-rich",
     "name": "Andrew Rich",
-    "summary": "Carlton winery making Pinot noir and N/a.",
+    "summary": "Carlton winery making Pinot noir.",
     "place": "Carlton, OR",
     "sources": [
       {
@@ -15073,7 +15073,7 @@
   {
     "id": "angel-vine",
     "name": "Angel Vine",
-    "summary": "Portland winery making Pinot noir, N/a and Zinfandel.",
+    "summary": "Portland winery making Pinot noir and Zinfandel.",
     "place": "Portland, OR",
     "sources": [
       {
@@ -15081,7 +15081,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Angel Vine N/a, label approved 28 Jan 2019 (TTB COLA 18352001000325)",
+        "title": "Angel Vine, label approved 28 Jan 2019 (TTB COLA 18352001000325)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=18352001000325"
       }
     ],
@@ -15146,7 +15146,7 @@
   {
     "id": "noble-estate",
     "name": "Noble Estate",
-    "summary": "Rickreall winery making Chardonnay, N/a and Pinot gris.",
+    "summary": "Rickreall winery making Chardonnay and Pinot gris.",
     "place": "Rickreall, OR",
     "sources": [
       {
@@ -15154,7 +15154,7 @@
         "url": "https://www.openml.org/d/42074"
       },
       {
-        "title": "Noble Estate N/a, label approved 19 May 2021 (TTB COLA 21137001000677)",
+        "title": "Noble Estate, label approved 19 May 2021 (TTB COLA 21137001000677)",
         "url": "https://ttbonline.gov/colasonline/viewColaDetails.do?action=publicDisplaySearchBasic&ttbid=21137001000677"
       }
     ],
@@ -15293,7 +15293,7 @@
   {
     "id": "william-hatcher",
     "name": "William Hatcher",
-    "summary": "Newberg winery making Pinot noir and N/a.",
+    "summary": "Newberg winery making Pinot noir.",
     "place": "Newberg, OR",
     "sources": [
       {
@@ -15366,7 +15366,7 @@
   {
     "id": "j-daan",
     "name": "J. Daan",
-    "summary": "Carlton winery making Pinot noir, Cabernet franc 57% and N/a.",
+    "summary": "Carlton winery making Pinot noir and Cabernet franc 57%.",
     "place": "Carlton, OR",
     "sources": [
       {
@@ -15527,7 +15527,7 @@
   {
     "id": "domaine-loubejac",
     "name": "Domaine Loubejac",
-    "summary": "Dundee winery making Pinot noir and N/a.",
+    "summary": "Dundee winery making Pinot noir.",
     "place": "Dundee, OR",
     "sources": [
       {
@@ -15546,7 +15546,7 @@
   {
     "id": "seven-bridges",
     "name": "Seven Bridges",
-    "summary": "Portland winery making Merlot, Cabernet sauvignon and N/a.",
+    "summary": "Portland winery making Merlot and Cabernet sauvignon.",
     "place": "Portland, OR",
     "sources": [
       {

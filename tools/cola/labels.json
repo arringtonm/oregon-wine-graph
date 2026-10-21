@@ -468,6 +468,15 @@
   "vintage": 2004,
   "vintageConfidence": 1
  },
+ "06207001000056": {
+  "winery": "vista-hills",
+  "priority": 1,
+  "confidence": 0.59,
+  "readBy": "jev",
+  "vineyard": "vista-hills-vineyard",
+  "vintage": 2005,
+  "vintageConfidence": 1
+ },
  "06208001000040": {
   "winery": "bergstrom-wines",
   "priority": 1,
@@ -475,6 +484,15 @@
   "readBy": "jev",
   "vineyard": "hyland-vineyard",
   "vintage": 2005,
+  "vintageConfidence": 1
+ },
+ "06208001000176": {
+  "winery": "daedalus",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "seven-springs-vineyard",
+  "vintage": 2004,
   "vintageConfidence": 1
  },
  "06215001000174": {
@@ -712,6 +730,24 @@
   "vintage": 2004,
   "vintageConfidence": 1
  },
+ "07077001000014": {
+  "winery": "daedalus",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "elton-vineyard",
+  "vintage": 2006,
+  "vintageConfidence": 1
+ },
+ "07077001000015": {
+  "winery": "daedalus",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "maresh-vineyard",
+  "vintage": 2006,
+  "vintageConfidence": 1
+ },
  "07086001000129": {
   "winery": "alloro-vineyard",
   "priority": 2,
@@ -937,6 +973,15 @@
   "vintage": 2006,
   "vintageConfidence": 1
  },
+ "07201001000158": {
+  "winery": "francis-tannahill",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vineyard": "maresh-vineyard",
+  "vintage": 2005,
+  "vintageConfidence": 1
+ },
  "07206001000277": {
   "winery": "bergstrom-wines",
   "priority": 2,
@@ -1026,6 +1071,15 @@
   "needsName": "",
   "vintage": 2006,
   "vintageConfidence": 1
+ },
+ "07242001000049": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.34,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2006,
+  "vintageConfidence": 0.86
  },
  "07248001000277": {
   "winery": "adelsheim-vineyard",
@@ -1253,6 +1307,15 @@
   "confidence": 0.17,
   "readBy": "jev",
   "needsName": "",
+  "vintage": 2006,
+  "vintageConfidence": 1
+ },
+ "07343001000017": {
+  "winery": "vista-hills",
+  "priority": 1,
+  "confidence": 0.31,
+  "readBy": "jev",
+  "vineyard": "vista-hills-vineyard",
   "vintage": 2006,
   "vintageConfidence": 1
  },
@@ -1616,6 +1679,15 @@
   "vintage": 2007,
   "vintageConfidence": 1
  },
+ "08101001000500": {
+  "winery": "nuthatch-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "seven-hills-vineyard",
+  "vintage": 2006,
+  "vintageConfidence": 1
+ },
  "08107001000092": {
   "winery": "arborbrook",
   "priority": 2,
@@ -1895,6 +1967,15 @@
   "vintage": 2007,
   "vintageConfidence": 1
  },
+ "08196001000068": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.86,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2007,
+  "vintageConfidence": 1
+ },
  "08200001000006": {
   "winery": "bethel-heights-vineyard",
   "priority": 2,
@@ -1959,6 +2040,42 @@
   "vintage": 2007,
   "vintageConfidence": 1
  },
+ "08207001000292": {
+  "winery": "expression-44",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vineyard": "roserock-vineyard",
+  "vintage": 2007,
+  "vintageConfidence": 1
+ },
+ "08207001000295": {
+  "winery": "expression-44",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2007,
+  "vintageConfidence": 1
+ },
+ "08207001000300": {
+  "winery": "expression-44",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vineyard": "zena-crown-vineyard",
+  "vintage": 2007,
+  "vintageConfidence": 1
+ },
+ "08207001000306": {
+  "winery": "expression-44",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vineyard": "zena-crown-vineyard",
+  "vintage": 2007,
+  "vintageConfidence": 1
+ },
  "08214001000075": {
   "winery": "brooks-wine",
   "priority": 1,
@@ -1967,6 +2084,15 @@
   "vineyard": null,
   "vintage": 2007,
   "vintageConfidence": 1
+ },
+ "08214001000263": {
+  "winery": "daedalus",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "maresh-vineyard",
+  "vintage": 2006,
+  "vintageConfidence": 0.98
  },
  "08214001000310": {
   "winery": "the-pines-1852",
@@ -2003,6 +2129,15 @@
   "needsName": "",
   "vintage": 2007,
   "vintageConfidence": 1
+ },
+ "08218001000425": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.52,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2007,
+  "vintageConfidence": 0.97
  },
  "08226001000236": {
   "winery": "kelley-fox-wines",
@@ -2276,12 +2411,39 @@
   "vintage": 2007,
   "vintageConfidence": 1
  },
+ "08307001000011": {
+  "winery": "verve",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "momtazi-vineyard",
+  "vintage": 2007,
+  "vintageConfidence": 1
+ },
+ "08307001000012": {
+  "winery": "verve",
+  "priority": 1,
+  "confidence": 0.86,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2007,
+  "vintageConfidence": 1
+ },
  "08309001000119": {
   "winery": "r-stuart-and-co",
   "priority": 1,
   "confidence": 0.85,
   "readBy": "jev",
   "vineyard": "winderlea-vineyard",
+  "vintage": 2007,
+  "vintageConfidence": 1
+ },
+ "08309001000181": {
+  "winery": "vista-hills",
+  "priority": 1,
+  "confidence": 0.52,
+  "readBy": "jev",
+  "vineyard": null,
   "vintage": 2007,
   "vintageConfidence": 1
  },
@@ -2591,6 +2753,33 @@
   "vintage": 2008,
   "vintageConfidence": 1
  },
+ "09070001000366": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.53,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2008,
+  "vintageConfidence": 0.96
+ },
+ "09076001000450": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.48,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2008,
+  "vintageConfidence": 0.96
+ },
+ "09076001000455": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.59,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2008,
+  "vintageConfidence": 0.97
+ },
  "09084001000297": {
   "winery": "illahe-vineyards",
   "priority": 1,
@@ -2652,6 +2841,24 @@
   "readBy": "jev",
   "vineyard": null,
   "vintage": 2007,
+  "vintageConfidence": 1
+ },
+ "09191001000083": {
+  "winery": "expression-44",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vineyard": "zena-crown-vineyard",
+  "vintage": 2008,
+  "vintageConfidence": 1
+ },
+ "09191001000237": {
+  "winery": "expression-44",
+  "priority": 1,
+  "confidence": 0.97,
+  "readBy": "jev",
+  "vineyard": "roserock-vineyard",
+  "vintage": 2008,
   "vintageConfidence": 1
  },
  "09198001000377": {
@@ -2942,6 +3149,15 @@
   "vintage": 2008,
   "vintageConfidence": 1
  },
+ "09293001000088": {
+  "winery": "daedalus",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "maresh-vineyard",
+  "vintage": 2007,
+  "vintageConfidence": 0.97
+ },
  "09293001000349": {
   "winery": "lachini-vineyards",
   "priority": 2,
@@ -3095,6 +3311,24 @@
   "vintage": 2008,
   "vintageConfidence": 1
  },
+ "09362001000043": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2008,
+  "vintageConfidence": 0.92
+ },
+ "09362001000139": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.52,
+  "readBy": "jev",
+  "vineyard": "nicholas-vineyard",
+  "vintage": 2008,
+  "vintageConfidence": 0.96
+ },
  "10007001000254": {
   "winery": "sokol-blosser-winery",
   "priority": 2,
@@ -3173,6 +3407,15 @@
   "confidence": 0.94,
   "readBy": "jev",
   "vineyard": "shea-vineyard",
+  "vintage": 2008,
+  "vintageConfidence": 1
+ },
+ "10012001000029": {
+  "winery": "libra",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "momtazi-vineyard",
   "vintage": 2008,
   "vintageConfidence": 1
  },
@@ -3392,6 +3635,15 @@
   "vintage": 2009,
   "vintageConfidence": 1
  },
+ "10048001000112": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.83,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2009,
+  "vintageConfidence": 1
+ },
  "10049001000100": {
   "winery": "johan-vineyards",
   "priority": 2,
@@ -3436,6 +3688,15 @@
   "needsName": "",
   "vintage": 2009,
   "vintageConfidence": 1
+ },
+ "10069001000364": {
+  "winery": "daedalus",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "maresh-vineyard",
+  "vintage": 2008,
+  "vintageConfidence": 0.98
  },
  "10081001000175": {
   "winery": "erath-winery",
@@ -3680,6 +3941,15 @@
   "vintage": 2009,
   "vintageConfidence": 1
  },
+ "10201001000493": {
+  "winery": "wildaire",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "shea-vineyard",
+  "vintage": 2009,
+  "vintageConfidence": 1
+ },
  "10202001000192": {
   "winery": "adelsheim-vineyard",
   "priority": 1,
@@ -3822,6 +4092,15 @@
   "readBy": "jev",
   "vineyard": null,
   "vintage": 2008,
+  "vintageConfidence": 1
+ },
+ "10222001000371": {
+  "winery": "expression-44",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "roserock-vineyard",
+  "vintage": 2009,
   "vintageConfidence": 1
  },
  "10228001000145": {
@@ -4275,6 +4554,15 @@
   "vintage": 2009,
   "vintageConfidence": 1
  },
+ "10343001000302": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.89,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2009,
+  "vintageConfidence": 1
+ },
  "10348001000328": {
   "winery": "arterberry-maresh",
   "priority": 1,
@@ -4319,6 +4607,24 @@
   "vineyard": "temperance-hill-vineyard",
   "vintage": 2010,
   "vintageConfidence": 1
+ },
+ "11028001000371": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.69,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2009,
+  "vintageConfidence": 0.97
+ },
+ "11028001000373": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.3,
+  "readBy": "jev",
+  "vineyard": "nicholas-vineyard",
+  "vintage": 2009,
+  "vintageConfidence": 0.98
  },
  "11032001000124": {
   "winery": "brooks-wine",
@@ -4662,6 +4968,24 @@
   "vintage": 2009,
   "vintageConfidence": 1
  },
+ "11110001000464": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.62,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2010,
+  "vintageConfidence": 0.93
+ },
+ "11110001000466": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.49,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2010,
+  "vintageConfidence": 0.96
+ },
  "11112001000001": {
   "winery": "coeur-de-terre-vineyard",
   "priority": 2,
@@ -5004,6 +5328,15 @@
   "vintage": 2009,
   "vintageConfidence": 0.99
  },
+ "11187001000057": {
+  "winery": "expression-44",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "roserock-vineyard",
+  "vintage": 2010,
+  "vintageConfidence": 1
+ },
  "11195001000005": {
   "winery": "shea-wine-cellars",
   "priority": 2,
@@ -5037,6 +5370,15 @@
   "confidence": 0.55,
   "readBy": "jev",
   "vineyard": null,
+  "vintage": 2010,
+  "vintageConfidence": 1
+ },
+ "11196001000281": {
+  "winery": "expression-44",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zena-crown-vineyard",
   "vintage": 2010,
   "vintageConfidence": 1
  },
@@ -5094,6 +5436,24 @@
   "vintage": 2010,
   "vintageConfidence": 1
  },
+ "11215001000258": {
+  "winery": "seven-of-hearts",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "armstrong-vineyard",
+  "vintage": 2010,
+  "vintageConfidence": 0.99
+ },
+ "11215001000263": {
+  "winery": "seven-of-hearts",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "armstrong-vineyard",
+  "vintage": 2010,
+  "vintageConfidence": 0.97
+ },
  "11222001000309": {
   "winery": "ayoub-wines",
   "priority": 2,
@@ -5147,6 +5507,33 @@
   "needsName": "Olenick",
   "vintage": 2010,
   "vintageConfidence": 1
+ },
+ "11231001000216": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.67,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2010,
+  "vintageConfidence": 0.92
+ },
+ "11231001000234": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.67,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2010,
+  "vintageConfidence": 0.91
+ },
+ "11231001000241": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.69,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2010,
+  "vintageConfidence": 0.96
  },
  "11234001000176": {
   "winery": "sokol-blosser-winery",
@@ -5805,6 +6192,15 @@
   "vintage": 2011,
   "vintageConfidence": 1
  },
+ "12068001000247": {
+  "winery": "daedalus",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "maresh-vineyard",
+  "vintage": 2009,
+  "vintageConfidence": 0.96
+ },
  "12070001000053": {
   "winery": "white-rose-estate",
   "priority": 1,
@@ -6039,6 +6435,24 @@
   "vintage": 2011,
   "vintageConfidence": 1
  },
+ "12132001000338": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.7,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2011,
+  "vintageConfidence": 1
+ },
+ "12132001000347": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.45,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2011,
+  "vintageConfidence": 0.99
+ },
  "12139001000037": {
   "winery": "goodfellow-family-cellars",
   "priority": 2,
@@ -6147,6 +6561,24 @@
   "vintage": 2011,
   "vintageConfidence": 1
  },
+ "12165001000166": {
+  "winery": "wildaire",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "shea-vineyard",
+  "vintage": 2011,
+  "vintageConfidence": 1
+ },
+ "12165001000172": {
+  "winery": "wildaire",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2011,
+  "vintageConfidence": 1
+ },
  "12167001000246": {
   "winery": "nysa-vineyard-winery",
   "priority": 1,
@@ -6228,6 +6660,24 @@
   "vintage": 2011,
   "vintageConfidence": 1
  },
+ "12199001000196": {
+  "winery": "seven-of-hearts",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "durant-vineyard",
+  "vintage": 2011,
+  "vintageConfidence": 0.98
+ },
+ "12199001000380": {
+  "winery": "seven-of-hearts",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "durant-vineyard",
+  "vintage": 2011,
+  "vintageConfidence": 1
+ },
  "12199001000535": {
   "winery": "ayoub-wines",
   "priority": 1,
@@ -6264,6 +6714,15 @@
   "vintage": 2011,
   "vintageConfidence": 1
  },
+ "12209001000409": {
+  "winery": "blakeslee",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "beacon-hill-vineyard",
+  "vintage": 2011,
+  "vintageConfidence": 1
+ },
  "12212001000298": {
   "winery": "bergstrom-wines",
   "priority": 1,
@@ -6297,6 +6756,15 @@
   "confidence": 0.5,
   "readBy": "jev",
   "needsName": "",
+  "vintage": 2011,
+  "vintageConfidence": 1
+ },
+ "12249001000001": {
+  "winery": "aubichon-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "armstrong-vineyard",
   "vintage": 2011,
   "vintageConfidence": 1
  },
@@ -6616,6 +7084,15 @@
   "vintage": 2011,
   "vintageConfidence": 1
  },
+ "13078001000459": {
+  "winery": "genius-loci",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2011,
+  "vintageConfidence": 1
+ },
  "13080001000249": {
   "winery": "archery-summit",
   "priority": 2,
@@ -6715,6 +7192,15 @@
   "vintage": 2012,
   "vintageConfidence": 1
  },
+ "13106001000399": {
+  "winery": "cottonwood-winery-of-oregon",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "winters-hill-vineyard",
+  "vintage": 2011,
+  "vintageConfidence": 1
+ },
  "13107001000272": {
   "winery": "panther-creek-cellars",
   "priority": 1,
@@ -6775,6 +7261,15 @@
   "confidence": 0.56,
   "readBy": "jev",
   "needsName": "Illahe Gv",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "13135001000553": {
+  "winery": "aubichon-cellars",
+  "priority": 1,
+  "confidence": 0.67,
+  "readBy": "jev",
+  "vineyard": "vista-hills-vineyard",
   "vintage": 2012,
   "vintageConfidence": 1
  },
@@ -6884,6 +7379,15 @@
   "readBy": "jev",
   "vineyard": null,
   "vintage": 2010,
+  "vintageConfidence": 1
+ },
+ "13184001000183": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.3,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2012,
   "vintageConfidence": 1
  },
  "13185001000072": {
@@ -7183,6 +7687,24 @@
   "vintage": 2012,
   "vintageConfidence": 1
  },
+ "13214001000268": {
+  "winery": "luminous-hills",
+  "priority": 1,
+  "confidence": 0.97,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "13214001000270": {
+  "winery": "luminous-hills",
+  "priority": 1,
+  "confidence": 0.95,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
  "13218001000427": {
   "winery": "brittan-vineyards",
   "priority": 2,
@@ -7216,6 +7738,24 @@
   "confidence": 1,
   "readBy": "jev",
   "vineyard": "lazy-river-vineyard",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "13228001000086": {
+  "winery": "wildaire",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "shea-vineyard",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "13228001000088": {
+  "winery": "wildaire",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
   "vintage": 2012,
   "vintageConfidence": 1
  },
@@ -7417,6 +7957,15 @@
   "vintage": 2012,
   "vintageConfidence": 1
  },
+ "13337001000374": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "nicholas-vineyard",
+  "vintage": 2012,
+  "vintageConfidence": 0.99
+ },
  "13337001000402": {
   "winery": "beaux-freres",
   "priority": 2,
@@ -7470,6 +8019,24 @@
   "vineyard": "saffron-fields-vineyard",
   "vintage": 2012,
   "vintageConfidence": 1
+ },
+ "13351001000141": {
+  "winery": "aubichon-cellars",
+  "priority": 1,
+  "confidence": 0.76,
+  "readBy": "jev",
+  "vineyard": "vista-hills-vineyard",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "13352001000243": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.49,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2012,
+  "vintageConfidence": 0.98
  },
  "13354001000442": {
   "winery": "panther-creek-cellars",
@@ -7819,6 +8386,15 @@
   "confidence": 1,
   "readBy": "jev",
   "vineyard": "bella-vida-vineyard",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
+ "14051001000469": {
+  "winery": "spindrift-cellars",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "seven-hills-vineyard",
   "vintage": 2012,
   "vintageConfidence": 1
  },
@@ -8172,6 +8748,15 @@
   "confidence": 1,
   "readBy": "jev",
   "vineyard": "shea-vineyard",
+  "vintage": 2013,
+  "vintageConfidence": 1
+ },
+ "14190001000420": {
+  "winery": "luminous-hills",
+  "priority": 1,
+  "confidence": 0.95,
+  "readBy": "jev",
+  "vineyard": null,
   "vintage": 2013,
   "vintageConfidence": 1
  },
@@ -8843,6 +9428,15 @@
   "vintage": 2013,
   "vintageConfidence": 1
  },
+ "15085001000485": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.31,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
  "15089001000505": {
   "winery": "beckham-estate-vineyard",
   "priority": 2,
@@ -9368,6 +9962,15 @@
   "vintage": 2013,
   "vintageConfidence": 1
  },
+ "15212001000174": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "nicholas-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
  "15213001000021": {
   "winery": "le-cadeau-vineyard",
   "priority": 1,
@@ -9554,6 +10157,15 @@
   "confidence": 0.92,
   "readBy": "jev",
   "vineyard": "ribbon-springs-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "15245001000350": {
+  "winery": "wildaire",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "beacon-hill-vineyard",
   "vintage": 2014,
   "vintageConfidence": 1
  },
@@ -9810,6 +10422,15 @@
   "vintage": 2014,
   "vintageConfidence": 1
  },
+ "15338001000471": {
+  "winery": "seven-of-hearts",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "armstrong-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
  "15351001000312": {
   "winery": "white-rose-estate",
   "priority": 2,
@@ -10035,6 +10656,15 @@
   "vintage": 2013,
   "vintageConfidence": 1
  },
+ "15362001000342": {
+  "winery": "portlandia",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vineyard": "momtazi-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
  "16004001000390": {
   "winery": "sokol-blosser-winery",
   "priority": 2,
@@ -10231,6 +10861,51 @@
   "readBy": "jev",
   "needsName": "Chestnut Pn",
   "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "16049001000491": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "nicholas-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "16049001000506": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "nicholas-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "16049001000512": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "nicholas-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "16049001000519": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "nicholas-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "16049001000528": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "nicholas-vineyard",
+  "vintage": 2015,
   "vintageConfidence": 1
  },
  "16050001000283": {
@@ -10541,6 +11216,15 @@
   "vintage": 2014,
   "vintageConfidence": 1
  },
+ "16103001000279": {
+  "winery": "genius-loci",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2012,
+  "vintageConfidence": 1
+ },
  "16103001000305": {
   "winery": "lundeen-wines",
   "priority": 1,
@@ -10595,6 +11279,24 @@
   "vintage": 2014,
   "vintageConfidence": 1
  },
+ "16130001000293": {
+  "winery": "scott-paul",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "nysa-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "16130001000297": {
+  "winery": "scott-paul",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "maresh-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
  "16130001000336": {
   "winery": "johan-vineyards",
   "priority": 2,
@@ -10637,6 +11339,15 @@
   "confidence": 0.63,
   "readBy": "jev",
   "needsName": "",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "16153001000357": {
+  "winery": "kudos",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hyland-vineyard",
   "vintage": 2015,
   "vintageConfidence": 1
  },
@@ -10929,6 +11640,24 @@
   "vintage": 2014,
   "vintageConfidence": 1
  },
+ "16210001000191": {
+  "winery": "iris-vineyards",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "la-cantera-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
+ "16211001000140": {
+  "winery": "iris-vineyards",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "bayliss-bower-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
  "16215001000434": {
   "winery": "kelley-fox-wines",
   "priority": 2,
@@ -11172,6 +11901,15 @@
   "vintage": 2015,
   "vintageConfidence": 1
  },
+ "16327001000493": {
+  "winery": "siduri",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zena-crown-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
  "16335001000600": {
   "winery": "alexana-winery",
   "priority": 2,
@@ -11296,6 +12034,15 @@
   "readBy": "jev",
   "vineyard": "saffron-fields-vineyard",
   "vintage": null,
+  "vintageConfidence": 1
+ },
+ "16364001000079": {
+  "winery": "2hawk",
+  "priority": 1,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2015,
   "vintageConfidence": 1
  },
  "17017001000369": {
@@ -11480,6 +12227,15 @@
   "vintage": 2015,
   "vintageConfidence": 1
  },
+ "17031001000553": {
+  "winery": "siduri",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zena-crown-vineyard",
+  "vintage": 2015,
+  "vintageConfidence": 1
+ },
  "17032001000182": {
   "winery": "lumos-wine-co",
   "priority": 2,
@@ -11551,6 +12307,15 @@
   "needsName": "",
   "vintage": 2015,
   "vintageConfidence": 0.9
+ },
+ "17047001000583": {
+  "winery": "noble-estate",
+  "priority": 1,
+  "confidence": 0.85,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2016,
+  "vintageConfidence": 1
  },
  "17052001000347": {
   "winery": "lemelson-vineyards",
@@ -12138,6 +12903,15 @@
   "vintage": 2016,
   "vintageConfidence": 1
  },
+ "17164001000668": {
+  "winery": "kudos",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hyland-vineyard",
+  "vintage": 2016,
+  "vintageConfidence": 1
+ },
  "17165001000570": {
   "winery": "j-christopher-wines",
   "priority": 1,
@@ -12444,6 +13218,15 @@
   "vintage": 2016,
   "vintageConfidence": 1
  },
+ "17193001000534": {
+  "winery": "luminous-hills",
+  "priority": 1,
+  "confidence": 0.95,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2016,
+  "vintageConfidence": 1
+ },
  "17194001000397": {
   "winery": "51weeks",
   "priority": 2,
@@ -12621,6 +13404,15 @@
   "confidence": 0.82,
   "readBy": "jev",
   "needsName": "",
+  "vintage": 2016,
+  "vintageConfidence": 1
+ },
+ "17237001000802": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "nicholas-vineyard",
   "vintage": 2016,
   "vintageConfidence": 1
  },
@@ -13137,6 +13929,15 @@
   "readBy": "jev",
   "vineyard": "lonesome-rock-vineyard",
   "vintage": 2016,
+  "vintageConfidence": 1
+ },
+ "17364001000117": {
+  "winery": "coelho",
+  "priority": 1,
+  "confidence": 0.95,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2017,
   "vintageConfidence": 1
  },
  "18002001000510": {
@@ -13933,6 +14734,15 @@
   "vintage": 2016,
   "vintageConfidence": 1
  },
+ "18143001000580": {
+  "winery": "trathen-hall",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "momtazi-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
  "18144001000298": {
   "winery": "brooks-wine",
   "priority": 2,
@@ -14419,6 +15229,24 @@
   "vintage": 2017,
   "vintageConfidence": 1
  },
+ "18229001000593": {
+  "winery": "luminous-hills",
+  "priority": 1,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "18234001000457": {
+  "winery": "siduri",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zena-crown-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
  "18249001000768": {
   "winery": "winderlea",
   "priority": 1,
@@ -14480,6 +15308,15 @@
   "readBy": "jev",
   "vineyard": null,
   "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "18279001000013": {
+  "winery": "hamacher",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "bieze-vineyard",
+  "vintage": 2015,
   "vintageConfidence": 1
  },
  "18284001000759": {
@@ -15706,6 +16543,42 @@
   "vintage": 2018,
   "vintageConfidence": 1
  },
+ "19148001001118": {
+  "winery": "megan-anne",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "nysa-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19148001001128": {
+  "winery": "megan-anne",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "justice-vineyard",
+  "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "19148001001229": {
+  "winery": "megan-anne",
+  "priority": 1,
+  "confidence": 0.52,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
+ "19148001001236": {
+  "winery": "megan-anne",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "nysa-vineyard",
+  "vintage": 2014,
+  "vintageConfidence": 1
+ },
  "19150001000975": {
   "winery": "soter-vineyards",
   "priority": 1,
@@ -15856,6 +16729,15 @@
   "confidence": 1,
   "readBy": "jev",
   "vineyard": "freedom-hill-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19163001000360": {
+  "winery": "siduri",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zena-crown-vineyard",
   "vintage": 2018,
   "vintageConfidence": 1
  },
@@ -16363,6 +17245,24 @@
   "vintage": 2017,
   "vintageConfidence": 1
  },
+ "19249001000992": {
+  "winery": "daedalus",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "seven-hills-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19252001000361": {
+  "winery": "patton-valley",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "johan-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
  "19255001000683": {
   "winery": "cristom-vineyards",
   "priority": 2,
@@ -16667,6 +17567,15 @@
   "confidence": 0.72,
   "readBy": "jev",
   "needsName": "",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
+ "19357001000425": {
+  "winery": "portlandia",
+  "priority": 1,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vineyard": "momtazi-vineyard",
   "vintage": 2018,
   "vintageConfidence": 1
  },
@@ -16987,6 +17896,15 @@
   "vintage": 2016,
   "vintageConfidence": 1
  },
+ "20036001000872": {
+  "winery": "patton-valley",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "johan-vineyard",
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
  "20036001001120": {
   "winery": "kelley-fox-wines",
   "priority": 1,
@@ -17282,6 +18200,33 @@
   "readBy": "jev",
   "vineyard": null,
   "vintage": 2017,
+  "vintageConfidence": 1
+ },
+ "20122001000648": {
+  "winery": "trathen-hall",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hyland-vineyard",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "20127001000559": {
+  "winery": "kudos",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hyland-vineyard",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "20128001000495": {
+  "winery": "david-hill",
+  "priority": 1,
+  "confidence": 0.41,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2019,
   "vintageConfidence": 1
  },
  "20129001000677": {
@@ -17618,6 +18563,15 @@
   "vintage": 2019,
   "vintageConfidence": 1
  },
+ "20199001000581": {
+  "winery": "luminous-hills",
+  "priority": 1,
+  "confidence": 0.95,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
  "20199001000785": {
   "winery": "willamette-valley-vineyards",
   "priority": 2,
@@ -17742,6 +18696,15 @@
   "readBy": "jev",
   "vineyard": null,
   "vintage": 2016,
+  "vintageConfidence": 1
+ },
+ "20228001000023": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.79,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2019,
   "vintageConfidence": 1
  },
  "20237001000724": {
@@ -18104,6 +19067,15 @@
   "vintage": 2019,
   "vintageConfidence": 1
  },
+ "20337001000519": {
+  "winery": "kudos",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hyland-vineyard",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
  "20340001000036": {
   "winery": "gemini-vineyards",
   "priority": 2,
@@ -18428,6 +19400,15 @@
   "vintage": 2018,
   "vintageConfidence": 1
  },
+ "21027001000978": {
+  "winery": "coelho",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
  "21028001000164": {
   "winery": "apolloni-vineyards",
   "priority": 2,
@@ -18617,6 +19598,15 @@
   "vintage": 2020,
   "vintageConfidence": 1
  },
+ "21065001000188": {
+  "winery": "noble-estate",
+  "priority": 1,
+  "confidence": 0.97,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2018,
+  "vintageConfidence": 1
+ },
  "21068001001052": {
   "winery": "illahe-vineyards",
   "priority": 1,
@@ -18695,6 +19685,15 @@
   "confidence": 0.97,
   "readBy": "jev",
   "needsName": "",
+  "vintage": 2019,
+  "vintageConfidence": 1
+ },
+ "21074001000760": {
+  "winery": "david-hill",
+  "priority": 1,
+  "confidence": 0.85,
+  "readBy": "jev",
+  "vineyard": "david-hill-vineyard",
   "vintage": 2019,
   "vintageConfidence": 1
  },
@@ -18805,6 +19804,15 @@
   "vineyard": null,
   "vintage": 2021,
   "vintageConfidence": 0.57
+ },
+ "21103001000556": {
+  "winery": "siduri",
+  "priority": 1,
+  "confidence": 0.97,
+  "readBy": "jev",
+  "vineyard": "bramble-hill-vineyard",
+  "vintage": 2019,
+  "vintageConfidence": 1
  },
  "21103001000830": {
   "winery": "rain-dance-vineyards",
@@ -18977,6 +19985,33 @@
   "vintage": 2019,
   "vintageConfidence": 1
  },
+ "21154001000996": {
+  "winery": "david-hill",
+  "priority": 1,
+  "confidence": 0.94,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2020,
+  "vintageConfidence": 1
+ },
+ "21154001001009": {
+  "winery": "david-hill",
+  "priority": 1,
+  "confidence": 0.67,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2020,
+  "vintageConfidence": 1
+ },
+ "21154001001026": {
+  "winery": "david-hill",
+  "priority": 1,
+  "confidence": 0.3,
+  "readBy": "jev",
+  "vineyard": null,
+  "vintage": 2020,
+  "vintageConfidence": 1
+ },
  "21165001000667": {
   "winery": "haakon-lenai",
   "priority": 1,
@@ -19082,6 +20117,15 @@
   "confidence": 0.8,
   "readBy": "jev",
   "needsName": "",
+  "vintage": 2020,
+  "vintageConfidence": 1
+ },
+ "21194001000409": {
+  "winery": "luminous-hills",
+  "priority": 1,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vineyard": null,
   "vintage": 2020,
   "vintageConfidence": 1
  },
@@ -19830,6 +20874,24 @@
   "readBy": "jev",
   "vineyard": "saffron-fields-vineyard",
   "vintage": 2020,
+  "vintageConfidence": 1
+ },
+ "22042001000446": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.28,
+  "readBy": "jev",
+  "vineyard": "nicholas-vineyard",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "22042001000451": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.34,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2021,
   "vintageConfidence": 1
  },
  "22042001000828": {
@@ -20581,6 +21643,24 @@
   "vintage": 2021,
   "vintageConfidence": 1
  },
+ "22207001000659": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.55,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "22207001000672": {
+  "winery": "anam-cara",
+  "priority": 1,
+  "confidence": 0.59,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
  "22212001000120": {
   "winery": "roots-wine-co",
   "priority": 1,
@@ -21022,6 +22102,24 @@
   "vintage": 2021,
   "vintageConfidence": 0.99
  },
+ "22256001000556": {
+  "winery": "trathen-hall",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hyland-vineyard",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "22256001000578": {
+  "winery": "trathen-hall",
+  "priority": 1,
+  "confidence": 0.76,
+  "readBy": "jev",
+  "vineyard": "ridgecrest-vineyards",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
  "22277001000759": {
   "winery": "white-rose-estate",
   "priority": 1,
@@ -21183,6 +22281,15 @@
   "confidence": 1,
   "readBy": "jev",
   "vineyard": "durant-vineyard",
+  "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "22318001000758": {
+  "winery": "portlandia",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hyland-vineyard",
   "vintage": 2021,
   "vintageConfidence": 1
  },
@@ -21472,6 +22579,15 @@
   "readBy": "jev",
   "vineyard": "hope-well-vineyard",
   "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "22364001000158": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2022,
   "vintageConfidence": 1
  },
  "23005001000584": {
@@ -21805,6 +22921,15 @@
   "readBy": "jev",
   "needsName": "",
   "vintage": 2021,
+  "vintageConfidence": 1
+ },
+ "23030001000720": {
+  "winery": "david-hill",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "david-hill-vineyard",
+  "vintage": 2019,
   "vintageConfidence": 1
  },
  "23030001000863": {
@@ -22725,6 +23850,15 @@
   "confidence": 0.85,
   "readBy": "jev",
   "needsName": "",
+  "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "23159001000156": {
+  "winery": "siduri",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zena-crown-vineyard",
   "vintage": 2022,
   "vintageConfidence": 1
  },
@@ -24301,6 +25435,51 @@
   "vintage": 2022,
   "vintageConfidence": 1
  },
+ "24068001000340": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.97,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2023,
+  "vintageConfidence": 1
+ },
+ "24068001000349": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.92,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2023,
+  "vintageConfidence": 1
+ },
+ "24068001000363": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2023,
+  "vintageConfidence": 1
+ },
+ "24068001000376": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2023,
+  "vintageConfidence": 1
+ },
+ "24068001000383": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2023,
+  "vintageConfidence": 1
+ },
  "24075001000854": {
   "winery": "archery-summit",
   "priority": 1,
@@ -24583,6 +25762,15 @@
   "newVineyard": "Spirit Hill Vineyard",
   "nameReadBy": "claude"
  },
+ "24136001000918": {
+  "winery": "siduri",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zena-crown-vineyard",
+  "vintage": 2023,
+  "vintageConfidence": 1
+ },
  "24143001000900": {
   "winery": "sokol-blosser-winery",
   "priority": 1,
@@ -24824,6 +26012,24 @@
   "readBy": "jev",
   "vineyard": null,
   "vintage": 2024,
+  "vintageConfidence": 1
+ },
+ "24206001000250": {
+  "winery": "patton-valley",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "johan-vineyard",
+  "vintage": 2023,
+  "vintageConfidence": 1
+ },
+ "24206001000254": {
+  "winery": "patton-valley",
+  "priority": 1,
+  "confidence": 0.94,
+  "readBy": "jev",
+  "vineyard": "patton-valley-vineyard",
+  "vintage": 2023,
   "vintageConfidence": 1
  },
  "24208001000660": {
@@ -25875,6 +27081,24 @@
   "vintage": 2024,
   "vintageConfidence": 1
  },
+ "25182001000246": {
+  "winery": "patton-valley",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2024,
+  "vintageConfidence": 1
+ },
+ "25182001000256": {
+  "winery": "patton-valley",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "needsName": "",
+  "vintage": 2024,
+  "vintageConfidence": 1
+ },
  "25183001000389": {
   "winery": "duck-pond-cellars",
   "priority": 2,
@@ -25909,6 +27133,15 @@
   "readBy": "jev",
   "vineyard": "zena-crown-vineyard",
   "vintage": 2023,
+  "vintageConfidence": 1
+ },
+ "25191001000780": {
+  "winery": "scott-paul",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hyland-vineyard",
+  "vintage": 2024,
   "vintageConfidence": 1
  },
  "25192001000371": {
@@ -26043,6 +27276,15 @@
   "confidence": 0.95,
   "readBy": "jev",
   "vineyard": null,
+  "vintage": 2024,
+  "vintageConfidence": 1
+ },
+ "25218001000793": {
+  "winery": "kudos",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hyland-vineyard",
   "vintage": 2024,
   "vintageConfidence": 1
  },
@@ -26554,6 +27796,15 @@
   "vintage": 2025,
   "vintageConfidence": 1
  },
+ "26028001000474": {
+  "winery": "kudos",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "hyland-vineyard",
+  "vintage": 2024,
+  "vintageConfidence": 1
+ },
  "26028001000716": {
   "winery": "left-coast-estate",
   "priority": 1,
@@ -26825,6 +28076,15 @@
   "vintage": 2022,
   "vintageConfidence": 1
  },
+ "26099001000504": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 1,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2024,
+  "vintageConfidence": 1
+ },
  "26100001000156": {
   "winery": "stoller-family-estate",
   "priority": 2,
@@ -26914,6 +28174,15 @@
   "readBy": "jev",
   "vineyard": "knudsen-vineyards",
   "vintage": 2022,
+  "vintageConfidence": 1
+ },
+ "26118001000401": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.91,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2025,
   "vintageConfidence": 1
  },
  "26120001000834": {
@@ -27375,6 +28644,51 @@
   "vintage": 2024,
   "vintageConfidence": 1
  },
+ "26203001000732": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.94,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2024,
+  "vintageConfidence": 1
+ },
+ "26203001000736": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2025,
+  "vintageConfidence": 1
+ },
+ "26203001000740": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.95,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2025,
+  "vintageConfidence": 1
+ },
+ "26203001000744": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.98,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2025,
+  "vintageConfidence": 1
+ },
+ "26203001000747": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.94,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2025,
+  "vintageConfidence": 1
+ },
  "26204001000401": {
   "winery": "olive-hamilton-russell-wine",
   "priority": 1,
@@ -27553,6 +28867,15 @@
   "readBy": "jev",
   "needsName": "",
   "vintage": 2025,
+  "vintageConfidence": 1
+ },
+ "26257001000454": {
+  "winery": "zenith",
+  "priority": 1,
+  "confidence": 0.91,
+  "readBy": "jev",
+  "vineyard": "zenith-vineyard",
+  "vintage": 2024,
   "vintageConfidence": 1
  },
  "26259001000137": {
