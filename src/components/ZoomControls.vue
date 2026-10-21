@@ -15,8 +15,8 @@ defineEmits<{ zoom: [factor: number]; fit: [] }>()
     <Tip label="Zoom out">
       <button type="button" class="zoom__out" aria-label="Zoom out" @click="$emit('zoom', 1 / 1.3)"><span aria-hidden="true">−</span></button>
     </Tip>
-    <button type="button" class="zoom__fit" aria-describedby="fit-description" @click="$emit('fit')">Fit</button>
-    <span id="fit-description" class="visually-hidden">Fit the whole graph in view</span>
+    <button type="button" class="zoom__fit" aria-describedby="fit-description" aria-keyshortcuts="F" @click="$emit('fit')">Fit</button>
+    <span id="fit-description" class="visually-hidden">Fit the whole graph in view (F)</span>
   </div>
 </template>
 

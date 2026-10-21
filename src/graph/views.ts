@@ -72,6 +72,7 @@ export const VIEWS: GuideView[] = [
     title: 'Who started what',
     blurb: 'Founders, owners and buyers: ownership connections only.',
     categories: only(KINDS, ['ownership']),
+    focus: { kind: 'linked', categories: ['ownership'], label: 'People and places with ownership links' },
   },
   {
     id: 'family-and-mentors',
@@ -79,6 +80,7 @@ export const VIEWS: GuideView[] = [
     blurb: 'People only, joined by family and by who taught whom.',
     nodeTypes: only(TYPES, ['person']),
     categories: only(KINDS, ['people']),
+    focus: { kind: 'linked', categories: ['people'], label: 'People with family or mentor links' },
   },
   {
     id: 'following-the-fruit',

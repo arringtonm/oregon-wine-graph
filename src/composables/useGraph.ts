@@ -2,6 +2,7 @@ import { computed, reactive, watch } from 'vue'
 import { loadGraph } from '../data'
 import { coreWithSelection, twoCore } from '../graph/core'
 import { cardParts, connectionLabel, formatYears, HIDDEN_TYPES, SINGULAR_TYPE } from '../graph/format'
+import { regionMembers, regions } from '../graph/regions'
 import { foldText } from '../graph/textMatch'
 import { focusRecords, viewById, VIEWS, type GuideView } from '../graph/views'
 import { TOUR_STEPS } from '../tour/steps'
@@ -366,38 +367,27 @@ function withSubAvas(ids: Iterable<string>): Set<string> {
   return scope
 }
 
-// The AVAs a winery or vineyard belongs to. A vineyard has the AVA it is located in; a
-// winery has those it draws fruit from directly, plus those of every vineyard it owns or
-// buys from. Most specific AVAs only; their parents follow from "within".
-function avasOf(id: string): string[] {
-  const node = nodeById.value.get(id)
-  if (!node) return []
-  const own = (nodeId: string, type: string) =>
-    edges.value.filter((edge) => edge.source === nodeId && edge.type === type).map((edge) => edge.target)
-  if (node.type === 'vineyard') return own(id, 'located_in')
-  if (node.type !== 'winery') return []
-  const vineyards = edges.value
-    .filter(
-      (edge) => edge.source === id && (edge.type === 'owns' || edge.type === 'sources_from') && nodeById.value.get(edge.target)?.type === 'vineyard',
-    )
-    .map((edge) => edge.target)
-  return [...new Set([...own(id, 'draws_from'), ...vineyards.flatMap((vineyard) => own(vineyard, 'located_in'))])]
-}
+// Where wineries and vineyards are, by AVA (graph/regions.ts)
+const regionIndex = computed(() => regions(state.graph ?? { nodes: [], edges: [] }))
+const avasOf = (id: string) => regionIndex.value.avasOf(id)
+const membersOf = (scope: Set<string>) => regionMembers(state.graph ?? { nodes: [], edges: [] }, scope, regionIndex.value)
 
-// Nodes kept by the AVA filter: the chosen AVAs and their sub-AVAs, the vineyards in
-// them, the wineries drawing fruit from them, and anything directly connected to those
+// Nodes kept by the AVA filter: the chosen AVAs and their sub-AVAs, the wineries and
+// vineyards in them (graph/regions.ts), and the people and organizations directly connected
+// to those. Wineries and vineyards elsewhere stay out, even those buying the region's fruit:
+// they crowded out the region itself, and its vineyards' panels still list them
 const avaScope = computed(() => {
   if (state.avas.length === 0) return null
   const scope = withSubAvas(state.avas)
-  const members = new Set(
-    nodes.value
-      .filter((node) => (node.type === 'winery' || node.type === 'vineyard') && avasOf(node.id).some((ava) => scope.has(ava)))
-      .map((node) => node.id),
-  )
+  const members = membersOf(scope)
+  const context = (id: string) => {
+    const type = nodeById.value.get(id)?.type
+    if (type !== 'winery' && type !== 'vineyard') scope.add(id)
+  }
   for (const edge of edges.value) {
     if (EDGE_RULES[edge.type].category === 'geography') continue
-    if (members.has(edge.source)) scope.add(edge.target)
-    if (members.has(edge.target)) scope.add(edge.source)
+    if (members.has(edge.source)) context(edge.target)
+    if (members.has(edge.target)) context(edge.source)
   }
   for (const id of members) scope.add(id)
   return scope
@@ -602,19 +592,15 @@ function showAddress(node: GraphNode | undefined) {
 // made from a list or a link rather than on the canvas.
 // A random node among those showing, skipping anything already visited this session; once
 // everything showing has been visited, any but the current one. Null when nothing qualifies
-// The records that belong to the chosen AVAs, for Random. The AVA filter also shows
-// everything one connection from the region's wineries and vineyards, as context; Random
+// The records that belong to the chosen AVAs, for Random. The AVA filter also shows the
+// people and organizations one connection from the region's wineries and vineyards; Random
 // keeps to the region itself: its wineries and vineyards, and the people and organizations
 // tied to one wholly inside it, or to two or more of them. Someone linked only through a
 // company with vineyards in several regions stays context
 const regionCore = computed(() => {
   if (state.avas.length === 0) return null
   const scope = withSubAvas(state.avas)
-  const members = new Set(
-    nodes.value
-      .filter((node) => (node.type === 'winery' || node.type === 'vineyard') && avasOf(node.id).some((ava) => scope.has(ava)))
-      .map((node) => node.id),
-  )
+  const members = membersOf(scope)
   const local = new Set([...members].filter((id) => avasOf(id).every((ava) => scope.has(ava))))
   const core = new Set(members)
   const ties = new Map<string, number>()
@@ -625,16 +611,15 @@ const regionCore = computed(() => {
       [edge.target, edge.source],
     ]) {
       if (!members.has(member) || members.has(other)) continue
+      // A winery or vineyard belongs only by where it is, however many members it deals with
+      const type = nodeById.value.get(other)?.type
+      if (type === 'winery' || type === 'vineyard') continue
       if (local.has(member)) core.add(other)
       ties.set(other, (ties.get(other) ?? 0) + 1)
     }
   }
-  // Someone tied to two members (a winemaker at two of its wineries) belongs to the region; a
-  // winery or vineyard belongs only by its own AVAs, however many members buy from it
-  for (const [id, count] of ties) {
-    const type = nodeById.value.get(id)?.type
-    if (count >= 2 && type !== 'winery' && type !== 'vineyard') core.add(id)
-  }
+  // Someone tied to two members (a winemaker at two of its wineries) belongs to the region
+  for (const [id, count] of ties) if (count >= 2) core.add(id)
   return core
 })
 

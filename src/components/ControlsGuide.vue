@@ -98,7 +98,7 @@ const sections = computed<Section[]>(() =>
           rows: [
             { action: 'Pan', ways: ['Two-finger scroll', 'Scroll wheel', 'Drag empty area'] },
             { action: 'Zoom', ways: ['Pinch', `${modifier} + Scroll`, '+ / − keys', '+ / − buttons'] },
-            { action: 'Fit the whole graph', ways: ['Fit button'] },
+            { action: 'Fit the whole graph', ways: ['Fit button', 'F key'] },
             { action: 'Move a node', ways: ['Drag node'] },
           ],
         },
@@ -117,7 +117,6 @@ const sections = computed<Section[]>(() =>
           rows: [
             { action: 'Open a person or place', ways: ['Click node', 'Click a name'] },
             { action: 'Show everyone, not just the best-connected', ways: ['Show all records, in Filters'] },
-            { action: 'Read a connection', ways: ['Hover line'] },
             { action: 'Preview a linked record', ways: ['Hover its name'] },
             { action: 'See how its facts were checked', ways: ['Verified, at its foot'] },
             { action: 'Report a mistake', ways: ['Flag, at its foot'] },

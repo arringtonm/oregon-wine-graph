@@ -64,6 +64,15 @@ describe('random node', () => {
 })
 
 describe('guided views', () => {
+  it('keep a regional guide to wineries and vineyards in the region', () => {
+    applyView('southern-oregon')
+    const shown = new Set(visibleNodes.value.map((node) => node.id))
+    for (const id of ['abacela', 'doerner-winery', 'quail-run-vineyards']) expect(shown.has(id), id).toBe(true)
+    // Willamette houses that buy Rogue Valley fruit, and their vineyards
+    for (const id of ['king-estate', 'argyle-winery', 'erath-winery', 'tualatin-vineyards']) expect(shown.has(id), id).toBe(false)
+    resetFilters()
+  })
+
   it('set their filters, and end when a filter changes', () => {
     applyView('sparkling')
     expect(activeView.value?.id).toBe('sparkling')

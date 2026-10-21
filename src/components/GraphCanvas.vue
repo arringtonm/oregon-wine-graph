@@ -450,8 +450,9 @@ function zoomBy(factor: number) {
   })
 }
 
-// Keys: + and − do what the zoom buttons do, and R rolls the dice (Ctrl+R would reload the
-// page). Ignored while typing, and with ⌘, Ctrl or Alt held, which the browser uses
+// Keys: + and − do what the zoom buttons do, F what Fit does, and R rolls the dice (Ctrl+R
+// would reload the page). Ignored while typing, and with ⌘, Ctrl or Alt held, which the
+// browser uses
 function onKey(event: KeyboardEvent) {
   if (event.metaKey || event.ctrlKey || event.altKey || event.defaultPrevented) return
   if ((event.target as HTMLElement | null)?.closest?.('input, textarea, select, [contenteditable="true"]')) return
@@ -461,6 +462,11 @@ function onKey(event: KeyboardEvent) {
     return
   }
   if (state.listView) return
+  if (event.key === 'f' || event.key === 'F') {
+    event.preventDefault()
+    fitAnimated()
+    return
+  }
   const factor = event.key === '+' || event.key === '=' ? 1.3 : event.key === '-' || event.key === '_' ? 1 / 1.3 : 0
   if (!factor) return
   event.preventDefault()
