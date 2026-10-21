@@ -233,16 +233,20 @@ function buildStyle(): StylesheetJson {
       selector: 'edge',
       style: {
         // With nearly two thousand lines, full-strength edges bury the nodes; they recede
-        // until a node is selected or a line is hovered
+        // until a node is selected
         width: 1,
         'line-opacity': 0.8,
         'line-color': token('--edge'),
         'target-arrow-color': token('--edge'),
         // At rest, the cheapest lines Cytoscape draws: straight, no arrowheads. Lines are
         // most of each frame's cost; this cut it by about a quarter. A selected node's lines
-        // (and a hovered one) curve apart, point their way and carry labels, below
+        // curve apart, point their way and carry labels, below
         'curve-style': 'haystack',
         'haystack-radius': 0,
+        // Lines can't be clicked, so they don't react to the pointer either: hovering one lit
+        // it up like a selection, which distracted more than it told. A tap on a line is a
+        // tap on the background, and a node under a line is easier to reach
+        events: 'no',
         'target-arrow-shape': 'none',
         'arrow-scale': 0.6,
         'font-size': 9,
@@ -291,7 +295,7 @@ function buildStyle(): StylesheetJson {
       style: { 'underlay-color': token('--accent'), 'underlay-opacity': 0.5, 'underlay-padding': 12, 'underlay-shape': 'ellipse' },
     },
     {
-      selector: 'edge.highlighted, edge.hovered',
+      selector: 'edge.highlighted',
       style: {
         label: 'data(label)',
         width: 3.5,
@@ -944,12 +948,19 @@ onMounted(() => {
     tooltip.x = position.x
     tooltip.y = position.y - event.target.renderedHeight() / 2 - 8
     tooltip.show = true
+    // A node opens when clicked, so the pointer says so
+    container.value!.style.cursor = 'pointer'
   })
-  cy.on('mouseout', 'node', () => (tooltip.show = false))
-  cy.on('viewport', () => (tooltip.show = false))
+  cy.on('mouseout', 'node', () => {
+    tooltip.show = false
+    container.value!.style.cursor = ''
+  })
+  // The view moving can take a node out from under the pointer without a mouseout
+  cy.on('viewport', () => {
+    tooltip.show = false
+    container.value!.style.cursor = ''
+  })
   cy.on('viewport', scheduleLabels)
-  cy.on('mouseover', 'edge', (event) => event.target.addClass('hovered'))
-  cy.on('mouseout', 'edge', (event) => event.target.removeClass('hovered'))
 
   // Capture phase, so this runs instead of Cytoscape's own wheel-to-zoom handler
   container.value!.addEventListener('wheel', onWheel, { capture: true, passive: false })
