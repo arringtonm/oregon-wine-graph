@@ -31,6 +31,7 @@ import SearchBox from './SearchBox.vue'
 import Tip from './Tip.vue'
 import ZoomControls from './ZoomControls.vue'
 import AboutButton from './AboutButton.vue'
+import CoreCount from './CoreCount.vue'
 
 // The map view (GeoMap.vue, with Mapbox) is its own download, fetched when the reader points
 // at or focuses the Map switch, so it's usually ready by the time they choose it. Offered only
@@ -95,13 +96,14 @@ watch(
 )
 
 // The graph corner's count, in readers' words: "841 of 1,417 people and places · 1,806
-// connections" while the connected core leaves some out, otherwise "1,417 people and places · …"
+// connections" while the connected core leaves some out (its "841 of 1,417" a button saying
+// why), otherwise "1,417 people and places · …"
+const partial = computed(() => filteredCount.value > visibleNodes.value.length)
 const shownCount = computed(() => {
   const records = visibleNodes.value.length
   const links = visibleEdges.value.length
-  const of = filteredCount.value > records ? ` of ${filteredCount.value.toLocaleString('en-US')}` : ''
-  const noun = records === 1 && !of ? 'person or place' : 'people and places'
-  return `${records.toLocaleString('en-US')}${of} ${noun} · ${links.toLocaleString('en-US')} ${links === 1 ? 'connection' : 'connections'}`
+  const noun = records === 1 && !partial.value ? 'person or place' : 'people and places'
+  return `${partial.value ? '' : `${records.toLocaleString('en-US')} `}${noun} · ${links.toLocaleString('en-US')} ${links === 1 ? 'connection' : 'connections'}`
 })
 
 // Rolls to a random node not yet visited, after a short pause behind the busy overlay (as
@@ -1177,7 +1179,8 @@ watch(
     <!-- What the filters leave showing, in the graph's corner; the list view has its own count -->
     <!-- On phones the Guides button has no room for the guide showing, so it leads the count -->
     <p v-show="onGraph" class="graph-canvas__count" role="status">
-      <span v-if="activeView" class="graph-canvas__guide">{{ activeView.title }} · </span>{{ shownCount }}
+      <span v-if="activeView" class="graph-canvas__guide">{{ activeView.title }} · </span>
+      <template v-if="partial"><CoreCount :shown="visibleNodes.length" :of="filteredCount" />{{ ' ' }}</template>{{ shownCount }}
     </p>
     <!-- Who made the site, in the graph's bottom-right corner -->
     <div class="graph-canvas__about">
