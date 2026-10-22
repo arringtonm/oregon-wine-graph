@@ -2,6 +2,7 @@ import { computed, reactive, watch } from 'vue'
 import { loadGraph } from '../data'
 import { coreWithSelection, twoCore } from '../graph/core'
 import { cardParts, connectionLabel, formatYears, HIDDEN_TYPES, SINGULAR_TYPE } from '../graph/format'
+import { describeFilters } from '../graph/filterSummary'
 import { regionMembers, regions } from '../graph/regions'
 import { foldText } from '../graph/textMatch'
 import { focusRecords, viewById, VIEWS, type GuideView } from '../graph/views'
@@ -257,6 +258,9 @@ const state = reactive({
   ...defaultFilters(),
   // Whether the filter drawer is open; only matters on tablet and smaller
   filtersOpen: false,
+  // Whether the details panel is hidden; desktop only. Not remembered: every visit opens
+  // with it, and choosing a record brings it back
+  detailsHidden: false,
   // Whether the search and filters sidebar is hidden; desktop only, remembered per browser
   filtersCollapsed: readCollapsed(),
   // Admin shows the review tools (dev server only); viewer is how the published site looks
@@ -305,7 +309,7 @@ const state = reactive({
 })
 
 // 'zoom' is the tour's "Getting around": zoom and Fit, with Back, Forward, History and Reset
-export type Hint = 'node' | 'search' | 'guides' | 'filters' | 'graph' | 'map' | 'list' | 'random' | 'reset' | 'controls' | 'zoom'
+export type Hint = 'node' | 'search' | 'guides' | 'filters' | 'graph' | 'map' | 'list' | 'views' | 'random' | 'reset' | 'controls' | 'zoom'
 
 const APP_TITLE = 'Oregon Wine Graph'
 
@@ -473,6 +477,17 @@ const visibleEdges = computed(() => {
 // How many records the filters let through, for "840 of 1,417" and the Show all switch
 const filteredCount = computed(() => filteredNodes.value.length)
 
+// Every record the opening filters let through (before the connected core): "207 of 1,422"
+const totalRecords = computed(() => defaultGraph.value.ids.length)
+
+// The filters that differ from the opening ones, in readers' words (graph/filterSummary.ts)
+const activeFilters = computed(() =>
+  describeFilters(state, {
+    ava: (id) => nodeById.value.get(id)?.name ?? id,
+    focus: (id) => viewById(id)?.focus?.label,
+  }),
+)
+
 // The most specific AVA each vineyard or AVA sits in, from "located in" and "within"
 // connections. Used to draw AVA regions around their members. Wineries are left out: a
 // winery can source from vineyards in several AVAs, and its tasting room can be anywhere,
@@ -565,6 +580,8 @@ function search(query: string): GraphNode[] {
 function showSelection(id: string | null) {
   const changed = state.selectedId !== id
   state.selectedId = id
+  // A record chosen, even the one already open, shows the panel again
+  if (id) state.detailsHidden = false
   const node = id ? nodeById.value.get(id) : undefined
   document.title = node ? `${node.name} · ${APP_TITLE}` : APP_TITLE
   if (changed && node) rememberRecent(node.id)
@@ -972,6 +989,8 @@ export function useGraph() {
     visibleEdges,
     filteredNodes,
     filteredCount,
+    totalRecords,
+    activeFilters,
     coreApplies,
     selectedNode,
     connectionsOf,

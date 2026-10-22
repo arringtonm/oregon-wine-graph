@@ -77,12 +77,17 @@ onBeforeUnmount(() => {
         </div>
       </header>
       <pre v-if="state.error" class="app__error" role="alert">{{ state.error }}</pre>
-      <main v-else-if="state.graph" class="app__main" :class="{ 'app__main--collapsed': state.filtersCollapsed }">
+      <main
+        v-else-if="state.graph"
+        class="app__main"
+        :class="{ 'app__main--collapsed': state.filtersCollapsed, 'app__main--details-hidden': state.detailsHidden }"
+      >
         <GraphControls />
         <!-- Dims the graph beside the open drawer; a tap on it closes the drawer -->
         <div v-if="drawerModal" class="app__scrim" aria-hidden="true" @click="state.filtersOpen = false"></div>
         <GraphCanvas :inert="drawerModal" />
-        <DetailPanel :inert="drawerModal" />
+        <!-- Also inert while hidden on desktop, out of the tab order (its toolbar button) -->
+        <DetailPanel :inert="drawerModal || (!compact && state.detailsHidden)" />
       </main>
       <div class="visually-hidden" aria-live="polite" aria-atomic="true">{{ state.announcement }}</div>
     </div>
@@ -201,10 +206,11 @@ onBeforeUnmount(() => {
   --inset-top: var(--header-h);
   --sidebar-width: 17rem;
   --inset-left: var(--sidebar-width);
-  --inset-right: 23rem;
+  --details-width: 23rem;
+  --inset-right: var(--details-width);
   position: relative;
   display: grid;
-  grid-template-columns: var(--sidebar-width) minmax(0, 1fr) var(--inset-right);
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr) var(--details-width);
   min-height: 0;
 }
 
@@ -232,6 +238,11 @@ onBeforeUnmount(() => {
   /* With the sidebar hidden, the toolbar and the visible area reach the left edge */
   .app__main--collapsed {
     --inset-left: 0px;
+  }
+
+  /* And with the details panel hidden, the right edge */
+  .app__main--details-hidden {
+    --inset-right: 0px;
   }
 
   .app__main > .detail {

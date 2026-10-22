@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { Click, modifier, touchOnly } from '../services/device'
 import { TOUR_STEPS } from '../tour/steps'
 import { nodeYears, reviewing, SINGULAR_TYPE, useGraph, type Connection, type Hint } from '../composables/useGraph'
@@ -246,12 +246,28 @@ const facts = computed(() =>
 // Every fact on the card, for its verification note and its flag
 const cardFacts = computed(() => (selectedNode.value ? factsOf(selectedNode.value, groups.value) : []))
 
+// Hidden on desktop by the toolbar's panel button (App.vue also makes it inert then). On
+// smaller screens the panel is a sheet that shows only with a record, so the button isn't there
+const desktopQuery = window.matchMedia('(min-width: 1025px)')
+const desktop = ref(desktopQuery.matches)
+const onDesktopChange = () => (desktop.value = desktopQuery.matches)
+onMounted(() => desktopQuery.addEventListener('change', onDesktopChange))
+onBeforeUnmount(() => desktopQuery.removeEventListener('change', onDesktopChange))
+const hiddenOnDesktop = computed(() => desktop.value && state.detailsHidden)
+
 // Flagging needs somewhere to send flags: Firestore, or the dev server's local file
 const canFlag = flagsAvailable()
 </script>
 
 <template>
-  <section id="details" ref="panel" class="detail" :class="{ 'detail--empty': !selectedNode }" aria-label="Details" tabindex="-1">
+  <section
+    id="details"
+    ref="panel"
+    class="detail"
+    :class="{ 'detail--empty': !selectedNode, 'detail--hidden': hiddenOnDesktop }"
+    aria-label="Details"
+    tabindex="-1"
+  >
     <div v-if="reviewing" class="detail__review">
       <p>
         <strong>Review</strong>
@@ -471,18 +487,18 @@ const canFlag = flagsAvailable()
           “Show all records” adds the rest.
         </li>
         <li>
-          <button type="button" class="detail__ways-action" v-bind="pointsTo('list')" @click="showView('list')">
-            List view
-          </button>
-          shows everything by name, for reading rather than roaming;
           <button type="button" class="detail__ways-action" v-bind="pointsTo('graph')" @click="showView('graph')">
             Graph view
           </button>
-          brings back the web of connections.
-        </li>
-        <li v-if="mapAvailable">
-          <button type="button" class="detail__ways-action" v-bind="pointsTo('map')" @click="showView('map')">Map view</button>
-          places wineries on a map of the hills, with the AVAs outlined.
+          shows the web of connections;
+          <template v-if="mapAvailable">
+            <button type="button" class="detail__ways-action" v-bind="pointsTo('map')" @click="showView('map')">Map view</button>
+            places wineries on a map of the hills, with the AVAs outlined;
+          </template>
+          <button type="button" class="detail__ways-action" v-bind="pointsTo('list')" @click="showView('list')">
+            List view
+          </button>
+          shows everything by name, for reading rather than roaming.
         </li>
         <li>
           <button type="button" class="detail__ways-action" v-bind="pointsTo('random')" @click="state.randomRequest++">
@@ -531,6 +547,31 @@ const canFlag = flagsAvailable()
   background: var(--frost);
   -webkit-backdrop-filter: var(--frost-blur);
   backdrop-filter: var(--frost-blur);
+}
+
+/* Desktop, hidden: slides out to the right, then leaves the accessibility tree, as the
+   filters sidebar does to the left */
+@media (min-width: 1025px) {
+  .detail {
+    transition:
+      transform 0.22s ease,
+      visibility 0s linear 0s;
+  }
+
+  .detail--hidden {
+    transform: translateX(100%);
+    visibility: hidden;
+    transition:
+      transform 0.22s ease,
+      visibility 0s linear 0.22s;
+  }
+}
+
+@media (min-width: 1025px) and (prefers-reduced-motion: reduce) {
+  .detail,
+  .detail--hidden {
+    transition: none;
+  }
 }
 
 /* Tablet and smaller: a sheet over the bottom of the graph, only when a node is selected */

@@ -1,6 +1,9 @@
 import type { Hint } from '../composables/useGraph'
 import { Click, click, modifier, touchOnly } from '../services/device'
 
+// The map view is offered only where the build has a Mapbox token (GraphCanvas.vue)
+const mapAvailable = !!import.meta.env.VITE_MAPBOX_TOKEN
+
 // Words for the device in hand: a line can differ for touch screens and for a mouse and
 // keyboard, and {click} / {Click} read "tap" / "Tap" on a touch screen, {mod} ⌘ or Ctrl
 export type Line = string | { touch: string; mouse: string }
@@ -23,6 +26,8 @@ export interface TourStep {
   hint: Hint | null
   // What the spotlight shows: CSS selectors, each lit where it's showing
   target: string[]
+  // Lit as well, but using it isn't the step's "Try it"
+  alsoLit?: string[]
   // What to try, with the real control: done on a click in any of the target's selectors,
   // on one of `keys`, or, with `select`, on opening a record
   // on opening a record, or, with `another`, on moving from the record open to another (the
@@ -46,6 +51,7 @@ export const TOUR_STEPS: TourStep[] = [
     body: [
       'Opening one shows who and what it connects to, grouped by kind, with roles and years in brackets. {Click} any name there to move on to that record, and keep exploring from one connection to the next.',
       "Every fact cites its sources, or notes it's unverified. The {flag} lets you report a mistake.",
+      'Links under Oral history and Sources, and in the verification note, lead to other sites, like the Oregon Wine History Archive. They open in a new tab, so your place here stays put.',
     ],
     hint: null,
     target: ['#details'],
@@ -123,14 +129,18 @@ export const TOUR_STEPS: TourStep[] = [
     tryIt: { text: { touch: 'Try it: tap the dice.', mouse: 'Try it: click the dice, or press [R].' }, keys: ['r', 'R'] },
   },
   {
-    title: 'List view',
+    title: 'Graph, map or list',
     body: [
-      'Rather read than roam? This switch flips between the graph and a list of everything by name, where you can jump between people, wineries and vineyards, or sort by most connected.',
+      mapAvailable
+        ? 'This switch changes how you see it all: the graph of connections, a map that places wineries on the hills with the AVAs outlined, or a list of everything by name, where you can jump between people, wineries and vineyards, or sort by most connected.'
+        : 'Rather read than roam? This switch flips between the graph and a list of everything by name, where you can jump between people, wineries and vineyards, or sort by most connected.',
       'You may have noticed that the controls change slightly between views.',
     ],
-    hint: 'list',
+    hint: 'views',
     target: ['.graph-canvas__view'],
-    tryIt: { text: 'Try it: switch to the list, then back to the graph.' },
+    // And the view itself, whichever is showing, so the switch's effect is plain to see
+    alsoLit: ['.graph-canvas__stage', '.geo-map', '.graph-canvas__list'],
+    tryIt: { text: mapAvailable ? 'Try it: switch to the map or the list, then back to the graph.' : 'Try it: switch to the list, then back to the graph.' },
   },
   {
     title: 'Help',

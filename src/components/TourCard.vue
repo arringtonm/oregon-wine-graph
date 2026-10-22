@@ -13,7 +13,7 @@ const props = defineProps<{
   // everything it connects to
   nodeRect: (id: string, connected?: boolean) => DOMRect | null
 }>()
-const { state, tourStep, closeTour, finishTour, nodeById, degree } = useGraph()
+const { state, tourStep, closeTour, finishTour, nodeById, degree, showView } = useGraph()
 
 const step = computed(() => (state.tour === null ? null : TOUR_STEPS[state.tour]))
 
@@ -46,15 +46,16 @@ function showing(element: HTMLElement): boolean {
   const top = document.elementFromPoint(rect.left + rect.width / 2, rect.top + rect.height / 2)
   return !top || element.contains(top) || top.contains(element) || top.closest('.tour') !== null
 }
-function targetElements(): HTMLElement[] {
-  return (step.value?.target ?? []).map((selector) => [...document.querySelectorAll<HTMLElement>(selector)].find(showing)).filter((element) => element !== undefined)
+function targetElements(selectors = step.value?.target ?? []): HTMLElement[] {
+  return selectors.map((selector) => [...document.querySelectorAll<HTMLElement>(selector)].find(showing)).filter((element) => element !== undefined)
 }
 
 // The spotlight: while a step shows, the page is dimmed around the controls it names, so
 // the eye goes there. Only a picture: clicks still reach everything, as the tour is
 // non-modal. Followed every frame, as panels slide, the graph pans and menus open
 // A soft spot fades out gradually instead of ending in a hard edge
-type Spot = { x: number; y: number; width: number; height: number; radius: number; soft?: boolean }
+// A view spot (a step's alsoLit) is lit, but the card may sit over it
+type Spot = { x: number; y: number; width: number; height: number; radius: number; soft?: boolean; view?: boolean }
 const spots = ref<Spot[]>([])
 let frame = 0
 
@@ -73,12 +74,33 @@ function spotTargets(): Spot[] {
     const y = node.top + node.height / 2 - size / 2
     return [{ x, y, width: size, height: size, radius: size / 2, soft: true }]
   }
-  return targetElements().map((element) => {
+  const controls = targetElements().map((element) => {
     const rect = element.getBoundingClientRect()
     // A little room around a control; none around a whole panel or the graph
     const pad = rect.width * rect.height > (window.innerWidth * window.innerHeight) / 8 ? 0 : 6
     return { x: rect.left - pad, y: rect.top - pad, width: rect.width + pad * 2, height: rect.height + pad * 2, radius: 10 }
   })
+  // A view, lit only where it's in the open: the graph runs on under the header and
+  // toolbar, the panels beside it and, on smaller screens, the record sheet at its foot
+  const toolbar = document.querySelector('.graph-canvas__toolbar')?.getBoundingClientRect()
+  const sheet = document.getElementById('details')?.getBoundingClientRect()
+  const views = targetElements(current.alsoLit ?? []).map((element) => {
+    const rect = element.getBoundingClientRect()
+    const style = getComputedStyle(element)
+    const left = Math.max(rect.left, length(style.getPropertyValue('--inset-left')))
+    const right = Math.min(rect.right, document.documentElement.clientWidth - length(style.getPropertyValue('--inset-right')))
+    const top = Math.max(rect.top, toolbar ? toolbar.bottom + 6 : rect.top)
+    const across = sheet && sheet.height > 0 && sheet.left <= left + 1 && sheet.right >= right - 1
+    const bottom = across ? Math.min(rect.bottom, sheet.top) : rect.bottom
+    return { x: left, y: top, width: Math.max(0, right - left), height: Math.max(0, bottom - top), radius: 0, view: true }
+  })
+  return [...controls, ...views]
+}
+
+// "23rem" or "0px" in pixels (App.vue's insets are one or the other)
+function length(value: string): number {
+  const number = parseFloat(value) || 0
+  return value.trim().endsWith('rem') ? number * parseFloat(getComputedStyle(document.documentElement).fontSize) : number
 }
 
 // Phones: the card goes to whichever half of the screen the spotlight isn't in, so it
@@ -92,7 +114,8 @@ onBeforeUnmount(() => phoneQuery?.removeEventListener('change', onPhone))
 // Of the foot, the middle and the top, the place that covers least of the spotlight
 // (ties go in that order: the foot is easiest to reach, and covers least of the graph)
 const edge = computed<'top' | 'bottom' | null>(() => {
-  if (!phone.value || spots.value.length === 0) return phone.value ? 'bottom' : null
+  const kept = spots.value.filter((spot) => !spot.view)
+  if (!phone.value || kept.length === 0) return phone.value ? 'bottom' : null
   const height = document.querySelector<HTMLElement>('.tour')?.offsetHeight ?? 260
   const screen = window.innerHeight
   const places = [
@@ -101,7 +124,7 @@ const edge = computed<'top' | 'bottom' | null>(() => {
     { edge: 'top' as const, top: 12 },
   ]
   const covered = (top: number) =>
-    spots.value.reduce((sum, spot) => sum + Math.max(0, Math.min(top + height, spot.y + spot.height) - Math.max(top, spot.y)) * spot.width, 0)
+    kept.reduce((sum, spot) => sum + Math.max(0, Math.min(top + height, spot.y + spot.height) - Math.max(top, spot.y)) * spot.width, 0)
   return places.reduce((best, place) => (covered(place.top) < covered(best.top) ? place : best)).edge
 })
 
@@ -113,8 +136,51 @@ function followSpot() {
     spotKey = key
     spots.value = next
   }
+  // Its menu opened (the tooltip steps aside for it, as in style.css), or it's gone
+  if (raised && (raised.getAttribute('aria-expanded') === 'true' || !raised.isConnected)) raiseTip(null)
   frame = state.tour === null ? 0 : requestAnimationFrame(followSpot)
 }
+
+// A spotlit button's own tooltip (data-tip, style.css) is drawn within the toolbar, which
+// sits under the dimming; while it shows, the tour draws it again over the dimming, in
+// the same place. Tip.vue's tooltips are on the page body, over the dimming already
+const raisedTip = ref<{ text: string; style: Record<string, string> } | null>(null)
+let raised: HTMLElement | null = null
+const canHover = window.matchMedia('(hover: hover)')
+function raiseTip(element: HTMLElement | null) {
+  if (element === raised) return
+  raised?.removeAttribute('data-tip-raised')
+  raised = element
+  raisedTip.value = null
+  if (!element) return
+  element.setAttribute('data-tip-raised', '')
+  const rect = element.getBoundingClientRect()
+  const page = document.documentElement
+  const style: Record<string, string> =
+    element.dataset.tipSide === 'top' ? { bottom: `${page.clientHeight - rect.top + 6}px` } : { top: `${rect.bottom + 6}px` }
+  if (element.dataset.tipAlign === 'end') style.right = `${page.clientWidth - rect.right}px`
+  else Object.assign(style, { left: `${rect.left + rect.width / 2}px`, transform: 'translateX(-50%)' })
+  raisedTip.value = { text: element.dataset.tip ?? '', style }
+}
+// The tooltip's button, if it's one the step lights
+function tipOf(target: EventTarget | null): HTMLElement | null {
+  const element = target instanceof Element ? target.closest<HTMLElement>('[data-tip]') : null
+  return element && targetElements().some((lit) => lit.contains(element)) ? element : null
+}
+function onPointerOver(event: PointerEvent) {
+  if (state.tour !== null && canHover.matches) raiseTip(tipOf(event.target))
+}
+function onPointerOut(event: PointerEvent) {
+  if (!event.relatedTarget) raiseTip(null)
+}
+function onFocusIn(event: FocusEvent) {
+  const element = state.tour === null ? null : tipOf(event.target)
+  raiseTip(element?.matches(':focus-visible') ? element : null)
+}
+watch(
+  () => state.tour,
+  () => raiseTip(null),
+)
 
 watch(
   () => state.tour !== null,
@@ -200,8 +266,8 @@ watch(
     tried.value = false
     picked.value = state.selectedId
     movedTo.value = null
-    // Leaving the List view step: back to the graph, where the rest of the controls are
-    if (previous !== null && previous !== undefined && TOUR_STEPS[previous].hint === 'list') state.listView = false
+    // Leaving the views step: back to the graph, where the rest of the controls are
+    if (previous !== null && previous !== undefined && TOUR_STEPS[previous].hint === 'views') showView('graph')
   },
 )
 function onPointer(event: PointerEvent) {
@@ -239,9 +305,16 @@ watch(
 )
 document.addEventListener('pointerdown', onPointer, true)
 document.addEventListener('keydown', onKey, true)
+document.addEventListener('pointerover', onPointerOver, true)
+document.addEventListener('pointerout', onPointerOut, true)
+document.addEventListener('focusin', onFocusIn, true)
 onBeforeUnmount(() => {
   document.removeEventListener('pointerdown', onPointer, true)
   document.removeEventListener('keydown', onKey, true)
+  document.removeEventListener('pointerover', onPointerOver, true)
+  document.removeEventListener('pointerout', onPointerOut, true)
+  document.removeEventListener('focusin', onFocusIn, true)
+  raiseTip(null)
 })
 </script>
 
@@ -274,6 +347,8 @@ onBeforeUnmount(() => {
         <rect class="tour-spot__dim" width="100%" height="100%" mask="url(#tour-spot-holes)" />
       </svg>
     </Transition>
+    <!-- A spotlit button's tooltip, over the dimming -->
+    <div v-if="raisedTip" class="tip tour-tip" :style="raisedTip.style" aria-hidden="true">{{ raisedTip.text }}</div>
     <!-- The end of the tour: two flutes clink -->
     <Transition name="cheers">
       <div v-if="cheers" class="cheers" role="status">
@@ -525,6 +600,22 @@ onBeforeUnmount(() => {
 }
 
 /* Teleported to the page body */
+/* Looks like the button's own tooltip (style.css), shown after the same pause */
+.tour-tip {
+  position: fixed;
+  z-index: 48;
+  line-height: 1.45;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: tour-tip-in 0.12s ease 0.4s both;
+}
+
+@keyframes tour-tip-in {
+  from {
+    opacity: 0;
+  }
+}
+
 /* Centred on the screen, over the dimming */
 .tour {
   position: fixed;

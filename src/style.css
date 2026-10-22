@@ -206,6 +206,11 @@ summary {
   transition-delay: 0s;
 }
 
+/* During the tour, drawn again over the dimming instead (TourCard.vue) */
+[data-tip][data-tip-raised]::after {
+  visibility: hidden;
+}
+
 /* Touch screens have no hover; a tap goes straight to the button's action */
 @media (hover: none) {
   [data-tip]::after {

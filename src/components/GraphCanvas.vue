@@ -70,6 +70,7 @@ const {
   startTour,
   dismissTourNudge,
   showView,
+  activeFilters,
 } = useGraph()
 
 // Whether the graph itself is showing, rather than the map or the list
@@ -87,23 +88,25 @@ watch(
   },
   { immediate: true },
 )
-// The tour points at the graph's own controls and nodes
+// The tour points at the graph's own controls and nodes, and into the details panel
 watch(
   () => state.tour,
   (step) => {
     if (step !== null && state.mapView) state.mapView = false
+    if (step !== null) state.detailsHidden = false
   },
 )
 
 // The graph corner's count, in readers' words: "841 of 1,417 people and places · 1,806
-// connections" while the connected core leaves some out (its "841 of 1,417" a button saying
-// why), otherwise "1,417 people and places · …"
+// connections", otherwise "1,417 people and places · …". While the connected core, a guide or
+// the filters leave records out, its number is a button saying why (CoreCount.vue)
 const partial = computed(() => filteredCount.value > visibleNodes.value.length)
+const explained = computed(() => partial.value || !!activeView.value || activeFilters.value.length > 0)
 const shownCount = computed(() => {
   const records = visibleNodes.value.length
   const links = visibleEdges.value.length
-  const noun = records === 1 && !partial.value ? 'person or place' : 'people and places'
-  return `${partial.value ? '' : `${records.toLocaleString('en-US')} `}${noun} · ${links.toLocaleString('en-US')} ${links === 1 ? 'connection' : 'connections'}`
+  const noun = records === 1 && !explained.value ? 'person or place' : 'people and places'
+  return `${explained.value ? '' : `${records.toLocaleString('en-US')} `}${noun} · ${links.toLocaleString('en-US')} ${links === 1 ? 'connection' : 'connections'}`
 })
 
 // Rolls to a random node not yet visited, after a short pause behind the busy overlay (as
@@ -827,6 +830,15 @@ function toggleSidebar() {
   if (cy && width) cy.animate({ panBy: { x: (state.filtersCollapsed ? -width : width) / 2, y: 0 } }, { duration: motion(220) })
 }
 
+// The graph keeps its centre in the space the panel leaves or takes, as with the sidebar
+function toggleDetails() {
+  const width = document.getElementById('details')?.getBoundingClientRect().width ?? 0
+  state.detailsHidden = !state.detailsHidden
+  if (cy && width && onGraph.value) {
+    cy.animate({ panBy: { x: (state.detailsHidden ? width : -width) / 2, y: 0 } }, { duration: motion(220) })
+  }
+}
+
 function rememberPositions() {
   if (!cy) return
   const known = positionsNow()
@@ -1180,7 +1192,7 @@ watch(
     <!-- On phones the Guides button has no room for the guide showing, so it leads the count -->
     <p v-show="onGraph" class="graph-canvas__count" role="status">
       <span v-if="activeView" class="graph-canvas__guide">{{ activeView.title }} · </span>
-      <template v-if="partial"><CoreCount :shown="visibleNodes.length" :of="filteredCount" />{{ ' ' }}</template>{{ shownCount }}
+      <template v-if="explained"><CoreCount :shown="visibleNodes.length" :of="filteredCount" :partial="partial" />{{ ' ' }}</template>{{ shownCount }}
     </p>
     <!-- Who made the site, in the graph's bottom-right corner -->
     <div class="graph-canvas__about">
@@ -1234,7 +1246,7 @@ watch(
       >
         <!-- Icons, named "Graph view" and "List view", which their tooltips show (data-tip, as
              a Reka tooltip would fight the switch for its buttons) -->
-        <ToggleGroupItem value="graph" aria-label="Graph view" data-tip="Graph view" :class="{ 'is-hinted': state.hint === 'graph' }">
+        <ToggleGroupItem value="graph" aria-label="Graph view" data-tip="Graph view" :class="{ 'is-hinted': state.hint === 'graph' || state.hint === 'views' }">
           <svg class="graph-canvas__view-icon" viewBox="0 0 20 20" aria-hidden="true">
             <path d="M7.1 5.8l5.8-.9M6 8.2l2.9 4.7M14.1 7.2l-3 5.7" />
             <circle cx="5" cy="6.2" r="2.1" />
@@ -1248,7 +1260,7 @@ watch(
           value="map"
           aria-label="Map view"
           data-tip="Map view"
-          :class="{ 'is-hinted': state.hint === 'map' }"
+          :class="{ 'is-hinted': state.hint === 'map' || state.hint === 'views' }"
           @pointerenter="loadMap"
           @focus="loadMap"
         >
@@ -1257,7 +1269,7 @@ watch(
             <path d="M5.3 9.2 7.2 7.6l1.6 1.5" />
           </svg>
         </ToggleGroupItem>
-        <ToggleGroupItem value="list" aria-label="List view" data-tip="List view" :class="{ 'is-hinted': state.hint === 'list' }">
+        <ToggleGroupItem value="list" aria-label="List view" data-tip="List view" :class="{ 'is-hinted': state.hint === 'list' || state.hint === 'views' }">
           <svg class="graph-canvas__view-icon" viewBox="0 0 20 20" aria-hidden="true">
             <path d="M8 5h9M8 10h9M8 15h9" />
             <circle class="graph-canvas__view-dot" cx="4" cy="5" r="1.2" />
@@ -1400,6 +1412,25 @@ watch(
     </div>
     <div v-if="!compact" class="graph-canvas__side">
       <ControlsGuide v-show="!state.listView" />
+      <!-- The details panel's button, the mirror of the filters sidebar's at the toolbar's
+           other end; choosing a record also brings the panel back -->
+      <Tip :label="state.detailsHidden ? 'Show details' : 'Hide details'">
+        <button
+          type="button"
+          class="graph-canvas__details-toggle"
+          aria-label="Details"
+          aria-controls="details"
+          :aria-expanded="!state.detailsHidden"
+          @click="toggleDetails"
+        >
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <rect x="2.5" y="3.5" width="15" height="13" rx="2.5" />
+            <path d="M12.5 3.5v13" />
+            <path v-if="state.detailsHidden" d="m9 8-2 2 2 2" />
+            <path v-else d="m7 8 2 2-2 2" />
+          </svg>
+        </button>
+      </Tip>
     </div>
   </div>
 </template>
@@ -1555,7 +1586,39 @@ watch(
   z-index: 4;
   top: calc(var(--inset-top, 0px) + 12px);
   right: calc(var(--inset-right, 0px) + 12px);
+  display: flex;
+  gap: 8px;
   max-width: calc(100% - 24px);
+}
+
+/* Matches the ? beside it (ControlsGuide's toggle) */
+.graph-canvas__details-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  background: var(--frost);
+  -webkit-backdrop-filter: var(--frost-blur);
+  backdrop-filter: var(--frost-blur);
+  color: inherit;
+  cursor: pointer;
+}
+
+.graph-canvas__details-toggle:hover {
+  background: var(--surface);
+}
+
+.graph-canvas__details-toggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .graph-canvas__stage {
