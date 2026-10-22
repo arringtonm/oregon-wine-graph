@@ -36,6 +36,7 @@ const {
   nodeById,
   openFlags,
   selectNextFlagged,
+  showView,
 } = useGraph()
 
 // The start panel's ways to explore point at their controls: hovering or focusing one
@@ -43,6 +44,9 @@ const {
 // Keyboard focus counts, but not the focus a click leaves behind, which would keep the
 // control lit after the click; any click clears it, as the control takes over
 // While the tour is open, its step owns the ring
+// Offered only where the build has a Mapbox token (GraphCanvas.vue)
+const mapAvailable = !!import.meta.env.VITE_MAPBOX_TOKEN
+
 function pointsTo(hint: Hint) {
   const free = () => state.tour === null
   const off = () => free() && state.hint === hint && (state.hint = null)
@@ -467,14 +471,18 @@ const canFlag = flagsAvailable()
           “Show all records” adds the rest.
         </li>
         <li>
-          <button type="button" class="detail__ways-action" v-bind="pointsTo('list')" @click="state.listView = true">
+          <button type="button" class="detail__ways-action" v-bind="pointsTo('list')" @click="showView('list')">
             List view
           </button>
           shows everything by name, for reading rather than roaming;
-          <button type="button" class="detail__ways-action" v-bind="pointsTo('graph')" @click="state.listView = false">
+          <button type="button" class="detail__ways-action" v-bind="pointsTo('graph')" @click="showView('graph')">
             Graph view
           </button>
           brings back the web of connections.
+        </li>
+        <li v-if="mapAvailable">
+          <button type="button" class="detail__ways-action" v-bind="pointsTo('map')" @click="showView('map')">Map view</button>
+          places wineries on a map of the hills, with the AVAs outlined.
         </li>
         <li>
           <button type="button" class="detail__ways-action" v-bind="pointsTo('random')" @click="state.randomRequest++">

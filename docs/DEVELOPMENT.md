@@ -148,6 +148,22 @@ Every record has its own address, `oregonwine.app/<id>` (e.g. `/david-lett`), so
 - **Search Console.** Add `oregonwine.app` to Google Search Console and submit `https://oregonwine.app/sitemap.xml` once; Google rereads it after that.
 - **Testing locally.** `vite preview` doesn't serve `/<id>` from `<id>.html`, or guide addresses as Cloudflare does; `npm run build && npx wrangler dev` does both.
 
+## The map view
+
+The third view (`src/components/GeoMap.vue`) places wineries on a Mapbox map with shaded relief, contour lines and, from its 3D button, tilted terrain, inside the official AVA outlines. Wineries sit at the address they give visitors (`coordinates`, from `npm run geo:locate`), often a tasting room, so the map never implies a winery is in an AVA. Vineyards appear once they have coordinates of their own.
+
+- **Cost.** Mapbox's free tier covers 50,000 map loads a month. A load is each map created, so the map view is built only when a reader opens it, and kept (hidden) after that: switching views or themes never costs another load. Its code (about 540 KB gzipped) is a separate download, fetched when the pointer or focus reaches the Map switch.
+- **Token.** A public token (`pk.…`) from account.mapbox.com, restricted there to `https://oregonwine.app/*` and `http://localhost:*/*`. Locally it goes in `.env.local` as `VITE_MAPBOX_TOKEN=pk.…` (restart the dev server after adding it); for the published site, see "Cloudflare settings".
+- **Styles.** Mapbox's `light-v11` and `dark-v11`, warmed to the site's paper and cellar colours, with relief and contours drawn from Mapbox's terrain tilesets.
+- **Where wineries are.** Only visitor addresses (a tasting room, or the estate where visitors go) are mapped, because that's what readers want; an address is never evidence of where a winery's grapes grow. In order of preference:
+  1. `npm run geo:directory`: the Oregon Wine Board's Tasting Room Directory (oregonwine.org, read through its public WordPress API and cached in `.cache/geo`). Wineries are matched by their distinctive name or their own website; the address is cited to the listing.
+  2. `npm run geo:locate`: the winery's own website, with Jev choosing among the addresses found there.
+  3. By hand, from a page that gives the address to visitors.
+
+  Addresses are geocoded with the US Census geocoder (public domain), falling back to OpenStreetMap's Nominatim for rural addresses Census can't place (one request a second; credited in the map's attribution). Both tools report what they held back: no geocode, a geocode far from the directory's own pin, or several tasting rooms in different towns.
+- **Leads.** `npm run geo:permits` lists unplaced wineries that hold a federal wine permit, with the licensed premises from TTB's list of permittees. A premises can be a shared custom-crush winery, so it's a lead for research (and evidence of where a wine is made), never written as a visitor address.
+- **AVA outlines.** `public/geo/avas.json`, written by `npm run geo:map` from the UC Davis boundaries (public domain), simplified to about 60 m (coarser for the largest AVAs), with a point inside each for its name. Run it again after adding an AVA.
+
 ## Deploying (Cloudflare Worker, oregonwine.app)
 
 The site is one Cloudflare Worker, `oregon-wine-graph`, configured by `wrangler.toml`. Cloudflare serves the built `dist/` as static assets (free, unlimited); only `/api/*` and `/guides/*` run the code in `worker/`:
@@ -173,6 +189,7 @@ npx wrangler d1 execute oregon-wine-flags --local --command "SELECT * FROM flags
 - **Flags database:** D1 database `oregon-wine-flags`; its id is in `wrangler.toml`, and its table was created from `migrations/0001_flags.sql`.
 - **Secrets** (Worker → Settings → Variables and secrets): `JEV_API_KEY`, and `TURNSTILE_SECRET` once Turnstile is set up.
 - **Turnstile:** the widget "Oregon Wine Graph flags" for `oregonwine.app` (Managed mode); its public site key is `VITE_TURNSTILE_SITE_KEY` in `.env.production`, its secret key the Worker secret `TURNSTILE_SECRET`. To test locally, build with Cloudflare's always-pass test keys: `VITE_TURNSTILE_SITE_KEY=1x00000000000000000000AA` for the build and `TURNSTILE_SECRET=1x0000000000000000000000000000000AA` in `.dev.vars`.
+- **Mapbox (the map view):** the public token is `VITE_MAPBOX_TOKEN`, read at build time; set it under Worker → Settings → Build → Variables and secrets. Without it the Map switch simply isn't offered. See "The map view".
 - **Domain:** `oregonwine.app` under the Worker's Domains.
 - **Rate limit:** Security → WAF → Rate limiting rules: paths starting with `/api/`, about 20 requests in 10 seconds per IP.
 

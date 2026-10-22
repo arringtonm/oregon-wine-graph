@@ -24,6 +24,8 @@ onBeforeUnmount(() => smallQuery.removeEventListener('change', onSmall))
 const toggle = ref<HTMLElement | null>(null)
 // Opened from the start panel's "Press ?"
 const { state, startTour } = useGraph()
+// The map view is offered only where the build has a Mapbox token (GraphCanvas.vue)
+const mapRows = import.meta.env.VITE_MAPBOX_TOKEN ? [{ action: 'See wineries on a map of the hills and AVAs', ways: ['Map view'] }] : []
 
 function takeTour() {
   open.value = false
@@ -63,6 +65,7 @@ const sections = computed<Section[]>(() =>
             { action: 'A curated view of the graph', ways: ['Guides'] },
             { action: 'Somewhere new at random', ways: ['Dice button'] },
             { action: 'Browse everything by name', ways: ['List view'] },
+            ...mapRows,
             { action: 'Show only some types or regions', ways: ['Filters button'] },
           ],
         },
@@ -109,6 +112,7 @@ const sections = computed<Section[]>(() =>
             { action: 'A curated view of the graph', ways: ['Guides'] },
             { action: 'Somewhere new at random', ways: ['Dice button', 'R key'] },
             { action: 'Browse everything by name', ways: ['List view'] },
+            ...mapRows,
             { action: 'Show only some types or regions', ways: ['Filters'] },
           ],
         },

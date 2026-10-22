@@ -13,4 +13,7 @@ interface ImportMetaEnv {
   readonly VITE_FLAGS_URL?: string
   // Cloudflare Turnstile site key (public); its secret is a server-side Pages secret
   readonly VITE_TURNSTILE_SITE_KEY?: string
+  // Mapbox public token for the map view, restricted to the site's addresses; without one
+  // the map view isn't offered
+  readonly VITE_MAPBOX_TOKEN?: string
 }

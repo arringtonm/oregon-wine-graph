@@ -16163,5 +16163,86 @@
       }
     ],
     "verifiedBy": "jev"
+  },
+  {
+    "id": "kevin-green",
+    "type": "person",
+    "name": "Kevin Green",
+    "summary": "Chemical engineer turned winemaker; winemaker at Apolloni Vineyards and, with his wife Clodagh, founder of La Randonnée.",
+    "place": "Hillsboro, OR",
+    "sources": [
+      {
+        "title": "An extended journey: Alumnus Kevin Green on the road from engineer to winemaker (CU Boulder, 2021)",
+        "url": "https://www.colorado.edu/chbe/2021/09/08/extended-journey-alumnus-kevin-green-road-engineer-winemaker"
+      },
+      {
+        "title": "Oral history interview with Kevin Green, 2020 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/kevin-green/"
+      },
+      {
+        "title": "About Us (La Randonnée Wines)",
+        "url": "https://www.larandonneewines.com/about-us.html"
+      }
+    ],
+    "verified": false,
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/interviews/kevin-green/",
+        "title": "Kevin Green",
+        "date": "2020-07-30",
+        "minutes": 85
+      }
+    ]
+  },
+  {
+    "id": "clodagh-green",
+    "type": "person",
+    "name": "Clodagh Green",
+    "summary": "Dublin-born co-founder of La Randonnée with her husband, Kevin Green; the two met in an Irish hillwalking club.",
+    "place": "Hillsboro, OR",
+    "sources": [
+      {
+        "title": "About Us (La Randonnée Wines)",
+        "url": "https://www.larandonneewines.com/about-us.html"
+      },
+      {
+        "title": "An extended journey: Alumnus Kevin Green on the road from engineer to winemaker (CU Boulder, 2021)",
+        "url": "https://www.colorado.edu/chbe/2021/09/08/extended-journey-alumnus-kevin-green-road-engineer-winemaker"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "zane-morris",
+    "type": "person",
+    "name": "Zane Morris",
+    "summary": "Music educator turned winemaker; owner and winemaker of Zē Wines, which he founded in 2021.",
+    "sources": [
+      {
+        "title": "About Zē Wines (Zē Wines)",
+        "url": "https://www.zewines.com/pages/about-ze-wines"
+      },
+      {
+        "title": "Four local wineries with a PSU connection (Portland State University, 2025)",
+        "url": "https://www.pdx.edu/news/four-local-wineries-psu-connection"
+      },
+      {
+        "title": "Oral history interview with Zane Morris, 2023 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/zane-morris/"
+      },
+      {
+        "title": "Zane Morris (LinkedIn)",
+        "url": "https://www.linkedin.com/in/zane-morris-523438114/"
+      }
+    ],
+    "verified": false,
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/interviews/zane-morris/",
+        "title": "Zane Morris",
+        "date": "2023-06-15",
+        "minutes": 86
+      }
+    ]
   }
 ]

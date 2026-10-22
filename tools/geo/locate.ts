@@ -15,7 +15,7 @@ import { formatRecords, readGraph } from '../reviewPlugin'
 
 const SITE_CACHE = resolve('.cache/sites')
 const PAGES = ['/', '/contact', '/contact-us', '/visit', '/visit-us']
-const GENERIC = /\b(the|winery|wines?|vineyards?|cellars?|estate|family|company|co|and|of)\b/gi
+const GENERIC = /\b(the|winery|wines?|vineyards?|cellars?|estate|family|company|co|and|of|oregon)\b/gi
 
 const STREET = String.raw`(?:Road|Rd|Street|St|Highway|Hwy|Avenue|Ave|Lane|Ln|Drive|Dr|Way|Boulevard|Blvd|Loop|Court|Ct|Place|Pl|Parkway|Pkwy|Circle|Terrace|Trail)`
 const ADDRESS = new RegExp(
@@ -127,6 +127,39 @@ export async function geocode(address: string): Promise<{ lat: number; lng: numb
   return match ? { lat: Math.round(match.coordinates.y * 1e5) / 1e5, lng: Math.round(match.coordinates.x * 1e5) / 1e5 } : null
 }
 
+// OpenStreetMap's Nominatim, for the rural addresses the Census geocoder can't place. Its
+// policy: at most one request a second, an identifying user agent, and credit to OSM (the
+// map's attribution gives it). Geocoding our own addresses is allowed by OSM's geocoding
+// guideline. Takes "street, town, OR 97xxx"
+let lastNominatim = 0
+export async function geocodeOsm(address: string): Promise<{ lat: number; lng: number } | null> {
+  const [street, city, stateZip] = address.split(',').map((part) => part.trim())
+  const zip = stateZip?.match(/\d{5}/)?.[0]
+  if (!street || !city) return null
+  const wait = lastNominatim + 1100 - Date.now()
+  if (wait > 0) await new Promise((done) => setTimeout(done, wait))
+  lastNominatim = Date.now()
+  const url = new URL('https://nominatim.openstreetmap.org/search')
+  url.search = new URLSearchParams({
+    street,
+    city,
+    state: 'Oregon',
+    ...(zip ? { postalcode: zip } : {}),
+    countrycodes: 'us',
+    format: 'jsonv2',
+    limit: '1',
+  }).toString()
+  const response = await fetch(url, {
+    headers: { 'user-agent': 'oregon-wine-graph/1.0 (https://oregonwine.app)' },
+    signal: AbortSignal.timeout(30_000),
+  })
+  if (!response.ok) return null
+  const [match] = (await response.json()) as { lat: string; lon: string; addresstype?: string }[]
+  // A town or road on its own isn't the address
+  if (!match || !['building', 'house', 'place', 'amenity', 'shop', 'craft', 'tourism'].includes(match.addresstype ?? 'house')) return null
+  return { lat: Math.round(Number(match.lat) * 1e5) / 1e5, lng: Math.round(Number(match.lon) * 1e5) / 1e5 }
+}
+
 async function main() {
   const apiKey = loadEnv('development', process.cwd(), '').JEV_API_KEY
   if (!apiKey) throw new Error('Set JEV_API_KEY in .env.local')
@@ -164,7 +197,7 @@ async function main() {
     if (unique.length === 0) return void tally.noAddress++
     const chosen = await chooseAddress(model, node, unique)
     if (!chosen || chosen.confidence < 0.6) return void tally.rejected++
-    const coordinates = await geocode(chosen.candidate.address)
+    const coordinates = (await geocode(chosen.candidate.address)) ?? (await geocodeOsm(chosen.candidate.address))
     if (!coordinates) return void tally.notGeocoded++
     results.set(node.id, { address: chosen.candidate.address, coordinates, url: chosen.candidate.url })
     tally.located++

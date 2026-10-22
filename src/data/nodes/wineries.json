@@ -154,6 +154,10 @@
       {
         "title": "Valley View Winery collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/rogue-valley/valley-view-winery-collection/"
+      },
+      {
+        "title": "Valley View Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/valley-view-winery/"
       }
     ],
     "verified": true,
@@ -164,7 +168,12 @@
         "title": "Valley View Winery collection",
         "date": "2026-06-11"
       }
-    ]
+    ],
+    "address": "1000 Upper Applegate Rd, Jacksonville, OR 97530",
+    "coordinates": {
+      "lat": 42.22599,
+      "lng": -123.04717
+    }
   },
   {
     "id": "troon-vineyard",
@@ -180,6 +189,10 @@
       {
         "title": "Troon Vineyard collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/rogue-valley/troon-vineyard-collection/"
+      },
+      {
+        "title": "Troon Vineyard: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/troon-vineyard/"
       }
     ],
     "verified": true,
@@ -190,7 +203,12 @@
         "title": "Troon Vineyard collection",
         "date": "2026-03-18"
       }
-    ]
+    ],
+    "address": "1475 Kubli Rd, Grants Pass, OR 97527",
+    "coordinates": {
+      "lat": 42.30381,
+      "lng": -123.2193
+    }
   },
   {
     "id": "henry-estate-winery",
@@ -241,6 +259,10 @@
       {
         "title": "Girardet Winery collection, 2013 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/umpqua-valley/girardet-winery-collection/"
+      },
+      {
+        "title": "Girardet Vineyards and Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/girardet-vineyards-winery/"
       }
     ],
     "verified": true,
@@ -251,7 +273,12 @@
         "title": "Girardet Winery collection",
         "date": "2013-06-03"
       }
-    ]
+    ],
+    "address": "895 Reston Rd, Roseburg, OR 97471",
+    "coordinates": {
+      "lat": 43.09931,
+      "lng": -123.57877
+    }
   },
   {
     "id": "cayuse-vineyards",
@@ -325,6 +352,10 @@
       {
         "title": "Domaine Drouhin Oregon collection, 2024 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/domaine-drouhin-oregon-collection/"
+      },
+      {
+        "title": "Domaine Drouhin Oregon: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/domaine-drouhin-oregon/"
       }
     ],
     "verified": true,
@@ -335,7 +366,12 @@
         "date": "2024-04-10"
       }
     ],
-    "verifiedBy": "person"
+    "verifiedBy": "person",
+    "address": "6750 NE Breyman Orchards Rd, Dayton, OR 97114",
+    "coordinates": {
+      "lat": 45.26511,
+      "lng": -123.06324
+    }
   },
   {
     "id": "panther-creek-cellars",
@@ -410,6 +446,10 @@
       {
         "title": "Beaux Frères (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/148/index.html"
+      },
+      {
+        "title": "Beaux Frères: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/beaux-freres-vineyard-winery/"
       }
     ],
     "verified": false,
@@ -419,7 +459,12 @@
         "title": "Beaux FréRes Winery collection",
         "date": "2024-06-11"
       }
-    ]
+    ],
+    "address": "15155 NE North Valley Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.34625,
+      "lng": -123.09284
+    }
   },
   {
     "id": "bethel-heights-vineyard",
@@ -440,6 +485,10 @@
       {
         "title": "Bethel Heights Vineyard collection, 2021 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/bethel-heights-vineyard-collection/"
+      },
+      {
+        "title": "Bethel Heights Vineyard: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/bethel-heights-vineyard/"
       }
     ],
     "verified": true,
@@ -450,7 +499,12 @@
         "date": "2021-08-11"
       }
     ],
-    "verifiedBy": "person"
+    "verifiedBy": "person",
+    "address": "6060 Bethel Heights Rd NW, Salem, OR 97304",
+    "coordinates": {
+      "lat": 45.03708,
+      "lng": -123.15491
+    }
   },
   {
     "id": "cristom-vineyards",
@@ -798,6 +852,10 @@
       {
         "title": "Lingua Franca collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/lingua-franca-collection/"
+      },
+      {
+        "title": "Lingua Franca: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/lingua-franca/"
       }
     ],
     "verified": true,
@@ -808,7 +866,12 @@
         "title": "Lingua Franca collection",
         "date": "2026-04-01"
       }
-    ]
+    ],
+    "address": "9675 Hopewell Rd NW, Salem, OR 97304",
+    "coordinates": {
+      "lat": 45.07295,
+      "lng": -123.09225
+    }
   },
   {
     "id": "bergstrom-wines",
@@ -840,6 +903,10 @@
       {
         "title": "Bergström Winery (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/633/index.html"
+      },
+      {
+        "title": "Bergström Wines: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/bergstrom-wines/"
       }
     ],
     "verified": false,
@@ -849,7 +916,12 @@
         "title": "BergströM Wines collection",
         "date": "2025-07-31"
       }
-    ]
+    ],
+    "address": "8115 NE Worden Hill Rd, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27921,
+      "lng": -123.02547
+    }
   },
   {
     "id": "domaine-serene",
@@ -870,6 +942,10 @@
       {
         "title": "Domaine Serene collection, 2024 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/domaine-serene-collection/"
+      },
+      {
+        "title": "Domaine Serene: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/domaine-serene-winery/"
       }
     ],
     "verified": true,
@@ -880,7 +956,12 @@
         "date": "2024-07-29"
       }
     ],
-    "verifiedBy": "person"
+    "verifiedBy": "person",
+    "address": "6555 NE Hilltop Ln, Dayton, OR 97114",
+    "coordinates": {
+      "lat": 45.27432,
+      "lng": -123.0677
+    }
   },
   {
     "id": "maisons-domaines-henriot",
@@ -959,10 +1040,19 @@
       {
         "title": "Richard Sommer (winemaker) (Wikipedia)",
         "url": "https://en.wikipedia.org/wiki/Richard_Sommer_(winemaker)"
+      },
+      {
+        "title": "HillCrest Vineyard: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/hillcrest-vineyard/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "240 Vineyard Ln, Roseburg, OR 97471",
+    "coordinates": {
+      "lat": 43.27139,
+      "lng": -123.50065
+    }
   },
   {
     "id": "charles-coury-vineyards",
@@ -1098,6 +1188,10 @@
       {
         "title": "Ponzi Vineyards collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/ponzi-vineyards-collection/"
+      },
+      {
+        "title": "Ponzi Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/ponzi-vineyards/"
       }
     ],
     "verified": true,
@@ -1108,7 +1202,12 @@
         "date": "2025-08-08"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "19500 SW Mountain Home Rd, Sherwood, OR 97140",
+    "coordinates": {
+      "lat": 45.37856,
+      "lng": -122.93738
+    }
   },
   {
     "id": "adelsheim-vineyard",
@@ -1129,6 +1228,10 @@
       {
         "title": "Adelsheim Vineyard collection (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/adelsheim-vineyard-collection/"
+      },
+      {
+        "title": "Adelsheim Vineyard: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/adelsheim-vineyard/"
       }
     ],
     "verified": true,
@@ -1137,7 +1240,12 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/adelsheim-vineyard-collection/",
         "title": "Adelsheim Vineyard collection"
       }
-    ]
+    ],
+    "address": "16800 NE Calkins Ln, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.33649,
+      "lng": -123.05118
+    }
   },
   {
     "id": "sokol-blosser-winery",
@@ -1198,6 +1306,10 @@
       {
         "title": "Amity Vineyards collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/amity-vineyards-collection/"
+      },
+      {
+        "title": "Amity Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/amity-vineyards/"
       }
     ],
     "verified": true,
@@ -1208,7 +1320,12 @@
         "title": "Amity Vineyards collection",
         "date": "2026-02-16"
       }
-    ]
+    ],
+    "address": "18150 SE Amity Vineyards Rd, Amity, OR 97101",
+    "coordinates": {
+      "lat": 45.12826,
+      "lng": -123.19556
+    }
   },
   {
     "id": "elk-cove-vineyards",
@@ -1449,6 +1566,10 @@
       {
         "title": "American Winemaker Video Series: Doug Tunnell (Skurnik Wines)",
         "url": "https://skurnik.com/american-winemaker-video-series-doug-tunnell"
+      },
+      {
+        "title": "Brick House Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/brick-house/"
       }
     ],
     "verified": false,
@@ -1458,7 +1579,12 @@
         "title": "Brick House Vineyards collection",
         "date": "2025-03-26"
       }
-    ]
+    ],
+    "address": "18200 NE Lewis Rogers Ln, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.34566,
+      "lng": -123.06626
+    }
   },
   {
     "id": "patricia-green-cellars",
@@ -1483,6 +1609,10 @@
       {
         "title": "Patty Green: OWP wine person of the year (Oregon Wine Press)",
         "url": "https://www.oregonwinepress.com/owp-in-person-of-the-year-2017-patty-green"
+      },
+      {
+        "title": "Patricia Green Cellars: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/patricia-green-cellars/"
       }
     ],
     "verified": false,
@@ -1492,7 +1622,12 @@
         "title": "Patricia Green Cellars collection",
         "date": "2019-12-10"
       }
-    ]
+    ],
+    "address": "15225 NE North Valley Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.34484,
+      "lng": -123.09192
+    }
   },
   {
     "id": "torii-mor-winery",
@@ -1517,6 +1652,10 @@
       {
         "title": "Oregon Winemaker Patricia Green Dies in Apparent Accident (Wine Spectator)",
         "url": "https://www.winespectator.com/articles/patricia-green-dies-in-apparent-accident"
+      },
+      {
+        "title": "Torii Mor Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/torii-mor-winery/"
       }
     ],
     "verified": true,
@@ -1527,7 +1666,12 @@
         "date": "2026-02-24"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "18323 NE Fairview Dr, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.29141,
+      "lng": -123.04779
+    }
   },
   {
     "id": "lange-estate-winery",
@@ -1626,6 +1770,10 @@
       {
         "title": "Maysara Winery collection, 2017 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/maysara-winery-collection/"
+      },
+      {
+        "title": "Maysara Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/maysara-winery/"
       }
     ],
     "verified": true,
@@ -1636,7 +1784,12 @@
         "date": "2017-12-05"
       }
     ],
-    "verifiedBy": "person"
+    "verifiedBy": "person",
+    "address": "15765 SW Muddy Valley Rd, McMinnville, OR 97128",
+    "coordinates": {
+      "lat": 45.14244,
+      "lng": -123.31936
+    }
   },
   {
     "id": "yamhill-valley-vineyards",
@@ -1657,6 +1810,10 @@
       {
         "title": "In Memoriam: Stephen Cary (Oregon Wine Press)",
         "url": "https://www.oregonwinepress.com/in-memoriam-stephen-cary"
+      },
+      {
+        "title": "Yamhill Valley Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/yamhill-valley-vineyards/"
       }
     ],
     "verified": true,
@@ -1667,7 +1824,12 @@
         "date": "2026-06-24"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "16250 SW Oldsville Rd, McMinnville, OR 97128",
+    "coordinates": {
+      "lat": 45.14792,
+      "lng": -123.28143
+    }
   },
   {
     "id": "willakenzie-estate",
@@ -1859,6 +2021,10 @@
       {
         "title": "Foris Vineyards collection, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/rogue-valley/foris-vineyards-collection/"
+      },
+      {
+        "title": "Foris Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/foris-vineyards-winery-2/"
       }
     ],
     "verified": true,
@@ -1869,7 +2035,12 @@
         "title": "Foris Vineyards collection",
         "date": "2019-09-27"
       }
-    ]
+    ],
+    "address": "654 Kendall Rd, Cave Junction, OR 97523",
+    "coordinates": {
+      "lat": 42.1165,
+      "lng": -123.54884
+    }
   },
   {
     "id": "reustle-prayer-rock-vineyards",
@@ -1894,9 +2065,18 @@
       {
         "title": "Grüner Veltliner (Umpqua Valley Wineries)",
         "url": "https://www.umpquavalleywineries.org/gruner-veltliner/"
+      },
+      {
+        "title": "Reustle-Prayer Rock Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/reustle-prayer-rock-vineyards/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "7612 Oak Hill Rd, Roseburg, OR 97471",
+    "coordinates": {
+      "lat": 43.35712,
+      "lng": -123.43969
+    }
   },
   {
     "id": "shea-wine-cellars",
@@ -1921,10 +2101,19 @@
       {
         "title": "Shea Wine Cellars (The PinotFile / Prince of Pinot)",
         "url": "https://www.princeofpinot.com/article/912/"
+      },
+      {
+        "title": "Shea Wine Cellars: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/shea-wine-cellars/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "12321 OR-240, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.32831,
+      "lng": -123.11293
+    }
   },
   {
     "id": "lemelson-vineyards",
@@ -1970,6 +2159,10 @@
       {
         "title": "Westrey Wine Company (The PinotFile / Prince of Pinot)",
         "url": "https://www.princeofpinot.com/article/104/index.html"
+      },
+      {
+        "title": "Westrey Wine Company: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/westrey-wine-co/"
       }
     ],
     "verified": false,
@@ -1979,7 +2172,12 @@
         "title": "Westrey Wines collection",
         "date": "2018-01-16"
       }
-    ]
+    ],
+    "address": "1065 NE Alpine Ave, McMinnville, OR 97128",
+    "coordinates": {
+      "lat": 45.21465,
+      "lng": -123.1871
+    }
   },
   {
     "id": "carlton-winemakers-studio",
@@ -1992,10 +2190,19 @@
       {
         "title": "Carlton Winemakers Studio (1859 Oregon's Magazine)",
         "url": "https://1859oregonmagazine.com/think-oregon/business/carlton-winemakers/"
+      },
+      {
+        "title": "Carlton Winemakers Studio: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/the-carlton-winemakers-studio/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "801 N Scott St, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.29945,
+      "lng": -123.18216
+    }
   },
   {
     "id": "maison-louis-jadot",
@@ -2033,6 +2240,10 @@
       {
         "title": "RéSonance Wines collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/resonance-wines-collection/"
+      },
+      {
+        "title": "Résonance: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/resonance/"
       }
     ],
     "verified": true,
@@ -2043,7 +2254,12 @@
         "title": "RéSonance Wines collection",
         "date": "2025-07-31"
       }
-    ]
+    ],
+    "address": "12050 NW Meadowlake Rd, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.29066,
+      "lng": -123.23866
+    }
   },
   {
     "id": "nicolas-jay",
@@ -2195,6 +2411,10 @@
       {
         "title": "The Four Graces Winery collection, 2023 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/the-four-graces-winery-collection/"
+      },
+      {
+        "title": "The Four Graces: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/the-four-graces/"
       }
     ],
     "verified": true,
@@ -2205,7 +2425,12 @@
         "title": "The Four Graces Winery collection",
         "date": "2023-02-27"
       }
-    ]
+    ],
+    "address": "9590 NE Worden Hill Rd, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.28287,
+      "lng": -123.05766
+    }
   },
   {
     "id": "foley-family-wines",
@@ -2235,6 +2460,10 @@
       {
         "title": "Benton-Lane Winery collection, 2024 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/benton-lane-winery-collection/"
+      },
+      {
+        "title": "Benton-Lane Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/benton-lane-winery/"
       }
     ],
     "verified": true,
@@ -2245,7 +2474,12 @@
         "title": "Benton-Lane Winery collection",
         "date": "2024-02-27"
       }
-    ]
+    ],
+    "address": "23924 Territorial Rd, Monroe, OR 97456",
+    "coordinates": {
+      "lat": 44.29176,
+      "lng": -123.2955
+    }
   },
   {
     "id": "huneeus-vintners",
@@ -2299,9 +2533,18 @@
       {
         "title": "Italian wine group acquires Dundee Hills vineyard from Coppola-owned Domaine Lumineux (Newsberg)",
         "url": "https://newsberg.org/2026/03/24/italian-wine-group-acquires-dundee-hills-vineyard-from-coppola-owned-domaine-lumineux/"
+      },
+      {
+        "title": "Domaine Lumineux: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/domaine-de-broglie/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "115 N Washington St, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.30049,
+      "lng": -122.9772
+    }
   },
   {
     "id": "silver-oak",
@@ -2395,6 +2638,10 @@
       {
         "title": "Phelps Creek Vineyards collection, 2014 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/columbia-gorge-and-columbia-valley/phelps-creek-vineyards-collection/"
+      },
+      {
+        "title": "Phelps Creek Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/phelps-creek-vineyards/"
       }
     ],
     "verified": true,
@@ -2405,7 +2652,12 @@
         "title": "Phelps Creek Vineyards collection",
         "date": "2014-06-11"
       }
-    ]
+    ],
+    "address": "301 Country Club Rd, Hood River, OR 97031",
+    "coordinates": {
+      "lat": 45.7085,
+      "lng": -121.56111
+    }
   },
   {
     "id": "domaine-marc-roy",
@@ -2434,10 +2686,19 @@
       {
         "title": "Oregon's Walla Walla (Oregon Wine Press)",
         "url": "https://www.oregonwinepress.com/oregons-walla-walla"
+      },
+      {
+        "title": "Watermill Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/watermill-winery/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "235 E Broadway Ave, Milton-Freewater, OR 97862",
+    "coordinates": {
+      "lat": 45.93719,
+      "lng": -118.39174
+    }
   },
   {
     "id": "zerba-cellars",
@@ -2450,10 +2711,19 @@
       {
         "title": "Oregon's Walla Walla (Oregon Wine Press)",
         "url": "https://www.oregonwinepress.com/oregons-walla-walla"
+      },
+      {
+        "title": "Zerba Cellars: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/zerba-cellars/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "85530 OR-11, Milton-Freewater, OR 97862",
+    "coordinates": {
+      "lat": 45.99461,
+      "lng": -118.38742
+    }
   },
   {
     "id": "del-rio-vineyards",
@@ -2482,12 +2752,21 @@
       {
         "title": "Our Story (Del Rio Vineyards)",
         "url": "https://www.delriovineyards.com/our-story"
+      },
+      {
+        "title": "Del Rio Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/del-rio-vineyards/"
       }
     ],
     "verified": false,
     "aka": [
       "Del Rio"
-    ]
+    ],
+    "address": "52 N River Rd, Gold Hill, OR 97525",
+    "coordinates": {
+      "lat": 42.43349,
+      "lng": -123.09017
+    }
   },
   {
     "id": "quady-north",
@@ -2546,10 +2825,19 @@
       {
         "title": "Cowhorn",
         "url": "http://cowhorn.wine"
+      },
+      {
+        "title": "Cowhorn Vineyard & Garden: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/cowhorn-vineyard-garden/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "1665 Eastside Rd, Jacksonville, OR 97530",
+    "coordinates": {
+      "lat": 42.15548,
+      "lng": -123.04779
+    }
   },
   {
     "id": "brandborg-vineyard-and-winery",
@@ -2573,6 +2861,10 @@
       {
         "title": "Brandborg: A Gem Off the Beaten Track (The PinotFile / Prince of Pinot)",
         "url": "https://www.princeofpinot.com/article/111/"
+      },
+      {
+        "title": "Brandborg Vineyard & Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/brandborg-vineyard-winery/"
       }
     ],
     "verified": false,
@@ -2582,7 +2874,12 @@
         "title": "Brandborg Vineyard and Winery collection",
         "date": "2013-06-07"
       }
-    ]
+    ],
+    "address": "345 1st St, Elkton, OR 97436",
+    "coordinates": {
+      "lat": 43.637,
+      "lng": -123.56514
+    }
   },
   {
     "id": "kelley-fox-wines",
@@ -2598,6 +2895,10 @@
       {
         "title": "Kelley Fox Wines collection, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/kelley-fox-wines-collection/"
+      },
+      {
+        "title": "Kelley Fox Wines: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/kelley-fox-wines/"
       }
     ],
     "verified": true,
@@ -2608,7 +2909,12 @@
         "title": "Kelley Fox Wines collection",
         "date": "2019-08-01"
       }
-    ]
+    ],
+    "address": "26421 OR-47, Gaston, OR 97119",
+    "coordinates": {
+      "lat": 45.40776,
+      "lng": -123.12416
+    }
   },
   {
     "id": "day-wines",
@@ -2669,6 +2975,10 @@
       {
         "title": "Walter Scott Wines collection, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/walter-scott-wines-collection/"
+      },
+      {
+        "title": "Walter Scott Wines: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/walter-scott-wines/"
       }
     ],
     "verified": true,
@@ -2679,7 +2989,12 @@
         "title": "Walter Scott Wines collection",
         "date": "2019-08-06"
       }
-    ]
+    ],
+    "address": "6130 Bethel Heights Rd NW, Salem, OR 97304",
+    "coordinates": {
+      "lat": 45.03344,
+      "lng": -123.1545
+    }
   },
   {
     "id": "antica-terra",
@@ -2910,6 +3225,10 @@
       {
         "title": "Marchesi de' Frescobaldi Acquires Oregon's Domaine Roy & Fils (Wine Spectator)",
         "url": "https://www.winespectator.com/articles/marchesi-de-frescobaldi-acquires-oregons-domaine-roy-fils"
+      },
+      {
+        "title": "Domaine Roy & fils: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/domaine-roy-fils/"
       }
     ],
     "verified": true,
@@ -2924,7 +3243,12 @@
         "date": "2025-06-23"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "8351 NE Worden Hill Rd, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27924,
+      "lng": -123.03122
+    }
   },
   {
     "id": "purple-hands-winery",
@@ -2947,6 +3271,10 @@
       {
         "title": "Purple Hands Winery collection, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/purple-hands-winery-collection/"
+      },
+      {
+        "title": "Purple Hands Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/purple-hands-urban-winery-and-tasting-room/"
       }
     ],
     "verified": true,
@@ -2957,7 +3285,12 @@
         "title": "Purple Hands Winery collection",
         "date": "2020-08-18"
       }
-    ]
+    ],
+    "address": "1200 OR-99W, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27368,
+      "lng": -123.01475
+    }
   },
   {
     "id": "ridgecrest-wines",
@@ -3093,6 +3426,10 @@
       {
         "title": "Harper Voit Team (Harper Voit)",
         "url": "https://www.harpervoit.com/harper-voit-team"
+      },
+      {
+        "title": "Harper Voit: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/harper-voit/"
       }
     ],
     "verified": false,
@@ -3102,7 +3439,12 @@
         "title": "Harper Voit collection",
         "date": "2019-11-05"
       }
-    ]
+    ],
+    "address": "707 NE 5th St, McMinnville, OR 97128",
+    "coordinates": {
+      "lat": 45.21151,
+      "lng": -123.192
+    }
   },
   {
     "id": "tendril-wine-cellars",
@@ -3126,6 +3468,10 @@
       {
         "title": "Tendril Wines collection, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/tendril-wines-collection/"
+      },
+      {
+        "title": "Tendril Wine Cellars: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/tendril-wine-cellars/"
       }
     ],
     "verified": false,
@@ -3138,7 +3484,12 @@
         "title": "Tendril Wines collection",
         "date": "2020-07-31"
       }
-    ]
+    ],
+    "address": "130 W Monroe St, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.29539,
+      "lng": -123.17709
+    }
   },
   {
     "id": "analemma-wines",
@@ -3159,6 +3510,10 @@
       {
         "title": "Analemma Wines collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/columbia-gorge-and-columbia-valley/analemma-wines-collection/"
+      },
+      {
+        "title": "Analemma Wines: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/analemma-wines/"
       }
     ],
     "verified": false,
@@ -3168,7 +3523,12 @@
         "title": "Analemma Wines collection",
         "date": "2026-03-11"
       }
-    ]
+    ],
+    "address": "1120 State Rd, Mosier, OR 97040",
+    "coordinates": {
+      "lat": 45.68215,
+      "lng": -121.3716
+    }
   },
   {
     "id": "ovum-wines",
@@ -3220,10 +3580,19 @@
       {
         "title": "Matzinger Davies Wine Co (Prince of Pinot)",
         "url": "http://www.princeofpinot.com/winery/1712/"
+      },
+      {
+        "title": "Matzinger Davies Wine Co: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/matzinger-davies-wine-company/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "30835 OR-99W, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.31329,
+      "lng": -122.91948
+    }
   },
   {
     "id": "haden-fig",
@@ -3349,6 +3718,10 @@
       {
         "title": "Honeywood Winery collection, 2014 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/honeywood-winery-collection/"
+      },
+      {
+        "title": "Honeywood Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/honeywood-winery/"
       }
     ],
     "verified": true,
@@ -3359,7 +3732,12 @@
         "title": "Honeywood Winery collection",
         "date": "2014-06-17"
       }
-    ]
+    ],
+    "address": "1350 Hines St SE, Salem, OR 97302",
+    "coordinates": {
+      "lat": 44.92673,
+      "lng": -123.02838
+    }
   },
   {
     "id": "well-played-wines",
@@ -3559,10 +3937,19 @@
       {
         "title": "AtTheJoy's Story (AtTheJoy)",
         "url": "https://atthejoy.com/atthejoys-story/"
+      },
+      {
+        "title": "Aubaine: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/aubaine/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "801 N Scott St, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.29945,
+      "lng": -123.18216
+    }
   },
   {
     "id": "beckham-estate-vineyard",
@@ -3582,6 +3969,10 @@
       {
         "title": "Beckham Estate Vineyard collection (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/beckham-estate-vineyard-collection/"
+      },
+      {
+        "title": "Beckham Estate Vineyard: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/beckham-estate-vineyard/"
       }
     ],
     "verified": true,
@@ -3591,7 +3982,12 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/beckham-estate-vineyard-collection/",
         "title": "Beckham Estate Vineyard collection"
       }
-    ]
+    ],
+    "address": "30790 SW Heater Rd, Sherwood, OR 97140",
+    "coordinates": {
+      "lat": 45.29843,
+      "lng": -122.86191
+    }
   },
   {
     "id": "corollary-wines",
@@ -3773,6 +4169,10 @@
       {
         "title": "Lenne Estate collection (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/lenne-estate-collection/"
+      },
+      {
+        "title": "Lenné Estate: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/lenne-estate/"
       }
     ],
     "verified": true,
@@ -3782,7 +4182,12 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/lenne-estate-collection/",
         "title": "Lenne Estate collection"
       }
-    ]
+    ],
+    "address": "18760 NE Laughlin Rd, Yamhill, OR 97148",
+    "coordinates": {
+      "lat": 45.35283,
+      "lng": -123.13571
+    }
   },
   {
     "id": "jachter-family-wines",
@@ -3952,6 +4357,10 @@
       {
         "title": "Vidon Vineyard Announces New Name, Compris Vineyard, Hosting Celebratory Events Over Memorial Day Weekend (Wine Industry Advisor)",
         "url": "https://wineindustryadvisor.com/2022/05/04/vidon-vineyard-new-name-compris-vineyard/"
+      },
+      {
+        "title": "Compris Vineyard: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/compris-vineyard/"
       }
     ],
     "verified": false,
@@ -3965,7 +4374,12 @@
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/vidon-vineyard-collection/",
         "title": "Vidon Vineyard collection"
       }
-    ]
+    ],
+    "address": "17425 NE Hillside Dr, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.34287,
+      "lng": -123.01754
+    }
   },
   {
     "id": "greywing-wines",
@@ -4038,6 +4452,10 @@
       {
         "title": "Keeler Estate Vineyards collection, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/keeler-estate-vineyards-collection/"
+      },
+      {
+        "title": "Keeler Estate Vineyard: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/keeler-estate-vineyard-winery/"
       }
     ],
     "verified": true,
@@ -4048,7 +4466,12 @@
         "title": "Keeler Estate Vineyards collection",
         "date": "2019-07-09"
       }
-    ]
+    ],
+    "address": "5100 SE Rice Ln, Amity, OR 97101",
+    "coordinates": {
+      "lat": 45.12177,
+      "lng": -123.19018
+    }
   },
   {
     "id": "authentique",
@@ -4075,6 +4498,10 @@
       {
         "title": "Oral history interview with Nicholas Keeler, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/nicholas-keeler/"
+      },
+      {
+        "title": "Authentique: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/authentique/"
       }
     ],
     "verified": true,
@@ -4084,7 +4511,12 @@
         "title": "Authentique Wine Cellars collection"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "5100 SE Rice Ln, Amity, OR 97101",
+    "coordinates": {
+      "lat": 45.12177,
+      "lng": -123.19018
+    }
   },
   {
     "id": "chosen-family-wines",
@@ -4150,13 +4582,22 @@
       {
         "title": "Lonesome Rock",
         "url": "https://lonesomerock.com"
+      },
+      {
+        "title": "Lonesome Rock: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/lonesome-rock/"
       }
     ],
     "verified": true,
     "aka": [
       "Lonesome Rock Cellars"
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "18495 NW Meadow Lake Rd, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.31413,
+      "lng": -123.30483
+    }
   },
   {
     "id": "de-ponte-cellars",
@@ -4513,6 +4954,10 @@
       {
         "title": "Labor of Love (Eugene Weekly)",
         "url": "https://eugeneweekly.com/2017/05/04/labor-of-love-2/"
+      },
+      {
+        "title": "Antiquum Farm: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/antiquum-farm/"
       }
     ],
     "verified": true,
@@ -4523,7 +4968,12 @@
         "date": "2024-07-01"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "25075 Jaeg Rd, Junction City, OR 97448",
+    "coordinates": {
+      "lat": 44.2366,
+      "lng": -123.35885
+    }
   },
   {
     "id": "approachment",
@@ -4768,6 +5218,10 @@
       {
         "title": "EIEIO (Yamhill-Carlton Winegrowers Association)",
         "url": "https://yamhillcarlton.org/member/eieio/"
+      },
+      {
+        "title": "EIEIO & Company: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/eieio-company/"
       }
     ],
     "verified": true,
@@ -4778,7 +5232,12 @@
         "date": "2020-07-01"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "10100 NW Meadowlake Rd, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.29187,
+      "lng": -123.21835
+    }
   },
   {
     "id": "ghost-hill-cellars",
@@ -4799,6 +5258,10 @@
       {
         "title": "Ghost Hill Cellars collection, 2024 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/ghost-hill-cellar-collection/"
+      },
+      {
+        "title": "Ghost Hill Cellars: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/ghost-hill-cellars-vineyard-and-tasting-room/"
       }
     ],
     "verified": true,
@@ -4809,7 +5272,12 @@
         "date": "2024-05-28"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "12220 NE Bayliss Rd, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.28117,
+      "lng": -123.11107
+    }
   },
   {
     "id": "le-cadeau-vineyard",
@@ -4836,6 +5304,10 @@
       {
         "title": "Le Cadeau Vineyard (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/article/534/index.html"
+      },
+      {
+        "title": "Le Cadeau Vineyard: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/le-cadeau-aubichon-cellars-tasting-room/"
       }
     ],
     "verified": true,
@@ -4846,7 +5318,12 @@
         "date": "2023-11-29"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "1326 OR-99W, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27291,
+      "lng": -123.01544
+    }
   },
   {
     "id": "late-sky",
@@ -4915,6 +5392,10 @@
       {
         "title": "Sequitur Wine collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/sequitur-wine-collection/"
+      },
+      {
+        "title": "Sequitur: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/sequitur-wine/"
       }
     ],
     "verified": false,
@@ -4924,7 +5405,12 @@
         "title": "Sequitur Wine collection",
         "date": "2025-06-24"
       }
-    ]
+    ],
+    "address": "14865 NE North Valley Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.35506,
+      "lng": -123.09929
+    }
   },
   {
     "id": "alexana-winery",
@@ -4942,6 +5428,10 @@
       {
         "title": "Alexana Winery collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/alexana-winery-collection/"
+      },
+      {
+        "title": "Alexana Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/alexana-winery/"
       }
     ],
     "verified": true,
@@ -4952,7 +5442,12 @@
         "title": "Alexana Winery collection",
         "date": "2025-05-05"
       }
-    ]
+    ],
+    "address": "12001 NE Worden Hill Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.30164,
+      "lng": -123.06844
+    }
   },
   {
     "id": "joseph-phelps-vineyards",
@@ -4983,6 +5478,10 @@
       {
         "title": "Abbott Claim collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/abbott-claim-collection/"
+      },
+      {
+        "title": "Abbott Claim: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/abbott-claim/"
       }
     ],
     "verified": true,
@@ -4993,7 +5492,12 @@
         "title": "Abbott Claim collection",
         "date": "2026-01-20"
       }
-    ]
+    ],
+    "address": "11011 NE Bayliss Rd, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.28407,
+      "lng": -123.12277
+    }
   },
   {
     "id": "violin-wine",
@@ -5045,6 +5549,10 @@
       {
         "title": "The Fizz #66: Johan Vineyards winemaker Morgan Beck and owner Mini Byers believe in the future of biodynamics (The Fizz)",
         "url": "https://thefizz.substack.com/p/the-fizz-66-johan-vineyards-winemaker"
+      },
+      {
+        "title": "Johan Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/johan-vineyards/"
       }
     ],
     "verified": true,
@@ -5055,7 +5563,12 @@
         "date": "2021-03-15"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "4285 N Pacific Hwy W, Rickreall, OR 97371",
+    "coordinates": {
+      "lat": 44.99338,
+      "lng": -123.21334
+    }
   },
   {
     "id": "apona-vineyards",
@@ -5075,6 +5588,10 @@
       {
         "title": "Apona Vineyards collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/apona-vineyards-collection/"
+      },
+      {
+        "title": "Apona Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/apona-vineyards/"
       }
     ],
     "verified": false,
@@ -5084,7 +5601,12 @@
         "title": "Apona Vineyards collection",
         "date": "2025-07-02"
       }
-    ]
+    ],
+    "address": "25443 Fleck Rd, Veneta, OR 97487",
+    "coordinates": {
+      "lat": 44.02637,
+      "lng": -123.33879
+    }
   },
   {
     "id": "wente-vineyards",
@@ -5155,6 +5677,10 @@
       {
         "title": "Cooper Mountain Vineyards collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/cooper-mountain-vineyards-collection/"
+      },
+      {
+        "title": "Cooper Mountain Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/cooper-mountain-vineyards/"
       }
     ],
     "verified": true,
@@ -5165,7 +5691,12 @@
         "title": "Cooper Mountain Vineyards collection",
         "date": "2025-02-27"
       }
-    ]
+    ],
+    "address": "20121 SW Leonardo Ln, Beaverton, OR 97007",
+    "coordinates": {
+      "lat": 45.45087,
+      "lng": -122.88336
+    }
   },
   {
     "id": "dusky-goose",
@@ -5184,6 +5715,10 @@
       {
         "title": "Dusky Goose (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/434/index.html"
+      },
+      {
+        "title": "Dusky Goose: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/dusky-goose-rambouillet-estate-tasting-room/"
       }
     ],
     "verified": false,
@@ -5193,7 +5728,12 @@
         "title": "Dusky Goose Winery collection",
         "date": "2022-05-18"
       }
-    ]
+    ],
+    "address": "8355 NE Warren Rd, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27613,
+      "lng": -123.0322
+    }
   },
   {
     "id": "anne-amie-vineyards",
@@ -5245,6 +5785,10 @@
       {
         "title": "Dominio Iv collection, 2021 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/dominio-iv-collection/"
+      },
+      {
+        "title": "Dominio IV: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/dominio-iv-wines/"
       }
     ],
     "verified": true,
@@ -5255,7 +5799,12 @@
         "date": "2021-05-14"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "11570 NE Intervale Rd, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.2986,
+      "lng": -123.12056
+    }
   },
   {
     "id": "maison-jussiaume",
@@ -5340,10 +5889,19 @@
       {
         "title": "Weinnotes newsletter, 6 April 2024",
         "url": "https://weinnotes.kit.com/posts/weinnotes-monthly-oregon-wine-newsletter-5"
+      },
+      {
+        "title": "Sun Break Wines: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/sun-break-wines/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "3635 Bethel Heights Rd NW, Salem, OR 97304",
+    "coordinates": {
+      "lat": 45.05757,
+      "lng": -123.10445
+    }
   },
   {
     "id": "ricochet",
@@ -5388,6 +5946,10 @@
       {
         "title": "Dukes Family Vineyards collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/dukes-family-vineyards-collection/"
+      },
+      {
+        "title": "Dukes Family Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/dukes-family-vineyards/"
       }
     ],
     "verified": true,
@@ -5398,7 +5960,12 @@
         "title": "Dukes Family Vineyards collection",
         "date": "2026-06-26"
       }
-    ]
+    ],
+    "address": "7845 SE Amity Rd, Amity, OR 97101",
+    "coordinates": {
+      "lat": 45.11408,
+      "lng": -123.15698
+    }
   },
   {
     "id": "mad-violets-wine-co",
@@ -5615,6 +6182,10 @@
       {
         "title": "David Paige Wines collection, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/david-paige-wines-collection/"
+      },
+      {
+        "title": "David Paige Wines: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/david-paige-wines/"
       }
     ],
     "verified": true,
@@ -5625,7 +6196,12 @@
         "title": "David Paige Wines collection",
         "date": "2020-08-17"
       }
-    ]
+    ],
+    "address": "18271 SE Walnut Hill Rd, Amity, OR 97101",
+    "coordinates": {
+      "lat": 45.12736,
+      "lng": -123.12273
+    }
   },
   {
     "id": "mccollum-heritage-91",
@@ -5675,10 +6251,19 @@
       {
         "title": "About (de Lancellotti Family Vineyards)",
         "url": "https://www.delancellottifamilyvineyards.com/about"
+      },
+      {
+        "title": "de Lancellotti Family Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/de-lancellotti-family-vineyards/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "18605 NE Calkins Ln, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.35164,
+      "lng": -123.04751
+    }
   },
   {
     "id": "brittan-vineyards",
@@ -5707,6 +6292,10 @@
       {
         "title": "Valuable Imports: Robert and Ellen Brittan making their mark in Oregon (Oregon Wine Press)",
         "url": "https://www.oregonwinepress.com/robert-ellen-brittan-oregon"
+      },
+      {
+        "title": "Brittan Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/brittan-vineyards/"
       }
     ],
     "verified": false,
@@ -5716,7 +6305,12 @@
         "title": "Brittan Vineyards collection",
         "date": "2021-04-22"
       }
-    ]
+    ],
+    "address": "829 NE 5th St, McMinnville, OR 97128",
+    "coordinates": {
+      "lat": 45.21151,
+      "lng": -123.19046
+    }
   },
   {
     "id": "et-fille-wines",
@@ -5740,6 +6334,10 @@
       {
         "title": "Et Fille Winery collection, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/et-fille-winery-collection/"
+      },
+      {
+        "title": "Et Fille Wines: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/et-fille-wines-tasting-room/"
       }
     ],
     "verified": true,
@@ -5750,7 +6348,12 @@
         "title": "Et Fille Winery collection",
         "date": "2020-02-25"
       }
-    ]
+    ],
+    "address": "718 E 1st St, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.30025,
+      "lng": -122.97254
+    }
   },
   {
     "id": "lundeen-wines",
@@ -5941,6 +6544,10 @@
       {
         "title": "Hazelfern Cellars collection, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/hazelfern-cellars-collection/"
+      },
+      {
+        "title": "Hazelfern Cellars: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/hazelfern/"
       }
     ],
     "verified": true,
@@ -5951,7 +6558,12 @@
         "title": "Hazelfern Cellars collection",
         "date": "2019-12-17"
       }
-    ]
+    ],
+    "address": "4008 NE Zimri Dr, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.32903,
+      "lng": -122.94932
+    }
   },
   {
     "id": "vincent-wine-company",
@@ -6041,6 +6653,10 @@
       {
         "title": "Dobbes Family Estate collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/dobbes-family-estate-collection/"
+      },
+      {
+        "title": "Dobbes Family Estate: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/dobbes-family-winery/"
       }
     ],
     "verified": true,
@@ -6051,7 +6667,12 @@
         "title": "Dobbes Family Estate collection",
         "date": "2025-07-14"
       }
-    ]
+    ],
+    "address": "240 SE 5th St, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27909,
+      "lng": -123.00821
+    }
   },
   {
     "id": "atticus-wine",
@@ -6066,6 +6687,10 @@
       {
         "title": "Atticus Wine collection, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/atticus-wines-collection/"
+      },
+      {
+        "title": "Atticus Wine: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/atticus-wine/"
       }
     ],
     "verified": true,
@@ -6076,7 +6701,12 @@
         "title": "Atticus Wine collection",
         "date": "2019-12-06"
       }
-    ]
+    ],
+    "address": "20501 NW Russell Creek Rd, Yamhill, OR 97148",
+    "coordinates": {
+      "lat": 45.36162,
+      "lng": -123.16866
+    }
   },
   {
     "id": "laura-volkman-vineyards",
@@ -6221,9 +6851,18 @@
       {
         "title": "History (Siltstone Wines)",
         "url": "http://www.siltstonewines.com/history"
+      },
+      {
+        "title": "Siltstone Wines: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/siltstone-wines-tasting-room/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "12251 SE Dayton Bypass, Dayton, OR 97114",
+    "coordinates": {
+      "lat": 45.2086,
+      "lng": -123.11348
+    }
   },
   {
     "id": "langolo-estate",
@@ -6257,9 +6896,18 @@
       {
         "title": "L'Angolo Estate (Owen Bargreen)",
         "url": "https://owenbargreen.com/blog/2023/5/31/langolo-estate"
+      },
+      {
+        "title": "L'Angolo Estate: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/langolo-estate/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "18830 NE Williamson Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.30824,
+      "lng": -123.04547
+    }
   },
   {
     "id": "leah-jorgensen-cellars",
@@ -6404,6 +7052,10 @@
       {
         "title": "Our Team (White Rose Estate)",
         "url": "https://whiteroseestate.com/about/"
+      },
+      {
+        "title": "White Rose Estate: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/white-rose-estate/"
       }
     ],
     "verified": true,
@@ -6415,8 +7067,12 @@
       }
     ],
     "place": "Dundee, OR",
-    "address": "6250 NE Hilltop Ln, Dundee, OR",
-    "verifiedBy": "person"
+    "address": "6250 NE Hilltop Ln, Dayton, OR 97114",
+    "verifiedBy": "person",
+    "coordinates": {
+      "lat": 45.27316,
+      "lng": -123.06426
+    }
   },
   {
     "id": "leonetti-cellar",
@@ -6826,10 +7482,19 @@
       {
         "title": "Weinnotes newsletter, 3 December 2022",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-76"
+      },
+      {
+        "title": "Owen Roe: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/owen-roe/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "2761 E 9th St, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.29284,
+      "lng": -122.95274
+    }
   },
   {
     "id": "distaff-wine",
@@ -6961,10 +7626,19 @@
       {
         "title": "Weinnotes newsletter, 14 November 2020",
         "url": "https://weinnotes.kit.com/posts/oregon-vino-country-34"
+      },
+      {
+        "title": "J.L. Kiff Vineyard: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/j-l-kiff-vineyard/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "13546 NW Willis Rd, McMinnville, OR 97128",
+    "coordinates": {
+      "lat": 45.24999,
+      "lng": -123.25047
+    }
   },
   {
     "id": "cramoisi-vineyard",
@@ -7038,6 +7712,10 @@
       {
         "title": "Wine Is Where the Heart Is (Eugene Magazine)",
         "url": "https://eugenemagazine.com/gourmet/wine-is-where-the-heart-is/"
+      },
+      {
+        "title": "Elizabeth Chambers Cellar: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/elizabeth-chambers-cellar/"
       }
     ],
     "verified": true,
@@ -7048,7 +7726,12 @@
         "date": "2016-06-23"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "105 Oakway Center, Eugene, OR 97401",
+    "coordinates": {
+      "lat": 44.06675,
+      "lng": -123.0772
+    }
   },
   {
     "id": "van-duzer-vineyards",
@@ -7073,6 +7756,10 @@
       {
         "title": "Van Duzer Vineyards (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/147/index.html"
+      },
+      {
+        "title": "Van Duzer Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/van-duzer-vineyards-2/"
       }
     ],
     "verified": false,
@@ -7082,7 +7769,12 @@
         "title": "Van Duzer Vineyards collection",
         "date": "2024-08-20"
       }
-    ]
+    ],
+    "address": "11975 Smithfield Rd, Dallas, OR 97338",
+    "coordinates": {
+      "lat": 44.98363,
+      "lng": -123.27428
+    }
   },
   {
     "id": "utopia-vineyard",
@@ -7109,6 +7801,10 @@
       {
         "title": "A Taste of Utopia in Willamette Valley (Fred Swan Wine)",
         "url": "https://www.fredswan.wine/2020/08/21/a-taste-of-utopia-in-willamette-valley/"
+      },
+      {
+        "title": "Utopia Vineyard: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/utopia/"
       }
     ],
     "verified": true,
@@ -7119,7 +7815,12 @@
         "date": "2020-02-04"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "17445 NE Ribbon Ridge Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.33812,
+      "lng": -123.07632
+    }
   },
   {
     "id": "angela-vineyards",
@@ -7206,9 +7907,18 @@
       {
         "title": "Elevee Winegrowers (Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/2644/index.html"
+      },
+      {
+        "title": "Élevée Winegrowers: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/elevee-winegrowers/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "18320 NE Fairview Dr, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.29144,
+      "lng": -123.04795
+    }
   },
   {
     "id": "kings-north",
@@ -7342,10 +8052,19 @@
       {
         "title": "Weinnotes newsletter, 7 August 2021",
         "url": "https://weinnotes.kit.com/posts/weinnotes-weekly-oregon-wine-newsletter-9"
+      },
+      {
+        "title": "Rain Dance Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/rain-dance-vineyards/"
       }
     ],
     "verified": true,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "3004 Northeast Zimri Drive, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.32185,
+      "lng": -122.94927
+    }
   },
   {
     "id": "hummingbird-estate",
@@ -7369,9 +8088,18 @@
       {
         "title": "Hummingbird Estate (Oregon Wine Board)",
         "url": "https://www.oregonwine.org/?p=14495"
+      },
+      {
+        "title": "Hummingbird Estate: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/hummingbird-estate/"
       }
     ],
-    "verified": false
+    "verified": false,
+    "address": "1677 Old Stage Rd, Central Point, OR 97502",
+    "coordinates": {
+      "lat": 42.33969,
+      "lng": -122.9556
+    }
   },
   {
     "id": "roxyann-winery",
@@ -7392,6 +8120,10 @@
       {
         "title": "Roxyann Winery collection, 2013 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/rogue-valley/roxyann-winery-collection/"
+      },
+      {
+        "title": "RoxyAnn Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/roxyann-winery/"
       }
     ],
     "verified": true,
@@ -7402,7 +8134,12 @@
         "title": "Roxyann Winery collection",
         "date": "2013-08-01"
       }
-    ]
+    ],
+    "address": "3283 Hillcrest Rd, Medford, OR 97504",
+    "coordinates": {
+      "lat": 42.33097,
+      "lng": -122.81667
+    }
   },
   {
     "id": "belle-fiore-winery",
@@ -7573,6 +8310,10 @@
       {
         "title": "About Belle Pente (Belle Pente Vineyard & Winery, archived)",
         "url": "https://web.archive.org/web/20251121023535/https://bellepente.com/about-bellepente/"
+      },
+      {
+        "title": "Belle Pente Vineyard & Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/belle-pente/"
       }
     ],
     "verified": true,
@@ -7583,7 +8324,12 @@
         "date": "2026-01-26"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "12470 NE Rowland Rd, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.30763,
+      "lng": -123.14649
+    }
   },
   {
     "id": "three-goats-vineyard",
@@ -7598,6 +8344,10 @@
       {
         "title": "3 Goats Vineyard collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/3-goats-vineyard-collection/"
+      },
+      {
+        "title": "3 Goats Vineyard: address (www.3goats.com)",
+        "url": "https://www.3goats.com/"
       }
     ],
     "verified": true,
@@ -7609,7 +8359,12 @@
         "date": "2026-07-01"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "139 SE 2nd Ave Hillsboro, OR 97123",
+    "coordinates": {
+      "lat": 45.52214,
+      "lng": -122.98806
+    }
   },
   {
     "id": "abbey-creek-winery",
@@ -7622,6 +8377,10 @@
       {
         "title": "Abbey Creek Winery collection, 2021 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/abbey-creek-winery-collection/"
+      },
+      {
+        "title": "Abbey Creek Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/abbey-creek-winery/"
       }
     ],
     "verified": true,
@@ -7633,7 +8392,12 @@
         "date": "2021-03-09"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "31441 NW Commercial St, North Plains, OR 97133",
+    "coordinates": {
+      "lat": 45.59784,
+      "lng": -123.00117
+    }
   },
   {
     "id": "henderson-ave-wines",
@@ -7668,6 +8432,10 @@
       {
         "title": "Adea Wine Co. collection, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/adea-wine-co-collection/"
+      },
+      {
+        "title": "ADEA Wine Co.: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/adea-winery/"
       }
     ],
     "verified": true,
@@ -7679,7 +8447,12 @@
         "date": "2019-08-01"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "26421 OR-47, Gaston, OR 97119",
+    "coordinates": {
+      "lat": 45.40776,
+      "lng": -123.12416
+    }
   },
   {
     "id": "nueva-aventura",
@@ -7718,6 +8491,10 @@
       {
         "title": "Shiba Wichern Cellars collection, 2021 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/shiba-wichern-cellars-collection/"
+      },
+      {
+        "title": "Shiba Wichern Cellars: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/shiba-wichern-cellars/"
       }
     ],
     "verified": true,
@@ -7729,7 +8506,12 @@
         "date": "2021-05-11"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "37800 Sunshine Mountain Dr, Willamina, OR 97396",
+    "coordinates": {
+      "lat": 45.0928,
+      "lng": -123.48595
+    }
   },
   {
     "id": "lanphere-cellars",
@@ -7826,6 +8608,10 @@
       {
         "title": "Vitae Springs collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/vitae-springs-collection/"
+      },
+      {
+        "title": "Vitae Springs: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/vitae-springs/"
       }
     ],
     "verified": true,
@@ -7837,7 +8623,12 @@
         "date": "2025-06-16"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "3535 Vitae Springs Rd S, Salem, OR 97306",
+    "coordinates": {
+      "lat": 44.86957,
+      "lng": -123.10083
+    }
   },
   {
     "id": "alpine-vineyards",
@@ -7967,6 +8758,10 @@
       {
         "title": "Goldback Wines collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/rogue-valley/goldback-wines-collection/"
+      },
+      {
+        "title": "Goldback Wines: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/goldback-wines/"
       }
     ],
     "verified": true,
@@ -7979,7 +8774,12 @@
         "date": "2026-03-18"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "4495 S Pacific Hwy, Phoenix, OR 97535",
+    "coordinates": {
+      "lat": 42.26924,
+      "lng": -122.81026
+    }
   },
   {
     "id": "edenvale-winery",
@@ -7993,6 +8793,10 @@
       {
         "title": "Edenvale Winery collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/rogue-valley/edenvale-winery-collection/"
+      },
+      {
+        "title": "Edenvale Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/edenvale-winery/"
       }
     ],
     "verified": true,
@@ -8004,7 +8808,12 @@
         "date": "2026-06-12"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "2310 Voorhies Rd, Medford, OR 97501",
+    "coordinates": {
+      "lat": 42.29009,
+      "lng": -122.84537
+    }
   },
   {
     "id": "flaneur-wines",
@@ -8138,6 +8947,10 @@
       {
         "title": "Ayoub Vineyard (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/961/index.html"
+      },
+      {
+        "title": "Ayoub Wines: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/ayoub-vineyard/"
       }
     ],
     "verified": true,
@@ -8149,7 +8962,12 @@
         "date": "2017-04-04"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "9650 NE Keyes Ln, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.28597,
+      "lng": -123.03199
+    }
   },
   {
     "id": "bacus-vineyards",
@@ -8159,6 +8977,10 @@
       {
         "title": "Bacus Wines collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/bacus-wines-collection/"
+      },
+      {
+        "title": "Bacus Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/bacus-vineyards/"
       }
     ],
     "verified": true,
@@ -8170,7 +8992,12 @@
         "date": "2025-08-01"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "18605 NE Calkins Ln, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.35164,
+      "lng": -123.04751
+    }
   },
   {
     "id": "olsen-family-vineyards",
@@ -8218,11 +9045,20 @@
       {
         "title": "Oral history interview with Charlie Becker, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/charlie-becker/"
+      },
+      {
+        "title": "Becker Vineyard: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/becker-vineyard/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "360 Klahowya Ln, Roseburg, OR 97471",
+    "coordinates": {
+      "lat": 43.29919,
+      "lng": -123.42859
+    }
   },
   {
     "id": "bjornson-vineyard",
@@ -8264,6 +9100,10 @@
       {
         "title": "Blizzard Wines collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/blizzard-wines-collection/"
+      },
+      {
+        "title": "Blizzard Wines: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/blizzard-wines/"
       }
     ],
     "verified": true,
@@ -8275,7 +9115,12 @@
         "date": "2025-08-18"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "29495 SW Burkhalter Rd, Hillsboro, OR 97123",
+    "coordinates": {
+      "lat": 45.46187,
+      "lng": -122.98206
+    }
   },
   {
     "id": "franciscan-vineyards",
@@ -8301,6 +9146,10 @@
       {
         "title": "Boedecker Cellars collection, 2017 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/portland-urban-wineries/boedecker-cellars-collection/"
+      },
+      {
+        "title": "Boedecker Cellars: address (www.boedeckerwines.com)",
+        "url": "https://www.boedeckerwines.com/contact"
       }
     ],
     "verified": true,
@@ -8312,7 +9161,12 @@
         "date": "2017-08-16"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "2621 NW 30th Avenue Portland, Oregon 97210",
+    "coordinates": {
+      "lat": 45.54064,
+      "lng": -122.71252
+    }
   },
   {
     "id": "bogle-family-vineyards",
@@ -8356,6 +9210,10 @@
       {
         "title": "Lumos Wine Company collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/lumos-wine-company-collection/"
+      },
+      {
+        "title": "Lumos Wine: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/lumos-wine-co/"
       }
     ],
     "verified": true,
@@ -8367,7 +9225,12 @@
         "date": "2026-02-12"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "24000 Cardwell Hill Dr, Philomath, OR 97370",
+    "coordinates": {
+      "lat": 44.60148,
+      "lng": -123.42389
+    }
   },
   {
     "id": "botaneity",
@@ -8409,6 +9272,10 @@
       {
         "title": "Our Team (Illahe Vineyards)",
         "url": "https://www.illahevineyards.com/our-team"
+      },
+      {
+        "title": "Illahe Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/illahe-vineyards/"
       }
     ],
     "verified": true,
@@ -8420,7 +9287,12 @@
         "date": "2025-12-09"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "3275 Ballard Rd, Dallas, OR 97338",
+    "coordinates": {
+      "lat": 44.88603,
+      "lng": -123.27291
+    }
   },
   {
     "id": "bradley-vineyards",
@@ -8452,6 +9324,10 @@
       {
         "title": "Broadley Vineyards collection, 2023 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/broadley-vineyards-collection/"
+      },
+      {
+        "title": "Broadley Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/broadley-vineyards/"
       }
     ],
     "verified": true,
@@ -8463,7 +9339,12 @@
         "date": "2023-02-08"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "265 S 5th St, Monroe, OR 97456",
+    "coordinates": {
+      "lat": 44.3144,
+      "lng": -123.29701
+    }
   },
   {
     "id": "freed-estate",
@@ -8478,6 +9359,10 @@
       {
         "title": "Freed Estate collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/umpqua-valley/freed-estate-collection/"
+      },
+      {
+        "title": "Freed Estate: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/freed-estate-winery-2/"
       }
     ],
     "verified": true,
@@ -8489,7 +9374,12 @@
         "date": "2026-03-19"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "430 Hooten Rd, Winston, OR 97496",
+    "coordinates": {
+      "lat": 43.1157,
+      "lng": -123.39402
+    }
   },
   {
     "id": "cuckoos-nest-cellars",
@@ -8601,6 +9491,10 @@
       {
         "title": "Schmidt Family Vineyards collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/rogue-valley/schmidt-family-vineyards-collection/"
+      },
+      {
+        "title": "Schmidt Family Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/schmidt-family-vineyards/"
       }
     ],
     "verified": true,
@@ -8612,7 +9506,12 @@
         "date": "2026-03-15"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "330 Kubli Rd, Grants Pass, OR 97527",
+    "coordinates": {
+      "lat": 42.31184,
+      "lng": -123.24086
+    }
   },
   {
     "id": "hauer-of-the-dauen",
@@ -8627,6 +9526,10 @@
       {
         "title": "Hauer of the Dauen Winery collection (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/hauer-of-the-dauen-winery-collection/"
+      },
+      {
+        "title": "Hauer of the Dauen Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/hauer-of-the-dauen-winery/"
       }
     ],
     "verified": true,
@@ -8638,7 +9541,12 @@
         "title": "Hauer of the Dauen Winery collection"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "16425 SE Fairview Rd, Dayton, OR 97114",
+    "coordinates": {
+      "lat": 45.12892,
+      "lng": -123.06897
+    }
   },
   {
     "id": "holocene-wines",
@@ -8652,6 +9560,10 @@
       {
         "title": "Holocene Wines collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/holocene-wines-collection/"
+      },
+      {
+        "title": "Holocene Wines: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/holocene-wines-2/"
       }
     ],
     "verified": true,
@@ -8664,7 +9576,12 @@
         "date": "2026-06-15"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "16740 SW Pinot Pl, Hillsboro, OR 97123",
+    "coordinates": {
+      "lat": 45.40084,
+      "lng": -122.98924
+    }
   },
   {
     "id": "chateau-bianca-winery",
@@ -8687,6 +9604,10 @@
       {
         "title": "Wetzel Estate (Willamette Valley Wineries Association member listing)",
         "url": "https://www.willamettewines.com/listing/wetzel-estate/1875/"
+      },
+      {
+        "title": "Chateau Bianca Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/chateau-bianca-winery/"
       }
     ],
     "verified": true,
@@ -8701,7 +9622,12 @@
     "verifiedBy": "jev",
     "aka": [
       "Wetzel Estate"
-    ]
+    ],
+    "address": "17485 OR-22, Dallas, OR 97338",
+    "coordinates": {
+      "lat": 45.00817,
+      "lng": -123.39066
+    }
   },
   {
     "id": "tior-wines",
@@ -8741,6 +9667,10 @@
       {
         "title": "Cherry Hill Winery collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/cherry-hill-winery-collection/"
+      },
+      {
+        "title": "Cherry Hill Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/cherry-hill-winery/"
       }
     ],
     "verified": true,
@@ -8752,7 +9682,12 @@
         "date": "2026-09-15"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "7867 Crowley Rd, Rickreall, OR 97371",
+    "coordinates": {
+      "lat": 44.98364,
+      "lng": -123.19282
+    }
   },
   {
     "id": "flynn-winery",
@@ -8780,6 +9715,10 @@
       {
         "title": "High Pass Winery collection (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/high-pass-winery-collection/"
+      },
+      {
+        "title": "High Pass Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/high-pass-winery/"
       }
     ],
     "verified": true,
@@ -8790,7 +9729,12 @@
         "title": "High Pass Winery collection"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "24757 Lavell Rd, Junction City, OR 97448",
+    "coordinates": {
+      "lat": 44.22184,
+      "lng": -123.37114
+    }
   },
   {
     "id": "liska-wine-company",
@@ -9056,6 +10000,10 @@
       {
         "title": "Eola Hills Winery collection, 2017 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/eola-hills-winery-collection/"
+      },
+      {
+        "title": "Eola Hills Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/eola-hills-wine-cellars/"
       }
     ],
     "verified": true,
@@ -9067,7 +10015,12 @@
         "date": "2017-08-01"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "501 S Pacific Hwy W, Rickreall, OR 97371",
+    "coordinates": {
+      "lat": 44.92647,
+      "lng": -123.22859
+    }
   },
   {
     "id": "fairsing-vineyard",
@@ -9115,6 +10068,10 @@
       {
         "title": "Rose & Arrow Estate collection, 2023 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/rose-arrow-estate-collection/"
+      },
+      {
+        "title": "Rose and Arrow Estate: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/rose-arrow-estate/"
       }
     ],
     "verified": true,
@@ -9126,7 +10083,12 @@
         "date": "2023-03-08"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "531 OR-99W, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27923,
+      "lng": -123.0097
+    }
   },
   {
     "id": "filigree-and-stone",
@@ -9165,6 +10127,10 @@
       {
         "title": "Rainsong Vineyard collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/rainsong-vineyard-collection/"
+      },
+      {
+        "title": "RainSong Vineyard: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/rainsong-vineyard/"
       }
     ],
     "verified": true,
@@ -9176,7 +10142,12 @@
         "date": "2026-08-03"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "92989 Templeton Rd, Cheshire, OR 97419",
+    "coordinates": {
+      "lat": 44.1825,
+      "lng": -123.37555
+    }
   },
   {
     "id": "fizzy-lizzy-wines",
@@ -9405,6 +10376,10 @@
       {
         "title": "J. Scott Cellars collection, 2022 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/j-scott-cellars-collection/"
+      },
+      {
+        "title": "J. Scott Cellars: address (www.jscottcellars.com)",
+        "url": "https://www.jscottcellars.com/visit-us"
       }
     ],
     "verified": true,
@@ -9416,7 +10391,12 @@
         "date": "2022-07-13"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "207 E. 5th Ave., Suite 105 Eugene, OR 97401",
+    "coordinates": {
+      "lat": 44.05438,
+      "lng": -123.08955
+    }
   },
   {
     "id": "jk-carriere",
@@ -9429,6 +10409,10 @@
       {
         "title": "J.K. Carriere collection, 2017 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/jkcarriere-collection/"
+      },
+      {
+        "title": "J.K. Carriere: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/j-k-carriere/"
       }
     ],
     "verified": true,
@@ -9440,7 +10424,12 @@
         "date": "2017-08-31"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "9995 NE Parrett Mountain Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.28777,
+      "lng": -122.86927
+    }
   },
   {
     "id": "marin-estate-wines",
@@ -9731,6 +10720,10 @@
       {
         "title": "The Pines 1852 collection, 2014 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/columbia-gorge-and-columbia-valley/the-pines-1852-collection/"
+      },
+      {
+        "title": "The Pines 1852: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/the-pines-1852/"
       }
     ],
     "verified": true,
@@ -9742,7 +10735,12 @@
         "date": "2014-06-15"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "415 Oak St, Hood River, OR 97031",
+    "coordinates": {
+      "lat": 45.70881,
+      "lng": -121.51526
+    }
   },
   {
     "id": "spofford-station",
@@ -9835,6 +10833,10 @@
       {
         "title": "Furioso Vineyards collection, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/furioso-vineyards-collection/"
+      },
+      {
+        "title": "Furioso: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/furioso-vineyards/"
       }
     ],
     "verified": true,
@@ -9846,7 +10848,12 @@
         "date": "2020-06-01"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "8415 NE Worden Hill Rd, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27926,
+      "lng": -123.03289
+    }
   },
   {
     "id": "rivers-edge-winery",
@@ -9861,6 +10868,10 @@
       {
         "title": "River’S Edge Winery collection, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/umpqua-valley/rivers-edge-winery-collection/"
+      },
+      {
+        "title": "River's Edge Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/rivers-edge-winery/"
       }
     ],
     "verified": true,
@@ -9872,7 +10883,12 @@
         "date": "2019-08-21"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "1395 River Dr, Elkton, OR 97436",
+    "coordinates": {
+      "lat": 43.64086,
+      "lng": -123.57611
+    }
   },
   {
     "id": "moffett-family-vineyards",
@@ -9907,6 +10923,10 @@
       {
         "title": "Apolloni Vineyards collection, 2020 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/apolloni-vineyards-collection/"
+      },
+      {
+        "title": "Apolloni Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/apolloni-vineyards/"
       }
     ],
     "verified": true,
@@ -9918,7 +10938,12 @@
         "date": "2020-07-30"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "14135 NW Timmerman Rd, Forest Grove, OR 97116",
+    "coordinates": {
+      "lat": 45.62339,
+      "lng": -123.21721
+    }
   },
   {
     "id": "secus-wines",
@@ -9953,11 +10978,20 @@
       {
         "title": "Oral history interview with Nicholas Caluori, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/nicholas-caluori/"
+      },
+      {
+        "title": "Limited Addition: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/limited-addition-wines/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "3400 NW Bridge Farmer Rd, Gaston, OR 97119",
+    "coordinates": {
+      "lat": 45.41523,
+      "lng": -123.14768
+    }
   },
   {
     "id": "barrel-42",
@@ -10054,6 +11088,10 @@
       {
         "title": "Paradis Vineyards collection, 2024 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/paradis-vineyards-collection/"
+      },
+      {
+        "title": "Paradis Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/paradis-vineyards/"
       }
     ],
     "verified": true,
@@ -10065,7 +11103,12 @@
         "date": "2024-08-07"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "17627 Abiqua Rd NE, Silverton, OR 97381",
+    "coordinates": {
+      "lat": 45.01858,
+      "lng": -122.6983
+    }
   },
   {
     "id": "whistling-ridge-vineyards",
@@ -10079,6 +11122,10 @@
       {
         "title": "Whistling Ridge Vineyards collection, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/whistling-ridge-vineyards-collection/"
+      },
+      {
+        "title": "Whistling Ridge Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/whistling-ridge-vineyards/"
       }
     ],
     "verified": true,
@@ -10090,7 +11137,12 @@
         "date": "2019-08-09"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "14551 NE North Valley Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.36319,
+      "lng": -123.10144
+    }
   },
   {
     "id": "satyr-fire-wine",
@@ -10104,6 +11156,10 @@
       {
         "title": "Satyr Fire collection, 2023 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/satyr-fire-collection/"
+      },
+      {
+        "title": "Satyr Fire Wine: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/satyr-fire/"
       }
     ],
     "verified": true,
@@ -10115,7 +11171,12 @@
         "date": "2023-02-16"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "304 Ferry St, Dayton, OR 97114",
+    "coordinates": {
+      "lat": 45.22108,
+      "lng": -123.07496
+    }
   },
   {
     "id": "paul-obrien-winery",
@@ -10130,6 +11191,10 @@
       {
         "title": "Paul O’Brien Winery collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/umpqua-valley/paul-obrien-winery-collection/"
+      },
+      {
+        "title": "Paul O'Brien Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/paul-obrien-winery/"
       }
     ],
     "verified": true,
@@ -10142,7 +11207,12 @@
         "date": "2026-03-19"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "609 SE Pine St, Roseburg, OR 97470",
+    "coordinates": {
+      "lat": 43.20978,
+      "lng": -123.34688
+    }
   },
   {
     "id": "plaisance-ranch-winery",
@@ -10153,6 +11223,10 @@
       {
         "title": "Plaisance Ranch Winery collection, 2013 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/rogue-valley/plaisance-ranch-winery-collection/"
+      },
+      {
+        "title": "Plaisance Ranch Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/plaisance-ranch/"
       }
     ],
     "verified": true,
@@ -10164,7 +11238,12 @@
         "date": "2013-08-02"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "16955 Water Gap Rd, Williams, OR 97544",
+    "coordinates": {
+      "lat": 42.24086,
+      "lng": -123.27328
+    }
   },
   {
     "id": "pray-tell-wines",
@@ -10289,6 +11368,10 @@
       {
         "title": "Hayworth Estate Wines collection, 2019 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/hayworth-estate-wines-collection/"
+      },
+      {
+        "title": "Hayworth Estate Wines: address (www.hayworthwines.com)",
+        "url": "https://www.hayworthwines.com/"
       }
     ],
     "verified": true,
@@ -10300,7 +11383,12 @@
         "date": "2019-07-29"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "92075 Powerline Road Eugene OR 97408",
+    "coordinates": {
+      "lat": 44.16583,
+      "lng": -123.09928
+    }
   },
   {
     "id": "ryan-rose-wine",
@@ -10311,6 +11399,10 @@
       {
         "title": "Ryan Rose Wine collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/rogue-valley/ryan-rose-wine-collection/"
+      },
+      {
+        "title": "Ryan Rose Wine: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/ryan-rose-wine/"
       }
     ],
     "verified": true,
@@ -10322,7 +11414,12 @@
         "date": "2026-03-14"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "245 N Front St, Central Point, OR 97502",
+    "coordinates": {
+      "lat": 42.3759,
+      "lng": -122.91999
+    }
   },
   {
     "id": "sacred-shores-wines",
@@ -10382,6 +11479,10 @@
       {
         "title": "Sealionne Wines collection, 2025 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/sealionne-wines-collection/"
+      },
+      {
+        "title": "Sealionne: address (www.sealionne.com)",
+        "url": "https://www.sealionne.com/"
       }
     ],
     "verified": true,
@@ -10393,7 +11494,12 @@
         "date": "2025-11-20"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "28155 NE Bell Road Newberg, Oregon 97132",
+    "coordinates": {
+      "lat": 45.33204,
+      "lng": -122.94774
+    }
   },
   {
     "id": "ocelli-cellars",
@@ -10463,11 +11569,20 @@
       {
         "title": "Oral history interview with Sirpa Peacock, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/sirpa-peacock/"
+      },
+      {
+        "title": "Appassionata Estate: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/appassionata-estate/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "17150 NE Hillside Dr, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.33939,
+      "lng": -123.01767
+    }
   },
   {
     "id": "solena-estate",
@@ -10490,6 +11605,10 @@
       {
         "title": "Oral history interview with Laurent Montalieu (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/interviews/laurent-montalieu-2/"
+      },
+      {
+        "title": "Soléna Estate: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/solena-estate/"
       }
     ],
     "verified": false,
@@ -10500,7 +11619,12 @@
         "title": "SoléNa Estate collection",
         "date": "2026-07-15"
       }
-    ]
+    ],
+    "address": "17096 NE Woodland Loop Rd, Yamhill, OR 97148",
+    "coordinates": {
+      "lat": 45.34288,
+      "lng": -123.13101
+    }
   },
   {
     "id": "bridgeview-winery",
@@ -10510,11 +11634,20 @@
       {
         "title": "Soléna Estate collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/solena-estate-collection/"
+      },
+      {
+        "title": "Bridgeview Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/bridgeview-vineyards-winery/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "4210 Holland Loop Rd, Cave Junction, OR 97523",
+    "coordinates": {
+      "lat": 42.12417,
+      "lng": -123.59736
+    }
   },
   {
     "id": "st-josefs-winery",
@@ -10524,6 +11657,10 @@
       {
         "title": "St. Josef’s Winery collection (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/st-josefs-winery-collection/"
+      },
+      {
+        "title": "St. Josef's Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/st-josefs-vineyards-winery/"
       }
     ],
     "verified": true,
@@ -10534,7 +11671,12 @@
         "title": "St. Josef’S Winery collection"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "28836 S Barlow Rd, Canby, OR 97013",
+    "coordinates": {
+      "lat": 45.19103,
+      "lng": -122.72249
+    }
   },
   {
     "id": "clos-griotte",
@@ -10549,6 +11691,10 @@
       {
         "title": "Clos Griotte collection, 2026 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/clos-griotte-collection/"
+      },
+      {
+        "title": "Clos Griotte: address (www.closgriotte.com)",
+        "url": "https://www.closgriotte.com/"
       }
     ],
     "verified": true,
@@ -10560,7 +11706,12 @@
         "date": "2026-03-04"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "20700 SE Cherry Blossom Lane Amity, OR 97101",
+    "coordinates": {
+      "lat": 45.11061,
+      "lng": -123.13503
+    }
   },
   {
     "id": "chateau-ste-michelle",
@@ -10586,6 +11737,10 @@
       {
         "title": "Twill Cellars collection, 2023 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/twill-cellars-collection/"
+      },
+      {
+        "title": "Twill Cellars: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/twill-cellars/"
       }
     ],
     "verified": true,
@@ -10597,7 +11752,12 @@
         "date": "2023-11-14"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "21775 SW Ribera Ln, West Linn, OR 97068",
+    "coordinates": {
+      "lat": 45.36296,
+      "lng": -122.68599
+    }
   },
   {
     "id": "viento-wines",
@@ -10633,6 +11793,10 @@
       {
         "title": "Enso Winery collection, 2023 (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/portland-urban-wineries/enso-winery-collection/"
+      },
+      {
+        "title": "ENSO Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/enso-winery/"
       }
     ],
     "verified": true,
@@ -10644,7 +11808,12 @@
         "date": "2023-03-09"
       }
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "1416 SE Stark St, Portland, OR 97214",
+    "coordinates": {
+      "lat": 45.51928,
+      "lng": -122.65112
+    }
   },
   {
     "id": "saffron-fields",
@@ -10673,6 +11842,10 @@
       {
         "title": "Saffron Fields Vineyard 2011 Pinot Noir, Yamhill-Carlton, $55 (Great Northwest Wine)",
         "url": "https://greatnorthwestwine.com/2015/01/16/saffron-fields-vineyard-2011-pinot-noir-yamhill-carlton-55/"
+      },
+      {
+        "title": "Saffron Fields: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/saffron-fields-vineyard/"
       }
     ],
     "verified": false,
@@ -10683,7 +11856,12 @@
         "title": "Saffron Fields collection",
         "date": "2020-08-13"
       }
-    ]
+    ],
+    "address": "18748 NE Laughlin Rd, Yamhill, OR 97148",
+    "coordinates": {
+      "lat": 45.35276,
+      "lng": -123.13586
+    }
   },
   {
     "id": "linne-calodo",
@@ -11612,10 +12790,19 @@
       {
         "title": "Barking Dog (Willamette Valley Wineries Association member listing)",
         "url": "https://www.willamettewines.com/listing/barking-dog/4926/"
+      },
+      {
+        "title": "Barking Dog: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/barking-dog-wine/"
       }
     ],
     "verified": false,
-    "type": "winery"
+    "type": "winery",
+    "address": "258 N Kutch St, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.29524,
+      "lng": -123.17843
+    }
   },
   {
     "id": "battle-creek-cellars",
@@ -12315,11 +13502,20 @@
       {
         "title": "La Biblioteca Wine (Willamette Valley Wineries Association member listing)",
         "url": "https://www.willamettewines.com/listing/la-biblioteca-wine/3152/"
+      },
+      {
+        "title": "La Biblioteca: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/la-biblioteca/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "1326 OR-99W, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27291,
+      "lng": -123.01544
+    }
   },
   {
     "id": "lachini-vineyards",
@@ -12704,12 +13900,21 @@
       {
         "title": "Raptor Ridge Winery (Willamette Valley Wineries Association member listing)",
         "url": "https://www.willamettewines.com/listing/raptor-ridge-winery/132/"
+      },
+      {
+        "title": "Raptor Ridge Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/raptor-ridge-winery/"
       }
     ],
     "verified": true,
     "type": "winery",
     "founded": 1995,
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "18700 SW Hillsboro Hwy, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.3842,
+      "lng": -122.94954
+    }
   },
   {
     "id": "rh-wines",
@@ -12828,11 +14033,20 @@
       {
         "title": "Exploring Oregon's 'Other' Wines (Cream Wine Company)",
         "url": "https://creamwine.com/news/2011/02/exploring-oregons-other-wines-by-paul-gregutt.php"
+      },
+      {
+        "title": "Sineann: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/sineann/"
       }
     ],
     "verified": false,
     "type": "winery",
-    "founded": 1994
+    "founded": 1994,
+    "address": "8400 Champoeg Rd NE, St Paul, OR 97137",
+    "coordinates": {
+      "lat": 45.24696,
+      "lng": -122.88684
+    }
   },
   {
     "id": "stephen-goff-wines",
@@ -12873,11 +14087,20 @@
       {
         "title": "Sweet Cheeks Winery, Crow, Ore (Stone Business)",
         "url": "https://www.stonebusiness.us/?p=429"
+      },
+      {
+        "title": "Sweet Cheeks Winery: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/sweet-cheeks-winery/"
       }
     ],
     "verified": false,
     "type": "winery",
-    "founded": 2005
+    "founded": 2005,
+    "address": "27007 Briggs Hill Rd, Eugene, OR 97405",
+    "coordinates": {
+      "lat": 43.95551,
+      "lng": -123.27394
+    }
   },
   {
     "id": "terra-vina-wines",
@@ -12960,11 +14183,20 @@
       {
         "title": "David Hill legacy (David Hill Vineyards & Winery)",
         "url": "https://davidhillwinery.com/legacy.html"
+      },
+      {
+        "title": "David Hill: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/david-hill-vineyards-winery/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "46350 NW David Hill Rd, Forest Grove, OR 97116",
+    "coordinates": {
+      "lat": 45.5499,
+      "lng": -123.15386
+    }
   },
   {
     "id": "melrose",
@@ -12987,11 +14219,20 @@
       {
         "title": "Melrose Vineyards (Umpqua Valley Winegrowers)",
         "url": "https://www.umpquavalleywineries.org/wineries/melrose-vineyards/"
+      },
+      {
+        "title": "Melrose: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/melrose-vineyards/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "885 Melqua Rd, Roseburg, OR 97471",
+    "coordinates": {
+      "lat": 43.25876,
+      "lng": -123.45684
+    }
   },
   {
     "id": "folin-cellars",
@@ -13096,11 +14337,20 @@
       {
         "title": "Anam Cara Cellars: Celtic Pride in Every Bottle (The Prince of Pinot)",
         "url": "http://www.princeofpinot.com/article/686/"
+      },
+      {
+        "title": "Anam Cara: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/anam-cara-cellars/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "306 N Main St, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.30205,
+      "lng": -122.97906
+    }
   },
   {
     "id": "spindrift-cellars",
@@ -13174,11 +14424,20 @@
       {
         "title": "Enjoying the Ride (Oregon Wine Press)",
         "url": "https://www.oregonwinepress.com/enjoying-the-ride-airlie"
+      },
+      {
+        "title": "Airlie: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/airlie-winery/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "15305 Dunn Forest Rd, Monmouth, OR 97361",
+    "coordinates": {
+      "lat": 44.72491,
+      "lng": -123.3475
+    }
   },
   {
     "id": "seven-of-hearts",
@@ -13223,11 +14482,20 @@
       {
         "title": "Oak Knoll Winery Collection (Oregon Wine History Archive, Linfield University)",
         "url": "https://digitalcommons.linfield.edu/owha_oakknoll"
+      },
+      {
+        "title": "Oak Knoll: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/oak-knoll-winery/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "29700 SW Burkhalter Rd, Hillsboro, OR 97123",
+    "coordinates": {
+      "lat": 45.46161,
+      "lng": -122.98188
+    }
   },
   {
     "id": "tero-estates",
@@ -13277,11 +14545,20 @@
       {
         "title": "Coelho Winery (Oregon State University)",
         "url": "https://solutions.oregonstate.edu/partners/coelho-winery"
+      },
+      {
+        "title": "Coelho: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/coelho-winery/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "111 5th St, Amity, OR 97101",
+    "coordinates": {
+      "lat": 45.11553,
+      "lng": -123.2064
+    }
   },
   {
     "id": "agate-ridge",
@@ -13376,11 +14653,20 @@
       {
         "title": "Iris Vineyards (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/1861/index.html"
+      },
+      {
+        "title": "Iris Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/iris-vineyards/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "195 E Palmer Ave, Cottage Grove, OR 97424",
+    "coordinates": {
+      "lat": 43.79967,
+      "lng": -123.03585
+    }
   },
   {
     "id": "patton-valley",
@@ -13400,11 +14686,20 @@
       {
         "title": "Patton Valley Vineyard (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/1238/index.html"
+      },
+      {
+        "title": "Patton Valley: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/patton-valley-wines/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "2007 Main St, Forest Grove, OR 97116",
+    "coordinates": {
+      "lat": 45.52089,
+      "lng": -123.11197
+    }
   },
   {
     "id": "scott-paul",
@@ -13455,10 +14750,19 @@
       {
         "title": "Cliff Creek Cellars (1859 Oregon's Magazine)",
         "url": "https://1859oregonmagazine.com/guidebook/cliff-creek-cellars/"
+      },
+      {
+        "title": "Cliff Creek: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/cliff-creek-cellars-at-the-vineyard/"
       }
     ],
     "verified": false,
-    "type": "winery"
+    "type": "winery",
+    "address": "1015 McDonough Rd, Gold Hill, OR 97525",
+    "coordinates": {
+      "lat": 42.50823,
+      "lng": -122.9746
+    }
   },
   {
     "id": "ledger-david",
@@ -13532,11 +14836,20 @@
       {
         "title": "Season Cellars (Travel Southern Oregon)",
         "url": "https://www.southernoregon.org/cities/season-cellars/"
+      },
+      {
+        "title": "Season: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/season-cellars/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "305 Melrose Rd, Roseburg, OR 97471",
+    "coordinates": {
+      "lat": 43.24108,
+      "lng": -123.39791
+    }
   },
   {
     "id": "kudos",
@@ -13582,11 +14895,20 @@
       {
         "title": "Blakeslee Vineyard Estate (The Prince of Pinot)",
         "url": "http://www.princeofpinot.com/winery/1718/"
+      },
+      {
+        "title": "Blakeslee: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/blakeslee-vineyard-estate/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "20875 SW Chapman Rd, Sherwood, OR 97140",
+    "coordinates": {
+      "lat": 45.34614,
+      "lng": -122.89302
+    }
   },
   {
     "id": "dancin",
@@ -13604,11 +14926,20 @@
       {
         "title": "Dancin Vineyards (1859 Oregon's Magazine)",
         "url": "https://1859oregonmagazine.com/guidebook/dancin-vineyards/"
+      },
+      {
+        "title": "DanCin: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/dancin-vineyards/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "4477 S Stage Rd, Medford, OR 97501",
+    "coordinates": {
+      "lat": 42.30477,
+      "lng": -122.94591
+    }
   },
   {
     "id": "firesteed",
@@ -13635,11 +14966,20 @@
       {
         "title": "Firesteed Cellars (Duck Pond Cellars)",
         "url": "https://duckpondcellars.com/pages/firesteed"
+      },
+      {
+        "title": "Firesteed: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/firesteed-cellars/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "8380 NE Worden Hill Rd, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27936,
+      "lng": -123.03176
+    }
   },
   {
     "id": "deer-creek",
@@ -13659,11 +14999,20 @@
       {
         "title": "Deer Creek Vineyards (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/2757/index.html"
+      },
+      {
+        "title": "Deer Creek: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/deer-creek-vineyards/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "2680 Deer Creek Rd, Selma, OR 97538",
+    "coordinates": {
+      "lat": 42.27404,
+      "lng": -123.57337
+    }
   },
   {
     "id": "longplay",
@@ -13686,11 +15035,20 @@
       {
         "title": "Longplay Wine (Longplay Wine)",
         "url": "https://www.longplaywine.com/"
+      },
+      {
+        "title": "Longplay: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/longplay-wine/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "888 Industrial Pkwy, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.29342,
+      "lng": -122.94975
+    }
   },
   {
     "id": "ancient-cellars",
@@ -13713,11 +15071,20 @@
       {
         "title": "Ancient Cellars Winery (Oregon Wine Board)",
         "url": "https://www.oregonwine.org/?p=12395"
+      },
+      {
+        "title": "Ancient Cellars: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/ancient-cellars-winery/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "1242 SE Maple St, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27393,
+      "lng": -123.01212
+    }
   },
   {
     "id": "zimri-cellars",
@@ -13834,11 +15201,20 @@
       {
         "title": "Witness Tree Vineyard (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/769/index.html"
+      },
+      {
+        "title": "Witness Tree: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/witness-tree-vineyard/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "7111 Spring Valley Rd NW, Salem, OR 97304",
+    "coordinates": {
+      "lat": 45.03561,
+      "lng": -123.11833
+    }
   },
   {
     "id": "thistle",
@@ -13965,7 +15341,12 @@
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "4985 Battle Creek Rd SE, Salem, OR 97302",
+    "coordinates": {
+      "lat": 44.88303,
+      "lng": -123.01177
+    }
   },
   {
     "id": "a-blooming-hill-vineyard",
@@ -14019,7 +15400,12 @@
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "907 W 3rd Ave, Eugene, OR 97402",
+    "coordinates": {
+      "lat": 44.0566,
+      "lng": -123.10659
+    }
   },
   {
     "id": "lujon",
@@ -14065,11 +15451,20 @@
       {
         "title": "Abiqua Wind Vineyard (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/2762/"
+      },
+      {
+        "title": "Abiqua Wind: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/abiqua-wind-vineyard/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "19822 McKillop Rd, Scotts Mills, OR 97375",
+    "coordinates": {
+      "lat": 45.00457,
+      "lng": -122.65954
+    }
   },
   {
     "id": "jezebel",
@@ -14110,11 +15505,20 @@
       {
         "title": "Cubanisimo Vineyards (Oregon Wine History Archive)",
         "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/cubanisimo-vineyards/"
+      },
+      {
+        "title": "Cubanisimo Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/cubanisimo-vineyards/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "1754 Best Rd NW, Salem, OR 97304",
+    "coordinates": {
+      "lat": 44.9595,
+      "lng": -123.13248
+    }
   },
   {
     "id": "artisanal-wine-cellars",
@@ -14134,11 +15538,20 @@
       {
         "title": "Artisanal Wine Cellars (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/715/"
+      },
+      {
+        "title": "Artisanal Wine Cellars: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/artisanal-wine-cellars/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "614 E 1st St, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.30025,
+      "lng": -122.97343
+    }
   },
   {
     "id": "macindoe",
@@ -14245,7 +15658,12 @@
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "3189 OR-35, Hood River, OR 97031",
+    "coordinates": {
+      "lat": 45.63409,
+      "lng": -121.51278
+    }
   },
   {
     "id": "arcane-cellars",
@@ -14295,11 +15713,20 @@
       {
         "title": "LaVelle Vineyards (Oregon Wine Board)",
         "url": "https://www.oregonwine.org/?p=13807"
+      },
+      {
+        "title": "LaVelle: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/lavelle-vineyards/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "89697 Sheffler Rd, Elmira, OR 97437",
+    "coordinates": {
+      "lat": 44.09168,
+      "lng": -123.37592
+    }
   },
   {
     "id": "emerson",
@@ -14374,11 +15801,20 @@
       {
         "title": "Hawks View Winery (Winetraveler)",
         "url": "https://www.winetraveler.com/winery/hawks-view-winery/"
+      },
+      {
+        "title": "Hawks View: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/hawks-view-winery/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "20210 SW Conzelmann Rd, Sherwood, OR 97140",
+    "coordinates": {
+      "lat": 45.37491,
+      "lng": -122.87866
+    }
   },
   {
     "id": "obsidian",
@@ -14434,11 +15870,20 @@
       {
         "title": "Upper Five Vineyard (Oregon Wine Board)",
         "url": "https://www.oregonwine.org/?p=14343"
+      },
+      {
+        "title": "Upper Five: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/upper-five-vineyard/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "1125 Morey Rd, Talent, OR 97540",
+    "coordinates": {
+      "lat": 42.22045,
+      "lng": -122.7985
+    }
   },
   {
     "id": "quintet",
@@ -14489,11 +15934,20 @@
       {
         "title": "Marshall Davis Wines (Yamhill-Carlton AVA)",
         "url": "https://yamhillcarlton.org/?p=4241"
+      },
+      {
+        "title": "Marshall Davis: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/marshall-davis-tasting-room/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "125 W Main St, Yamhill, OR 97148",
+    "coordinates": {
+      "lat": 45.34146,
+      "lng": -123.18824
+    }
   },
   {
     "id": "zenith",
@@ -14520,11 +15974,20 @@
       {
         "title": "Zenith Vineyard (Zenith Vineyard)",
         "url": "https://www.zenithvineyard.com/"
+      },
+      {
+        "title": "Zenith: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/zenith-vineyard/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "5655 Zena Rd NW, Salem, OR 97304",
+    "coordinates": {
+      "lat": 45.02836,
+      "lng": -123.1516
+    }
   },
   {
     "id": "pyrenees",
@@ -14661,11 +16124,20 @@
       {
         "title": "Cardwell Hill Cellars (Cardwell Hill Cellars)",
         "url": "https://www.cardwellhillwine.com/"
+      },
+      {
+        "title": "Cardwell Hill: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/cardwell-hill-cellars/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "24241 Cardwell Hill Dr, Philomath, OR 97370",
+    "coordinates": {
+      "lat": 44.59911,
+      "lng": -123.40814
+    }
   },
   {
     "id": "kason",
@@ -14688,11 +16160,20 @@
       {
         "title": "Kason Vineyards (Oregon Wine Board)",
         "url": "https://www.oregonwine.org/?p=13156"
+      },
+      {
+        "title": "Kason: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/kason-vineyards/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "7200 NW Bony Rd, Yamhill, OR 97148",
+    "coordinates": {
+      "lat": 45.35158,
+      "lng": -123.18818
+    }
   },
   {
     "id": "highland-springs",
@@ -14729,11 +16210,20 @@
       {
         "title": "Hamacher Wines (Oregon Wine Board)",
         "url": "https://www.oregonwine.org/?p=13038"
+      },
+      {
+        "title": "Hamacher: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/hamacher-wines/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "14665 SW Winery Ln, Beaverton, OR 97007",
+    "coordinates": {
+      "lat": 45.41428,
+      "lng": -122.8658
+    }
   },
   {
     "id": "spangler-vineyards",
@@ -14788,7 +16278,12 @@
     "aka": [
       "Tyee"
     ],
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "26335 Greenberry Rd, Corvallis, OR 97333",
+    "coordinates": {
+      "lat": 44.45639,
+      "lng": -123.32542
+    }
   },
   {
     "id": "evergreen",
@@ -14993,11 +16488,20 @@
       {
         "title": "Archer Vineyard Estate (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/2604/index.html"
+      },
+      {
+        "title": "Archer: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/archer-vineyard/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "32230 NE Old Parrett Mountain Rd, Newberg, OR 97132",
+    "coordinates": {
+      "lat": 45.31416,
+      "lng": -122.909
+    }
   },
   {
     "id": "terrapin-cellars",
@@ -15039,11 +16543,20 @@
       {
         "title": "Home (Rocky Point Cellars)",
         "url": "https://www.rockypointcellars.com"
+      },
+      {
+        "title": "Rocky Point: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/rocky-point-cellars/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "258 N Kutch St, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.29524,
+      "lng": -123.17843
+    }
   },
   {
     "id": "hawkins-cellars",
@@ -15066,11 +16579,20 @@
       {
         "title": "Hawkins Cellars (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/2850/index.html"
+      },
+      {
+        "title": "Hawkins Cellars: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/hawkins-cellars/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "990 OR-99W, Dundee, OR 97115",
+    "coordinates": {
+      "lat": 45.27552,
+      "lng": -123.01312
+    }
   },
   {
     "id": "kandarian",
@@ -15179,11 +16701,20 @@
       {
         "title": "WildAire (Yamhill-Carlton AVA)",
         "url": "https://yamhillcarlton.org/wineries/wildaire"
+      },
+      {
+        "title": "WildAire: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/wildaire/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "801 N Scott St, Carlton, OR 97111",
+    "coordinates": {
+      "lat": 45.29945,
+      "lng": -123.18216
+    }
   },
   {
     "id": "routestock-cellars",
@@ -15569,11 +17100,20 @@
       {
         "title": "Kathken Vineyards (The Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/2770/index.html"
+      },
+      {
+        "title": "Kathken Vineyards: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/kathken-vineyards/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "5737 Orchard Heights Rd NW, Salem, OR 97304",
+    "coordinates": {
+      "lat": 44.96921,
+      "lng": -123.14794
+    }
   },
   {
     "id": "jacob-williams",
@@ -15642,11 +17182,20 @@
       {
         "title": "Redgate Winery & Vineyard for Sale (Oregon Wine Board)",
         "url": "https://industry.oregonwine.org/?p=40015"
+      },
+      {
+        "title": "Redgate: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/redgate-winery-and-vineyards/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "8175 Buena Vista Rd, Independence, OR 97351",
+    "coordinates": {
+      "lat": 44.81512,
+      "lng": -123.15851
+    }
   },
   {
     "id": "velocity",
@@ -15852,11 +17401,20 @@
       {
         "title": "Monte Ferro Wines (Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/2458/index.html"
+      },
+      {
+        "title": "Monte Ferro: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/monte-ferro-winery/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "2240 Prestwick Rd, Lake Oswego, OR 97034",
+    "coordinates": {
+      "lat": 45.41706,
+      "lng": -122.69957
+    }
   },
   {
     "id": "noble-estate",
@@ -15955,11 +17513,20 @@
       {
         "title": "Trathen Hall Wines (Prince of Pinot)",
         "url": "https://www.princeofpinot.com/winery/2779/index.html"
+      },
+      {
+        "title": "Trathen Hall: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/trathen-hall-wines/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "26421 OR-47, Gaston, OR 97119",
+    "coordinates": {
+      "lat": 45.40776,
+      "lng": -123.12416
+    }
   },
   {
     "id": "heart-catcher",
@@ -16032,7 +17599,12 @@
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "85728 Telephone Pole Rd, Milton-Freewater, OR 97862",
+    "coordinates": {
+      "lat": 45.96366,
+      "lng": -118.36624
+    }
   },
   {
     "id": "merriman",
@@ -16228,11 +17800,20 @@
       {
         "title": "Willful Wine Co. (Oregon Wine Press)",
         "url": "https://www.oregonwinepress.com/willfull-wine"
+      },
+      {
+        "title": "Willful: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/willful-wines/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "5705 NE 105th Ave, Portland, OR 97220",
+    "coordinates": {
+      "lat": 45.5639,
+      "lng": -122.55479
+    }
   },
   {
     "id": "hood-crest",
@@ -16401,11 +17982,20 @@
       {
         "title": "Seven Bridges Winery (Seven Bridges Winery)",
         "url": "https://sevenbridgeswinery.com/"
+      },
+      {
+        "title": "Seven Bridges: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/seven-bridges-winery/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "2303 N Harding Ave, Portland, OR 97227",
+    "coordinates": {
+      "lat": 45.53933,
+      "lng": -122.67835
+    }
   },
   {
     "id": "vinstrata",
@@ -16460,11 +18050,20 @@
       {
         "title": "Springhill Cellars, Albany, Oregon (Springhill Cellars, archived 2016)",
         "url": "https://web.archive.org/web/20160109162443/http://www.springhillcellars.com/"
+      },
+      {
+        "title": "Springhill Cellars: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/springhill-cellars-winery/"
       }
     ],
     "verified": true,
     "type": "winery",
-    "verifiedBy": "jev"
+    "verifiedBy": "jev",
+    "address": "2920 NW Scenic Dr, Albany, OR 97321",
+    "coordinates": {
+      "lat": 44.67347,
+      "lng": -123.14538
+    }
   },
   {
     "id": "la-dolce-vita",
@@ -16641,5 +18240,74 @@
     "verified": true,
     "type": "winery",
     "verifiedBy": "jev"
+  },
+  {
+    "id": "la-randonnee",
+    "type": "winery",
+    "name": "La Randonnée",
+    "aka": [
+      "La Randonnée Wines",
+      "La Randonnee"
+    ],
+    "summary": "Micro producer of Willamette Valley wines from certified sustainable fruit, started by Kevin and Clodagh Green with the 2014 vintage. Named for the French word for a hike; tastings are private, by appointment.",
+    "founded": 2014,
+    "place": "Hillsboro, OR",
+    "sources": [
+      {
+        "title": "About Us (La Randonnée Wines)",
+        "url": "https://www.larandonneewines.com/about-us.html"
+      },
+      {
+        "title": "Private Tastings (La Randonnée Wines)",
+        "url": "https://www.larandonneewines.com/private-tastings.html"
+      },
+      {
+        "title": "La Randonnée: tasting room (Oregon Wine Board directory)",
+        "url": "https://www.oregonwine.org/wineries/la-randonnee/"
+      },
+      {
+        "title": "La Randonnée Wines collection, 2020 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/la-randonnee-wines-collection/"
+      }
+    ],
+    "verified": false,
+    "interviews": [
+      {
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/la-randonnee-wines-collection/",
+        "title": "La Randonnée Wines collection",
+        "date": "2020-07-30"
+      }
+    ],
+    "address": "806 E Main St, Hillsboro, OR 97123",
+    "coordinates": {
+      "lat": 45.52227,
+      "lng": -122.97707
+    }
+  },
+  {
+    "id": "ze-wines",
+    "type": "winery",
+    "name": "Zē Wines",
+    "aka": [
+      "Ze Wines"
+    ],
+    "summary": "Queer-owned label founded in 2021 by winemaker Zane Morris, making affordable, low-intervention wines from lesser-known grapes, including American hybrids. Its first wine came from one ton of 2022 fruit; it is now made at Remy Wines in Dayton.",
+    "founded": 2021,
+    "place": "Portland, OR",
+    "sources": [
+      {
+        "title": "About Zē Wines (Zē Wines)",
+        "url": "https://www.zewines.com/pages/about-ze-wines"
+      },
+      {
+        "title": "Four local wineries with a PSU connection (Portland State University, 2025)",
+        "url": "https://www.pdx.edu/news/four-local-wineries-psu-connection"
+      },
+      {
+        "title": "Queer Winemakers Shake Up the Industry (Portland Mercury, 2026)",
+        "url": "https://www.portlandmercury.com/food-and-drink/queer-winemakers-shake-up-the-industry/"
+      }
+    ],
+    "verified": false
   }
 ]

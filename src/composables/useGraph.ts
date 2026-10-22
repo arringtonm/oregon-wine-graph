@@ -273,6 +273,9 @@ const state = reactive({
   recent: readRecent(),
   // Show the visible nodes as an accessible list in place of the canvas
   listView: readListView(),
+  // Show the records with a place on a map, in place of the canvas (GeoMap.vue). Not
+  // remembered: each visit's first map is a billed Mapbox load, so it opens when asked for
+  mapView: false,
   // Text for the page's polite live region: selection changes, search result counts
   announcement: '',
   // Bumped to ask the detail panel to move keyboard focus to its heading
@@ -302,9 +305,16 @@ const state = reactive({
 })
 
 // 'zoom' is the tour's "Getting around": zoom and Fit, with Back, Forward, History and Reset
-export type Hint = 'node' | 'search' | 'guides' | 'filters' | 'graph' | 'list' | 'random' | 'reset' | 'controls' | 'zoom'
+export type Hint = 'node' | 'search' | 'guides' | 'filters' | 'graph' | 'map' | 'list' | 'random' | 'reset' | 'controls' | 'zoom'
 
 const APP_TITLE = 'Oregon Wine Graph'
+
+// Graph, map or list: what fills the space between the sidebars
+export type View = 'graph' | 'map' | 'list'
+function showView(view: View) {
+  state.listView = view === 'list'
+  state.mapView = view === 'map'
+}
 
 // Says something to screen-reader users through the page's live region
 function announce(text: string) {
@@ -1008,6 +1018,7 @@ export function useGraph() {
     removeEdge,
     updateEdge,
     selectNextUnverified,
+    showView,
     init,
   }
 }

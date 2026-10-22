@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import cytoscape, { type Core, type ElementDefinition, type StylesheetJson } from 'cytoscape'
 import fcose from 'cytoscape-fcose'
-import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
-import { edgeLabel, formatYears, nodeYears, rememberCollapsed, useGraph } from '../composables/useGraph'
+import { computed, defineAsyncComponent, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
+import { edgeLabel, formatYears, nodeYears, rememberCollapsed, useGraph, type View } from '../composables/useGraph'
 import { EDGE_RULES, NODE_TYPES } from '../data/schema'
 import savedLayoutFile from '../data/layout.json'
 import { frame } from '../graph/framing'
@@ -31,6 +31,13 @@ import SearchBox from './SearchBox.vue'
 import Tip from './Tip.vue'
 import ZoomControls from './ZoomControls.vue'
 import AboutButton from './AboutButton.vue'
+
+// The map view (GeoMap.vue, with Mapbox) is its own download, fetched when the reader points
+// at or focuses the Map switch, so it's usually ready by the time they choose it. Offered only
+// where the build has a Mapbox token
+const loadMap = () => import('./GeoMap.vue')
+const GeoMap = defineAsyncComponent(loadMap)
+const mapAvailable = !!import.meta.env.VITE_MAPBOX_TOKEN
 
 cytoscape.use(fcose)
 
@@ -61,7 +68,31 @@ const {
   randomNodeId,
   startTour,
   dismissTourNudge,
+  showView,
 } = useGraph()
+
+// Whether the graph itself is showing, rather than the map or the list
+const onGraph = computed(() => !state.listView && !state.mapView)
+const currentView = computed(() => (state.listView ? 'list' : state.mapView ? 'map' : 'graph'))
+// Once opened the map stays, hidden while other views show: each map created is a billed load
+const mapOpened = ref(false)
+const geoMap = ref<{ fit: () => void; zoomBy: (factor: number) => void; shown: () => void } | null>(null)
+watch(
+  () => state.mapView,
+  (open) => {
+    if (!open) return
+    if (mapOpened.value) void nextTick(() => geoMap.value?.shown())
+    mapOpened.value = true
+  },
+  { immediate: true },
+)
+// The tour points at the graph's own controls and nodes
+watch(
+  () => state.tour,
+  (step) => {
+    if (step !== null && state.mapView) state.mapView = false
+  },
+)
 
 // The graph corner's count, in readers' words: "841 of 1,417 people and places · 1,806
 // connections" while the connected core leaves some out, otherwise "1,417 people and places · …"
@@ -89,8 +120,8 @@ async function goRandom() {
   invite.value = pickInvite(invite.value)
   const id = randomNodeId()
   if (!id) return
-  // The overlay belongs to the graph; the list view picks straight away
-  if (!state.listView) {
+  // The overlay belongs to the graph; the map and list views pick straight away
+  if (onGraph.value) {
     arranging.value = true
     await new Promise((done) => setTimeout(done, RANDOM_PAUSE_MS))
     arranging.value = false
@@ -409,6 +440,7 @@ function fitOpening() {
 
 // The Fit button: the same framing, but gliding there rather than jumping
 function fitAnimated() {
+  if (state.mapView) return geoMap.value?.fit()
   if (!cy) return
   const from = { zoom: cy.zoom(), pan: { ...cy.pan() } }
   fit()
@@ -450,6 +482,7 @@ function fit(closer = 1) {
 
 // Zooms about the middle of what is visible between the sidebars
 function zoomBy(factor: number) {
+  if (state.mapView) return geoMap.value?.zoomBy(factor)
   if (!cy) return
   const area = visibleArea()
   cy.zoom({
@@ -476,7 +509,8 @@ function onKey(event: KeyboardEvent) {
     return
   }
   const factor = event.key === '+' || event.key === '=' ? 1.3 : event.key === '-' || event.key === '_' ? 1 / 1.3 : 0
-  if (!factor) return
+  // With the map focused, Mapbox zooms with these keys itself
+  if (!factor || (event.target as HTMLElement | null)?.closest?.('.geo-map')) return
   event.preventDefault()
   zoomBy(factor)
 }
@@ -1056,7 +1090,7 @@ watch(
     cy?.nodes('.hinted').removeClass('hinted')
     if (hint !== 'node') return
     state.hintNodeId = null
-    if (!cy || state.listView) return
+    if (!cy || !onGraph.value) return
     const view = cy.extent()
     // With the tour open, clear of its card, centred on the screen (TourCard.vue: up to
     // 28rem wide), with room for the ring
@@ -1126,14 +1160,15 @@ watch(
       tabindex="-1"
       role="img"
       :aria-label="canvasLabel"
-      :aria-hidden="state.listView ? 'true' : undefined"
+      :aria-hidden="onGraph ? undefined : 'true'"
     ></div>
+    <GeoMap v-if="mapAvailable && mapOpened" v-show="state.mapView" ref="geoMap" />
     <GraphList v-if="state.listView" class="graph-canvas__list" />
-    <div v-show="tooltip.show && !state.listView" class="graph-canvas__tooltip" aria-hidden="true" :style="{ left: `${tooltip.x}px`, top: `${tooltip.y}px` }">
+    <div v-show="tooltip.show && onGraph" class="graph-canvas__tooltip" aria-hidden="true" :style="{ left: `${tooltip.x}px`, top: `${tooltip.y}px` }">
       <strong>{{ tooltip.title }}</strong>
       <span v-if="tooltip.detail">{{ tooltip.detail }}</span>
     </div>
-    <div v-if="arranging && !state.listView" class="graph-canvas__arranging" role="status">
+    <div v-if="arranging && onGraph" class="graph-canvas__arranging" role="status">
       <span class="graph-canvas__arranging-card">
         <span class="graph-canvas__dots" aria-hidden="true"><i></i><i></i><i></i></span>
         {{ busyPhrase }}…
@@ -1141,7 +1176,7 @@ watch(
     </div>
     <!-- What the filters leave showing, in the graph's corner; the list view has its own count -->
     <!-- On phones the Guides button has no room for the guide showing, so it leads the count -->
-    <p v-show="!state.listView" class="graph-canvas__count" role="status">
+    <p v-show="onGraph" class="graph-canvas__count" role="status">
       <span v-if="activeView" class="graph-canvas__guide">{{ activeView.title }} · </span>{{ shownCount }}
     </p>
     <!-- Who made the site, in the graph's bottom-right corner -->
@@ -1188,10 +1223,11 @@ watch(
       <ToggleGroupRoot
         type="single"
         class="graph-canvas__view"
-        :data-view="state.listView ? 'list' : 'graph'"
+        :data-view="currentView"
+        :data-views="mapAvailable ? 3 : 2"
         aria-label="View"
-        :model-value="state.listView ? 'list' : 'graph'"
-        @update:model-value="(view) => view && (state.listView = view === 'list')"
+        :model-value="currentView"
+        @update:model-value="(view) => view && showView(view as View)"
       >
         <!-- Icons, named "Graph view" and "List view", which their tooltips show (data-tip, as
              a Reka tooltip would fight the switch for its buttons) -->
@@ -1201,6 +1237,21 @@ watch(
             <circle cx="5" cy="6.2" r="2.1" />
             <circle cx="15" cy="5" r="2.1" />
             <circle cx="10" cy="15" r="2.1" />
+          </svg>
+        </ToggleGroupItem>
+        <!-- Two peaks over a ground line: the map of the hills -->
+        <ToggleGroupItem
+          v-if="mapAvailable"
+          value="map"
+          aria-label="Map view"
+          data-tip="Map view"
+          :class="{ 'is-hinted': state.hint === 'map' }"
+          @pointerenter="loadMap"
+          @focus="loadMap"
+        >
+          <svg class="graph-canvas__view-icon" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M1.8 16h16.4L13 7.2l-2.9 4.6L7.2 4.6z" stroke-linejoin="round" />
+            <path d="M5.3 9.2 7.2 7.6l1.6 1.5" />
           </svg>
         </ToggleGroupItem>
         <ToggleGroupItem value="list" aria-label="List view" data-tip="List view" :class="{ 'is-hinted': state.hint === 'list' }">
@@ -1655,6 +1706,23 @@ watch(
 
 .graph-canvas__view[data-view='list']::before {
   transform: translateX(100%);
+}
+
+/* With the map, three choices: the thumb is a third of the track */
+.graph-canvas__view[data-views='3'] {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.graph-canvas__view[data-views='3']::before {
+  width: calc((100% - 6px) / 3);
+}
+
+.graph-canvas__view[data-views='3'][data-view='map']::before {
+  transform: translateX(100%);
+}
+
+.graph-canvas__view[data-views='3'][data-view='list']::before {
+  transform: translateX(200%);
 }
 
 .graph-canvas__toolbar .graph-canvas__view button {

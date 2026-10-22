@@ -78629,5 +78629,173 @@
       }
     ],
     "verified": false
+  },
+  {
+    "id": "kevin-green--founded--la-randonnee",
+    "source": "kevin-green",
+    "target": "la-randonnee",
+    "type": "founded",
+    "startYear": 2014,
+    "sources": [
+      {
+        "title": "About Us (La Randonnée Wines)",
+        "url": "https://www.larandonneewines.com/about-us.html"
+      },
+      {
+        "title": "An extended journey: Alumnus Kevin Green on the road from engineer to winemaker (CU Boulder, 2021)",
+        "url": "https://www.colorado.edu/chbe/2021/09/08/extended-journey-alumnus-kevin-green-road-engineer-winemaker"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "clodagh-green--founded--la-randonnee",
+    "source": "clodagh-green",
+    "target": "la-randonnee",
+    "type": "founded",
+    "startYear": 2014,
+    "sources": [
+      {
+        "title": "About Us (La Randonnée Wines)",
+        "url": "https://www.larandonneewines.com/about-us.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kevin-green--winemaker--la-randonnee",
+    "source": "kevin-green",
+    "target": "la-randonnee",
+    "type": "winemaker",
+    "sources": [
+      {
+        "title": "An extended journey: Alumnus Kevin Green on the road from engineer to winemaker (CU Boulder, 2021)",
+        "url": "https://www.colorado.edu/chbe/2021/09/08/extended-journey-alumnus-kevin-green-road-engineer-winemaker"
+      },
+      {
+        "title": "La Randonnée Wines collection, 2020 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/regions/willamette-valley/la-randonnee-wines-collection/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kevin-green--winemaker--apolloni-vineyards",
+    "source": "kevin-green",
+    "target": "apolloni-vineyards",
+    "type": "winemaker",
+    "note": "Winemaker there by 2020, when his oral history was recorded at Apolloni.",
+    "sources": [
+      {
+        "title": "An extended journey: Alumnus Kevin Green on the road from engineer to winemaker (CU Boulder, 2021)",
+        "url": "https://www.colorado.edu/chbe/2021/09/08/extended-journey-alumnus-kevin-green-road-engineer-winemaker"
+      },
+      {
+        "title": "Oral history interview with Kevin Green, 2020 (Oregon Wine History Archive)",
+        "url": "https://oregonwinehistoryarchive.org/interviews/kevin-green/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "kevin-green--family--clodagh-green",
+    "source": "kevin-green",
+    "target": "clodagh-green",
+    "type": "family",
+    "role": "spouse",
+    "sources": [
+      {
+        "title": "An extended journey: Alumnus Kevin Green on the road from engineer to winemaker (CU Boulder, 2021)",
+        "url": "https://www.colorado.edu/chbe/2021/09/08/extended-journey-alumnus-kevin-green-road-engineer-winemaker"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "zane-morris--founded--ze-wines",
+    "source": "zane-morris",
+    "target": "ze-wines",
+    "type": "founded",
+    "startYear": 2021,
+    "sources": [
+      {
+        "title": "About Zē Wines (Zē Wines)",
+        "url": "https://www.zewines.com/pages/about-ze-wines"
+      },
+      {
+        "title": "Four local wineries with a PSU connection (Portland State University, 2025)",
+        "url": "https://www.pdx.edu/news/four-local-wineries-psu-connection"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "zane-morris--winemaker--ze-wines",
+    "source": "zane-morris",
+    "target": "ze-wines",
+    "type": "winemaker",
+    "sources": [
+      {
+        "title": "About Zē Wines (Zē Wines)",
+        "url": "https://www.zewines.com/pages/about-ze-wines"
+      },
+      {
+        "title": "Queer Winemakers Shake Up the Industry (Portland Mercury, 2026)",
+        "url": "https://www.portlandmercury.com/food-and-drink/queer-winemakers-shake-up-the-industry/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "zane-morris--worked-at--apolloni-vineyards",
+    "source": "zane-morris",
+    "target": "apolloni-vineyards",
+    "type": "worked_at",
+    "role": "events and communications coordinator",
+    "startYear": 2021,
+    "endYear": 2023,
+    "note": "Where he worked when he made his first Zē wine from 2022 fruit \"in the corner of the winery\".",
+    "sources": [
+      {
+        "title": "Zane Morris (LinkedIn)",
+        "url": "https://www.linkedin.com/in/zane-morris-523438114/"
+      },
+      {
+        "title": "About Zē Wines (Zē Wines)",
+        "url": "https://www.zewines.com/pages/about-ze-wines"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "zane-morris--worked-at--12th-and-maple-wine-co",
+    "source": "zane-morris",
+    "target": "12th-and-maple-wine-co",
+    "type": "worked_at",
+    "role": "harvest cellar hand",
+    "startYear": 2020,
+    "endYear": 2020,
+    "sources": [
+      {
+        "title": "Zane Morris (LinkedIn)",
+        "url": "https://www.linkedin.com/in/zane-morris-523438114/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "zane-morris--studied-at--portland-state-university",
+    "source": "zane-morris",
+    "target": "portland-state-university",
+    "type": "studied_at",
+    "role": "Bachelor of Music",
+    "endYear": 2018,
+    "sources": [
+      {
+        "title": "Four local wineries with a PSU connection (Portland State University, 2025)",
+        "url": "https://www.pdx.edu/news/four-local-wineries-psu-connection"
+      }
+    ],
+    "verified": false
   }
 ]
